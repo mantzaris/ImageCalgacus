@@ -1,0 +1,57 @@
+{
+  "scope": "small_development_pilot_not_full_qualification",
+  "ordinary_only": true,
+  "steGo_outcomes_used": false,
+  "traces": {
+    "text": [
+      {
+        "seed": 4101,
+        "symbols": 1024,
+        "carrier_sha256": "8191d240b0ea06dcf7ff42e7c4dca7d850074ef232e43bed62ed22baf324da60",
+        "profile_id": "fd966ec362a2c5f6b95cc036096f6fab41fb112b760aecfbc5f4930e2322d293",
+        "context_sha256": "abcca2b64d09c63fbe006cecfcc2aac4b700df67e41f00777d10ea9df847adb5"
+      },
+      {
+        "seed": 4102,
+        "symbols": 1024,
+        "carrier_sha256": "1a4c62a933e65ed490884f6e6b2059b56877bc550e781dde9a64f7641e7670ca",
+        "profile_id": "fd966ec362a2c5f6b95cc036096f6fab41fb112b760aecfbc5f4930e2322d293",
+        "context_sha256": "abcca2b64d09c63fbe006cecfcc2aac4b700df67e41f00777d10ea9df847adb5"
+      }
+    ],
+    "image": [
+      {
+        "seed": 4201,
+        "symbols": 2976,
+        "carrier_sha256": "987aec29b4e73fa185a1919301a3ea1abee7918ca7c6049765e296fba59b87c1",
+        "profile_id": "fd966ec362a2c5f6b95cc036096f6fab41fb112b760aecfbc5f4930e2322d293",
+        "context_sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3"
+      },
+      {
+        "seed": 4202,
+        "symbols": 2976,
+        "carrier_sha256": "870fdb04de343dbab0c169b73da3f25322dae08e87acf8dd4a4c7b3f045b3f6e",
+        "profile_id": "fd966ec362a2c5f6b95cc036096f6fab41fb112b760aecfbc5f4930e2322d293",
+        "context_sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3"
+      }
+    ]
+  },
+  "modalities": {
+    "text": {
+      "threshold_bits": 0.5983972524635524,
+      "threshold_hex": "0x1.32611feab1c5ep-1",
+      "position_count": 2048,
+      "quantile_method": "numpy_linear",
+      "rule": "strict_H_gt_threshold",
+      "source": "ordinary_development_only"
+    },
+    "image": {
+      "threshold_bits": 3.2159513527579326,
+      "threshold_hex": "0x1.9ba44b3ecfa6ep+1",
+      "position_count": 5952,
+      "quantile_method": "numpy_linear",
+      "rule": "strict_H_gt_threshold",
+      "source": "ordinary_development_only"
+    }
+  }
+}

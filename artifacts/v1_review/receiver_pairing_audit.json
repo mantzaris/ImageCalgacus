@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "I1-fixed",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "I1-gated",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "I1-arithmetic",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "T1-fixed",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "T1-gated",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "T1-arithmetic",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "I5-fixed",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "I5-gated",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "I5-arithmetic",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "T3-fixed",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "T3-gated",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    },
+    {
+      "case": "T3-arithmetic",
+      "only_four_receiver_inputs": true,
+      "retained_key_matches": true,
+      "key_permissions_private": true,
+      "packet_sha_matches": true,
+      "profile_identity_matches": true,
+      "pilot_source_matches": true,
+      "fresh_processes": true,
+      "independent_coder_progress": true
+    }
+  ],
+  "one_ciphertext_per_three_method_pair": true,
+  "independent_payload_groups": 4,
+  "receiver_direct_imports_exclude_sender_evaluator": true,
+  "nonce_checks": [
+    {
+      "private_namespace": "runs/v1-packets-001",
+      "prepared_count": 4,
+      "unique_nonce_count": 4,
+      "all_packet_sizes_292": true
+    },
+    {
+      "private_namespace": "runs/v1-packets-002",
+      "prepared_count": 2,
+      "unique_nonce_count": 2,
+      "all_packet_sizes_292": true
+    }
+  ],
+  "separation": "fresh processes, explicit four-file data flow; not an adversarial OS sandbox"
+}

@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ]
+}

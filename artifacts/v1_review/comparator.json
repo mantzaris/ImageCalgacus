@@ -1,0 +1,49 @@
+{
+  "reference": "Ziegler, Deng & Rush (2019), https://aclanthology.org/D19-1115/",
+  "inspected_reference_revision": "14e982564aeaf9a33f7b4de440deda2184d17f12",
+  "source_reuse": "independently written; no unlicensed reference source copied",
+  "framing": "approved A1 adaptation, not bit-identical endpoint-dump reference reproduction",
+  "precision_bits": 32,
+  "target_packet_bits": 2336,
+  "packet_bytes": 292,
+  "intervals": "half-open integers; common leading bits of lower and upper-1",
+  "partition": "probability-descending, ascending-ID ties; retain q>=1/R plus top min(2,support,R); float64 renormalize; nearest/even widths; truncate before first cumulative overflow; residual to first; remove zero widths",
+  "finite_stream": "next 32 source bits zero-extended; stop first observed emission reaching target; discard/validate <=31 zero suffix bits; no EOF, endpoint dump, completion flush or sender end-position",
+  "overhead": "termination position overlaps last packet position; skipped/zero-bit/completion counts are disjoint as specified in result schemas",
+  "cpu_evidence": "tests/test_v1_coders.py: fractional interval oracle, exhaustive small intervals, finite messages, explicit rounding/boundary/truncation/suffix vectors",
+  "no_universal_termination_guarantee": true,
+  "stagnation_vector": {
+    "interval_lower": "2^31-2",
+    "interval_upper": "2^31+1",
+    "q": "uniform over 32 symbols",
+    "integer_widths_after_rounding_and_overflow": [
+      3
+    ],
+    "emitted_bits": "",
+    "outcome": "capacity, not an implicit endpoint flush"
+  },
+  "pilot": {
+    "image_to_text": {
+      "attempted": 2,
+      "exact": 0,
+      "packet_bits": [
+        1450,
+        771
+      ],
+      "zero_extension_reached": false
+    },
+    "text_to_image": {
+      "attempted": 2,
+      "exact": 2,
+      "packet_stop_channels": [
+        530,
+        570
+      ],
+      "discarded_zero_suffix_bits": [
+        31,
+        31
+      ]
+    }
+  },
+  "amendment_status": "No new methodological amendment made this turn."
+}

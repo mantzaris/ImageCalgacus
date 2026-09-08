@@ -1,0 +1,24 @@
+{
+  "text": {
+    "python": "3.10.13 (main, Feb 26 2026, 22:30:03) [GCC 13.3.0]",
+    "executable": "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/bin/python",
+    "packages": {
+      "numpy": "2.2.6",
+      "cryptography": "46.0.7",
+      "Pillow": "12.3.0",
+      "llama-cpp-python": "0.3.23",
+      "nvidia-cuda-runtime-cu12": "12.4.127",
+      "nvidia-cublas-cu12": "12.4.5.8"
+    }
+  },
+  "image": {
+    "python": "3.10.13 (main, Feb 26 2026, 22:30:03) [GCC 13.3.0]",
+    "executable": "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "packages": {
+      "numpy": "2.2.6",
+      "cryptography": "46.0.7",
+      "Pillow": "12.3.0",
+      "torch": "2.5.1+cu124"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+--- artifacts/v1_review/pilot_source/evaluate.py
++++ imagecalgacus/evaluate.py
+@@ -56,6 +56,13 @@
+     identity &= declared is None or sender.get("profile_id") == declared
+     identity &= model_id is None or sender.get("model_id") == model_id
+     identity &= sender.get("method", "fixed") == case.get("method", "fixed")
++    identity &= sender.get("direction") == case["direction"]
++    profile_file = next((p for p in (case_dir/"inbox/profile.json",case_dir/"profile.json",
++                        case_dir.parent.parent/"profile.json") if p.is_file()),None)
++    if profile_file is not None:
++        declared_profile = json.loads(profile_file.read_text())
++        identity &= canonical_hash(declared_profile) == sender.get("profile_id")
++        identity &= declared_profile["text" if gray else "image"]["model_sha256"] == sender.get("model_id")
+     if receiver:
+         identity &= receiver.get("method", "fixed") == case.get("method", "fixed")
+         identity &= sender.get("profile_id") == receiver.get("profile_id")
+@@ -72,23 +79,30 @@
+     evidence = bool(identity)
+     if complete:
+         evidence &= bool(receiver.get("packet_complete") and sender.get("packet_complete"))
+-        evidence &= carrier.is_file() and sender.get("carrier_sha256") == sha256_file(carrier)
++    if carrier.is_file():
++        evidence &= sender.get("carrier_sha256") == sha256_file(carrier)
+         for report in (sender, receiver):
++            if not report or (report.get("failure_stage") == "backend" and not report.get("gpu_evidence")):
++                continue
+             gpu = report.get("gpu_evidence", {})
+             device = gpu.get("device", {})
+             evidence &= bool(device.get("uuid") and device.get("pid"))
++            evidence &= bool(gpu.get("gpu_allocation")) and gpu.get("model_sha256") == report.get("model_id")
+             if gray:
+                 layers = gpu.get("offloaded_layers", [])
+                 evidence &= len(layers) == 2 and layers[0] == layers[1] and layers[0] > 0
+             else:
+                 evidence &= gpu.get("parameter_devices") == ["cuda:0"] and gpu.get("input_device") == "cuda:0"
+                 evidence &= bool(gpu.get("inference_mode") and gpu.get("strict_loading"))
+-        evidence &= sender.get("gpu_evidence", {}).get("device", {}).get("uuid") == receiver.get("gpu_evidence", {}).get("device", {}).get("uuid")
+-    else:
++        if receiver.get("gpu_evidence"):
++            evidence &= sender.get("gpu_evidence", {}).get("device", {}).get("uuid") == receiver.get("gpu_evidence", {}).get("device", {}).get("uuid")
++    elif complete:
++        evidence = False
++    if not complete:
+         evidence &= terminal_failure
+     progress_fields = ("packet_stop","packet_positions","skipped_positions","zero_bit_positions","packet_bits_recovered")
+     progress_matches = not receiver or all(sender.get(k) == receiver.get(k) for k in progress_fields if k in sender)
+-    if receiver and not progress_matches:
++    if complete and not progress_matches:
+         evidence = False
+     result.update({"coder_progress_matches":progress_matches,"prepared_packet_sha256":sender.get("prepared_packet_sha256")})
+     count = sender.get("tokens") if gray else sender.get("channels")
+@@ -106,7 +120,7 @@
+                    "sender_peak_rss_kib":sender.get("peak_rss_kib"),"receiver_peak_rss_kib":receiver.get("peak_rss_kib")})
+     result.update({"work_id": case.get("work_id", case["id"]), "method": case.get("method", "fixed"),
+                    "attempted": attempted, "terminal": terminal, "evidence_valid": bool(evidence),
+-                   "identity_consistent": bool(identity), "carrier": str(carrier) if carrier.exists() else None})
++                   "identity_consistent": bool(identity), "artifact_saved":carrier.is_file(), "carrier": str(carrier) if carrier.exists() else None})
+     for field in ("packet_positions", "skipped_positions", "zero_bit_positions", "termination_positions",
+                   "termination_suffix_bits", "lookahead_zero_bits", "diagnostics", "coder_diagnostics",
+                   "peak_rss_kib", "packet_bits_recovered"):
+@@ -123,6 +137,11 @@
+     expected = [case.get("work_id", case["id"]) for case in cases]
+     observed = [row.get("work_id", row["case"]) for row in rows]
+     expected_counts, observed_counts = Counter(expected), Counter(observed)
++    duplicate_case_names = sorted(k for k,n in Counter(c["id"] for c in cases).items() if n > 1)
++    duplicate_row_cases = sorted(k for k,n in Counter(r["case"] for r in rows).items() if n > 1)
++    expected_cases = {c.get("work_id",c["id"]):c["id"] for c in cases}
++    case_work_mismatches = sorted(r.get("work_id",r["case"]) for r in rows
++        if r.get("work_id",r["case"]) in expected_cases and expected_cases[r.get("work_id",r["case"])] != r["case"])
+     duplicate_expected = sorted(k for k, n in expected_counts.items() if n > 1)
+     duplicate_results = sorted(k for k, n in observed_counts.items() if n > 1)
+     missing = sorted(set(expected) - set(observed))
+@@ -134,7 +153,7 @@
+     unstarted = [r.get("work_id", r["case"]) for r in selected if not r.get("attempted")]
+     unfinished = [r.get("work_id", r["case"]) for r in selected if not r.get("terminal")]
+     invalid = [r.get("work_id", r["case"]) for r in selected if not r.get("evidence_valid")]
+-    complete = bool(expected) and not any((duplicate_expected, duplicate_results, missing, unexpected,
++    complete = bool(expected) and not any((duplicate_expected, duplicate_results, duplicate_case_names, duplicate_row_cases, case_work_mismatches, missing, unexpected,
+                                           unstarted, unfinished, invalid))
+     attempted = sum(bool(r.get("attempted")) for r in selected)
+     completed = sum(bool(r.get("carrier_complete") and r.get("evidence_valid")) for r in selected)
+@@ -147,6 +166,7 @@
+             "recorded_failure_count": sum(bool(r.get("terminal") and not (r.get("carrier_complete") and r.get("exact_recovery"))) for r in selected),
+             "missing_identifiers": missing, "unexpected_identifiers": unexpected,
+             "duplicate_expected_identifiers": duplicate_expected, "duplicate_result_identifiers": duplicate_results,
++            "duplicate_expected_case_identifiers":duplicate_case_names,"duplicate_result_case_identifiers":duplicate_row_cases,"case_work_mismatches":case_work_mismatches,
+             "unstarted_identifiers": unstarted, "unfinished_identifiers": unfinished, "invalid_evidence_identifiers": invalid}
+ 
+ 
+@@ -160,9 +180,12 @@
+         ids = [r.get("work_id", r["case"]) for r in recorded_rows]
+         expected = {c.get("work_id", c["id"]) for c in cases}
+         duplicates = sorted(k for k, n in Counter(ids).items() if n > 1)
++        case_by_work={c.get("work_id",c["id"]):c["id"] for c in cases}
++        mismatches=sorted(r.get("work_id",r["case"]) for r in recorded_rows
++            if r.get("work_id",r["case"]) in case_by_work and case_by_work[r.get("work_id",r["case"])]!=r["case"])
+         missing, unexpected = sorted(expected - set(ids)), sorted(set(ids) - expected)
+-        summary["recorded_result_reconciliation"] = {"missing": missing, "unexpected": unexpected, "duplicates": duplicates}
+-        if duplicates or unexpected or (missing and mode == "final"):
++        summary["recorded_result_reconciliation"] = {"missing": missing, "unexpected": unexpected, "duplicates": duplicates,"case_work_mismatches":mismatches}
++        if duplicates or unexpected or mismatches or (missing and mode == "final"):
+             summary["allocation_complete"] = summary["all_recovered"] = False
+     return rows, summary
+ 
+--- artifacts/v1_review/pilot_source/ordinary.py
++++ imagecalgacus/ordinary.py
+@@ -27,7 +27,7 @@
+     if args.modality=="image" and args.symbols!=2976 or args.modality=="text" and not 1<=args.symbols<=2048:
+         raise ValueError("invalid ordinary carrier budget")
+     args.output.mkdir(parents=True,exist_ok=False)
+-    model=None; entropies=[]; trace=Trace(); started=time.monotonic()
++    model=None; entropies=[]; trace=Trace(); started=time.monotonic(); prefix_diagnostics={}
+     result={"purpose":args.purpose,"modality":args.modality,"seed":args.seed,
+             "profile_id":canonical_hash(profile),"source_hash":source_hash(),
+             "context_sha256":hashlib.sha256(Path(args.context).read_bytes()).hexdigest(),"passed":False}
+@@ -51,6 +51,7 @@
+             model.observe(symbol)
+             if args.modality=="text" and i+1 in prefixes:
+                 (args.output/("prefix-%d.txt"%(i+1))).write_bytes(model.serialize())
++                prefix_diagnostics[str(i+1)]={"generation_seconds":time.monotonic()-begin,"diagnostics":trace.summary()}
+             if (i+1)%256==0: print("ordinary",i+1,flush=True)
+         if args.modality=="text":
+             carrier=args.output/"carrier.txt"; carrier.write_bytes(model.serialize())
+@@ -60,7 +61,7 @@
+         result.update({"passed":True,"generation_seconds":time.monotonic()-begin,"model_calls":model.calls,
+                        "carrier":str(carrier),"carrier_bytes":carrier.stat().st_size,
+                        "carrier_sha256":hashlib.sha256(carrier.read_bytes()).hexdigest(),
+-                       "symbols":args.symbols,"entropies_bits":entropies,"diagnostics":trace.summary()})
++                       "symbols":args.symbols,"entropies_bits":entropies,"diagnostics":trace.summary(),"prefix_diagnostics":prefix_diagnostics})
+         if args.modality=="text": result["filter_seconds"]=model.filter_seconds
+     finally:
+         if model is not None:

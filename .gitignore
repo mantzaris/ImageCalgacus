@@ -8,3 +8,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 *.egg-info/
+
+# Cryptographic material remains private even outside normal run folders
+*.key
+*.packet

@@ -1,0 +1,30 @@
+{
+  "source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+  "source_revision": "bc9e98d3ed99fc040c341f50f74e6b9cd017d8dc",
+  "calibration_sha256": "7ea6123b3643c966aa08b533d7cd0c2287aa0efc64cf6685f701456ba896b8a5",
+  "pairing": "one immutable packet per payload/context, shared by three methods",
+  "continuation_of": "runs/v1-pilot-001",
+  "prepared_pairs": [
+    {
+      "payload_id": "I5",
+      "prepared_packet_sha256": "a67c0a7335715e676c67a48ab99a5d5c9b1c202298f673102aedcde8cbb15b83",
+      "new_key_namespace": "runs/v1-packets-002",
+      "lineage": "replaces never-encoded preparation only; no previous carrier or outcome for this pair"
+    },
+    {
+      "payload_id": "T3",
+      "prepared_packet_sha256": "ccca24156387f6eed0d71909a30e32971e5ebe80912a6bc0eecdd2fddb30dee1",
+      "new_key_namespace": "runs/v1-packets-002",
+      "lineage": "replaces never-encoded preparation only; no previous carrier or outcome for this pair"
+    }
+  ],
+  "prospective_budget": {
+    "spent_seconds": 2615.1971370829997,
+    "future_upper_seconds": 3413.391570305037,
+    "future_failure_reserve_seconds": 853.3478925762593,
+    "projected_total_seconds": 6881.936599964296,
+    "initial_ceiling_seconds": 7200,
+    "reason": "retain measured conservative cap envelopes; reserve applies to future work, not already spent jobs",
+    "original_projection": "runs/v1-pilot-001/midpilot_projection.json"
+  }
+}

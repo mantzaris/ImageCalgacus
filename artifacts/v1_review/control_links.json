@@ -1,0 +1,153 @@
+{
+  "unique_ordinary_controls": 2,
+  "independent_control_samples": 2,
+  "pilot_payload_groups": 4,
+  "comparisons": [
+    {
+      "work_id": "6e01711fd30415e8450d04a72e8eb70a5dd80b4fc95f5cc4f5d6276fab8a385c",
+      "case": "I1-fixed",
+      "control_id": "text-4301",
+      "matched_symbols": 616,
+      "carrier": "controls/text-4301/prefix-616.txt",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 5.590847015232871,
+      "control_mean_surprisal_bits": 0.889626810758589,
+      "stego_mean_log_rank": 2.7646706370401937,
+      "control_mean_log_rank": 0.31116771181084596
+    },
+    {
+      "work_id": "eb20152d686e89edffa16e6d3a92342ef0ff67ce219e5d0fedceb03c44fcb80c",
+      "case": "I1-gated",
+      "control_id": "text-4301",
+      "matched_symbols": 650,
+      "carrier": "controls/text-4301/prefix-650.txt",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 5.495456901439036,
+      "control_mean_surprisal_bits": 0.936335760125647,
+      "stego_mean_log_rank": 2.6287970095371205,
+      "control_mean_log_rank": 0.3307918340098798
+    },
+    {
+      "work_id": "14925045681168200cb7c0da664b4a2c26da41a407c107b4c9cf6c38bcf4ffd9",
+      "case": "I1-arithmetic",
+      "control_id": "text-4301",
+      "matched_symbols": 2048,
+      "carrier": "controls/text-4301/prefix-2048.txt",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 0.7086827037667983,
+      "control_mean_surprisal_bits": 1.0443788442317634,
+      "stego_mean_log_rank": 0.2822542171683654,
+      "control_mean_log_rank": 0.3999763687298378
+    },
+    {
+      "work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a",
+      "case": "T1-fixed",
+      "control_id": "image-4302",
+      "matched_symbols": 2976,
+      "carrier": "controls/image-4302/carrier.png",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 4.07318914450902,
+      "control_mean_surprisal_bits": 3.7960062658236065,
+      "stego_mean_log_rank": 2.3459030425171647,
+      "control_mean_log_rank": 2.245722256029585
+    },
+    {
+      "work_id": "04c52e6c49d91c4aad472b7dfb7dc25a45c13d5114dfbd4760994668634cab53",
+      "case": "T1-gated",
+      "control_id": "image-4302",
+      "matched_symbols": 2976,
+      "carrier": "controls/image-4302/carrier.png",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 4.112892664651276,
+      "control_mean_surprisal_bits": 3.7960062658236065,
+      "stego_mean_log_rank": 2.385819173149174,
+      "control_mean_log_rank": 2.245722256029585
+    },
+    {
+      "work_id": "16756472c12e7fb9fb36364f0fab4a21845828d5c22c434f36c496ccaad5ab44",
+      "case": "T1-arithmetic",
+      "control_id": "image-4302",
+      "matched_symbols": 2976,
+      "carrier": "controls/image-4302/carrier.png",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 4.763411104401106,
+      "control_mean_surprisal_bits": 3.7960062658236065,
+      "stego_mean_log_rank": 2.984334132171846,
+      "control_mean_log_rank": 2.245722256029585
+    },
+    {
+      "work_id": "7812fe9b339e2156697450a555d95a34e7ede8f17388dc5ea57af9c63645f257",
+      "case": "I5-fixed",
+      "control_id": "text-4301",
+      "matched_symbols": 616,
+      "carrier": "controls/text-4301/prefix-616.txt",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 5.890094854545396,
+      "control_mean_surprisal_bits": 0.889626810758589,
+      "stego_mean_log_rank": 2.7238867869952506,
+      "control_mean_log_rank": 0.31116771181084596
+    },
+    {
+      "work_id": "c4ac007b4df92089dd62eab33979544bf85448b28e86c6bd6a0557520a1b0c0e",
+      "case": "I5-gated",
+      "control_id": "text-4301",
+      "matched_symbols": 640,
+      "carrier": "controls/text-4301/prefix-640.txt",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 5.2833631847159115,
+      "control_mean_surprisal_bits": 0.901659404097735,
+      "stego_mean_log_rank": 2.6078761978292215,
+      "control_mean_log_rank": 0.3143299430809544
+    },
+    {
+      "work_id": "3e8292a0761acc05e9e07175456de8ee11684e3dc5bcbce730ad15d956951777",
+      "case": "I5-arithmetic",
+      "control_id": "text-4301",
+      "matched_symbols": 2048,
+      "carrier": "controls/text-4301/prefix-2048.txt",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 0.3765495727908526,
+      "control_mean_surprisal_bits": 1.0443788442317634,
+      "stego_mean_log_rank": 0.15466091781264882,
+      "control_mean_log_rank": 0.3999763687298378
+    },
+    {
+      "work_id": "ca3c61b1bbf5dd17d3002a92379082c699385ee130e5e0413f9ee5a78d28e1cb",
+      "case": "T3-fixed",
+      "control_id": "image-4302",
+      "matched_symbols": 2976,
+      "carrier": "controls/image-4302/carrier.png",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 4.3536061270716155,
+      "control_mean_surprisal_bits": 3.7960062658236065,
+      "stego_mean_log_rank": 2.575070468308722,
+      "control_mean_log_rank": 2.245722256029585
+    },
+    {
+      "work_id": "ddd8db83743fd4f7864c55fc0e453c6113d2a93a1cc8d9ade1ca2952984e8c8c",
+      "case": "T3-gated",
+      "control_id": "image-4302",
+      "matched_symbols": 2976,
+      "carrier": "controls/image-4302/carrier.png",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 4.357680290804209,
+      "control_mean_surprisal_bits": 3.7960062658236065,
+      "stego_mean_log_rank": 2.628474680725252,
+      "control_mean_log_rank": 2.245722256029585
+    },
+    {
+      "work_id": "ac74051c901326b0c713b0d33856daf5328a1dd5a192cfae0d3c2c919720cf5c",
+      "case": "T3-arithmetic",
+      "control_id": "image-4302",
+      "matched_symbols": 2976,
+      "carrier": "controls/image-4302/carrier.png",
+      "shared_not_independent": true,
+      "stego_mean_surprisal_bits": 3.71031668974619,
+      "control_mean_surprisal_bits": 3.7960062658236065,
+      "stego_mean_log_rank": 2.134669060975413,
+      "control_mean_log_rank": 2.245722256029585
+    }
+  ],
+  "statistical_inference_performed": false,
+  "gpu_scoring": "diagnostics computed inline during already-charged generation/replay; no extra neural scoring pass"
+}

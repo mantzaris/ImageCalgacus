@@ -1,0 +1,57 @@
+{
+  "source_hash": "0fefa48e6b060f41fbcb97d4d4047e59c8d9b7c8d116022b6b7f6f8a6858c688",
+  "purpose": "pre-optimization cProfile of full accepted carrier replay",
+  "tokens": 616,
+  "wall_seconds": 152.57667338699684,
+  "filter_seconds": 139.39710889997514,
+  "cold_load_seconds": 2.713234367998666,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 964041
+    },
+    "backend": "llama-cpp-python",
+    "version": "0.3.23",
+    "cuda_library_sha256": "89d5798bdf1bfd679d8a155f1ba02c40008d708b8cafba62f5f5e21a8d7b958d",
+    "loaded_cuda_libraries": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublasLt.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublas.so.12"
+    ],
+    "gpu_offload_supported": true,
+    "system_info": "CUDA : ARCHS = 700,750,800,860,890,900 | FORCE_MMQ = 1 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | ",
+    "model_sha256": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+    "offloaded_layers": [
+      33,
+      33
+    ],
+    "gpu_allocation": [
+      "964041, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 5228"
+    ],
+    "gpu_buffer_lines": [
+      "done_getting_tensors: tensor 'token_embd.weight' (q4_K) (and 0 others) cannot be used with preferred buffer type CUDA_Host, using CPU instead",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_context:  CUDA_Host  output buffer size =     0.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "sched_reserve:  CUDA_Host compute buffer size =     0.05 MiB"
+    ]
+  },
+  "completed": true,
+  "cprofile_summary": "         3715782 function calls in 152.120 seconds\n\n   Ordered by: cumulative time\n   List reduced from 57 to 30 due to restriction <30>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n      616    0.679    0.001  139.399    0.226 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/text_backend.py:133(distribution)\n   157687    1.255    0.000  123.681    0.001 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/text_backend.py:54(consistent_candidate)\n   315377    0.424    0.000   83.224    0.000 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/text_backend.py:47(detokenize_bytes)\n   315377    0.173    0.000   82.757    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/llama.py:607(detokenize)\n   315377    0.181    0.000   82.584    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/llama_tokenizer.py:54(detokenize)\n   315377   82.120    0.000   82.403    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/_internals.py:189(detokenize)\n   157561    0.210    0.000   40.243    0.000 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/text_backend.py:43(tokenize_bytes)\n   157561    0.087    0.000   40.032    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/llama.py:589(tokenize)\n   157561    0.162    0.000   39.946    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/llama_tokenizer.py:49(tokenize)\n   157561   39.630    0.000   39.784    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/_internals.py:166(tokenize)\n      616    0.004    0.000   12.721    0.021 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/text_backend.py:163(observe)\n      616    0.073    0.000   12.716    0.021 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/llama.py:647(eval)\n      616   12.513    0.020   12.513    0.020 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/_internals.py:324(decode)\n     1848   12.188    0.007   12.499    0.007 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/fixed_rank.py:30(stable_order)\n     1232    0.494    0.000    6.864    0.006 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/fixed_rank.py:38(normalized)\n      616    0.421    0.001    0.421    0.001 /home/meow/Documents/repos/ImageCalgacus/imagecalgacus/text_backend.py:157(<listcomp>)\n   157687    0.333    0.000    0.333    0.000 {method 'decode' of 'bytes' objects}\n   315377    0.228    0.000    0.228    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/_internals.py:131(token_bos)\n     1848    0.139    0.000    0.139    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/numpy/lib/_ufunclike_impl.py:70(isposinf)\n   157561    0.130    0.000    0.130    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/_internals.py:95(n_ctx_train)\n     8008    0.130    0.000    0.130    0.000 {method 'reduce' of 'numpy.ufunc' objects}\n     1848    0.102    0.000    0.102    0.000 {built-in method numpy.arange}\n      616    0.099    0.000    0.099    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/llama_cpp/_internals.py:343(get_logits)\n   476018    0.079    0.000    0.079    0.000 {built-in method builtins.len}\n     5544    0.076    0.000    0.076    0.000 {built-in method numpy.asarray}\n     1232    0.004    0.000    0.071    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3052(max)\n     1232    0.006    0.000    0.066    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:69(_wrapreduction)\n     3696    0.009    0.000    0.065    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:2477(any)\n     3696    0.016    0.000    0.056    0.000 /home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:89(_wrapreduction_any_all)\n   317841    0.046    0.000    0.046    0.000 {built-in method builtins.isinstance}\n\n\n"
+}

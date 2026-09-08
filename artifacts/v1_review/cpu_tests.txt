@@ -1,0 +1,46 @@
+test_actual_profile_change_invalidates_success_evidence (test_allocation.Allocation) ... ok
+test_case_and_work_identifier_mapping_must_match (test_allocation.Allocation) ... ok
+test_complete_allocation_can_contain_failure (test_allocation.Allocation) ... ok
+test_complete_passing_allocation (test_allocation.Allocation) ... ok
+test_duplicate_and_unexpected_identifiers (test_allocation.Allocation) ... ok
+test_duplicate_case_names_with_different_work_ids (test_allocation.Allocation) ... ok
+test_missing_evidence_or_profile_mismatch_is_not_success (test_allocation.Allocation) ... ok
+test_one_expected_case_missing (test_allocation.Allocation) ... ok
+test_partial_run (test_allocation.Allocation) ... ok
+test_real_partial_directory_is_not_final_success (test_allocation.Allocation) ... ok
+test_terminal_receiver_backend_failure_is_complete_failed_allocation (test_allocation.Allocation) ... ok
+test_gpu_profile_rejects_cpu_and_sidecars (test_boundaries.Boundaries) ... ok
+test_receiver_does_not_import_reference_pipeline (test_boundaries.Boundaries) ... ok
+test_receiver_rejects_extra_inputs_before_model_loading (test_boundaries.Boundaries) ... ok
+test_authenticated_output_must_still_equal_frozen_source (test_evaluator.IndependentEquality) ... ok
+test_all_byte_vectors (test_foundation.Foundation) ... ok
+test_authenticated_parser_errors (test_foundation.Foundation) ... ok
+test_nonce_lifecycle (test_foundation.Foundation) ... ok
+test_order_support_and_rank_bounds (test_foundation.Foundation) ... ok
+test_packet_offsets_and_sizes (test_foundation.Foundation) ... ok
+test_payload_bounds_and_utf8 (test_foundation.Foundation) ... ok
+test_standard_gcm_vector_and_authentication (test_foundation.Foundation) ... ok
+test_prefix_scores_and_bytes_are_matched_snapshots (test_ordinary_prefixes.OrdinaryPrefixTests) ... ok
+test_independent_cdf_oracle (test_pixels_text.PixelTests) ... ok
+test_png_pixels_and_strict_modes (test_pixels_text.PixelTests) ... ok
+test_rgb_joint_oracle_and_posteriors (test_pixels_text.PixelTests) ... ok
+test_complete_prefix_not_singletons (test_pixels_text.TextTests) ... ok
+test_reset_clears_actual_context (test_pixels_text.TextTests) ... ok
+test_sampling_and_invalid_numerics (test_text_optimization.TextOptimization) ... ok
+test_top_k_ties_and_probability_bytes (test_text_optimization.TextOptimization) ... ok
+test_capacity_is_retained_and_not_authenticated (test_transport_integration.TransportIntegration) ... ok
+test_three_methods_saved_file_progress_and_tail (test_transport_integration.TransportIntegration) ... ok
+test_enumerated_finite_messages_changing_distributions (test_v1_coders.ArithmeticTests) ... ok
+test_final_suffix_validation_zero_steps_and_truncation (test_v1_coders.ArithmeticTests) ... ok
+test_fractional_oracle_all_small_intervals (test_v1_coders.ArithmeticTests) ... ok
+test_full_packet_with_finite_termination (test_v1_coders.ArithmeticTests) ... ok
+test_handwritten_half_open_vectors (test_v1_coders.ArithmeticTests) ... ok
+test_nearest_even_overflow_residual_and_small_support (test_v1_coders.ArithmeticTests) ... ok
+test_quantized_midpoint_stagnation_is_capacity_not_flush (test_v1_coders.ArithmeticTests) ... ok
+test_independent_skip_synchronization_and_capacity (test_v1_coders.GateTests) ... ok
+test_strict_boundary_and_development_median (test_v1_coders.GateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 7.224s
+
+OK

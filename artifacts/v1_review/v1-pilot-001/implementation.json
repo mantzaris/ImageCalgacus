@@ -1,0 +1,6 @@
+{
+  "source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+  "source_revision": "bc9e98d3ed99fc040c341f50f74e6b9cd017d8dc",
+  "calibration_sha256": "7ea6123b3643c966aa08b533d7cd0c2287aa0efc64cf6685f701456ba896b8a5",
+  "pairing": "one immutable packet per payload/context, shared by three methods"
+}

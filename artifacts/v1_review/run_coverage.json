@@ -1,0 +1,70 @@
+{
+  "v1-pilot-001": {
+    "allocation_complete": false,
+    "expected_count": 12,
+    "attempted_count": 6,
+    "completed_count": 5,
+    "packet_completed_count": 5,
+    "authenticated_count": 5,
+    "exact_recovery_count": 5,
+    "all_recovered": false,
+    "recorded_failure_count": 1,
+    "missing_identifiers": [
+      "3e8292a0761acc05e9e07175456de8ee11684e3dc5bcbce730ad15d956951777",
+      "7812fe9b339e2156697450a555d95a34e7ede8f17388dc5ea57af9c63645f257",
+      "ac74051c901326b0c713b0d33856daf5328a1dd5a192cfae0d3c2c919720cf5c",
+      "c4ac007b4df92089dd62eab33979544bf85448b28e86c6bd6a0557520a1b0c0e",
+      "ca3c61b1bbf5dd17d3002a92379082c699385ee130e5e0413f9ee5a78d28e1cb",
+      "ddd8db83743fd4f7864c55fc0e453c6113d2a93a1cc8d9ade1ca2952984e8c8c"
+    ],
+    "unexpected_identifiers": [],
+    "duplicate_expected_identifiers": [],
+    "duplicate_result_identifiers": [],
+    "duplicate_expected_case_identifiers": [],
+    "duplicate_result_case_identifiers": [],
+    "case_work_mismatches": [],
+    "unstarted_identifiers": [],
+    "unfinished_identifiers": [],
+    "invalid_evidence_identifiers": [],
+    "recorded_result_reconciliation": {
+      "missing": [
+        "3e8292a0761acc05e9e07175456de8ee11684e3dc5bcbce730ad15d956951777",
+        "7812fe9b339e2156697450a555d95a34e7ede8f17388dc5ea57af9c63645f257",
+        "ac74051c901326b0c713b0d33856daf5328a1dd5a192cfae0d3c2c919720cf5c",
+        "c4ac007b4df92089dd62eab33979544bf85448b28e86c6bd6a0557520a1b0c0e",
+        "ca3c61b1bbf5dd17d3002a92379082c699385ee130e5e0413f9ee5a78d28e1cb",
+        "ddd8db83743fd4f7864c55fc0e453c6113d2a93a1cc8d9ade1ca2952984e8c8c"
+      ],
+      "unexpected": [],
+      "duplicates": [],
+      "case_work_mismatches": []
+    }
+  },
+  "v1-pilot-002": {
+    "allocation_complete": true,
+    "expected_count": 6,
+    "attempted_count": 6,
+    "completed_count": 5,
+    "packet_completed_count": 5,
+    "authenticated_count": 5,
+    "exact_recovery_count": 5,
+    "all_recovered": false,
+    "recorded_failure_count": 1,
+    "missing_identifiers": [],
+    "unexpected_identifiers": [],
+    "duplicate_expected_identifiers": [],
+    "duplicate_result_identifiers": [],
+    "duplicate_expected_case_identifiers": [],
+    "duplicate_result_case_identifiers": [],
+    "case_work_mismatches": [],
+    "unstarted_identifiers": [],
+    "unfinished_identifiers": [],
+    "invalid_evidence_identifiers": [],
+    "recorded_result_reconciliation": {
+      "missing": [],
+      "unexpected": [],
+      "duplicates": [],
+      "case_work_mismatches": []
+    }
+  }
+}

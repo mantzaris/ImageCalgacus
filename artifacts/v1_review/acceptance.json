@@ -1,0 +1,70 @@
+{
+  "status": "implementation_and_bounded_pilot_complete_not_full_V1_qualification",
+  "cpu_tests": {
+    "passed": 41,
+    "failed": 0,
+    "neural_inference_in_cpu_tests": false
+  },
+  "evaluator": {
+    "partial_CLI_rejected": true,
+    "V0_strict_10_of_10": true,
+    "V1_complete_failure_allocation_accepted_only_with_allow_failures": true
+  },
+  "text_optimization": {
+    "matched_states": 616,
+    "eligible_probability_order_sampling_and_carrier_bytes_equal": true
+  },
+  "gpu": {
+    "model_processes": 32,
+    "all_observed_gpu_execution": true,
+    "full_text_offload_layers": [
+      33,
+      33
+    ],
+    "CPU_or_partial_offload_fallback": false
+  },
+  "pilot": {
+    "expected": 12,
+    "attempted": 12,
+    "artifacts_retained": 12,
+    "protocol_completed": 10,
+    "authenticated": 10,
+    "exact": 10,
+    "capacity_failures": 2,
+    "independent_payload_groups": 4,
+    "all_recovered": false,
+    "method_direction_exact": {
+      "fixed": {
+        "image_to_text": "2/2",
+        "text_to_image": "2/2"
+      },
+      "gated": {
+        "image_to_text": "2/2",
+        "text_to_image": "2/2"
+      },
+      "arithmetic": {
+        "image_to_text": "0/2 (capacity)",
+        "text_to_image": "2/2"
+      }
+    }
+  },
+  "preserved_V0": true,
+  "receiver_pairing_audit_passed": true,
+  "V1_fully_qualified": false,
+  "V2_ready": false,
+  "V2_started": false,
+  "remaining": [
+    "Successful arithmetic image-to-text recovery under the approved profile is not established",
+    "20-payload/two-context development qualification and static-mask comparison",
+    "Broader dataset provenance/preparation and calibration",
+    "Extended serialization checks and a measured 40-hour-feasible allocation"
+  ],
+  "budget": {
+    "V1_seconds": 4690.205213522968,
+    "V1_remaining_seconds": 2509.794786477032,
+    "V0_seconds": 3163.653124010041,
+    "cumulative_seconds": 7853.858337533009
+  },
+  "committed": false,
+  "pushed": false
+}

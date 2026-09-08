@@ -1,0 +1,11 @@
+{
+  "spent_seconds": 4230.5000305399735,
+  "control_upper_seconds": 622.8785202750078,
+  "future_reserve_seconds": 155.71963006875194,
+  "projected_total_seconds": 5009.098180883733,
+  "hard_limit_seconds": 7200,
+  "predeclared_seeds": [
+    4301,
+    4302
+  ]
+}

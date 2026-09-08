@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "protected_public_and_ledger_files": 113,
+  "retained_private_keys": 24,
+  "changed_paths": [],
+  "v0_historical_charged_seconds": 3163.653124010041
+}

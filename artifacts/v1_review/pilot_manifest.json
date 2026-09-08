@@ -1,0 +1,224 @@
+{
+  "payload_order": [
+    "I1",
+    "T1",
+    "I5",
+    "T3"
+  ],
+  "methods": [
+    "fixed",
+    "gated",
+    "arithmetic"
+  ],
+  "preselected_before_outputs": true,
+  "independent_payload_groups": 4,
+  "pairs": [
+    {
+      "payload_id": "I1",
+      "direction": "image-to-text",
+      "source_sha256": "1c6a448d8d492554e849f09633da5b2e623e44049909c36a61dcbcdfbf0560be",
+      "source_bytes": 256,
+      "context_sha256": "abcca2b64d09c63fbe006cecfcc2aac4b700df67e41f00777d10ea9df847adb5",
+      "prepared_packet_sha256": "3fee11f0f5b43e03a532a082fe1eff3de65fe48f0a48872f1d83cece68897480"
+    },
+    {
+      "payload_id": "T1",
+      "direction": "text-to-image",
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "source_bytes": 32,
+      "context_sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "prepared_packet_sha256": "a916ea2aee8356af6a003770a7c30db4d3b5d6dd75b5bfd4f7fee4249cece350"
+    },
+    {
+      "payload_id": "I5",
+      "direction": "image-to-text",
+      "source_sha256": "8119963d636a9da9ec09c0c79b7b889ea5e7fda9c4c76c1ad8ee92f5acd654dd",
+      "source_bytes": 256,
+      "context_sha256": "abcca2b64d09c63fbe006cecfcc2aac4b700df67e41f00777d10ea9df847adb5",
+      "prepared_packet_sha256": "93492630fd34f04e413b23f41b0d02da034bf6d219ad193992a2979dce915e58"
+    },
+    {
+      "payload_id": "T3",
+      "direction": "text-to-image",
+      "source_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+      "source_bytes": 64,
+      "context_sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "prepared_packet_sha256": "d96bc5381c0d2470f6da66d30badfc2775de1715910f499f29656cd0d3617978"
+    }
+  ],
+  "cases": [
+    {
+      "id": "I1-fixed",
+      "work_id": "6e01711fd30415e8450d04a72e8eb70a5dd80b4fc95f5cc4f5d6276fab8a385c",
+      "payload_id": "I1",
+      "method": "fixed",
+      "direction": "image-to-text",
+      "source_sha256": "1c6a448d8d492554e849f09633da5b2e623e44049909c36a61dcbcdfbf0560be",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/I1.png",
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_fixed.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/prompt.txt",
+      "pair_id": "I1-context1"
+    },
+    {
+      "id": "I1-gated",
+      "work_id": "eb20152d686e89edffa16e6d3a92342ef0ff67ce219e5d0fedceb03c44fcb80c",
+      "payload_id": "I1",
+      "method": "gated",
+      "direction": "image-to-text",
+      "source_sha256": "1c6a448d8d492554e849f09633da5b2e623e44049909c36a61dcbcdfbf0560be",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/I1.png",
+      "profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_gated.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/prompt.txt",
+      "pair_id": "I1-context1"
+    },
+    {
+      "id": "I1-arithmetic",
+      "work_id": "14925045681168200cb7c0da664b4a2c26da41a407c107b4c9cf6c38bcf4ffd9",
+      "payload_id": "I1",
+      "method": "arithmetic",
+      "direction": "image-to-text",
+      "source_sha256": "1c6a448d8d492554e849f09633da5b2e623e44049909c36a61dcbcdfbf0560be",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/I1.png",
+      "profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_arithmetic.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/prompt.txt",
+      "pair_id": "I1-context1"
+    },
+    {
+      "id": "T1-fixed",
+      "work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a",
+      "payload_id": "T1",
+      "method": "fixed",
+      "direction": "text-to-image",
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/T1.txt",
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_fixed.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/row.rgb",
+      "pair_id": "T1-context1"
+    },
+    {
+      "id": "T1-gated",
+      "work_id": "04c52e6c49d91c4aad472b7dfb7dc25a45c13d5114dfbd4760994668634cab53",
+      "payload_id": "T1",
+      "method": "gated",
+      "direction": "text-to-image",
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/T1.txt",
+      "profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_gated.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/row.rgb",
+      "pair_id": "T1-context1"
+    },
+    {
+      "id": "T1-arithmetic",
+      "work_id": "16756472c12e7fb9fb36364f0fab4a21845828d5c22c434f36c496ccaad5ab44",
+      "payload_id": "T1",
+      "method": "arithmetic",
+      "direction": "text-to-image",
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/T1.txt",
+      "profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_arithmetic.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/row.rgb",
+      "pair_id": "T1-context1"
+    },
+    {
+      "id": "I5-fixed",
+      "work_id": "7812fe9b339e2156697450a555d95a34e7ede8f17388dc5ea57af9c63645f257",
+      "payload_id": "I5",
+      "method": "fixed",
+      "direction": "image-to-text",
+      "source_sha256": "8119963d636a9da9ec09c0c79b7b889ea5e7fda9c4c76c1ad8ee92f5acd654dd",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/I5.png",
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_fixed.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/prompt.txt",
+      "pair_id": "I5-context1"
+    },
+    {
+      "id": "I5-gated",
+      "work_id": "c4ac007b4df92089dd62eab33979544bf85448b28e86c6bd6a0557520a1b0c0e",
+      "payload_id": "I5",
+      "method": "gated",
+      "direction": "image-to-text",
+      "source_sha256": "8119963d636a9da9ec09c0c79b7b889ea5e7fda9c4c76c1ad8ee92f5acd654dd",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/I5.png",
+      "profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_gated.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/prompt.txt",
+      "pair_id": "I5-context1"
+    },
+    {
+      "id": "I5-arithmetic",
+      "work_id": "3e8292a0761acc05e9e07175456de8ee11684e3dc5bcbce730ad15d956951777",
+      "payload_id": "I5",
+      "method": "arithmetic",
+      "direction": "image-to-text",
+      "source_sha256": "8119963d636a9da9ec09c0c79b7b889ea5e7fda9c4c76c1ad8ee92f5acd654dd",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/I5.png",
+      "profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_arithmetic.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/prompt.txt",
+      "pair_id": "I5-context1"
+    },
+    {
+      "id": "T3-fixed",
+      "work_id": "ca3c61b1bbf5dd17d3002a92379082c699385ee130e5e0413f9ee5a78d28e1cb",
+      "payload_id": "T3",
+      "method": "fixed",
+      "direction": "text-to-image",
+      "source_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/T3.txt",
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_fixed.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/row.rgb",
+      "pair_id": "T3-context1"
+    },
+    {
+      "id": "T3-gated",
+      "work_id": "ddd8db83743fd4f7864c55fc0e453c6113d2a93a1cc8d9ade1ca2952984e8c8c",
+      "payload_id": "T3",
+      "method": "gated",
+      "direction": "text-to-image",
+      "source_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/T3.txt",
+      "profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_gated.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/row.rgb",
+      "pair_id": "T3-context1"
+    },
+    {
+      "id": "T3-arithmetic",
+      "work_id": "ac74051c901326b0c713b0d33856daf5328a1dd5a192cfae0d3c2c919720cf5c",
+      "payload_id": "T3",
+      "method": "arithmetic",
+      "direction": "text-to-image",
+      "source_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+      "source": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/fixtures/T3.txt",
+      "profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "profile": "/home/meow/Documents/repos/ImageCalgacus/configs/v1_arithmetic.json",
+      "context": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/contexts/row.rgb",
+      "pair_id": "T3-context1"
+    }
+  ],
+  "controls": {
+    "text_seed": 4301,
+    "image_seed": 4302,
+    "shared_within_this_pilot": true
+  }
+}

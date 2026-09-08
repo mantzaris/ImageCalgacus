@@ -1,0 +1,264 @@
+[
+  {
+    "job": "v1-001-profile-reference",
+    "stderr_sha256": "7ac710b629d55ab6b6f3b4deb9a7b36790647822112956c88bc267f5db33fa05",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-002-text-equivalence",
+    "stderr_sha256": "7224fb91443b6e6c29116ac48424485bd90e1d42a273c60e6a0cf443ac2877e8",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-003-calibration-text-4101",
+    "stderr_sha256": "c28a204ff53093930ebeb11cc6d830d44fe9bb62764f4e303b49f7c3baa146c6",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-004-calibration-text-4102",
+    "stderr_sha256": "7ac710b629d55ab6b6f3b4deb9a7b36790647822112956c88bc267f5db33fa05",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-005-calibration-image-4201",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-006-calibration-image-4202",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-007-v1-pilot-001-I1-fixed-encode",
+    "stderr_sha256": "8ee89e10c47689843e627f2a9a3bdcd108a7ccfe76ceb782d64350b17dd34a88",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-008-v1-pilot-001-I1-fixed-decode",
+    "stderr_sha256": "7897874ccd24bddf3ece82da3cc94b1e617060dda6b7da97df8b0f8d2fed59cc",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-009-v1-pilot-001-I1-gated-encode",
+    "stderr_sha256": "e8ec2ca0758fdf7f6043b686eb83f840fde613021dcfbf4a6959fccf55452f62",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-010-v1-pilot-001-I1-gated-decode",
+    "stderr_sha256": "9dc3afeecf6c5a207d895f4d703d0ce9b9afc706eeaa47dd5c14b329e622b89f",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-011-v1-pilot-001-I1-arithmetic-encode",
+    "stderr_sha256": "f02f63d08092296e7df2e1ab1a276bf11dbefcbadd33fcd87ef127a8d1415b5b",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-012-v1-pilot-001-I1-arithmetic-decode",
+    "stderr_sha256": "88abe2da23a3fcc95ad5db5e22603776d3303d5e73687ece9cb8f6bd19f87173",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-013-v1-pilot-001-T1-fixed-encode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-014-v1-pilot-001-T1-fixed-decode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-015-v1-pilot-001-T1-gated-encode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-016-v1-pilot-001-T1-gated-decode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-017-v1-pilot-001-T1-arithmetic-encode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-018-v1-pilot-001-T1-arithmetic-decode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-019-v1-pilot-002-I5-fixed-encode",
+    "stderr_sha256": "476468cea3231bbbfcba063398b37baa465b6ed683bc2e156a00ba27308f8da7",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-020-v1-pilot-002-I5-fixed-decode",
+    "stderr_sha256": "d57f069a618b51f22e02599900871becf9f454eaf5a92aace30e9ec914bbef91",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-021-v1-pilot-002-I5-gated-encode",
+    "stderr_sha256": "310ac4788031932f7d89b284df1e3a10a9614a5c1ffd48811d14ffa7b618ec67",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-022-v1-pilot-002-I5-gated-decode",
+    "stderr_sha256": "c7e01510e9f048b7e31adf4391edf88c3e0946a438dd01c1b69e0b7f6e1a42fe",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-023-v1-pilot-002-I5-arithmetic-encode",
+    "stderr_sha256": "b344bc2783eb4eaa8fcaf6a5103369a6ba2a5093da527d5a46b45667f97bc0f8",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-024-v1-pilot-002-I5-arithmetic-decode",
+    "stderr_sha256": "cd1a9e447d6908683562b7e8faafadee0b6cec05520061792f94055cb2047189",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-025-v1-pilot-002-T3-fixed-encode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-026-v1-pilot-002-T3-fixed-decode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-027-v1-pilot-002-T3-gated-encode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-028-v1-pilot-002-T3-gated-decode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-029-v1-pilot-002-T3-arithmetic-encode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-030-v1-pilot-002-T3-arithmetic-decode",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  },
+  {
+    "job": "v1-031-control-text-4301",
+    "stderr_sha256": "7d379c710f8434c71c1177c7b721fa365247a276aa9a0c60376478089ec98277",
+    "initialization_lines": [
+      "load_tensors: offloaded 33/33 layers to GPU",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "~llama_context:      CUDA0 compute buffer size is   0.5863 MiB, matches expectation of   0.5863 MiB"
+    ]
+  },
+  {
+    "job": "v1-032-control-image-4302",
+    "stderr_sha256": "1e8d9974521e01ac920f9b120f7a03fbed9f0915b209625a02ec527662628ca1",
+    "initialization_lines": []
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "v0_historical_seconds": 3163.653124010041,
+  "v1_charged_seconds": 4690.205213522968,
+  "v1_limit_seconds": 7200,
+  "v1_remaining_seconds": 2509.794786477032,
+  "cumulative_seconds": 7853.858337533009,
+  "overall_ceiling_seconds": 144000,
+  "overall_remaining_not_automatically_authorized": 136146.14166246698,
+  "charged_rule": "full process wall time: loading, filtering, GPU inference, serialization and teardown",
+  "all_jobs_observed_process_gpu_activity": true
+}

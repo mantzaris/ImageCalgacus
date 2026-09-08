@@ -1,0 +1,43 @@
+{
+  "used_seconds": 2615.1971370829997,
+  "remaining_pairs": [
+    {
+      "case": "I5-fixed",
+      "measured_first_pair_seconds": 122.37098300199432,
+      "remaining_pair_upper_seconds": 122.37098300199432
+    },
+    {
+      "case": "I5-gated",
+      "measured_first_pair_seconds": 127.22162372199091,
+      "remaining_pair_upper_seconds": 1069.9981163520133
+    },
+    {
+      "case": "I5-arithmetic",
+      "measured_first_pair_seconds": 849.5070966650092,
+      "remaining_pair_upper_seconds": 1069.9981163520133
+    },
+    {
+      "case": "T3-fixed",
+      "measured_first_pair_seconds": 175.87932453100075,
+      "remaining_pair_upper_seconds": 175.87932453100075
+    },
+    {
+      "case": "T3-gated",
+      "measured_first_pair_seconds": 176.15884361600183,
+      "remaining_pair_upper_seconds": 176.15884361600183
+    },
+    {
+      "case": "T3-arithmetic",
+      "measured_first_pair_seconds": 176.10766617700574,
+      "remaining_pair_upper_seconds": 176.10766617700574
+    }
+  ],
+  "control_seconds_upper": {
+    "text": 534.9990581760067,
+    "image": 87.8794620990011
+  },
+  "reserve_multiplier": 1.25,
+  "projected_v1_total_seconds": 7535.735884235046,
+  "ceiling_seconds": 7200,
+  "note": "variable-length text uses a conservative N-squared cap envelope; no new methods inferred from fixed timings"
+}
