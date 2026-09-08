@@ -2,6 +2,8 @@
 
 Repository-informed revision, 7 September 2026. Proposed study; no new model experiments were run in preparing this plan.
 
+Implementation-sequencing clarification, 7 September 2026: the implementation plan starts with a GPU-based, fixed-rank bidirectional prototype using one context and five development cases per direction. This precedes the full development checks and frozen study below; it does not change the final three-method comparison, either direction, packet/recovery contract, experimental allocations, or six-week/40-GPU-hour ceiling.
+
 **1. The recommended contribution**
 
 Develop and evaluate one shared packet protocol that carries small images through generated text and short text through generated images, with exact recovery from the delivered UTF-8 or PNG artifact. Compare the existing bounded-rank method, its existing entropy-gated variant, and an established arithmetic-coding steganography comparator.

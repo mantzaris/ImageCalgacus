@@ -1,226 +1,300 @@
-# Implementation plan: exact text/image steganographic transport
+# Implementation plan: GPU-first text/image transport
 
-Draft for independent review, 7 September 2026. Planning only; no implementation, installations, weight downloads or experiments were performed.
+Revised for independent review, 7 September 2026. Planning only: no application changes, installations, weight downloads, inference runs or resource allocations were performed.
 
-## 1. Authority and inspected starting point
+## 1. Releases and scientific authority
 
-The scientific specification is [crossmodal_steganography_focused_research_plan.md](crossmodal_steganography_focused_research_plan.md), at repository revision `993626f599ff677fc5f03d88a6f431aa43aca966`, SHA-256 `644fc5ab443cdf9d008192078d98e6803a40b720ab599e79cec4d326adf03878`. Preserve its directions, packet, three methods, allocations, artifact recovery endpoint, six-week effort budget and 40 GPU-hour ceiling. Details below are proposals unless labeled inspected evidence or reported research; amendments are marked.
+| Component | Required for V0 | Later release | Reason |
+| --- | --- | --- | --- |
+| Verified GPU text and pixel inference; one model each | Yes | Same pinned backends | Both directions must actually work |
+| 292-byte authenticated packet, fixed radix-16 coder | Yes | Unchanged protocol | Small common foundation |
+| Saved UTF-8/PNG, fresh receiver, separate byte evaluator | Yes | Expanded evaluation | Artifact recovery is the endpoint |
+| One prompt, one shared row, five development payloads/direction | Yes | V1 expands development | Ten-case functionality demonstration |
+| Entropy gating and arithmetic comparator | No | V1, mandatory before V2 | Not prerequisites for first recoveries |
+| Static-mask comparison, datasets, calibration, compute projection | No | V1 | Establish complete-study readiness |
+| Resumption and persistent experiment bookkeeping | No | V1 as needed | V0 starts fresh encoding runs |
+| Matched controls, intervals, detection, figures, paper evidence | No | V2 | Ten cases cannot establish research claims |
 
-Inspection found four tracked files: that specification, `LICENSE` (MIT, a.v.mantzaris, 2026), an effectively empty `.gitignore`, and `.gitignore~`. `notes/` is empty. There is no implementation plan, README, application, dependency declaration, tests, configuration, dataset or models here. No applicable `AGENTS.md` was found in the repository or ancestors. All modules below are new here; reserve `notes/` for implementation observations.
+The scientific specification is [crossmodal_steganography_focused_research_plan.md](crossmodal_steganography_focused_research_plan.md). Baseline inspection is repository commit `16ce203e11a1206081801cd36f501d92a04ff753`. The existing implementation plan is revised here; the methodological document gains only a labeled prototype-sequencing clarification. Both directions, three final methods, payload conventions, recovery contract, allocations, approximately six researcher-weeks and **40 GPU-hours overall** remain unchanged.
 
-Sibling checkouts contain external code at the specification's cited revisions:
+V0 establishes functionality on the tested GPU/runtime configuration, not imperceptibility, broad robustness, statistical reliability or a completed journal study. Gates are technical acceptance checks, not repeated approval requests after implementation is authorized. A material scope change still requires review.
 
-| Inspected source | Reuse or adaptation boundary |
+## 2. Inspected starting point and reuse
+
+The repository contains two plans, MIT license (2026, a.v.mantzaris), effectively empty `.gitignore` and its backup; `notes/` is empty. There is no application, dependency declaration, tests, runtime configuration or local model here. No applicable `AGENTS.md` was found in the repository or checked ancestors. Proposed components are new here, with identified external adaptations. Reserve `notes/` for subsequent implementation observations.
+
+The primary reference is the local sibling `../llm-rankcloak`, inspected at [`ce853d42d6ba64065cb63c6bdfc0d825c62734cd`](https://github.com/mantzaris/llm-rankcloak/tree/ce853d42d6ba64065cb63c6bdfc0d825c62734cd). Relevant files were unmodified; unrelated edits were untouched.
+
+| Existing file/function at that revision | Adaptation → project component |
 | --- | --- |
-| [RankCloak](https://github.com/mantzaris/llm-rankcloak/tree/ce853d42d6ba64065cb63c6bdfc0d825c62734cd), `ce853d42d6ba64065cb63c6bdfc0d825c62734cd` | `rankcloak/rank_codec.py`: adapt `encode_bytes_to_bounded_ranks`, `decode_bounded_ranks_to_bytes`, and stable ordering primitives. Replace metadata-dependent, permissive length handling with the fixed packet contract. |
-| Same revision | `model_io.py`: adapt `load_llama_cpp_model`, `evaluate_context`, `get_last_logits`, and `detokenize_bytes`. Do not inherit `safe_detokenize` replacement decoding or implicit BOS conventions. `revision_protocol.py::build_round_trip_stable_mask` supplies the development baseline only; `Representation` includes source bytes and `decode_representation` must not enter the receiver. |
-| Same revision | `revision_v3_entropy.py`: adapt `shannon_entropy_bits`, `entropy_eligible`, `generate_entropy_gated_span`, and `calibrate_entropy_gate_thresholds`; remove top-p sampling and saved-ID replay dependencies. `reproducibility.py::write_manifest` and `bootstrap_statistics.py::bootstrap_mean_ci` are starting points, requiring complete hashes and payload-group resampling. |
-| [LlmStenoExplore](https://github.com/mantzaris/LlmStenoExplore/tree/b9f1650b4eb0b2261b0080f86d9b1d8fadedbc0b), `b9f1650b4eb0b2261b0080f86d9b1d8fadedbc0b` | `paper-empirical-explorations/carts_empirical_utils.py`: reference `first_mismatch_position`, `sorted_token_ids_from_logits`, and `write_run_manifest`. Do not adopt `text_to_payload_ids`, which prepends a space, or display replacement decoding. |
+| `rankcloak/model_io.py::load_llama_cpp_model`, `llama_cpp_gpu_offload_supported` | Change CPU default `n_gpu_layers=0` to required `-1`; preserve capability failure and add observed offload checks → `text_backend.py`, `preflight.py` |
+| `preload_pip_cuda_libraries` | Load pip CUDA runtime/cuBLAS libraries globally before importing llama.cpp; report loaded paths and unresolved dependencies → text preflight |
+| `reset_model`, `evaluate_context`, `get_last_logits` | Clear Python/context and actual KV state between sequences; evaluate context once, then one token incrementally → text sender/replay |
+| `detokenize_bytes`, `tokenize_payload_text` | Preserve exact bytes and explicit no-BOS/no-special carrier tokenization; replace implicit prompt conventions. Never serialize `safe_detokenize` replacement text → text artifact I/O |
+| `rankcloak/rank_codec.py::sorted_token_ids_from_logits`, `rank_of_token`, `token_id_at_rank` | Descending logits, ascending ID for exact ties, one-based ranks → `fixed_rank.py` |
+| `encode_bytes_to_bounded_ranks`, `decode_bounded_ranks_to_bytes` | Adapt radix-16 high/low nibble bridge; replace source-metadata-dependent permissive truncation with exactly 584 ranks → fixed coder |
+| `generate_token_ids_from_ranks`, `rank_trace_from_token_ids`, `recover_ranks_from_generated_ids` | Reuse context-once/`model.eval([id])` schedule; receiver IDs must come from delivered bytes → text backend |
+| `token_filters.py::choose_token_at_rank_with_optional_filter`, `rank_token_with_optional_filter` | Reuse matched filtered ordering/inversion, not the prose blacklist; eligibility becomes complete-prefix consistency → text backend |
+| `revision_protocol.py::generate_rank_span`, `recover_rank_span`, `retokenize_message`, `build_round_trip_stable_mask` | Reuse serial replay pattern; replace saved span offsets with packet-count framing. Singleton mask is V1 baseline only; exclude source-bearing `Representation`/`decode_representation` |
+| README “NVIDIA GPU Setup”; `configs/revision_v3/generation_requirements.json`; `configs/revision_v1/models.json`; `environment/revision_v1/{README.md,REPRODUCE.md,determinism.json,requirements-lock.txt}` | Adapt CUDA installation evidence, serial loading, batch and numerical controls below; do not copy the earlier model matrix, GPU identifiers, cloud instructions, budgets or authorizations |
 
-The [RankCloak V3 manuscript](https://github.com/mantzaris/llm-rankcloak/blob/ce853d42d6ba64065cb63c6bdfc0d825c62734cd/paperV3/scientific_reports/main3.tex) reports 6,480/6,480 primary saved-ID recoveries and 88/144 visible-text retokenization recoveries. These reported results do not establish this project's endpoint. [Calgacus v1](https://arxiv.org/html/2510.20075v1) transports source-token ranks and discusses cross-domain models. This study uses RankCloak's existing byte-to-bounded-rank bridge instead of regenerating source tokens. Entropy gating, arithmetic steganography and [stepwise tokenization verification](https://aclanthology.org/2025.emnlp-main.361/) are also prior methods.
+Local read-only checks found Python 3.10.13 and driver 590.48.01; RTX 5000 Ada, 32,760 MiB total/32,220 MiB free, and T2000, 4,096/3,638 MiB. Free memory is a transient observation, not a reservation or proof of offload. RankCloak's `.venv-generation-v3` has `llama-cpp-python 0.3.23`, CUDA shared libraries, `nvidia-cuda-runtime-cu12 12.4.127` and `nvidia-cublas-cu12 12.4.5.8`, but no PyTorch/Pillow. Its `.venv` has PyTorch `2.5.1+cu124` and Pillow `12.3.0`, but no llama-cpp package. Both have NumPy `2.2.6` and cryptography `46.0.7`. Neither inspected environment has TensorFlow; `nvcc`/`cmake` were not on the inspected PATH.
 
-Local evidence: Python 3.10.13; NVIDIA RTX 5000 Ada (32,760 MiB) and Quadro T2000 (4,096 MiB) visible to `nvidia-smi`; a 4,920,734,272-byte `../llm-rankcloak/models/llama3_8b/Meta-Llama-3-8B-Instruct.Q4_K_M.gguf` exists. Identity, loading, replay and throughput remain unverified. No image checkpoint was identified in this repository or the inspected sibling model directories.
+Prefer these interpreters if verified compatible; separate text/image environments are acceptable. Declare dependencies here, configure interpreter paths explicitly, and avoid unreviewed shared-environment changes or sibling imports.
 
-The first image candidate is [official PixelCNN++](https://github.com/openai/pixel-cnn/tree/bbc15688dd37934a12c2759cf2b34975e15901d9), revision `bbc15688dd37934a12c2759cf2b34975e15901d9`. Its README advertises a CIFAR-10 checkpoint; `pixel_cnn_pp/nn.py` uses legacy `tensorflow.contrib`. Published availability does not establish download accessibility, local availability, runtime compatibility, or experimental suitability. All four must be recorded separately at M3.
+The sibling Llama 3 8B Q4_K_M GGUF exists (4,920,734,272 bytes). RankCloak records QuantFactory revision `a06c33ec89c1e3402009fb47f466a89127c6d223` and expected SHA-256 `86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7`; this turn checked size, not content hash or loading. Verify model terms and hash before adoption. No image checkpoint was identified in the inspected project/sibling model directories.
 
-A single bounded fallback is [pclucas14/pixel-cnn-pp](https://github.com/pclucas14/pixel-cnn-pp/tree/7cb4436f062fda9b63ecc9e3b75d2c2dcb379931), revision `7cb4436f062fda9b63ecc9e3b75d2c2dcb379931`: `model.py::PixelCNN.forward`, `utils.py::discretized_mix_logistic_loss`, and its advertised pretrained weights. Its `license.md` contains a nonstandard restriction on selling copies despite its MIT heading. Preserve that text; do not relabel it ordinary MIT. Both require runtime adaptation.
+Record adapted files, revisions, citations and complete notices in future `THIRD_PARTY.md`; RankCloak's MIT notice must accompany reused code. Do not import the research pipeline. [Calgacus](https://arxiv.org/html/2510.20075v1), the bounded-byte bridge, entropy gating, arithmetic steganography and [tokenization-consistency verification](https://aclanthology.org/2025.emnlp-main.361/) are prior work. RankCloak's reported saved-ID recovery does not verify this endpoint. Explore (`b9f1650b4eb0b2261b0080f86d9b1d8fadedbc0b`) remains background, not a payload-conversion dependency.
 
-Record upstream notices/licenses, citations, files/functions, revisions and adaptations in future `THIRD_PARTY.md`; check weight terms separately. Do not import sibling checkouts directly.
+## 3. V0 GPU and image feasibility first
 
-## 2. Small architecture and information boundaries
+### Required text profile and replay
 
-Use a root-level `imagecalgacus/` package. Module paths below are relative to it; `configs/`, `tests/` and packaging files are repository-level. Dependencies: NumPy, `cryptography`, Pillow; optional `llama-cpp-python` and selected image runtime; pytest, Matplotlib and scikit-learn for verification/analysis. Pin versions/builds after feasibility. A legacy image worker may need a separate environment.
+Explicitly require `n_gpu_layers=-1`, `logits_all=True`, `n_batch=1`, `n_ubatch=1`, `n_ctx=4096`, and a pinned thread count. Ordinary commands reject CPU inference; missing capability, partial offload, OOM or CUDA execution errors terminate clearly. No CPU retry. Partial offload requires a recorded, reviewed departure and renewed replay checks.
 
-| Proposed location | Responsibility and principal contract |
+Small numerical or context-state changes can reorder near-tied logits and break decoding. Before backend imports, validate RankCloak's GPU replay settings:
+
+| Setting | Value and purpose |
 | --- | --- |
-| `payloads.py`, `packet.py` | Canonical payload preparation; `seal(payload, key, nonce_store) -> bytes[292]`; `open_packet(packet, key) -> Payload` after authenticated validation. |
-| `probabilities.py` | `Model.start(context)`; `Model.distribution() -> Distribution` from its observed prefix; `Model.observe(symbol)`. Distribution contains observable IDs, normalized probabilities, deterministic order, and retained-mass diagnostics. No payload argument. |
-| `rank_coding.py`, `entropy_coding.py`, `arithmetic_coding.py` | Pure coder state machines consuming distributions and symbols/bits; report recovered-bit count and stopping state. Depend on neither modality backend nor evaluator. |
-| `text_model.py`, `pixel_model.py` | Conditional distributions and reproducible model state; candidate consistency and discrete RGB likelihoods. |
-| `artifacts.py`, `sender.py` | Strict UTF-8/PNG I/O; packet transport, completion, timing and diagnostics. |
-| `receiver.py` | `receive(carrier, profile, context, key)` returns recovered bytes or failure, plus independently determined stop position, conformance flags and diagnostics. |
-| `runner.py`, `evaluation.py` | Enumerate work, isolate processes, retain failures; separate evaluator joins references, computes equality, metrics and grouped comparisons. |
-| `configs/`, `tests/`, `pyproject.toml` | Frozen profiles/allocations, verification fixtures, dependency and CLI declarations. |
+| `CUDA_LAUNCH_BLOCKING` | `1`: synchronous launch behavior |
+| `GGML_CUDA_DISABLE_GRAPHS` | `1`: avoid graph-dependent execution differences |
+| `GGML_CUDA_DISABLE_FUSION` | `1`: fixed unfused replay path |
+| `GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F` | `1`: recorded compute-precision control |
+| `CUBLAS_WORKSPACE_CONFIG` | `:4096:8`: reproducible workspace configuration |
+| `CUDA_DEVICE_ORDER` / `CUDA_VISIBLE_DEVICES` | `PCI_BUS_ID` / selected physical UUID; only that GPU is exposed, mapped to logical 0 |
 
-Public protocol configuration contains model/tokenizer identities, precision, ordering, eligibility, packet size/AAD, dimensions, method, thresholds, budgets, and serialization rules. Shared conditioning contains exact prompt bytes or the 96-byte row; it is distinct from the random AES key. Neither conditioning complexity nor model secrecy establishes cryptographic strength.
+Unlike upstream `setdefault`, profile validation must reject conflicting effective values. Check whether the selected backend build actually supports these controls; recording ignored variables is insufficient. Retain them until independent GPU replay passes; throughput alone does not justify removing them.
 
-Per-message transported contents are only nonce, ciphertext and tag; protected plaintext contains header, payload and slot padding. Sender diagnostics may contain token IDs, traces, packet identity and timings. Evaluator-only records contain source bytes, source digest, provenance, payload IDs and pairing. None is a receiver input.
+The inspected installation recipe uses the CUDA 12.4 wheel for llama-cpp-python 0.3.23 and the two pinned NVIDIA packages above. `preload_pip_cuda_libraries` loads `libcudart.so.12`, `libcublasLt.so.12`, `libcublas.so.12` with `RTLD_GLOBAL`. Confirm actual loaded library paths, build identity and architecture support. If installation later proves necessary, verify a compatible CUDA wheel or a source build with `CMAKE_ARGS="-DGGML_CUDA=on"`; historical pins are evidence, not universal compatibility guarantees. [Official installation documentation](https://llama-cpp-python.readthedocs.io/en/latest/#installation-configuration) distinguishes CUDA builds from CPU builds.
 
-Stage only `carrier.txt` or `carrier.png`, validated profile, context and key in an opaque restricted receiver input directory. Remove payload-bearing names/comments. Launch a fresh process with a filesystem allowlist: read-only package/runtime/model assets and inputs, private scratch/output, no network, sender/evaluator directories, caches, inherited descriptors or sensitive environment variables. Reject symlinks/unexpected inputs. Demonstrate denied reads of external sentinel files: directory separation alone is insufficient. Sandbox startup failed during planning; working isolation remains an M2 dependency. Only afterward may the evaluator compare receiver and sender traces.
+At sequence start adapt `reset_model`: both `model.reset()` and the supported actual KV-clear operation must succeed; do not silently skip a missing private API. Then `evaluate_context` once and incremental `model.eval([id])` thereafter, identically at sender/receiver. CPU full-prefix **tokenizer** checks do not imply full-prefix neural reevaluation.
 
-## 3. Packet and cryptographic contract
+### Fail-fast preflight evidence
 
-Use unsigned big-endian fields, with no structure alignment:
+Record the selected physical UUID/PCI bus/name, current free memory, driver, logical mapping, interpreter, dependency/build/library hashes, model/tokenizer hashes and effective profile. Never copy old visibility values or assume physical device 0.
 
-| Plaintext offset | Width | Permitted value |
+Text preflight must show CUDA backend linkage/system information, `llama_cpp_gpu_offload_supported()`, backend initialization reporting all eligible model layers offloaded, model GPU buffers, and a successful short evaluation. Correlate its PID/device allocation with execution evidence (CUDA kernel trace or backend timings plus process-specific GPU activity). Flags, GPU visibility and PyTorch CUDA availability alone cannot pass.
+
+For PyTorch, require `load_state_dict(..., strict=True)` with no missing/unexpected tensors; use `model.to(selected_cuda_device)`, matching inputs/buffers, `model.eval()` and `torch.inference_mode()`. Inspect actual tensor devices, GPU allocation, synchronized inference and CUDA operator execution; record outputs and peak memory. Pin float32 inference, disable autocast/TF32 and cuDNN benchmarking, request deterministic algorithms, and fail on unsupported execution. CPU float64 probability bookkeeping is allowed. Legacy padding allocations must follow the input device, not unqualified default-device calls.
+
+Run text and image jobs sequentially; terminate/release one backend before loading another, including sender versus receiver where necessary. No multi-GPU scheduling or model services. Cross-process equality of selected ranks on small replay fixtures is required in addition to allocation evidence.
+
+### Image candidate decision
+
+Prefer the shortest credible path to correct GPU execution, first investigating the [PyTorch PixelCNN++ port](https://github.com/pclucas14/pixel-cnn-pp/tree/7cb4436f062fda9b63ecc9e3b75d2c2dcb379931), revision `7cb4436f062fda9b63ecc9e3b75d2c2dcb379931`, because a CUDA PyTorch environment exists. Inspect/adapt `model.py::PixelCNN.forward` and `utils.py::discretized_mix_logistic_loss`; do not use `load_part_of_model` or its continuous RGB sampler. Match checkpoint architecture: constructor default 80 filters differs from training's 160; strict loading must reject mismatches. Its README advertises weights and reports results, but those are not verified availability/suitability. Its [license](https://github.com/pclucas14/pixel-cnn-pp/blob/7cb4436f062fda9b63ecc9e3b75d2c2dcb379931/license.md) restricts selling despite an MIT heading; preserve its separate license, do not relicense it under this project's MIT notice, and resolve checkpoint terms.
+
+The bounded alternative is [official PixelCNN++](https://github.com/openai/pixel-cnn/tree/bbc15688dd37934a12c2759cf2b34975e15901d9), revision `bbc15688dd37934a12c2759cf2b34975e15901d9`, with advertised CIFAR-10 checkpoint and legacy `tensorflow.contrib`. Choose it only if a compatible GPU runtime/checkpoint is readily usable. Preserve its notices and required inference/EMA tensors. Keep only the selected implementation; a legacy backend needs equivalent GPU-operation evidence.
+
+Track separately: published checkpoint availability, actual accessible/local bytes and hash, usage terms, strict runtime compatibility, and experimentally verified conditional/replay suitability. Allow about one day initially, at most **three working days total** for unresolved problems across these candidates. Require normalization/causality checks, one ordinary full 32×32 generation and measured generation/replay costs. No extensive TensorFlow repair, conversion infrastructure, replacement training, latent recovery substitute or one-direction completion claim. If blocked, preserve completed work and report the exact obstacle.
+
+## 4. Compact V0 architecture and commands
+
+Use `imagecalgacus/` with the following modules; no plugin registry or unused framework.
+
+| Proposed module | Contract/dependencies |
+| --- | --- |
+| `packet.py` | Canonical source validation, `seal(payload, key, nonce)->bytes[292]`, authenticated `open_packet`; cryptography |
+| `fixed_rank.py` | Pure nibble conversion and deterministic ordering; NumPy |
+| `text_backend.py`, `image_backend.py` | GPU inference, observable distributions and strict artifact I/O; llama-cpp or selected image runtime, Pillow |
+| `sender.py`, `receiver.py` | Explicit encode/decode entry points; packet/coder/backend only |
+| `preflight.py` | Device/backend evidence and compatibility checks |
+| `demo.py`, `evaluate.py` | Preselected cases, serial subprocesses/results; source comparison only in evaluator |
+
+Backend contract: `start(context)`, `distribution()->(observable_ids, log_probs, ordered_ids)`, `observe(symbol)`, `close()`. It accepts no payload. V0 calls the fixed coder; V1 adds gated/arithmetic state machines without changing artifact boundaries. Add focused `tests/`, configurations, dependency/usage/attribution files, and `.gitignore` exclusions for private runs, keys and models.
+
+Planned command interfaces (placeholders resolved during implementation; interpreters/profile paths explicit):
+
+```text
+<python> -m imagecalgacus.preflight --profile configs/v0.json --gpu <physical-uuid>
+<text-python> -m imagecalgacus.sender image-to-text --source image.png --profile configs/v0.json --context prompt.txt --new-run <new-directory>
+<text-python> -m imagecalgacus.receiver image-to-text --carrier inbox/carrier.txt --profile inbox/profile.json --context inbox/prompt.txt --key inbox/run.key --output recovered.gray
+<image-python> -m imagecalgacus.sender text-to-image --source message.txt --profile configs/v0.json --context row.rgb --new-run <different-new-directory>
+<image-python> -m imagecalgacus.receiver text-to-image --carrier inbox/carrier.png --profile inbox/profile.json --context inbox/row.rgb --key inbox/run.key --output recovered.txt
+<python> -m imagecalgacus.demo --cases configs/v0_cases.json --profile configs/v0.json --new-run <demo-directory>
+<python> -m imagecalgacus.evaluate --run <demo-directory> --references <private-manifest>
+```
+
+All model commands enforce the resolved profile's selected GPU UUID and revalidate it before loading. Preflight dispatches each configured interpreter sequentially. Model paths are explicit configuration, not implicit sibling lookup/download. Sender commands create a new run and key; decoding never creates an encoding run.
+
+Public profiles contain format/AAD, coder, model/runtime identities, dimensions, ordering and budgets. Shared conditioning is exact prompt bytes or the 96-byte row, distinct from the cryptographic key. Per-message transport contains nonce/ciphertext/tag only. Sender diagnostics may contain packet bytes, IDs and ranks; evaluator references contain source bytes/digests, case provenance and expected dimensions.
+
+Stage only carrier, profile, context and retained key in a receiver input directory; declared model/runtime assets are separately readable. Launch a fresh receiver process with explicit paths, not the demo/reference manifest. Inspect imports/data flow to exclude evaluator dependencies. Demonstrate decoding after the sender exits and with diagnostic files/caches absent. Original payloads/digests/packet bytes, saved token IDs, original latents, rank traces and payload-specific sidecars never enter receiver inputs. Runtime/KV caching within its own process is allowed. No new OS sandbox, isolation launcher, sentinel suite or container framework blocks V0. Existing access controls remain intact; this is data separation, not adversarial isolation.
+
+Each new demonstration encoding run creates a fresh OS-random 32-byte key and new directory. Generate random 12-byte nonces, checking an in-memory per-run set and redrawing duplicates before encryption. Retain the key locally with restrictive permissions outside version control; never log key bytes. One live demo batch may share its run key; refuse later encoding resumption/appending. Existing artifacts may be decoded with their retained key. Sampling seeds never generate keys/nonces. Durable cross-run nonce services and transactional scheduling are deferred.
+
+## 5. Packet, rank and artifact correctness
+
+### Fixed packet and probability rules
+
+Unsigned big-endian fields, no alignment:
+
+| Plaintext offset | Bytes | Permitted value |
 | --- | ---: | --- |
-| 0 | 1 byte | Version `1` |
-| 1 | 1 byte | Kind `1` = UTF-8; `2` = grayscale |
-| 2 | 2 bytes | Actual length: text 32–128; image exactly 256 |
-| 4 | 2 bytes | Width: text 0; image 16 |
-| 6 | 2 bytes | Height: text 0; image 16 |
-| 8 | 256 bytes | Payload followed by zero slot padding |
+| 0 | 1 | Version 1 |
+| 1 | 1 | Kind 1: UTF-8; kind 2: grayscale |
+| 2 | 2 | Actual length: text 32–128; image 256 |
+| 4 | 2 | Width: text 0; image 16 |
+| 6 | 2 | Height: text 0; image 16 |
+| 8 | 256 | Payload, then zero slot padding |
 
-Image payloads are 16×16 row-major unsigned grayscale bytes without container/header; canonicalize before defining the reference. Text is literal strict UTF-8: no normalization, trimming, leading space, newline conversion or replacement. Validate length before encryption; after authentication validate kind against direction, length, dimensions, UTF-8 and all padding. Reject unknown fields and surplus/truncated packets; never allocate using unchecked dimensions.
+Image reference is canonical 16×16 uint8 grayscale, row-major, not its original container bytes. Text is literal strict UTF-8 without normalization, added spaces, newline conversion or replacement. Authenticate before exposing/parsing plaintext; validate direction/kind, dimensions, bounds, UTF-8 and every padding byte.
 
-AES-256-GCM uses a separately generated 32-byte random key, a 12-byte nonce and full 16-byte tag via the [standard AESGCM API](https://cryptography.io/en/latest/hazmat/primitives/aead/#cryptography.hazmat.primitives.ciphers.aead.AESGCM). Fix AAD to the exact bytes `ImageCalgacus/packet/v1` without newline; do not bind the coding method. Transport `nonce || ciphertext || tag`: `12 + (8 + 256) + 16 = 292` bytes, or 2,336 bits.
+Use standard AES-256-GCM, 16-byte tag, AAD exactly `ImageCalgacus/packet/v1` without newline. Transport `nonce || ciphertext || tag`: `12+(8+256)+16=292` bytes = 2,336 bits. Reject 291/293-byte inputs, unknown fields and surplus data. The receiver knows 292 before decoding, so encrypted length causes no framing cycle. Authentication failure returns no partial plaintext. Framing costs 36 bytes; slot padding costs `256-L` bytes (128–224 for text). Remove only authenticated, verified padding using the declared length.
 
-Generate nonces with the operating-system CSPRNG. Atomically reserve each `(key_id, nonce)` in a durable sender ledger before encryption; retry collisions, and never release reservations after crashes. Refuse packet creation if the ledger for an existing key is missing. Encryption keys and ledger are outside version control. Encrypt once per payload/context pairing and reuse that exact prepared packet across methods; retries reload it. A deliberate new packet needs a fresh nonce and recorded attempt lineage. Experimental seed generators must never generate cryptographic keys/nonces.
+Each byte maps high nibble then low nibble `d` to rank `d+1`: 584 packet symbols, ranks 1–16, no alignment padding. Reject missing/excess ranks and out-of-alphabet values. Stop packet collection by this count, not a sender offset.
 
-The receiver knows the 292-byte target before decoding; encrypted length creates no framing cycle. Authenticate before parsing/exposing plaintext. Wrong key/nonce/AAD/tag returns authentication failure without partial plaintext. AEAD does not establish carrier undetectability or edit robustness.
+Compute eligible probabilities in float64 with stable log-sum-exp and ascending-ID summation. Text ordering uses descending logits as in RankCloak; pixel ordering uses descending log probability; exact ties use ascending observable ID. Freeze that ordering independently of rounded probability displays. Reject NaN/+infinity, empty support or invalid normalization; exclude numerical zero mass and renormalize, recording loss. No arbitrary probability floors. Ordinary sampling uses temperature 1, PCG64 inverse CDF in ID order, no nucleus sampling. Receiver seeds are unnecessary because observations drive replay. Pending fixed packets require at least 16 eligible symbols; completion requires nonempty support. Insufficient support, malformed inputs, numerical errors, deadlines or capacity exhaustion are explicit failures, not retries with wider support.
 
-Framing is 36 bytes: 8 header + 12 nonce + 16 tag. Slot padding is `256 − L` bytes: 128–224 for text, zero for images. Radix 16 has no bit alignment padding. Arithmetic suffix bits and ordinary carrier completion are separate overhead categories.
+### Text
 
-## 4. Shared probabilities and three coders
+Use the pinned embedded GGUF tokenizer. `T(bytes)` explicitly disables BOS insertion/special interpretation; `D(ids)` returns exact bytes without cleanup or replacement. Require support for these flags. Model context is one BOS followed by `T(prompt)`, without chat template/EOS. Tokenize the carrier separately; never retokenize prompt-plus-carrier strings. Verify prompt IDs plus the 2,048 output cap fit `n_ctx=4096`.
 
-Freeze backend/device, inference precision, thread/batch sizes, deterministic kernels and reset/replay schedule. Disable dropout and stochastic model operations. Convert outputs to float64 for stable log-sum-exp normalization. Reject NaNs, positive infinities, empty support and invalid normalization; negative infinity denotes zero mass. Remove numerical zero probabilities, record their log-mass/count, then renormalize. Sum in ascending symbol-ID order; sort by decreasing resulting probability, then ascending symbol ID. No epsilon floors, temperature scaling, or nucleus truncation. Pin the sampler to NumPy PCG64 and inverse-CDF sampling in symbol-ID order at temperature 1. Receiver replay never needs its seed: observed symbols determine state.
+At every step, rank the top 256 model IDs **before** filtering. Reject special/control/BOS/EOS IDs and empty renderings. For every candidate require strict UTF-8 and `T(D(s+[v])) == s+[v]` for the complete carrier prefix. Do not add RankCloak's prose blacklist. Apply the same rule to payload, V1 skips/arithmetic steps, and completion. Write exact final bytes, with no inserted BOM/newline. Receiver reads strict UTF-8, checks `D(T(file))==file`, reconstructs each prefix and repeats eligibility from delivered bytes.
 
-Fixed rank maps each byte's high then low nibble `d` to one-based rank `d+1`, among the top 16 eligible symbols. Thus `292 × 2 = 584` packet-bearing positions. Decode exactly 584 valid ranks; reject 0, 17, odd counts and missing/excess ranks. A receiver cannot rely on the original codec metadata.
+Complete the packet, then generate exactly 32 ordinary tokens; total cap 2,048. A packet finishing after 2,016 is packet-complete but carrier-incomplete; do not truncate an unfinished packet to reserve a tail or extend the cap. Recovery/equality can still be reported separately for an incomplete carrier. V0 successful text is exactly `584+32=616` tokens; useful image rate is `2048/616≈3.325` bits/token. Receiver checks the whole carrier including the tail.
 
-For gating, compute `H = −Σ q log2(q)` over the entire normalized eligible distribution before observing the next symbol. Use strict `H > τ`, resolving the specification's word “exceeds”; the prior inclusive `>=` helper requires adaptation. Calibrate each modality's median separately from ordinary development traces, using a frozen linear median convention and serialized float64 threshold. Skips sample from `q`, consume no bits, and still update context. While a rank packet is pending, fewer than 16 eligible symbols is a support failure even at a gated skip. Completion needs nonempty support; arithmetic needs whatever its integer partition can represent. Never widen the inspected candidate pool to rescue an attempt.
+### Pixels
 
-The comparator is the arithmetic interval method of [Ziegler, Deng and Rush](https://aclanthology.org/D19-1115/). Inspectable reference: [arithmetic.py](https://github.com/harvardnlp/NeuralSteganography/blob/14e982564aeaf9a33f7b4de440deda2184d17f12/arithmetic.py), revision `14e982564aeaf9a33f7b4de440deda2184d17f12`, functions `encode_arithmetic` and `decode_arithmetic`. No license file was present in its inspected tree: use an independently written implementation of the published algorithm with attribution, not copied source absent permission. Remove GPT-specific token repair and sentence finishing.
+Use native 32×32 RGB uint8. Prepend one shared 1×32 row internally, generate rows 1–31 in raster order, R/G/B. Deliver **width 32, height 31** RGB PNG: 992 pixels/2,976 channel values. Receiver reconstructs all symbols from delivered pixels and the shared row, never latents.
 
-**Proposed amendment A1 — finite arithmetic framing.** The reference decoder emits an entire interval endpoint on its last token. Carrier completion makes that shortcut unsuitable. Instead both sides stop when common-prefix emissions reach 2,336 bits, using the reference encoder's zero-extension convention and the following explicit finite-precision profile:
+A 10-mixture RGB PixelCNN++ emits 100 parameters/pixel: 10 mixture logits and 30 each means, log-scales and coefficients, not 256 categorical logits. Following its likelihood parameterization, clamp log scales at −7, tanh RGB coefficients, and set `x(v)=2v/255−1`. Component mass is the logistic CDF difference over half-bin width `1/255`; 0/255 include infinite tails. Use stable log-CDF calculations, not density approximations or continuous sampling.
 
-- Precision 32; half-open interval `[0, 2^32)` with Python integer endpoints. At width `R`, retain probabilities at least `1/R`, keeping at least the top `min(2, support, R)` symbols. Renormalize retained mass to `R`, round nearest/even, truncate at the first cumulative overflow, assign remaining units to the first symbol, and remove zero-width bins. Assert positive widths summing exactly to `R`; record additional probability loss.
-- Interpret the next 32 packet bits, extended with zeros, as a big-endian interval index. Select its bin. Emit only common leading bits of the lower endpoint and upper endpoint minus one. Remove those bits, append zeros to the lower endpoint and ones to the inclusive upper endpoint, then restore the exclusive upper bound. Both sides advance the bit cursor by emitted bits only.
-- Stop on the first symbol bringing emitted bits to at least 2,336; check and discard any emitted suffix beyond that length, which must be zero and is at most 31 bits. Log zero lookahead separately from emitted suffix overhead. There is no EOF token, last-artifact-token shortcut, or flush during ordinary completion. Zero-bit steps count toward the cap; nontermination is capacity failure. Before packet stop, an observed symbol outside the eligible set or positive-width bins is decoding failure.
+For component masses `f` and weights `w=softmax(mixture_logits)`:
 
-This is a framed adaptation of the external method, with 32-bit precision and bounded-support edge handling, not a new coding method or bit-identical reproduction. M4 must independently validate the interval updates and termination before comparison.
+`q_R(r)=Σw_k f_Rk(r)`; update `w_k^R ∝ w_k f_Rk(r)`.
 
-## 5. Text artifact contract
+`μ_G'=μ_G+c_RG x(r)`; `q_G(g|r)=Σw_k^R f_Gk(g;μ_G')`; update `w_k^RG ∝ w_k^R f_Gk(g;μ_G')`.
 
-Use the existing Llama 3 8B Q4_K_M candidate with its embedded tokenizer. Define `T(bytes)` with explicit `add_bos=False, special=False`, and `D(ids)` as exact detokenization bytes without special-token rendering or text cleanup. Require backend support for those flags; compatibility fallbacks cannot silently change semantics. Prompt context is exactly one model BOS followed by `T(prompt_bytes)`, no chat template or EOS. The carrier is tokenized separately; replay concatenates prompt IDs and reconstructed carrier IDs, never tokenizes their joined strings. Start with batch/microbatch size 1 and `n_ctx=4096`; verify prompt length + 2,048 fits. Freeze offload/kernels after replay checks; no context-window sliding.
+`μ_B'=μ_B+c_RB x(r)+c_GB x(g)`; `q_B(b|r,g)=Σw_k^RG f_Bk(b;μ_B')`.
 
-For every carrier prefix `s`, inspect the highest 256 model IDs before filtering, using stable ordering. Reject BOS/EOS/control/special IDs, empty byte renderings, non-strict UTF-8, and candidates failing `T(D(s+[v])) == s+[v]`. No extra prose-safety blacklist in the main condition. Apply this complete-prefix rule to packet positions, gated skips, arithmetic steps and all completion tokens. Serialize the final complete detokenization as binary-written UTF-8, without BOM or newline insertion. Receiver reads exact bytes, checks `D(T(file)) == file`, reconstructs every prefix and repeats eligibility/replay from scratch.
+Normalize posterior weights after each observation. Independently compare the conditional product with the joint mixture. Record differences from the upstream loss's small-mass approximation; this discrete adapter is not bit-identical reproduction of that approximation.
 
-**Proposed clarification A2 — cap versus tail boundary.** Keep the 2,048-token total cap and exactly 32 completion tokens. Do not truncate unfinished packets to reserve a tail. A packet finishing after position 2,016 produces `packet_complete=true`, `carrier_complete=false`, `completion_budget` failure; neither extend the cap nor call a shorter tail complete. Preserve the separate recovery endpoint: the receiver still returns authenticated, parser-valid bytes if recoverable, with tail/eligibility conformance reported separately. Evaluate equality even for these incomplete carriers; do not redefine recovery as successful completion.
+Use one GPU network evaluation per visible pixel, caching parameters only within RGB after causal tests establish independence from current/future pixels. Initialize unknown byte values to zero before scaling; reset canvas/padding state per sequence. Same serial schedule at receiver, including full-canvas conformance replay. Finish every channel after packet stop, including a partial pixel: `2976−584=2392` completion channels. Cap exhaustion before packet stop fails.
 
-Completed fixed-rank text has `584+32=616` tokens and `(256×8)/616≈3.325` useful bits/token. These are calculations, not measurements. Retain failed prefixes, including completion failures. Receiver validates the entire sequence and reports whether exactly 32 eligible tokens follow its independently determined packet stop.
+Pillow must preserve every sample through lossless 8-bit truecolor PNG; reject palette/alpha/wrong dimensions rather than silently converting. No packet metadata, gamma/ICC transformations or trailing payload channel. Check file and pixel-array hashes separately. For 128 source bytes, useful rate is `1024/992≈1.032` bits/pixel, or `1024/2976≈0.344` bits/channel. The pre-shared row costs 96 bytes/context separately.
 
-## 6. Pixel artifact contract and feasibility gate
+## 6. V0 cases, milestones and verification
 
-Native canvas is height 32, width 32, three uint8 channels. Pre-share one 96-byte first row; generate rows 1–31, left-to-right, R then G then B. Deliver height 31, width 32 RGB PNG: 992 pixels, 2,976 channel values. Receiver reconstructs symbols from those pixels and prepends the shared row internally. Neither latents nor a PNG metadata channel is permitted.
+Freeze five grayscale cases with zero-based row r/column c: I1, 17c; I2, 255((r+c) mod 2); I3, floor(255(r+c)/30); I4, 255 inside rows/columns 4–11 and zero elsewhere; I5, PCG64(seed=20260907) uniform uint8 bytes in raster order. Freeze generator/version and canonical bytes before output inspection.
 
-For PixelCNN++, unpack mixture logits, means, log-scales clamped at −7, and tanh coefficients as in [`discretized_mix_logistic_loss`](https://github.com/openai/pixel-cnn/blob/bbc15688dd37934a12c2759cf2b34975e15901d9/pixel_cnn_pp/nn.py). For byte `v`, use `x(v)=2v/255−1` and half-bin width `1/255`. Interior component mass is the logistic CDF difference at bin edges; byte 0 includes the entire left tail and byte 255 the entire right tail. Compute stable log-CDF differences, not component-mean ranks or independently sampled continuous RGB.
+The five text cases are exact UTF-8 below, without surrounding quotes or added newline; validate byte counts/digests before generation. All ten cases are development-only.
 
-Let `w_k` be softmax mixture weights and `f_Rk`, `f_Gk`, `f_Bk` component channel masses; normalize posterior weights after each update:
+| Case / bytes | Source text |
+| --- | --- |
+| T1 / 32 | Meet me beside the old oak tree. |
+| T2 / 48 | Bring the blue notebook to our meeting tomorrow. |
+| T3 / 64 | Le café est ouvert; retrouvons-nous près du vieux pont à midi |
+| T4 / 96 | The river is quiet tonight. Please leave the blue notebook beside the window before you go home. |
+| T5 / 128 | We will meet after the rain has stopped. Bring a notebook, two pencils, and the small map showing the paths through the forests. |
 
-`q_R(r)=Σw_k f_Rk(r)`; `w_k^R ∝ w_k f_Rk(r)`.
+One fixed prompt is “Write a calm field-journal entry about a walk through a temperate forest. Use continuous prose.” Store those exact bytes without quote marks. Take the first row of the first ordinary feasibility image using context seed 2001; freeze it without appearance-based rerolls. Conditioning is payload-independent.
 
-`μ_Gk'=μ_Gk+c_RG,k x(r)`; `q_G(g|r)=Σw_k^R f_Gk(g; μ_Gk')`.
+First obtain one saved-file recovery per direction, then a new ten-case demonstration run with five/direction. Preliminary examples may use the first selected cases but are not extra independent observations; budget their two artifacts separately. Do not replace failures with easier inputs. Retain carriers, failed prefixes, errors and lineage. Never reroll keys/nonces for success; repeat only after a documented correction, with a new run/key. Incomplete pixel prefixes are diagnostics, not zero-filled carriers.
 
-`w_k^RG ∝ w_k^R f_Gk(g; μ_Gk')`; `μ_Bk'=μ_Bk+c_RB,k x(r)+c_GB,k x(g)`; `q_B(b|r,g)=Σw_k^RG f_Bk(b; μ_Bk')`.
+| Milestone | Components, tasks and observable outputs | Effort; risk; stopping rule; deferred work |
+| --- | --- | --- |
+| **V0-M1 GPU/image feasibility** | `preflight`, backend adapters, profile/attribution. Verify existing environments, full text offload, strict image loading, device execution, conditional/causal checks and ordinary full canvas. Output GPU evidence, selected checkpoint/hash/terms, generation/replay/load timings. | About 1 day; at most 3 for image problems. Missing GPU/checkpoint/terms, incorrect PMFs or projected excess cost stops bidirectional feasibility. Defer extra backends, repair frameworks and training. |
+| **V0-M2 Packet and first text recovery** | Depends on M1 text gate; `packet`, `fixed_rank`, text sender/receiver, focused tests. CPU golden tests first; then one GPU-encoded saved text, fresh receiver and evaluator equality with source image. Output packet vectors and retained example. | 0.75–1.25 days; token consistency/replay risk. Stop integration on framing defects, insufficient support or divergent replay; no saved-ID/CPU fallback. Defer other coders and full static-mask comparison. |
+| **V0-M3 First PNG recovery** | Depends on M1 image gate/M2 packet. Connect discrete PMFs, row context, full PNG completion and independent receiver. Recover one authenticated text exactly, verify PNG samples and GPU replay evidence. | 0.75–1.25 days; posterior/device/causality risk. Stop on incorrect distribution, changed pixels or recovery failure. Shares M1's total image-problem time box; defer optimizations and extra contexts. |
+| **V0-M4 Ten-case demonstration** | Depends on M2/M3; `demo`, evaluator, usage docs. Preselect manifest; run ten cases serially across fresh processes, retain keys/carriers/results and verify receiver inputs/imports. Document working commands and measured cost. | 0.5–1.5 days, targeting 3–5 days total when compatible assets exist. Any failed case or missing GPU evidence prevents V0 acceptance; retain cause, do not substitute cases. Defer study infrastructure. |
 
-Posterior updates are required even though the network outputs are cached within a pixel. Validate the product of these conditionals against independently calculated joint mixture mass. The reference likelihood has a low-mass density approximation; the proposed adapter evaluates actual discretized CDF masses and measures approximation differences. This numerical specialization must be frozen and documented; do not claim exact reproduction of that training-loss approximation.
+M2's CPU work need not await all image investigation, but unresolved M1 image feasibility cannot be bypassed to declare V0 complete.
 
-Use one network evaluation per visible pixel and identical serial sender/replay. Initialize unknown uint8 samples to zero before scaling. Prove current/future pixel values cannot affect current mixture parameters before caching within a pixel. Strictly load all inference tensors, including required EMA parameters; reject missing/unexpected tensors and partial loading. Ports, weight conversions, causal caches and TensorFlow/CUDA repairs threaten the three-day time box across both candidates; then stop without training or changing directions.
+V0 acceptance requires **10/10 exactly recovered payloads** from delivered artifacts; both neural backends observed on GPU; compatible pinned sender/receiver configurations; authentication/strict parsing; separate source-byte/dimension comparison; permitted receiver inputs only; independent commands working after sender exit; every carrier and failure retained. Authentication alone is not equality.
 
-After the packet stop, sample every remaining channel from its appropriate conditional distribution, including the remainder of a partially used pixel. Fixed rank leaves `2,976−584=2,392` completion channels. Useful rate for 128 bytes is `1,024/992≈1.032` bits/pixel, or `1,024/2,976≈0.344` bits/channel. An unfinished packet at the visible boundary fails.
+Focused tests, without research infrastructure:
 
-Pillow writes lossless 8-bit truecolor PNG, no palette, alpha, color conversion, packet metadata or trailing data. Receiver requires these dimensions/mode and reads samples without applying gamma/ICC transformations. Do not silently convert unsuitable input modes. Record file SHA-256 and pixel-array SHA-256 separately; PNG compression may change file bytes while preserving recovery.
+| Level | Independent evidence |
+| --- | --- |
+| CPU unit | All 256 bytes against handwritten high/low-nibble vectors; exact packet field offsets/size; bounds, malformed authenticated headers/padding; published AES-GCM vectors, wrong key/AAD/tampering; injected duplicate nonce and old-run refusal |
+| Synthetic probability/tokenizer | Ties and zero mass; matched symbol ordering; 15-symbol support/exhausted capacity; UTF-8 split bytes, emoji/combining marks, whitespace, literal special strings, empty tokens, cross-token merges and tail-boundary consistency |
+| Pixel unit | Independent high-precision scalar CDF oracle including tails/tiny scales; small-alphabet joint-mixture enumeration detecting missing posterior updates; float64 PMF sums within `1e-12` |
+| GPU integration | Actual allocation/execution, reset/incremental replay equality, future-pixel perturbation invariance, PNG sample equality, saved-file decoding without sender memory/diagnostics, evaluator source equality |
 
-## 7. Ordered implementation milestones
+## 7. V1: methods and full development
 
-Effort estimates total 29–30 working days for one researcher; elapsed GPU time is separately budgeted. Later work cannot bypass failed gates.
+**V1-M5 Methods/development pilot** follows V0; approximately 7–8 researcher-days. Add only `entropy_coding.py`, `arithmetic_coding.py`, necessary study-runner functionality and tests. It produces all-method artifact recoveries, calibrated profiles, dataset manifests and a measured freeze recommendation. Unresolved coder correctness or budget blocks V2.
 
-| ID / objective | Dependencies; likely files | Concrete tasks and observable acceptance/output | Effort; principal risk / stop |
+Entropy uses `H=−Σq log2 q` over the complete eligible distribution and strict `H>τ`. Adapt RankCloak `revision_v3_entropy.py::{shannon_entropy_bits,entropy_eligible,generate_entropy_gated_span,calibrate_entropy_gate_thresholds}`; replace its inclusive comparison/top-p/saved-ID assumptions. Freeze each modality's median from ordinary development traces, serialized float64. Skips consume no bits but update context and obey identical filtering; pending rank packets still require 16 eligible symbols. Test below/equal/above threshold and permanent skips.
+
+The mandatory comparator is [Ziegler, Deng and Rush](https://aclanthology.org/D19-1115/), with inspected [reference arithmetic.py](https://github.com/harvardnlp/NeuralSteganography/blob/14e982564aeaf9a33f7b4de440deda2184d17f12/arithmetic.py) at `14e982564aeaf9a33f7b4de440deda2184d17f12`, `encode_arithmetic`/`decode_arithmetic`. No license was identified there: independently implement the published algorithm with attribution unless copying permission is established.
+
+Retain proposed amendment **A1**, now V1-only: replace the reference's final-token endpoint dump with common-prefix stopping at 2,336 bits. Use 32-bit integer half-open intervals. Partition in frozen probability/ID order. At width R, retain q≥1/R plus at least the top min(2,support,R); renormalize, round widths nearest/even, truncate before the first cumulative overflow, assign residual to first symbol, remove zero widths. Require positive bins summing to R. Select using the next 32 packet bits, zero-extended; emit common leading bits of lower and upper−1, shift bounds accordingly. Stop at the first emission reaching 2,336; verify/discard at most 31 emitted zero suffix bits. No EOF token, final-artifact shortcut or flush during completion. Zero-bit steps consume capacity; nontermination fails explicitly. Record quantization loss, lookahead and suffix overhead. Verify with a separately written rational/bitstream oracle, enumerated finite messages, changing distributions, exact boundaries and truncation before model integration. This is a framed comparator adaptation, not a new invention or bit-identical reproduction.
+
+Complete the methodological static-mask versus sequence-check comparison: 20 development images × two prompts = 40 pairs/80 artifacts, requiring all 40 sequence-check fixed-rank recoveries before main work. Both arms differ only in singleton versus complete-prefix filtering. Add fixed-image checks over 20 texts × two rows and all-method timing cases; no test-set tuning.
+
+Dataset proposals: 20 development payloads/direction include the five V0 fixtures plus 15 additional sources; image additions from Fashion-MNIST training data, text additions from Gutenberg 11/84, ten texts per length band overall. Test uses 100 distinct Fashion-MNIST test images, ten/class, and 100 unchanged nonoverlapping Gutenberg 1342/1661 spans, 50 per 32–64/65–128-byte band. Pin grayscale BOX resize 28→16 and byte/codepoint-boundary selection; exclude boilerplate and duplicate source/canonical bytes across splits before generation. Record archive/version/URL, terms, hashes, indices/offsets, preprocessing and exclusions. Preserve [Fashion-MNIST licensing](https://github.com/zalandoresearch/fashion-mnist/blob/master/LICENSE) and [Gutenberg conditions](https://www.gutenberg.org/policy/license.html); corpus suitability remains a V1 decision.
+
+Freeze the second prompt, “Explain how a home cook prepares a simple vegetable soup. Use continuous prose.”, and a second independently drawn row before payload generation. Seed allocation uses a fixed allocation seed plus split/direction/payload/context/purpose, with method-specific control seeds. Seeds never supply cryptographic randomness. Within a new study run, encrypt each payload/context packet once and pair that exact packet across all methods.
+
+## 8. V2: frozen evaluation and auditable results
+
+**V2-M6 Frozen evaluation**, approximately 5–6 days, requires V1 correctness, calibration, frozen configuration and measured budget. **V2-M7 Reproducibility/paper evidence**, approximately 10–11 days, follows reconciled results. Outputs are paired tables, failure accounting, grouped intervals, bounded detection, artifact examples, four methodological figures and claim-to-evidence records. No new methods or model-family sweeps. Combined planning envelope is approximately 25–30 researcher-days, not a guarantee.
+
+Freeze 100 held-out payloads × two contexts × three methods × two directions = **1,200 stego units**, at most 1,200 matched ordinary controls. Ordinary controls use the same eligible distribution and realized text length/full visible canvas. Record missing controls when no carrier exists; do not regenerate for appearance. Shared/duplicate controls are linked, not counted as independent observations.
+
+Extend V0's single append-only `results.jsonl` schema, not a reporting framework:
+
+| Fields | V0 / later use |
+| --- | --- |
+| Case, direction, run/work/attempt ID, profile/model/runtime/device IDs, GPU-evidence/log references | Required V0 |
+| Carrier/recovered paths and hashes, packet-complete/carrier-complete/authenticated/source-equal statuses, failure stage/reason | Required V0; evaluator alone supplies equality |
+| Encode/decode and cold-load seconds, carrier bytes, delivered tokens or pixels/channels, packet-stop/completion counts | Required V0 |
+| Source/packet bytes, skipped positions, framing/slot/alignment/termination overhead, control/scoring seconds, peak RSS/VRAM, model calls | V1/V2 expansion |
+| Pair/group/context/method/seed, provenance, rank/surprisal/entropy/retained-mass diagnostics, control links, invalidation lineage | V1/V2; private references/diagnostics never receiver inputs |
+
+Work IDs hash frozen configuration/split/direction/payload/context/method/replicate 0. V1 adds atomic terminal records, validated artifacts and minimal checkpoint/resume support if needed. Resume decoding/scoring existing artifacts; restart interrupted encoding in a new key/run namespace, retaining paired-method lineage. Protocol failures remain terminal observations, not opportunities to retry for success. Reconcile attempts without counting resumptions/duplicates twice. Code fixes invalidate affected work; aggregate one accepted code/design revision.
+
+Do not build persistent prefix caches for V0. If V1 needs them, identity includes complete model/tokenizer/runtime/device/precision/source/config/context/prefix/stage hashes; changes invalidate descendants. Receivers never read sender caches. Freeze dependency/build locks, model/tokenizer SHA-256, source/diff hashes and sampling versions.
+
+Report attempted, packet-completed, carrier-completed, authenticated and exact counts separately. Scheduled-but-unstarted work is not attempted; incomplete allocation is not a completed study. Give exact/attempted, exact/packet-completed and exact-and-carrier-complete rates. Useful rate is `8L/all delivered symbols`; transport is `2336/symbols through packet stop`, including skips/zero-bit steps. Keep bits/token, bits/channel and bits/pixel distinct. File expansion is serialized carrier bytes/L. Report conditional rates and failure-inclusive delivered goodput; no-artifact failures still consume attempted/time denominators. Undefined rates retain reasons.
+
+Separate header/nonce/tag, slot padding, rank alignment, arithmetic termination, skips and completion. Compute likelihood/rank summaries over packet positions, packet span and whole carrier; fixed top16 distortion diagnostic is `−4−mean(log2 q_top16)`. Bounded detection uses whole-carrier mean surprisal and log-rank against controls, with no trained detector or packet-boundary leakage. Report AUC and unscorable counts. Use 2,000 payload-group bootstrap replicates for 95% paired intervals, retaining all contexts/methods/control dependencies; report group counts and boundary-rate intervals, not an unsupported 99.9% claim. Preselect 20 lossless PNG re-save/metadata-removal checks plus UTF-8 save/load checks; missing artifacts remain failures, not replacements.
+
+## 9. Compute allocation and stopping
+
+V0 receives a proposed **two GPU-hour initial cap**, charged within the existing 40, including preflight, ordinary image/row, preliminary examples, ten-case encoding, independent replay, model loading and failures. First measure one complete encode/replay per direction and cold loads. Count occupied GPU time during CPU filtering/bookkeeping; synchronized timings are essential. No throughput is assumed. Enforce the remaining allocation as a timeout; project initial-step costs before full-canvas runs.
+
+For five cases/direction, conservatively project:
+
+`G_V0 = 1.25 × [G_spent + Σ_remaining(t_load + t_encode + t_receiver_load + t_decode) + G_remaining_preflight/checks]`.
+
+Use observed maxima/length-sensitive costs, including full PNG replay and text filtering. Preliminary examples already spent are not counted again; new ten-case runs are additional work. Require this estimate ≤2 hours before continuing the demonstration. If it cannot fit, stop and report measured costs and the needed within-ceiling reallocation; no automatic expansion or CPU substitution.
+
+V1 initially reserves another two GPU-hours, making the initial development allocation four combined. Proposed full development work is 152 stego artifacts: 80 text filter-comparison artifacts + 40 fixed-image cases + 32 additional gated/arithmetic timing cases, with up to 48 timing controls and 16 ordinary calibration traces. Budget V0 artifacts additionally; reusing their development source payloads does not create independent observations. Remaining required development must enter the projection before spending beyond that allocation.
+
+With C frozen contexts and measured per-stage GPU-hour costs:
+
+`G_total = 1.25 × [G_development + Σ_direction,method 100C(g_generation + g_receiver + g_control + g_scoring) + G_loads + G_serialization_checks] ≤40`.
+
+Separate generation, receiver, controls and scoring; avoid charging already-recorded replay scores twice, but include extra passes when needed. Include spent failures and planned remaining development; apply the 25% reserve once, not recursively to V0's reserved estimate. Project cap-length failures/deadlines, CPU wall time and researcher days too.
+
+If C=2 exceeds budget, the only permitted reduction is making the second context development-only: 600 stego units/at most 600 controls, still 100 held-out payloads/direction and all three methods. Decide before test generation. If C=1 fails, stop for a reviewed budget/schedule decision. No automatic cloud allocation, larger hardware scope, training, direction/comparator removal or easier test selection.
+
+## 10. Critical review and unresolved decisions
+
+The review moved arithmetic, entropy calibration, datasets, static-mask comparisons, isolation frameworks and resumable scheduling out of V0. Essential framing, prefix consistency, RGB posterior updates, completion accounting, fresh-process recovery and observed GPU replay remain prerequisites. Fresh-run keys remove the need for a durable nonce service in V0. No saved-ID/latent/source leakage route is permitted; AEAD is not a naturalness, robustness or steganographic-security claim.
+
+| Unresolved decision | Impact / resolving milestone |
+| --- | --- |
+| Compatible local CUDA environments, full layer offload and deterministic replay | Existing libraries/hardware are not execution proof; V0-M1/M2 must establish pinned evidence or stop |
+| Accessible image checkpoint, terms, strict architecture and correct GPU PMFs | Main feasibility dependency; V0-M1/M3, maximum three image-problem days |
+| A1 finite-stream arithmetic adaptation/license route | Existing proposed amendment retained, deferred to V1-M5; mandatory independent termination evidence before V2 |
+| Corpus snapshots, gate medians, second context and measured allocation | Development-only decisions; V1-M5 freeze, never choose using test results |
+
+The cap/tail classification clarifies the existing rule without changing either limit. Choosing the PyTorch candidate first and simplifying run management change engineering order, not the scientific method. No further methodological-document rewrite is proposed.
+
+## 11. Independent-review checklist
+
+| Methodological requirement → | Component → | Verification evidence → | Milestone |
 | --- | --- | --- | --- |
-| **M1 Packet and CPU coder foundation** | Reviewed plan; `payloads.py`, `packet.py`, `probabilities.py`, three coder modules, `tests/`, `pyproject.toml`, `THIRD_PARTY.md` | Adapt bounded primitives; implement packet/nonce interfaces and synthetic arithmetic/gate fixtures. Produce golden vectors, license inventory and CPU report. All byte values invert; malformed packets fail; arithmetic fixtures recover or terminate as expected bounded failures. | 3 days; stop model integration if framing/inversion is unresolved. |
-| **M2 Independent text recovery** | M1; `text_model.py`, `artifacts.py`, `sender.py`, `receiver.py`, isolation launcher/config | Pin local GGUF/tokenizer; implement complete-prefix filtering, prompt separation and 32-token completion. Run static-mask versus sequence-check comparison on 20 development images × two prompts: 40 pairs, 80 artifacts. All 40 sequence-check fixed-rank artifacts must recover exactly through restricted receiver inputs. Produce mismatch/support/candidate-cost report and denied-access isolation evidence. | 3 days; support, tokenizer throughput and process isolation may block. No saved-ID fallback. |
-| **M3 Usable image backend** | M1 and receiver harness from M2; `pixel_model.py`, PNG integration tests, backend lock | Resolve checkpoint provenance/terms; strictly load it, verify channel PMFs/causality, and recover two development texts × two rows from four completed PNGs. Measure full-canvas generation and replay. Produce checkpoint manifest, numerical fixtures and artifact evidence. | 3 days maximum; stop after unresolved checkpoint/runtime problems; no replacement training. |
-| **M4 All three methods on both artifacts** | M2–M3; coder adapters, calibration configuration/tests | Complete gated/artifact and arithmetic/artifact integration; calibrate ordinary-trace medians; demonstrate each method on each modality/context with known finite stopping. Retain support and capacity failures. Produce termination vectors, gate synchronization traces and comparator adaptation record. | 4 days; any implementation defect blocks M5. Functioning capacity failures remain outcomes. |
-| **M5 Development pilot and freeze** | M4; `runner.py`, `evaluation.py`, `configs/development.json`, `configs/main.json`, payload manifests | Execute the bounded pilot below; test interruption/resumption and denied cache access; freeze payloads, contexts, seeds, thresholds, numeric rules, deadlines and hashes. Produce frozen work ledger, full cost projection and signed-off amendment decisions. | 3 days; no main run unless estimate fits both compute and researcher budgets. |
-| **M6 Main comparison and analysis** | M5; runner, evaluator, result schemas | Execute exactly the frozen matrix, retaining all terminal outcomes; independently recover artifacts, generate controls, score and aggregate by payload group. Reconcile scheduled/attempted/completed/recovered counts and compute ledger. Produce paired tables, intervals, bounded AUCs and four specified figures. | 5 days; bugs invalidate affected work rather than select successful retries. |
-| **M7 Reproducibility and reporting** | M6; release/manuscript documentation and analysis outputs | Reproduce summaries from immutable results; perform the preselected 20-case serialization checks; connect every claim to artifacts/tests, preserve attributions, and document limitations/compute. Produce reviewable release manifest and manuscript evidence tables. | 8–9 days; no new methods, training or model sweeps. |
-
-M2's baseline adapts the isolated-token mask to the new tokenizer flags, without its optional prose blacklist. Both arms share packet, top-256 pool, special-token exclusions, sampler and budgets; only singleton versus complete-prefix consistency differs at every phase. M6's four figures cover architecture/inputs, recovery/failures, rate/distortion/runtime, and representative artifacts. M7 supplies a conditional correctness argument: reconstructible prefixes and identical distributions imply identical rank/gate/interval states; sufficient capacity and finite termination yield the framed packet.
-
-## 8. Verification with independent checks
-
-| Level | Required evidence |
-| --- | --- |
-| CPU unit tests, M1/M4 | Exhaust all 256 byte values against handwritten nibble formulas and fixed vectors, not only roundtrips. Test 291/292/293-byte packets, all parser fields and slot boundaries, authenticated invalid headers/padding, published AES-GCM vectors, wrong keys/AAD and tampering. Inject nonce collisions and crashes around reservation/encryption. |
-| Synthetic coder tests, M1/M4 | Enumerate short bitstrings over uniform binary/16-way distributions; use a separate rational interval oracle for nonuniform and changing distributions. Include ties, zero mass, single-symbol support, exact interval boundaries, zero-bit steps, final zero extension and truncated streams. Force 15-symbol rank support, permanent gate skips and capacity exhaustion. Compare sender/receiver ordering and gate decisions at below/equal/above threshold. |
-| Text integration, M2 | UTF-8 splits, combining characters, emoji, leading/trailing whitespace, literal special-token strings, empty token renderings and token merges across boundaries. Demonstrate a concatenation failure missed by isolated-token tests. Check every complete prefix, including skip/tail boundaries, and byte equality after raw save/load. Wrong context and malformed UTF-8 must fail without repair. |
-| Pixel unit/integration, M3 | Independent high-precision scalar CDF calculations at 0/255 and tiny scales; enumerate a small RGB alphabet's joint mixture and marginals to expose missing posterior updates. Full 256-value normalization within `1e-12` in float64; inspect boundary rankings, causal masking and serial replay equality. PNG save/load must preserve every uint8 sample. |
-| Development versus final | Development establishes feasibility/calibration and fixes software. Final evaluation uses frozen held-out payloads without tuning. Every claimed exact recovery requires a separate receiver's authenticated, parser-valid output and evaluator byte-for-byte equality with the canonical reference, including dimensions. Authentication alone is never source equality. |
-
-Failures carry stage, reason, position and observed state. The evaluator adds the first divergent symbol only after replay; it never supplies that information to the receiver. Failure classes include serialization, unsupported input, support, numerical, capacity, completion-budget, timeout, authentication, parser, equality and infrastructure failures.
-
-## 9. Executable experiment and result records
-
-The methodology leaves corpus identities open. Proposed image source is [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist), whose published [MIT notice](https://github.com/zalandoresearch/fashion-mnist/blob/master/LICENSE) must accompany reused data. Select 100 distinct official test images, ten per class; development has 16 official training images plus four synthetic patterns. Resize grayscale 28×28 to 16×16 using pinned Pillow BOX resampling; define references from the resulting uint8 bytes. Exclude duplicate source/canonical bytes across splits before freeze, deterministically taking the next candidate. This limits image claims to small clothing thumbnails.
-
-Proposed text corpus: Gutenberg development excerpts from [11](https://www.gutenberg.org/ebooks/11) and [84](https://www.gutenberg.org/ebooks/84), held-out excerpts from [1342](https://www.gutenberg.org/ebooks/1342) and [1661](https://www.gutenberg.org/ebooks/1661). Retain copyright/license records and [distribution conditions](https://www.gutenberg.org/policy/license.html). Select unchanged, nonoverlapping UTF-8 body spans at word/codepoint boundaries; exclude boilerplate and duplicate bytes across splits. Development: 16 spans plus four Unicode fixtures, ten/size band. Test: 50 spans of 32–64 bytes and 50 of 65–128, balanced across works. M5 freezes selector/snapshots and verifies sufficient candidates without generation-based exclusions. Intervals describe payload pools, not independent books or universal language reliability.
-
-Record source URL/version, license/hash, retrieval date, archive hash, index/byte offsets, preprocessing version, exclusions, canonical hash, split and size band. Select in seeded hash order (`20260907`). Reference manifests remain evaluator-only.
-
-Freeze two prompt contexts: “Write a calm field-journal entry about a walk through a temperate forest. Use continuous prose.” and “Explain how a home cook prepares a simple vegetable soup. Use continuous prose.” The quoted contents, without quote marks, are exact UTF-8 prompt bytes. Draw two prefix rows from ordinary unconditional PixelCNN++ sampling with independent context seeds; freeze the resulting 96-byte rows before payload generation. No payload-dependent conditioning or prefix selection by appearance.
-
-Test allocation: `100 payloads × 2 contexts × 3 methods × 2 directions = 1,200` stego units; at most 1,200 controls. Pair packet/context across methods. Derive PCG64 seeds from the first 128 SHA-256 bits of allocation-seed/split/direction/payload/context/purpose; include method for controls and trace index for calibration/row draws. Coupled sender seeds need not produce identical paths.
-
-Controls sample the same eligible distributions at realized text length or visible image dimensions. Preallocate one slot/work unit; record omissions when no carrier exists. Never regenerate for appearance. Deduplicate exact controls for detection; cluster all identical carriers together when resampling, reporting distinct counts. Incomplete pixel prefixes remain diagnostics, not zero-filled PNG carriers.
-
-Stable work ID hashes frozen configuration, split, direction, payload ID, context ID, method and replicate `0`. Substage IDs identify send/receive/control/score. Atomically record started/completed/failure status, immutable artifact hashes and attempt lineage. Resume verifies outputs and skips verified terminal work; restart interrupted generation from its prepared packet/seed, counting all incurred cost. Infrastructure retries share one statistical work unit; protocol failures are terminal. Code fixes invalidate affected work with retained lineage. Aggregate one accepted revision/design tuple, never pooled retries.
-
-Cache keys cover full model/tokenizer SHA-256, runtime/build/device/precision, source revision, profile hash, context hash, complete symbol prefix and stage. A changed dependency invalidates descendants. Sender caches remain private; receiver initializes independently and may cache only its own replay. Record full dependency lock hashes, dirty-tree diff hash, configuration canonical hash, sampling algorithm/version and source/data hashes; do not use filenames as identity.
-
-Proposed CLI: `python -m imagecalgacus.runner STAGE --config configs/main.json --resume`, with stages prepare/send/receive/control/score/aggregate. Minimal append-only records:
-
-| Record | Required fields |
-| --- | --- |
-| `work_units.jsonl` | IDs/pair/group, allocation, method/context/seed, packet ID (sender/evaluator only), lineage, statuses, failure stage/position, `packet_complete`, `carrier_complete`, `authenticated`, `source_equal`; artifact/reference/output hashes in their permitted stores. |
-| `measurements.jsonl` | Source/packet/file bytes; tokens or pixels/channels; packet-stop position; forced/skipped/completion counts; framing/slot-padding bits; arithmetic emitted suffix and lookahead; encode/decode/control/score and cold-load seconds; CPU/GPU seconds, peak RSS/VRAM, model forward calls and distribution-query counts. |
-| `traces.jsonl` | Position/role, raw/eligible log probabilities and ranks, entropy, support, truncation/filter/quantization mass, emitted bits; receiver-generated traces stay separate until evaluator joins. |
-| `controls.jsonl`, summaries | Control associations/dedup groups, score availability, denominator counts, aggregation configuration, paired differences and bootstrap seed. |
-
-Report attempted, packet-completed, carrier-completed, authenticated and exactly recovered counts separately. Primary exact/attempted requires authenticated source equality; also give exact/packet-completed and the joint exact-and-carrier-complete rate. Unstarted scheduled work is separate; an incomplete matrix is not a completed study.
-
-Useful rate is `8L / total delivered tokens` or `8L / total pixels`; additionally report image bits/channel. Transport rate is `2,336 / symbols through packet stop`, including skips and arithmetic zero-bit steps. Expansion is actual UTF-8/PNG bytes divided by `L`. Report conditional completed-artifact rates plus failure-inclusive delivered goodput, `Σ(exact × 8L)/Σ delivered symbols`; retain costs of no-artifact failures in time-based goodput. Undefined transport rates remain missing with reasons, never successful zeros. Pre-shared row cost is 96 bytes/context, separate from transmitted rate.
-
-Aggregate surprisal/ranks over packet-bearing positions, packet spans and whole carriers, with corresponding control boundaries. Include retained mass and uniform-top16 diagnostic `−4−Σ(log2 q_top16)/16`, not an assumption of perfectly uniform finite packet bits. Detection uses whole-carrier mean surprisal and mean log-rank, higher meaning stego, without key/packet boundaries; report AUC unchanged even below 0.5 and unscorable counts. Bootstrap 2,000 payload groups for 95% intervals, preserving methods, contexts, strata and shared-control dependencies. Report effective cluster counts; for boundary recovery rates add Wilson intervals on groups recovering under all contexts. Report paired differences, joint-valid counts and failure-inclusive counterparts; repeated contexts are not independent payloads.
-
-## 10. Pilot, compute projection and stopping rules
-
-Allocate four GPU-hours initially. Start with two artifacts/modality. Text comparison contributes 80; image fixed-rank checks use all 20 development texts × two rows = 40, including M3's four feasibility cases. Timing uses four preselected payloads/direction × two contexts × three methods = 48, reusing 16 fixed-rank cases: 152 unique development stego artifacts. Include both text-length bands/Unicode; M4 demonstrations are included, reruns charged. Add at most 48 timing controls, 16 ordinary calibration traces (four/context/modality) and four unfiltered text traces. Generate rows once; no held-out calibration.
-
-Measure loading, context initialization, full encode, independent replay, controls, scoring, prefix-length-dependent filtering CPU cost, model calls, memory and failures. Calibration targets 616-token text traces and full image canvases; pool valid ordinary positions per modality and report failed traces. Do not assume 50% gate acceptance on stego paths. Freeze per-stage/modality deadlines covering the slowest method's projected cap cost; timeouts are terminal.
-
-For each direction/method, estimate conservative per-attempt stage costs from pilot lengths/calls and the maximum observed stage cost; also project cap-length failures. With `C` contexts, `N_dm=100C`:
-
-`G_projected = 1.25 × [G_dev + Σ_dm N_dm(g_send,dm + g_receive,dm + g_control,dm + g_score,dm) + G_load + G_serialization_checks] ≤ 40 GPU-hours`.
-
-Here each `g` is measured GPU time, including occupied GPU time during CPU filtering; `G_dev` includes spent and remaining required development. Avoid double-counting scores computed during independent replay, but include separate control scoring and any needed extra pass. Preselect 20 image work IDs across methods before outcomes; re-save with different lossless compression, strip ancillary metadata, verify pixel equality and replay. Do not replace missing carriers. Include raw UTF-8 byte checks. Sum device-hours if multiple GPUs are used. Project CPU wall time and researcher effort separately; hardware visibility is not a scheduling reservation.
-
-The 25% multiplier reserves failures and required reruns; no throughput is assumed. Stop at the pilot ceiling if required checks/projection cannot be established. If the full estimate exceeds budget, the only permitted main reduction is the second context becoming development-only: 600 stego units, at most 600 controls, still 100 test payloads/direction and all three methods. Freeze that choice before test generation. If this also fails, pause for a reviewed schedule/budget amendment; do not drop directions/comparator, train models, select easier payloads or broaden hardware scope automatically.
-
-## 11. Critical review and unresolved decisions
-
-Review resolved receiver/reference coupling, framing, arithmetic stopping, complete-prefix checks, RGB posteriors and recovery/completion conflation. It checked padding, pairing, failures and development-only calibration. No steganographic security, naturalness, inherited-method novelty, cross-device recovery or unmeasured feasibility is claimed. Latent, overlay, high-resolution, training and model-family work remain deferred.
-
-| Unresolved decision | Impact and required resolution |
-| --- | --- |
-| A1 arithmetic framing/precision adaptation and source licensing route | Review the stated departure from the reference EOF shortcut; use paper-based code unless copying permission exists. M1/M4 must provide independent finite-stream vectors. Comparator remains mandatory. |
-| A2 late packet completion classification | Review the proposed interpretation of cap plus exact tail; freeze statuses/endpoint before M2/M5. No cap or tail length change is proposed. |
-| Image checkpoint/runtime/terms and exact CDF adapter | Published links remain unverified; strict loading, conditional checks and four PNG recoveries required by M3 within three days. Numerical approximation differences must be recorded. |
-| Isolation and deterministic backend | Denied-access checks and independent identical ordering required at M2/M3; existing planning sandbox failure prevents assuming availability. |
-| Corpus snapshots, medians, context rows and measured budget | These require development, not invented values. M5 must freeze manifests, thresholds, rows and one/two-context allocation; insufficient candidates or budget requires documented review before main work. |
-
-Datasets, prompts, nonce handling and numerical conventions fill specification omissions. Review A1/A2 explicitly; packet size, questions, recovery source and all methods/directions remain fixed. The fallback remains PixelCNN++ under the same gate. Further methodology changes require amendments.
-
-## 12. Independent-review checklist
-
-| Methodological requirement → | Implementation component → | Verification evidence → | Milestone |
-| --- | --- | --- | --- |
-| Fixed 292-byte authenticated packet | `packet.py` | Golden vectors, parser bounds, nonce/crash tests | M1 |
-| Existing bounded-byte bridge | `rank_coding.py` | All-byte independent inversion, strict 584-rank endpoint | M1 |
-| Recovery solely from delivered artifacts | `receiver.py`, isolation launcher | Restricted-input listing, denied reads, evaluator equality | M2–M3 |
-| Complete-prefix UTF-8 consistency | `text_model.py`, `artifacts.py` | 40-pair comparison; all 40 main-filter fixed recoveries | M2 |
-| Observable RGB and private prefix | `pixel_model.py` | Joint/conditional oracle, causal checks, PNG equality/replay | M3 |
-| Entropy gate and external comparator | gated/arithmetic coders | Frozen medians, synchronized gates, finite-stream vectors | M4 |
-| Equal packet/context/budget allocation | frozen configs, `runner.py` | Work ledger, pairing/control links, resume/invalidation audit | M5 |
-| Failure-inclusive rates and bounded detection | `evaluation.py` | Denominator reconciliation, overhead tables, grouped intervals | M6 |
-| Six-week / 40 GPU-hour limits | pilot and compute ledger | Measured stage projection with 25% reserve and stop decisions | M5–M7 |
-| Limited claims and reproducible release | reporting, attribution manifest | Claim-to-evidence links, 20-case serialization check, full hashes | M7 |
+| GPU inference in both directions | Preflight/backends | Actual layer/tensor placement, allocation, execution and replay logs | V0-M1–M3 |
+| Fixed packet and bounded-byte bridge | Packet/fixed coder | Field/golden vectors, all-byte mapping, authentication/nonce tests | V0-M2 |
+| Recovery from actual files only | Receiver/evaluator | Fresh-process inputs/import review, absent diagnostics, byte equality | V0-M2–M4 |
+| UTF-8 complete-prefix consistency | Text backend | Boundary fixtures and ten-case subset; full 40-pair comparison later | V0-M2; V1-M5 |
+| Discrete RGB/private row/PNG | Image backend | Independent conditional oracle, causal checks, unchanged pixels | V0-M1/M3 |
+| Working bidirectional prototype | Demo/docs | Ten retained GPU artifacts, 10/10 exact recoveries | V0-M4 |
+| Gating and external comparator | Later coders | Gate synchronization, calibrated medians, finite-stream oracle | V1-M5 |
+| Fair frozen matrix and overhead | Study runner/evaluator | Pairing/failure ledger, controls, unit-correct rates, grouped intervals | V2-M6 |
+| Six-week/40-GPU-hour limits | Timing ledger | Stage projections, reserve and explicit stopping decisions | V0-M1/M4; V1-M5 |
+| Bounded claims and reproducibility | Analysis/release evidence | Full hashes/attribution, serialization checks, claim-to-evidence links | V2-M7 |
