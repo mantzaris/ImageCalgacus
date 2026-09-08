@@ -23,6 +23,8 @@ def receive(args, arithmetic_observer=None):
     if Path(args.output).exists() or Path(args.report).exists():
         raise FileExistsError("refusing to overwrite recovered output/report")
     profile=read_profile(args.profile)
+    if args.direction != "image-to-text" and "development_text_filter" in profile:
+        raise ValueError("text-filter option is only for the development text comparison")
     context,key=Path(args.context).read_bytes(),Path(args.key).read_bytes()
     if len(key)!=32: raise ValueError("wrong key length")
     modality="text" if args.direction=="image-to-text" else "image"
@@ -33,15 +35,19 @@ def receive(args, arithmetic_observer=None):
     trace=Trace()
     record={"stage":"decode","direction":args.direction,"method":method,
             "profile_id":canonical_hash(profile),"model_id":profile[modality]["model_sha256"],
+            "text_filter_arm":profile.get("development_text_filter","sequence") if modality=="text" else None,
             "carrier":str(Path(args.carrier)),"output":str(Path(args.output)),
             "input_roles":["carrier","profile","context","key"],"input_files":[p.name for p in inputs],
             "packet_complete":False,"authenticated":False,"carrier_complete":False,
             "failure_stage":None,"failure_reason":None}
-    model=None; emitted=0; packet_stop=None; phase="backend"; started=time.monotonic()
+    model=None; emitted=0; packet_stop=None; phase="backend"; started=time.monotonic(); begin=None
     try:
         if modality=="text":
             from .text_backend import TextBackend
-            model=TextBackend(profile); symbols=model.reconstruct(Path(args.carrier).read_bytes())
+            model=TextBackend(profile)
+            record["cold_load_seconds"]=model.load_seconds
+            phase="artifact_parsing"
+            symbols=model.reconstruct(Path(args.carrier).read_bytes())
             cap,expected_kind=2048,GRAYSCALE
         else:
             from .image_backend import ImageBackend,read_png
@@ -49,6 +55,7 @@ def receive(args, arithmetic_observer=None):
             record["pixel_sha256"]=hashlib.sha256(pixels.tobytes()).hexdigest()
             model=ImageBackend(profile); cap,expected_kind=2976,TEXT
         record["cold_load_seconds"]=model.load_seconds
+        record["parsed_symbol_count"]=len(symbols)
         begin=time.monotonic(); model.start(context); phase="replay"
         for position,symbol in enumerate(symbols):
             ids,q,order=model.distribution()
@@ -92,6 +99,8 @@ def receive(args, arithmetic_observer=None):
                        "failure_position":emitted})
         traceback.print_exc()
     finally:
+        if begin is not None and "decode_seconds" not in record:
+            record["decode_seconds"]=time.monotonic()-begin
         record.update({"packet_complete":coder.done,"packet_stop":packet_stop,
                        "completion_symbols":emitted-packet_stop if packet_stop is not None else 0,
                        "packet_bits_recovered":min(len(coder.bits),2336),"coder_diagnostics":coder.diagnostics(),

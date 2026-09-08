@@ -1,0 +1,13 @@
+{
+  "package_unchanged_during_batch": true,
+  "source_manifest_matches_current_code": true,
+  "protected_files_unchanged": 725,
+  "post_freeze_reporting_only_files": [
+    "scripts/collect_v1_review.py",
+    "scripts/project_v1_compute.py",
+    "tests/test_qualification_sources.py"
+  ],
+  "gpu_ledger_unchanged_since_batch_end": true,
+  "no_extra_jobs": true,
+  "heldout_absent_from_batch": true
+}

@@ -1,0 +1,29 @@
+{
+  "allocation_complete": true,
+  "expected_count": 12,
+  "attempted_count": 12,
+  "completed_count": 10,
+  "packet_completed_count": 10,
+  "authenticated_count": 10,
+  "exact_recovery_count": 10,
+  "all_recovered": false,
+  "recorded_failure_count": 2,
+  "missing_identifiers": [],
+  "unexpected_identifiers": [],
+  "duplicate_expected_identifiers": [],
+  "duplicate_result_identifiers": [],
+  "duplicate_expected_case_identifiers": [],
+  "duplicate_result_case_identifiers": [],
+  "case_work_mismatches": [],
+  "unstarted_identifiers": [],
+  "unfinished_identifiers": [],
+  "invalid_evidence_identifiers": [],
+  "recorded_result_reconciliation": {
+    "missing": [],
+    "unexpected": [],
+    "duplicates": [],
+    "case_work_mismatches": []
+  },
+  "mode": "final",
+  "exit_requires_all_recovered": false
+}

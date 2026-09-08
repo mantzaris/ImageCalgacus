@@ -1,0 +1,88 @@
+{
+  "sources": {
+    "train-images-idx3-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/train-images-idx3-ubyte.gz",
+      "bytes": 26421880,
+      "sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+      "official_md5": "8d4fb7e6c68d591d4c3dfef9ec88bf0d",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "train-labels-idx1-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/train-labels-idx1-ubyte.gz",
+      "bytes": 29515,
+      "sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845",
+      "official_md5": "25c81989df183df01b3e8a0aad5dffbe",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "t10k-images-idx3-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/t10k-images-idx3-ubyte.gz",
+      "bytes": 4422102,
+      "sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+      "official_md5": "bef4ecab320f06d8554ea6380940ec79",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "t10k-labels-idx1-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/t10k-labels-idx1-ubyte.gz",
+      "bytes": 5148,
+      "sha256": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5",
+      "official_md5": "bb300cfdad3c16e7a12a480ee83cd310",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "FASHION_LICENSE.txt": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/LICENSE",
+      "bytes": 1109,
+      "sha256": "13ef4788476d292858fa60eb9a5f74aeca5c65770bc885ccaa05823a17ef7be1"
+    },
+    "pg11.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+      "bytes": 174311,
+      "sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+      "edition_header": [
+        "Title: Alice's Adventures in Wonderland",
+        "Author: Lewis Carroll",
+        "Release date: June 27, 2008 [eBook #11]",
+        "Language: English",
+        "Credits: Arthur DiBianca and David Widger"
+      ]
+    },
+    "pg84.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/84/pg84.txt",
+      "bytes": 448885,
+      "sha256": "7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3",
+      "edition_header": [
+        "Title: Frankenstein; or, the modern prometheus",
+        "Author: Mary Wollstonecraft Shelley",
+        "Release date: October 1, 1993 [eBook #84]",
+        "Language: English",
+        "Credits: Judith Boss, Christy Phillips, Lynn Hanninen and David Meltzer. HTML version by Al Haines."
+      ]
+    },
+    "pg1342.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+      "bytes": 772386,
+      "sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+      "edition_header": [
+        "Title: Pride and Prejudice",
+        "Author: Jane Austen",
+        "Release date: June 1, 1998 [eBook #1342]",
+        "Language: English",
+        "Credits: Chuck Greif and the Online Distributed Proofreading Team at http://www.pgdp.net (This file was produced from images available at The Internet Archive)"
+      ]
+    },
+    "pg1661.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/1661/pg1661.txt",
+      "bytes": 607606,
+      "sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+      "edition_header": [
+        "Title: The Adventures of Sherlock Holmes",
+        "Author: Arthur Conan Doyle",
+        "Release date: March 1, 1999 [eBook #1661]",
+        "Language: English",
+        "Credits: an anonymous Project Gutenberg volunteer and Jose Menendez"
+      ]
+    }
+  },
+  "fashion_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141",
+  "fetch_date": "2026-09-08",
+  "hash_policy": "fail on upstream changes; no silent new editions"
+}

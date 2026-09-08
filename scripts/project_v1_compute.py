@@ -12,11 +12,15 @@ def main():
     parser.add_argument("--payloads",type=int,default=20,help="per direction; prospective V1.1 default")
     parser.add_argument("--contexts",type=int,choices=[1,2],default=1,help="2 is a projection sensitivity only")
     parser.add_argument("--output",required=True,help="new output file; accepted reports are never overwritten")
+    parser.add_argument("--qualification-results",type=Path,help="new V1.2 terminal observations; diagnostics excluded")
+    parser.add_argument("--qualification-allocation",type=Path,default=ROOT/"configs/v1_qualification.json")
     args=parser.parse_args()
     if args.payloads<=0: parser.error("positive payload allocation required")
     output=Path(args.output).resolve()
     if output.exists() or output.is_relative_to(ROOT/"artifacts/v1_review") or output.is_relative_to(ROOT/"artifacts/v0_review"):
         parser.error("choose a new output outside accepted V0/V1 review packets")
+    if args.qualification_results:
+        return project_qualification(args, output)
     review=ROOT/"artifacts/v1_review"
     rows=[json.loads(line) for line in (review/"results.jsonl").read_text().splitlines()]
     used,ledger=budget_state("v1");v0,_=budget_state("v0")
@@ -121,5 +125,127 @@ def main():
     json_write(output,result)
     print(json.dumps({"remaining_v1_with_reserve_hours":1.25*dev_remaining/3600,"full_study":scenarios},indent=2))
     return 0
+
+def project_qualification(args, output):
+    """Method/context cells from charged jobs; unchanged 120-unit main allocation."""
+    from collections import Counter
+    review=ROOT/"artifacts/v1_review"
+    old=[json.loads(line) for line in (review/"results.jsonl").read_text().splitlines()]
+    new=[json.loads(line) for line in args.qualification_results.read_text().splitlines()]
+    allocation=json.loads(args.qualification_allocation.read_text())
+    used,ledger=budget_state("v1");v0,_=budget_state("v0")
+    jobs={r["id"]:r for r in ledger if r["event"]=="finished"}
+    observations=[]
+    for row in old+new:
+        label=row["run"]+"-"+row["case"]
+        enc=next(j["elapsed_seconds"] for ident,j in jobs.items() if ident.endswith(label+"-encode"))
+        dec=next(j["elapsed_seconds"] for ident,j in jobs.items() if ident.endswith(label+"-decode"))
+        generation=row["encode_seconds"]; replay=row["decode_seconds"] or 0.0
+        loads=(row["sender_load_seconds"] or 0.)+(row["receiver_load_seconds"] or 0.)
+        context=row.get("context_id","prompt1" if row["direction"]=="image-to-text" else "row1")
+        arm=row.get("text_filter_arm","sequence") if row["direction"]=="image-to-text" else None
+        observations.append(dict(case=row["case"],work_id=row["work_id"],direction=row["direction"],method=row["method"],
+            context=context,arm=arm,encode_seconds=generation,decode_seconds=replay,cold_load_seconds=loads,
+            other_process_seconds=enc+dec-generation-replay-loads,charged_encode_seconds=enc,
+            charged_decode_seconds=dec,charged_pair_seconds=enc+dec,
+            exact_recovery=row["exact_recovery"],outcome_class=row.get("outcome_class","accepted_pilot"),
+            carrier_complete=row["carrier_complete"]))
+    fields=("encode_seconds","decode_seconds","cold_load_seconds","other_process_seconds","charged_encode_seconds","charged_decode_seconds","charged_pair_seconds")
+    def cell(direction,method,context,arm):
+        measured=[r for r in observations if (r["direction"],r["method"],r["context"],r["arm"])==(direction,method,context,arm)]
+        fallback=None
+        if not measured:
+            first="prompt1" if direction=="image-to-text" else "row1"
+            measured=[r for r in observations if (r["direction"],r["method"],r["context"],r["arm"])==(direction,method,first,arm)]
+            fallback="unmeasured second-context cell uses first context of SAME method"
+        if not measured and arm=="static":
+            measured=[r for r in observations if r["direction"]==direction and r["method"]==method and r["arm"]=="sequence"]
+            fallback="static unmeasured: sequence maximum cost proxy"
+        if not measured: raise ValueError("missing method-specific cost evidence")
+        means={f:average([r[f] for r in measured]) for f in fields}
+        if fallback and arm=="static":
+            means={f:max(r[f] for r in measured) for f in fields}
+        return dict(n=len(measured),cases=[r["case"] for r in measured],mean=means,assumption=fallback,
+                    full_carrier_replays_observed=sum(r["carrier_complete"] for r in measured),
+                    uncertainty="one observed case" if len(measured)==1 else "small development sample")
+    # Credits require correct implementation/evidence; a legitimate static drift failure is an outcome.
+    credited={r["work_id"] for r in new if r["evidence_valid"] and r.get("outcome_class") in {"exact_recovery","static_tokenization_drift_failure"}}
+    pending=[c for c in allocation["cases"] if c["status"]=="pending" and c["work_id"] not in credited]
+    groups=Counter((c["direction"],c["method"],c["context_id"],c["text_filter_arm"]) for c in pending)
+    details=[]; remaining_stego=0.; observed_point_stego=0.
+    for (direction,method,context,arm),count in sorted(groups.items(),key=str):
+        estimate=cell(direction,method,context,arm)
+        point=estimate["mean"]["charged_pair_seconds"]
+        per=point
+        if arm=="static":
+            # An early receiver failure cannot establish the price of a full future replay.
+            full_static=[r["charged_decode_seconds"] for r in observations if r["arm"]=="static" and r["carrier_complete"]]
+            per=estimate["mean"]["charged_encode_seconds"]+max(estimate["mean"]["charged_decode_seconds"],
+                estimate["mean"]["charged_encode_seconds"] if not estimate["full_carrier_replays_observed"] else 0.,
+                average(full_static) if full_static and not estimate["full_carrier_replays_observed"] else 0.)
+        details.append(dict(direction=direction,method=method,context=context,arm=arm,pending=count,
+            timing=estimate,observed_pair_point_seconds=point,planning_pair_seconds=per,total_seconds=count*per,
+            static_replay_assumption=("observed full replay in this cell" if estimate["full_carrier_replays_observed"] else
+                "max of early decode, same-context encode, and observed full static replay in another context") if arm=="static" else None))
+        remaining_stego+=count*per;observed_point_stego+=count*point
+    trace_costs={};trace_details=[]; ordinary=controls_remaining=0.
+    for trace in allocation["traces"]:
+        if trace["status"]!="pending": continue
+        purpose,modality=trace["purpose"],trace["modality"]
+        matches=[j["elapsed_seconds"] for ident,j in jobs.items() if
+                 ("calibration-"+modality in ident if purpose=="ordinary" else ident.endswith("control-"+modality+"-"+str(4301 if modality=="text" else 4302)))]
+        estimate=average(matches)
+        trace_costs[purpose,modality]=estimate
+        trace_details.append({"id":trace["id"],"context":trace["context_id"],"seconds":estimate,
+                              "assumption":"existing same-modality ordinary trace cost; second contexts unmeasured"})
+        if purpose=="ordinary": ordinary+=estimate
+        else: controls_remaining+=estimate
+    main_cells={direction+"/"+method:cell(direction,method,"prompt1" if direction=="image-to-text" else "row1",
+                    "sequence" if direction=="image-to-text" else None)
+                for direction in ("image-to-text","text-to-image") for method in ("fixed","gated","arithmetic")}
+    n=args.payloads*args.contexts
+    generation=n*sum(c["mean"]["encode_seconds"] for c in main_cells.values())
+    replay=n*sum(c["mean"]["decode_seconds"] for c in main_cells.values())
+    loads=n*sum(c["mean"]["cold_load_seconds"] for c in main_cells.values())
+    process=n*sum(c["mean"]["other_process_seconds"] for c in main_cells.values())
+    main_controls=n*(trace_costs["control","text"]+trace_costs["control","image"])
+    lossless=20*average([main_cells["text-to-image/"+m]["mean"]["charged_decode_seconds"] for m in ("fixed","gated","arithmetic")])
+    remaining_dev=remaining_stego+ordinary+controls_remaining
+    total=v0+used+remaining_dev+generation+replay+loads+process+main_controls+lossless
+    baseline=json.loads((ROOT/".runtime/v1_2/baseline.json").read_text())
+    history_v1=json.loads((review/"budget.json").read_text())["v1_charged_seconds"]
+    result={"scope":"V1.2 measured forecast only; V1 unqualified, no held-out execution or extra authorization",
+        "observations":observations,"main_context_method_timings":main_cells,
+        "remaining_qualification":{"stego_pending":len(pending),"batch_credited":len(credited),"by_cell":details,
+            "ordinary_pending":sum(t["purpose"]=="ordinary" and t["status"]=="pending" for t in allocation["traces"]),
+            "controls_pending_upper":sum(t["purpose"]=="control" and t["status"]=="pending" for t in allocation["traces"]),
+            "remaining_stego_seconds":remaining_stego,"naive_observed_static_point_stego_seconds":observed_point_stego,
+            "ordinary_seconds":ordinary,"controls_upper_seconds":controls_remaining,"trace_estimates":trace_details,
+            "unreserved_seconds":remaining_dev,"unreserved_hours":remaining_dev/3600,
+            "standalone_with_25_percent_headroom_hours":1.25*remaining_dev/3600,
+            "additional_to_remaining_phase_unreserved_seconds":max(0,remaining_dev-(7200-used))},
+        "history":{"v0_seconds":v0,"v1_original_checkpoint_seconds":history_v1,
+                   "v1_1_seconds":baseline["v1_seconds"]-history_v1,"v1_2_seconds":used-baseline["v1_seconds"],
+                   "v1_total_seconds":used,"remaining_v1_seconds":7200-used,"cumulative_seconds":v0+used},
+        "whole_project":{"payloads_per_direction":args.payloads,"contexts":args.contexts,"main_stego_units":6*n,"shared_controls_upper":2*n,
+            "history_seconds":v0+used,"remaining_qualification_seconds":remaining_dev,
+            "main_generation_seconds":generation,"main_receiver_seconds":replay,"main_loading_seconds":loads,
+            "main_other_occupied_process_seconds":process,"main_controls_seconds":main_controls,
+            "additional_lossless_png_replays":20,"lossless_replay_seconds":lossless,"additional_neural_scoring_seconds":0,
+            "subtotal_seconds":total,"reserve_once_seconds":.25*total,"total_with_reserve_hours":1.25*total/3600,
+            "overall_ceiling_hours":40,"forecast_fits_ceiling":1.25*total<=144000},
+        "assumptions":["No diagnostic replay is an observation or credit. Failed arithmetic attempts remain in method means.",
+          "Second-context fixed cells and each static cell have at most one new observation. Other second-context methods/ordinary traces are unmeasured.",
+          "Static cells with only early failures use a sender-length/full-other-context replay floor, not an assumption that all future receivers fail early.",
+          "All per-child costs include model checks/loading, CPU filtering/bookkeeping during occupancy, serialization and teardown.",
+          "One 25% reserve applies to the whole unreserved subtotal, conservatively including history; the standalone development headroom is NOT added again.",
+          "Shared ordinary prefixes are not independent method-specific controls. Inline likelihood scoring already costs GPU occupancy; standalone JSON and lossless file rewrite checks use CPU.",
+          "Remaining 20 lossless PNG replays are additional jobs, not credited by current exact recovery or V1.1 diagnostics.",
+          "No claim of statistical power or future throughput guarantee follows from this small sample."]}
+    json_write(output,result)
+    print(json.dumps({"pending":len(pending),"remaining_development_hours":remaining_dev/3600,
+                      "whole_project_with_reserve_hours":1.25*total/3600,"v1_remaining_seconds":7200-used}))
+    return 0
+
 
 if __name__=="__main__": raise SystemExit(main())

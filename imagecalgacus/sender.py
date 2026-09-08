@@ -29,6 +29,8 @@ def read_source(path, direction):
 
 def encode(args):
     profile = read_profile(args.profile)
+    if args.direction != "image-to-text" and "development_text_filter" in profile:
+        raise ValueError("text-filter option is only for the development text comparison")
     payload = read_source(args.source,args.direction)
     context = Path(args.context).read_bytes()
     prepared = getattr(args,"prepared_packet",None)
@@ -62,6 +64,7 @@ def encode(args):
     trace=Trace()
     result={"stage":"encode","direction":args.direction,"method":method,
             "profile_id":canonical_hash(profile),"source_hash":source_hash(),
+            "text_filter_arm":profile.get("development_text_filter","sequence") if modality=="text" else None,
             "model_id":profile[modality]["model_sha256"],"packet_complete":False,"carrier_complete":False,
             "packet_bytes":292,"prepared_packet_sha256":hashlib.sha256(packet).hexdigest(),
             "failure_stage":None,"failure_reason":None}
@@ -95,7 +98,8 @@ def encode(args):
         phase="serialization"
         if modality=="text":
             carrier.write_bytes(model.serialize())
-            result.update({"tokens":emitted,"filter_seconds":model.filter_seconds})
+            result.update({"tokens":emitted,"filter_seconds":model.filter_seconds,
+                           "serialization":getattr(model,"serialization_diagnostics",{})})
         else:
             from .image_backend import write_png
             write_png(carrier,model.canvas[1:])

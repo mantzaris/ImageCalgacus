@@ -57,6 +57,10 @@ def read_profile(path):
     allowed = {"protocol", "packet_bytes", "gpu_uuid", "text", "image", "completion_seed", "context_seed"}
     if profile["protocol"] == "imagecalgacus-v1-three-methods":
         allowed.add("coder")
+        if "development_text_filter" in profile:
+            allowed.add("development_text_filter")
+            if profile["development_text_filter"] not in {"sequence", "static"} or profile.get("coder", {}).get("method") != "fixed":
+                raise ValueError("development text-filter arms require fixed coding")
         coder = profile.get("coder", {})
         if set(coder) != {"method","thresholds","calibration_sha256","precision","framing"}:
             raise ValueError("undeclared coder profile fields")

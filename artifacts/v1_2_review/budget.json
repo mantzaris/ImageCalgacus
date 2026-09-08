@@ -1,0 +1,12 @@
+{
+  "checkpoint_seconds": 700.5396192250046,
+  "v1_charged_seconds": 6225.326668120972,
+  "v1_remaining_seconds": 974.6733318790284,
+  "v1_limit_seconds": 7200,
+  "v0_seconds": 3163.653124010041,
+  "cumulative_seconds": 9388.979792131013,
+  "gpu_jobs": 12,
+  "all_jobs_have_process_gpu_activity": true,
+  "full_child_wall_time_charged": true,
+  "no_new_phase_allowance": true
+}

@@ -139,12 +139,91 @@ def execute(args):
     return final.returncode
 
 
+def execute_qualification(args):
+    """One frozen six-unit batch; no resumption, extra units, or new allowance."""
+    from .evaluate import evaluate_case, validate_allocation
+    batch_path=Path(args.qualification_batch)
+    batch=json.loads(batch_path.read_text())
+    cases=batch["cases"]
+    if len(cases)>6 or not batch["preselected_before_carriers"]:
+        raise ValueError("not the authorized bounded batch")
+    if source_hash()!=batch["source_hash"]:
+        raise ValueError("source changed after batch freeze")
+    allocation=json.loads((ROOT/"configs/v1_qualification.json").read_text())
+    if sha256_file(ROOT/"configs/v1_qualification.json")!=batch["allocation_sha256"]:
+        raise ValueError("allocation changed")
+    if sha256_file(ROOT/allocation["source_manifest"])!=allocation["source_manifest_sha256"]:
+        raise ValueError("source manifest changed")
+    directory=Path(args.new_run); directory.mkdir(parents=True,exist_ok=False,mode=0o700)
+    packets=NewRun(args.packet_run)
+    json_write(directory/"references.json",{"cases":cases})
+    json_write(directory/"freeze.json",batch)
+    rows=[]; byid={c["id"]:c for c in cases}
+    for group in batch["ordered_groups"]:
+        group_cases=[byid[k] for k in group]
+        bound=sum(2*c["job_timeout_seconds"] for c in group_cases)
+        used,_=budget_state("v1")
+        if bound+20>7200-used:
+            print("STOP: complete group plus teardown headroom no longer fits",flush=True); break
+        first=group_cases[0]
+        if any(c["pair_id"]!=first["pair_id"] for c in group_cases):
+            raise ValueError("group is not an intact payload/context pair")
+        packet=packets.encrypt(read_source(ROOT/first["source"],first["direction"]))
+        packet_path=packets.directory/(first["pair_id"]+".packet")
+        packet_path.write_bytes(packet)
+        for case in group_cases:
+            if source_hash()!=batch["source_hash"]: raise RuntimeError("frozen source changed")
+            profile=read_profile(ROOT/case["profile"])
+            if canonical_hash(profile)!=case["profile_id"] or sha256_file(ROOT/case["context"])!=case["context_sha256"]:
+                raise ValueError("frozen profile/context changed")
+            if hashlib.sha256(read_source(ROOT/case["source"],case["direction"]).data).hexdigest()!=case["source_sha256"]:
+                raise ValueError("frozen payload changed")
+            modality="text" if case["direction"]=="image-to-text" else "image"
+            case_dir=directory/case["id"]; inbox=case_dir/"inbox"
+            label=directory.name+"-"+case["id"]
+            command=[profile[modality]["interpreter"],"-B","-m","imagecalgacus.sender",case["direction"],
+                     "--source",str(ROOT/case["source"]),"--profile",str(ROOT/case["profile"]),
+                     "--context",str(ROOT/case["context"]),"--prepared-packet",str(packet_path),
+                     "--key",str(packets.directory/"run.key"),"--new-run",str(case_dir)]
+            sent=run_budgeted(command,label+"-encode",stage="v1",max_seconds=case["job_timeout_seconds"])
+            carrier=inbox/("carrier.txt" if modality=="text" else "carrier.png")
+            received=None
+            if carrier.exists() and sent in (0,2):
+                command=[profile[modality]["interpreter"],"-B","-m","imagecalgacus.receiver",case["direction"],
+                         "--carrier",str(carrier),"--profile",str(inbox/"profile.json"),
+                         "--context",str(inbox/("prompt.txt" if modality=="text" else "row.rgb")),
+                         "--key",str(inbox/"run.key"),"--output",str(case_dir/("recovered.gray" if modality=="text" else "recovered.txt")),
+                         "--report",str(case_dir/"receiver.json")]
+                received=run_budgeted(command,label+"-decode",stage="v1",max_seconds=case["job_timeout_seconds"])
+            row=evaluate_case(case,case_dir,write=True)
+            row.update(run=directory.name,context_id=case["context_id"],pair_id=case["pair_id"],
+                       sender_exit=sent,receiver_exit=received,phase="v1.2")
+            with (directory/"results.jsonl").open("a") as stream:
+                stream.write(json.dumps(row,ensure_ascii=False)+"\n")
+            rows.append(row)
+            print(json.dumps({k:row.get(k) for k in ("case","outcome_class","exact_recovery","failure_stage","failure_reason")}),flush=True)
+            allowed=row["evidence_valid"] and row["outcome_class"] in {"exact_recovery","static_tokenization_drift_failure"}
+            if not allowed:
+                json_write(directory/"coverage.json",validate_allocation(cases,rows))
+                print("STOP: unexpected recovery/infrastructure failure; no automatic retry",flush=True)
+                return 1
+    summary=validate_allocation(cases,rows)
+    summary["v1_qualified"]=False
+    json_write(directory/"coverage.json",summary)
+    return 0 if summary["allocation_complete"] else 3
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--new-run",required=True)
     parser.add_argument("--packet-run",required=True)
-    parser.add_argument("--revision",required=True)
-    raise SystemExit(execute(parser.parse_args()))
+    parser.add_argument("--revision")
+    parser.add_argument("--qualification-batch",help="frozen V1.2 six-case manifest, no extra allowance")
+    args=parser.parse_args()
+    if args.qualification_batch:
+        raise SystemExit(execute_qualification(args))
+    if not args.revision: parser.error("--revision required for the original pilot")
+    raise SystemExit(execute(args))
 
 
 if __name__=="__main__":

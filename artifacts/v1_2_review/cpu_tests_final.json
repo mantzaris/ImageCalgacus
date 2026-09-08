@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "returncode": 0,
+  "wall_seconds": 11.54956798000785,
+  "gpu_inference": false
+}

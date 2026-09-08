@@ -40,3 +40,31 @@ The same pinned RankCloak revision's rankcloak/revision_v3_entropy.py was read i
 Text optimization relies on the inspected llama-cpp-python 0.3.23 native detokenizer's exact concatenation of token pieces for BOS-free carriers. _internals.py SHA-256: 44f3db6523465479d850b5c80f196b02123621e9e89a5826a61e425bb1e2be4f. Native tokenizer type/source guards, full-prefix re-tokenization and final whole-sequence byte comparison remain mandatory. The retained text_reference.py is this project's V0 distribution implementation, not a second inference backend.
 
 Arithmetic coding is independently implemented from [Ziegler, Deng and Rush (2019), Neural Linguistic Steganography](https://aclanthology.org/D19-1115/) and the approved A1 finite-stream adaptation. The inspected [reference arithmetic.py](https://github.com/harvardnlp/NeuralSteganography/blob/14e982564aeaf9a33f7b4de440deda2184d17f12/arithmetic.py), revision 14e982564aeaf9a33f7b4de440deda2184d17f12, exposes encode_arithmetic/decode_arithmetic; no source is copied because no reuse license was identified. A1 replaces its final-token endpoint dump with observable common-prefix stopping at 2,336 bits. It is a framed comparator adaptation, not a novel coding invention or a claim of bit-identical reference reproduction. Its finite precision can produce explicit capacity stagnation.
+
+
+## V1.2 static eligibility and public source fixtures
+
+The development-only singleton check in `TextBackend.eligible_piece` adapts
+`rankcloak/revision_protocol.py::build_round_trip_stable_mask` at
+RankCloak `ce853d42d6ba64065cb63c6bdfc0d825c62734cd` (MIT, attribution above).
+It computes the context-independent mask lazily for encountered top-256 tokens,
+using this project's exact-byte tokenizer with BOS/special interpretation disabled.
+It does not import the upstream safe-text policy: this project's existing
+special/empty/strict-UTF-8 exclusions apply identically to both arms. Literal
+valid UTF-8 is not repaired. GPU loading/reset/numerical controls are unchanged.
+
+Fashion-MNIST source archives come from Zalando Research at
+`b2617bb6d3ffa2e429640350f613e3291e10b141`; the MIT notice, copyright © 2017
+Zalando SE, is retained in `data/qualification_v1/terms/FASHION_LICENSE.txt`.
+See [upstream license](https://github.com/zalandoresearch/fashion-mnist/blob/b2617bb6d3ffa2e429640350f613e3291e10b141/LICENSE).
+
+Literal narrative excerpts acknowledge Lewis Carroll, Mary Wollstonecraft
+Shelley, Jane Austen and Arthur Conan Doyle, and Project Gutenberg as the source
+of ebooks 11, 84, 1342 and 1661. Download edition headers, URLs and SHA-256s are
+in `configs/v1_sources.json`; original byte offsets are in the source manifest.
+These works are not restricted under US copyright; other jurisdictions may differ.
+The [Gutenberg terms](https://www.gutenberg.org/policy/license.html) are retained
+in `data/qualification_v1/terms/GUTENBERG_LICENSE.txt`. These are attributed,
+unbranded literal research excerpts, not redistributed complete branded ebooks.
+Title/contents/credits and the Austen editorial preface are excluded by recorded
+narrative-start anchors; no source selection uses model outcomes.

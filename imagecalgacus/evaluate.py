@@ -50,6 +50,13 @@ def evaluate_case(case, case_dir, write=False):
               "recovered_sha256": hashlib.sha256(recovered).hexdigest() if recovered is not None else None,
               "failure_stage": sender.get("failure_stage") or receiver.get("failure_stage"),
               "failure_reason": sender.get("failure_reason") or receiver.get("failure_reason")}
+    arm = case.get("text_filter_arm", "sequence") if gray else None
+    result["text_filter_arm"] = arm
+    result["serialization"] = sender.get("serialization", {})
+    result["receiver_packet_complete"] = receiver.get("packet_complete", False)
+    result["sender_carrier_complete"] = sender.get("carrier_complete", False)
+    result["receiver_carrier_complete"] = receiver.get("carrier_complete", False)
+    result["receiver_parsed_symbols"] = receiver.get("parsed_symbol_count", receiver.get("tokens") if gray else receiver.get("channels"))
     declared = case.get("profile_id")
     model_id = case.get("model_id")
     identity = bool(sender.get("profile_id") and sender.get("model_id"))
@@ -57,6 +64,8 @@ def evaluate_case(case, case_dir, write=False):
     identity &= model_id is None or sender.get("model_id") == model_id
     identity &= sender.get("method", "fixed") == case.get("method", "fixed")
     identity &= sender.get("direction") == case["direction"]
+    if gray:
+        identity &= sender.get("text_filter_arm", "sequence") == arm
     profile_file = next((p for p in (case_dir/"inbox/profile.json",case_dir/"profile.json",
                         case_dir.parent.parent/"profile.json") if p.is_file()),None)
     if profile_file is not None:
@@ -64,6 +73,8 @@ def evaluate_case(case, case_dir, write=False):
         identity &= canonical_hash(declared_profile) == sender.get("profile_id")
         identity &= declared_profile["text" if gray else "image"]["model_sha256"] == sender.get("model_id")
     if receiver:
+        if gray:
+            identity &= receiver.get("text_filter_arm", "sequence") == arm
         identity &= receiver.get("method", "fixed") == case.get("method", "fixed")
         identity &= sender.get("profile_id") == receiver.get("profile_id")
         identity &= sender.get("model_id") == receiver.get("model_id")
@@ -105,7 +116,8 @@ def evaluate_case(case, case_dir, write=False):
     if complete and not progress_matches:
         evidence = False
     result.update({"coder_progress_matches":progress_matches,"prepared_packet_sha256":sender.get("prepared_packet_sha256")})
-    count = sender.get("tokens") if gray else sender.get("channels")
+    count = sender.get("serialization", {}).get("retokenized_tokens", sender.get("tokens")) if gray else sender.get("channels")
+    result["delivered_tokens"] = count if gray else None
     delivered = count if carrier.exists() else None
     payload_bits = 8*len(expected) if expected is not None else None
     rate = payload_bits/delivered if delivered and payload_bits is not None else None
@@ -126,6 +138,13 @@ def evaluate_case(case, case_dir, write=False):
                   "peak_rss_kib", "packet_bits_recovered"):
         if field in sender:
             result[field] = sender[field]
+    drift = sender.get("serialization", {}).get("tokenization_drift", False)
+    legitimate_static = (arm == "static" and drift and evidence and sender.get("carrier_complete")
+                         and receiver.get("gpu_evidence") and receiver.get("failure_stage") in
+                         {"artifact_parsing", "replay", "authentication_and_parsing", "completion_conformance", "truncation", "capacity"})
+    result["outcome_class"] = ("exact_recovery" if exact and complete and evidence else
+                               "static_tokenization_drift_failure" if legitimate_static else
+                               "recorded_failure" if terminal_failure else "incomplete")
     if write:
         json_write(case_dir / "evaluation.json", result)
     return result

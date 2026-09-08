@@ -1,0 +1,1271 @@
+{
+  "scope": "V1.2 measured forecast only; V1 unqualified, no held-out execution or extra authorization",
+  "observations": [
+    {
+      "case": "I1-fixed",
+      "work_id": "6e01711fd30415e8450d04a72e8eb70a5dd80b4fc95f5cc4f5d6276fab8a385c",
+      "direction": "image-to-text",
+      "method": "fixed",
+      "context": "prompt1",
+      "arm": "sequence",
+      "encode_seconds": 45.48421006999706,
+      "decode_seconds": 45.2317519749995,
+      "cold_load_seconds": 5.3787309670005925,
+      "other_process_seconds": 26.276289989997167,
+      "charged_encode_seconds": 61.62300712999422,
+      "charged_decode_seconds": 60.7479758720001,
+      "charged_pair_seconds": 122.37098300199432,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "I1-gated",
+      "work_id": "eb20152d686e89edffa16e6d3a92342ef0ff67ce219e5d0fedceb03c44fcb80c",
+      "direction": "image-to-text",
+      "method": "gated",
+      "context": "prompt1",
+      "arm": "sequence",
+      "encode_seconds": 48.00761394800065,
+      "decode_seconds": 47.47135453400551,
+      "cold_load_seconds": 5.374316733010346,
+      "other_process_seconds": 26.368338506974396,
+      "charged_encode_seconds": 63.872811454995826,
+      "charged_decode_seconds": 63.34881226699508,
+      "charged_pair_seconds": 127.22162372199091,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "I1-arithmetic",
+      "work_id": "14925045681168200cb7c0da664b4a2c26da41a407c107b4c9cf6c38bcf4ffd9",
+      "direction": "image-to-text",
+      "method": "arithmetic",
+      "context": "prompt1",
+      "arm": "sequence",
+      "encode_seconds": 411.5747572180044,
+      "decode_seconds": 406.64659467300226,
+      "cold_load_seconds": 5.434291055003996,
+      "other_process_seconds": 25.851453718998528,
+      "charged_encode_seconds": 427.27905653900234,
+      "charged_decode_seconds": 422.2280401260068,
+      "charged_pair_seconds": 849.5070966650092,
+      "exact_recovery": false,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": false
+    },
+    {
+      "case": "T1-fixed",
+      "work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a",
+      "direction": "text-to-image",
+      "method": "fixed",
+      "context": "row1",
+      "arm": null,
+      "encode_seconds": 83.64707630500197,
+      "decode_seconds": 84.85732805400039,
+      "cold_load_seconds": 1.860794468993845,
+      "other_process_seconds": 5.514125703004538,
+      "charged_encode_seconds": 87.28108476300258,
+      "charged_decode_seconds": 88.59823976799817,
+      "charged_pair_seconds": 175.87932453100075,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "T1-gated",
+      "work_id": "04c52e6c49d91c4aad472b7dfb7dc25a45c13d5114dfbd4760994668634cab53",
+      "direction": "text-to-image",
+      "method": "gated",
+      "context": "row1",
+      "arm": null,
+      "encode_seconds": 84.26069824700244,
+      "decode_seconds": 84.32685873999435,
+      "cold_load_seconds": 1.9783735149903805,
+      "other_process_seconds": 5.592913114014664,
+      "charged_encode_seconds": 88.11795454499952,
+      "charged_decode_seconds": 88.04088907100231,
+      "charged_pair_seconds": 176.15884361600183,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "T1-arithmetic",
+      "work_id": "16756472c12e7fb9fb36364f0fab4a21845828d5c22c434f36c496ccaad5ab44",
+      "direction": "text-to-image",
+      "method": "arithmetic",
+      "context": "row1",
+      "arm": null,
+      "encode_seconds": 84.40561918300227,
+      "decode_seconds": 84.21507766599825,
+      "cold_load_seconds": 1.8792835490094149,
+      "other_process_seconds": 5.607685778995801,
+      "charged_encode_seconds": 88.16471476000152,
+      "charged_decode_seconds": 87.94295141700422,
+      "charged_pair_seconds": 176.10766617700574,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "I5-fixed",
+      "work_id": "7812fe9b339e2156697450a555d95a34e7ede8f17388dc5ea57af9c63645f257",
+      "direction": "image-to-text",
+      "method": "fixed",
+      "context": "prompt1",
+      "arm": "sequence",
+      "encode_seconds": 50.55314356600138,
+      "decode_seconds": 50.77455665400339,
+      "cold_load_seconds": 5.319543852005154,
+      "other_process_seconds": 26.085723643984238,
+      "charged_encode_seconds": 66.32636742899922,
+      "charged_decode_seconds": 66.40660028699494,
+      "charged_pair_seconds": 132.73296771599416,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "I5-gated",
+      "work_id": "c4ac007b4df92089dd62eab33979544bf85448b28e86c6bd6a0557520a1b0c0e",
+      "direction": "image-to-text",
+      "method": "gated",
+      "context": "prompt1",
+      "arm": "sequence",
+      "encode_seconds": 48.99984392699844,
+      "decode_seconds": 49.063255833003495,
+      "cold_load_seconds": 5.381485324003734,
+      "other_process_seconds": 26.12881987599394,
+      "charged_encode_seconds": 64.67123378300312,
+      "charged_decode_seconds": 64.90217117699649,
+      "charged_pair_seconds": 129.5734049599996,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "I5-arithmetic",
+      "work_id": "3e8292a0761acc05e9e07175456de8ee11684e3dc5bcbce730ad15d956951777",
+      "direction": "image-to-text",
+      "method": "arithmetic",
+      "context": "prompt1",
+      "arm": "sequence",
+      "encode_seconds": 397.83772541899816,
+      "decode_seconds": 395.94411919199774,
+      "cold_load_seconds": 5.3141839140080265,
+      "other_process_seconds": 25.809619706989906,
+      "charged_encode_seconds": 413.4442804479986,
+      "charged_decode_seconds": 411.46136778399523,
+      "charged_pair_seconds": 824.9056482319938,
+      "exact_recovery": false,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": false
+    },
+    {
+      "case": "T3-fixed",
+      "work_id": "ca3c61b1bbf5dd17d3002a92379082c699385ee130e5e0413f9ee5a78d28e1cb",
+      "direction": "text-to-image",
+      "method": "fixed",
+      "context": "row1",
+      "arm": null,
+      "encode_seconds": 84.14764144299988,
+      "decode_seconds": 84.41119301599974,
+      "cold_load_seconds": 1.8715717310042237,
+      "other_process_seconds": 5.430495861990494,
+      "charged_encode_seconds": 87.81297522999375,
+      "charged_decode_seconds": 88.04792682200059,
+      "charged_pair_seconds": 175.86090205199434,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "T3-gated",
+      "work_id": "ddd8db83743fd4f7864c55fc0e453c6113d2a93a1cc8d9ade1ca2952984e8c8c",
+      "direction": "text-to-image",
+      "method": "gated",
+      "context": "row1",
+      "arm": null,
+      "encode_seconds": 84.30218157800118,
+      "decode_seconds": 84.40783845599799,
+      "cold_load_seconds": 1.9051675790033187,
+      "other_process_seconds": 5.7062398359921644,
+      "charged_encode_seconds": 88.22724943699723,
+      "charged_decode_seconds": 88.09417801199743,
+      "charged_pair_seconds": 176.32142744899465,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "T3-arithmetic",
+      "work_id": "ac74051c901326b0c713b0d33856daf5328a1dd5a192cfae0d3c2c919720cf5c",
+      "direction": "text-to-image",
+      "method": "arithmetic",
+      "context": "row1",
+      "arm": null,
+      "encode_seconds": 84.47936108499562,
+      "decode_seconds": 84.03318716800277,
+      "cold_load_seconds": 1.7856224370043492,
+      "other_process_seconds": 5.610372357994493,
+      "charged_encode_seconds": 88.3099954529971,
+      "charged_decode_seconds": 87.59854759500013,
+      "charged_pair_seconds": 175.90854304799723,
+      "exact_recovery": true,
+      "outcome_class": "accepted_pilot",
+      "carrier_complete": true
+    },
+    {
+      "case": "I6-prompt1-fixed-sequence",
+      "work_id": "a0a0cad4013966cf2e1694ce62911ee66a0360eceba73adc5d35ccc499c29763",
+      "direction": "image-to-text",
+      "method": "fixed",
+      "context": "prompt1",
+      "arm": "sequence",
+      "encode_seconds": 41.26603859101306,
+      "decode_seconds": 41.12588967999909,
+      "cold_load_seconds": 5.358790804995806,
+      "other_process_seconds": 26.044285935000516,
+      "charged_encode_seconds": 57.0092961370101,
+      "charged_decode_seconds": 56.785708873998374,
+      "charged_pair_seconds": 113.79500501100847,
+      "exact_recovery": true,
+      "outcome_class": "exact_recovery",
+      "carrier_complete": true
+    },
+    {
+      "case": "I6-prompt1-fixed-static",
+      "work_id": "8b40936bea9fb2d1ec3b0fb00c5e4014e39ab3252cc419b140e987118e4040b6",
+      "direction": "image-to-text",
+      "method": "fixed",
+      "context": "prompt1",
+      "arm": "static",
+      "encode_seconds": 14.844893704008427,
+      "decode_seconds": 6.28651785699185,
+      "cold_load_seconds": 5.408130906987935,
+      "other_process_seconds": 26.309052012016764,
+      "charged_encode_seconds": 30.433766861009644,
+      "charged_decode_seconds": 22.414827618995332,
+      "charged_pair_seconds": 52.84859448000498,
+      "exact_recovery": false,
+      "outcome_class": "static_tokenization_drift_failure",
+      "carrier_complete": false
+    },
+    {
+      "case": "I6-prompt2-fixed-sequence",
+      "work_id": "28e4220e6cc2c6c8aed3e25243a0a95a5b1834951302bc1e6cf1c485b2eb5911",
+      "direction": "image-to-text",
+      "method": "fixed",
+      "context": "prompt2",
+      "arm": "sequence",
+      "encode_seconds": 42.41680701500445,
+      "decode_seconds": 42.58974678700906,
+      "cold_load_seconds": 5.380224791981163,
+      "other_process_seconds": 26.699897612983477,
+      "charged_encode_seconds": 58.148845594987506,
+      "charged_decode_seconds": 58.93783061199065,
+      "charged_pair_seconds": 117.08667620697815,
+      "exact_recovery": true,
+      "outcome_class": "exact_recovery",
+      "carrier_complete": true
+    },
+    {
+      "case": "I6-prompt2-fixed-static",
+      "work_id": "904797f06bcf1512ec27400298a32d362f6de0fb5f587e02cfd39310807fdd82",
+      "direction": "image-to-text",
+      "method": "fixed",
+      "context": "prompt2",
+      "arm": "static",
+      "encode_seconds": 14.699720534001244,
+      "decode_seconds": 14.678756278997753,
+      "cold_load_seconds": 5.437167950003641,
+      "other_process_seconds": 26.196658733999357,
+      "charged_encode_seconds": 30.481058357996517,
+      "charged_decode_seconds": 30.531245139005478,
+      "charged_pair_seconds": 61.012303497001994,
+      "exact_recovery": true,
+      "outcome_class": "exact_recovery",
+      "carrier_complete": true
+    },
+    {
+      "case": "T6-row1-fixed",
+      "work_id": "731dc83388a8a3fa91dca62307bc028ba3368e4f6fd80633e1b711c28b224b73",
+      "direction": "text-to-image",
+      "method": "fixed",
+      "context": "row1",
+      "arm": null,
+      "encode_seconds": 85.93588839301083,
+      "decode_seconds": 84.71455694400356,
+      "cold_load_seconds": 1.9210334490053356,
+      "other_process_seconds": 5.53323668698431,
+      "charged_encode_seconds": 89.70877475599991,
+      "charged_decode_seconds": 88.39594071700412,
+      "charged_pair_seconds": 178.10471547300403,
+      "exact_recovery": true,
+      "outcome_class": "exact_recovery",
+      "carrier_complete": true
+    },
+    {
+      "case": "T6-row2-fixed",
+      "work_id": "398a923535ccbd0da6f4a587a303b4bf326e9b82199ae0fb47a702268e499435",
+      "direction": "text-to-image",
+      "method": "fixed",
+      "context": "row2",
+      "arm": null,
+      "encode_seconds": 84.57599554200715,
+      "decode_seconds": 85.64880449800694,
+      "cold_load_seconds": 1.9326590310083702,
+      "other_process_seconds": 5.534865485984483,
+      "charged_encode_seconds": 88.29395326900703,
+      "charged_decode_seconds": 89.39837128799991,
+      "charged_pair_seconds": 177.69232455700694,
+      "exact_recovery": true,
+      "outcome_class": "exact_recovery",
+      "carrier_complete": true
+    }
+  ],
+  "main_context_method_timings": {
+    "image-to-text/fixed": {
+      "n": 3,
+      "cases": [
+        "I1-fixed",
+        "I5-fixed",
+        "I6-prompt1-fixed-sequence"
+      ],
+      "mean": {
+        "encode_seconds": 45.76779740900383,
+        "decode_seconds": 45.710732769667324,
+        "cold_load_seconds": 5.3523552080005175,
+        "other_process_seconds": 26.13543318966064,
+        "charged_encode_seconds": 61.65289023200118,
+        "charged_decode_seconds": 61.313428344331136,
+        "charged_pair_seconds": 122.96631857633231
+      },
+      "assumption": null,
+      "full_carrier_replays_observed": 3,
+      "uncertainty": "small development sample"
+    },
+    "image-to-text/gated": {
+      "n": 2,
+      "cases": [
+        "I1-gated",
+        "I5-gated"
+      ],
+      "mean": {
+        "encode_seconds": 48.503728937499545,
+        "decode_seconds": 48.267305183504504,
+        "cold_load_seconds": 5.37790102850704,
+        "other_process_seconds": 26.24857919148417,
+        "charged_encode_seconds": 64.27202261899947,
+        "charged_decode_seconds": 64.12549172199579,
+        "charged_pair_seconds": 128.39751434099526
+      },
+      "assumption": null,
+      "full_carrier_replays_observed": 2,
+      "uncertainty": "small development sample"
+    },
+    "image-to-text/arithmetic": {
+      "n": 2,
+      "cases": [
+        "I1-arithmetic",
+        "I5-arithmetic"
+      ],
+      "mean": {
+        "encode_seconds": 404.70624131850127,
+        "decode_seconds": 401.2953569325,
+        "cold_load_seconds": 5.374237484506011,
+        "other_process_seconds": 25.830536712994217,
+        "charged_encode_seconds": 420.3616684935005,
+        "charged_decode_seconds": 416.844703955001,
+        "charged_pair_seconds": 837.2063724485015
+      },
+      "assumption": null,
+      "full_carrier_replays_observed": 0,
+      "uncertainty": "small development sample"
+    },
+    "text-to-image/fixed": {
+      "n": 3,
+      "cases": [
+        "T1-fixed",
+        "T3-fixed",
+        "T6-row1-fixed"
+      ],
+      "mean": {
+        "encode_seconds": 84.57686871367089,
+        "decode_seconds": 84.6610260046679,
+        "cold_load_seconds": 1.8844665496678015,
+        "other_process_seconds": 5.4926194173264475,
+        "charged_encode_seconds": 88.26761158299875,
+        "charged_decode_seconds": 88.3473691023343,
+        "charged_pair_seconds": 176.61498068533305
+      },
+      "assumption": null,
+      "full_carrier_replays_observed": 3,
+      "uncertainty": "small development sample"
+    },
+    "text-to-image/gated": {
+      "n": 2,
+      "cases": [
+        "T1-gated",
+        "T3-gated"
+      ],
+      "mean": {
+        "encode_seconds": 84.28143991250181,
+        "decode_seconds": 84.36734859799617,
+        "cold_load_seconds": 1.9417705469968496,
+        "other_process_seconds": 5.649576475003414,
+        "charged_encode_seconds": 88.17260199099837,
+        "charged_decode_seconds": 88.06753354149987,
+        "charged_pair_seconds": 176.24013553249824
+      },
+      "assumption": null,
+      "full_carrier_replays_observed": 2,
+      "uncertainty": "small development sample"
+    },
+    "text-to-image/arithmetic": {
+      "n": 2,
+      "cases": [
+        "T1-arithmetic",
+        "T3-arithmetic"
+      ],
+      "mean": {
+        "encode_seconds": 84.44249013399894,
+        "decode_seconds": 84.12413241700051,
+        "cold_load_seconds": 1.832452993006882,
+        "other_process_seconds": 5.609029068495147,
+        "charged_encode_seconds": 88.23735510649931,
+        "charged_decode_seconds": 87.77074950600218,
+        "charged_pair_seconds": 176.00810461250148
+      },
+      "assumption": null,
+      "full_carrier_replays_observed": 2,
+      "uncertainty": "small development sample"
+    }
+  },
+  "remaining_qualification": {
+    "stego_pending": 134,
+    "batch_credited": 6,
+    "by_cell": [
+      {
+        "direction": "image-to-text",
+        "method": "arithmetic",
+        "context": "prompt1",
+        "arm": "sequence",
+        "pending": 2,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "I1-arithmetic",
+            "I5-arithmetic"
+          ],
+          "mean": {
+            "encode_seconds": 404.70624131850127,
+            "decode_seconds": 401.2953569325,
+            "cold_load_seconds": 5.374237484506011,
+            "other_process_seconds": 25.830536712994217,
+            "charged_encode_seconds": 420.3616684935005,
+            "charged_decode_seconds": 416.844703955001,
+            "charged_pair_seconds": 837.2063724485015
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 0,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 837.2063724485015,
+        "planning_pair_seconds": 837.2063724485015,
+        "total_seconds": 1674.412744897003,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "image-to-text",
+        "method": "arithmetic",
+        "context": "prompt2",
+        "arm": "sequence",
+        "pending": 4,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "I1-arithmetic",
+            "I5-arithmetic"
+          ],
+          "mean": {
+            "encode_seconds": 404.70624131850127,
+            "decode_seconds": 401.2953569325,
+            "cold_load_seconds": 5.374237484506011,
+            "other_process_seconds": 25.830536712994217,
+            "charged_encode_seconds": 420.3616684935005,
+            "charged_decode_seconds": 416.844703955001,
+            "charged_pair_seconds": 837.2063724485015
+          },
+          "assumption": "unmeasured second-context cell uses first context of SAME method",
+          "full_carrier_replays_observed": 0,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 837.2063724485015,
+        "planning_pair_seconds": 837.2063724485015,
+        "total_seconds": 3348.825489794006,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "image-to-text",
+        "method": "fixed",
+        "context": "prompt1",
+        "arm": "sequence",
+        "pending": 17,
+        "timing": {
+          "n": 3,
+          "cases": [
+            "I1-fixed",
+            "I5-fixed",
+            "I6-prompt1-fixed-sequence"
+          ],
+          "mean": {
+            "encode_seconds": 45.76779740900383,
+            "decode_seconds": 45.710732769667324,
+            "cold_load_seconds": 5.3523552080005175,
+            "other_process_seconds": 26.13543318966064,
+            "charged_encode_seconds": 61.65289023200118,
+            "charged_decode_seconds": 61.313428344331136,
+            "charged_pair_seconds": 122.96631857633231
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 3,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 122.96631857633231,
+        "planning_pair_seconds": 122.96631857633231,
+        "total_seconds": 2090.4274157976492,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "image-to-text",
+        "method": "fixed",
+        "context": "prompt1",
+        "arm": "static",
+        "pending": 19,
+        "timing": {
+          "n": 1,
+          "cases": [
+            "I6-prompt1-fixed-static"
+          ],
+          "mean": {
+            "encode_seconds": 14.844893704008427,
+            "decode_seconds": 6.28651785699185,
+            "cold_load_seconds": 5.408130906987935,
+            "other_process_seconds": 26.309052012016764,
+            "charged_encode_seconds": 30.433766861009644,
+            "charged_decode_seconds": 22.414827618995332,
+            "charged_pair_seconds": 52.84859448000498
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 0,
+          "uncertainty": "one observed case"
+        },
+        "observed_pair_point_seconds": 52.84859448000498,
+        "planning_pair_seconds": 60.96501200001512,
+        "total_seconds": 1158.3352280002873,
+        "static_replay_assumption": "max of early decode, same-context encode, and observed full static replay in another context"
+      },
+      {
+        "direction": "image-to-text",
+        "method": "fixed",
+        "context": "prompt2",
+        "arm": "sequence",
+        "pending": 19,
+        "timing": {
+          "n": 1,
+          "cases": [
+            "I6-prompt2-fixed-sequence"
+          ],
+          "mean": {
+            "encode_seconds": 42.41680701500445,
+            "decode_seconds": 42.58974678700906,
+            "cold_load_seconds": 5.380224791981163,
+            "other_process_seconds": 26.699897612983477,
+            "charged_encode_seconds": 58.148845594987506,
+            "charged_decode_seconds": 58.93783061199065,
+            "charged_pair_seconds": 117.08667620697815
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 1,
+          "uncertainty": "one observed case"
+        },
+        "observed_pair_point_seconds": 117.08667620697815,
+        "planning_pair_seconds": 117.08667620697815,
+        "total_seconds": 2224.646847932585,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "image-to-text",
+        "method": "fixed",
+        "context": "prompt2",
+        "arm": "static",
+        "pending": 19,
+        "timing": {
+          "n": 1,
+          "cases": [
+            "I6-prompt2-fixed-static"
+          ],
+          "mean": {
+            "encode_seconds": 14.699720534001244,
+            "decode_seconds": 14.678756278997753,
+            "cold_load_seconds": 5.437167950003641,
+            "other_process_seconds": 26.196658733999357,
+            "charged_encode_seconds": 30.481058357996517,
+            "charged_decode_seconds": 30.531245139005478,
+            "charged_pair_seconds": 61.012303497001994
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 1,
+          "uncertainty": "one observed case"
+        },
+        "observed_pair_point_seconds": 61.012303497001994,
+        "planning_pair_seconds": 61.012303497001994,
+        "total_seconds": 1159.233766443038,
+        "static_replay_assumption": "observed full replay in this cell"
+      },
+      {
+        "direction": "image-to-text",
+        "method": "gated",
+        "context": "prompt1",
+        "arm": "sequence",
+        "pending": 2,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "I1-gated",
+            "I5-gated"
+          ],
+          "mean": {
+            "encode_seconds": 48.503728937499545,
+            "decode_seconds": 48.267305183504504,
+            "cold_load_seconds": 5.37790102850704,
+            "other_process_seconds": 26.24857919148417,
+            "charged_encode_seconds": 64.27202261899947,
+            "charged_decode_seconds": 64.12549172199579,
+            "charged_pair_seconds": 128.39751434099526
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 2,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 128.39751434099526,
+        "planning_pair_seconds": 128.39751434099526,
+        "total_seconds": 256.7950286819905,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "image-to-text",
+        "method": "gated",
+        "context": "prompt2",
+        "arm": "sequence",
+        "pending": 4,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "I1-gated",
+            "I5-gated"
+          ],
+          "mean": {
+            "encode_seconds": 48.503728937499545,
+            "decode_seconds": 48.267305183504504,
+            "cold_load_seconds": 5.37790102850704,
+            "other_process_seconds": 26.24857919148417,
+            "charged_encode_seconds": 64.27202261899947,
+            "charged_decode_seconds": 64.12549172199579,
+            "charged_pair_seconds": 128.39751434099526
+          },
+          "assumption": "unmeasured second-context cell uses first context of SAME method",
+          "full_carrier_replays_observed": 2,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 128.39751434099526,
+        "planning_pair_seconds": 128.39751434099526,
+        "total_seconds": 513.590057363981,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "text-to-image",
+        "method": "arithmetic",
+        "context": "row1",
+        "arm": null,
+        "pending": 2,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "T1-arithmetic",
+            "T3-arithmetic"
+          ],
+          "mean": {
+            "encode_seconds": 84.44249013399894,
+            "decode_seconds": 84.12413241700051,
+            "cold_load_seconds": 1.832452993006882,
+            "other_process_seconds": 5.609029068495147,
+            "charged_encode_seconds": 88.23735510649931,
+            "charged_decode_seconds": 87.77074950600218,
+            "charged_pair_seconds": 176.00810461250148
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 2,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 176.00810461250148,
+        "planning_pair_seconds": 176.00810461250148,
+        "total_seconds": 352.01620922500297,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "text-to-image",
+        "method": "arithmetic",
+        "context": "row2",
+        "arm": null,
+        "pending": 4,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "T1-arithmetic",
+            "T3-arithmetic"
+          ],
+          "mean": {
+            "encode_seconds": 84.44249013399894,
+            "decode_seconds": 84.12413241700051,
+            "cold_load_seconds": 1.832452993006882,
+            "other_process_seconds": 5.609029068495147,
+            "charged_encode_seconds": 88.23735510649931,
+            "charged_decode_seconds": 87.77074950600218,
+            "charged_pair_seconds": 176.00810461250148
+          },
+          "assumption": "unmeasured second-context cell uses first context of SAME method",
+          "full_carrier_replays_observed": 2,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 176.00810461250148,
+        "planning_pair_seconds": 176.00810461250148,
+        "total_seconds": 704.0324184500059,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "text-to-image",
+        "method": "fixed",
+        "context": "row1",
+        "arm": null,
+        "pending": 17,
+        "timing": {
+          "n": 3,
+          "cases": [
+            "T1-fixed",
+            "T3-fixed",
+            "T6-row1-fixed"
+          ],
+          "mean": {
+            "encode_seconds": 84.57686871367089,
+            "decode_seconds": 84.6610260046679,
+            "cold_load_seconds": 1.8844665496678015,
+            "other_process_seconds": 5.4926194173264475,
+            "charged_encode_seconds": 88.26761158299875,
+            "charged_decode_seconds": 88.3473691023343,
+            "charged_pair_seconds": 176.61498068533305
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 3,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 176.61498068533305,
+        "planning_pair_seconds": 176.61498068533305,
+        "total_seconds": 3002.454671650662,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "text-to-image",
+        "method": "fixed",
+        "context": "row2",
+        "arm": null,
+        "pending": 19,
+        "timing": {
+          "n": 1,
+          "cases": [
+            "T6-row2-fixed"
+          ],
+          "mean": {
+            "encode_seconds": 84.57599554200715,
+            "decode_seconds": 85.64880449800694,
+            "cold_load_seconds": 1.9326590310083702,
+            "other_process_seconds": 5.534865485984483,
+            "charged_encode_seconds": 88.29395326900703,
+            "charged_decode_seconds": 89.39837128799991,
+            "charged_pair_seconds": 177.69232455700694
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 1,
+          "uncertainty": "one observed case"
+        },
+        "observed_pair_point_seconds": 177.69232455700694,
+        "planning_pair_seconds": 177.69232455700694,
+        "total_seconds": 3376.154166583132,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "text-to-image",
+        "method": "gated",
+        "context": "row1",
+        "arm": null,
+        "pending": 2,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "T1-gated",
+            "T3-gated"
+          ],
+          "mean": {
+            "encode_seconds": 84.28143991250181,
+            "decode_seconds": 84.36734859799617,
+            "cold_load_seconds": 1.9417705469968496,
+            "other_process_seconds": 5.649576475003414,
+            "charged_encode_seconds": 88.17260199099837,
+            "charged_decode_seconds": 88.06753354149987,
+            "charged_pair_seconds": 176.24013553249824
+          },
+          "assumption": null,
+          "full_carrier_replays_observed": 2,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 176.24013553249824,
+        "planning_pair_seconds": 176.24013553249824,
+        "total_seconds": 352.4802710649965,
+        "static_replay_assumption": null
+      },
+      {
+        "direction": "text-to-image",
+        "method": "gated",
+        "context": "row2",
+        "arm": null,
+        "pending": 4,
+        "timing": {
+          "n": 2,
+          "cases": [
+            "T1-gated",
+            "T3-gated"
+          ],
+          "mean": {
+            "encode_seconds": 84.28143991250181,
+            "decode_seconds": 84.36734859799617,
+            "cold_load_seconds": 1.9417705469968496,
+            "other_process_seconds": 5.649576475003414,
+            "charged_encode_seconds": 88.17260199099837,
+            "charged_decode_seconds": 88.06753354149987,
+            "charged_pair_seconds": 176.24013553249824
+          },
+          "assumption": "unmeasured second-context cell uses first context of SAME method",
+          "full_carrier_replays_observed": 2,
+          "uncertainty": "small development sample"
+        },
+        "observed_pair_point_seconds": 176.24013553249824,
+        "planning_pair_seconds": 176.24013553249824,
+        "total_seconds": 704.960542129993,
+        "static_replay_assumption": null
+      }
+    ],
+    "ordinary_pending": 12,
+    "controls_pending_upper": 46,
+    "remaining_stego_seconds": 20918.36485801433,
+    "naive_observed_static_point_stego_seconds": 20764.152925134138,
+    "ordinary_seconds": 1333.5228560429896,
+    "controls_upper_seconds": 10573.219208608869,
+    "trace_estimates": [
+      {
+        "id": "ordinary-text-4103",
+        "context": "prompt1",
+        "seconds": 133.78199624350236,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-text-4104",
+        "context": "prompt1",
+        "seconds": 133.78199624350236,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5102",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5103",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5104",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5105",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5106",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5107",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5108",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5109",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5110",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5111",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5112",
+        "context": "prompt1",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-text-4111",
+        "context": "prompt2",
+        "seconds": 133.78199624350236,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-text-4112",
+        "context": "prompt2",
+        "seconds": 133.78199624350236,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-text-4113",
+        "context": "prompt2",
+        "seconds": 133.78199624350236,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-text-4114",
+        "context": "prompt2",
+        "seconds": 133.78199624350236,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5201",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5202",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5203",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5204",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5205",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5206",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5207",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5208",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5209",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5210",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5211",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-text-5212",
+        "context": "prompt2",
+        "seconds": 371.90920698099944,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-image-4203",
+        "context": "row1",
+        "seconds": 88.4718130969959,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-image-4204",
+        "context": "row1",
+        "seconds": 88.4718130969959,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5202",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5203",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5204",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5205",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5206",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5207",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5208",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5209",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5210",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5211",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5212",
+        "context": "row1",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-image-4211",
+        "context": "row2",
+        "seconds": 88.4718130969959,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-image-4212",
+        "context": "row2",
+        "seconds": 88.4718130969959,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-image-4213",
+        "context": "row2",
+        "seconds": 88.4718130969959,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "ordinary-image-4214",
+        "context": "row2",
+        "seconds": 88.4718130969959,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5301",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5302",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5303",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5304",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5305",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5306",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5307",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5308",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5309",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5310",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5311",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      },
+      {
+        "id": "control-image-5312",
+        "context": "row2",
+        "seconds": 87.79597600199486,
+        "assumption": "existing same-modality ordinary trace cost; second contexts unmeasured"
+      }
+    ],
+    "unreserved_seconds": 32825.10692266619,
+    "unreserved_hours": 9.118085256296165,
+    "standalone_with_25_percent_headroom_hours": 11.397606570370206,
+    "additional_to_remaining_phase_unreserved_seconds": 31850.433590787165
+  },
+  "history": {
+    "v0_seconds": 3163.653124010041,
+    "v1_original_checkpoint_seconds": 4690.205213522968,
+    "v1_1_seconds": 834.5818353729992,
+    "v1_2_seconds": 700.5396192250046,
+    "v1_total_seconds": 6225.326668120972,
+    "remaining_v1_seconds": 974.6733318790284,
+    "cumulative_seconds": 9388.979792131013
+  },
+  "whole_project": {
+    "payloads_per_direction": 20,
+    "contexts": 1,
+    "main_stego_units": 120,
+    "shared_controls_upper": 40,
+    "history_seconds": 9388.979792131013,
+    "remaining_qualification_seconds": 32825.10692266619,
+    "main_generation_seconds": 15045.571328503527,
+    "main_receiver_seconds": 14968.518038106726,
+    "main_loading_seconds": 435.26367621370207,
+    "main_other_occupied_process_seconds": 1899.315481099281,
+    "main_controls_seconds": 9194.103659659886,
+    "additional_lossless_png_replays": 20,
+    "lossless_replay_seconds": 1761.237680998909,
+    "additional_neural_scoring_seconds": 0,
+    "subtotal_seconds": 85518.09657937924,
+    "reserve_once_seconds": 21379.52414484481,
+    "total_with_reserve_hours": 29.69378353450668,
+    "overall_ceiling_hours": 40,
+    "forecast_fits_ceiling": true
+  },
+  "assumptions": [
+    "No diagnostic replay is an observation or credit. Failed arithmetic attempts remain in method means.",
+    "Second-context fixed cells and each static cell have at most one new observation. Other second-context methods/ordinary traces are unmeasured.",
+    "Static cells with only early failures use a sender-length/full-other-context replay floor, not an assumption that all future receivers fail early.",
+    "All per-child costs include model checks/loading, CPU filtering/bookkeeping during occupancy, serialization and teardown.",
+    "One 25% reserve applies to the whole unreserved subtotal, conservatively including history; the standalone development headroom is NOT added again.",
+    "Shared ordinary prefixes are not independent method-specific controls. Inline likelihood scoring already costs GPU occupancy; standalone JSON and lossless file rewrite checks use CPU.",
+    "Remaining 20 lossless PNG replays are additional jobs, not credited by current exact recovery or V1.1 diagnostics.",
+    "No claim of statistical power or future throughput guarantee follows from this small sample."
+  ]
+}

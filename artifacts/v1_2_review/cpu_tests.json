@@ -1,0 +1,10 @@
+{
+  "command": "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python -B -m unittest discover -s tests -v",
+  "tests": 52,
+  "passed": 52,
+  "failed": 0,
+  "elapsed_seconds_reported_by_unittest": 10.968,
+  "neural_inference": false,
+  "new_tests": ["test_static_filter.py: 4", "test_qualification_sources.py: 4"],
+  "scope": "existing 44 tests plus 8 focused CPU checks; not model-backed qualification"
+}

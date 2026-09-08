@@ -1,0 +1,2084 @@
+{
+  "schema": "qualification-sources-v1.2",
+  "sources_lock_sha256": "a0f26e8f21053229fb4d03fde6fc2006f0a8e240de9299391a2732e7089ec08d",
+  "numpy": "2.2.6",
+  "pillow": "12.3.0",
+  "sources": {
+    "train-images-idx3-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/train-images-idx3-ubyte.gz",
+      "bytes": 26421880,
+      "sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+      "official_md5": "8d4fb7e6c68d591d4c3dfef9ec88bf0d",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "train-labels-idx1-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/train-labels-idx1-ubyte.gz",
+      "bytes": 29515,
+      "sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845",
+      "official_md5": "25c81989df183df01b3e8a0aad5dffbe",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "t10k-images-idx3-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/t10k-images-idx3-ubyte.gz",
+      "bytes": 4422102,
+      "sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+      "official_md5": "bef4ecab320f06d8554ea6380940ec79",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "t10k-labels-idx1-ubyte.gz": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/data/fashion/t10k-labels-idx1-ubyte.gz",
+      "bytes": 5148,
+      "sha256": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5",
+      "official_md5": "bb300cfdad3c16e7a12a480ee83cd310",
+      "repository_revision": "b2617bb6d3ffa2e429640350f613e3291e10b141"
+    },
+    "FASHION_LICENSE.txt": {
+      "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/b2617bb6d3ffa2e429640350f613e3291e10b141/LICENSE",
+      "bytes": 1109,
+      "sha256": "13ef4788476d292858fa60eb9a5f74aeca5c65770bc885ccaa05823a17ef7be1"
+    },
+    "pg11.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+      "bytes": 174311,
+      "sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+      "edition_header": [
+        "Title: Alice's Adventures in Wonderland",
+        "Author: Lewis Carroll",
+        "Release date: June 27, 2008 [eBook #11]",
+        "Language: English",
+        "Credits: Arthur DiBianca and David Widger"
+      ]
+    },
+    "pg84.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/84/pg84.txt",
+      "bytes": 448885,
+      "sha256": "7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3",
+      "edition_header": [
+        "Title: Frankenstein; or, the modern prometheus",
+        "Author: Mary Wollstonecraft Shelley",
+        "Release date: October 1, 1993 [eBook #84]",
+        "Language: English",
+        "Credits: Judith Boss, Christy Phillips, Lynn Hanninen and David Meltzer. HTML version by Al Haines."
+      ]
+    },
+    "pg1342.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+      "bytes": 772386,
+      "sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+      "edition_header": [
+        "Title: Pride and Prejudice",
+        "Author: Jane Austen",
+        "Release date: June 1, 1998 [eBook #1342]",
+        "Language: English",
+        "Credits: Chuck Greif and the Online Distributed Proofreading Team at http://www.pgdp.net (This file was produced from images available at The Internet Archive)"
+      ]
+    },
+    "pg1661.txt": {
+      "url": "https://www.gutenberg.org/cache/epub/1661/pg1661.txt",
+      "bytes": 607606,
+      "sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+      "edition_header": [
+        "Title: The Adventures of Sherlock Holmes",
+        "Author: Arthur Conan Doyle",
+        "Release date: March 1, 1999 [eBook #1661]",
+        "Language: English",
+        "Credits: an anonymous Project Gutenberg volunteer and Jose Menendez"
+      ]
+    }
+  },
+  "payloads": [
+    {
+      "id": "I1",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I1.png",
+      "bytes": 256,
+      "source_sha256": "1c6a448d8d492554e849f09633da5b2e623e44049909c36a61dcbcdfbf0560be",
+      "file_sha256": "730b624b9defde195f83115751b5693985e87067363b3c9de8b191e0a1adb989",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/I1.png",
+        "original_file_sha256": "730b624b9defde195f83115751b5693985e87067363b3c9de8b191e0a1adb989"
+      }
+    },
+    {
+      "id": "I2",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I2.png",
+      "bytes": 256,
+      "source_sha256": "4a4f9f0ac7057d12396bd0d330a170213e2ce34e2ac3b066a846bc545f88e5c9",
+      "file_sha256": "6281b2c9638a04edc44acf023019c8bbec48ef68cd8ab5c0e3657b300ff64337",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/I2.png",
+        "original_file_sha256": "6281b2c9638a04edc44acf023019c8bbec48ef68cd8ab5c0e3657b300ff64337"
+      }
+    },
+    {
+      "id": "I3",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I3.png",
+      "bytes": 256,
+      "source_sha256": "53603f357c4720275dee9c0230c15edaf0896b0a71404753dfdade9ccd2fce3a",
+      "file_sha256": "d4ae185dcd36f2ea99d88ebb41961f05aca48b3b1d374013befe023cedc28631",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/I3.png",
+        "original_file_sha256": "d4ae185dcd36f2ea99d88ebb41961f05aca48b3b1d374013befe023cedc28631"
+      }
+    },
+    {
+      "id": "I4",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I4.png",
+      "bytes": 256,
+      "source_sha256": "33602f3bcef3f6ba3732fe6f63c040ed809a5ef8eeab6d127dd2a48801021028",
+      "file_sha256": "0de1da2278de35373de7f09da79e8c4844b8b5ee6aafe8f7076ea7805ea5e1f6",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/I4.png",
+        "original_file_sha256": "0de1da2278de35373de7f09da79e8c4844b8b5ee6aafe8f7076ea7805ea5e1f6"
+      }
+    },
+    {
+      "id": "I5",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I5.png",
+      "bytes": 256,
+      "source_sha256": "8119963d636a9da9ec09c0c79b7b889ea5e7fda9c4c76c1ad8ee92f5acd654dd",
+      "file_sha256": "39ae3efcd26ec1da1f952466340c33d92431ed912cba39b98d88e758e10a500a",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/I5.png",
+        "original_file_sha256": "39ae3efcd26ec1da1f952466340c33d92431ed912cba39b98d88e758e10a500a"
+      }
+    },
+    {
+      "id": "T1",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T1.txt",
+      "bytes": 32,
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "file_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T1.txt",
+        "original_file_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T2",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T2.txt",
+      "bytes": 48,
+      "source_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458",
+      "file_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T2.txt",
+        "original_file_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T3",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T3.txt",
+      "bytes": 64,
+      "source_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+      "file_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T3.txt",
+        "original_file_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T4",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T4.txt",
+      "bytes": 96,
+      "source_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834",
+      "file_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T4.txt",
+        "original_file_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T5",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T5.txt",
+      "bytes": 128,
+      "source_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8",
+      "file_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T5.txt",
+        "original_file_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "I6",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I6.png",
+      "bytes": 256,
+      "source_sha256": "767283721b2bab8870901b9561d3a777e2229da02fdadb2fb6211788920a103c",
+      "file_sha256": "6f4e79136ec2d6f72766d84ab4c13bd3e2d631bc68cfd7e6ab89f1978216be1d",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 1,
+        "class": 0,
+        "original_sha256": "9cf80d28fd40cb6b47fbe6cc085cbcbaf769565e1d9181a533d2540d5b3bb095",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I7",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I7.png",
+      "bytes": 256,
+      "source_sha256": "5a396430c825c7f85e18236324d9bb19c69352a8cee4d1958cc31269aad79327",
+      "file_sha256": "36e699c91de894525be3977965c4ada932996de4570383db77878be0192743a7",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 16,
+        "class": 1,
+        "original_sha256": "6539da82d1733cb7c5ee7331ded0e9e9b3320da030ce464ee9ae08f92a291f0a",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I8",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I8.png",
+      "bytes": 256,
+      "source_sha256": "9db81db27e94d8b91fbbcc4ca1c09d4b567a270dbace1e78924a05de6ddecf02",
+      "file_sha256": "89f743bcfa8c9409453dc7b281a84cdd6879237cf51f8c2b1e22122f12e7c0a8",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 5,
+        "class": 2,
+        "original_sha256": "c3b03cc77d3a5c27fcb78c4f5806de853dbdf20d7fb99679e9679718ab677128",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I9",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I9.png",
+      "bytes": 256,
+      "source_sha256": "1914e8e0252c82a2f2880d20be7e88d818774d1a1b51531de789d33a0b97fef1",
+      "file_sha256": "ae27e5db9f9aa7cdb1bd882d2823ed6d7007915c3005e1b08b75331aca86845d",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 3,
+        "class": 3,
+        "original_sha256": "593ff8e28c45d2d34c23fa553ef9360ed3ec3734c434f551fda7037430713f20",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I10",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I10.png",
+      "bytes": 256,
+      "source_sha256": "3d87109c039b427acaab9d6fbaee485ede2a1ae5a871cdb9de908f9e8c7e556e",
+      "file_sha256": "35b64c8aff97a0edf3705f63e6605cb25961d5a96c45c60cf96d1dc0aab33d5d",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 19,
+        "class": 4,
+        "original_sha256": "616784f3be8506331f69306ed207a013074c76127a587882d7203ccb6d44eb5d",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I11",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I11.png",
+      "bytes": 256,
+      "source_sha256": "d198ce9c6c7c9511cf90014411ebaee61b362238ef335b95d75255ad65b183ca",
+      "file_sha256": "b1e4b14fc68c53a409970fdda67610f3f32f701a7b52cfbbbf2639acc2ce34cc",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 8,
+        "class": 5,
+        "original_sha256": "d1de5aba933baceb94f02a7e075d47afb879088de016474420a3ba09153af771",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I12",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I12.png",
+      "bytes": 256,
+      "source_sha256": "64d23e0cdc323a12cc1efc79b651d054d74c57ca426eaae4255b02f058757282",
+      "file_sha256": "6150b7e502cdf4a330fe34d28e694e64ce7fc76b10ad9d304ae29ef13a7c615b",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 18,
+        "class": 6,
+        "original_sha256": "63bdbbcbc41825d2a0ad0a8f059fc4d9ede2194e1d7d75c907ef7dce3a9b2e2a",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I13",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I13.png",
+      "bytes": 256,
+      "source_sha256": "67f6bedf8dc48d7d839f4922dc68c93f17f827e99164a276e0dfa3fdeca8da1b",
+      "file_sha256": "55a8f900cc4a513058bdb90e168d15f97dd7c8dcceee6980567ffe748bcf06ea",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 6,
+        "class": 7,
+        "original_sha256": "4261dd3217331e2fe9238de42ace770b295be1c7ae8d70ce5abfd5152b020501",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I14",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I14.png",
+      "bytes": 256,
+      "source_sha256": "16d71fdac973826cb137922a1b7e65760313a317284e2bfae3f787ba2bcd1157",
+      "file_sha256": "fc9d5a6f97c0e313f859f608be38e691d0029f6f90ee784e33aa28b79e6dbb08",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 23,
+        "class": 8,
+        "original_sha256": "84e56aa59fc8a1208384ca1465f37de9bbddaa29ca2ae1aad261b1380d71c437",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I15",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I15.png",
+      "bytes": 256,
+      "source_sha256": "e442bc50de76d29568303265f0563e8db6a43462419aa8a11e4feaa2575d3998",
+      "file_sha256": "dcf2b2e5b9033dd65785c8517f9749bd24dc63923576745052af098e58be194c",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 0,
+        "class": 9,
+        "original_sha256": "5bd44e331a6d6998daf675700cd0c13dcd7af8ab954b7585124124da61459e7b",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I16",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I16.png",
+      "bytes": 256,
+      "source_sha256": "f1203d5a775182e20fd73409e275c7b415bd87958a092852007af4fff1080a07",
+      "file_sha256": "2f1220cbbc31dfa8b6fc79292db9cd14a3cfc6ec8c6551afb99e0397da79f72b",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 2,
+        "class": 0,
+        "original_sha256": "0220e64fde1e176296fc6ad8482ac76309244552e0cf650d17244be76efccc61",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I17",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I17.png",
+      "bytes": 256,
+      "source_sha256": "6710010e8f87e99cf6b6b0d352c0fdd18d98ae0eb05e789840005034120d3a02",
+      "file_sha256": "fcd4b63531c7cd4064f6414d1390283683afb181e6ed201acca7041852001c2a",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 21,
+        "class": 1,
+        "original_sha256": "fa81de715f6249794782aa61030809b0ad6315c8d304b4ca0d77e8fdf89c1a7a",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I18",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I18.png",
+      "bytes": 256,
+      "source_sha256": "94cff0f9725a172c320694f52f2b12c9e6ceb8edf2c3d78d7038385d8d210b4f",
+      "file_sha256": "08b6d72a92e4f839815f01abfa2062826e63b5db25cee6ce83b7b52ced7ce985",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 7,
+        "class": 2,
+        "original_sha256": "3f9de7941c3e507eb513bbf5921e2664242a5a8cb07988bdf93e6657fb3c2a26",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I19",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I19.png",
+      "bytes": 256,
+      "source_sha256": "9a99969159a0a216557f4de4cfdf9f7a143965bfbeeb093ff46e75efeef9cec6",
+      "file_sha256": "4fc932e03ab29cedd00c1e0ffddd0345c9fa491afa90589d76d08f70975041e0",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 20,
+        "class": 3,
+        "original_sha256": "0c722a6a3399aeae5fab83ccc247b4ddee42d155683796062bf4338cf66cc0ec",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "I20",
+      "split": "development",
+      "direction": "image-to-text",
+      "source": "development/I20.png",
+      "bytes": 256,
+      "source_sha256": "b1ce0780fa0f36047e4027d97c1b383d2de8b8c92fe579e990cdde69dfe52fba",
+      "file_sha256": "09cdfe83f06e6fcbe2e97488a621d375379b4568d8c8d7ca39cb83da9870889a",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "train-images-idx3-ubyte.gz",
+        "original_index": 22,
+        "class": 4,
+        "original_sha256": "362c27abf011bc07d517c319878f01488d0df0f0030eca643c05325775515192",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI1",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI1.png",
+      "bytes": 256,
+      "source_sha256": "745c4ba35eb3f17849a6ea2000505532eaeb186da1e54f54263c1800a088acb5",
+      "file_sha256": "5d22a94e8cc47354b29751a2fd55f02474079f48315260e324a998f915927acc",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 19,
+        "class": 0,
+        "original_sha256": "d686d6baa1bbdc6a16ef3ff19377e96d04a6c2e6dbcca35dd54a5ce14aa5d171",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI2",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI2.png",
+      "bytes": 256,
+      "source_sha256": "178edcc960e01eed2d29499027a4aa23da5e19efdbaf87c55302b0803b4a0729",
+      "file_sha256": "c3e2ad58acd25d17dffca045bbe8768df36deca4f2a88d9ff0593f9776311885",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 2,
+        "class": 1,
+        "original_sha256": "2914aef93f1fce9f49e0e4ffd6dee009b9e64c539414e27d7e2e0e8274495df8",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI3",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI3.png",
+      "bytes": 256,
+      "source_sha256": "0165d6308c9555196182c45e615c94010989039a17601d2aa023b383c313e071",
+      "file_sha256": "b02dcc18df3fff47ee51eb06482331a34e9caae475101038d52fd743b6107ff4",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 1,
+        "class": 2,
+        "original_sha256": "25138519f4c25d3d91c3d84a3399331418e13a1aa7a85c97fab5e0da9e6b48bb",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI4",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI4.png",
+      "bytes": 256,
+      "source_sha256": "3b9eb277799c2f41590f01b5c92c2e2854310ba4b96db92d88d98eea97fe13d4",
+      "file_sha256": "587019b533c779a6a0998248fa4650223e85fe1042f463f0ddf0061e1692c4f0",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 13,
+        "class": 3,
+        "original_sha256": "7ba44f6b289223cb8a979d172da6de1225747638c1a5c1ecc78fe35c05ff93da",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI5",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI5.png",
+      "bytes": 256,
+      "source_sha256": "c40bfd6173f27a29db9385d386f95d7a4ab4fb3042036c188526b1f8e577c60e",
+      "file_sha256": "9e0fdeb744c3a1202eccd43600f94da551c8fbbd6c44785f9c75e93eb6708d0d",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 6,
+        "class": 4,
+        "original_sha256": "c52ddd1d808fa18573a7aa1ea7412aaa178bca3d3c89ea764c2943e0e42957bb",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI6",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI6.png",
+      "bytes": 256,
+      "source_sha256": "76a680f2e7bef1a0d6891e722f2ffb515ddcf2dc3679d7c87d6d8067a5fcfb64",
+      "file_sha256": "f0eee6135946e3cd4b4b5d3f623d82bb51edd951db9af3498288b1db9b7ebf99",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 8,
+        "class": 5,
+        "original_sha256": "771a199b2b74e066d86af2c90f2fa9769c450dda654e67cfe4e092fd8d4f0d2f",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI7",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI7.png",
+      "bytes": 256,
+      "source_sha256": "c833a7f937238a04e72ed172b7bb48303944b8238b7432e520d7a82ac4d5bf0e",
+      "file_sha256": "cf45f3861248de0d882adbd7b49ae1601e3e72dfd7ad477a5987d29c5c1bcf8a",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 4,
+        "class": 6,
+        "original_sha256": "ac3cdb4088e8057c4bf558c5cd1c158218e456c9988d37795a69f0c022d9310e",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI8",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI8.png",
+      "bytes": 256,
+      "source_sha256": "b7811fa7fb1f81244cba9babc8a252483aac5b2a4f2125915882f6038ebf5243",
+      "file_sha256": "f62eb9a5051ee9192c64bc35263e68835d68b1c280f530c3de6d0076f2c5c244",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 9,
+        "class": 7,
+        "original_sha256": "5a2268f93adf1aa861235cb1fa6b520c88665be898cfff781f076ad31ebb28d5",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI9",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI9.png",
+      "bytes": 256,
+      "source_sha256": "4d837ab63f52a24e1db3be9d7b0810196cde921f1fd34b3dea1b424f367c27a4",
+      "file_sha256": "c222550daadf38e23d3c36ffeaedb91f5e135c71da85bd496c6f9585c0cf570b",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 18,
+        "class": 8,
+        "original_sha256": "0407610b557c03834baad96a28f1298bf78b5c0875a80b9c0fb3bed6e2dbd79d",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI10",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI10.png",
+      "bytes": 256,
+      "source_sha256": "f0417dca65673ea815b77b33cd67f633d78890b2ba24fa8ef351b6afdf3c3280",
+      "file_sha256": "cafd1b25813ce7b4fe7780b67348deba198819eb389351aef810cc3914e179ff",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 0,
+        "class": 9,
+        "original_sha256": "ffc7351ed0f8bae542820866086177fa4e0b366b97bf9d998dffdb8dbe138787",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI11",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI11.png",
+      "bytes": 256,
+      "source_sha256": "3bbc98093a74038fe959c2308428f4c2de287071e90e806da33430ddbf6625d7",
+      "file_sha256": "2c8db0d23600bd687c00d6e74b9eb4f1248e295087f31a5d4fb4c767d6065d9c",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 27,
+        "class": 0,
+        "original_sha256": "0075c88ca77732f6726f423a9c9b05044a618f86f89dba3304c70af2f0b5577c",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI12",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI12.png",
+      "bytes": 256,
+      "source_sha256": "af497d677c731a77c2ee31c31042352a1a5adb046ff87e66dbcd8e7a40ebc6c0",
+      "file_sha256": "d1874a67896414e636d8a32230c28c40301386db1e980b3422cd733a94bfd79b",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 3,
+        "class": 1,
+        "original_sha256": "be63d6d14e0b3ddd536ddd907b359cd18419438f7f0b85d0b300e9c768564ca5",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI13",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI13.png",
+      "bytes": 256,
+      "source_sha256": "d52dc452373aefb019ad81f43b6b08bddba2a5bb489700ed19479be85d119c07",
+      "file_sha256": "3cd20251c116a275b0f5a00084e68a35d6153b031177faee28a201de4edb6521",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 16,
+        "class": 2,
+        "original_sha256": "844df634b6f779fe245722724b670e67f4fd31a667ce7b7480398daef0c6b636",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI14",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI14.png",
+      "bytes": 256,
+      "source_sha256": "1879c124ed002cd5e872e649f60356a54340db58c4d5583fbd3e7c70004cdfef",
+      "file_sha256": "e2cdba7cd8fd77228ee43887cc1ae252a555f226a36cca464db1bfa52e88f446",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 29,
+        "class": 3,
+        "original_sha256": "51d2470c38aada4da8a136b8296942940787a18002c350999fa531163fee9c07",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI15",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI15.png",
+      "bytes": 256,
+      "source_sha256": "d7f637cb4f41a6d176b8249eec8e9cb13aca93e6ad290ff2467f2d50e3d4d480",
+      "file_sha256": "47a96cf08de1b23b86ccd0e40f78eddc61f621945a526748fca139586e1ff305",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 10,
+        "class": 4,
+        "original_sha256": "9f2f0a7b91094f1d97a50e8b019d5585cadc4d2dd4cd0403c7e97cf56bccb6d4",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI16",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI16.png",
+      "bytes": 256,
+      "source_sha256": "9318e477da5e8528fd1eb671ec4844233faeea5b626b8cc96c3aff389242839c",
+      "file_sha256": "c5b43188a7699b34ed2e257a25f40d6291efb4ef7e24690e3d9b993ae33ed682",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 11,
+        "class": 5,
+        "original_sha256": "21a46ed9f1c7a5412d7bb44eb758b41ba4764338a8737a5fbac28cd6e0b2fa90",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI17",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI17.png",
+      "bytes": 256,
+      "source_sha256": "c7c0ed8843328d67000c7894e55fceea09ca41f2a231bd36d9774ccfb7947274",
+      "file_sha256": "6fe499393161df138e215c3e2c6e68b8f084242043d333059014048f9cda0516",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 7,
+        "class": 6,
+        "original_sha256": "9c1785cb1e2898e64dbd86a7593e41f7f1d6dcdec2dbabf63f0bc97a914b0734",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI18",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI18.png",
+      "bytes": 256,
+      "source_sha256": "3b259b829791f473ccbb0c091f1051d6c9dcb27eccdc227abc1f3db6b2cab355",
+      "file_sha256": "b419c4ded926f2acd62393bd672ab3fc4c11b75a8f6c9ff255e06fa63fe74c34",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 12,
+        "class": 7,
+        "original_sha256": "fed6b96907a0ac19fa11a61604a77a948aaae549674398373b36738c9d0996dd",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI19",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI19.png",
+      "bytes": 256,
+      "source_sha256": "9c557f0a0e0391f89c55a4d7dd1590a4b2a068befabeb519885f66910115aa30",
+      "file_sha256": "52050cda9bb1d59fb8405541703757d764eb8190f42718e33d965533268cb7dd",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 30,
+        "class": 8,
+        "original_sha256": "86a200550657beecec102b74b01feb61beab110b1f78ee2b398b4c272ad1bf22",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "HI20",
+      "split": "heldout",
+      "direction": "image-to-text",
+      "source": "heldout/HI20.png",
+      "bytes": 256,
+      "source_sha256": "ccbcc4f46fe0f5ec09b280246e32510d3fa36ea2cb154cb23de3e9d3a563e689",
+      "file_sha256": "a35cb19d99a49db188a26fc62b4a11fcef71ef6546df880321c96bc7f0c337a2",
+      "width": 16,
+      "height": 16,
+      "provenance": {
+        "type": "fashion_mnist",
+        "archive": "t10k-images-idx3-ubyte.gz",
+        "original_index": 23,
+        "class": 9,
+        "original_sha256": "426465282c1e7c67f9aab416c5cf41b5dad0687addf480632c10442b75dab8fb",
+        "original_shape": [
+          28,
+          28
+        ],
+        "mode": "L",
+        "preprocessing": "Pillow BOX 28x28 to 16x16, no inversion/normalization"
+      }
+    },
+    {
+      "id": "T6",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T6.txt",
+      "bytes": 62,
+      "source_sha256": "c448ebd6168fe1e0ea249d1152f74c2988afd24ded5e66f217d05670d6538fc8",
+      "file_sha256": "c448ebd6168fe1e0ea249d1152f74c2988afd24ded5e66f217d05670d6538fc8",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 1570,
+        "byte_end_exclusive": 1632,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T7",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T7.txt",
+      "bytes": 62,
+      "source_sha256": "d69c3ba51ad699cbd36600d1c153d46461ecb1b8b8520a65cd671169c4d6200f",
+      "file_sha256": "d69c3ba51ad699cbd36600d1c153d46461ecb1b8b8520a65cd671169c4d6200f",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 84,
+        "author": "Mary Wollstonecraft Shelley",
+        "title": "Frankenstein; or, the Modern Prometheus",
+        "archive": "pg84.txt",
+        "byte_start": 1602,
+        "byte_end_exclusive": 1664,
+        "body_byte_bounds": [
+          1602,
+          429959
+        ],
+        "narrative_start": "You will rejoice to hear that no disaster",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T8",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T8.txt",
+      "bytes": 61,
+      "source_sha256": "17b6ce76220d591e2ff301aa0ce865cf21e3dd38ea874aa759a168579298c3b1",
+      "file_sha256": "17b6ce76220d591e2ff301aa0ce865cf21e3dd38ea874aa759a168579298c3b1",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 1888,
+        "byte_end_exclusive": 1949,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T9",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T9.txt",
+      "bytes": 62,
+      "source_sha256": "ba930ef58c850e33b73d8a611b4af1103ccedbaacbb00ac7e2237ff048eb037a",
+      "file_sha256": "ba930ef58c850e33b73d8a611b4af1103ccedbaacbb00ac7e2237ff048eb037a",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 84,
+        "author": "Mary Wollstonecraft Shelley",
+        "title": "Frankenstein; or, the Modern Prometheus",
+        "archive": "pg84.txt",
+        "byte_start": 1899,
+        "byte_end_exclusive": 1961,
+        "body_byte_bounds": [
+          1602,
+          429959
+        ],
+        "narrative_start": "You will rejoice to hear that no disaster",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T10",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T10.txt",
+      "bytes": 61,
+      "source_sha256": "3b4f69daf35c018058d4231a8f2983d6e78f40758d288d03ad2f952552c174a4",
+      "file_sha256": "3b4f69daf35c018058d4231a8f2983d6e78f40758d288d03ad2f952552c174a4",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 2185,
+        "byte_end_exclusive": 2246,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T11",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T11.txt",
+      "bytes": 59,
+      "source_sha256": "59267d40f62e31ec659c0f5bf3f3f0b41a39b0fc150801f0da850f840a18dd23",
+      "file_sha256": "59267d40f62e31ec659c0f5bf3f3f0b41a39b0fc150801f0da850f840a18dd23",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 84,
+        "author": "Mary Wollstonecraft Shelley",
+        "title": "Frankenstein; or, the Modern Prometheus",
+        "archive": "pg84.txt",
+        "byte_start": 4138,
+        "byte_end_exclusive": 4197,
+        "body_byte_bounds": [
+          1602,
+          429959
+        ],
+        "narrative_start": "You will rejoice to hear that no disaster",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T12",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T12.txt",
+      "bytes": 64,
+      "source_sha256": "18b7ccd527325566227984a444e0544be5c1d3ce8c957097833d4c19e32d8071",
+      "file_sha256": "18b7ccd527325566227984a444e0544be5c1d3ce8c957097833d4c19e32d8071",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 3056,
+        "byte_end_exclusive": 3120,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "T13",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T13.txt",
+      "bytes": 127,
+      "source_sha256": "34008acedbe035070531adfacbcd3af9a94eed9ccce7e62cefb475995306aa31",
+      "file_sha256": "34008acedbe035070531adfacbcd3af9a94eed9ccce7e62cefb475995306aa31",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 84,
+        "author": "Mary Wollstonecraft Shelley",
+        "title": "Frankenstein; or, the Modern Prometheus",
+        "archive": "pg84.txt",
+        "byte_start": 5125,
+        "byte_end_exclusive": 5252,
+        "body_byte_bounds": [
+          1602,
+          429959
+        ],
+        "narrative_start": "You will rejoice to hear that no disaster",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T14",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T14.txt",
+      "bytes": 125,
+      "source_sha256": "77975783b41f8d59968566aa9f0e9c521021a1b3f027700bb847d91fa4d7e4e1",
+      "file_sha256": "77975783b41f8d59968566aa9f0e9c521021a1b3f027700bb847d91fa4d7e4e1",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 3282,
+        "byte_end_exclusive": 3407,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T15",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T15.txt",
+      "bytes": 124,
+      "source_sha256": "4de4f0caee7f8f5b417d9d4c0312dba54dbee0c865b8d1e54f19f492e528995f",
+      "file_sha256": "4de4f0caee7f8f5b417d9d4c0312dba54dbee0c865b8d1e54f19f492e528995f",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 84,
+        "author": "Mary Wollstonecraft Shelley",
+        "title": "Frankenstein; or, the Modern Prometheus",
+        "archive": "pg84.txt",
+        "byte_start": 5667,
+        "byte_end_exclusive": 5791,
+        "body_byte_bounds": [
+          1602,
+          429959
+        ],
+        "narrative_start": "You will rejoice to hear that no disaster",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T16",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T16.txt",
+      "bytes": 122,
+      "source_sha256": "423be364a1083471dbca2238651b9aadce8afe98f91c6b74569a8c6c12c32099",
+      "file_sha256": "423be364a1083471dbca2238651b9aadce8afe98f91c6b74569a8c6c12c32099",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 4018,
+        "byte_end_exclusive": 4140,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T17",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T17.txt",
+      "bytes": 126,
+      "source_sha256": "69fd7a777158ba5ec8dcef35c2b247f9393a43b601fddfa942175cf0c2591652",
+      "file_sha256": "69fd7a777158ba5ec8dcef35c2b247f9393a43b601fddfa942175cf0c2591652",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 84,
+        "author": "Mary Wollstonecraft Shelley",
+        "title": "Frankenstein; or, the Modern Prometheus",
+        "archive": "pg84.txt",
+        "byte_start": 6569,
+        "byte_end_exclusive": 6695,
+        "body_byte_bounds": [
+          1602,
+          429959
+        ],
+        "narrative_start": "You will rejoice to hear that no disaster",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T18",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T18.txt",
+      "bytes": 124,
+      "source_sha256": "4c9d6f259952407ea1edebf642117706217ec668f9151e2308f0ea05d66c5f50",
+      "file_sha256": "4c9d6f259952407ea1edebf642117706217ec668f9151e2308f0ea05d66c5f50",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 4293,
+        "byte_end_exclusive": 4417,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T19",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T19.txt",
+      "bytes": 124,
+      "source_sha256": "c7fb1586493fe79515eca5d2c307264ca78825c9aedcb72c3939c2a77b936a15",
+      "file_sha256": "c7fb1586493fe79515eca5d2c307264ca78825c9aedcb72c3939c2a77b936a15",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 84,
+        "author": "Mary Wollstonecraft Shelley",
+        "title": "Frankenstein; or, the Modern Prometheus",
+        "archive": "pg84.txt",
+        "byte_start": 7163,
+        "byte_end_exclusive": 7287,
+        "body_byte_bounds": [
+          1602,
+          429959
+        ],
+        "narrative_start": "You will rejoice to hear that no disaster",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "T20",
+      "split": "development",
+      "direction": "text-to-image",
+      "source": "development/T20.txt",
+      "bytes": 127,
+      "source_sha256": "a4414d50feba373243161e86861140478b6fd48ab59f867b65f9244f525a0aa4",
+      "file_sha256": "a4414d50feba373243161e86861140478b6fd48ab59f867b65f9244f525a0aa4",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 5037,
+        "byte_end_exclusive": 5164,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT1",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT1.txt",
+      "bytes": 63,
+      "source_sha256": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751",
+      "file_sha256": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 36503,
+        "byte_end_exclusive": 36566,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT2",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT2.txt",
+      "bytes": 59,
+      "source_sha256": "85fe1c976accd1d7bed549bce82d2feff62b804643a1f39ca0afc2fb6148d0a3",
+      "file_sha256": "85fe1c976accd1d7bed549bce82d2feff62b804643a1f39ca0afc2fb6148d0a3",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 1567,
+        "byte_end_exclusive": 1626,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT3",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT3.txt",
+      "bytes": 63,
+      "source_sha256": "98ec2eca0d7eacaa50d02de5c31393a69163beded7e1c74cd96b24370164ca42",
+      "file_sha256": "98ec2eca0d7eacaa50d02de5c31393a69163beded7e1c74cd96b24370164ca42",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 37345,
+        "byte_end_exclusive": 37408,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT4",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT4.txt",
+      "bytes": 62,
+      "source_sha256": "31e226f9712d66ec52ead5909ff36b5162d4c63ab017eb6d6421a4509b944f4e",
+      "file_sha256": "31e226f9712d66ec52ead5909ff36b5162d4c63ab017eb6d6421a4509b944f4e",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 2738,
+        "byte_end_exclusive": 2800,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT5",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT5.txt",
+      "bytes": 63,
+      "source_sha256": "64028841311fe292a4c6f79746414c2f3f32f502463f7ab08f91654a0ace2848",
+      "file_sha256": "64028841311fe292a4c6f79746414c2f3f32f502463f7ab08f91654a0ace2848",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 37834,
+        "byte_end_exclusive": 37897,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT6",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT6.txt",
+      "bytes": 58,
+      "source_sha256": "13eac85c080f565027e0c08eb6e4a57e0a3430ff64212a7f9ae0b75bd654532f",
+      "file_sha256": "13eac85c080f565027e0c08eb6e4a57e0a3430ff64212a7f9ae0b75bd654532f",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 4060,
+        "byte_end_exclusive": 4118,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT7",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT7.txt",
+      "bytes": 61,
+      "source_sha256": "0bcc108da3c92ed2b44ed389f17da5f57c43643e7a932c44552b3f6c0e1a8785",
+      "file_sha256": "0bcc108da3c92ed2b44ed389f17da5f57c43643e7a932c44552b3f6c0e1a8785",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38012,
+        "byte_end_exclusive": 38073,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT8",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT8.txt",
+      "bytes": 62,
+      "source_sha256": "d32ff286d8a89214b0ff03c9e18c8ae42add44ec18851732420cbaf67d47cbf5",
+      "file_sha256": "d32ff286d8a89214b0ff03c9e18c8ae42add44ec18851732420cbaf67d47cbf5",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5057,
+        "byte_end_exclusive": 5119,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT9",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT9.txt",
+      "bytes": 60,
+      "source_sha256": "6a088fc93fdb230de31d998760e500185e0136db1a3e9317a3240dd995e2d7d1",
+      "file_sha256": "6a088fc93fdb230de31d998760e500185e0136db1a3e9317a3240dd995e2d7d1",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38202,
+        "byte_end_exclusive": 38262,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT10",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT10.txt",
+      "bytes": 64,
+      "source_sha256": "f80e89fe3fbd42d706af32b81f5b689e1de2ce6f19dd26772221d0cb84a3f3ec",
+      "file_sha256": "f80e89fe3fbd42d706af32b81f5b689e1de2ce6f19dd26772221d0cb84a3f3ec",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5560,
+        "byte_end_exclusive": 5624,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "32-64"
+    },
+    {
+      "id": "HT11",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT11.txt",
+      "bytes": 126,
+      "source_sha256": "10930daad5e3ff45fa2dab4d556af9f92192cf545bc0679f849a390c630370e5",
+      "file_sha256": "10930daad5e3ff45fa2dab4d556af9f92192cf545bc0679f849a390c630370e5",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38373,
+        "byte_end_exclusive": 38499,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT12",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT12.txt",
+      "bytes": 126,
+      "source_sha256": "135d4bd11c99eedecf75d0777cf252f5a3486caf8cc5b8eccc8cfe9e8242b24c",
+      "file_sha256": "135d4bd11c99eedecf75d0777cf252f5a3486caf8cc5b8eccc8cfe9e8242b24c",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5777,
+        "byte_end_exclusive": 5903,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT13",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT13.txt",
+      "bytes": 128,
+      "source_sha256": "5ac92af0a907a51de75e4e10f81b411c6ebebeeef3ee2a98eb2b970cf321496d",
+      "file_sha256": "5ac92af0a907a51de75e4e10f81b411c6ebebeeef3ee2a98eb2b970cf321496d",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38604,
+        "byte_end_exclusive": 38732,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT14",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT14.txt",
+      "bytes": 127,
+      "source_sha256": "b408bdf90db3f13e605d929c7f9ec56cce9f725c9867afd2835172cc0db9e24e",
+      "file_sha256": "b408bdf90db3f13e605d929c7f9ec56cce9f725c9867afd2835172cc0db9e24e",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5937,
+        "byte_end_exclusive": 6064,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT15",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT15.txt",
+      "bytes": 122,
+      "source_sha256": "4bd5ecd9f9a2bd9ff572f3ed3cfc5f62159cae61605bb0b1fd140be21eb99a89",
+      "file_sha256": "4bd5ecd9f9a2bd9ff572f3ed3cfc5f62159cae61605bb0b1fd140be21eb99a89",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 39056,
+        "byte_end_exclusive": 39178,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT16",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT16.txt",
+      "bytes": 127,
+      "source_sha256": "c99e85893a28f6adbc4340ad66c8b236be70791ed67e2f55ba817911fb06cfac",
+      "file_sha256": "c99e85893a28f6adbc4340ad66c8b236be70791ed67e2f55ba817911fb06cfac",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 6421,
+        "byte_end_exclusive": 6548,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT17",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT17.txt",
+      "bytes": 124,
+      "source_sha256": "2e42ad05776eb89fb2da41ff584ac5c4f22895816d4aafeb6f324c714b5d6e27",
+      "file_sha256": "2e42ad05776eb89fb2da41ff584ac5c4f22895816d4aafeb6f324c714b5d6e27",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 39369,
+        "byte_end_exclusive": 39493,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT18",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT18.txt",
+      "bytes": 117,
+      "source_sha256": "58ffa8d478bb35b0935c7841c645281a39d845e799275785325972962769f0e2",
+      "file_sha256": "58ffa8d478bb35b0935c7841c645281a39d845e799275785325972962769f0e2",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 7261,
+        "byte_end_exclusive": 7378,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT19",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT19.txt",
+      "bytes": 124,
+      "source_sha256": "7adf100acb658b558b9fd3be876c9d6af4454010152aaad95456f5e67406ac9f",
+      "file_sha256": "7adf100acb658b558b9fd3be876c9d6af4454010152aaad95456f5e67406ac9f",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 39644,
+        "byte_end_exclusive": 39768,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    },
+    {
+      "id": "HT20",
+      "split": "heldout",
+      "direction": "text-to-image",
+      "source": "heldout/HT20.txt",
+      "bytes": 128,
+      "source_sha256": "0226890939fc040b7c5e515220cc863097d08fd03c2aaeb867d79c777bdb3ae6",
+      "file_sha256": "0226890939fc040b7c5e515220cc863097d08fd03c2aaeb867d79c777bdb3ae6",
+      "width": 0,
+      "height": 0,
+      "provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 7664,
+        "byte_end_exclusive": 7792,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "length_band": "65-128"
+    }
+  ],
+  "contexts": [
+    {
+      "id": "prompt1",
+      "modality": "text",
+      "path": "contexts/prompt1.txt",
+      "sha256": "abcca2b64d09c63fbe006cecfcc2aac4b700df67e41f00777d10ea9df847adb5",
+      "construction": "unchanged accepted V0 first context"
+    },
+    {
+      "id": "row1",
+      "modality": "image",
+      "path": "contexts/row1.rgb",
+      "sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "construction": "unchanged accepted V0 first context"
+    },
+    {
+      "id": "prompt2",
+      "modality": "text",
+      "path": "contexts/prompt2.txt",
+      "sha256": "44d6ae29a3ae87ee635cb8096a353c1f16d79d5aee912d50e180ead10b3dd80f",
+      "construction": "verbatim planned prompt, no newline"
+    },
+    {
+      "id": "row2",
+      "modality": "image",
+      "path": "contexts/row2.rgb",
+      "sha256": "c7f5500001d4376a74183225a88ececc5541e2bde1d79a30961ff458073ae5e1",
+      "construction": "independent uniform RGB8 row: NumPy PCG64(2002).integers(0,256,96,dtype=uint8), raster RGB; no model/payload dependence"
+    }
+  ],
+  "selection": "images: class round-robin, smallest unused IDX index after duplicate exclusions; text: alternating specified books, first unused prose paragraph, longest whole-word UTF-8 span in band",
+  "exclusions": [],
+  "selection_uses_carrier_outcomes": false,
+  "heldout_carrier_generation": false,
+  "checks": {
+    "20_per_split_direction": true,
+    "10_per_text_band_split": true,
+    "heldout_images_two_per_class": true,
+    "canonical_and_original_duplicates_excluded": true,
+    "splits_disjoint": true,
+    "literal_nonoverlapping_utf8": true,
+    "existing_fixtures_byte_preserved": true
+  }
+}

@@ -152,6 +152,8 @@ class TextBackend:
         self.last_diagnostics = {}
         self._special = {}
         self._piece_cache = {}
+        self.text_filter = profile.get("development_text_filter", "sequence")
+        self._singleton_mask = {}
         self._carrier_bytes = b""
         self.bos_token = self.model.token_bos()
         from llama_cpp.llama_tokenizer import LlamaTokenizer
@@ -181,6 +183,21 @@ class TextBackend:
             self._piece_cache[token] = detokenize_bytes(self.model,[token])
         return self._piece_cache[token]
 
+    def eligible_piece(self, token, piece):
+        """RankCloak singleton mask, evaluated lazily; default is the full prefix."""
+        static = getattr(self, "text_filter", "sequence") == "static"
+        if static and token in self._singleton_mask:
+            return self._singleton_mask[token]
+        raw = piece if static else self._carrier_bytes + piece
+        try:
+            raw.decode("utf-8", errors="strict")
+            eligible = tokenize_bytes(self.model, raw) == ([token] if static else self.prefix+[token])
+        except UnicodeDecodeError:
+            eligible = False
+        if static:
+            self._singleton_mask[token] = eligible
+        return eligible
+
     def distribution(self):
         started = time.monotonic()
         scores = np.asarray(self.model.scores[self.model.n_tokens-1],dtype=np.float64)
@@ -196,18 +213,11 @@ class TextBackend:
             piece = self.piece(token)
             if not piece:
                 continue
-            # Inspected pinned native D concatenates token pieces. Its sole
-            # context-dependent special case is first-token BOS, forbidden here.
-            # T still checks the COMPLETE byte prefix for every candidate.
-            raw = self._carrier_bytes + piece
-            try:
-                raw.decode("utf-8",errors="strict")
-            except UnicodeDecodeError:
-                continue
-            if tokenize_bytes(self.model,raw) == self.prefix+[token]:
+            # Both arms retain top-256-before-filtering and identical exclusions.
+            if self.eligible_piece(token, piece):
                 allowed.append(token)
         if not allowed:
-            raise ValueError("empty text support after complete-prefix filtering")
+            raise ValueError("empty text support after declared eligibility filtering")
         ids = np.sort(np.asarray(allowed,dtype=np.int64))
         q = probabilities_without_sort(scores[ids])
         keep = q > 0
@@ -231,7 +241,15 @@ class TextBackend:
         raw.decode("utf-8", errors="strict")
         if raw != self._carrier_bytes:
             raise ValueError("cached byte concatenation differs from exact detokenization")
-        if tokenize_bytes(self.model, raw) != self.prefix:
+        retokenized = tokenize_bytes(self.model, raw)
+        drift = retokenized != self.prefix
+        self.serialization_diagnostics = {
+            "text_filter_arm": getattr(self, "text_filter", "sequence"),
+            "sender_tokens": len(self.prefix), "retokenized_tokens": len(retokenized),
+            "tokenization_drift": drift,
+            "first_mismatch_index": next((i for i, (a, b) in enumerate(zip(self.prefix, retokenized)) if a != b),
+                                         min(len(self.prefix), len(retokenized)) if drift else None)}
+        if drift and getattr(self, "text_filter", "sequence") != "static":
             raise ValueError("final text tokenization changed")
         return raw
 
