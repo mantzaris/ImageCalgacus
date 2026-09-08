@@ -4,6 +4,8 @@ Repository-informed revision, 7 September 2026. Proposed study; no new model exp
 
 Implementation-sequencing clarification, 7 September 2026: the implementation plan starts with a GPU-based, fixed-rank bidirectional prototype using one context and five development cases per direction. This precedes the full development checks and frozen study below; it does not change the final three-method comparison, either direction, packet/recovery contract, experimental allocations, or six-week/40-GPU-hour ceiling.
 
+**V1.1 prospective allocation amendment, 8 September 2026 (authorized).** The accepted pilot projects about 88.3 GPU-hours for 100 held-out payloads/direction even with one context and shared controls, including remaining development and one reserve. The prospective main allocation is therefore **20 held-out payloads/direction, one fixed context/direction, three methods: 120 stego units**, with up to **40 independently generated ordinary traces**, one per payload/context group. This supersedes the earlier 100-payload/two-context main matrix and its context-only reduction rule, not historical evidence or the required V1 development checks. The second context remains development-only. Use the existing first prompt/row, not a context chosen to rescue arithmetic failures. This is a focused feasibility study, not a statistically powered reliability or publication claim. No held-out carriers are authorized at this checkpoint. See [V1.1 findings and forecast](../notes/v1_1_results.md).
+
 **1. The recommended contribution**
 
 Develop and evaluate one shared packet protocol that carries small images through generated text and short text through generated images, with exact recovery from the delivered UTF-8 or PNG artifact. Compare the existing bounded-rank method, its existing entropy-gated variant, and an established arithmetic-coding steganography comparator.
@@ -114,7 +116,7 @@ Use 8-bit channel values as the observable alphabet. At each step, obtain the no
 
 The image adapter must pass normalization, conditional-probability, rank-inversion, and PNG save/load checks. Reuse cached network outputs within a pixel where the architecture permits, and benchmark full generation and replay before choosing the final trial count.
 
-For a minimal image-conditioning experiment, supply one pre-shared 1 x 32 RGB row as a private causal prefix to a native 32 x 32 model. Generate the remaining 31 rows and transmit those rows as a **31 x 32 RGB PNG**. The receiver prepends the shared row internally before replaying the visible pixels. Use two fixed prefix rows drawn independently of the test payloads. Ordinary controls use exactly the same conditioning and crop.
+For a minimal image-conditioning experiment, supply one pre-shared 1 x 32 RGB row as a private causal prefix to a native 32 x 32 model. Generate the remaining 31 rows and transmit those rows as a **31 x 32 RGB PNG**. The receiver prepends the shared row internally before replaying the visible pixels. Use two fixed prefix rows drawn independently of payloads for the required development checks; the prospective main study uses only the existing first row. Ordinary controls use exactly the same conditioning and crop.
 
 This tests a small image fragment as conditioning context without a vision-language model. It also has an explicit cost: a pre-shared 96-byte row and a cropped native model canvas. The 31 visible rows provide a fixed budget of 2,976 channel values; an unfinished packet at that boundary is a capacity failure. Once the packet ends, sample all remaining pixels normally. A full image-key interface or a key overlay is unnecessary for this first result.
 
@@ -128,22 +130,22 @@ The proposed study is asymmetric in its conditioning: prose for the text model a
 
 **9. A fixed experiment matrix**
 
-Use 20 development payloads per direction, disjoint from 100 test payloads per direction. Choose 100 distinct source images for the canonical thumbnails. For text, use 50 messages of 32-64 UTF-8 bytes and 50 of 65-128 bytes from an appropriately licensed corpus. Put Unicode edge cases and synthetic image patterns in development checks. Do not truncate through a UTF-8 code point.
+Use 20 development payloads per direction, disjoint from 20 held-out payloads per direction. Choose 20 distinct source images for the canonical thumbnails. For held-out text, use 10 messages of 32-64 UTF-8 bytes and 10 of 65-128 bytes from the same proposed appropriately licensed corpus. Put Unicode edge cases and synthetic image patterns in development checks. Do not truncate through a UTF-8 code point.
 
-Use two fixed text prompts and two fixed image rows. These are controlled contexts, not a representative sample of all possible keys. Freeze source provenance, exclusions, preprocessing, contexts, seeds, packet construction, and thresholds before test generation.
+Retain two fixed text prompts and two fixed image rows for development; use the existing first prompt and first row for the main study. These are controlled contexts, not a representative sample of all possible keys. Freeze source provenance, exclusions, preprocessing, contexts, seeds, packet construction, and thresholds before test generation.
 
 | Allocation | Count |
 | --- | ---: |
-| Test payloads per direction | 100 |
-| Contexts per payload | 2 |
+| Held-out payloads per direction | 20 |
+| Main contexts per payload | 1 |
 | Coding methods | 3 |
 | Directions | 2 |
-| Total test stego artifacts | 1,200 |
-| Ordinary controls, at most one per stego artifact | 1,200 |
+| Total main stego artifacts | 120 |
+| Independent ordinary traces, at most one per payload/context group | 40 |
 
-Generate ordinary controls by sampling from the same eligible distribution and context. Match text controls to the realized carrier length; image controls have the same pixel dimensions. Deduplicate exact control artifacts for detection analyses and preserve shared-control dependencies in resampling. A small development comparison against unfiltered sampling can characterize the text consistency filter's own cost.
+Generate ordinary controls by sampling from the same eligible distribution and context. For each payload/context group, generate at most one independent trace to the longest realized text length and reuse its matched prefixes across methods; image methods share one full-dimension ordinary PNG. Record shared trace/prefix identities. These are at most 40 independent controls, not 120 method-specific replicates. Deduplicate exact control artifacts for detection analyses and preserve shared-control dependencies in resampling. A small development comparison against unfiltered sampling can characterize the text consistency filter's own cost.
 
-Pair methods by payload and context. Resample whole payload groups for confidence intervals, carrying their methods, contexts, and corresponding controls together. Do not treat multiple methods or two contexts as additional independent payloads. Use paired differences in rate, latency, and likelihood; use grouped intervals for recovery. Even 100/100 successful independent payload groups would not establish a 99.9% reliability claim.
+Pair methods by payload and context. Resample whole payload groups for confidence intervals, carrying their methods, contexts, and corresponding controls together. Do not treat multiple methods or two contexts as additional independent payloads. Use paired differences in rate, latency, and likelihood; use grouped intervals for recovery. Twenty payload groups per direction do not establish publication-level statistical power or broad reliability; successful observed groups do not justify a 99.9% reliability claim. Preserve length/class strata, payload groups and failures; never choose easier held-out sources using pilot results.
 
 **10. Measurements and hypotheses**
 
@@ -217,7 +219,7 @@ Allow approximately six focused researcher-weeks, conditional on the image backe
 
 Set a default ceiling of **40 GPU-hours** for the development and main runs combined, using existing hardware as available. Measure full encode, decode, scoring, and control-generation costs in the pilot. Extrapolate by modality and method, with a 25% reserve. CPU time and researcher time should also be logged.
 
-If the estimate exceeds the ceiling, reduce the second context to a development-only sensitivity check before freezing the test. This halves the main generation allocation while retaining both directions, all three methods, and 100 independent test payloads per direction. Do not drop a direction, discard difficult payloads, or omit the external comparator to preserve a larger sample matrix.
+The V1.1 amendment fixes the prospective main study at one context and 20 held-out payloads per direction, with shared controls as specified above. Keep the unchanged remaining V1 qualification cost separate from main generation in the forecast. If that revised whole-project estimate exceeds 40 GPU-hours, stop for a reviewed allocation decision; no further reduction is automatic. Do not drop a direction, discard difficult payloads, or omit the external comparator. Passing a forecast does not authorize spending beyond the existing phase allowance.
 
 Stop after three working days of unresolved checkpoint/runtime problems rather than training a new image model. Document the blocker and rescope the schedule. Do not begin main runs until the fixed-rank artifact endpoint works. Budget exhaustion in a functioning gated or arithmetic method remains an experimental outcome, rather than a reason to conceal failed cases.
 

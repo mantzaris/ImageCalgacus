@@ -1,0 +1,16 @@
+{
+  "starting_revision": "1b2379b5ac0ee104016a344e48de60b390ad0f69",
+  "starting_package_hash": "dd99e932b5b89b5def365cbb46f5dbe227abcb7d3f5cdb9e613a02c940cb47a3",
+  "protected_files": 700,
+  "protected_public_review_files": 297,
+  "protected_key_files": 51,
+  "all_protected_files_unchanged": true,
+  "changed_protected_files": [],
+  "v1_original_ledger_prefix_unchanged": true,
+  "v1_original_ledger_bytes": 3054042,
+  "v1_original_ledger_sha256": "6960398e32f91b3ff93c2d4dd2f73194227bf1ee20b0309b0853af5bfb033eb1",
+  "private_manifest": ".runtime/v1_1/baseline.json",
+  "private_manifest_sha256": "b094f308e0c97cd5f1f3c3c05fbe9c9b2e38951b4417582a13c164ce21d0aab5",
+  "new_private_traces_mode_0600": true,
+  "no_evidence_superseded": true
+}

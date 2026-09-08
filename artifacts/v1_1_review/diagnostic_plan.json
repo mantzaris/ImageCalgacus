@@ -1,0 +1,21 @@
+{
+  "starting_revision": "1b2379b5ac0ee104016a344e48de60b390ad0f69",
+  "starting_package_source_hash": "dd99e932b5b89b5def365cbb46f5dbe227abcb7d3f5cdb9e613a02c940cb47a3",
+  "v0_historical_seconds": 3163.653124010041,
+  "v1_seconds_before_checkpoint": 4690.205213522968,
+  "v1_allowance_seconds": 7200,
+  "v1_remaining_before_checkpoint_seconds": 2509.794786477032,
+  "scope": "Two diagnostic receiver replays of existing failed carriers; no new pilot observations or encodings",
+  "cases": ["I1-arithmetic", "I5-arithmetic"],
+  "previous_charged_replay_seconds": [422.228040126, 411.461367784],
+  "projected_replay_seconds": 833.68940791,
+  "projection_with_25_percent_headroom_seconds": 1042.1117598875,
+  "per_process_hard_timeout_seconds": 550,
+  "maximum_two_process_seconds": 1100,
+  "ledger": ".runtime/v1/gpu_budget.jsonl",
+  "private_baseline": ".runtime/v1_1/baseline.json",
+  "private_traces": ".runtime/v1_1/diagnostics/",
+  "question": "Are zero-bit runs accompanied by continued interval narrowing, or by partition collapse/stagnation? Does the independently recovered bit prefix match the originally prepared packet?",
+  "unchanged": ["A1 partition and framing", "models", "profiles", "contexts", "keys", "carriers", "complete-prefix checks", "GPU replay controls"],
+  "stop": "At most these two replays; no rerolls, cap search or successful-example requirement. Recheck remaining ledger before the second job."
+}

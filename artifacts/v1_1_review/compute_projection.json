@@ -1,0 +1,416 @@
+{
+  "scope": "V1.1 prospective allocation projection only; no V2 execution or extra GPU authority",
+  "method_timings": {
+    "image-to-text/fixed": {
+      "n": 2,
+      "observations": [
+        {
+          "case": "I1-fixed",
+          "encode_seconds": 45.48421006999706,
+          "decode_seconds": 45.2317519749995,
+          "cold_load_seconds": 5.3787309670005925,
+          "other_process_setup_teardown_seconds": 26.276289989997167,
+          "charged_encode_seconds": 61.62300712999422,
+          "charged_decode_seconds": 60.7479758720001,
+          "charged_pair_seconds": 122.37098300199432,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": 616,
+          "channels": null
+        },
+        {
+          "case": "I5-fixed",
+          "encode_seconds": 50.55314356600138,
+          "decode_seconds": 50.77455665400339,
+          "cold_load_seconds": 5.319543852005154,
+          "other_process_setup_teardown_seconds": 26.085723643984238,
+          "charged_encode_seconds": 66.32636742899922,
+          "charged_decode_seconds": 66.40660028699494,
+          "charged_pair_seconds": 132.73296771599416,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": 616,
+          "channels": null
+        }
+      ],
+      "mean": {
+        "encode_seconds": 48.01867681799922,
+        "decode_seconds": 48.003154314501444,
+        "cold_load_seconds": 5.349137409502873,
+        "other_process_setup_teardown_seconds": 26.181006816990703,
+        "charged_encode_seconds": 63.97468727949672,
+        "charged_decode_seconds": 63.57728807949752,
+        "charged_pair_seconds": 127.55197535899424
+      },
+      "maximum": {
+        "encode_seconds": 50.55314356600138,
+        "decode_seconds": 50.77455665400339,
+        "cold_load_seconds": 5.3787309670005925,
+        "other_process_setup_teardown_seconds": 26.276289989997167,
+        "charged_encode_seconds": 66.32636742899922,
+        "charged_decode_seconds": 66.40660028699494,
+        "charged_pair_seconds": 132.73296771599416
+      },
+      "exact_count": 2
+    },
+    "image-to-text/gated": {
+      "n": 2,
+      "observations": [
+        {
+          "case": "I1-gated",
+          "encode_seconds": 48.00761394800065,
+          "decode_seconds": 47.47135453400551,
+          "cold_load_seconds": 5.374316733010346,
+          "other_process_setup_teardown_seconds": 26.368338506974396,
+          "charged_encode_seconds": 63.872811454995826,
+          "charged_decode_seconds": 63.34881226699508,
+          "charged_pair_seconds": 127.22162372199091,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": 650,
+          "channels": null
+        },
+        {
+          "case": "I5-gated",
+          "encode_seconds": 48.99984392699844,
+          "decode_seconds": 49.063255833003495,
+          "cold_load_seconds": 5.381485324003734,
+          "other_process_setup_teardown_seconds": 26.12881987599394,
+          "charged_encode_seconds": 64.67123378300312,
+          "charged_decode_seconds": 64.90217117699649,
+          "charged_pair_seconds": 129.5734049599996,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": 640,
+          "channels": null
+        }
+      ],
+      "mean": {
+        "encode_seconds": 48.503728937499545,
+        "decode_seconds": 48.267305183504504,
+        "cold_load_seconds": 5.37790102850704,
+        "other_process_setup_teardown_seconds": 26.24857919148417,
+        "charged_encode_seconds": 64.27202261899947,
+        "charged_decode_seconds": 64.12549172199579,
+        "charged_pair_seconds": 128.39751434099526
+      },
+      "maximum": {
+        "encode_seconds": 48.99984392699844,
+        "decode_seconds": 49.063255833003495,
+        "cold_load_seconds": 5.381485324003734,
+        "other_process_setup_teardown_seconds": 26.368338506974396,
+        "charged_encode_seconds": 64.67123378300312,
+        "charged_decode_seconds": 64.90217117699649,
+        "charged_pair_seconds": 129.5734049599996
+      },
+      "exact_count": 2
+    },
+    "image-to-text/arithmetic": {
+      "n": 2,
+      "observations": [
+        {
+          "case": "I1-arithmetic",
+          "encode_seconds": 411.5747572180044,
+          "decode_seconds": 406.64659467300226,
+          "cold_load_seconds": 5.434291055003996,
+          "other_process_setup_teardown_seconds": 25.851453718998528,
+          "charged_encode_seconds": 427.27905653900234,
+          "charged_decode_seconds": 422.2280401260068,
+          "charged_pair_seconds": 849.5070966650092,
+          "carrier_complete": false,
+          "exact_recovery": false,
+          "tokens": 2048,
+          "channels": null
+        },
+        {
+          "case": "I5-arithmetic",
+          "encode_seconds": 397.83772541899816,
+          "decode_seconds": 395.94411919199774,
+          "cold_load_seconds": 5.3141839140080265,
+          "other_process_setup_teardown_seconds": 25.809619706989906,
+          "charged_encode_seconds": 413.4442804479986,
+          "charged_decode_seconds": 411.46136778399523,
+          "charged_pair_seconds": 824.9056482319938,
+          "carrier_complete": false,
+          "exact_recovery": false,
+          "tokens": 2048,
+          "channels": null
+        }
+      ],
+      "mean": {
+        "encode_seconds": 404.70624131850127,
+        "decode_seconds": 401.2953569325,
+        "cold_load_seconds": 5.374237484506011,
+        "other_process_setup_teardown_seconds": 25.830536712994217,
+        "charged_encode_seconds": 420.3616684935005,
+        "charged_decode_seconds": 416.844703955001,
+        "charged_pair_seconds": 837.2063724485015
+      },
+      "maximum": {
+        "encode_seconds": 411.5747572180044,
+        "decode_seconds": 406.64659467300226,
+        "cold_load_seconds": 5.434291055003996,
+        "other_process_setup_teardown_seconds": 25.851453718998528,
+        "charged_encode_seconds": 427.27905653900234,
+        "charged_decode_seconds": 422.2280401260068,
+        "charged_pair_seconds": 849.5070966650092
+      },
+      "exact_count": 0
+    },
+    "text-to-image/fixed": {
+      "n": 2,
+      "observations": [
+        {
+          "case": "T1-fixed",
+          "encode_seconds": 83.64707630500197,
+          "decode_seconds": 84.85732805400039,
+          "cold_load_seconds": 1.860794468993845,
+          "other_process_setup_teardown_seconds": 5.514125703004538,
+          "charged_encode_seconds": 87.28108476300258,
+          "charged_decode_seconds": 88.59823976799817,
+          "charged_pair_seconds": 175.87932453100075,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": null,
+          "channels": 2976
+        },
+        {
+          "case": "T3-fixed",
+          "encode_seconds": 84.14764144299988,
+          "decode_seconds": 84.41119301599974,
+          "cold_load_seconds": 1.8715717310042237,
+          "other_process_setup_teardown_seconds": 5.430495861990494,
+          "charged_encode_seconds": 87.81297522999375,
+          "charged_decode_seconds": 88.04792682200059,
+          "charged_pair_seconds": 175.86090205199434,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": null,
+          "channels": 2976
+        }
+      ],
+      "mean": {
+        "encode_seconds": 83.89735887400093,
+        "decode_seconds": 84.63426053500007,
+        "cold_load_seconds": 1.8661830999990343,
+        "other_process_setup_teardown_seconds": 5.472310782497516,
+        "charged_encode_seconds": 87.54702999649817,
+        "charged_decode_seconds": 88.32308329499938,
+        "charged_pair_seconds": 175.87011329149755
+      },
+      "maximum": {
+        "encode_seconds": 84.14764144299988,
+        "decode_seconds": 84.85732805400039,
+        "cold_load_seconds": 1.8715717310042237,
+        "other_process_setup_teardown_seconds": 5.514125703004538,
+        "charged_encode_seconds": 87.81297522999375,
+        "charged_decode_seconds": 88.59823976799817,
+        "charged_pair_seconds": 175.87932453100075
+      },
+      "exact_count": 2
+    },
+    "text-to-image/gated": {
+      "n": 2,
+      "observations": [
+        {
+          "case": "T1-gated",
+          "encode_seconds": 84.26069824700244,
+          "decode_seconds": 84.32685873999435,
+          "cold_load_seconds": 1.9783735149903805,
+          "other_process_setup_teardown_seconds": 5.592913114014664,
+          "charged_encode_seconds": 88.11795454499952,
+          "charged_decode_seconds": 88.04088907100231,
+          "charged_pair_seconds": 176.15884361600183,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": null,
+          "channels": 2976
+        },
+        {
+          "case": "T3-gated",
+          "encode_seconds": 84.30218157800118,
+          "decode_seconds": 84.40783845599799,
+          "cold_load_seconds": 1.9051675790033187,
+          "other_process_setup_teardown_seconds": 5.7062398359921644,
+          "charged_encode_seconds": 88.22724943699723,
+          "charged_decode_seconds": 88.09417801199743,
+          "charged_pair_seconds": 176.32142744899465,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": null,
+          "channels": 2976
+        }
+      ],
+      "mean": {
+        "encode_seconds": 84.28143991250181,
+        "decode_seconds": 84.36734859799617,
+        "cold_load_seconds": 1.9417705469968496,
+        "other_process_setup_teardown_seconds": 5.649576475003414,
+        "charged_encode_seconds": 88.17260199099837,
+        "charged_decode_seconds": 88.06753354149987,
+        "charged_pair_seconds": 176.24013553249824
+      },
+      "maximum": {
+        "encode_seconds": 84.30218157800118,
+        "decode_seconds": 84.40783845599799,
+        "cold_load_seconds": 1.9783735149903805,
+        "other_process_setup_teardown_seconds": 5.7062398359921644,
+        "charged_encode_seconds": 88.22724943699723,
+        "charged_decode_seconds": 88.09417801199743,
+        "charged_pair_seconds": 176.32142744899465
+      },
+      "exact_count": 2
+    },
+    "text-to-image/arithmetic": {
+      "n": 2,
+      "observations": [
+        {
+          "case": "T1-arithmetic",
+          "encode_seconds": 84.40561918300227,
+          "decode_seconds": 84.21507766599825,
+          "cold_load_seconds": 1.8792835490094149,
+          "other_process_setup_teardown_seconds": 5.607685778995801,
+          "charged_encode_seconds": 88.16471476000152,
+          "charged_decode_seconds": 87.94295141700422,
+          "charged_pair_seconds": 176.10766617700574,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": null,
+          "channels": 2976
+        },
+        {
+          "case": "T3-arithmetic",
+          "encode_seconds": 84.47936108499562,
+          "decode_seconds": 84.03318716800277,
+          "cold_load_seconds": 1.7856224370043492,
+          "other_process_setup_teardown_seconds": 5.610372357994493,
+          "charged_encode_seconds": 88.3099954529971,
+          "charged_decode_seconds": 87.59854759500013,
+          "charged_pair_seconds": 175.90854304799723,
+          "carrier_complete": true,
+          "exact_recovery": true,
+          "tokens": null,
+          "channels": 2976
+        }
+      ],
+      "mean": {
+        "encode_seconds": 84.44249013399894,
+        "decode_seconds": 84.12413241700051,
+        "cold_load_seconds": 1.832452993006882,
+        "other_process_setup_teardown_seconds": 5.609029068495147,
+        "charged_encode_seconds": 88.23735510649931,
+        "charged_decode_seconds": 87.77074950600218,
+        "charged_pair_seconds": 176.00810461250148
+      },
+      "maximum": {
+        "encode_seconds": 84.47936108499562,
+        "decode_seconds": 84.21507766599825,
+        "cold_load_seconds": 1.8792835490094149,
+        "other_process_setup_teardown_seconds": 5.610372357994493,
+        "charged_encode_seconds": 88.3099954529971,
+        "charged_decode_seconds": 87.94295141700422,
+        "charged_pair_seconds": 176.10766617700574
+      },
+      "exact_count": 2
+    }
+  },
+  "controls": {
+    "text": {
+      "measured_charged_seconds": 371.90920698099944,
+      "generation_seconds": 356.25814197900036,
+      "cold_load_seconds": 2.6914035549998516,
+      "other_setup_seconds": 12.959661446999235,
+      "symbols": 2048,
+      "prefix_estimates": {
+        "616": 62.06885072500154,
+        "640": 64.89182832199731,
+        "650": 66.08126769700175,
+        "2048": 371.9041686290002
+      }
+    },
+    "image": {
+      "measured_charged_seconds": 87.79597600199486,
+      "generation_seconds": 84.07228520799981,
+      "cold_load_seconds": 0.9605625280019012,
+      "other_setup_seconds": 2.7631282659931458,
+      "symbols": 2976,
+      "prefix_estimates": {}
+    }
+  },
+  "matched_control_cost_estimates": {
+    "image-to-text/fixed": 62.06885072500154,
+    "image-to-text/gated": 65.48654800949953,
+    "image-to-text/arithmetic": 371.9041686290002,
+    "text-to-image/fixed": 87.79597600199486,
+    "text-to-image/gated": 87.79597600199486,
+    "text-to-image/arithmetic": 87.79597600199486
+  },
+  "remaining_v1_qualification": {
+    "remaining_stego_units": 140,
+    "counts_by_measured_cell": {
+      "image-to-text/fixed": 38,
+      "text-to-image/fixed": 38,
+      "image-to-text/gated": 6,
+      "image-to-text/arithmetic": 6,
+      "text-to-image/gated": 6,
+      "text-to-image/arithmetic": 6
+    },
+    "static_mask_units_unmeasured": 40,
+    "measured_cell_projection_seconds": 19437.152130325667,
+    "static_mask_sequence_cost_proxy_seconds": 5309.318708639767,
+    "remaining_calibration_traces": 12,
+    "calibration_projection_seconds": 1333.5228560429896,
+    "additional_controls_upper_count": 46,
+    "control_projection_seconds": 10573.219208608869,
+    "additional_point_projection_seconds": 36653.21290361729,
+    "with_25_percent_reserve_seconds": 45816.51612952162,
+    "authorized_v1_remaining_seconds": 1675.212951104033,
+    "fits_remaining_v1": false,
+    "assumptions": [
+      "152 planned stego units minus 12 pilot units; eight gated/arithmetic timing cases per modality/method before credits",
+      "40 singleton/static-mask arms are unmeasured: maximum measured sequence-check pair cost is an explicit proxy, not a benchmark or guaranteed bound",
+      "up to 48 controls provisionally balanced 24 per modality, crediting the two actually shared pilot controls once",
+      "16 ordinary traces provisionally balanced eight per modality, crediting four calibration traces; second-context behavior not measured",
+      "all estimates conditional on these profiles and local timings; unfinished corpus/second-context checks are not qualified by this projection"
+    ]
+  },
+  "full_study_scenarios": [
+    {
+      "payloads_per_direction": 20,
+      "contexts": 1,
+      "stego_units": 120,
+      "control_policy": "one_control_trace_per_payload_context",
+      "control_generation_jobs": 40,
+      "stego_generation_seconds": 15076.998719890034,
+      "receiver_replay_seconds": 15013.831159610054,
+      "cold_load_seconds": 434.8336512503738,
+      "other_process_setup_seconds": 1899.8207809493033,
+      "control_generation_including_setup_seconds": 9194.103659659886,
+      "additional_gpu_scoring_seconds": 0,
+      "lossless_image_replay_20_seconds": 1761.0757756166763,
+      "development_spent_seconds": 8688.440172906008,
+      "v0_historical_seconds": 3163.653124010041,
+      "v1_historical_seconds": 4690.205213522968,
+      "post_v1_checkpoint_diagnostic_seconds": 834.5818353729992,
+      "remaining_development_seconds": 36653.21290361729,
+      "subtotal_seconds": 88722.31682349963,
+      "reserve_seconds": 22180.579205874907,
+      "total_with_reserve_gpu_hours": 30.806360008159594,
+      "fits_40_gpu_hours": true,
+      "unreserved_main_stego_only_gpu_hours": 9.007078975472156
+    }
+  ],
+  "caveats": [
+    "Only two development payload groups per direction and one context were measured; no confidence intervals or unseen-context throughput claim",
+    "Capacity failures consume full actual generation/replay costs and remain in per-method averages",
+    "Control prefix costs reuse measured checkpoints plus measured setup; fresh independent controls may vary",
+    "Shared controls reduce jobs, not the number of independent observations; all shared dependencies stay in their payload groups",
+    "Likelihood/rank scoring is already charged inline; CPU JSON aggregation adds no neural replay",
+    "V1.1 authorized 20 held-out payloads/direction, one existing context, all methods and up to 40 shared controls; no held-out generation",
+    "Historical jobs and diagnostics enter spent cost once; diagnostic replays are not credited against the unchanged 140 remaining development units",
+    "One 25% planning reserve is applied to the unreserved subtotal, conservatively including spent history; it is not an extra actual charge or permission",
+    "Twenty additional lossless PNG fresh-process replays remain required; UTF-8 byte roundtrips and PNG rewrites/equality are CPU work outside GPU occupancy",
+    "The static-mask and remaining-development allocation estimates require measurement/confirmation before any larger authorization"
+  ],
+  "cpu_aggregation_seconds": 0.0563435629956075
+}

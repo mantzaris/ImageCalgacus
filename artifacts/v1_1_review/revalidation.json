@@ -1,0 +1,143 @@
+[
+  {
+    "check": "V0 strict",
+    "command": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+      "-B",
+      "-m",
+      "imagecalgacus.evaluate",
+      "--run",
+      "artifacts/v0_review/ten-001",
+      "--references",
+      "configs/v0_cases.json",
+      "--results",
+      "artifacts/v0_review/results.jsonl",
+      "--phase",
+      "ten"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "summary": {
+      "allocation_complete": true,
+      "expected_count": 10,
+      "attempted_count": 10,
+      "completed_count": 10,
+      "packet_completed_count": 10,
+      "authenticated_count": 10,
+      "exact_recovery_count": 10,
+      "all_recovered": true,
+      "recorded_failure_count": 0,
+      "missing_identifiers": [],
+      "unexpected_identifiers": [],
+      "duplicate_expected_identifiers": [],
+      "duplicate_result_identifiers": [],
+      "duplicate_expected_case_identifiers": [],
+      "duplicate_result_case_identifiers": [],
+      "case_work_mismatches": [],
+      "unstarted_identifiers": [],
+      "unfinished_identifiers": [],
+      "invalid_evidence_identifiers": [],
+      "recorded_result_reconciliation": {
+        "missing": [],
+        "unexpected": [],
+        "duplicates": [],
+        "case_work_mismatches": []
+      },
+      "mode": "final",
+      "exit_requires_all_recovered": true
+    }
+  },
+  {
+    "check": "V1 complete with failures",
+    "command": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+      "-B",
+      "-m",
+      "imagecalgacus.evaluate",
+      "--run",
+      "artifacts/v1_review/cases",
+      "--references",
+      "artifacts/v1_review/references.json",
+      "--results",
+      "artifacts/v1_review/results.jsonl",
+      "--allow-failures"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "summary": {
+      "allocation_complete": true,
+      "expected_count": 12,
+      "attempted_count": 12,
+      "completed_count": 10,
+      "packet_completed_count": 10,
+      "authenticated_count": 10,
+      "exact_recovery_count": 10,
+      "all_recovered": false,
+      "recorded_failure_count": 2,
+      "missing_identifiers": [],
+      "unexpected_identifiers": [],
+      "duplicate_expected_identifiers": [],
+      "duplicate_result_identifiers": [],
+      "duplicate_expected_case_identifiers": [],
+      "duplicate_result_case_identifiers": [],
+      "case_work_mismatches": [],
+      "unstarted_identifiers": [],
+      "unfinished_identifiers": [],
+      "invalid_evidence_identifiers": [],
+      "recorded_result_reconciliation": {
+        "missing": [],
+        "unexpected": [],
+        "duplicates": [],
+        "case_work_mismatches": []
+      },
+      "mode": "final",
+      "exit_requires_all_recovered": false
+    }
+  },
+  {
+    "check": "V1 strict",
+    "command": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+      "-B",
+      "-m",
+      "imagecalgacus.evaluate",
+      "--run",
+      "artifacts/v1_review/cases",
+      "--references",
+      "artifacts/v1_review/references.json",
+      "--results",
+      "artifacts/v1_review/results.jsonl"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "summary": {
+      "allocation_complete": true,
+      "expected_count": 12,
+      "attempted_count": 12,
+      "completed_count": 10,
+      "packet_completed_count": 10,
+      "authenticated_count": 10,
+      "exact_recovery_count": 10,
+      "all_recovered": false,
+      "recorded_failure_count": 2,
+      "missing_identifiers": [],
+      "unexpected_identifiers": [],
+      "duplicate_expected_identifiers": [],
+      "duplicate_result_identifiers": [],
+      "duplicate_expected_case_identifiers": [],
+      "duplicate_result_case_identifiers": [],
+      "case_work_mismatches": [],
+      "unstarted_identifiers": [],
+      "unfinished_identifiers": [],
+      "invalid_evidence_identifiers": [],
+      "recorded_result_reconciliation": {
+        "missing": [],
+        "unexpected": [],
+        "duplicates": [],
+        "case_work_mismatches": []
+      },
+      "mode": "final",
+      "exit_requires_all_recovered": true
+    }
+  }
+]

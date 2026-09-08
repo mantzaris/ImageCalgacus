@@ -1,0 +1,16 @@
+{
+  "README.md": "9ce04188b624a1752d7d7111b243ad759778c669ddb9c4d0012b477362569249",
+  "arithmetic_diagnosis.json": "ae70db3a721f1a96dcd4fc0bfb4eff03bbde79065ce7fc5f9748ce2753c8270f",
+  "budget.json": "fcabfc35531a0a460ae2153b5a7f0512f0e2be82f247afdf97a458c1fe30afb7",
+  "compute_projection.json": "26136989943d8be72f5f00e6d5d97882915bce101551239b1befdb58d8d112d8",
+  "cpu_tests.json": "40dfcd2de269e514bc96757b69eb8c1f96ff3540b520567bc911e90a9f9d6245",
+  "cpu_tests.txt": "0b8f5e9743910ea396003a7d0c5b829bb3a319489356ba58df98a4f9ad66487b",
+  "diagnostic_plan.json": "e0c07861cde54f8a5f1f513167df7cfcbf5df74b3ddd3d1334993d9f7c5040e0",
+  "diagnostics/I1/receiver.json": "cf4d0cbe1ec25797b22a3f59e120a8b9f4a61b93eeec8c7e33862e8e6d703909",
+  "diagnostics/I5/receiver.json": "3cdb5e564726da4f2bd7451fb2931c4768f366f084d131eee2124cc4f9decd64",
+  "final_checks.json": "20a22e6246b2bc63db1571e2fd109c233fd60af74c4ec22469a328896e9e952c",
+  "gpu_jobs.json": "f9bf64baba0f0f5333615a9407363381f608179eb512b0f78c5e4cca6d85dd02",
+  "preservation.json": "ac863a0dbbeaa145a53f65764e549fe15c5683507c8210ffa3c02501205bfec7",
+  "revalidation.json": "b922d1890ec8a78a4d935433caa022f446e89eb9706837f9fe419ee7ef85ef64",
+  "source_manifest.json": "06d0a189b1ed0d139ac440ea16b37c4953df10736782dde972e77a3759fbf5e3"
+}

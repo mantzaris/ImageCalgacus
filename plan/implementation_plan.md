@@ -2,6 +2,8 @@
 
 Revised for independent review, 7 September 2026. Planning only: no application changes, installations, weight downloads, inference runs or resource allocations were performed.
 
+**V1.1 amendment, 8 September 2026:** V0 and the V1 implementation/pilot are accepted checkpoints; V1 remains unqualified. The historical inspection below is not a description of today's implemented repository. The authorized prospective main-study reduction is **20 held-out images + 20 held-out texts, one existing context/direction, all three methods = 120 stego units**, with up to **40 independent shared ordinary traces**. Measured runtime motivates the reduction; protocol, profiles, payloads, recovery and V1 qualification are unchanged. This is a focused feasibility study, not a statistical-power claim. [Results/remaining conditions](../notes/v1_1_results.md) and [new forecast](../artifacts/v1_1_review/compute_projection.json) supplement, and do not overwrite, accepted V0/V1 evidence.
+
 ## 1. Releases and scientific authority
 
 | Component | Required for V0 | Later release | Reason |
@@ -15,7 +17,7 @@ Revised for independent review, 7 September 2026. Planning only: no application 
 | Resumption and persistent experiment bookkeeping | No | V1 as needed | V0 starts fresh encoding runs |
 | Matched controls, intervals, detection, figures, paper evidence | No | V2 | Ten cases cannot establish research claims |
 
-The scientific specification is [crossmodal_steganography_focused_research_plan.md](crossmodal_steganography_focused_research_plan.md). Baseline inspection is repository commit `16ce203e11a1206081801cd36f501d92a04ff753`. The existing implementation plan is revised here; the methodological document gains only a labeled prototype-sequencing clarification. Both directions, three final methods, payload conventions, recovery contract, allocations, approximately six researcher-weeks and **40 GPU-hours overall** remain unchanged.
+The scientific specification is [crossmodal_steganography_focused_research_plan.md](crossmodal_steganography_focused_research_plan.md). Baseline inspection is repository commit `16ce203e11a1206081801cd36f501d92a04ff753`. The original implementation plan added a labeled prototype-sequencing clarification; V1.1 additionally makes the narrow prospective allocation amendment above. Both directions, three final methods, payload conventions, recovery contract, approximately six researcher-weeks and **40 GPU-hours overall** remain unchanged. The main allocation alone is superseded by the labeled V1.1 amendment above.
 
 V0 establishes functionality on the tested GPU/runtime configuration, not imperceptibility, broad robustness, statistical reliability or a completed journal study. Gates are technical acceptance checks, not repeated approval requests after implementation is authorized. A material scope change still requires review.
 
@@ -223,15 +225,15 @@ Retain proposed amendment **A1**, now V1-only: replace the reference's final-tok
 
 Complete the methodological static-mask versus sequence-check comparison: 20 development images × two prompts = 40 pairs/80 artifacts, requiring all 40 sequence-check fixed-rank recoveries before main work. Both arms differ only in singleton versus complete-prefix filtering. Add fixed-image checks over 20 texts × two rows and all-method timing cases; no test-set tuning.
 
-Dataset proposals: 20 development payloads/direction include the five V0 fixtures plus 15 additional sources; image additions from Fashion-MNIST training data, text additions from Gutenberg 11/84, ten texts per length band overall. Test uses 100 distinct Fashion-MNIST test images, ten/class, and 100 unchanged nonoverlapping Gutenberg 1342/1661 spans, 50 per 32–64/65–128-byte band. Pin grayscale BOX resize 28→16 and byte/codepoint-boundary selection; exclude boilerplate and duplicate source/canonical bytes across splits before generation. Record archive/version/URL, terms, hashes, indices/offsets, preprocessing and exclusions. Preserve [Fashion-MNIST licensing](https://github.com/zalandoresearch/fashion-mnist/blob/master/LICENSE) and [Gutenberg conditions](https://www.gutenberg.org/policy/license.html); corpus suitability remains a V1 decision.
+Dataset proposals: 20 development payloads/direction include the five V0 fixtures plus 15 additional sources; image additions from Fashion-MNIST training data, text additions from Gutenberg 11/84, ten texts per length band overall. The amended held-out allocation uses 20 distinct Fashion-MNIST test images, two/class, and 20 unchanged nonoverlapping Gutenberg 1342/1661 spans, ten per 32–64/65–128-byte band. Preserve the proposed source corpora, selection rules and exclusions; do not select easier examples using pilot failures. Pin grayscale BOX resize 28→16 and byte/codepoint-boundary selection; exclude boilerplate and duplicate source/canonical bytes across splits before generation. Record archive/version/URL, terms, hashes, indices/offsets, preprocessing and exclusions. Preserve [Fashion-MNIST licensing](https://github.com/zalandoresearch/fashion-mnist/blob/master/LICENSE) and [Gutenberg conditions](https://www.gutenberg.org/policy/license.html); corpus suitability remains a V1 decision.
 
-Freeze the second prompt, “Explain how a home cook prepares a simple vegetable soup. Use continuous prose.”, and a second independently drawn row before payload generation. Seed allocation uses a fixed allocation seed plus split/direction/payload/context/purpose, with method-specific control seeds. Seeds never supply cryptographic randomness. Within a new study run, encrypt each payload/context packet once and pair that exact packet across all methods.
+Freeze the second prompt, “Explain how a home cook prepares a simple vegetable soup. Use continuous prose.”, and a second independently drawn row before payload generation. Seed allocation uses a fixed allocation seed plus split/direction/payload/context/purpose, with one independent main-control seed per payload/context group, shared across its methods. Seeds never supply cryptographic randomness. Within a new study run, encrypt each payload/context packet once and pair that exact packet across all methods.
 
 ## 8. V2: frozen evaluation and auditable results
 
 **V2-M6 Frozen evaluation**, approximately 5–6 days, requires V1 correctness, calibration, frozen configuration and measured budget. **V2-M7 Reproducibility/paper evidence**, approximately 10–11 days, follows reconciled results. Outputs are paired tables, failure accounting, grouped intervals, bounded detection, artifact examples, four methodological figures and claim-to-evidence records. No new methods or model-family sweeps. Combined planning envelope is approximately 25–30 researcher-days, not a guarantee.
 
-Freeze 100 held-out payloads × two contexts × three methods × two directions = **1,200 stego units**, at most 1,200 matched ordinary controls. Ordinary controls use the same eligible distribution and realized text length/full visible canvas. Record missing controls when no carrier exists; do not regenerate for appearance. Shared/duplicate controls are linked, not counted as independent observations.
+Freeze 20 held-out payloads × one context × three methods × two directions = **120 stego units**. Use only the existing first prompt/row. Generate at most **40 independent ordinary traces**, one per payload/context group; reuse matched text prefixes/full PNG controls across its methods. There are 20 independent payload groups per direction, not 60, and a shared trace is not three independent controls. Ordinary controls use the same eligible distribution and realized text length/full visible canvas. Record missing controls when no carrier exists; do not regenerate for appearance. Shared/duplicate controls are linked, not counted as independent observations.
 
 Extend V0's single append-only `results.jsonl` schema, not a reporting framework:
 
@@ -263,13 +265,13 @@ Use observed maxima/length-sensitive costs, including full PNG replay and text f
 
 V1 initially reserves another two GPU-hours, making the initial development allocation four combined. Proposed full development work is 152 stego artifacts: 80 text filter-comparison artifacts + 40 fixed-image cases + 32 additional gated/arithmetic timing cases, with up to 48 timing controls and 16 ordinary calibration traces. Budget V0 artifacts additionally; reusing their development source payloads does not create independent observations. Remaining required development must enter the projection before spending beyond that allocation.
 
-With C frozen contexts and measured per-stage GPU-hour costs:
+With one frozen main context per direction and measured per-stage GPU-hour costs:
 
-`G_total = 1.25 × [G_development + Σ_direction,method 100C(g_generation + g_receiver + g_control + g_scoring) + G_loads + G_serialization_checks] ≤40`.
+`G_total = 1.25 × [G_development + Σ_direction,method 20(g_generation + g_receiver) + G_shared_controls + G_extra_scoring + G_loads_and_process_overhead + G_serialization_checks] ≤40`.
 
 Separate generation, receiver, controls and scoring; avoid charging already-recorded replay scores twice, but include extra passes when needed. Include spent failures and planned remaining development; apply the 25% reserve once, not recursively to V0's reserved estimate. Project cap-length failures/deadlines, CPU wall time and researcher days too.
 
-If C=2 exceeds budget, the only permitted reduction is making the second context development-only: 600 stego units/at most 600 controls, still 100 held-out payloads/direction and all three methods. Decide before test generation. If C=1 fails, stop for a reviewed budget/schedule decision. No automatic cloud allocation, larger hardware scope, training, direction/comparator removal or easier test selection.
+V1.1 explicitly supersedes the earlier context-only reduction: the proposed main allocation is now 120 stego units and at most 40 shared controls. Keep all 152 originally planned development units and calibration/control qualification requirements (crediting only qualifying pilot units); no diagnostic replay is an extra observation or credit against unrelated development. Separate recorded history, remaining qualification, main inference, fresh receiver loads/process overhead, controls and the existing 20 additional lossless PNG replays. Apply the 25% reserve once to the unreserved combined estimate, not to previously reserved projections. Treat unmeasured static-mask/second-context costs as assumptions. If the revised estimate fails, stop for a reviewed budget/schedule decision. No automatic cloud allocation, larger hardware scope, training, direction/comparator removal or easier test selection.
 
 ## 10. Critical review and unresolved decisions
 
@@ -282,7 +284,7 @@ The review moved arithmetic, entropy calibration, datasets, static-mask comparis
 | A1 finite-stream arithmetic adaptation/license route | Existing proposed amendment retained, deferred to V1-M5; mandatory independent termination evidence before V2 |
 | Corpus snapshots, gate medians, second context and measured allocation | Development-only decisions; V1-M5 freeze, never choose using test results |
 
-The cap/tail classification clarifies the existing rule without changing either limit. Choosing the PyTorch candidate first and simplifying run management change engineering order, not the scientific method. No further methodological-document rewrite is proposed.
+The cap/tail classification clarifies the existing rule without changing either limit. Choosing the PyTorch candidate first and simplifying run management change engineering order, not the scientific method. The sole V1.1 scientific amendment is the explicitly authorized prospective sample/context/control allocation; no coder amendment or protocol change is silently adopted. A1 has a documented width-three stagnation vector: zero-bit steps alone are not stagnation, and no universal finite-termination claim follows from finite-message tests. Diagnose existing failures without requiring a rerolled full-size arithmetic text success. Completing that diagnosis is not by itself full comparator qualification.
 
 ## 11. Independent-review checklist
 

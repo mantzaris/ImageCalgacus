@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "returncode": 0,
+  "wall_seconds": 7.860359088997939,
+  "neural_inference": false,
+  "output": "cpu_tests.txt"
+}

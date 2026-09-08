@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import resource
 import time
@@ -11,7 +12,7 @@ from .coders import coder_for_profile, Trace
 from .runtime import read_profile, json_write, canonical_hash
 
 
-def receive(args):
+def receive(args, arithmetic_observer=None):
     inputs=[Path(p).resolve() for p in (args.carrier,args.profile,args.context,args.key)]
     if len(set(inputs))!=4 or len({p.parent for p in inputs})!=1:
         raise ValueError("stage four distinct permitted inputs in one receiver directory")
@@ -26,6 +27,8 @@ def receive(args):
     if len(key)!=32: raise ValueError("wrong key length")
     modality="text" if args.direction=="image-to-text" else "image"
     method=profile.get("coder",{}).get("method","fixed")
+    if arithmetic_observer is not None and method != "arithmetic":
+        raise ValueError("interval diagnostics require the A1 arithmetic profile")
     coder=coder_for_profile(profile,modality)
     trace=Trace()
     record={"stage":"decode","direction":args.direction,"method":method,
@@ -54,7 +57,11 @@ def receive(args):
                 role="completion"; carrying=0
             else:
                 step=coder.prepare(ids,q,order)
+                if arithmetic_observer is not None:
+                    previous=(coder.lower,coder.upper,len(coder.bits))
                 carrying=coder.consume(step,int(symbol))
+                if arithmetic_observer is not None:
+                    arithmetic_observer(coder,step,int(symbol),previous)
                 role="skipped" if method=="gated" and not carrying else "packet"
             trace.observe(ids,q,order,int(symbol),role,carrying,model)
             model.observe(int(symbol)); emitted+=1
@@ -105,7 +112,30 @@ def main():
     parser.add_argument("direction",choices=["image-to-text","text-to-image"])
     for name in ("carrier","profile","context","key","output","report"):
         parser.add_argument("--"+name,required=True)
-    raise SystemExit(receive(parser.parse_args()))
+    parser.add_argument("--private-arithmetic-trace",help="diagnostic output under ignored .runtime/; contains recovered packet bits")
+    args=parser.parse_args()
+    if args.private_arithmetic_trace:
+        from .runtime import ROOT
+        trace_path=Path(args.private_arithmetic_trace).resolve()
+        if not trace_path.is_relative_to(ROOT/".runtime") or trace_path.parent==Path(args.carrier).resolve().parent:
+            parser.error("private trace must be outside inputs and under ignored .runtime/")
+        trace_path.parent.mkdir(parents=True,exist_ok=True)
+        # Copy state AFTER unchanged consume; no sender/evaluator input or extra model call.
+        with os.fdopen(os.open(trace_path,os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600),"w") as stream:
+            def observe(coder,step,symbol,previous):
+                lower,upper,before=previous
+                item={"position":coder.positions,"lower":lower,"upper":upper,
+                      "next_lower":coder.lower,"next_upper":coder.upper,
+                      "bits_before":before,"emitted":coder.bits[before:],
+                      "symbol":symbol,"lookahead_zero_bits":coder.lookahead_zero_bits,
+                      "done":coder.done,"termination_suffix_bits":coder.termination_suffix_bits,
+                      **{name:step[name].tolist() for name in ("ids","q","order","symbols","cdf")},
+                      "partition_diagnostic":step["diagnostic"]}
+                stream.write(json.dumps(item,allow_nan=False)+"\n")
+            status=receive(args,arithmetic_observer=observe)
+    else:
+        status=receive(args)
+    raise SystemExit(status)
 
 
 if __name__=="__main__":

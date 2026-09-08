@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "all_700_protected_files_still_match": true,
+    "source_manifest_matches": true,
+    "independent_20_payload_projection_matches": true,
+    "method_timings_unchanged_from_accepted_pilot": true,
+    "qualification_140_stego_units_unchanged": true,
+    "all_diagnostic_checks_pass": true,
+    "no_sender_evaluator_import_in_receiver": true,
+    "no_retained_key_or_packet_material_in_public_files": true,
+    "no_private_trace_files_in_review": true,
+    "no_new_gpu_jobs_after_diagnosis": true,
+    "v1_within_original_allowance": true,
+    "whitespace_diff_clean": true
+  },
+  "passed": true,
+  "independent_pre_diagnostic_projection_hours": 30.516574648655077,
+  "independent_post_diagnostic_projection_hours": 30.806360008159594,
+  "v1_1_diagnosis_complete": true,
+  "implementation_bug_found_or_fixed": false,
+  "observations_superseded": 0,
+  "new_independent_observations": 0,
+  "v1_fully_qualified": false,
+  "v2_ready": false,
+  "gpu_work_stopped": true
+}

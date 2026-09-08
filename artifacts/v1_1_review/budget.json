@@ -1,0 +1,15 @@
+{
+  "v0_historical_seconds": 3163.653124010041,
+  "v1_before_checkpoint_seconds": 4690.205213522968,
+  "v1_1_diagnostic_seconds": 834.5818353729992,
+  "v1_charged_seconds": 5524.787048895967,
+  "v1_limit_seconds": 7200,
+  "v1_remaining_seconds": 1675.212951104033,
+  "cumulative_seconds": 8688.440172906008,
+  "overall_ceiling_seconds": 144000,
+  "overall_remaining_not_automatically_authorized": 135311.559827094,
+  "charged_rule": "Entire model process including imports, loading, CPU filtering, trace output, inference and teardown; same V1 ledger, no reset",
+  "diagnostic_jobs": 2,
+  "new_experimental_units": 0,
+  "all_new_jobs_observed_gpu_inference": true
+}
