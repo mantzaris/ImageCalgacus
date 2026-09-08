@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_gpu_profile_rejects_cpu_and_sidecars (test_boundaries.Boundaries) ... ok\ntest_receiver_does_not_import_reference_pipeline (test_boundaries.Boundaries) ... ok\ntest_receiver_rejects_extra_inputs_before_model_loading (test_boundaries.Boundaries) ... ok\ntest_authenticated_output_must_still_equal_frozen_source (test_evaluator.IndependentEquality) ... ok\ntest_all_byte_vectors (test_foundation.Foundation) ... ok\ntest_authenticated_parser_errors (test_foundation.Foundation) ... ok\ntest_nonce_lifecycle (test_foundation.Foundation) ... ok\ntest_order_support_and_rank_bounds (test_foundation.Foundation) ... ok\ntest_packet_offsets_and_sizes (test_foundation.Foundation) ... ok\ntest_payload_bounds_and_utf8 (test_foundation.Foundation) ... ok\ntest_standard_gcm_vector_and_authentication (test_foundation.Foundation) ... ok\ntest_independent_cdf_oracle (test_pixels_text.PixelTests) ... ok\ntest_png_pixels_and_strict_modes (test_pixels_text.PixelTests) ... ok\ntest_rgb_joint_oracle_and_posteriors (test_pixels_text.PixelTests) ... ok\ntest_complete_prefix_not_singletons (test_pixels_text.TextTests) ... ok\ntest_reset_clears_actual_context (test_pixels_text.TextTests) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.113s\n\nOK\n"
+}

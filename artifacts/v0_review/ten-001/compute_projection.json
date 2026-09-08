@@ -1,0 +1,11 @@
+{
+  "used_seconds": 717.6033372520069,
+  "measured_pair_seconds": {
+    "image-to-text": 323.12910046600155,
+    "text-to-image": 174.70848779800144
+  },
+  "remaining_pairs_each_direction": 5,
+  "reserve_multiplier": 1.25,
+  "projected_total_seconds": 4008.4890982150273,
+  "ceiling_seconds": 7200
+}

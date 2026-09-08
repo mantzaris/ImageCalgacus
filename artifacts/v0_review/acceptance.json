@@ -1,0 +1,12 @@
+{
+  "v0_acceptance": true,
+  "application_source_frozen": true,
+  "receiver_input_checks_passed": true,
+  "ten_attempted": 10,
+  "ten_exact": 10,
+  "all_stego_attempts": 12,
+  "all_stego_failures": 0,
+  "model_jobs": 26,
+  "charged_seconds": 3163.653124010041,
+  "budget_remaining_seconds": 4036.346875989959
+}

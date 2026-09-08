@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imagecalgacus"
+version = "0.1.0"
+description = "V0 fixed-rank GPU text/image artifact transport"
+requires-python = ">=3.10"
+dependencies = ["numpy==2.2.6", "cryptography==46.0.7", "Pillow==12.3.0"]
+
+[project.optional-dependencies]
+text = ["llama-cpp-python==0.3.23", "nvidia-cuda-runtime-cu12==12.4.127", "nvidia-cublas-cu12==12.4.5.8"]
+image = ["torch==2.5.1"]
+test = []
+
+[tool.setuptools.packages.find]
+include = ["imagecalgacus*"]
+
+[tool.setuptools.package-data]
+"imagecalgacus.pixelcnn" = ["LICENSE", "OPENAI_LICENSE.md"]

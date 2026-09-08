@@ -1,0 +1,31 @@
+{
+  "source_hash": "77ef233f9541072dbac0140d11dd84dac1a3494c60fb324b74413a71b25c0400",
+  "profile": {
+    "protocol": "imagecalgacus-v0-fixed16",
+    "packet_bytes": 292,
+    "gpu_uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+    "text": {
+      "interpreter": "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/bin/python",
+      "model_path": "/home/meow/Documents/repos/llm-rankcloak/models/llama3_8b/Meta-Llama-3-8B-Instruct.Q4_K_M.gguf",
+      "model_sha256": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+      "n_gpu_layers": -1,
+      "logits_all": true,
+      "n_batch": 1,
+      "n_ubatch": 1,
+      "n_ctx": 4096,
+      "n_threads": 8,
+      "minimum_free_mib": 8192
+    },
+    "image": {
+      "interpreter": "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+      "model_path": "/home/meow/Documents/repos/ImageCalgacus/models/pixelcnn_pp_cifar10.pth",
+      "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "nr_resnet": 5,
+      "nr_filters": 160,
+      "nr_logistic_mix": 10,
+      "minimum_free_mib": 2048
+    },
+    "completion_seed": 3001,
+    "context_seed": 2001
+  }
+}

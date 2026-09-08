@@ -1,0 +1,106 @@
+{
+  "claim": "four-file data-flow separation, not an operating-system sandbox",
+  "passed": true,
+  "cases": [
+    {
+      "case": "I1",
+      "files": [
+        "carrier.txt",
+        "profile.json",
+        "prompt.txt",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "I2",
+      "files": [
+        "carrier.txt",
+        "profile.json",
+        "prompt.txt",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "I3",
+      "files": [
+        "carrier.txt",
+        "profile.json",
+        "prompt.txt",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "I4",
+      "files": [
+        "carrier.txt",
+        "profile.json",
+        "prompt.txt",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "I5",
+      "files": [
+        "carrier.txt",
+        "profile.json",
+        "prompt.txt",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "T1",
+      "files": [
+        "carrier.png",
+        "profile.json",
+        "row.rgb",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "T2",
+      "files": [
+        "carrier.png",
+        "profile.json",
+        "row.rgb",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "T3",
+      "files": [
+        "carrier.png",
+        "profile.json",
+        "row.rgb",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "T4",
+      "files": [
+        "carrier.png",
+        "profile.json",
+        "row.rgb",
+        "run.key"
+      ],
+      "passed": true
+    },
+    {
+      "case": "T5",
+      "files": [
+        "carrier.png",
+        "profile.json",
+        "row.rgb",
+        "run.key"
+      ],
+      "passed": true
+    }
+  ]
+}

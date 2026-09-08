@@ -1,0 +1,77 @@
+{
+  "fixtures_frozen_before_generation": true,
+  "numpy": "2.2.6",
+  "noise_generator": "PCG64 integers(0,256,(16,16),dtype=uint8), seed=20260907",
+  "cases": [
+    {
+      "id": "I1",
+      "direction": "image-to-text",
+      "source": "artifacts/v0_review/fixtures/I1.png",
+      "bytes": 256,
+      "source_sha256": "1c6a448d8d492554e849f09633da5b2e623e44049909c36a61dcbcdfbf0560be"
+    },
+    {
+      "id": "I2",
+      "direction": "image-to-text",
+      "source": "artifacts/v0_review/fixtures/I2.png",
+      "bytes": 256,
+      "source_sha256": "4a4f9f0ac7057d12396bd0d330a170213e2ce34e2ac3b066a846bc545f88e5c9"
+    },
+    {
+      "id": "I3",
+      "direction": "image-to-text",
+      "source": "artifacts/v0_review/fixtures/I3.png",
+      "bytes": 256,
+      "source_sha256": "53603f357c4720275dee9c0230c15edaf0896b0a71404753dfdade9ccd2fce3a"
+    },
+    {
+      "id": "I4",
+      "direction": "image-to-text",
+      "source": "artifacts/v0_review/fixtures/I4.png",
+      "bytes": 256,
+      "source_sha256": "33602f3bcef3f6ba3732fe6f63c040ed809a5ef8eeab6d127dd2a48801021028"
+    },
+    {
+      "id": "I5",
+      "direction": "image-to-text",
+      "source": "artifacts/v0_review/fixtures/I5.png",
+      "bytes": 256,
+      "source_sha256": "8119963d636a9da9ec09c0c79b7b889ea5e7fda9c4c76c1ad8ee92f5acd654dd"
+    },
+    {
+      "id": "T1",
+      "direction": "text-to-image",
+      "source": "artifacts/v0_review/fixtures/T1.txt",
+      "bytes": 32,
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf"
+    },
+    {
+      "id": "T2",
+      "direction": "text-to-image",
+      "source": "artifacts/v0_review/fixtures/T2.txt",
+      "bytes": 48,
+      "source_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458"
+    },
+    {
+      "id": "T3",
+      "direction": "text-to-image",
+      "source": "artifacts/v0_review/fixtures/T3.txt",
+      "bytes": 64,
+      "source_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f"
+    },
+    {
+      "id": "T4",
+      "direction": "text-to-image",
+      "source": "artifacts/v0_review/fixtures/T4.txt",
+      "bytes": 96,
+      "source_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834"
+    },
+    {
+      "id": "T5",
+      "direction": "text-to-image",
+      "source": "artifacts/v0_review/fixtures/T5.txt",
+      "bytes": 128,
+      "source_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8"
+    }
+  ]
+}

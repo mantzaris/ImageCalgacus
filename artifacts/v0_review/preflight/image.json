@@ -1,0 +1,70 @@
+{
+  "stage": "preflight",
+  "backend": "image",
+  "profile_id": "fd966ec362a2c5f6b95cc036096f6fab41fb112b760aecfbc5f4930e2322d293",
+  "source_hash": "24ff8235ac0b77afc409591a73a832b979cf5e184aa0fb8510e0bbc6cb43451f",
+  "passed": true,
+  "ordinary_generation_seconds": 96.88361549200272,
+  "ordinary_pixel_sha256": "d085e753d88f96f88cc354c652d83c928f3c3a70bd144b92711a52d953e1a4be",
+  "ordinary_replay_seconds": 97.0272210309995,
+  "rank_replay_equal": true,
+  "model_calls": 2051,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 733237
+    },
+    "backend": "torch",
+    "version": "2.5.1+cu124",
+    "cuda_runtime": "12.4",
+    "cudnn": 90100,
+    "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+    "strict_loading": true,
+    "checkpoint_key_mapping": "strip uniform module. prefix",
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameter_devices": [
+      "cuda:0"
+    ],
+    "eval_mode": true,
+    "deterministic_algorithms": true,
+    "tf32": false,
+    "gpu_allocation": [
+      "733237, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+    ],
+    "inference_mode": true,
+    "input_device": "cuda:0",
+    "output_device": "cuda:0",
+    "cuda_model_milliseconds": 191392.9567489624,
+    "cuda_kernel_count": 2266,
+    "cuda_kernel_examples": [
+      "Memcpy HtoD (Pageable -> Device)",
+      "Memset (Device)",
+      "_5x_cudnn_ampere_scudnn_128x128_relu_small_nn_v1",
+      "_5x_cudnn_ampere_scudnn_128x64_relu_interior_nn_v1",
+      "_5x_cudnn_ampere_scudnn_128x64_relu_medium_nn_v1",
+      "ampere_sgemm_32x32_sliced1x4_tn",
+      "ampere_sgemm_64x32_sliced1x4_tn",
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 4, 64, 64>(at::native::(anonymous namespace)::OpaqueType<4u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<4u>, unsigned int, 64, 64>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)"
+    ],
+    "causal_current_future_max_abs_difference": 0.0,
+    "repeat_forward_equal": true
+  },
+  "cold_load_seconds": 1.2243910580000374,
+  "total_seconds": 199.47333415100002
+}

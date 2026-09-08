@@ -1,0 +1,81 @@
+{
+  "stage": "decode",
+  "direction": "text-to-image",
+  "profile_id": "fd966ec362a2c5f6b95cc036096f6fab41fb112b760aecfbc5f4930e2322d293",
+  "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+  "carrier": "runs/preliminary-001/T1/inbox/carrier.png",
+  "output": "runs/preliminary-001/T1/recovered.txt",
+  "input_roles": [
+    "carrier",
+    "profile",
+    "context",
+    "key"
+  ],
+  "input_files": [
+    "carrier.png",
+    "profile.json",
+    "row.rgb",
+    "run.key"
+  ],
+  "packet_complete": true,
+  "authenticated": true,
+  "carrier_complete": true,
+  "failure_stage": null,
+  "failure_reason": null,
+  "pixel_sha256": "29abf6178c2f9119be8fa8923c5df8afe238234d7170387b79600e2f09b67809",
+  "cold_load_seconds": 0.9509478389991273,
+  "payload_bytes": 32,
+  "width": 0,
+  "height": 0,
+  "recovered_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+  "packet_stop": 584,
+  "completion_symbols": 2392,
+  "model_calls": 992,
+  "decode_seconds": 83.53137767199951,
+  "pixels": 992,
+  "channels": 2976,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 769766
+    },
+    "backend": "torch",
+    "version": "2.5.1+cu124",
+    "cuda_runtime": "12.4",
+    "cudnn": 90100,
+    "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+    "strict_loading": true,
+    "checkpoint_key_mapping": "strip uniform module. prefix",
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameter_devices": [
+      "cuda:0"
+    ],
+    "eval_mode": true,
+    "deterministic_algorithms": true,
+    "tf32": false,
+    "gpu_allocation": [
+      "769766, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+    ],
+    "inference_mode": true,
+    "input_device": "cuda:0",
+    "output_device": "cuda:0",
+    "cuda_model_milliseconds": 81853.63724517822
+  },
+  "total_seconds": 86.53985585999908
+}

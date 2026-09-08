@@ -1,0 +1,10 @@
+{
+  "upstream_revision": "7cb4436f062fda9b63ecc9e3b75d2c2dcb379931",
+  "source": "https://github.com/pclucas14/pixel-cnn-pp",
+  "author_filename": "pcnn_lr.0.00040_nr-resnet5_nr-filters160_889.pth",
+  "mega_file_handle": "C7gDHIIB",
+  "bytes": 214732802,
+  "sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+  "integrity": "TLS acquisition; exact size and local SHA-256; no published checksum",
+  "license": "Repository non-sale license; no separate checkpoint notice observed; weights excluded from redistribution"
+}
