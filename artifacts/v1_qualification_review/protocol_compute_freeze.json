@@ -1,0 +1,63 @@
+{
+  "execution_package_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+  "historical_revision": "b5f2d1e3b9e901e5dfe6a181b6ca5d95dc35ac4b",
+  "allocation_sha256": "60e129121f585ad431d2fee10351a24d5e419a10bfc171c813afb33b0cb41569",
+  "source_context_manifest_sha256": "9c20a5c11896c84d0f7accf2c5e4ad99c4e432f7bdd02bdaa2056ae3b048346f",
+  "profiles": {
+    "configs/v1_arithmetic.json": "49587fab91dda8852b73483ca0d7e9194612eccebae63661db909141b29cf023",
+    "configs/v1_fixed.json": "75aa20e656caa9f6b17958be0e6a43432663db99b7b6f718fdbcabe74487880e",
+    "configs/v1_fixed_static.json": "0cb95615896030dfb7e1689a9fe37befd66aadc99522d3e5ccd7eb34922d2a3a",
+    "configs/v1_gated.json": "d17988ae49462493875eaa0becbb97d8b07ef1f19d0c5c64e199fc214c74f246"
+  },
+  "protected_protocol_modules": {
+    "packet.py": "1b3b30562ca76ac2d29e8734604007bcca780980c4833ae8cd1bf7e5f6f44a22",
+    "fixed_rank.py": "67cf99df63aa1c0a06676e1f20fa3d44b58fef87b033ad064a721646eabf80ef",
+    "entropy_coding.py": "ef9e8d7400a59084441267fab84620270795e756ed1fc3a6da75245111beee0b",
+    "arithmetic_coding.py": "b521328cf2430eb0f8e0bc907979dd18fb2570185419b0f0433c6af4e67c9a97",
+    "coders.py": "6e5453418ca9de9369352ed3c9b17884f380a94bdb712a751342a32c7a1decf8",
+    "text_backend.py": "43348567f4d37e663f1487c8ec86bff27fd5bce445e2a9ad95a6d0092cb11a9e",
+    "image_backend.py": "5775f3659d545d8a7d30fcaf6875e3a0630e1c5673c488d8a74fbf77f14aa075"
+  },
+  "main_stego_units": 120,
+  "main_shared_controls": 40,
+  "one_context_per_direction": true,
+  "main_contexts": {
+    "image-to-text": "prompt1",
+    "text-to-image": "row1"
+  },
+  "main_text_filter_arm": "sequence",
+  "packet_bytes": 292,
+  "text_carrier_cap_tokens": 2048,
+  "text_completion_tokens": 32,
+  "image_carrier": {
+    "width": 32,
+    "height": 31,
+    "mode": "RGB",
+    "channels_per_pixel": 3,
+    "pixels": 992,
+    "channel_values": 2976
+  },
+  "shared_image_prefix_rows": 1,
+  "arithmetic_framing": "A1",
+  "arithmetic_precision_bits": 32,
+  "heldout_carriers_generated": false,
+  "thresholds": {
+    "text": {
+      "value": 0.5983972524635524,
+      "hex": "0x1.32611feab1c5ep-1"
+    },
+    "image": {
+      "value": 3.2159513527579326,
+      "hex": "0x1.9ba44b3ecfa6ep+1"
+    }
+  },
+  "remaining_condition_names": [],
+  "reporting_only_script": "scripts/finalize_v1_qualification.py",
+  "reporting_script_sha256": "88652dcc45abc45c1aa66a1923e7d3dbe13b8a0d71555e900564c66e7de7752c",
+  "prior_reviews": [
+    "artifacts/v0_review",
+    "artifacts/v1_review",
+    "artifacts/v1_1_review",
+    "artifacts/v1_2_review"
+  ]
+}

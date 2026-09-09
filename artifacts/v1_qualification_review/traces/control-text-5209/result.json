@@ -1,0 +1,159 @@
+{
+  "purpose": "control",
+  "modality": "text",
+  "seed": 5209,
+  "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+  "source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+  "context_sha256": "44d6ae29a3ae87ee635cb8096a353c1f16d79d5aee912d50e180ead10b3dd80f",
+  "passed": true,
+  "cold_load_seconds": 2.6873819479951635,
+  "generation_seconds": 324.8998928700021,
+  "model_calls": 2065,
+  "carrier": "artifacts/v1_qualification_review/traces/control-text-5209/carrier.txt",
+  "carrier_bytes": 10348,
+  "carrier_sha256": "90dd495a3cbad1f0fd53c7e7752e725e7d52d404e48e7ca7ffd20e71a21067fa",
+  "symbols": 2048,
+  "diagnostics": {
+    "whole": {
+      "positions": 2048,
+      "surprisal_bits_mean": 0.8698386403680808,
+      "rank_mean": 2.27734375,
+      "log_rank_mean": 0.3279225660195167,
+      "entropy_bits_mean": 0.8132834546799793
+    },
+    "packet_span": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "packet_bearing": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "skipped": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "completion": {
+      "positions": 2048,
+      "surprisal_bits_mean": 0.8698386403680808,
+      "rank_mean": 2.27734375,
+      "log_rank_mean": 0.3279225660195167,
+      "entropy_bits_mean": 0.8132834546799793
+    },
+    "mean_top256_mass": 0.994939454047588,
+    "mean_eligible_mass": 0.9944125689732173,
+    "mean_top16_uniform_rank_divergence_bits": 8.135545986352481
+  },
+  "prefix_diagnostics": {
+    "616": {
+      "generation_seconds": 44.76162422700145,
+      "diagnostics": {
+        "whole": {
+          "positions": 616,
+          "surprisal_bits_mean": 1.4419311287860912,
+          "rank_mean": 2.6915584415584415,
+          "log_rank_mean": 0.5440746598648781,
+          "entropy_bits_mean": 1.3401277427344993
+        },
+        "packet_span": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "packet_bearing": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "skipped": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "completion": {
+          "positions": 616,
+          "surprisal_bits_mean": 1.4419311287860912,
+          "rank_mean": 2.6915584415584415,
+          "log_rank_mean": 0.5440746598648781,
+          "entropy_bits_mean": 1.3401277427344993
+        },
+        "mean_top256_mass": 0.9967162965378953,
+        "mean_eligible_mass": 0.9960182420856928,
+        "mean_top16_uniform_rank_divergence_bits": 6.859666839800253
+      }
+    }
+  },
+  "filter_seconds": 281.000301616019,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 2901077
+    },
+    "backend": "llama-cpp-python",
+    "version": "0.3.23",
+    "cuda_library_sha256": "89d5798bdf1bfd679d8a155f1ba02c40008d708b8cafba62f5f5e21a8d7b958d",
+    "loaded_cuda_libraries": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublasLt.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublas.so.12"
+    ],
+    "gpu_offload_supported": true,
+    "system_info": "CUDA : ARCHS = 700,750,800,860,890,900 | FORCE_MMQ = 1 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | ",
+    "model_sha256": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+    "offloaded_layers": [
+      33,
+      33
+    ],
+    "gpu_allocation": [
+      "2901077, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 5228"
+    ],
+    "gpu_buffer_lines": [
+      "done_getting_tensors: tensor 'token_embd.weight' (q4_K) (and 0 others) cannot be used with preferred buffer type CUDA_Host, using CPU instead",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_context:  CUDA_Host  output buffer size =     0.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "sched_reserve:  CUDA_Host compute buffer size =     0.05 MiB"
+    ],
+    "detokenizer_source_sha256": "44f3db6523465479d850b5c80f196b02123621e9e89a5826a61e425bb1e2be4f",
+    "text_processing": "v1_exact_piece_cache_top256_ties"
+  },
+  "total_seconds": 340.28671542000666,
+  "peak_rss_kib": 5916756,
+  "work_id": "d42abc8fd0c7c7909f945d8c1d39b5b7e8b831f74149cd25c3d7675dadf76c76",
+  "id": "control-text-5209",
+  "context_id": "prompt2",
+  "purpose_detail": "shared ordinary trace, matched prefixes reused without extra independent replicates",
+  "source_result_sha256": "125a8e07876317a325be309ec3dd266499a69813e3d3d0a079a6ac0142c94e2d",
+  "historical": false
+}

@@ -1,0 +1,141 @@
+{
+  "stage": "decode",
+  "direction": "text-to-image",
+  "method": "fixed",
+  "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+  "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+  "text_filter_arm": null,
+  "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T8-row2-fixed/inbox/carrier.png",
+  "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T8-row2-fixed/recovered.txt",
+  "input_roles": [
+    "carrier",
+    "profile",
+    "context",
+    "key"
+  ],
+  "input_files": [
+    "carrier.png",
+    "profile.json",
+    "row.rgb",
+    "run.key"
+  ],
+  "packet_complete": true,
+  "authenticated": true,
+  "carrier_complete": true,
+  "failure_stage": null,
+  "failure_reason": null,
+  "pixel_sha256": "8a9e76d721efacbecc70550be5aa256559432de7a88b9aafbe1b4a1da54d721e",
+  "cold_load_seconds": 0.977385507998406,
+  "parsed_symbol_count": 2976,
+  "payload_bytes": 61,
+  "width": 0,
+  "height": 0,
+  "recovered_sha256": "17b6ce76220d591e2ff301aa0ce865cf21e3dd38ea874aa759a168579298c3b1",
+  "decode_seconds": 84.60108854599821,
+  "pixels": 992,
+  "channels": 2976,
+  "model_calls": 992,
+  "packet_stop": 584,
+  "completion_symbols": 2392,
+  "packet_bits_recovered": 2336,
+  "coder_diagnostics": {
+    "positions": 584,
+    "packet_positions": 584,
+    "skipped_positions": 0,
+    "zero_bit_positions": 0,
+    "termination_positions": 0,
+    "termination_suffix_bits": 0,
+    "lookahead_zero_bits": 0
+  },
+  "diagnostics": {
+    "whole": {
+      "positions": 2976,
+      "surprisal_bits_mean": 4.613127902997757,
+      "rank_mean": 11.18850806451613,
+      "log_rank_mean": 2.7380870991032173,
+      "entropy_bits_mean": 4.70626011478018
+    },
+    "packet_span": {
+      "positions": 584,
+      "surprisal_bits_mean": 5.091349426122203,
+      "rank_mean": 8.89041095890411,
+      "log_rank_mean": 2.8654461644447764,
+      "entropy_bits_mean": 5.534041828163093
+    },
+    "packet_bearing": {
+      "positions": 584,
+      "surprisal_bits_mean": 5.091349426122203,
+      "rank_mean": 8.89041095890411,
+      "log_rank_mean": 2.8654461644447764,
+      "entropy_bits_mean": 5.534041828163093
+    },
+    "skipped": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "completion": {
+      "positions": 2392,
+      "surprisal_bits_mean": 4.496371477619547,
+      "rank_mean": 11.74958193979933,
+      "log_rank_mean": 2.706992745357607,
+      "entropy_bits_mean": 4.5041595626833475
+    },
+    "mean_top256_mass": 1.0,
+    "mean_eligible_mass": 1.0,
+    "mean_top16_uniform_rank_divergence_bits": 0.8994939489911583
+  },
+  "peak_rss_kib": 1268072,
+  "packet_positions": 584,
+  "skipped_positions": 0,
+  "zero_bit_positions": 0,
+  "termination_positions": 0,
+  "termination_suffix_bits": 0,
+  "lookahead_zero_bits": 0,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 3480451
+    },
+    "backend": "torch",
+    "version": "2.5.1+cu124",
+    "cuda_runtime": "12.4",
+    "cudnn": 90100,
+    "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+    "strict_loading": true,
+    "checkpoint_key_mapping": "strip uniform module. prefix",
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "parameter_devices": [
+      "cuda:0"
+    ],
+    "eval_mode": true,
+    "deterministic_algorithms": true,
+    "tf32": false,
+    "gpu_allocation": [
+      "3480451, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+    ],
+    "inference_mode": true,
+    "input_device": "cuda:0",
+    "output_device": "cuda:0",
+    "cuda_model_milliseconds": 82348.70680999756
+  },
+  "total_seconds": 87.69034120799915
+}

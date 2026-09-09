@@ -3,7 +3,7 @@ import argparse,json,statistics,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from imagecalgacus.runtime import budget_state,json_write
+from imagecalgacus.runtime import budget_state,json_write,phase_limit
 
 def average(values): return statistics.mean(values)
 def main():
@@ -78,7 +78,7 @@ def main():
         "remaining_calibration_traces":12,"calibration_projection_seconds":calibration_remaining,
         "additional_controls_upper_count":46,"control_projection_seconds":controls_remaining,
         "additional_point_projection_seconds":dev_remaining,"with_25_percent_reserve_seconds":1.25*dev_remaining,
-        "authorized_v1_remaining_seconds":7200-used,"fits_remaining_v1":1.25*dev_remaining<=7200-used,
+        "authorized_v1_remaining_seconds":phase_limit("v1")-used,"fits_remaining_v1":1.25*dev_remaining<=phase_limit("v1")-used,
         "assumptions":["152 planned stego units minus 12 pilot units; eight gated/arithmetic timing cases per modality/method before credits",
           "40 singleton/static-mask arms are unmeasured: maximum measured sequence-check pair cost is an explicit proxy, not a benchmark or guaranteed bound",
           "up to 48 controls provisionally balanced 24 per modality, crediting the two actually shared pilot controls once",
@@ -223,10 +223,10 @@ def project_qualification(args, output):
             "ordinary_seconds":ordinary,"controls_upper_seconds":controls_remaining,"trace_estimates":trace_details,
             "unreserved_seconds":remaining_dev,"unreserved_hours":remaining_dev/3600,
             "standalone_with_25_percent_headroom_hours":1.25*remaining_dev/3600,
-            "additional_to_remaining_phase_unreserved_seconds":max(0,remaining_dev-(7200-used))},
+            "additional_to_remaining_phase_unreserved_seconds":max(0,remaining_dev-(phase_limit("v1")-used))},
         "history":{"v0_seconds":v0,"v1_original_checkpoint_seconds":history_v1,
                    "v1_1_seconds":baseline["v1_seconds"]-history_v1,"v1_2_seconds":used-baseline["v1_seconds"],
-                   "v1_total_seconds":used,"remaining_v1_seconds":7200-used,"cumulative_seconds":v0+used},
+                   "v1_total_seconds":used,"remaining_v1_seconds":phase_limit("v1")-used,"cumulative_seconds":v0+used},
         "whole_project":{"payloads_per_direction":args.payloads,"contexts":args.contexts,"main_stego_units":6*n,"shared_controls_upper":2*n,
             "history_seconds":v0+used,"remaining_qualification_seconds":remaining_dev,
             "main_generation_seconds":generation,"main_receiver_seconds":replay,"main_loading_seconds":loads,
@@ -244,8 +244,126 @@ def project_qualification(args, output):
           "No claim of statistical power or future throughput guarantee follows from this small sample."]}
     json_write(output,result)
     print(json.dumps({"pending":len(pending),"remaining_development_hours":remaining_dev/3600,
-                      "whole_project_with_reserve_hours":1.25*total/3600,"v1_remaining_seconds":7200-used}))
+                      "whole_project_with_reserve_hours":1.25*total/3600,"v1_remaining_seconds":phase_limit("v1")-used}))
     return 0
 
+
+
+def completion_forecast(directory, allocation, freeze, records):
+    """Live completion forecast from charged jobs, not another allocation."""
+    from collections import Counter
+    from imagecalgacus.runtime import phase_limit
+    used, ledger = budget_state("v1"); v0, _ = budget_state("v0")
+    jobs = [r for r in ledger if r["event"] == "finished"]
+    cases = {c["work_id"]:c for c in allocation["cases"]}
+    traces = {t["work_id"]:t for t in allocation["traces"]}
+    observations=[]; trace_observations=[]
+    fields=("encode_seconds","decode_seconds","cold_load_seconds","other_process_seconds",
+            "charged_encode_seconds","charged_decode_seconds","charged_pair_seconds")
+    def charged(label):
+        matches=[r for r in jobs if r["id"].endswith("-"+label)]
+        if not matches: raise ValueError("missing charged job: "+label)
+        # Corrected/interrupted attempts consume budget and are never free.
+        return sum(r["elapsed_seconds"] for r in matches)
+    for work, record in records.items():
+        if record["kind"]=="stego":
+            c=cases[work]; row=record["evaluation"]
+            folder=Path(record["case_dir"])
+            label=(folder.parent.name+"-"+c["id"]) if record.get("historical") else "qualification-"+c["id"]
+            enc,dec=charged(label+"-encode"),charged(label+"-decode")
+            generation=row.get("encode_seconds") or 0.; replay=row.get("decode_seconds") or 0.
+            loads=(row.get("sender_load_seconds") or 0.)+(row.get("receiver_load_seconds") or 0.)
+            observations.append(dict(case=c["id"],work_id=work,direction=c["direction"],method=c["method"],
+                context=c["context_id"],arm=c["text_filter_arm"],encode_seconds=generation,decode_seconds=replay,
+                cold_load_seconds=loads,other_process_seconds=enc+dec-generation-replay-loads,
+                charged_encode_seconds=enc,charged_decode_seconds=dec,charged_pair_seconds=enc+dec,
+                exact_recovery=row["exact_recovery"],carrier_complete=row["carrier_complete"],
+                outcome_class=row.get("outcome_class"),historical=record.get("historical",False)))
+        elif record["kind"]=="trace":
+            t=traces[work]; data=record["result"]
+            label=(t["id"].replace("ordinary-","calibration-") if record.get("historical") else "qualification-"+t["id"])
+            total=charged(label)
+            trace_observations.append(dict(id=t["id"],purpose=t["purpose"],modality=t["modality"],
+                context=t["context_id"],charged_seconds=total,generation_seconds=data["generation_seconds"],
+                cold_load_seconds=data["cold_load_seconds"],
+                other_process_seconds=total-data["generation_seconds"]-data["cold_load_seconds"]))
+    def cell(direction,method,context,arm):
+        exact=[r for r in observations if (r["direction"],r["method"],r["context"],r["arm"])==(direction,method,context,arm)]
+        measured=exact or [r for r in observations if (r["direction"],r["method"],r["arm"])==(direction,method,arm)]
+        if not measured: raise ValueError("no same-method timing evidence")
+        means={f:average([r[f] for r in measured]) for f in fields}
+        per=means["charged_pair_seconds"]
+        replay_floor=None
+        if arm=="static":
+            # A failed early replay never predicts all future receivers failing early.
+            full=[r["charged_decode_seconds"] for r in observations if r["arm"]=="static" and r["carrier_complete"]]
+            replay_floor=max([means["charged_decode_seconds"],means["charged_encode_seconds"]]+full)
+            per=means["charged_encode_seconds"]+replay_floor
+        return dict(n=len(exact),evidence_cases=[r["case"] for r in measured],mean=means,planning_pair_seconds=per,
+                    static_replay_floor_seconds=replay_floor,
+                    assumption=None if exact else "unmeasured context: pooled SAME-method/arm measured contexts",
+                    uncertainty="small development sample; trajectory and machine-load variation")
+    def trace_cell(purpose,modality,context):
+        exact=[r for r in trace_observations if (r["purpose"],r["modality"],r["context"])==(purpose,modality,context)]
+        measured=exact or [r for r in trace_observations if (r["purpose"],r["modality"])==(purpose,modality)]
+        if not measured: raise ValueError("missing ordinary/control cost evidence")
+        return dict(n=len(exact),seconds=average([r["charged_seconds"] for r in measured]),
+                    cases=[r["id"] for r in measured],assumption=None if exact else "unmeasured context: same-purpose/modality proxy")
+    pending=[c for w,c in cases.items() if w not in records]
+    by_cell=[]; stego=0.
+    for key,count in sorted(Counter((c["direction"],c["method"],c["context_id"],c["text_filter_arm"]) for c in pending).items(),key=str):
+        estimate=cell(*key); total=count*estimate["planning_pair_seconds"]; stego+=total
+        by_cell.append(dict(direction=key[0],method=key[1],context=key[2],arm=key[3],
+                            pending=count,timing=estimate,total_seconds=total))
+    trace_details=[]; ordinary=controls=0.
+    for w,t in traces.items():
+        if w in records:continue
+        estimate=trace_cell(t["purpose"],t["modality"],t["context_id"])
+        trace_details.append(dict(id=t["id"],purpose=t["purpose"],context=t["context_id"],estimate=estimate))
+        if t["purpose"]=="ordinary":ordinary+=estimate["seconds"]
+        else:controls+=estimate["seconds"]
+    lossless_details=[]
+    for item in freeze["lossless"]:
+        if item["work_id"] in records:continue
+        c=cases[item["parent_work_id"]]
+        observed=[r for r in records.values() if r["kind"]=="lossless" and
+                  cases[r["parent_work_id"]]["context_id"]==c["context_id"]]
+        costs=[charged("qualification-"+r["id"]+"-decode") for r in observed]
+        per=average(costs) if costs else cell("text-to-image","fixed",c["context_id"],None)["mean"]["charged_decode_seconds"]
+        lossless_details.append(dict(id=item["id"],context=c["context_id"],seconds=per,
+            assumption=None if costs else "fixed-PNG fresh receiver, same row, including loading and occupied processing"))
+    lossless=sum(r["seconds"] for r in lossless_details)
+    remaining=stego+ordinary+controls+lossless
+    main_cells={d+"/"+m:cell(d,m,"prompt1" if d=="image-to-text" else "row1","sequence" if d=="image-to-text" else None)
+                for d in ("image-to-text","text-to-image") for m in ("fixed","gated","arithmetic")}
+    main={f:20*sum(c["mean"][f] for c in main_cells.values()) for f in fields}
+    main_controls=20*sum(trace_cell("control",m,ctx)["seconds"] for m,ctx in (("text","prompt1"),("image","row1")))
+    subtotal=v0+used+remaining+main["charged_pair_seconds"]+main_controls
+    limit=phase_limit("v1")
+    return dict(v0_seconds=v0,v1_seconds=used,v1_limit_seconds=limit,v1_balance_seconds=limit-used,
+        checkpoint_seconds=used-freeze["initial_v1_seconds"],observations=observations,trace_observations=trace_observations,
+        remaining_stego=len(pending),remaining_ordinary=sum(t["purpose"]=="ordinary" for t in trace_details),
+        remaining_controls=sum(t["purpose"]=="control" for t in trace_details),remaining_lossless=len(lossless_details),
+        remaining_stego_seconds=stego,remaining_ordinary_seconds=ordinary,remaining_controls_seconds=controls,
+        remaining_lossless_seconds=lossless,remaining_qualification_seconds=remaining,by_cell=by_cell,
+        pending_trace_estimates=trace_details,pending_lossless_estimates=lossless_details,
+        phase_planning_headroom_seconds=.25*remaining,fits_phase_with_reserve=1.25*remaining<=limit-used,
+        main_stego_units=120,main_shared_controls=40,main_method_context_cells=main_cells,
+        main_generation_seconds=main["encode_seconds"],main_receiver_seconds=main["decode_seconds"],
+        main_cold_load_seconds=main["cold_load_seconds"],main_other_occupied_seconds=main["other_process_seconds"],
+        main_stego_inclusive_seconds=main["charged_pair_seconds"],main_controls_seconds=main_controls,
+        extra_main_lossless_jobs=0,additional_neural_scoring_seconds=0,
+        whole_project_subtotal_seconds=subtotal,whole_project_reserve_once_seconds=.25*subtotal,
+        whole_project_reserved_hours=1.25*subtotal/3600,fits_whole_project=1.25*subtotal<=144000,
+        assumptions=[
+          "Every charged attempt including diagnosed arithmetic failures, loading, imports, occupied CPU processing, serialization and teardown remains in spent history.",
+          "Completed work is removed from remaining cost once. Diagnostic replays have no scientific work credits.",
+          "Twenty fixed-PNG lossless checks are qualification receiver jobs; no duplicate 20-job main-study term.",
+          "One 25% reserve applies to whole-project subtotal including history. Phase headroom is a feasibility check on the same reserve, not an added cost.",
+          "The 43,200-second authorization amendment is permission, not a forecast expense.",
+          "Main study stays 20 held-out payloads per direction, one existing context, all three methods; no held-out jobs launched.",
+          "Controls are independent per allocated trace, with matched prefixes shared across methods, not replicated control observations.",
+          "Threshold-audit traces do not recalibrate frozen thresholds. Inline scoring needs no added model pass.",
+          "Only available method/context observations inform costs; small cells and unmeasured context proxies remain uncertain."])
 
 if __name__=="__main__": raise SystemExit(main())

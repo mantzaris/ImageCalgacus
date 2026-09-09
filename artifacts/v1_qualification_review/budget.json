@@ -1,0 +1,11 @@
+{
+  "v0_seconds": 3163.653124010041,
+  "v1_seconds": 39995.5091691459,
+  "checkpoint_seconds": 33770.18250102493,
+  "v0_limit_seconds": 7200,
+  "v1_limit_seconds": 50400,
+  "v1_remaining_seconds": 10404.490830854098,
+  "cumulative_seconds": 43159.16229315594,
+  "whole_project_limit_seconds": 144000,
+  "authorization_is_not_a_cost": true
+}

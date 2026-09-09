@@ -1,0 +1,3508 @@
+{
+  "selection": [
+    {
+      "id": "lossless-T1-fixed",
+      "parent_work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "a809097f0569f14859ed5fa3061a4f0698e3e7237d9a981900e4deb66487812c"
+    },
+    {
+      "id": "lossless-T1-row2-fixed",
+      "parent_work_id": "b0db06f0dc8189ce619f8d630172e81b285eb0b78f66349e2cae719133146ca0",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "5d10d7086a63f6c7b23eb76a9cb5923adcc6264185c6385a9d041ac4f7d4465b"
+    },
+    {
+      "id": "lossless-T2-row1-fixed",
+      "parent_work_id": "8317585530c5be7adda329089cbdef3588f0dd19c0ca1f9acae666487e3094ad",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "06e7e75dca505d13124460bb0188e6df50c7a8d14b2e92327b038d5bd5c40432"
+    },
+    {
+      "id": "lossless-T2-row2-fixed",
+      "parent_work_id": "98067b307b1ad49b9e0bdecfc48fc18630f70324829d06ebad7892679c5092b3",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "3b17cd1e39d23bb10a8bd39b6c04eed3d4865e67b1bc563ed8e7f61b81362832"
+    },
+    {
+      "id": "lossless-T3-fixed",
+      "parent_work_id": "ca3c61b1bbf5dd17d3002a92379082c699385ee130e5e0413f9ee5a78d28e1cb",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "3c625039dd47d37a2451ff0d965e55c5540ae3663beec7ea6d77f7af79cbc2e0"
+    },
+    {
+      "id": "lossless-T3-row2-fixed",
+      "parent_work_id": "b43d2a52b9618953afbab27b279631e8f899eab9bf15d7c53fa683d1cf4ec4e1",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "bedd71206b5520a57b1f9d3059edea2d2ffdf2d5c141c0b1f281cb3b8f3b22cc"
+    },
+    {
+      "id": "lossless-T4-row1-fixed",
+      "parent_work_id": "a410ffa8be6cb25294c567ad7fa562af7ad3141d0aa02eee052c2ffef4dc40af",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "f6646b6e28cbf3caf0e87399e41df42bf3d011829282ca6514f2778e011e1fec"
+    },
+    {
+      "id": "lossless-T4-row2-fixed",
+      "parent_work_id": "d25fd7903a17524f6b7e792c01ecc893752c72a81b5cef2ecec09413cc2b5671",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "b4fca0b5cac971961268fdd45d28370fe10f86bb07030ce24dfbfdb6d609390d"
+    },
+    {
+      "id": "lossless-T5-row1-fixed",
+      "parent_work_id": "8db8c64c6b000f0cf115cbf17e0fcf7aad2fa393081da93a782c7247a1162e2d",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "b70c75500e8707f65b50fac55430a55dd11b641eb955db2ea9fb907fb3bc8b1a"
+    },
+    {
+      "id": "lossless-T5-row2-fixed",
+      "parent_work_id": "8cd4759b6cf54000d6687cfc9a353689bfef56efe84789e17cc37e97c5ffbf6d",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "f505c144742a9520c1cb82b6a8d8de3c03895ea53b2baf0eed0c4511a22905c3"
+    },
+    {
+      "id": "lossless-T6-row1-fixed",
+      "parent_work_id": "731dc83388a8a3fa91dca62307bc028ba3368e4f6fd80633e1b711c28b224b73",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "99bba364af26ce72c142e4323e35fce5dd80e8eb56daeaeeb2d47b3e18c1d8f0"
+    },
+    {
+      "id": "lossless-T6-row2-fixed",
+      "parent_work_id": "398a923535ccbd0da6f4a587a303b4bf326e9b82199ae0fb47a702268e499435",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "ffb82e2c5e6b8d388d90fae7d117ec4c71dc1391f1d92500ad1019106a8594ef"
+    },
+    {
+      "id": "lossless-T7-row1-fixed",
+      "parent_work_id": "059ab004682865cc3203310551dd27e549d790bbdc8d7ba1a9489bb06961b88b",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "8df0861ab3cd7c720449752745f9fa691666ba7669967acfd64c998b38495a14"
+    },
+    {
+      "id": "lossless-T7-row2-fixed",
+      "parent_work_id": "bc372fe83bb4dc5e5953ebf3553277477884c22436a09aa52f631f381b26719e",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "1fc683ef167e9f94cf9749eefdae4568f9314befba3167d2a1380156aef4f474"
+    },
+    {
+      "id": "lossless-T8-row1-fixed",
+      "parent_work_id": "21205fbe61b4cabad68f7ea6f61af7d6b451a062f02a998e30a4927f69caf56a",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "0f28ddc63d3aac711f50501d665449401f9b0ffe81de8abd8c986b15dd270e48"
+    },
+    {
+      "id": "lossless-T8-row2-fixed",
+      "parent_work_id": "9f4981e4b07e4870227cc30e42fd82150155be39bf5d1ce835f6f36b4edf9f42",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "64b51cce99d12cf876111e94501bce588dd38f379b44cc98862d5c0c81fd9404"
+    },
+    {
+      "id": "lossless-T9-row1-fixed",
+      "parent_work_id": "43065405c52850ccc95a69ff16df78d51b9f0d67489c021b658a24ec395dc1b8",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "c0dbf0e8ec57d88ace8af3e16d6eb89508b2ba495f8374f65bacc12dbb6365ab"
+    },
+    {
+      "id": "lossless-T9-row2-fixed",
+      "parent_work_id": "409aaa923b9809afd2712ec0e5cedb086a3033c0ada2f0138d38dc4731f76480",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "b3dee91b026db1d2087650ae3735e2b5d22b09f106924b2aa8b8b3b34bb753cd"
+    },
+    {
+      "id": "lossless-T10-row1-fixed",
+      "parent_work_id": "7fe4c1cf9ddb47d5f3a31f7914a730702eeb993537f05e8a343bb0413ebb5eff",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "9ea679fcf1254797b883986c5dfb4fcd607c16ae1688b4855796ba2e60a8e84a"
+    },
+    {
+      "id": "lossless-T10-row2-fixed",
+      "parent_work_id": "a7fe0354ad0412ba8e5c0aeb46a3f2a9ba4a7630aa8ca34b2179f6cf480f9c70",
+      "kind": "lossless",
+      "compression_level": 9,
+      "remove_ancillary": true,
+      "work_id": "3a00f8736731cfbf144bb00da2ee96b8cace5dbe6bd531b9952381dc5cfc0841"
+    }
+  ],
+  "results": [
+    {
+      "kind": "lossless",
+      "work_id": "a809097f0569f14859ed5fa3061a4f0698e3e7237d9a981900e4deb66487812c",
+      "id": "lossless-T1-fixed",
+      "parent_work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a",
+      "original": "artifacts/v1_review/cases/T1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T1.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T1-fixed/receiver.json",
+      "original_file_sha256": "1aadb8e82582ec2040eaceb77979e5e308e3b6fe525c20ddf647b664bec6b774",
+      "rewritten_file_sha256": "011ce5919bd7546cdd1a579873d20a4c30c77e3ce377a6c3c1536412a3650341",
+      "pixel_sha256": "c5eda07e1a87f0da300e40659c63b6a89959e653d77d55a5be6a3b5822352474",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "c5eda07e1a87f0da300e40659c63b6a89959e653d77d55a5be6a3b5822352474",
+        "cold_load_seconds": 0.9563027689873707,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 32,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+        "decode_seconds": 85.09265453999978,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.07318914450902,
+            "rank_mean": 7.690188172043011,
+            "log_rank_mean": 2.3459030425171647,
+            "entropy_bits_mean": 4.071442356837397
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.577616168756234,
+            "rank_mean": 8.460616438356164,
+            "log_rank_mean": 2.7387320711634784,
+            "entropy_bits_mean": 4.51344022451553
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.577616168756234,
+            "rank_mean": 8.460616438356164,
+            "log_rank_mean": 2.7387320711634784,
+            "entropy_bits_mean": 4.51344022451553
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 3.950034720528928,
+            "rank_mean": 7.502090301003345,
+            "log_rank_mean": 2.249994951911199,
+            "entropy_bits_mean": 3.963529833959467
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.8567195965775388
+        },
+        "peak_rss_kib": 1267724,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3419999
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3419999, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82910.00218963623
+        },
+        "total_seconds": 88.14668273099232
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "5d10d7086a63f6c7b23eb76a9cb5923adcc6264185c6385a9d041ac4f7d4465b",
+      "id": "lossless-T1-row2-fixed",
+      "parent_work_id": "b0db06f0dc8189ce619f8d630172e81b285eb0b78f66349e2cae719133146ca0",
+      "original": "artifacts/v1_qualification_review/cases/T1-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T1-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T1-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T1.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T1-row2-fixed/receiver.json",
+      "original_file_sha256": "fd2909dbf92a4542b7c3691b0f8b798da7082d1834278425893ea40205a8933f",
+      "rewritten_file_sha256": "90c4b58aad73ace2f7e077c665fec53772ebdc769cd6e8e27a2a85465673eeee",
+      "pixel_sha256": "ee4e7c2b6a4db67bec9790668985c547092e76009eda476ee3cdc8ca768f3d6a",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T1-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T1-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "ee4e7c2b6a4db67bec9790668985c547092e76009eda476ee3cdc8ca768f3d6a",
+        "cold_load_seconds": 0.952441039000405,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 32,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+        "decode_seconds": 85.81602855899837,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 5.067821600987571,
+            "rank_mean": 14.805779569892474,
+            "log_rank_mean": 3.146584311428481,
+            "entropy_bits_mean": 5.1664304456199535
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.945942295112826,
+            "rank_mean": 8.825342465753424,
+            "log_rank_mean": 2.821691497371506,
+            "entropy_bits_mean": 5.419287208294131
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.945942295112826,
+            "rank_mean": 8.825342465753424,
+            "log_rank_mean": 2.821691497371506,
+            "entropy_bits_mean": 5.419287208294131
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 5.097578087037245,
+            "rank_mean": 16.265886287625417,
+            "log_rank_mean": 3.2259059683721576,
+            "entropy_bits_mean": 5.104696185836628
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.8384985058071729
+        },
+        "peak_rss_kib": 1267936,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3424150
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3424150, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 83564.96556854248
+        },
+        "total_seconds": 88.81330820400035
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "06e7e75dca505d13124460bb0188e6df50c7a8d14b2e92327b038d5bd5c40432",
+      "id": "lossless-T2-row1-fixed",
+      "parent_work_id": "8317585530c5be7adda329089cbdef3588f0dd19c0ca1f9acae666487e3094ad",
+      "original": "artifacts/v1_qualification_review/cases/T2-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T2-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T2-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T2.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T2-row1-fixed/receiver.json",
+      "original_file_sha256": "9a9fe328bd3ee931eb54bd1da9a3fe842b6c579f699f78a9d8c828f6c908aa6d",
+      "rewritten_file_sha256": "d2ce7b480ca3c418ef4c50de35a25040a42254a999b078b3e1252342a3c09eca",
+      "pixel_sha256": "b49c7598da3e0c6a09821752c3478e6dedd6364bca9983056c3410c0735dc756",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T2-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T2-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "b49c7598da3e0c6a09821752c3478e6dedd6364bca9983056c3410c0735dc756",
+        "cold_load_seconds": 0.9503821109974524,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 48,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458",
+        "decode_seconds": 84.125681481004,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.023514444820892,
+            "rank_mean": 7.70866935483871,
+            "log_rank_mean": 2.3146385508525786,
+            "entropy_bits_mean": 4.035018767036386
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.578016525253646,
+            "rank_mean": 8.719178082191782,
+            "log_rank_mean": 2.7899415761497517,
+            "entropy_bits_mean": 4.573990714577857
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.578016525253646,
+            "rank_mean": 8.719178082191782,
+            "log_rank_mean": 2.7899415761497517,
+            "entropy_bits_mean": 4.573990714577857
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 3.888134338226939,
+            "rank_mean": 7.461956521739131,
+            "log_rank_mean": 2.1985946684221624,
+            "entropy_bits_mean": 3.9034302982386295
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.066927910948348
+        },
+        "peak_rss_kib": 1276216,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3428210
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3428210, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 81959.98561096191
+        },
+        "total_seconds": 87.10555577800551
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "3b17cd1e39d23bb10a8bd39b6c04eed3d4865e67b1bc563ed8e7f61b81362832",
+      "id": "lossless-T2-row2-fixed",
+      "parent_work_id": "98067b307b1ad49b9e0bdecfc48fc18630f70324829d06ebad7892679c5092b3",
+      "original": "artifacts/v1_qualification_review/cases/T2-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T2-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T2-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T2.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T2-row2-fixed/receiver.json",
+      "original_file_sha256": "01da5f51349f5d43370ebed6ca9ae7fdd2088a309e24a26c03ec635dc84450b4",
+      "rewritten_file_sha256": "3d9be0771087eb8ff69e326a7d29c793af1203c16a78c95938a966c87c4e91ae",
+      "pixel_sha256": "fa025774e0214f3399adf381891009117d036427c429807051ac62b5b4f6e1db",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T2-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T2-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "fa025774e0214f3399adf381891009117d036427c429807051ac62b5b4f6e1db",
+        "cold_load_seconds": 0.9569562240067171,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 48,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458",
+        "decode_seconds": 82.95567622900126,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.572908400174053,
+            "rank_mean": 11.037298387096774,
+            "log_rank_mean": 2.7246088604652354,
+            "entropy_bits_mean": 4.667847192237603
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.926133497030898,
+            "rank_mean": 8.501712328767123,
+            "log_rank_mean": 2.7899558948914907,
+            "entropy_bits_mean": 5.357587755874145
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.926133497030898,
+            "rank_mean": 8.501712328767123,
+            "log_rank_mean": 2.7899558948914907,
+            "entropy_bits_mean": 5.357587755874145
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.486669496928069,
+            "rank_mean": 11.656354515050166,
+            "log_rank_mean": 2.7086545677792158,
+            "entropy_bits_mean": 4.499448994426686
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.9816371041641093
+        },
+        "peak_rss_kib": 1267840,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3432203
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3432203, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 80776.68579101562
+        },
+        "total_seconds": 86.04623871900549
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "3c625039dd47d37a2451ff0d965e55c5540ae3663beec7ea6d77f7af79cbc2e0",
+      "id": "lossless-T3-fixed",
+      "parent_work_id": "ca3c61b1bbf5dd17d3002a92379082c699385ee130e5e0413f9ee5a78d28e1cb",
+      "original": "artifacts/v1_review/cases/T3-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T3-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T3-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T3.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T3-fixed/receiver.json",
+      "original_file_sha256": "75a2caaac54c53ac6d36b1fae9bb8c14ce5531c1cc3e28084617b1309532ef24",
+      "rewritten_file_sha256": "8551b23a20f4eda867a18461d42a0d371f0a1fb454ee07303e004a3a60669d29",
+      "pixel_sha256": "6fa695ddd0226d8d33eb0f0e4f6849f012591b496f79109dcc5fedad32b30fe7",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T3-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T3-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "6fa695ddd0226d8d33eb0f0e4f6849f012591b496f79109dcc5fedad32b30fe7",
+        "cold_load_seconds": 0.9495418909937143,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 64,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+        "decode_seconds": 84.6197102820006,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.3536061270716155,
+            "rank_mean": 8.792674731182796,
+            "log_rank_mean": 2.575070468308722,
+            "entropy_bits_mean": 4.3528247187241496
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.617045822816639,
+            "rank_mean": 8.669520547945206,
+            "log_rank_mean": 2.80027234500294,
+            "entropy_bits_mean": 4.564356974096002
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.617045822816639,
+            "rank_mean": 8.669520547945206,
+            "log_rank_mean": 2.80027234500294,
+            "entropy_bits_mean": 4.564356974096002
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.2892880742643005,
+            "rank_mean": 8.822742474916389,
+            "log_rank_mean": 2.520088070319824,
+            "entropy_bits_mean": 4.301179719920999
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.5941388094052971
+        },
+        "peak_rss_kib": 1276240,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3436100
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3436100, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82419.04837799072
+        },
+        "total_seconds": 87.67765230700024
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "bedd71206b5520a57b1f9d3059edea2d2ffdf2d5c141c0b1f281cb3b8f3b22cc",
+      "id": "lossless-T3-row2-fixed",
+      "parent_work_id": "b43d2a52b9618953afbab27b279631e8f899eab9bf15d7c53fa683d1cf4ec4e1",
+      "original": "artifacts/v1_qualification_review/cases/T3-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T3-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T3-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T3.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T3-row2-fixed/receiver.json",
+      "original_file_sha256": "51c0d97b8aceb8b9df64ba44949241d0ecd729db68ab0b3edeca7168154df461",
+      "rewritten_file_sha256": "80a80c7b5712f0e07ee0640f11ec006059dcbb328929deef325df5df636d12cb",
+      "pixel_sha256": "97f4fba89dd0c64bbd622ac2df66b8d637ca53850eb37d0c8b04bf28603ffc16",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T3-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T3-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "97f4fba89dd0c64bbd622ac2df66b8d637ca53850eb37d0c8b04bf28603ffc16",
+        "cold_load_seconds": 0.9625495430082083,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 64,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+        "decode_seconds": 84.24813172899303,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.93253149273956,
+            "rank_mean": 12.894489247311828,
+            "log_rank_mean": 3.0026554496559417,
+            "entropy_bits_mean": 5.021031161002026
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.0587849142619286,
+            "rank_mean": 8.419520547945206,
+            "log_rank_mean": 2.745029128528741,
+            "entropy_bits_mean": 5.482823751063926
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.0587849142619286,
+            "rank_mean": 8.419520547945206,
+            "log_rank_mean": 2.745029128528741,
+            "entropy_bits_mean": 5.482823751063926
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.901707078789271,
+            "rank_mean": 13.987040133779264,
+            "log_rank_mean": 3.065554183576631,
+            "entropy_bits_mean": 4.908285812926727
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.7687647215326368
+        },
+        "peak_rss_kib": 1267852,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3440169
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3440169, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82013.57071685791
+        },
+        "total_seconds": 87.24471085199912
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "f6646b6e28cbf3caf0e87399e41df42bf3d011829282ca6514f2778e011e1fec",
+      "id": "lossless-T4-row1-fixed",
+      "parent_work_id": "a410ffa8be6cb25294c567ad7fa562af7ad3141d0aa02eee052c2ffef4dc40af",
+      "original": "artifacts/v1_qualification_review/cases/T4-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T4-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T4-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T4.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T4-row1-fixed/receiver.json",
+      "original_file_sha256": "43aa19cc04d8989110210e039791edeee1a1d9257025978b0f10447498afbe63",
+      "rewritten_file_sha256": "ebd25fd7e61bb01877fa97a386642fa5d8e1dfa19d4f39682d34cab7192acc1c",
+      "pixel_sha256": "25c50bdf4b57ae6eb0083f32b5e7a8bf5f4f3df3af61cd3554bf7a935d066865",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T4-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T4-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "25c50bdf4b57ae6eb0083f32b5e7a8bf5f4f3df3af61cd3554bf7a935d066865",
+        "cold_load_seconds": 0.9987567880016286,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 96,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834",
+        "decode_seconds": 85.39486469500116,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 3.984556678527297,
+            "rank_mean": 7.405913978494624,
+            "log_rank_mean": 2.273634270569576,
+            "entropy_bits_mean": 3.957902201920337
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.602847210622567,
+            "rank_mean": 8.407534246575343,
+            "log_rank_mean": 2.746918645359489,
+            "entropy_bits_mean": 4.423665284862052
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.602847210622567,
+            "rank_mean": 8.407534246575343,
+            "log_rank_mean": 2.746918645359489,
+            "entropy_bits_mean": 4.423665284862052
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 3.83360280279834,
+            "rank_mean": 7.161371237458194,
+            "log_rank_mean": 2.158083235921858,
+            "entropy_bits_mean": 3.844187469295784
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.1156925479370172
+        },
+        "peak_rss_kib": 1267404,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3444169
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3444169, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 83205.76399230957
+        },
+        "total_seconds": 88.47724949200347
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "b4fca0b5cac971961268fdd45d28370fe10f86bb07030ce24dfbfdb6d609390d",
+      "id": "lossless-T4-row2-fixed",
+      "parent_work_id": "d25fd7903a17524f6b7e792c01ecc893752c72a81b5cef2ecec09413cc2b5671",
+      "original": "artifacts/v1_qualification_review/cases/T4-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T4-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T4-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T4.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T4-row2-fixed/receiver.json",
+      "original_file_sha256": "47205a28894e018e47dfd049b77aa9ac6e354bb90d95c455d0f92e35ea7c948f",
+      "rewritten_file_sha256": "0fc3985c7fc98e56052627b967cca358db3d8cd88ece6b0ade5aadf24964e2a2",
+      "pixel_sha256": "2fa9f4151d753a4b084d0d7501d68f8839f7ac32433d0282300107d32882d610",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T4-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T4-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "2fa9f4151d753a4b084d0d7501d68f8839f7ac32433d0282300107d32882d610",
+        "cold_load_seconds": 0.9888305770000443,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 96,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834",
+        "decode_seconds": 84.59451886400348,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.646383116882174,
+            "rank_mean": 11.584677419354838,
+            "log_rank_mean": 2.7715384771716085,
+            "entropy_bits_mean": 4.711567712923946
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.060418113617866,
+            "rank_mean": 8.674657534246576,
+            "log_rank_mean": 2.819141763498036,
+            "entropy_bits_mean": 5.38611303382377
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.060418113617866,
+            "rank_mean": 8.674657534246576,
+            "log_rank_mean": 2.819141763498036,
+            "entropy_bits_mean": 5.38611303382377
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.545297649451722,
+            "rank_mean": 12.295150501672241,
+            "log_rank_mean": 2.759916270142075,
+            "entropy_bits_mean": 4.546879390430014
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.00041005840402
+        },
+        "peak_rss_kib": 1267608,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3448254
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3448254, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82368.09106445312
+        },
+        "total_seconds": 87.68751131700992
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "b70c75500e8707f65b50fac55430a55dd11b641eb955db2ea9fb907fb3bc8b1a",
+      "id": "lossless-T5-row1-fixed",
+      "parent_work_id": "8db8c64c6b000f0cf115cbf17e0fcf7aad2fa393081da93a782c7247a1162e2d",
+      "original": "artifacts/v1_qualification_review/cases/T5-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T5-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T5-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T5.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T5-row1-fixed/receiver.json",
+      "original_file_sha256": "7774256b8b682d99da13daa745c4ebec5797d2660ff227573ad8c6a55a773688",
+      "rewritten_file_sha256": "967a0a861729d7cbde2a308932ce8a90e39e3e47b6d90c444df351c37320153e",
+      "pixel_sha256": "f964eab9e25d64480083fc77971904191d34d167b7ebf556c1179d186005bb2b",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T5-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T5-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "f964eab9e25d64480083fc77971904191d34d167b7ebf556c1179d186005bb2b",
+        "cold_load_seconds": 0.984338120004395,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 128,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8",
+        "decode_seconds": 84.51875719199597,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.153047056908628,
+            "rank_mean": 8.35853494623656,
+            "log_rank_mean": 2.4183829516048907,
+            "entropy_bits_mean": 4.140730617298016
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.572294974185062,
+            "rank_mean": 8.133561643835616,
+            "log_rank_mean": 2.690805236527548,
+            "entropy_bits_mean": 4.440356281481068
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.572294974185062,
+            "rank_mean": 8.133561643835616,
+            "log_rank_mean": 2.690805236527548,
+            "entropy_bits_mean": 4.440356281481068
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.0506888697474865,
+            "rank_mean": 8.413461538461538,
+            "log_rank_mean": 2.3518718251856305,
+            "entropy_bits_mean": 4.067577863166367
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.153600613442635
+        },
+        "peak_rss_kib": 1276560,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3452197
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3452197, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82326.72772216797
+        },
+        "total_seconds": 87.60897026999737
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "f505c144742a9520c1cb82b6a8d8de3c03895ea53b2baf0eed0c4511a22905c3",
+      "id": "lossless-T5-row2-fixed",
+      "parent_work_id": "8cd4759b6cf54000d6687cfc9a353689bfef56efe84789e17cc37e97c5ffbf6d",
+      "original": "artifacts/v1_qualification_review/cases/T5-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T5-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T5-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T5.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T5-row2-fixed/receiver.json",
+      "original_file_sha256": "5090db76bd9f2751a2f6ecafeeba4970bd23dc232cd8ee1e18c256562dd368a3",
+      "rewritten_file_sha256": "d1eb659edd97192775de2e586dc04445101160452cab6a839f0ace9ae461576f",
+      "pixel_sha256": "6f880d6a7b46f6e7aad5e0766f8246699433fa0b75236229dcfd06658a3e94a6",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T5-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T5-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "6f880d6a7b46f6e7aad5e0766f8246699433fa0b75236229dcfd06658a3e94a6",
+        "cold_load_seconds": 0.9548112589982338,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 128,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8",
+        "decode_seconds": 85.04994149699633,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.632265825084404,
+            "rank_mean": 11.587701612903226,
+            "log_rank_mean": 2.7507507610609734,
+            "entropy_bits_mean": 4.723622430144353
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.003126724187846,
+            "rank_mean": 8.571917808219178,
+            "log_rank_mean": 2.769180250918514,
+            "entropy_bits_mean": 5.441361842319849
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.003126724187846,
+            "rank_mean": 8.571917808219178,
+            "log_rank_mean": 2.769180250918514,
+            "entropy_bits_mean": 5.441361842319849
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.541721190855126,
+            "rank_mean": 12.323996655518394,
+            "log_rank_mean": 2.7462512535037713,
+            "entropy_bits_mean": 4.548388393058038
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.0148480388823484
+        },
+        "peak_rss_kib": 1267660,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3456247
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3456247, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82816.47705841064
+        },
+        "total_seconds": 88.03567795200797
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "99bba364af26ce72c142e4323e35fce5dd80e8eb56daeaeeb2d47b3e18c1d8f0",
+      "id": "lossless-T6-row1-fixed",
+      "parent_work_id": "731dc83388a8a3fa91dca62307bc028ba3368e4f6fd80633e1b711c28b224b73",
+      "original": "artifacts/v1_2_review/cases/T6-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T6-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T6-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T6.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T6-row1-fixed/receiver.json",
+      "original_file_sha256": "ee590ad331531475731ab40ab34de1cd94f7545dfff3d3c8227cd2da4d5ca601",
+      "rewritten_file_sha256": "9c899ceab862f7eba3480984bbc12fc05edc69554367155d5f1fc0d040f4cbdf",
+      "pixel_sha256": "b4dc81162a33c1c431066fcbb108b23f7b8cbcd13eed156f7b417b7c1f8036d4",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T6-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T6-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "b4dc81162a33c1c431066fcbb108b23f7b8cbcd13eed156f7b417b7c1f8036d4",
+        "cold_load_seconds": 0.9755787890026113,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 62,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "c448ebd6168fe1e0ea249d1152f74c2988afd24ded5e66f217d05670d6538fc8",
+        "decode_seconds": 83.5386198169872,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 3.747574405943192,
+            "rank_mean": 6.35383064516129,
+            "log_rank_mean": 2.089025365346582,
+            "entropy_bits_mean": 3.759694283034097
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.566963030932768,
+            "rank_mean": 8.45890410958904,
+            "log_rank_mean": 2.730823100830492,
+            "entropy_bits_mean": 4.538277288979817
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.566963030932768,
+            "rank_mean": 8.45890410958904,
+            "log_rank_mean": 2.730823100830492,
+            "entropy_bits_mean": 4.538277288979817
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 3.5475230025176536,
+            "rank_mean": 5.839882943143813,
+            "log_rank_mean": 1.9323322727367935,
+            "entropy_bits_mean": 3.569605455495515
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.3163595836486286
+        },
+        "peak_rss_kib": 1259120,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3460274
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3460274, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 81380.53954315186
+        },
+        "total_seconds": 86.49977732899424
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "ffb82e2c5e6b8d388d90fae7d117ec4c71dc1391f1d92500ad1019106a8594ef",
+      "id": "lossless-T6-row2-fixed",
+      "parent_work_id": "398a923535ccbd0da6f4a587a303b4bf326e9b82199ae0fb47a702268e499435",
+      "original": "artifacts/v1_2_review/cases/T6-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T6-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T6-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T6.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T6-row2-fixed/receiver.json",
+      "original_file_sha256": "51d707989f82a009d51892e1fa56d7dccd940a9516f9f5eca161715aeac89016",
+      "rewritten_file_sha256": "94a0d20db19533adb4658aedf745e15f46942425448210aa7549c10ebdca0ff7",
+      "pixel_sha256": "eef06f22b5a2483a315a1cf62931254fc54e56fef07a4bcbb2c128a008d1d095",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T6-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T6-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "eef06f22b5a2483a315a1cf62931254fc54e56fef07a4bcbb2c128a008d1d095",
+        "cold_load_seconds": 0.9574346800072817,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 62,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "c448ebd6168fe1e0ea249d1152f74c2988afd24ded5e66f217d05670d6538fc8",
+        "decode_seconds": 85.62371944400365,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.546438097268316,
+            "rank_mean": 11.29233870967742,
+            "log_rank_mean": 2.704779723879818,
+            "entropy_bits_mean": 4.635478296213921
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.959479385938411,
+            "rank_mean": 8.784246575342467,
+            "log_rank_mean": 2.8124270898142036,
+            "entropy_bits_mean": 5.3429225330588475
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.959479385938411,
+            "rank_mean": 8.784246575342467,
+            "log_rank_mean": 2.8124270898142036,
+            "entropy_bits_mean": 5.3429225330588475
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.445595240837144,
+            "rank_mean": 11.904682274247492,
+            "log_rank_mean": 2.678497925507868,
+            "entropy_bits_mean": 4.462757796917338
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.0916105352894159
+        },
+        "peak_rss_kib": 1259248,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3464265
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3464265, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 83381.54965209961
+        },
+        "total_seconds": 88.70666247999179
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "8df0861ab3cd7c720449752745f9fa691666ba7669967acfd64c998b38495a14",
+      "id": "lossless-T7-row1-fixed",
+      "parent_work_id": "059ab004682865cc3203310551dd27e549d790bbdc8d7ba1a9489bb06961b88b",
+      "original": "artifacts/v1_qualification_review/cases/T7-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T7-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T7-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T7.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T7-row1-fixed/receiver.json",
+      "original_file_sha256": "36e388fd042eb0c3b54e26de8c9793587f8a70cbb0e31008f703f507be674678",
+      "rewritten_file_sha256": "313b34de3b7f323a49c4fb9fb5cd866e2fd42461c61b8fb53693fc717cd026dc",
+      "pixel_sha256": "5fdf31705568e46efea00786266444103cdd1cb7f3ce20a2d5eb15c738cc8361",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T7-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T7-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "5fdf31705568e46efea00786266444103cdd1cb7f3ce20a2d5eb15c738cc8361",
+        "cold_load_seconds": 0.9378150879929308,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 62,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "d69c3ba51ad699cbd36600d1c153d46461ecb1b8b8520a65cd671169c4d6200f",
+        "decode_seconds": 85.18186445199535,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.140586030991773,
+            "rank_mean": 8.24260752688172,
+            "log_rank_mean": 2.4196036752280685,
+            "entropy_bits_mean": 4.140439578027434
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.59154332464034,
+            "rank_mean": 8.565068493150685,
+            "log_rank_mean": 2.765686410491161,
+            "entropy_bits_mean": 4.528770295279025
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.59154332464034,
+            "rank_mean": 8.565068493150685,
+            "log_rank_mean": 2.765686410491161,
+            "entropy_bits_mean": 4.528770295279025
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.030486089733104,
+            "rank_mean": 8.163879598662207,
+            "log_rank_mean": 2.33510855926082,
+            "entropy_bits_mean": 4.045629737360656
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.0839523978216195
+        },
+        "peak_rss_kib": 1259080,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3468353
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3468353, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82986.58324432373
+        },
+        "total_seconds": 88.19381592501304
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "1fc683ef167e9f94cf9749eefdae4568f9314befba3167d2a1380156aef4f474",
+      "id": "lossless-T7-row2-fixed",
+      "parent_work_id": "bc372fe83bb4dc5e5953ebf3553277477884c22436a09aa52f631f381b26719e",
+      "original": "artifacts/v1_qualification_review/cases/T7-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T7-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T7-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T7.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T7-row2-fixed/receiver.json",
+      "original_file_sha256": "d9e5e5045acc716d793844506f4d6288ee9df1024bad5d97ab70ff31ed84fe37",
+      "rewritten_file_sha256": "9c113adacc663c2cd0364e9efbf07b99b1c22f24566b5c682f7ebed9f7c22629",
+      "pixel_sha256": "2147b08ae863cf22f7709e8e333420b38d2ffea8b32171f72bf426b65eff30cf",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T7-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T7-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "2147b08ae863cf22f7709e8e333420b38d2ffea8b32171f72bf426b65eff30cf",
+        "cold_load_seconds": 0.9563395720033441,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 62,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "d69c3ba51ad699cbd36600d1c153d46461ecb1b8b8520a65cd671169c4d6200f",
+        "decode_seconds": 84.63285448899842,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.502114827190572,
+            "rank_mean": 11.097110215053764,
+            "log_rank_mean": 2.678397782488777,
+            "entropy_bits_mean": 4.589676434397132
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.958577047318427,
+            "rank_mean": 8.892123287671232,
+            "log_rank_mean": 2.8572652969302608,
+            "entropy_bits_mean": 5.361440972171842
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.958577047318427,
+            "rank_mean": 8.892123287671232,
+            "log_rank_mean": 2.8572652969302608,
+            "entropy_bits_mean": 5.361440972171842
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.390670873781425,
+            "rank_mean": 11.635451505016722,
+            "log_rank_mean": 2.6347277873241293,
+            "entropy_bits_mean": 4.401252316478896
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.0383081284188256
+        },
+        "peak_rss_kib": 1268828,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3472441
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3472441, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82359.84080505371
+        },
+        "total_seconds": 87.66344285500236
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "0f28ddc63d3aac711f50501d665449401f9b0ffe81de8abd8c986b15dd270e48",
+      "id": "lossless-T8-row1-fixed",
+      "parent_work_id": "21205fbe61b4cabad68f7ea6f61af7d6b451a062f02a998e30a4927f69caf56a",
+      "original": "artifacts/v1_qualification_review/cases/T8-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T8-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T8-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T8.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T8-row1-fixed/receiver.json",
+      "original_file_sha256": "b38069ee4446b2f347cc946cf15664ff4aea3e134249fca68be2396904909084",
+      "rewritten_file_sha256": "c00a0812d47d7592b5c204204a84861a0f04d2741cb5f57532d17d1ab871eb19",
+      "pixel_sha256": "ea687649fa3e7c1f730e03c31c6c4260df42fdb99b28dc5b6545e4e8efe3611a",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T8-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T8-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "ea687649fa3e7c1f730e03c31c6c4260df42fdb99b28dc5b6545e4e8efe3611a",
+        "cold_load_seconds": 1.0083933240093756,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 61,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "17b6ce76220d591e2ff301aa0ce865cf21e3dd38ea874aa759a168579298c3b1",
+        "decode_seconds": 84.91894283199508,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.326604565137925,
+            "rank_mean": 8.50638440860215,
+            "log_rank_mean": 2.5674862933602722,
+            "entropy_bits_mean": 4.3281911584677975
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.564059267211194,
+            "rank_mean": 8.522260273972602,
+            "log_rank_mean": 2.7579226667645145,
+            "entropy_bits_mean": 4.51914596816427
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.564059267211194,
+            "rank_mean": 8.522260273972602,
+            "log_rank_mean": 2.7579226667645145,
+            "entropy_bits_mean": 4.51914596816427
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.268630674665197,
+            "rank_mean": 8.502508361204013,
+            "log_rank_mean": 2.5209917941679225,
+            "entropy_bits_mean": 4.281570084528537
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.5486794380647295
+        },
+        "peak_rss_kib": 1267728,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3476426
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3476426, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82709.32342529297
+        },
+        "total_seconds": 87.9646659209975
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "64b51cce99d12cf876111e94501bce588dd38f379b44cc98862d5c0c81fd9404",
+      "id": "lossless-T8-row2-fixed",
+      "parent_work_id": "9f4981e4b07e4870227cc30e42fd82150155be39bf5d1ce835f6f36b4edf9f42",
+      "original": "artifacts/v1_qualification_review/cases/T8-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T8-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T8-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T8.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T8-row2-fixed/receiver.json",
+      "original_file_sha256": "949b48bb986d9684d899e0020a93ade949174a2b1cf1b40e44b7bb940fcfc189",
+      "rewritten_file_sha256": "261b44c338a1eb25087f386e0f9994251301be729f24aedcb2248604cf559aa7",
+      "pixel_sha256": "8a9e76d721efacbecc70550be5aa256559432de7a88b9aafbe1b4a1da54d721e",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T8-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T8-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "8a9e76d721efacbecc70550be5aa256559432de7a88b9aafbe1b4a1da54d721e",
+        "cold_load_seconds": 0.977385507998406,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 61,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "17b6ce76220d591e2ff301aa0ce865cf21e3dd38ea874aa759a168579298c3b1",
+        "decode_seconds": 84.60108854599821,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.613127902997757,
+            "rank_mean": 11.18850806451613,
+            "log_rank_mean": 2.7380870991032173,
+            "entropy_bits_mean": 4.70626011478018
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.091349426122203,
+            "rank_mean": 8.89041095890411,
+            "log_rank_mean": 2.8654461644447764,
+            "entropy_bits_mean": 5.534041828163093
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.091349426122203,
+            "rank_mean": 8.89041095890411,
+            "log_rank_mean": 2.8654461644447764,
+            "entropy_bits_mean": 5.534041828163093
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.496371477619547,
+            "rank_mean": 11.74958193979933,
+            "log_rank_mean": 2.706992745357607,
+            "entropy_bits_mean": 4.5041595626833475
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.8994939489911583
+        },
+        "peak_rss_kib": 1268072,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3480451
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3480451, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82348.70680999756
+        },
+        "total_seconds": 87.69034120799915
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "c0dbf0e8ec57d88ace8af3e16d6eb89508b2ba495f8374f65bacc12dbb6365ab",
+      "id": "lossless-T9-row1-fixed",
+      "parent_work_id": "43065405c52850ccc95a69ff16df78d51b9f0d67489c021b658a24ec395dc1b8",
+      "original": "artifacts/v1_qualification_review/cases/T9-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T9-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T9-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T9.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T9-row1-fixed/receiver.json",
+      "original_file_sha256": "d3137d40dde017fccc38045aa9212b1f0e420f1ce99294042e762a8f88e5eb59",
+      "rewritten_file_sha256": "c55d795beb18fd9d60c9fc8a22bec9424281965e2aa100ef8b1ef0188260e396",
+      "pixel_sha256": "e47c9e01b5bd8bbd73b77a6407a9cfd555b11fff50de8ceca940be5af207646a",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T9-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T9-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "e47c9e01b5bd8bbd73b77a6407a9cfd555b11fff50de8ceca940be5af207646a",
+        "cold_load_seconds": 0.958824868008378,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 62,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "ba930ef58c850e33b73d8a611b4af1103ccedbaacbb00ac7e2237ff048eb037a",
+        "decode_seconds": 84.36885253799846,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.265725250361398,
+            "rank_mean": 9.229166666666666,
+            "log_rank_mean": 2.510485538739288,
+            "entropy_bits_mean": 4.256583025145775
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.7139359855582725,
+            "rank_mean": 8.804794520547945,
+            "log_rank_mean": 2.803919837202964,
+            "entropy_bits_mean": 4.600933167376261
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.7139359855582725,
+            "rank_mean": 8.804794520547945,
+            "log_rank_mean": 2.803919837202964,
+            "entropy_bits_mean": 4.600933167376261
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.156295873540765,
+            "rank_mean": 9.332775919732441,
+            "log_rank_mean": 2.438844388947147,
+            "entropy_bits_mean": 4.172510916842007
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.050681101189862
+        },
+        "peak_rss_kib": 1267992,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3484527
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3484527, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82146.32108306885
+        },
+        "total_seconds": 87.4436320370005
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "b3dee91b026db1d2087650ae3735e2b5d22b09f106924b2aa8b8b3b34bb753cd",
+      "id": "lossless-T9-row2-fixed",
+      "parent_work_id": "409aaa923b9809afd2712ec0e5cedb086a3033c0ada2f0138d38dc4731f76480",
+      "original": "artifacts/v1_qualification_review/cases/T9-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T9-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T9-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T9.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T9-row2-fixed/receiver.json",
+      "original_file_sha256": "3c4f73b42831dc6530d483ab887be2d8bf4bd27f15f1d45dfb0816935302e214",
+      "rewritten_file_sha256": "1927ee665fbffd707915d27ac00d952d1a839a7318a0bbacc8e9eddca6180aa3",
+      "pixel_sha256": "7224006b7d9a089eeae8277f8d480f00c093395d947df033f50934bd4b965bd8",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T9-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T9-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "7224006b7d9a089eeae8277f8d480f00c093395d947df033f50934bd4b965bd8",
+        "cold_load_seconds": 0.975667346996488,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 62,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "ba930ef58c850e33b73d8a611b4af1103ccedbaacbb00ac7e2237ff048eb037a",
+        "decode_seconds": 84.6310664430057,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.734275675979944,
+            "rank_mean": 11.201612903225806,
+            "log_rank_mean": 2.8109310913911734,
+            "entropy_bits_mean": 4.806498443313175
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.058025765438871,
+            "rank_mean": 8.061643835616438,
+            "log_rank_mean": 2.6617678142744157,
+            "entropy_bits_mean": 5.364988838121462
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 5.058025765438871,
+            "rank_mean": 8.061643835616438,
+            "log_rank_mean": 2.6617678142744157,
+            "entropy_bits_mean": 5.364988838121462
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.6552330119983285,
+            "rank_mean": 11.968227424749164,
+            "log_rank_mean": 2.8473488814564547,
+            "entropy_bits_mean": 4.670144601102454
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.8297937853045174
+        },
+        "peak_rss_kib": 1267956,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3488538
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3488538, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82422.40717315674
+        },
+        "total_seconds": 87.6800621500006
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "9ea679fcf1254797b883986c5dfb4fcd607c16ae1688b4855796ba2e60a8e84a",
+      "id": "lossless-T10-row1-fixed",
+      "parent_work_id": "7fe4c1cf9ddb47d5f3a31f7914a730702eeb993537f05e8a343bb0413ebb5eff",
+      "original": "artifacts/v1_qualification_review/cases/T10-row1-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T10-row1-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T10-row1-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T10.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T10-row1-fixed/receiver.json",
+      "original_file_sha256": "e33bdaef607416f6668ba48141b543edae4581338e3d9837468aad96e8cdca29",
+      "rewritten_file_sha256": "e63672ebb6e51af4edfac81bfe3a8da86038855ffd64a9dd535e1ec946891aad",
+      "pixel_sha256": "69c2abbbfd13ab43863f63e0dfade0eff4bf1a140d21aae82d5efe773e86dc5d",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T10-row1-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T10-row1-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "69c2abbbfd13ab43863f63e0dfade0eff4bf1a140d21aae82d5efe773e86dc5d",
+        "cold_load_seconds": 0.9048370550008258,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 61,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "3b4f69daf35c018058d4231a8f2983d6e78f40758d288d03ad2f952552c174a4",
+        "decode_seconds": 84.40421519400843,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.109412402088175,
+            "rank_mean": 7.975806451612903,
+            "log_rank_mean": 2.368618575592504,
+            "entropy_bits_mean": 4.092188706357762
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.6607862187771145,
+            "rank_mean": 8.45890410958904,
+            "log_rank_mean": 2.771638433862853,
+            "entropy_bits_mean": 4.490854004839926
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.6607862187771145,
+            "rank_mean": 8.45890410958904,
+            "log_rank_mean": 2.771638433862853,
+            "entropy_bits_mean": 4.490854004839926
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 3.974796052194219,
+            "rank_mean": 7.857859531772576,
+            "log_rank_mean": 2.270222422904413,
+            "entropy_bits_mean": 3.994855707062802
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 1.0221438465411619
+        },
+        "peak_rss_kib": 1267668,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3492477
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3492477, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82231.08824920654
+        },
+        "total_seconds": 87.40198106500611
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    },
+    {
+      "kind": "lossless",
+      "work_id": "3a00f8736731cfbf144bb00da2ee96b8cace5dbe6bd531b9952381dc5cfc0841",
+      "id": "lossless-T10-row2-fixed",
+      "parent_work_id": "a7fe0354ad0412ba8e5c0aeb46a3f2a9ba4a7630aa8ca34b2179f6cf480f9c70",
+      "original": "artifacts/v1_qualification_review/cases/T10-row2-fixed/carrier.png",
+      "rewritten": "artifacts/v1_qualification_review/lossless/lossless-T10-row2-fixed/carrier.png",
+      "recovered": "artifacts/v1_qualification_review/lossless/lossless-T10-row2-fixed/recovered.txt",
+      "source": "data/qualification_v1/development/T10.txt",
+      "report": "artifacts/v1_qualification_review/lossless/lossless-T10-row2-fixed/receiver.json",
+      "original_file_sha256": "353f8d2c0f03c387af6afedad0a6fe1fb44339698ca0d28c9b23eeeffdcd0d98",
+      "rewritten_file_sha256": "0698d0ee60632e4a20b233c763714b94d8db5880f3b6316389724a8a8802ff32",
+      "pixel_sha256": "eb32b7581748ad8b403759ac24dc54e09a05c13a01306bc504a8dd517d53c6e5",
+      "pixels_preserved": true,
+      "compression_level": 9,
+      "ancillary_metadata_removed": true,
+      "exact_recovery": true,
+      "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+      "receiver": {
+        "stage": "decode",
+        "direction": "text-to-image",
+        "method": "fixed",
+        "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+        "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "text_filter_arm": null,
+        "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T10-row2-fixed/inbox/carrier.png",
+        "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/lossless/lossless-T10-row2-fixed/recovered.txt",
+        "input_roles": [
+          "carrier",
+          "profile",
+          "context",
+          "key"
+        ],
+        "input_files": [
+          "carrier.png",
+          "profile.json",
+          "row.rgb",
+          "run.key"
+        ],
+        "packet_complete": true,
+        "authenticated": true,
+        "carrier_complete": true,
+        "failure_stage": null,
+        "failure_reason": null,
+        "pixel_sha256": "eb32b7581748ad8b403759ac24dc54e09a05c13a01306bc504a8dd517d53c6e5",
+        "cold_load_seconds": 0.9555249100085348,
+        "parsed_symbol_count": 2976,
+        "payload_bytes": 61,
+        "width": 0,
+        "height": 0,
+        "recovered_sha256": "3b4f69daf35c018058d4231a8f2983d6e78f40758d288d03ad2f952552c174a4",
+        "decode_seconds": 84.81006446799438,
+        "pixels": 992,
+        "channels": 2976,
+        "model_calls": 992,
+        "packet_stop": 584,
+        "completion_symbols": 2392,
+        "packet_bits_recovered": 2336,
+        "coder_diagnostics": {
+          "positions": 584,
+          "packet_positions": 584,
+          "skipped_positions": 0,
+          "zero_bit_positions": 0,
+          "termination_positions": 0,
+          "termination_suffix_bits": 0,
+          "lookahead_zero_bits": 0
+        },
+        "diagnostics": {
+          "whole": {
+            "positions": 2976,
+            "surprisal_bits_mean": 4.584632894262573,
+            "rank_mean": 10.732862903225806,
+            "log_rank_mean": 2.699755828145157,
+            "entropy_bits_mean": 4.668341049761708
+          },
+          "packet_span": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.99217673279499,
+            "rank_mean": 8.232876712328768,
+            "log_rank_mean": 2.6770998933582613,
+            "entropy_bits_mean": 5.366478765236935
+          },
+          "packet_bearing": {
+            "positions": 584,
+            "surprisal_bits_mean": 4.99217673279499,
+            "rank_mean": 8.232876712328768,
+            "log_rank_mean": 2.6770998933582613,
+            "entropy_bits_mean": 5.366478765236935
+          },
+          "skipped": {
+            "positions": 0,
+            "surprisal_bits_mean": null,
+            "rank_mean": null,
+            "log_rank_mean": null,
+            "entropy_bits_mean": null
+          },
+          "completion": {
+            "positions": 2392,
+            "surprisal_bits_mean": 4.485132224654334,
+            "rank_mean": 11.343227424749164,
+            "log_rank_mean": 2.7052872102168632,
+            "entropy_bits_mean": 4.497892711200859
+          },
+          "mean_top256_mass": 1.0,
+          "mean_eligible_mass": 1.0,
+          "mean_top16_uniform_rank_divergence_bits": 0.9305233448865233
+        },
+        "peak_rss_kib": 1267852,
+        "packet_positions": 584,
+        "skipped_positions": 0,
+        "zero_bit_positions": 0,
+        "termination_positions": 0,
+        "termination_suffix_bits": 0,
+        "lookahead_zero_bits": 0,
+        "gpu_evidence": {
+          "device": {
+            "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+            "pci_bus_id": "00000000:09:00.0",
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_mib": 32760,
+            "free_mib_before": 32220,
+            "driver": "590.48.01",
+            "logical_device": 0,
+            "effective_environment": {
+              "CUDA_LAUNCH_BLOCKING": "1",
+              "GGML_CUDA_DISABLE_GRAPHS": "1",
+              "GGML_CUDA_DISABLE_FUSION": "1",
+              "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+              "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+            },
+            "pid": 3496495
+          },
+          "backend": "torch",
+          "version": "2.5.1+cu124",
+          "cuda_runtime": "12.4",
+          "cudnn": 90100,
+          "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+          "strict_loading": true,
+          "checkpoint_key_mapping": "strip uniform module. prefix",
+          "missing_keys": [],
+          "unexpected_keys": [],
+          "parameter_devices": [
+            "cuda:0"
+          ],
+          "eval_mode": true,
+          "deterministic_algorithms": true,
+          "tf32": false,
+          "gpu_allocation": [
+            "3496495, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+          ],
+          "inference_mode": true,
+          "input_device": "cuda:0",
+          "output_device": "cuda:0",
+          "cuda_model_milliseconds": 82577.42859649658
+        },
+        "total_seconds": 87.8688450710033
+      },
+      "final_cpu_revalidation": {
+        "pixels_equal": true,
+        "source_equal": true,
+        "receiver_report_unchanged": true,
+        "fresh_receiver_process": true,
+        "permitted_inputs_only": true
+      }
+    }
+  ],
+  "not_additional_stego_observations": true,
+  "extra_main_study_lossless_jobs": 0
+}

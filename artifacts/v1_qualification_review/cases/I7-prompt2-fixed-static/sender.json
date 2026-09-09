@@ -1,0 +1,142 @@
+{
+  "stage": "encode",
+  "direction": "image-to-text",
+  "method": "fixed",
+  "profile_id": "a36fe976f3c21c1f60a9c1db1abe9870187da8dce65a073120f73d3d85e6a5b9",
+  "source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+  "text_filter_arm": "static",
+  "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+  "packet_complete": true,
+  "carrier_complete": true,
+  "packet_bytes": 292,
+  "prepared_packet_sha256": "f386087d16128b10fb786094817ff4525cb49279e0279d8c30dc32477e55bf3b",
+  "failure_stage": null,
+  "failure_reason": null,
+  "cold_load_seconds": 2.6918407769990154,
+  "tokens": 616,
+  "filter_seconds": 1.4606761450559134,
+  "serialization": {
+    "text_filter_arm": "static",
+    "sender_tokens": 616,
+    "retokenized_tokens": 616,
+    "tokenization_drift": false,
+    "first_mismatch_index": null
+  },
+  "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/cases/I7-prompt2-fixed-static/inbox/carrier.txt",
+  "carrier_bytes": 2581,
+  "carrier_sha256": "10acf320b949ba16db8f2710283a99efe111b51b03d3d38d632f1de36569e2f7",
+  "artifact_saved": true,
+  "encode_seconds": 14.664711972000077,
+  "support_minimum": 251,
+  "model_calls": 633,
+  "packet_stop": 584,
+  "emitted_symbols": 616,
+  "completion_symbols": 32,
+  "packet_bits_recovered": 2336,
+  "coder_diagnostics": {
+    "positions": 584,
+    "packet_positions": 584,
+    "skipped_positions": 0,
+    "zero_bit_positions": 0,
+    "termination_positions": 0,
+    "termination_suffix_bits": 0,
+    "lookahead_zero_bits": 0
+  },
+  "diagnostics": {
+    "whole": {
+      "positions": 616,
+      "surprisal_bits_mean": 5.3909502626563715,
+      "rank_mean": 9.319805194805195,
+      "log_rank_mean": 2.8218428419528645,
+      "entropy_bits_mean": 4.795167793837061
+    },
+    "packet_span": {
+      "positions": 584,
+      "surprisal_bits_mean": 5.402245103405101,
+      "rank_mean": 8.690068493150685,
+      "log_rank_mean": 2.8204180544839557,
+      "entropy_bits_mean": 4.783616465071665
+    },
+    "packet_bearing": {
+      "positions": 584,
+      "surprisal_bits_mean": 5.402245103405101,
+      "rank_mean": 8.690068493150685,
+      "log_rank_mean": 2.8204180544839557,
+      "entropy_bits_mean": 4.783616465071665
+    },
+    "skipped": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "completion": {
+      "positions": 32,
+      "surprisal_bits_mean": 5.184819418992001,
+      "rank_mean": 20.8125,
+      "log_rank_mean": 2.847845213260472,
+      "entropy_bits_mean": 5.005979543805512
+    },
+    "mean_top256_mass": 0.9296506763011624,
+    "mean_eligible_mass": 0.9296310967411823,
+    "mean_top16_uniform_rank_divergence_bits": 1.3248085221748138
+  },
+  "peak_rss_kib": 5921120,
+  "packet_positions": 584,
+  "skipped_positions": 0,
+  "zero_bit_positions": 0,
+  "termination_positions": 0,
+  "termination_suffix_bits": 0,
+  "lookahead_zero_bits": 0,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 2388343
+    },
+    "backend": "llama-cpp-python",
+    "version": "0.3.23",
+    "cuda_library_sha256": "89d5798bdf1bfd679d8a155f1ba02c40008d708b8cafba62f5f5e21a8d7b958d",
+    "loaded_cuda_libraries": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublasLt.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublas.so.12"
+    ],
+    "gpu_offload_supported": true,
+    "system_info": "CUDA : ARCHS = 700,750,800,860,890,900 | FORCE_MMQ = 1 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | ",
+    "model_sha256": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+    "offloaded_layers": [
+      33,
+      33
+    ],
+    "gpu_allocation": [
+      "2388343, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 5228"
+    ],
+    "gpu_buffer_lines": [
+      "done_getting_tensors: tensor 'token_embd.weight' (q4_K) (and 0 others) cannot be used with preferred buffer type CUDA_Host, using CPU instead",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_context:  CUDA_Host  output buffer size =     0.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "sched_reserve:  CUDA_Host compute buffer size =     0.05 MiB"
+    ],
+    "detokenizer_source_sha256": "44f3db6523465479d850b5c80f196b02123621e9e89a5826a61e425bb1e2be4f",
+    "text_processing": "v1_exact_piece_cache_top256_ties"
+  },
+  "total_seconds": 30.161278817991843
+}

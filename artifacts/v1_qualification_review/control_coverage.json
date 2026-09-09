@@ -1,0 +1,153 @@
+{
+  "independent_allocated_traces": 48,
+  "completed_independent_traces": 48,
+  "unavailable_matched_prefixes": [
+    {
+      "trace_id": "control-text-4301",
+      "trace_work_id": "b78faa843020eff88618a2293a66643e7a1a307ac191fc02ead0a789bc952605",
+      "work_id": "bb1b2d5e48867f87ba0f5befdfb0a0a8de835de211040870ad963bed2eb86214",
+      "case": "I1-prompt1-fixed-static",
+      "payload_group": "I1-prompt1",
+      "symbols": 614,
+      "matched_artifact": null,
+      "matched_sha256": null,
+      "available": false,
+      "reason": "historical trace did not retain this later arm's matched prefix; no extra model pass or invented score",
+      "inline_score_available": false,
+      "independent_control_replicates": 0,
+      "shared_trace_counted_once": true,
+      "primary_frozen_association": true
+    }
+  ],
+  "groups_outside_control_allocation": [
+    {
+      "pair_id": "I13-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I13-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I14-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I14-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I15-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I15-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I16-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I16-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I17-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I17-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I18-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I18-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I19-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I19-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I20-prompt1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "I20-prompt2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T13-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T13-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T14-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T14-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T15-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T15-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T16-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T16-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T17-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T17-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T18-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T18-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T19-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T19-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T20-row1",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    },
+    {
+      "pair_id": "T20-row2",
+      "reason": "outside the frozen 12 control groups per modality/context; no additional control allocated"
+    }
+  ],
+  "historical_extra_associations_are_not_additional_replicates": true
+}

@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "scripts/finalize_v1_qualification.py",
+    "--verify-public",
+    "artifacts/v1_qualification_review"
+  ],
+  "exit_code": 0,
+  "allocation_complete": true,
+  "expected_count": 152,
+  "attempted_count": 152,
+  "completed_count": 126,
+  "packet_completed_count": 144,
+  "authenticated_count": 126,
+  "exact_recovery_count": 126,
+  "all_recovered": false,
+  "recorded_failure_count": 26,
+  "missing_identifiers": [],
+  "unexpected_identifiers": [],
+  "duplicate_expected_identifiers": [],
+  "duplicate_result_identifiers": [],
+  "duplicate_expected_case_identifiers": [],
+  "duplicate_result_case_identifiers": [],
+  "case_work_mismatches": [],
+  "unstarted_identifiers": [],
+  "unfinished_identifiers": [],
+  "invalid_evidence_identifiers": [],
+  "verification_scope": "public CPU source equality and allocation; not key-dependent GPU replay"
+}

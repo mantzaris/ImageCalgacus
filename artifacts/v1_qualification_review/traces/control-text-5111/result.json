@@ -1,0 +1,202 @@
+{
+  "purpose": "control",
+  "modality": "text",
+  "seed": 5111,
+  "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+  "source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+  "context_sha256": "abcca2b64d09c63fbe006cecfcc2aac4b700df67e41f00777d10ea9df847adb5",
+  "passed": true,
+  "cold_load_seconds": 2.671052388002863,
+  "generation_seconds": 329.0544568839978,
+  "model_calls": 2069,
+  "carrier": "artifacts/v1_qualification_review/traces/control-text-5111/carrier.txt",
+  "carrier_bytes": 6889,
+  "carrier_sha256": "36969ec9ac3b3ca0e5947cdb3dae4a3d6484ff0bfbb2893b61416764594f2ea8",
+  "symbols": 2048,
+  "diagnostics": {
+    "whole": {
+      "positions": 2048,
+      "surprisal_bits_mean": 1.0476141204434855,
+      "rank_mean": 2.4091796875,
+      "log_rank_mean": 0.40740775704454,
+      "entropy_bits_mean": 1.0221639717229023
+    },
+    "packet_span": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "packet_bearing": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "skipped": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "completion": {
+      "positions": 2048,
+      "surprisal_bits_mean": 1.0476141204434855,
+      "rank_mean": 2.4091796875,
+      "log_rank_mean": 0.40740775704454,
+      "entropy_bits_mean": 1.0221639717229023
+    },
+    "mean_top256_mass": 0.9960185680878416,
+    "mean_eligible_mass": 0.9945842471405616,
+    "mean_top16_uniform_rank_divergence_bits": 6.849001913255213
+  },
+  "prefix_diagnostics": {
+    "615": {
+      "generation_seconds": 47.64989723700273,
+      "diagnostics": {
+        "whole": {
+          "positions": 615,
+          "surprisal_bits_mean": 1.712764329442904,
+          "rank_mean": 3.621138211382114,
+          "log_rank_mean": 0.689750673367243,
+          "entropy_bits_mean": 1.6358560644691553
+        },
+        "packet_span": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "packet_bearing": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "skipped": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "completion": {
+          "positions": 615,
+          "surprisal_bits_mean": 1.712764329442904,
+          "rank_mean": 3.621138211382114,
+          "log_rank_mean": 0.689750673367243,
+          "entropy_bits_mean": 1.6358560644691553
+        },
+        "mean_top256_mass": 0.994898476135412,
+        "mean_eligible_mass": 0.9935278877172316,
+        "mean_top16_uniform_rank_divergence_bits": 5.968531562397265
+      }
+    },
+    "616": {
+      "generation_seconds": 47.78017183099291,
+      "diagnostics": {
+        "whole": {
+          "positions": 616,
+          "surprisal_bits_mean": 1.716540527985097,
+          "rank_mean": 3.6233766233766236,
+          "log_rank_mean": 0.6924003120385419,
+          "entropy_bits_mean": 1.6375526018738296
+        },
+        "packet_span": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "packet_bearing": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "skipped": {
+          "positions": 0,
+          "surprisal_bits_mean": null,
+          "rank_mean": null,
+          "log_rank_mean": null,
+          "entropy_bits_mean": null
+        },
+        "completion": {
+          "positions": 616,
+          "surprisal_bits_mean": 1.716540527985097,
+          "rank_mean": 3.6233766233766236,
+          "log_rank_mean": 0.6924003120385419,
+          "entropy_bits_mean": 1.6375526018738296
+        },
+        "mean_top256_mass": 0.9949046761068174,
+        "mean_eligible_mass": 0.9935363021946042,
+        "mean_top16_uniform_rank_divergence_bits": 5.962617469621908
+      }
+    }
+  },
+  "filter_seconds": 285.1422336409596,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 3023178
+    },
+    "backend": "llama-cpp-python",
+    "version": "0.3.23",
+    "cuda_library_sha256": "89d5798bdf1bfd679d8a155f1ba02c40008d708b8cafba62f5f5e21a8d7b958d",
+    "loaded_cuda_libraries": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublasLt.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublas.so.12"
+    ],
+    "gpu_offload_supported": true,
+    "system_info": "CUDA : ARCHS = 700,750,800,860,890,900 | FORCE_MMQ = 1 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | ",
+    "model_sha256": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+    "offloaded_layers": [
+      33,
+      33
+    ],
+    "gpu_allocation": [
+      "3023178, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 5228"
+    ],
+    "gpu_buffer_lines": [
+      "done_getting_tensors: tensor 'token_embd.weight' (q4_K) (and 0 others) cannot be used with preferred buffer type CUDA_Host, using CPU instead",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_context:  CUDA_Host  output buffer size =     0.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "sched_reserve:  CUDA_Host compute buffer size =     0.05 MiB"
+    ],
+    "detokenizer_source_sha256": "44f3db6523465479d850b5c80f196b02123621e9e89a5826a61e425bb1e2be4f",
+    "text_processing": "v1_exact_piece_cache_top256_ties"
+  },
+  "total_seconds": 344.61525482199795,
+  "peak_rss_kib": 5916624,
+  "work_id": "ed01c1a5e70b3317565be5087ddabe4a3663fbc72ddb392de33a3d4dc80fe268",
+  "id": "control-text-5111",
+  "context_id": "prompt1",
+  "purpose_detail": "shared ordinary trace, matched prefixes reused without extra independent replicates",
+  "source_result_sha256": "2357044f096360b09706833883d07967161055c9b1d3ffc81cb6eadc010c7127",
+  "historical": false
+}

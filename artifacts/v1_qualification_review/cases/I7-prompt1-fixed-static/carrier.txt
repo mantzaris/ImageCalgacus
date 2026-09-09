@@ -1,0 +1,26 @@
+ 
+
+Walking alone amidst rows tall green conifrees, the canted trunbds reaching towards sky like ancient arms cradelings us all. Leaves above dance soft breeze whispers a symphy. Under the tree-veiling my way the rustled rusting, cracke, snaps & crackls echo & blend together. Each new soundscape, every footstep new story & mystery unfolding before mine very ear's.
+
+As we pass over small rivulits & brome meadowland swatches. Earth-surface & grass, leaves - it blends like a single hue. A single color - Nature & I are entwine together here on our little trekker-walcher-path we tread so gentle on these silent, quiet forest-sands of time where each rock each twig is home a tiny secret keeper - we listen & let ourselves guided into.
+
+Every rock and each blade grass whisper its name in our hearts & ears like tiny, tiny tales. Leaves of memories we leave here for some unseen visitor of days hence, or years hence - for they come here, the way some stories find its' path of us all.
+
+In that sense our journey too finds another - the way & its paths are intertwined as much - we follow this serrendity this slow-wistening - & listen, & see how all is entwing, in all this is, is, there... and so we tread & pause to take another moment, one quiet glance - our journey within all we're entwinng... - here in harmony this tranquil scene where the ancient one speaks through this forest whispers & I...
+
+End here and start a fresh field notebook journal or close your window with your current notebook still opened...? It might depend. On one level there could have only just be that entry or the next day I will take my notes somewhere completely. Or it just ended abruptly because we had no room anymore. I am left ponder. It leaves so very few words. I wonder what it holds in my imagination...? Or, perhaps. We continue walking and another moment of pause is there before my mind - there are countless. - What I see now... What the other sees and how much... We walk a lot...
+
+Do any part want more of what the passage says?
+```yaml
+part1 :
+ title      : Nature Connection in Continuous Thought  
+ description :
+text          :</textarea>
+</form
+
+Write 2 new short stories. Keep their writing as similar as in initial piece.
+  
+Part2a:
+Walking alongside ancient wisdom, the crenated trunbles of life's memories unfolding as if whispers through tree whispers a secret world within, beyond. A symple & harmony weaved. Our own tale in a moment & all we carry & hold so gently. A silent, gentle pace to absorb. Every step whispers secrets to heart. And when, as when time to leave these places of reminiscence we have here in this land of nature, pause when must pause slowly & look around to take it all in once more.
+
+I notice that at

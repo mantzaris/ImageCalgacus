@@ -9,7 +9,7 @@ import sys
 import time
 from .packet import NewRun
 from .sender import read_source
-from .runtime import ROOT,read_profile,run_budgeted,budget_state,json_write,canonical_hash,source_hash,sha256_file
+from .runtime import ROOT,read_profile,run_budgeted,budget_state,json_write,canonical_hash,source_hash,sha256_file,phase_limit
 
 METHODS=("fixed","gated","arithmetic")
 PAYLOADS=("I1","T1","I5","T3")
@@ -38,7 +38,7 @@ def projected_remainder(run, index, cases):
         cost+=upper
     estimate=1.25*(used+cost+text_control+image_control)
     return {"used_seconds":used,"remaining_pairs":details,"control_seconds_upper":{"text":text_control,"image":image_control},
-            "reserve_multiplier":1.25,"projected_v1_total_seconds":estimate,"ceiling_seconds":7200,
+            "reserve_multiplier":1.25,"projected_v1_total_seconds":estimate,"ceiling_seconds":phase_limit("v1"),
             "note":"variable-length text uses a conservative N-squared cap envelope; no new methods inferred from fixed timings"}
 
 
@@ -102,7 +102,7 @@ def execute(args):
             projection=projected_remainder(directory,index,cases)
             json_write(directory/"midpilot_projection.json",projection)
             print(json.dumps(projection),flush=True)
-            if projection["projected_v1_total_seconds"]>7200:
+            if projection["projected_v1_total_seconds"]>phase_limit("v1"):
                 print("STOP: measured reserved remainder exceeds initial V1 allocation",flush=True)
                 return 3
         if source_hash()!=frozen_source:
@@ -163,7 +163,7 @@ def execute_qualification(args):
         group_cases=[byid[k] for k in group]
         bound=sum(2*c["job_timeout_seconds"] for c in group_cases)
         used,_=budget_state("v1")
-        if bound+20>7200-used:
+        if bound+20>phase_limit("v1")-used:
             print("STOP: complete group plus teardown headroom no longer fits",flush=True); break
         first=group_cases[0]
         if any(c["pair_id"]!=first["pair_id"] for c in group_cases):
@@ -215,11 +215,17 @@ def execute_qualification(args):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--new-run",required=True)
-    parser.add_argument("--packet-run",required=True)
+    parser.add_argument("--new-run")
+    parser.add_argument("--packet-run")
     parser.add_argument("--revision")
     parser.add_argument("--qualification-batch",help="frozen V1.2 six-case manifest, no extra allowance")
+    parser.add_argument("--complete-qualification",type=Path,help="prepare/resume the frozen full V1 development allocation")
+    parser.add_argument("--prepare-only",action="store_true")
     args=parser.parse_args()
+    if args.complete_qualification:
+        from .qualification import run
+        raise SystemExit(run(args.complete_qualification,args.prepare_only))
+    if not args.new_run or not args.packet_run: parser.error("--new-run and --packet-run required for legacy pilots")
     if args.qualification_batch:
         raise SystemExit(execute_qualification(args))
     if not args.revision: parser.error("--revision required for the original pilot")

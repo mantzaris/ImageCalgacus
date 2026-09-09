@@ -1,0 +1,31 @@
+{
+  "v1_qualified": true,
+  "conditions": {
+    "allocation_complete": true,
+    "sequence_40_exact": true,
+    "fixed_png_40_exact": true,
+    "static_40_accounted": true,
+    "timing_32_accounted": true,
+    "ordinary_16_complete": true,
+    "controls_48_complete": true,
+    "lossless_20_exact": true,
+    "utf8_checks_complete": true,
+    "receiver_boundaries": true,
+    "original_evidence_preserved": true,
+    "gpu_activity_all_new_jobs": true,
+    "cpu_tests_pass": true,
+    "execution_code_frozen": true,
+    "stage_budget_respected": true,
+    "whole_forecast_fits": true
+  },
+  "counts": {
+    "sequence": 40,
+    "fixed_png": 40,
+    "static": 40,
+    "timing": 32,
+    "traces": 64,
+    "lossless": 20
+  },
+  "arithmetic_text_complete": 0,
+  "v2_authorized": false
+}

@@ -1,0 +1,148 @@
+{
+  "stage": "decode",
+  "direction": "image-to-text",
+  "method": "arithmetic",
+  "profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+  "model_id": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+  "text_filter_arm": "sequence",
+  "carrier": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/cases/I1-prompt2-arithmetic-sequence/inbox/carrier.txt",
+  "output": "/home/meow/Documents/repos/ImageCalgacus/runs/v1-qualification-complete/cases/I1-prompt2-arithmetic-sequence/recovered.gray",
+  "input_roles": [
+    "carrier",
+    "profile",
+    "context",
+    "key"
+  ],
+  "input_files": [
+    "carrier.txt",
+    "profile.json",
+    "prompt.txt",
+    "run.key"
+  ],
+  "packet_complete": false,
+  "authenticated": false,
+  "carrier_complete": false,
+  "failure_stage": "capacity",
+  "failure_reason": "ValueError: packet incomplete in delivered symbols; no endpoint flush",
+  "cold_load_seconds": 2.6649520240025595,
+  "parsed_symbol_count": 2048,
+  "decode_seconds": 369.64156829299463,
+  "tokens": 2048,
+  "filter_seconds": 324.30050788403605,
+  "failure_position": 2048,
+  "packet_stop": null,
+  "completion_symbols": 0,
+  "packet_bits_recovered": 2104,
+  "coder_diagnostics": {
+    "positions": 2048,
+    "packet_positions": 565,
+    "skipped_positions": 0,
+    "zero_bit_positions": 1483,
+    "termination_positions": 0,
+    "termination_suffix_bits": 0,
+    "lookahead_zero_bits": 0,
+    "minimum_retained_mass": 0.999554148568121,
+    "mean_removed_mass": 4.483981746706883e-06,
+    "mean_quantization_l1": 9.060513731260409e-06,
+    "precision": 32,
+    "framing": "A1_common_prefix_known_2336_zero_extended"
+  },
+  "diagnostics": {
+    "whole": {
+      "positions": 2048,
+      "surprisal_bits_mean": 1.0278102432382847,
+      "rank_mean": 2.43212890625,
+      "log_rank_mean": 0.39893628263422964,
+      "entropy_bits_mean": 1.0468449216748534
+    },
+    "packet_span": {
+      "positions": 2048,
+      "surprisal_bits_mean": 1.0278102432382847,
+      "rank_mean": 2.43212890625,
+      "log_rank_mean": 0.39893628263422964,
+      "entropy_bits_mean": 1.0468449216748534
+    },
+    "packet_bearing": {
+      "positions": 565,
+      "surprisal_bits_mean": 3.1137630299135344,
+      "rank_mean": 6.08141592920354,
+      "log_rank_mean": 1.3457377112020052,
+      "entropy_bits_mean": 2.408582173553619
+    },
+    "skipped": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "completion": {
+      "positions": 0,
+      "surprisal_bits_mean": null,
+      "rank_mean": null,
+      "log_rank_mean": null,
+      "entropy_bits_mean": null
+    },
+    "mean_top256_mass": 0.9966559034007588,
+    "mean_eligible_mass": 0.9961158609845576,
+    "mean_top16_uniform_rank_divergence_bits": 7.02372255948485
+  },
+  "peak_rss_kib": 5917124,
+  "packet_positions": 565,
+  "skipped_positions": 0,
+  "zero_bit_positions": 1483,
+  "termination_positions": 0,
+  "termination_suffix_bits": 0,
+  "lookahead_zero_bits": 0,
+  "gpu_evidence": {
+    "device": {
+      "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+      "pci_bus_id": "00000000:09:00.0",
+      "name": "NVIDIA RTX 5000 Ada Generation",
+      "total_mib": 32760,
+      "free_mib_before": 32220,
+      "driver": "590.48.01",
+      "logical_device": 0,
+      "effective_environment": {
+        "CUDA_LAUNCH_BLOCKING": "1",
+        "GGML_CUDA_DISABLE_GRAPHS": "1",
+        "GGML_CUDA_DISABLE_FUSION": "1",
+        "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+      },
+      "pid": 2158252
+    },
+    "backend": "llama-cpp-python",
+    "version": "0.3.23",
+    "cuda_library_sha256": "89d5798bdf1bfd679d8a155f1ba02c40008d708b8cafba62f5f5e21a8d7b958d",
+    "loaded_cuda_libraries": [
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublasLt.so.12",
+      "/home/meow/Documents/repos/llm-rankcloak/.venv-generation-v3/lib/python3.10/site-packages/nvidia/cublas/lib/libcublas.so.12"
+    ],
+    "gpu_offload_supported": true,
+    "system_info": "CUDA : ARCHS = 700,750,800,860,890,900 | FORCE_MMQ = 1 | USE_GRAPHS = 1 | PEER_MAX_BATCH_SIZE = 128 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | ",
+    "model_sha256": "86c8ea6c8b755687d0b723176fcd0b2411ef80533d23e2a5030f845d13ab2db7",
+    "offloaded_layers": [
+      33,
+      33
+    ],
+    "gpu_allocation": [
+      "2158252, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 5228"
+    ],
+    "gpu_buffer_lines": [
+      "done_getting_tensors: tensor 'token_embd.weight' (q4_K) (and 0 others) cannot be used with preferred buffer type CUDA_Host, using CPU instead",
+      "load_tensors:        CUDA0 model buffer size =  4403.49 MiB",
+      "llama_context:  CUDA_Host  output buffer size =     0.49 MiB",
+      "llama_kv_cache:      CUDA0 KV buffer size =   512.00 MiB",
+      "sched_reserve:      CUDA0 compute buffer size =     0.59 MiB",
+      "sched_reserve:  CUDA_Host compute buffer size =     0.05 MiB"
+    ],
+    "detokenizer_source_sha256": "44f3db6523465479d850b5c80f196b02123621e9e89a5826a61e425bb1e2be4f",
+    "text_processing": "v1_exact_piece_cache_top256_ties"
+  },
+  "model_calls": 2065,
+  "total_seconds": 386.4438983930013
+}

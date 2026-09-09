@@ -22,6 +22,12 @@ def receive(args, arithmetic_observer=None):
         raise ValueError("outputs must be outside receiver input directory")
     if Path(args.output).exists() or Path(args.report).exists():
         raise FileExistsError("refusing to overwrite recovered output/report")
+    private_bits=getattr(args,"private_recovered_bits",None)
+    if private_bits:
+        from .runtime import ROOT
+        private_bits=Path(private_bits).resolve()
+        if not private_bits.is_relative_to(ROOT/".runtime") or private_bits.parent==inputs[0].parent or private_bits.exists():
+            raise ValueError("private bit audit must be a new output under ignored .runtime, outside inputs")
     profile=read_profile(args.profile)
     if args.direction != "image-to-text" and "development_text_filter" in profile:
         raise ValueError("text-filter option is only for the development text comparison")
@@ -110,6 +116,10 @@ def receive(args, arithmetic_observer=None):
             record[name]=getattr(coder,name)
         if model is not None:
             record["gpu_evidence"]=model.evidence; record["model_calls"]=model.calls; model.close()
+        if private_bits:
+            private_bits.parent.mkdir(parents=True,exist_ok=True)
+            with os.fdopen(os.open(private_bits,os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600),"w") as stream:
+                stream.write(coder.bits)
         record["total_seconds"]=time.monotonic()-started
         json_write(args.report,record); print(json.dumps(record),flush=True)
     if record["authenticated"] and record["carrier_complete"]: return 0
@@ -122,6 +132,7 @@ def main():
     for name in ("carrier","profile","context","key","output","report"):
         parser.add_argument("--"+name,required=True)
     parser.add_argument("--private-arithmetic-trace",help="diagnostic output under ignored .runtime/; contains recovered packet bits")
+    parser.add_argument("--private-recovered-bits",help="output-only packet-prefix audit under ignored .runtime; never a receiver input")
     args=parser.parse_args()
     if args.private_arithmetic_trace:
         from .runtime import ROOT

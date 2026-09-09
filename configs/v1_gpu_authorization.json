@@ -1,0 +1,11 @@
+{
+  "authorization_id": "user-v1-qualification-additional-12h",
+  "stage": "v1",
+  "previous_seconds": 7200,
+  "additional_seconds": 43200,
+  "absolute_seconds": 50400,
+  "v0_seconds": 7200,
+  "whole_project_seconds": 144000,
+  "scope": "complete frozen V1 qualification and 20 development PNG lossless replays; no V2 or held-out carriers",
+  "reviewed_revision": "b5f2d1e3b9e901e5dfe6a181b6ca5d95dc35ac4b"
+}

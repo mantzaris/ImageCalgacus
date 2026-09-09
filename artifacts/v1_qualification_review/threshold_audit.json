@@ -1,0 +1,191 @@
+{
+  "frozen_thresholds": {
+    "text": {
+      "value": 0.5983972524635524,
+      "hex": "0x1.32611feab1c5ep-1"
+    },
+    "image": {
+      "value": 3.2159513527579326,
+      "hex": "0x1.9ba44b3ecfa6ep+1"
+    }
+  },
+  "traces": [
+    {
+      "id": "ordinary-text-4101",
+      "context": "prompt1",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 538,
+      "mean_entropy_bits": 1.1693451680753977,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": true
+    },
+    {
+      "id": "ordinary-text-4102",
+      "context": "prompt1",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 486,
+      "mean_entropy_bits": 0.9498241284235104,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": true
+    },
+    {
+      "id": "ordinary-text-4103",
+      "context": "prompt1",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 573,
+      "mean_entropy_bits": 1.1605184368766583,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-text-4104",
+      "context": "prompt1",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 500,
+      "mean_entropy_bits": 1.279351176836541,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-text-4111",
+      "context": "prompt2",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 572,
+      "mean_entropy_bits": 1.1720912114163056,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-text-4112",
+      "context": "prompt2",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 304,
+      "mean_entropy_bits": 0.6661062187868162,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-text-4113",
+      "context": "prompt2",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 318,
+      "mean_entropy_bits": 0.5604272359711054,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-text-4114",
+      "context": "prompt2",
+      "modality": "text",
+      "n": 1024,
+      "frozen_threshold": 0.5983972524635524,
+      "strictly_above": 418,
+      "mean_entropy_bits": 0.7423654408155242,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-image-4201",
+      "context": "row1",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 1159,
+      "mean_entropy_bits": 3.274648627432078,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": true
+    },
+    {
+      "id": "ordinary-image-4202",
+      "context": "row1",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 1817,
+      "mean_entropy_bits": 4.085354172612023,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": true
+    },
+    {
+      "id": "ordinary-image-4203",
+      "context": "row1",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 1680,
+      "mean_entropy_bits": 3.9514862216976185,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-image-4204",
+      "context": "row1",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 1379,
+      "mean_entropy_bits": 3.456189967591573,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-image-4211",
+      "context": "row2",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 2124,
+      "mean_entropy_bits": 4.49504444109108,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-image-4212",
+      "context": "row2",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 2890,
+      "mean_entropy_bits": 5.515077389337527,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-image-4213",
+      "context": "row2",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 2883,
+      "mean_entropy_bits": 5.508370260883265,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    },
+    {
+      "id": "ordinary-image-4214",
+      "context": "row2",
+      "modality": "image",
+      "n": 2976,
+      "frozen_threshold": 3.2159513527579326,
+      "strictly_above": 2813,
+      "mean_entropy_bits": 5.387675314283201,
+      "threshold_unchanged": true,
+      "calibration_only_if_historical": false
+    }
+  ],
+  "recalibrated": false
+}

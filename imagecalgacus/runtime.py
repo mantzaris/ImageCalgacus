@@ -1,4 +1,4 @@
-"""Small GPU preconditions, hashes and a serial two-hour accounting wrapper.
+"""Small GPU preconditions, hashes and a serial stage-specific accounting wrapper.
 No payload/reference loading occurs here. Full child wall time is charged,
 conservatively including imports/hash checks before allocation and process teardown.
 """
@@ -24,7 +24,58 @@ CUDA_SETTINGS = {
     "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
     "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
 }
-GPU_LIMIT_SECONDS = 7200
+DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200}
+V1_QUALIFICATION_AUTHORIZATION = {
+    "authorization_id": "user-v1-qualification-additional-12h",
+    "stage": "v1", "previous_seconds": 7200, "additional_seconds": 43200,
+    "absolute_seconds": 50400, "v0_seconds": 7200, "whole_project_seconds": 144000,
+    "scope": "complete frozen V1 qualification and 20 development PNG lossless replays; no V2 or held-out carriers",
+    "reviewed_revision": "b5f2d1e3b9e901e5dfe6a181b6ca5d95dc35ac4b",
+}
+
+
+def apply_v1_allowance(path=None):
+    """Idempotent absolute authorization, never an increment on a current balance."""
+    path = Path(path) if path is not None else ROOT/"configs/v1_gpu_authorization.json"
+    if path.exists():
+        if json.loads(path.read_text()) != V1_QUALIFICATION_AUTHORIZATION:
+            raise ValueError("conflicting phase authorization; do not add the extension again")
+        return False
+    atomic_json(path, V1_QUALIFICATION_AUTHORIZATION, replace=False)
+    return True
+
+
+def phase_limit(stage, authorization_path=None):
+    if stage not in DEFAULT_PHASE_LIMITS:
+        raise ValueError("unknown budget stage")
+    path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/v1_gpu_authorization.json"
+    if path.exists():
+        if json.loads(path.read_text()) != V1_QUALIFICATION_AUTHORIZATION:
+            raise ValueError("invalid or altered V1 allowance authorization")
+        if stage == "v1":
+            return V1_QUALIFICATION_AUTHORIZATION["absolute_seconds"]
+    return DEFAULT_PHASE_LIMITS[stage]
+
+
+def atomic_json(path, value, replace=False):
+    """Fsynced JSON + atomic rename/link; immutable terminal records never overwrite."""
+    import tempfile
+    path = Path(path); path.parent.mkdir(parents=True, exist_ok=True)
+    data = json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+"\n"
+    fd, temporary = tempfile.mkstemp(prefix="."+path.name+".", dir=path.parent)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as stream:
+            stream.write(data); stream.flush(); os.fsync(stream.fileno())
+        if replace:
+            os.replace(temporary, path)
+        else:
+            os.link(temporary, path)
+        folder_fd = os.open(path.parent, os.O_RDONLY)
+        try: os.fsync(folder_fd)
+        finally: os.close(folder_fd)
+    finally:
+        if os.path.exists(temporary): os.unlink(temporary)
+
 
 
 def sha256_file(path):
@@ -88,7 +139,7 @@ def read_profile(path):
 
 def configure_gpu(profile, modality):
     if not os.environ.get("IMAGECALGACUS_BUDGETED"):
-        raise RuntimeError("launch model commands through python -m imagecalgacus.runtime to enforce the V0 allowance")
+        raise RuntimeError("launch model commands through python -m imagecalgacus.runtime to enforce the authorized stage allowance")
     selected = profile["gpu_uuid"]
     if not selected.startswith("GPU-"):
         raise ValueError("physical GPU UUID required")
@@ -152,7 +203,7 @@ def run_budgeted(command, label, stage="v0", max_seconds=None):
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         used, records = budget_state(stage)
         other_used, _ = budget_state("v0" if stage == "v1" else "v1")
-        remaining = min(GPU_LIMIT_SECONDS - used, 40 * 3600 - used - other_used)
+        remaining = min(phase_limit(stage) - used, 40 * 3600 - used - other_used)
         if max_seconds is not None:
             remaining = min(remaining, float(max_seconds))
         if remaining <= 0:
@@ -168,7 +219,8 @@ def run_budgeted(command, label, stage="v0", max_seconds=None):
                 os.fsync(stream.fileno())
         started = time.monotonic()
         append({"event": "started", "id": ident, "utc": datetime.now(timezone.utc).isoformat(),
-                "command": command, "remaining_seconds": remaining, "budget_stage": stage})
+                "command": command, "remaining_seconds": remaining, "budget_stage": stage,
+                "wrapper_pid": os.getpid(), "phase_limit_seconds": phase_limit(stage)})
         env = os.environ.copy()
         env["IMAGECALGACUS_BUDGETED"] = ident
         # Project-local missing text dependency only, not sibling source imports.
@@ -188,11 +240,12 @@ def run_budgeted(command, label, stage="v0", max_seconds=None):
                     pass
                 stop.wait(0.1)
         status, failure = -1, None
-        proc = None
+        proc = None; worker = None
         with (logdir / "stdout.log").open("w") as stdout, (logdir / "stderr.log").open("w") as stderr:
             try:
                 proc = subprocess.Popen(command, cwd=ROOT, env=env, stdout=stdout, stderr=stderr,
                                         start_new_session=True)
+                atomic_json(logdir/"process.json", {"pid":proc.pid,"start_ticks":Path("/proc/%d/stat"%proc.pid).read_text().split()[21]})
                 worker = threading.Thread(target=monitor, args=(proc.pid,), daemon=True)
                 worker.start()
                 status = proc.wait(timeout=max(0.1, remaining - (time.monotonic() - started)))
@@ -210,7 +263,7 @@ def run_budgeted(command, label, stage="v0", max_seconds=None):
             finally:
                 elapsed = time.monotonic() - started
                 stop.set()
-                if proc is not None:
+                if worker is not None:
                     worker.join(timeout=5)
                 result = {"event": "finished", "id": ident, "elapsed_seconds": elapsed,
                           "returncode": status, "failure": failure, "logs": str(logdir.relative_to(ROOT)),
@@ -220,6 +273,49 @@ def run_budgeted(command, label, stage="v0", max_seconds=None):
                 print(json.dumps({**{k: v for k, v in result.items() if k != "pmon_samples"},
                                   "pmon_sample_count": len(samples)}), flush=True)
         return status
+
+
+def reconcile_interrupted(stage="v1"):
+    """Only with the GPU lock free and no surviving budget-tagged child.
+    Missing terminal timing is charged the wall-clock upper bound, never zero.
+    """
+    directory=budget_root(stage); ledger=directory/"gpu_budget.jsonl"
+    (ROOT/".runtime").mkdir(exist_ok=True)
+    with (ROOT/".runtime/gpu.lock").open("a") as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        records=[json.loads(line) for line in ledger.read_text().splitlines()] if ledger.exists() else []
+        ended={r["id"] for r in records if r["event"]=="finished"}
+        active=[r for r in records if r["event"]=="started" and r["id"] not in ended]
+        used=sum(r["elapsed_seconds"] for r in records if r["event"]=="finished")
+        reconciled=[]
+        for start in active:
+
+            marker=("IMAGECALGACUS_BUDGETED="+start["id"]).encode()
+            sidecar=directory/"logs"/start["id"]/"process.json"
+            if sidecar.exists():
+                child=json.loads(sidecar.read_text())
+                stat=Path("/proc")/str(child["pid"])/"stat"
+                if stat.exists() and stat.read_text().split()[21]==child["start_ticks"]:
+                    raise RuntimeError("interrupted recorded child still alive; no new jobs")
+
+            for process in Path("/proc").iterdir():
+                if not process.name.isdigit(): continue
+                try:
+                    if process.stat().st_uid!=os.getuid(): continue
+                    environment=(process/"environ").read_bytes()
+                except (OSError,PermissionError): continue
+                if marker in environment.split(b"\0"):
+                    raise RuntimeError("interrupted model process still alive; preserve and wait: "+process.name)
+            elapsed=max(0.,(datetime.now(timezone.utc)-datetime.fromisoformat(start["utc"])).total_seconds())
+            used+=elapsed
+            row={"event":"finished","id":start["id"],"elapsed_seconds":elapsed,"returncode":-1,
+                 "failure":"interrupted_wall_clock_upper_bound","pid":None,"pmon_samples":[],
+                 "logs":str((directory/"logs"/start["id"]).relative_to(ROOT)),
+                 "cumulative_seconds":used,"timing_is_conservative_upper_bound":True}
+            with ledger.open("a") as stream:
+                stream.write(json.dumps(row)+"\n"); stream.flush(); os.fsync(stream.fileno())
+            reconciled.append(row)
+        return reconciled
 
 
 def main():
@@ -239,7 +335,8 @@ def main():
         active_seconds = sum((datetime.now(timezone.utc) - datetime.fromisoformat(r["utc"])).total_seconds() for r in active)
         print(json.dumps({"stage": args.stage, "completed_seconds": used, "active_elapsed_seconds": active_seconds,
                           "other_stage_seconds": budget_state("v0" if args.stage == "v1" else "v1")[0],
-                          "remaining_seconds": GPU_LIMIT_SECONDS - used - active_seconds,
+                          "phase_limit_seconds": phase_limit(args.stage),
+                          "remaining_seconds": phase_limit(args.stage) - used - active_seconds,
                           "active_jobs": [r["id"] for r in active], "completed_jobs": len(ended)}))
         return
     command = args.command[1:] if args.command[:1] == ["--"] else args.command

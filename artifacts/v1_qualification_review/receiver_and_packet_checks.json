@@ -1,0 +1,1522 @@
+[
+  {
+    "case": "I1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I5-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I6-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I6-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I6-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I6-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T3-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T6-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T6-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I1-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I1-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I5-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I5-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T1-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T1-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T3-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "T3-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577",
+    "historical": true,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "original retained sender identity and original receiver/process/model evidence; not attributed to the new controller"
+  },
+  {
+    "case": "I7-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T7-row2-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T7-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T6-row1-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I10-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T3-row2-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I2-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I7-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I1-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I19-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I15-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I18-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T8-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I8-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I11-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I13-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I20-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I6-prompt2-arithmetic-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I15-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I14-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I15-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I3-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I14-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I16-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T16-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I2-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I9-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I9-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T18-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T18-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T9-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I11-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T9-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I13-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I7-prompt2-arithmetic-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I17-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I6-prompt1-arithmetic-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I8-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T6-row2-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I3-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I14-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I16-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I11-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T16-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T13-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I20-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T13-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I12-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I1-prompt2-gated-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I18-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I5-prompt2-gated-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T6-row2-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I5-prompt2-arithmetic-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T17-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I2-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I4-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T10-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T2-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T12-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T11-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T1-row2-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I16-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I7-prompt2-gated-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I1-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I17-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T5-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T5-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T7-row2-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T1-row2-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I20-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T14-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T2-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I10-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T11-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I13-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I10-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I10-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I4-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T19-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T8-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I8-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I6-prompt2-gated-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T4-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I8-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T10-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I17-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I19-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T7-row1-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I12-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I6-prompt1-gated-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I12-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T14-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T1-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I18-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I5-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I19-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I19-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T3-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T20-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I4-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I18-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I15-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T3-row2-arithmetic",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I1-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I5-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T7-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T12-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I2-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I17-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I14-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I7-prompt1-arithmetic-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I9-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I11-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I13-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I1-prompt2-arithmetic-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T4-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T20-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I7-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I20-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T19-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I5-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I3-prompt2-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T15-row2-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I7-prompt1-fixed-static",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I16-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T17-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I9-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I12-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T7-row1-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I4-prompt1-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T15-row1-fixed",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I3-prompt2-fixed-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "T6-row1-gated",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  },
+  {
+    "case": "I7-prompt1-gated-sequence",
+    "four_inputs": true,
+    "fresh_process": true,
+    "paired_packet_authenticated_against_source": true,
+    "execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical": false,
+    "receiver_native_source_hash": null,
+    "receiver_source_identity_basis": "frozen controller/group source check, recorded sender hash, fresh receiver command/PID; receiver report has no native source-hash field"
+  }
+]
