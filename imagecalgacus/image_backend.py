@@ -1,4 +1,5 @@
 """GPU PixelCNN++ and lossless observable-pixel I/O."""
+import hashlib
 import importlib.metadata
 from pathlib import Path
 import struct
@@ -53,8 +54,32 @@ def write_png(path, pixels):
         raise ValueError("PNG roundtrip changed pixels")
 
 
+class DistributionDigest:
+    """Output-only exact stream fingerprints; no packet or diagnostic inputs."""
+    def __init__(self):
+        self.steps = 0
+        self.hashes = {name: hashlib.sha256() for name in ("eligible_ids", "probabilities", "rank_order")}
+
+    def observe(self, ids, probabilities, order):
+        for name, values, dtype in (("eligible_ids", ids, "<i8"),
+                                    ("probabilities", probabilities, "<f8"),
+                                    ("rank_order", order, "<i8")):
+            values = np.asarray(values, dtype=dtype)
+            self.hashes[name].update(struct.pack("<QQ", self.steps, values.size))
+            self.hashes[name].update(values.tobytes(order="C"))
+        self.steps += 1
+
+    def summary(self):
+        return {"steps": self.steps, "format": "position,length:uint64le; ids/order:int64le; probabilities:float64le",
+                **{name+"_sha256": value.hexdigest() for name, value in self.hashes.items()}}
+
+
 class ImageBackend:
-    def __init__(self, profile):
+    def __init__(self, profile, execution_mode="reference", audit=False):
+        if execution_mode not in {"reference", "cuda_graph"}:
+            raise ValueError("unknown image execution mode; no fallback")
+        self.execution_mode = execution_mode
+        self.audit = audit
         self.evidence = {"device": configure_gpu(profile, "image")}
         path = verified_model(profile, "image")
         import torch
@@ -104,8 +129,65 @@ class ImageBackend:
         self.canvas = np.zeros((32, 32, 3), dtype=np.uint8)
         self.position = 0
         self.conditionals = None
+        self.digest = DistributionDigest() if audit else None
+        self.execution_setup_seconds = 0.0
+        self.evidence["execution_mode"] = execution_mode
+        if execution_mode == "cuda_graph":
+            self._prepare_graph()
+        self.evidence["execution_setup_seconds"] = self.execution_setup_seconds
+
+    def _prepare_graph(self):
+        """Capture the unchanged model, with fixed addresses and side-stream warmup.
+        No precision, launch-blocking, cuDNN or cuBLAS setting is relaxed.
+        See PyTorch CUDA semantics and installed torch 2.5.1 cuda/graphs.py.
+        """
+        torch = self.torch
+        started = time.monotonic()
+        stream = torch.cuda.Stream()
+        with torch.inference_mode():
+            self.graph_input = torch.zeros((1, 3, 32, 32), device=self.device, dtype=torch.float32)
+            stream.wait_stream(torch.cuda.current_stream())
+            with torch.cuda.stream(stream):
+                for _ in range(3):
+                    warm_output = self.model(self.graph_input, sample=True)
+            torch.cuda.current_stream().wait_stream(stream)
+            torch.cuda.synchronize()
+            del warm_output
+            self.graph = torch.cuda.CUDAGraph()
+            with torch.cuda.graph(self.graph, stream=stream):
+                self.graph_output = self.model(self.graph_input, sample=True)
+        torch.cuda.synchronize()
+        self.graph_start = torch.cuda.Event(enable_timing=True)
+        self.graph_end = torch.cuda.Event(enable_timing=True)
+        self.execution_setup_seconds = time.monotonic() - started
+        self.evidence.update(graph_warmup_forwards=3, graph_capture=True,
+                             graph_capture_error_mode="global", graph_input_shape=[1, 3, 32, 32])
+
+    def _graph_forward(self, canvas=None):
+        torch = self.torch
+        data = self.canvas if canvas is None else canvas
+        # Exactly the reference's host float32 normalization and layout.
+        normalized = (data.astype(np.float32) * np.float32(2 / 255) - np.float32(1))
+        host = torch.from_numpy(normalized.transpose(2, 0, 1).copy()).unsqueeze(0)
+        with torch.inference_mode():
+            self.graph_input.copy_(host)
+            self.graph_start.record()
+            self.graph.replay()
+            self.graph_end.record()
+            torch.cuda.synchronize()
+            self.cuda_milliseconds += self.graph_start.elapsed_time(self.graph_end)
+            self.evidence["inference_mode"] = torch.is_inference_mode_enabled()
+        self.calls += 1
+        self.evidence.update(input_device=str(self.graph_input.device),
+                             output_device=str(self.graph_output.device),
+                             cuda_model_milliseconds=self.cuda_milliseconds)
+        # Borrowed until the next forward. distribution() immediately copies the
+        # selected parameters to CPU; no output from another sequence is reused.
+        return self.graph_output
 
     def forward(self, canvas=None):
+        if self.execution_mode == "cuda_graph":
+            return self._graph_forward(canvas)
         torch = self.torch
         data = self.canvas if canvas is None else canvas
         normalized = (data.astype(np.float32) * np.float32(2 / 255) - np.float32(1))
@@ -136,6 +218,8 @@ class ImageBackend:
             self.canvas[0] = np.frombuffer(context, dtype=np.uint8).reshape(32, 3)
             self.position = 96
         self.conditionals = None
+        if self.audit:
+            self.digest = DistributionDigest()
 
     def distribution(self):
         if self.position >= 3072:
@@ -146,7 +230,11 @@ class ImageBackend:
             params = output[0, :, pixel // 32, pixel % 32].detach().cpu().numpy().astype(np.float64)
             del output
             self.conditionals = RGBConditionals(params)
-        return self.conditionals.distribution()
+        result = self.conditionals.distribution()
+        if self.digest is not None:
+            self.digest.observe(*result)
+            self.evidence["distribution_digest"] = self.digest.summary()
+        return result
 
     def observe(self, symbol):
         self.conditionals.observe(int(symbol))
@@ -179,5 +267,10 @@ class ImageBackend:
         return self.evidence
 
     def close(self):
+        self.evidence["peak_cuda_allocated_bytes"] = self.torch.cuda.max_memory_allocated()
+        self.evidence["peak_cuda_reserved_bytes"] = self.torch.cuda.max_memory_reserved()
+        if self.execution_mode == "cuda_graph":
+            self.graph.reset()
+            del self.graph_output, self.graph_input, self.graph
         del self.model
         self.torch.cuda.empty_cache()

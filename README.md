@@ -2,7 +2,9 @@
 
 Current status: the bounded V2 prospective allocation is complete: 120 stego outcomes, 40 independent shared controls, 100 exact recoveries and 20 retained arithmetic-text capacity failures. Fixed and gated recovered 20/20 in each direction; arithmetic recovered 20/20 PNGs and 0/20 text carriers. See [V2 results and analysis](notes/v2_results.md), [the public review packet](artifacts/v2_review/README.md), and [CPU portability verification](notes/v1_test_portability.md). Accepted V1 qualification at revision 29d2ca2 and all earlier evidence remain unchanged. No further experimental allocation is implied.
 
-Stage allowances are V0 7,200 seconds, V1 50,400 seconds and V2 54,000 seconds, each absolute and non-transferable; the whole-project ceiling remains 144,000 seconds. Historical sections below describe their original checkpoints, not permission to rerun them.
+Engineering checkpoint: optional PixelCNN++ CUDA graph replay passed 11 exact matched development comparisons and achieved a 5.13× fresh-process speedup. The reference backend remains the default. See [GPU performance results](notes/gpu_performance.md) and [the benchmark review packet](artifacts/gpu_performance_review/README.md). This benchmark does not replace V2 timings or add prospective observations.
+
+Stage allowances are V0 7,200 seconds, V1 50,400 seconds, V2 54,000 seconds and the separate GPU performance benchmark 7,200 seconds, each absolute and non-transferable; the whole-project ceiling remains 144,000 seconds. Historical sections below describe their original checkpoints, not permission to rerun them.
 
 Transport of canonical 16×16 grayscale images through generated UTF-8 text, and 32–128-byte UTF-8 messages through generated RGB PNGs. Accepted V0 uses fixed radix 16; the bounded V1 pilot adds entropy gating and arithmetic coding, with documented arithmetic text capacity failures. Both neural backends use the selected local NVIDIA GPU. The receiver reads actual artifacts, not sender token IDs or latent codes.
 

@@ -1,0 +1,376 @@
+[
+  {
+    "case": "T1-arithmetic-r0-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T1-arithmetic-r0-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T1-fixed-r0-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T1-fixed-r0-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T1-fixed-r1-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T1-fixed-r1-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T1-fixed-r2-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T1-fixed-r2-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T1-gated-r0-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T1-gated-r0-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T4-fixed-r0-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T4-fixed-r0-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T4-fixed-r1-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T4-fixed-r1-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T4-fixed-r2-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T4-fixed-r2-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T5-fixed-r0-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T5-fixed-r0-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T5-fixed-r1-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  },
+  {
+    "case": "T5-fixed-r1-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T5-fixed-r2-reference",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "reference"
+  },
+  {
+    "case": "T5-fixed-r2-cuda_graph",
+    "input_roles": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "actual_names": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "passed": true,
+    "mode_is_explicit_execution_configuration": "cuda_graph"
+  }
+]

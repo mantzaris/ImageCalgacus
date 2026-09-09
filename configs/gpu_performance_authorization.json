@@ -1,0 +1,9 @@
+{
+  "authorization_id": "user-post-v2-gpu-performance-2h",
+  "stage": "gpu_performance",
+  "absolute_seconds": 7200,
+  "whole_project_seconds": 144000,
+  "scope": "bounded matched development-only image GPU execution benchmark; no V2 reruns or new scientific allocation",
+  "reviewed_revision": "5178dab",
+  "unused_other_phase_allowances_transfer": false
+}

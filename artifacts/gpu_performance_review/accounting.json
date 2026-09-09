@@ -1,0 +1,24 @@
+{
+  "usage_seconds": {
+    "v0": 3163.653124010041,
+    "v1": 39995.5091691459,
+    "v2": 42024.52764170886,
+    "gpu_performance": 2351.732528250024
+  },
+  "phase_limits_seconds": {
+    "v0": 7200,
+    "v1": 50400,
+    "v2": 54000,
+    "gpu_performance": 7200
+  },
+  "new_charged_seconds": 2351.732528250024,
+  "cumulative_charged_seconds": 87535.42246311482,
+  "benchmark_remaining_seconds": 4848.267471749976,
+  "whole_remaining_seconds": 56464.577536885176,
+  "whole_ceiling_seconds": 144000,
+  "allowance_is_not_spend": true,
+  "reserve_fraction": 0.25,
+  "forecast_with_one_reserve_seconds": 109419.27807889353,
+  "future_authorized_research_work_seconds": 0,
+  "reserve_is_unused_planning_cushion": true
+}

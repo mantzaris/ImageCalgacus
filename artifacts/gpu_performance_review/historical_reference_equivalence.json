@@ -1,0 +1,37 @@
+[
+  {
+    "comparison": "T1-arithmetic-r0",
+    "accepted_carrier": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/cases/T1-arithmetic/carrier.png",
+    "accepted_carrier_sha256": "94bcb4092a19604619db3658a56662e924555aed4aa29f44b7904a14acddb58a",
+    "byte_equal": true,
+    "historical_execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577"
+  },
+  {
+    "comparison": "T1-fixed-r0",
+    "accepted_carrier": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/cases/T1-fixed/carrier.png",
+    "accepted_carrier_sha256": "1aadb8e82582ec2040eaceb77979e5e308e3b6fe525c20ddf647b664bec6b774",
+    "byte_equal": true,
+    "historical_execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577"
+  },
+  {
+    "comparison": "T1-gated-r0",
+    "accepted_carrier": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_review/cases/T1-gated/carrier.png",
+    "accepted_carrier_sha256": "979c165e7d1b49a017084ec19f7bb294d68da0727c7e01de11f4e0d04d1fd6ed",
+    "byte_equal": true,
+    "historical_execution_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577"
+  },
+  {
+    "comparison": "T4-fixed-r0",
+    "accepted_carrier": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_qualification_review/cases/T4-row1-fixed/carrier.png",
+    "accepted_carrier_sha256": "43aa19cc04d8989110210e039791edeee1a1d9257025978b0f10447498afbe63",
+    "byte_equal": true,
+    "historical_execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d"
+  },
+  {
+    "comparison": "T5-fixed-r0",
+    "accepted_carrier": "/home/meow/Documents/repos/ImageCalgacus/artifacts/v1_qualification_review/cases/T5-row1-fixed/carrier.png",
+    "accepted_carrier_sha256": "7774256b8b682d99da13daa745c4ebec5797d2660ff227573ad8c6a55a773688",
+    "byte_equal": true,
+    "historical_execution_source_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d"
+  }
+]

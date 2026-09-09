@@ -1,0 +1,175 @@
+{
+  "modes": {
+    "reference": {
+      "forward_seconds": [
+        0.29850887999054976,
+        0.09587498201290146,
+        0.09236552802030928,
+        0.09253725301823579,
+        0.0887192789814435,
+        0.09174504299880937,
+        0.08656327301287092,
+        0.08215972897596657,
+        0.08348993401159532
+      ],
+      "mean_forward_seconds": 0.11244043344696467,
+      "output_hashes": [
+        "05629fb6e058028b2ecceaeaffcf7440bfb6efc91075abb5f7c017cd166c28c6",
+        "0befb1a7754de1de19e1df6b67adef11edd9502c20dff5ee27db4008c50ea5ab",
+        "7d95cffdd59d9fefb8a7cfa2488e73912879745a28e2dd29af8ea05ca296b606",
+        "05629fb6e058028b2ecceaeaffcf7440bfb6efc91075abb5f7c017cd166c28c6",
+        "0befb1a7754de1de19e1df6b67adef11edd9502c20dff5ee27db4008c50ea5ab",
+        "7d95cffdd59d9fefb8a7cfa2488e73912879745a28e2dd29af8ea05ca296b606",
+        "05629fb6e058028b2ecceaeaffcf7440bfb6efc91075abb5f7c017cd166c28c6",
+        "0befb1a7754de1de19e1df6b67adef11edd9502c20dff5ee27db4008c50ea5ab",
+        "7d95cffdd59d9fefb8a7cfa2488e73912879745a28e2dd29af8ea05ca296b606"
+      ],
+      "exact_outputs": [],
+      "cold_load_seconds": 0.8493861199822277,
+      "gpu_evidence": {
+        "device": {
+          "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+          "pci_bus_id": "00000000:09:00.0",
+          "name": "NVIDIA RTX 5000 Ada Generation",
+          "total_mib": 32760,
+          "free_mib_before": 32220,
+          "driver": "590.48.01",
+          "logical_device": 0,
+          "effective_environment": {
+            "CUDA_LAUNCH_BLOCKING": "1",
+            "GGML_CUDA_DISABLE_GRAPHS": "1",
+            "GGML_CUDA_DISABLE_FUSION": "1",
+            "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+            "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+            "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+            "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+          },
+          "pid": 1518833
+        },
+        "backend": "torch",
+        "version": "2.5.1+cu124",
+        "cuda_runtime": "12.4",
+        "cudnn": 90100,
+        "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "strict_loading": true,
+        "checkpoint_key_mapping": "strip uniform module. prefix",
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "parameter_devices": [
+          "cuda:0"
+        ],
+        "eval_mode": true,
+        "deterministic_algorithms": true,
+        "tf32": false,
+        "gpu_allocation": [
+          "1518833, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+        ],
+        "execution_mode": "reference",
+        "execution_setup_seconds": 0.0,
+        "inference_mode": true,
+        "input_device": "cuda:0",
+        "output_device": "cuda:0",
+        "cuda_model_milliseconds": 1004.698616027832,
+        "peak_cuda_allocated_bytes": 507231744,
+        "peak_cuda_reserved_bytes": 541065216
+      }
+    },
+    "cuda_graph": {
+      "forward_seconds": [
+        0.01368646600167267,
+        0.01220648200251162,
+        0.012236423994181678,
+        0.012344723974820226,
+        0.01229082900681533,
+        0.012291677005123347,
+        0.012266500998521224,
+        0.0122355550120119,
+        0.012468381988583133
+      ],
+      "mean_forward_seconds": 0.012447448887137903,
+      "output_hashes": [
+        "05629fb6e058028b2ecceaeaffcf7440bfb6efc91075abb5f7c017cd166c28c6",
+        "0befb1a7754de1de19e1df6b67adef11edd9502c20dff5ee27db4008c50ea5ab",
+        "7d95cffdd59d9fefb8a7cfa2488e73912879745a28e2dd29af8ea05ca296b606",
+        "05629fb6e058028b2ecceaeaffcf7440bfb6efc91075abb5f7c017cd166c28c6",
+        "0befb1a7754de1de19e1df6b67adef11edd9502c20dff5ee27db4008c50ea5ab",
+        "7d95cffdd59d9fefb8a7cfa2488e73912879745a28e2dd29af8ea05ca296b606",
+        "05629fb6e058028b2ecceaeaffcf7440bfb6efc91075abb5f7c017cd166c28c6",
+        "0befb1a7754de1de19e1df6b67adef11edd9502c20dff5ee27db4008c50ea5ab",
+        "7d95cffdd59d9fefb8a7cfa2488e73912879745a28e2dd29af8ea05ca296b606"
+      ],
+      "exact_outputs": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "cold_load_seconds": 0.779902118985774,
+      "gpu_evidence": {
+        "device": {
+          "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+          "pci_bus_id": "00000000:09:00.0",
+          "name": "NVIDIA RTX 5000 Ada Generation",
+          "total_mib": 32760,
+          "free_mib_before": 31786,
+          "driver": "590.48.01",
+          "logical_device": 0,
+          "effective_environment": {
+            "CUDA_LAUNCH_BLOCKING": "1",
+            "GGML_CUDA_DISABLE_GRAPHS": "1",
+            "GGML_CUDA_DISABLE_FUSION": "1",
+            "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+            "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+            "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+            "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+          },
+          "pid": 1518833
+        },
+        "backend": "torch",
+        "version": "2.5.1+cu124",
+        "cuda_runtime": "12.4",
+        "cudnn": 90100,
+        "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+        "strict_loading": true,
+        "checkpoint_key_mapping": "strip uniform module. prefix",
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "parameter_devices": [
+          "cuda:0"
+        ],
+        "eval_mode": true,
+        "deterministic_algorithms": true,
+        "tf32": false,
+        "gpu_allocation": [
+          "1518833, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 652"
+        ],
+        "execution_mode": "cuda_graph",
+        "graph_warmup_forwards": 3,
+        "graph_capture": true,
+        "graph_capture_error_mode": "global",
+        "graph_input_shape": [
+          1,
+          3,
+          32,
+          32
+        ],
+        "execution_setup_seconds": 0.49145044398028404,
+        "inference_mode": true,
+        "input_device": "cuda:0",
+        "output_device": "cuda:0",
+        "cuda_model_milliseconds": 104.47974586486816,
+        "peak_cuda_allocated_bytes": 530420736,
+        "peak_cuda_reserved_bytes": 815792128
+      }
+    }
+  },
+  "output_bytes_equal": true,
+  "failure": null,
+  "forward_speedup": 9.033211099436665,
+  "continue": true
+}

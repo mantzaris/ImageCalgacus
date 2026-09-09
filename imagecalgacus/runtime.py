@@ -24,7 +24,7 @@ CUDA_SETTINGS = {
     "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
     "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
 }
-DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200, "v2": 0}
+DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200, "v2": 0, "gpu_performance": 0}
 V1_QUALIFICATION_AUTHORIZATION = {
     "authorization_id": "user-v1-qualification-additional-12h",
     "stage": "v1", "previous_seconds": 7200, "additional_seconds": 43200,
@@ -41,6 +41,27 @@ V2_PROSPECTIVE_AUTHORIZATION = {
     "reviewed_revision": "29d2ca2ff7e0cdf6f3a6c000d1ad7948ac8a7bc3",
     "unused_other_phase_allowances_transfer": False,
 }
+
+
+GPU_PERFORMANCE_AUTHORIZATION = {
+    "authorization_id": "user-post-v2-gpu-performance-2h",
+    "stage": "gpu_performance", "absolute_seconds": 7200,
+    "whole_project_seconds": 144000,
+    "scope": "bounded matched development-only image GPU execution benchmark; no V2 reruns or new scientific allocation",
+    "reviewed_revision": "5178dab",
+    "unused_other_phase_allowances_transfer": False,
+}
+
+
+def apply_performance_allowance(path=None):
+    """Separate absolute cap; repeating the authorization never adds time."""
+    path = Path(path) if path is not None else ROOT/"configs/gpu_performance_authorization.json"
+    if path.exists():
+        if json.loads(path.read_text()) != GPU_PERFORMANCE_AUTHORIZATION:
+            raise ValueError("conflicting GPU performance authorization")
+        return False
+    atomic_json(path, GPU_PERFORMANCE_AUTHORIZATION)
+    return True
 
 
 def apply_v2_allowance(path=None):
@@ -68,6 +89,12 @@ def apply_v1_allowance(path=None):
 def phase_limit(stage, authorization_path=None):
     if stage not in DEFAULT_PHASE_LIMITS:
         raise ValueError("unknown budget stage")
+    if stage == "gpu_performance":
+        path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/gpu_performance_authorization.json"
+        if not path.exists(): return 0
+        if json.loads(path.read_text()) != GPU_PERFORMANCE_AUTHORIZATION:
+            raise ValueError("invalid or altered GPU performance authorization")
+        return GPU_PERFORMANCE_AUTHORIZATION["absolute_seconds"]
     if stage == "v2":
         path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/v2_gpu_authorization.json"
         if not path.exists(): return 0

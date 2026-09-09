@@ -1,0 +1,59 @@
+{
+  "routine_command": "IMAGECALGACUS_PRIVATE_TESTS=1 /home/meow/Documents/repos/llm-rankcloak/.venv/bin/python -B -m unittest discover -s tests -v",
+  "routine": {
+    "tests": 79,
+    "passed": 79,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "unittest_seconds": 11.671,
+    "process_wall_seconds": 11.82683608,
+    "exit_code": 0
+  },
+  "scope": "one local routine CPU suite after GPU completion; retained source-cache and historical-private integration enabled; no neural inference",
+  "focused_before_models": {
+    "tests": 5,
+    "passed": 5,
+    "unittest_seconds": 0.079,
+    "command": "python -B -m unittest discover -s tests -p test_gpu_performance.py -v"
+  },
+  "reference_forward_ast": {
+    "passed": true,
+    "reference_revision": "5178dab",
+    "comparison": "original ImageBackend.forward AST equals current forward after removal of optional execution-mode dispatch"
+  },
+  "additional_focused_guard_in_routine": "performance phase and whole-project caps refuse launch and preserve synthetic ledgers",
+  "portability": "accepted CPU portability work is unchanged; no new clean-checkout test campaign",
+  "raw_local_log": ".runtime/gpu_performance/cpu_suite.log",
+  "tested_file_sha256": {
+    "tests/test_allocation.py": "81351b98e37d72df7796123a420090300a110fca98a90bc5b65ff585f5d5b63c",
+    "tests/test_arithmetic_diagnosis.py": "d5e3769723cc9ef4847a6f086d9ca520140c655bb5d2c5bc1680e4756d07a780",
+    "tests/test_boundaries.py": "e9baa40b732577b60857962c2b3492230083df0e7a06895cb3f472d63ad117b8",
+    "tests/test_evaluator.py": "25761c6c70fd108dd2486ee4aafa96c532346a7bebe2b9f8890791193d79e2ee",
+    "tests/test_foundation.py": "39fd6fe1c228089f2ac4952cb71d6605c6db17be8e02ac1ad3a34948a9f9263b",
+    "tests/test_gpu_performance.py": "c4c687a37b2a044f911a418ec1fc050d501184fd1edfae8688baa0ad42870572",
+    "tests/test_ordinary_prefixes.py": "9c2fbe54936301315228969c1f0b5131c12918ec353b2bb17682545678489ad0",
+    "tests/test_pixels_text.py": "e3b7ec689bbece8383cf6a8a7a8f3466fa13d005556854a66ef7a3ee8b3ce872",
+    "tests/test_qualification_continuation.py": "3be85830368b5281ca5fa0ef2cf6ca2f421efd9207135589830c2659817f359a",
+    "tests/test_qualification_finalization.py": "d6807e1bb2f946178b45fec167a6f305e975fc87d20ffa4b27aa3bd9b214445d",
+    "tests/test_qualification_sources.py": "e70b21ab62a349d7d933aea2e901b54e5f41da6003ed948f16f862bf71d47a3e",
+    "tests/test_static_filter.py": "fb8979c2b0608695f4b95d98dc40abe38a5dbf0f884aa4b52f507f5e7ac8da65",
+    "tests/test_text_optimization.py": "2dcf81782927ff8114d46def04415a3d910cb354433b1e994dc75892ea6e9ec3",
+    "tests/test_transport_integration.py": "257f9f4eb9f980552ae1e47c7346894c7475b0959ec664b4a0ce3b66915d4ba1",
+    "tests/test_v1_coders.py": "fa0d768838a96f0bf7f90edbae4bacca2a36577d2cffda838ffcde9012bb5fa6",
+    "tests/test_v2_allocation.py": "c4a5a61a0e9856d5c6866bf0b72b75fd734949d8350f2fe3ac290e1b42a114f0",
+    "tests/test_v2_analysis.py": "9526df2a33e0accb0f2cab158fa86d90916f00d96b3228e99372e82bc1f00241"
+  },
+  "public_verification": {
+    "command": "python -B scripts/collect_gpu_performance.py --verify-public",
+    "passed": true,
+    "cases": 22,
+    "comparisons": 11,
+    "keys_or_models_required": false
+  },
+  "table_reproduction": {
+    "command": "python -B scripts/collect_gpu_performance.py --analyze-public",
+    "passed": true,
+    "analysis_code_sha256": "ccfdc749ed01c772084239cb538ff3a1f0b714bceffec3ccd7d8a802309be357"
+  }
+}

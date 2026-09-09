@@ -29,6 +29,8 @@ def read_source(path, direction):
 
 def encode(args):
     profile = read_profile(args.profile)
+    if args.direction != "text-to-image" and (getattr(args,"image_execution","reference") != "reference" or getattr(args,"image_distribution_audit",False)):
+        raise ValueError("image execution options are not text protocol options")
     if args.direction != "image-to-text" and "development_text_filter" in profile:
         raise ValueError("text-filter option is only for the development text comparison")
     payload = read_source(args.source,args.direction)
@@ -76,7 +78,8 @@ def encode(args):
             model=TextBackend(profile); carrier=inbox/"carrier.txt"; cap=2048
         else:
             from .image_backend import ImageBackend
-            model=ImageBackend(profile); carrier=inbox/"carrier.png"; cap=2976
+            model=ImageBackend(profile, execution_mode=getattr(args,"image_execution","reference"),
+                               audit=getattr(args,"image_distribution_audit",False)); carrier=inbox/"carrier.png"; cap=2976
         result["cold_load_seconds"]=model.load_seconds
         begin=time.monotonic(); model.start(context); phase="generation"
         rng=np.random.Generator(np.random.PCG64(profile["completion_seed"]))
@@ -143,6 +146,10 @@ def encode(args):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("direction",choices=["image-to-text","text-to-image"])
+    parser.add_argument("--image-execution", choices=["reference","cuda_graph"], default="reference",
+                        help="optional GPU execution mode; scientific profile is unchanged")
+    parser.add_argument("--image-distribution-audit", action="store_true",
+                        help="output-only exact eligible ID, probability and ordering fingerprints")
     parser.add_argument("--source",required=True)
     parser.add_argument("--profile",required=True)
     parser.add_argument("--context",required=True)

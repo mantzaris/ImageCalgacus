@@ -1,0 +1,271 @@
+{
+  "schema": "imagecalgacus-development-gpu-benchmark-1",
+  "stage": "gpu_performance",
+  "starting_revision": "5178dabfed42f8740366f6bb0a12d1070554735e",
+  "scientific_observations_added": 0,
+  "heldout_execution": false,
+  "selection_rule": "lowest numeric development text ID in each byte band 32-64,65-96,97-128; row1 only; no outcome selection",
+  "source_manifest_sha256": "9c20a5c11896c84d0f7accf2c5e4ad99c4e432f7bdd02bdaa2056ae3b048346f",
+  "cases": [
+    {
+      "split": "development",
+      "payload_id": "T1",
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "context_sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "method": "fixed",
+      "text_filter_arm": null,
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "replicate": 0,
+      "id": "T1-fixed",
+      "definition_id": "1a0b2724602e9e53307238d21d22a267bf7835a5e7f422247f0d3a3a36dd7be2",
+      "work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a",
+      "direction": "text-to-image",
+      "source": "data/qualification_v1/development/T1.txt",
+      "context": "data/qualification_v1/contexts/row1.rgb",
+      "context_id": "row1",
+      "profile": "configs/v1_fixed.json",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+      "pair_id": "T1-row1",
+      "reason": "fixed PNG independent artifact recovery across both rows",
+      "status": "credited",
+      "credit": {
+        "manifest": "artifacts/v1_review/pilot_manifest.json",
+        "case": "T1-fixed",
+        "work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a",
+        "kind": "accepted pilot observation, including capacity failures",
+        "original_source_hash": "d70e5e3321e1e5003eaa7687ca867229892ada937d89a70660bb7e3665aed577"
+      },
+      "bytes": 32,
+      "packet_sha256": "a916ea2aee8356af6a003770a7c30db4d3b5d6dd75b5bfd4f7fee4249cece350",
+      "historical_work_id": "0ecb9ebdc2bfa814f5e0f0452759915ca37e10698596ea252aa04e2260c8276a"
+    },
+    {
+      "split": "development",
+      "payload_id": "T4",
+      "source_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834",
+      "context_sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "method": "fixed",
+      "text_filter_arm": null,
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "replicate": 0,
+      "id": "T4-row1-fixed",
+      "definition_id": "a6ff7761f1fcef13dbda767490c0837b1fae8c5f4a543bf942cfbcdfa0ef06f4",
+      "work_id": "a410ffa8be6cb25294c567ad7fa562af7ad3141d0aa02eee052c2ffef4dc40af",
+      "direction": "text-to-image",
+      "source": "data/qualification_v1/development/T4.txt",
+      "context": "data/qualification_v1/contexts/row1.rgb",
+      "context_id": "row1",
+      "profile": "configs/v1_fixed.json",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+      "pair_id": "T4-row1",
+      "reason": "fixed PNG independent artifact recovery across both rows",
+      "status": "pending",
+      "bytes": 96,
+      "packet_sha256": "acae88034399c545c7706ad6907f6ee6b7c9e0412eb58668c342e7dd39b4a38d",
+      "historical_work_id": "a410ffa8be6cb25294c567ad7fa562af7ad3141d0aa02eee052c2ffef4dc40af"
+    },
+    {
+      "split": "development",
+      "payload_id": "T5",
+      "source_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8",
+      "context_sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "method": "fixed",
+      "text_filter_arm": null,
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "replicate": 0,
+      "id": "T5-row1-fixed",
+      "definition_id": "a69a87713e5a45b9789aa4e5eec3d3fb144118964011c001de49b794e9c75ab4",
+      "work_id": "8db8c64c6b000f0cf115cbf17e0fcf7aad2fa393081da93a782c7247a1162e2d",
+      "direction": "text-to-image",
+      "source": "data/qualification_v1/development/T5.txt",
+      "context": "data/qualification_v1/contexts/row1.rgb",
+      "context_id": "row1",
+      "profile": "configs/v1_fixed.json",
+      "model_id": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "source_hash": "886f953c9020ca89882a1a33d48661df5fdba020f2d1eca936955860ad070d70",
+      "pair_id": "T5-row1",
+      "reason": "fixed PNG independent artifact recovery across both rows",
+      "status": "pending",
+      "bytes": 128,
+      "packet_sha256": "0f610427b4b093e02b1e12c8831b5f134e43384170b879058a359de599304bd9",
+      "historical_work_id": "8db8c64c6b000f0cf115cbf17e0fcf7aad2fa393081da93a782c7247a1162e2d"
+    }
+  ],
+  "profiles": {
+    "fixed": {
+      "path": "configs/v1_fixed.json",
+      "sha256": "75aa20e656caa9f6b17958be0e6a43432663db99b7b6f718fdbcabe74487880e",
+      "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4"
+    },
+    "gated": {
+      "path": "configs/v1_gated.json",
+      "sha256": "d17988ae49462493875eaa0becbb97d8b07ef1f19d0c5c64e199fc214c74f246",
+      "profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b"
+    },
+    "arithmetic": {
+      "path": "configs/v1_arithmetic.json",
+      "sha256": "49587fab91dda8852b73483ca0d7e9194612eccebae63661db909141b29cf023",
+      "profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52"
+    }
+  },
+  "candidates": [
+    {
+      "mode": "cuda_graph",
+      "change": "capture/replay unchanged forward, persistent input/output and timing events; same normalization and synchronization",
+      "warmup_forwards": 3,
+      "fallback": "none; retain reference on capture/equivalence/benefit failure"
+    }
+  ],
+  "probe": {
+    "canvases": "row1 + zero suffix, row1 + uint8 ascending ramp suffix, row1 + descending ramp suffix",
+    "forwards_per_mode": 9,
+    "order": [
+      "reference",
+      "cuda_graph"
+    ],
+    "timeout_seconds": 180,
+    "full_output_comparison": "exact float32 bytes; all 100x32x32 outputs, no tolerance",
+    "minimum_forward_speedup_to_continue": 1.05
+  },
+  "comparisons": [
+    {
+      "id": "T1-fixed-r0",
+      "payload_id": "T1",
+      "method": "fixed",
+      "repetition": 0,
+      "mode_order": [
+        "reference",
+        "cuda_graph"
+      ]
+    },
+    {
+      "id": "T1-gated-r0",
+      "payload_id": "T1",
+      "method": "gated",
+      "repetition": 0,
+      "mode_order": [
+        "cuda_graph",
+        "reference"
+      ]
+    },
+    {
+      "id": "T1-arithmetic-r0",
+      "payload_id": "T1",
+      "method": "arithmetic",
+      "repetition": 0,
+      "mode_order": [
+        "reference",
+        "cuda_graph"
+      ]
+    },
+    {
+      "id": "T4-fixed-r0",
+      "payload_id": "T4",
+      "method": "fixed",
+      "repetition": 0,
+      "mode_order": [
+        "cuda_graph",
+        "reference"
+      ]
+    },
+    {
+      "id": "T5-fixed-r0",
+      "payload_id": "T5",
+      "method": "fixed",
+      "repetition": 0,
+      "mode_order": [
+        "reference",
+        "cuda_graph"
+      ]
+    },
+    {
+      "id": "T1-fixed-r1",
+      "payload_id": "T1",
+      "method": "fixed",
+      "repetition": 1,
+      "mode_order": [
+        "cuda_graph",
+        "reference"
+      ]
+    },
+    {
+      "id": "T4-fixed-r1",
+      "payload_id": "T4",
+      "method": "fixed",
+      "repetition": 1,
+      "mode_order": [
+        "reference",
+        "cuda_graph"
+      ]
+    },
+    {
+      "id": "T5-fixed-r1",
+      "payload_id": "T5",
+      "method": "fixed",
+      "repetition": 1,
+      "mode_order": [
+        "cuda_graph",
+        "reference"
+      ]
+    },
+    {
+      "id": "T1-fixed-r2",
+      "payload_id": "T1",
+      "method": "fixed",
+      "repetition": 2,
+      "mode_order": [
+        "reference",
+        "cuda_graph"
+      ]
+    },
+    {
+      "id": "T4-fixed-r2",
+      "payload_id": "T4",
+      "method": "fixed",
+      "repetition": 2,
+      "mode_order": [
+        "cuda_graph",
+        "reference"
+      ]
+    },
+    {
+      "id": "T5-fixed-r2",
+      "payload_id": "T5",
+      "method": "fixed",
+      "repetition": 2,
+      "mode_order": [
+        "reference",
+        "cuda_graph"
+      ]
+    }
+  ],
+  "processes_per_comparison": 4,
+  "job_timeout_seconds": 140,
+  "initial_conservative_bound_seconds": 6340,
+  "initial_basis": "V2 PNG processes average about 89 seconds; 140-second job bound includes graph setup, hashing and teardown; 180-second short probe",
+  "acceptance": [
+    "same immutable packet/profile/context/seed",
+    "fresh artifact-only receiver after sender exits",
+    "2976 identical per-position eligible IDs, float64 coder probabilities and stable ordering (length-framed SHA256 streams)",
+    "identical delivered PNG bytes, recovered source bytes and completion/authentication/outcome fields",
+    "strict CUDA weights/input/output, eval/inference mode, positive process-specific GPU activity",
+    "stop on unresolved discrepancy, infrastructure failure or inability to fit a complete comparison"
+  ],
+  "timing_repeats": "at most two extra fixed repeats; only after all five initial comparisons pass and mean occupied-pair speedup >=1.05",
+  "measurements": [
+    "charged fresh encode/decode process latency",
+    "payload bytes per charged encode+decode second",
+    "phase encode/decode seconds",
+    "cold model load",
+    "execution setup",
+    "CUDA-event forward interval",
+    "peak allocated/reserved CUDA bytes",
+    "process pmon samples"
+  ],
+  "sampling_caveat": "nvidia-smi pmon -c1 -s um repeated by wrapper (~1s); PID matched; sampled utilization is not sustained utilization",
+  "repetition_interpretation": "timing repeats of three development payloads, not new independent research observations",
+  "precision_or_protocol_change": false,
+  "created_utc": "2026-09-09T15:04:18.468135+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "timing_cases_completed": 22,
+  "exact_recoveries": 22,
+  "matched_comparisons": 11,
+  "frozen_maximum_comparisons": 11,
+  "all_frozen_comparisons_completed": true,
+  "missing": [],
+  "gpu_model_processes": 45,
+  "saved_evidence_valid": true,
+  "verification_scope": "CPU saved source/carrier/report hashes and allocation; no private-key authentication or neural replay"
+}

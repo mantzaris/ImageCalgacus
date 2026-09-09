@@ -1,0 +1,12 @@
+{
+  "allowlisted_export": true,
+  "private_material_scan_passed": true,
+  "excluded": [
+    "keys",
+    "sealed packets",
+    "weights",
+    "private environments",
+    "raw packet/interval traces"
+  ],
+  "public_reports_contain_only_exact_distribution_hashes": true
+}

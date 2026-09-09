@@ -29,6 +29,8 @@ def receive(args, arithmetic_observer=None):
         if not private_bits.is_relative_to(ROOT/".runtime") or private_bits.parent==inputs[0].parent or private_bits.exists():
             raise ValueError("private bit audit must be a new output under ignored .runtime, outside inputs")
     profile=read_profile(args.profile)
+    if args.direction != "text-to-image" and (getattr(args,"image_execution","reference") != "reference" or getattr(args,"image_distribution_audit",False)):
+        raise ValueError("image execution options are not text protocol options")
     if args.direction != "image-to-text" and "development_text_filter" in profile:
         raise ValueError("text-filter option is only for the development text comparison")
     context,key=Path(args.context).read_bytes(),Path(args.key).read_bytes()
@@ -59,7 +61,8 @@ def receive(args, arithmetic_observer=None):
             from .image_backend import ImageBackend,read_png
             pixels=read_png(args.carrier); symbols=pixels.reshape(-1).tolist()
             record["pixel_sha256"]=hashlib.sha256(pixels.tobytes()).hexdigest()
-            model=ImageBackend(profile); cap,expected_kind=2976,TEXT
+            model=ImageBackend(profile, execution_mode=getattr(args,"image_execution","reference"),
+                               audit=getattr(args,"image_distribution_audit",False)); cap,expected_kind=2976,TEXT
         record["cold_load_seconds"]=model.load_seconds
         record["parsed_symbol_count"]=len(symbols)
         begin=time.monotonic(); model.start(context); phase="replay"
@@ -129,6 +132,10 @@ def receive(args, arithmetic_observer=None):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("direction",choices=["image-to-text","text-to-image"])
+    parser.add_argument("--image-execution", choices=["reference","cuda_graph"], default="reference",
+                        help="optional GPU execution mode; scientific profile is unchanged")
+    parser.add_argument("--image-distribution-audit", action="store_true",
+                        help="output-only exact eligible ID, probability and ordering fingerprints")
     for name in ("carrier","profile","context","key","output","report"):
         parser.add_argument("--"+name,required=True)
     parser.add_argument("--private-arithmetic-trace",help="diagnostic output under ignored .runtime/; contains recovered packet bits")
