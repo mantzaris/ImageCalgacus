@@ -1,0 +1,9 @@
+{
+  "authorization_id": "user-v2-bounded-prospective-15h",
+  "stage": "v2",
+  "absolute_seconds": 54000,
+  "whole_project_seconds": 144000,
+  "scope": "120 frozen held-out stego units, up to 40 shared controls and initial CPU analysis; no extra matrix or lossless replay allocation",
+  "reviewed_revision": "29d2ca2ff7e0cdf6f3a6c000d1ad7948ac8a7bc3",
+  "unused_other_phase_allowances_transfer": false
+}

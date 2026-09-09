@@ -1,0 +1,2402 @@
+[
+  {
+    "case": "HI1-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "2abf53ecc3ab57db222c7a32a8b1f9cdd96ec6f82c9d01589d0c8b1d2196a9c7",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI1-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "2abf53ecc3ab57db222c7a32a8b1f9cdd96ec6f82c9d01589d0c8b1d2196a9c7",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI1-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "2abf53ecc3ab57db222c7a32a8b1f9cdd96ec6f82c9d01589d0c8b1d2196a9c7",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT1-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "21dacd6f70934232db0fbf2a0bbf475da54704aa168a83d01d351405f652a143",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT1-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "21dacd6f70934232db0fbf2a0bbf475da54704aa168a83d01d351405f652a143",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT1-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "21dacd6f70934232db0fbf2a0bbf475da54704aa168a83d01d351405f652a143",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI2-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "85fbfc1b5c8518fd6e592bf01a7b9c95b8f20c7db80eb5fee5e1ea3c4d98d103",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI2-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "85fbfc1b5c8518fd6e592bf01a7b9c95b8f20c7db80eb5fee5e1ea3c4d98d103",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI2-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "85fbfc1b5c8518fd6e592bf01a7b9c95b8f20c7db80eb5fee5e1ea3c4d98d103",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT2-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "864a31c101cf63090173bd457d4e4a6fb9506497cce83024cbcbb40aeb4abaab",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT2-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "864a31c101cf63090173bd457d4e4a6fb9506497cce83024cbcbb40aeb4abaab",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT2-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "864a31c101cf63090173bd457d4e4a6fb9506497cce83024cbcbb40aeb4abaab",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI3-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "08ea9f3554e45e6ed837e5232f5712fdf2b0fc2d6d71add2a303af12c8317617",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI3-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "08ea9f3554e45e6ed837e5232f5712fdf2b0fc2d6d71add2a303af12c8317617",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI3-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "08ea9f3554e45e6ed837e5232f5712fdf2b0fc2d6d71add2a303af12c8317617",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT3-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "c71a8651b9b2ac040a0f3cbef8162e0d47e72f36ac0b0ce86bbe95e9f291ddda",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT3-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "c71a8651b9b2ac040a0f3cbef8162e0d47e72f36ac0b0ce86bbe95e9f291ddda",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT3-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "c71a8651b9b2ac040a0f3cbef8162e0d47e72f36ac0b0ce86bbe95e9f291ddda",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI4-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "b7a444460c7c0960a7c49a07e45a8fabaad43204709cd8e65003d86d24490637",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI4-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "b7a444460c7c0960a7c49a07e45a8fabaad43204709cd8e65003d86d24490637",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI4-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "b7a444460c7c0960a7c49a07e45a8fabaad43204709cd8e65003d86d24490637",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT4-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "186bb855eac126209637a0aab770097eec95c98036dfbc6d70a6d0807d9db7cb",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT4-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "186bb855eac126209637a0aab770097eec95c98036dfbc6d70a6d0807d9db7cb",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT4-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "186bb855eac126209637a0aab770097eec95c98036dfbc6d70a6d0807d9db7cb",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI5-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "9ada796597031ff5fac275dcfe3eebef882db3919fec3fd6133ce402565857db",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI5-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "9ada796597031ff5fac275dcfe3eebef882db3919fec3fd6133ce402565857db",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI5-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "9ada796597031ff5fac275dcfe3eebef882db3919fec3fd6133ce402565857db",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT5-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "3b7eb41357e68984eb7b38adda99ae3e885a1737a21e047218dd4a2686aa0d27",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT5-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "3b7eb41357e68984eb7b38adda99ae3e885a1737a21e047218dd4a2686aa0d27",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT5-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "3b7eb41357e68984eb7b38adda99ae3e885a1737a21e047218dd4a2686aa0d27",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI6-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "dc97b657b0c1fc1bdb3a8e4e9467e71062d31ab9ad62a1c9cedf38f3f18fcc07",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI6-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "dc97b657b0c1fc1bdb3a8e4e9467e71062d31ab9ad62a1c9cedf38f3f18fcc07",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI6-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "dc97b657b0c1fc1bdb3a8e4e9467e71062d31ab9ad62a1c9cedf38f3f18fcc07",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT6-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "bd87c1cb9180021c291cee431a0f0d9b8c7acb2a869bcdf2df603ee40ebc3325",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT6-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "bd87c1cb9180021c291cee431a0f0d9b8c7acb2a869bcdf2df603ee40ebc3325",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT6-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "bd87c1cb9180021c291cee431a0f0d9b8c7acb2a869bcdf2df603ee40ebc3325",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI7-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "711c8403813af80d2b4475bdcfe35f5021c024d31343f1e2f8a9bd6761510385",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI7-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "711c8403813af80d2b4475bdcfe35f5021c024d31343f1e2f8a9bd6761510385",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI7-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "711c8403813af80d2b4475bdcfe35f5021c024d31343f1e2f8a9bd6761510385",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT7-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "42702bd5553276e821674dcb8bfebc4c9bf34e39c9eaa933a6c9db78a26f293a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT7-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "42702bd5553276e821674dcb8bfebc4c9bf34e39c9eaa933a6c9db78a26f293a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT7-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "42702bd5553276e821674dcb8bfebc4c9bf34e39c9eaa933a6c9db78a26f293a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI8-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "806825e95ba5baf96f318c77f0df94fad22daf66fa2c4e0b831d224cbcbf42ec",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI8-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "806825e95ba5baf96f318c77f0df94fad22daf66fa2c4e0b831d224cbcbf42ec",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI8-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "806825e95ba5baf96f318c77f0df94fad22daf66fa2c4e0b831d224cbcbf42ec",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT8-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "cc221d62209a622454907f3052391c131115f7760b06d8a3153e76e298fd12c4",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT8-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "cc221d62209a622454907f3052391c131115f7760b06d8a3153e76e298fd12c4",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT8-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "cc221d62209a622454907f3052391c131115f7760b06d8a3153e76e298fd12c4",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI9-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "28874fa4143a1805b03ae1a712ac7f5080ead0859ac9a6eff6d3b08ebd65cfa6",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI9-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "28874fa4143a1805b03ae1a712ac7f5080ead0859ac9a6eff6d3b08ebd65cfa6",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI9-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "28874fa4143a1805b03ae1a712ac7f5080ead0859ac9a6eff6d3b08ebd65cfa6",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT9-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "3ef8d72ef4fdc2f7af51b8be5c342770c824237adbe2d014d11d78bdfc737b3a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT9-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "3ef8d72ef4fdc2f7af51b8be5c342770c824237adbe2d014d11d78bdfc737b3a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT9-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "3ef8d72ef4fdc2f7af51b8be5c342770c824237adbe2d014d11d78bdfc737b3a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI10-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "ec4acac032bf17f9ba7cb611a6b8989c3e789e6f1aa796f40f686ece4b0d82cb",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI10-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "ec4acac032bf17f9ba7cb611a6b8989c3e789e6f1aa796f40f686ece4b0d82cb",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI10-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "ec4acac032bf17f9ba7cb611a6b8989c3e789e6f1aa796f40f686ece4b0d82cb",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT10-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "2d60948dd2530f0f850b7dbc876c58e04d1938666551a3910387d7cac2c3cc8a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT10-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "2d60948dd2530f0f850b7dbc876c58e04d1938666551a3910387d7cac2c3cc8a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT10-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "2d60948dd2530f0f850b7dbc876c58e04d1938666551a3910387d7cac2c3cc8a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI11-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "d7dd213d1213cc62fe254ed3804f0f1355781005ed0db0cba1d9578ef2f0d3a0",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI11-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "d7dd213d1213cc62fe254ed3804f0f1355781005ed0db0cba1d9578ef2f0d3a0",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI11-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "d7dd213d1213cc62fe254ed3804f0f1355781005ed0db0cba1d9578ef2f0d3a0",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT11-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "57397e8a6c10beca936c0f607a8ebc1b6ff4acc24a24f850cf1124c48d92d769",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT11-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "57397e8a6c10beca936c0f607a8ebc1b6ff4acc24a24f850cf1124c48d92d769",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT11-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "57397e8a6c10beca936c0f607a8ebc1b6ff4acc24a24f850cf1124c48d92d769",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI12-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "ee0df2bbf88732898c6995341ddb5c6d84640a4d0c2956195da686ce94f04ff9",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI12-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "ee0df2bbf88732898c6995341ddb5c6d84640a4d0c2956195da686ce94f04ff9",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI12-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "ee0df2bbf88732898c6995341ddb5c6d84640a4d0c2956195da686ce94f04ff9",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT12-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "e69ef6c2ec2038fbff17980fec3cbf3e6dc9ccc170067ecbaa8203f1ca3a4a51",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT12-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "e69ef6c2ec2038fbff17980fec3cbf3e6dc9ccc170067ecbaa8203f1ca3a4a51",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT12-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "e69ef6c2ec2038fbff17980fec3cbf3e6dc9ccc170067ecbaa8203f1ca3a4a51",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI13-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "365c1ace363ca27894593cdd14bbe688045b4eb6845956f48a8aeaf8c66e20f9",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI13-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "365c1ace363ca27894593cdd14bbe688045b4eb6845956f48a8aeaf8c66e20f9",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI13-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "365c1ace363ca27894593cdd14bbe688045b4eb6845956f48a8aeaf8c66e20f9",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT13-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "8a8c3318d555a499c869b16f261efde36e31f5490c7c258ac602af01fb0425db",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT13-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "8a8c3318d555a499c869b16f261efde36e31f5490c7c258ac602af01fb0425db",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT13-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "8a8c3318d555a499c869b16f261efde36e31f5490c7c258ac602af01fb0425db",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI14-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "a45853cab8a57d3791329a50e88744f0dc9caa756bccb46130e652560160beb0",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI14-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "a45853cab8a57d3791329a50e88744f0dc9caa756bccb46130e652560160beb0",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI14-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "a45853cab8a57d3791329a50e88744f0dc9caa756bccb46130e652560160beb0",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT14-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "5b178c850711aba48d21528029d0fcb33cd938f5e4cba3ee8639c9c0373a0143",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT14-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "5b178c850711aba48d21528029d0fcb33cd938f5e4cba3ee8639c9c0373a0143",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT14-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "5b178c850711aba48d21528029d0fcb33cd938f5e4cba3ee8639c9c0373a0143",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI15-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "6c9ccb492babb3cb4e5cbf97f1c30f4402459eecded8be5aa6d87aaba7730333",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI15-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "6c9ccb492babb3cb4e5cbf97f1c30f4402459eecded8be5aa6d87aaba7730333",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI15-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "6c9ccb492babb3cb4e5cbf97f1c30f4402459eecded8be5aa6d87aaba7730333",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT15-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "df645460b536889f46dd659fe76b586743d88c52eb4e9fa740ee881ce052683a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT15-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "df645460b536889f46dd659fe76b586743d88c52eb4e9fa740ee881ce052683a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT15-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "df645460b536889f46dd659fe76b586743d88c52eb4e9fa740ee881ce052683a",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI16-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "306f1c03c6f9244e6d392703297a884af216ae7958e0730e21c806aea9c3531f",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI16-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "306f1c03c6f9244e6d392703297a884af216ae7958e0730e21c806aea9c3531f",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI16-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "306f1c03c6f9244e6d392703297a884af216ae7958e0730e21c806aea9c3531f",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT16-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "ca28cc701cf56c24dd8c731ab2742374e59a5fb0b2501263799d4a0e547c3492",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT16-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "ca28cc701cf56c24dd8c731ab2742374e59a5fb0b2501263799d4a0e547c3492",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT16-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "ca28cc701cf56c24dd8c731ab2742374e59a5fb0b2501263799d4a0e547c3492",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI17-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "fba459449350c83482376be87582575108b8416a4ab83f3565b7748a683b445c",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI17-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "fba459449350c83482376be87582575108b8416a4ab83f3565b7748a683b445c",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI17-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "fba459449350c83482376be87582575108b8416a4ab83f3565b7748a683b445c",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT17-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "3b1392778650e38684222963fe419443a49ff3c3cf359559de04a09e8692b727",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT17-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "3b1392778650e38684222963fe419443a49ff3c3cf359559de04a09e8692b727",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT17-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "3b1392778650e38684222963fe419443a49ff3c3cf359559de04a09e8692b727",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI18-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "ebf8f90a0ed8e3642f7ee876df91b1669a5d027450a3f704648d14c0f93d8933",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI18-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "ebf8f90a0ed8e3642f7ee876df91b1669a5d027450a3f704648d14c0f93d8933",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI18-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "ebf8f90a0ed8e3642f7ee876df91b1669a5d027450a3f704648d14c0f93d8933",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT18-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "4792486e4faf17a1a20138d23c788d58a192e2aee940c88cfcf14c4616877b8b",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT18-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "4792486e4faf17a1a20138d23c788d58a192e2aee940c88cfcf14c4616877b8b",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT18-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "4792486e4faf17a1a20138d23c788d58a192e2aee940c88cfcf14c4616877b8b",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI19-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "efe2f7e2def76d7213553486b442ee5d73b0701123cd29dc0d4f87568db77fbd",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI19-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "efe2f7e2def76d7213553486b442ee5d73b0701123cd29dc0d4f87568db77fbd",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI19-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "efe2f7e2def76d7213553486b442ee5d73b0701123cd29dc0d4f87568db77fbd",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT19-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "345b4fe5cc64f1f794d34ea2829f1923cb4b5ad6e1295ce3e2e7033714510620",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT19-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "345b4fe5cc64f1f794d34ea2829f1923cb4b5ad6e1295ce3e2e7033714510620",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT19-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "345b4fe5cc64f1f794d34ea2829f1923cb4b5ad6e1295ce3e2e7033714510620",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI20-prompt1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "a01ac17017001456b2bb3e434e7b5f8df0226d2d52747cf0958ab7c9f3269470",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI20-prompt1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "a01ac17017001456b2bb3e434e7b5f8df0226d2d52747cf0958ab7c9f3269470",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HI20-prompt1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "a01ac17017001456b2bb3e434e7b5f8df0226d2d52747cf0958ab7c9f3269470",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.txt",
+      "profile.json",
+      "prompt.txt",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT20-row1-fixed",
+    "source_bound_packet": true,
+    "packet_sha256": "1a796a6074809d06530fbc37bdf2117984550a8b1525c25ab221f630c6a0aa66",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT20-row1-gated",
+    "source_bound_packet": true,
+    "packet_sha256": "1a796a6074809d06530fbc37bdf2117984550a8b1525c25ab221f630c6a0aa66",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  },
+  {
+    "case": "HT20-row1-arithmetic",
+    "source_bound_packet": true,
+    "packet_sha256": "1a796a6074809d06530fbc37bdf2117984550a8b1525c25ab221f630c6a0aa66",
+    "receiver_inputs": [
+      "carrier",
+      "profile",
+      "context",
+      "key"
+    ],
+    "input_files": [
+      "carrier.png",
+      "profile.json",
+      "row.rgb",
+      "run.key"
+    ],
+    "fresh_process": true,
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "receiver_source_identity_basis": "frozen controller/group plus sender hash and fresh command/PID; no native receiver source-hash field"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "allocation_complete": true,
+  "all_recovered": false,
+  "historical_evidence_preserved": true,
+  "protocol_code_unchanged": true,
+  "execution_source_frozen": true,
+  "gpu_activity_all_jobs": true,
+  "within_v2_limit": true,
+  "within_whole_limit": true,
+  "frozen_analysis": true,
+  "no_additional_matrix": true,
+  "no_new_lossless_replays": true
+}

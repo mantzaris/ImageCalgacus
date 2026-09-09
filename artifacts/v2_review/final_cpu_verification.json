@@ -1,0 +1,112 @@
+{
+  "scope": "final CPU verification after bounded V2 GPU execution; no private-key GPU replay",
+  "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+  "public_export": "/tmp/imagecalgacus-v2-final-public-EJPYql",
+  "public_environment_exclusions": [
+    "runs/",
+    ".runtime/",
+    "models/",
+    ".deps-text/",
+    "pinned source cache",
+    "PYTHONPATH",
+    "IMAGECALGACUS_PRIVATE_TESTS"
+  ],
+  "public_suite": {
+    "tests": 73,
+    "passed": 71,
+    "skipped": 2,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 7.628,
+    "skip_reasons": [
+      "explicit private historical integration prerequisite",
+      "pinned source cache absent"
+    ]
+  },
+  "private_suite": {
+    "tests": 73,
+    "passed": 73,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 11.447,
+    "prerequisites": "IMAGECALGACUS_PRIVATE_TESTS=1 and retained historical packets/keys/source cache"
+  },
+  "process_integration": {
+    "model_free_linux_child": true,
+    "pid_start_time_guard_passed": true,
+    "surviving_budget_marker_guard_passed": true,
+    "production_guards_weakened": false,
+    "unsupported_platform_policy": "skip only coherent-/proc-dependent integration with a specific reason"
+  },
+  "public_verifiers": {
+    "v0": {
+      "attempted": 10,
+      "exact": 10,
+      "complete": true
+    },
+    "v1_pilot": {
+      "attempted": 12,
+      "exact": 10,
+      "failures": 2,
+      "complete": true
+    },
+    "v1_2": {
+      "attempted": 6,
+      "exact": 5,
+      "failures": 1,
+      "complete": true
+    },
+    "v1_qualification": {
+      "attempted": 152,
+      "exact": 126,
+      "failures": 26,
+      "complete": true
+    },
+    "v2": {
+      "attempted": 120,
+      "exact": 100,
+      "failures": 20,
+      "controls": 40,
+      "complete": true
+    }
+  },
+  "analysis_reproduction": {
+    "statistical_content_sha256": "05da416e55a220fe1659328ba44ffcc0dce20ad937d35f7294e25c37d64a1d61",
+    "matching_csv_files": 3,
+    "matching_svg_files": 2,
+    "identical": true,
+    "cpu_seconds_initial": 0.8617019789817277,
+    "cpu_seconds_clean_export": 0.8436989449837711
+  },
+  "completed_run_continuation": {
+    "actual_entry_point": "python -B -m imagecalgacus.v2 --run runs/v2-prospective-001",
+    "passed": true,
+    "unchanged_run_and_ledger_files": 1846,
+    "new_model_jobs": 0,
+    "new_charged_seconds": 0,
+    "new_observations": 0,
+    "cpu_check_elapsed_seconds": 3.653147662000265
+  },
+  "saved_files": {
+    "strict_utf8_files_checked": 320,
+    "rgb_png_carriers_and_controls": 80,
+    "png_width": 32,
+    "png_height": 31,
+    "channel_values": 2976,
+    "viewable_recovered_grayscale_pngs_equal_raw": 40
+  },
+  "secret_scan": {
+    "passed": true,
+    "representations": [
+      "raw bytes",
+      "hex",
+      "base64"
+    ],
+    "secrets": "locally retained run keys and sealed packets; values never logged",
+    "no_weights_or_environments": true,
+    "no_raw_private_audit_traces": true,
+    "no_symlinks": true
+  },
+  "new_gpu_seconds": 0
+}

@@ -1,0 +1,16 @@
+{
+  "usage_seconds": {
+    "v0": 3163.653124010041,
+    "v1": 39995.5091691459,
+    "v2": 42024.52764170886
+  },
+  "cumulative_seconds": 85183.6899348648,
+  "phase_limits": {
+    "v0": 7200,
+    "v1": 50400,
+    "v2": 54000
+  },
+  "v2_remaining_seconds": 11975.47235829114,
+  "cumulative_remaining_seconds": 58816.3100651352,
+  "authorization_is_not_cost": true
+}

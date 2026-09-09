@@ -1,0 +1,32 @@
+{
+  "status": "interim execution checkpoint; not final allocation validation",
+  "checkpoint": "HT6-row1",
+  "source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+  "manifest_sha256": "643099adf3bf2df5e62db6e49917d86d0f0c766d3e0d51b6a33dc0c62abc5e6c",
+  "stego_outcomes": 36,
+  "exact_recoveries": 30,
+  "capacity_failures": 6,
+  "controls_completed": 12,
+  "pending_stego_at_checkpoint": 84,
+  "pending_controls_at_checkpoint": 28,
+  "v2_charged_seconds_at_checkpoint": 12905.205764115031,
+  "projected_whole_hours_with_one_reserve": 29.92240098618265,
+  "frozen_execution_files_unchanged": true,
+  "historical_protected_files": 4827,
+  "historical_files_unchanged": true,
+  "arithmetic_text": {
+    "full_recoveries": 0,
+    "attempts": 6,
+    "transient_nonnarrowing_case": "HI5-prompt1-arithmetic",
+    "nonnarrowing_steps": 1,
+    "longest_nonnarrowing_run": 1,
+    "recovered_bits": 2164,
+    "eligible_surprisal_bits": 2165.618856870268,
+    "quantized_minus_eligible_bits": -0.0034760015760184615,
+    "termination_reached": false,
+    "interpretation": "Insufficient information under the cap remains best supported; one transient quantization non-narrowing step is not prolonged stagnation or evidence of a synchronization defect.",
+    "all_independent_checks_passed": true
+  },
+  "no_new_gpu_job_for_this_cpu_check": true,
+  "authoritative_live_state": "runs/v2-prospective-001/progress.json and .runtime/v2/gpu_budget.jsonl (private runtime)"
+}

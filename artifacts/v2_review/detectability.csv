@@ -1,0 +1,13 @@
+direction,method,score,auc,grouped_95_interval,n_stego,n_unique_control_artifacts,failed_deliveries_included,valid_bootstrap_replicates,excluded,control_duplicates
+image-to-text,fixed,surprisal_bits_mean,1.0,"[1.0, 1.0]",20,20,0,2000,[],[]
+image-to-text,fixed,log_rank_mean,1.0,"[1.0, 1.0]",20,20,0,2000,[],[]
+image-to-text,gated,surprisal_bits_mean,1.0,"[1.0, 1.0]",20,20,0,2000,[],[]
+image-to-text,gated,log_rank_mean,1.0,"[1.0, 1.0]",20,20,0,2000,[],[]
+image-to-text,arithmetic,surprisal_bits_mean,0.38,"[0.26, 0.5025]",20,20,20,2000,[],[]
+image-to-text,arithmetic,log_rank_mean,0.36,"[0.2425, 0.4800624999999996]",20,20,20,2000,[],[]
+text-to-image,fixed,surprisal_bits_mean,0.885,"[0.7425, 0.985]",20,20,0,2000,[],[]
+text-to-image,fixed,log_rank_mean,0.84,"[0.6825, 0.965]",20,20,0,2000,[],[]
+text-to-image,gated,surprisal_bits_mean,0.83,"[0.7, 0.9375]",20,20,0,2000,[],[]
+text-to-image,gated,log_rank_mean,0.77,"[0.6299375, 0.8975]",20,20,0,2000,[],[]
+text-to-image,arithmetic,surprisal_bits_mean,0.5575,"[0.375, 0.7425624999999997]",20,20,0,2000,[],[]
+text-to-image,arithmetic,log_rank_mean,0.575,"[0.405, 0.7575624999999996]",20,20,0,2000,[],[]

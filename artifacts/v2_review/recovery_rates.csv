@@ -1,0 +1,7 @@
+direction,method,n,exact,rate,interval,goodput,unit,charged_seconds,failures
+image-to-text,fixed,20,20,1.0,"[0.8315665290169147, 1.0]",3.324675324675325,bits/token,2466.5223006399756,{}
+image-to-text,gated,20,20,1.0,"[0.8315665290169147, 1.0]",3.1246402731833047,bits/token,2945.7984298580704,{}
+image-to-text,arithmetic,20,0,0.0,"[0.0, 0.1684334709830853]",0.0,bits/token,16531.319536937008,"{""capacity"": 20}"
+text-to-image,fixed,20,20,1.0,"[0.8315665290169147, 1.0]",0.2505376344086021,bits/channel value,3563.6164919708535,{}
+text-to-image,gated,20,20,1.0,"[0.8315665290169147, 1.0]",0.2505376344086021,bits/channel value,3570.6591617341037,{}
+text-to-image,arithmetic,20,20,1.0,"[0.8315665290169147, 1.0]",0.2505376344086021,bits/channel value,3580.1518246989435,{}

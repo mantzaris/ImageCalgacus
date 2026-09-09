@@ -24,7 +24,7 @@ CUDA_SETTINGS = {
     "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
     "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
 }
-DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200}
+DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200, "v2": 0}
 V1_QUALIFICATION_AUTHORIZATION = {
     "authorization_id": "user-v1-qualification-additional-12h",
     "stage": "v1", "previous_seconds": 7200, "additional_seconds": 43200,
@@ -32,6 +32,26 @@ V1_QUALIFICATION_AUTHORIZATION = {
     "scope": "complete frozen V1 qualification and 20 development PNG lossless replays; no V2 or held-out carriers",
     "reviewed_revision": "b5f2d1e3b9e901e5dfe6a181b6ca5d95dc35ac4b",
 }
+
+
+V2_PROSPECTIVE_AUTHORIZATION = {
+    "authorization_id": "user-v2-bounded-prospective-15h",
+    "stage": "v2", "absolute_seconds": 54000, "whole_project_seconds": 144000,
+    "scope": "120 frozen held-out stego units, up to 40 shared controls and initial CPU analysis; no extra matrix or lossless replay allocation",
+    "reviewed_revision": "29d2ca2ff7e0cdf6f3a6c000d1ad7948ac8a7bc3",
+    "unused_other_phase_allowances_transfer": False,
+}
+
+
+def apply_v2_allowance(path=None):
+    """One absolute V2 authorization; old ledgers/allowances are untouched."""
+    path = Path(path) if path is not None else ROOT/"configs/v2_gpu_authorization.json"
+    if path.exists():
+        if json.loads(path.read_text()) != V2_PROSPECTIVE_AUTHORIZATION:
+            raise ValueError("conflicting V2 authorization; do not add another allowance")
+        return False
+    atomic_json(path,V2_PROSPECTIVE_AUTHORIZATION)
+    return True
 
 
 def apply_v1_allowance(path=None):
@@ -48,6 +68,12 @@ def apply_v1_allowance(path=None):
 def phase_limit(stage, authorization_path=None):
     if stage not in DEFAULT_PHASE_LIMITS:
         raise ValueError("unknown budget stage")
+    if stage == "v2":
+        path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/v2_gpu_authorization.json"
+        if not path.exists(): return 0
+        if json.loads(path.read_text()) != V2_PROSPECTIVE_AUTHORIZATION:
+            raise ValueError("invalid or altered V2 allowance authorization")
+        return V2_PROSPECTIVE_AUTHORIZATION["absolute_seconds"]
     path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/v1_gpu_authorization.json"
     if path.exists():
         if json.loads(path.read_text()) != V1_QUALIFICATION_AUTHORIZATION:
@@ -181,9 +207,9 @@ def verified_model(profile, modality):
 
 
 def budget_root(stage):
-    if stage not in {"v0", "v1"}:
+    if stage not in DEFAULT_PHASE_LIMITS:
         raise ValueError("unknown budget stage")
-    return ROOT / (".runtime" if stage == "v0" else ".runtime/v1")
+    return ROOT / (".runtime" if stage == "v0" else ".runtime/"+stage)
 
 
 def budget_state(stage="v0"):
@@ -202,13 +228,13 @@ def run_budgeted(command, label, stage="v0", max_seconds=None):
     with (ROOT / ".runtime/gpu.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         used, records = budget_state(stage)
-        other_used, _ = budget_state("v0" if stage == "v1" else "v1")
+        other_used = sum(budget_state(other)[0] for other in DEFAULT_PHASE_LIMITS if other != stage)
         remaining = min(phase_limit(stage) - used, 40 * 3600 - used - other_used)
         if max_seconds is not None:
             remaining = min(remaining, float(max_seconds))
         if remaining <= 0:
             raise RuntimeError("authorized phase GPU allowance exhausted")
-        ident = (stage + "-" if stage == "v1" else "") + "%03d-%s" % (len(records) // 2 + 1, label)
+        ident = (stage + "-" if stage != "v0" else "") + "%03d-%s" % (len(records) // 2 + 1, label)
         logdir = directory / "logs" / ident
         logdir.mkdir(parents=True, exist_ok=False)
         ledger = directory / "gpu_budget.jsonl"
@@ -322,7 +348,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--label")
     parser.add_argument("--status", action="store_true")
-    parser.add_argument("--stage", choices=["v0", "v1"], default="v0")
+    parser.add_argument("--stage", choices=list(DEFAULT_PHASE_LIMITS), default="v0")
     parser.add_argument("--max-seconds", type=float)
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
@@ -334,7 +360,7 @@ def main():
         used = sum(r["elapsed_seconds"] for r in records if r["event"] == "finished")
         active_seconds = sum((datetime.now(timezone.utc) - datetime.fromisoformat(r["utc"])).total_seconds() for r in active)
         print(json.dumps({"stage": args.stage, "completed_seconds": used, "active_elapsed_seconds": active_seconds,
-                          "other_stage_seconds": budget_state("v0" if args.stage == "v1" else "v1")[0],
+                          "other_stage_seconds": sum(budget_state(s)[0] for s in DEFAULT_PHASE_LIMITS if s != args.stage),
                           "phase_limit_seconds": phase_limit(args.stage),
                           "remaining_seconds": phase_limit(args.stage) - used - active_seconds,
                           "active_jobs": [r["id"] for r in active], "completed_jobs": len(ended)}))

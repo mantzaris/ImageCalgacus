@@ -1,8 +1,12 @@
-# ImageCalgacus: V0 and bounded V1 development
+# ImageCalgacus: bounded prospective text/image study
+
+Current status: the bounded V2 prospective allocation is complete: 120 stego outcomes, 40 independent shared controls, 100 exact recoveries and 20 retained arithmetic-text capacity failures. Fixed and gated recovered 20/20 in each direction; arithmetic recovered 20/20 PNGs and 0/20 text carriers. See [V2 results and analysis](notes/v2_results.md), [the public review packet](artifacts/v2_review/README.md), and [CPU portability verification](notes/v1_test_portability.md). Accepted V1 qualification at revision 29d2ca2 and all earlier evidence remain unchanged. No further experimental allocation is implied.
+
+Stage allowances are V0 7,200 seconds, V1 50,400 seconds and V2 54,000 seconds, each absolute and non-transferable; the whole-project ceiling remains 144,000 seconds. Historical sections below describe their original checkpoints, not permission to rerun them.
 
 Transport of canonical 16×16 grayscale images through generated UTF-8 text, and 32–128-byte UTF-8 messages through generated RGB PNGs. Accepted V0 uses fixed radix 16; the bounded V1 pilot adds entropy gating and arithmetic coding, with documented arithmetic text capacity failures. Both neural backends use the selected local NVIDIA GPU. The receiver reads actual artifacts, not sender token IDs or latent codes.
 
-See [the approved implementation plan](plan/implementation_plan.md), [attribution](THIRD_PARTY.md), and [V0 results](notes/v0_results.md). This is a small functionality demonstration, not a security, imperceptibility or journal-study result.
+See [the approved implementation plan](plan/implementation_plan.md), [attribution](THIRD_PARTY.md), and [V0 results](notes/v0_results.md). This is a focused feasibility study, not evidence of broad reliability, imperceptibility or resistance to unknown detectors.
 
 ## Environment
 
@@ -26,7 +30,7 @@ Do not rerun acquisition over an existing checkpoint. Read THIRD_PARTY.md before
 
 ## Budget and CPU tests
 
-Every neural-model command must run through imagecalgacus.runtime (or the demo runner that calls it). The wrapper serializes jobs, conservatively charges complete process wall time including model loading/CPU filtering, and terminates at the remaining allowance. Never delete/reset its ledger to evade the approved 7,200-second limit.
+Every neural-model command must run through imagecalgacus.runtime (or the demo runner that calls it). The wrapper serializes jobs, conservatively charges complete process wall time including model loading/CPU filtering, and terminates at the remaining allowance. Never delete/reset a ledger or transfer another phase's unused allowance. The stage-specific limits above and cumulative ceiling are enforced.
 
     /home/meow/Documents/repos/llm-rankcloak/.venv/bin/python -B -m imagecalgacus.runtime --status
     /home/meow/Documents/repos/llm-rankcloak/.venv/bin/python -B -m unittest discover -s tests -v
@@ -84,7 +88,7 @@ V0 artifacts and historical results remain unchanged. V1 adds strict entropy gat
 
 The optimized text path preserves top-256-before-filtering, exact eligible distributions/ranks, full-prefix tokenization, byte serialization and GPU replay settings. A matched-packet GPU harness compares the retained reference implementation against it. No candidate-limit, precision, model or backend change is used.
 
-V1 has a separate 7,200-second ledger; V0's 3,163.653124 seconds are retained. The global GPU lock is shared, so jobs remain sequential. Use --stage v1 on the wrapper:
+V1 originally had a separate 7,200-second allowance, subsequently amended once to 50,400 seconds for qualification; V0's 3,163.653124 seconds are retained. The global GPU lock is shared, so jobs remain sequential. Use --stage v1 on the wrapper:
 
     <control-python> -B -m imagecalgacus.runtime --stage v1 --status
     <control-python> -B -m imagecalgacus.runtime --stage v1 --label <new-label> -- <model-command>

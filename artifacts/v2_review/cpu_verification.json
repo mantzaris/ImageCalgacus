@@ -1,0 +1,77 @@
+{
+  "schema": "cpu-verification-v2-preexecution",
+  "protocol_computation_changed": false,
+  "cleanup_only": {
+    "clean_export": {
+      "tests": 64,
+      "passed": 62,
+      "skipped": 2,
+      "seconds": 7.537
+    },
+    "local_private": {
+      "tests": 64,
+      "passed": 64,
+      "skipped": 0,
+      "seconds": 11.228
+    }
+  },
+  "full_v2_source": {
+    "clean_export": {
+      "path_used": "/tmp/imagecalgacus-v2-public-1wMbU7",
+      "tests": 73,
+      "passed": 71,
+      "skipped": 2,
+      "seconds": 7.712,
+      "skips": [
+        "explicit opt-in historical private integration",
+        "pinned source cache absent"
+      ]
+    },
+    "local_private": {
+      "tests": 73,
+      "passed": 73,
+      "skipped": 0,
+      "seconds": 11.386
+    },
+    "platform_integration": "model-free Linux child PID/start-time and environment-marker survivor protections passed on execution host",
+    "public_qualification": {
+      "expected": 152,
+      "attempted": 152,
+      "exact": 126,
+      "recorded_failures": 26,
+      "allocation_complete": true
+    }
+  },
+  "historical_cpu_revalidation": [
+    {
+      "review": "artifacts/v0_review/ten-001",
+      "expected": 10,
+      "exact": 10,
+      "recorded_failures": 0,
+      "allocation_complete": true
+    },
+    {
+      "review": "artifacts/v1_review/cases",
+      "expected": 12,
+      "exact": 10,
+      "recorded_failures": 2,
+      "allocation_complete": true
+    },
+    {
+      "review": "artifacts/v1_2_review/cases",
+      "expected": 6,
+      "exact": 5,
+      "recorded_failures": 1,
+      "allocation_complete": true
+    }
+  ],
+  "preservation_before_first_group_complete": {
+    "protected_files": 4827,
+    "all_preserved": true
+  },
+  "no_neural_inference": true,
+  "charged_gpu_seconds": 0,
+  "public_command": "python -B -m unittest discover -s tests -v",
+  "private_command": "IMAGECALGACUS_PRIVATE_TESTS=1 python -B -m unittest discover -s tests -v",
+  "public_qualification_command": "python -B scripts/finalize_v1_qualification.py --verify-public artifacts/v1_qualification_review"
+}

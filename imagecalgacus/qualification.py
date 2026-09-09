@@ -282,24 +282,24 @@ def receiver_command(case,inbox,output,report):
         "--key",str(inbox/"run.key"),"--output",str(output),"--report",str(report)]
 
 
-def execute_case(directory,case,binding,first=False):
+def execute_case(directory,case,binding,first=False,stage="v1"):
     packet,key=verify_binding(binding,case)
     case_dir=directory/"cases"/case["id"]; state=sender_state(case_dir,case,binding)
     limit=job_limit(case,first)
     modality="text" if case["direction"]=="image-to-text" else "image"
     profile=read_profile(ROOT/case["profile"])
-    label="qualification-"+case["id"]
+    label=("prospective-" if stage=="v2" else "qualification-")+case["id"]
     if state=="unstarted":
         command=[profile[modality]["interpreter"],"-B","-m","imagecalgacus.sender",case["direction"],
             "--source",str(ROOT/case["source"]),"--profile",str(ROOT/case["profile"]),
             "--context",str(ROOT/case["context"]),"--prepared-packet",str(packet),"--key",str(key),
             "--new-run",str(case_dir)]
-        status=run_budgeted(command,label+"-encode",stage="v1",max_seconds=limit)
+        status=run_budgeted(command,label+"-encode",stage=stage,max_seconds=limit)
         if status not in (0,2): raise RuntimeError("sender execution failure; inspect retained attempt: "+case["id"])
         state=sender_state(case_dir,case,binding)
     if state not in {"receiver_pending","evaluate_pending"}:
         raise RuntimeError("interrupted/invalid sender preserved, no automatic reroll: "+case["id"])
-    audit=ROOT/".runtime/v1_qualification/audits"/case["id"]
+    audit=ROOT/(".runtime/v2/audits" if stage=="v2" else ".runtime/v1_qualification/audits")/case["id"]
     if state=="receiver_pending":
         # Interrupted receiver outputs are preserved, never used as receiver inputs.
         for path in (case_dir/"recovered.gray",case_dir/"recovered.txt",audit/"bits.txt",audit/"arithmetic.jsonl"):
@@ -311,7 +311,7 @@ def execute_case(directory,case,binding,first=False):
         command+=["--private-recovered-bits",str(audit/"bits.txt")]
         if case["method"]=="arithmetic":
             command+=["--private-arithmetic-trace",str(audit/"arithmetic.jsonl")]
-        status=run_budgeted(command,label+"-decode",stage="v1",max_seconds=limit)
+        status=run_budgeted(command,label+"-decode",stage=stage,max_seconds=limit)
         if status not in (0,1,2):raise RuntimeError("receiver execution interruption: "+case["id"])
     sender,receiver=read_json(case_dir/"sender.json"),read_json(case_dir/"receiver.json")
     row=evaluate_case(case,case_dir,write=True)
@@ -344,7 +344,7 @@ def execute_case(directory,case,binding,first=False):
     return record
 
 
-def execute_trace(directory,item,case_records):
+def execute_trace(directory,item,case_records,stage="v1"):
     target=directory/"traces"/item["id"]
     result_path=target/"result.json"
     if not result_path.exists():
@@ -363,7 +363,7 @@ def execute_trace(directory,item,case_records):
             if not lengths: raise ValueError("no realized carrier lengths for control group")
             command+=["--prefix-lengths",",".join(map(str,sorted(lengths)))]
         limit=900 if item["modality"]=="text" and item["symbols"]==2048 else 320 if item["modality"]=="text" else 130
-        status=run_budgeted(command,"qualification-"+item["id"],stage="v1",max_seconds=limit)
+        status=run_budgeted(command,("prospective-" if stage=="v2" else "qualification-")+item["id"],stage=stage,max_seconds=limit)
         if status:raise RuntimeError("ordinary/control execution failure: "+item["id"])
     result=read_json(result_path)
     if not result["passed"] or result["profile_id"]!=item["profile_id"] or result["context_sha256"]!=item["context_sha256"] or result["seed"]!=item["seed"] or result["symbols"]!=item["symbols"]:
