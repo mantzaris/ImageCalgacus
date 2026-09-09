@@ -1,0 +1,18 @@
+{
+  "V2": {
+    "source_revision": "29d2ca2ff7e0cdf6f3a6c000d1ad7948ac8a7bc3",
+    "execution_source_hash": "85d41373c1825afb562e38e8828ab44e5dc7729313c583d64dedbea1d8e3fd15",
+    "manifest_sha256": "643099adf3bf2df5e62db6e49917d86d0f0c766d3e0d51b6a33dc0c62abc5e6c"
+  },
+  "GPU": {
+    "source_revision": "5178dabfed42f8740366f6bb0a12d1070554735e",
+    "execution_source_hash": "b5e2a8f2c2e39276feeb08ee4ed2fd4f294563237e76e1537f04eb4566d0c71b",
+    "manifest_sha256": "851e82fe274ee647f2fb700150486cf3fc3604c6294837c92db08a5b9113f0ee"
+  },
+  "V1": {
+    "execution_package_hash": "12e3ed9fee516be823261afd53cada8173530db58f163ee0868d3bd84937512d",
+    "historical_revision": "b5f2d1e3b9e901e5dfe6a181b6ca5d95dc35ac4b",
+    "allocation_sha256": "60e129121f585ad431d2fee10351a24d5e419a10bfc171c813afb33b0cb41569",
+    "source_context_manifest_sha256": "9c20a5c11896c84d0f7accf2c5e4ad99c4e432f7bdd02bdaa2056ae3b048346f"
+  }
+}

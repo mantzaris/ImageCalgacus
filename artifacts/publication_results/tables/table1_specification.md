@@ -1,0 +1,18 @@
+# Experimental specification
+
+| Property | Image → text carrier | Text → PNG carrier |
+|---|---|---|
+| Canonical payload | 16 × 16 grayscale (L8), row-major; 256 raw pixel bytes | Literal strict UTF-8; allowed 32–128 B (held out: 58–128 B) |
+| Delivered carrier | UTF-8 file; at most 2,048 carrier tokens | Lossless PNG, 32 × 31 RGB8; 992 pixels / 2,976 channel values |
+| Model / checkpoint | Llama 3 8B Instruct LLM; QuantFactory Q4_K_M GGUF; 86c8ea6c8b75 | CIFAR-10 pretrained PixelCNN++ autoregressive image model; 5 residual blocks, 160 filters, 10 logistic mixtures; a5ed558f6d40 |
+| Inference profile | llama-cpp-python 0.3.23; full 33/33 eligible layers on CUDA; float64 probability bookkeeping | PyTorch 2.5.1+cu124; float32 CUDA forward; float64 discrete RGB conditional/mixture posterior probabilities |
+| Shared context | Frozen prompt1: temperate-forest field journal; prompt tokenization separate from carrier | Frozen row1: 1 × 32 RGB8 (96 B), prepended privately to a 32 × 32 model canvas |
+| Packet and framing | 292 B = 12 B nonce + encrypted (8 B header + 256 B slot) + 16 B tag; AES-256-GCM; zero slot padding | Same 292 B / 2,336-bit packet; one sealed packet shared across methods in each payload/context group |
+| Coding | Fixed radix 16; entropy-gated radix 16; finite-precision arithmetic A1 (32 bits) | Same three methods; RGB channel alphabet; raster order, then R/G/B |
+| Eligibility / gate | Top 256 before complete-prefix filtering; strict H > 0.598397 bits | Observable values 0–255; strict H > 3.215951 bits |
+| Stopping / completion | Known 2,336-bit target; exactly 32 ordinary tail tokens after packet completion, within cap | Known packet target; ordinary completion through all 2,976 delivered channels |
+| Exact recovery | Fresh receiver reconstructs tokens from saved UTF-8; authenticated parsing plus independent equality of all canonical pixels | Fresh receiver reconstructs symbols from saved PNG pixels; authenticated parsing plus independent literal source-byte equality |
+| Distinct payloads | Development 20 × 2 prompts; held out 20 × prompt1 | Development 20 × 2 rows; held out 20 × row1 |
+| V2 allocation | 60 stego units; 20 independent control traces with matched prefixes shared across methods | 60 stego units; 20 independent full-PNG controls shared across methods |
+
+Frozen scientific profiles, not the later optional GPU graph execution mode. Development uses 20 distinct payloads per direction; fixed-arm cross-context tests do not imply that every development payload had every method. V2 has 20 groups per direction, three paired methods and one context. Checkpoint hashes are abbreviated to 12 hexadecimal characters; gate values are rounded here only. Exact float64 thresholds, checkpoint hashes, contexts, runtime identities and source provenance are in data/protocol_identities.json. The 36 framing bytes and slot padding are different overheads. Text and image neural models are different autoregressive backends. Exactness concerns canonical source bytes, not pre-resize images or arbitrary source containers.

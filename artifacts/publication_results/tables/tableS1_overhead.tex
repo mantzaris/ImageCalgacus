@@ -1,0 +1,22 @@
+% Requires booktabs,array; full-precision numerical values are in the adjacent CSV.
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\ifdefined\pubtablewidth\else\newlength{\pubtablewidth}\fi
+\setlength{\pubtablewidth}{\dimexpr\linewidth-42pt\relax}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.140\pubtablewidth}>{\raggedright\arraybackslash}p{0.100\pubtablewidth}>{\raggedright\arraybackslash}p{0.160\pubtablewidth}>{\raggedright\arraybackslash}p{0.120\pubtablewidth}>{\raggedright\arraybackslash}p{0.120\pubtablewidth}>{\raggedright\arraybackslash}p{0.130\pubtablewidth}>{\raggedright\arraybackslash}p{0.140\pubtablewidth}>{\raggedright\arraybackslash}p{0.090\pubtablewidth}@{}}
+\toprule
+\textbf{Carrier / method} & \textbf{Slot pad (B)} & \textbf{Packet-positive positions} & \textbf{Skipped positions} & \textbf{Zero-bit positions} & \textbf{Completion positions} & \textbf{Packet bits / span symbol} & \textbf{Suffix bits} \\
+\midrule
+UTF-8 / Fixed & 0.0 & 584.00 & 0.00 & 0.00 & 32.00 & 4.000 & 0.0 \\[4pt]
+UTF-8 / Gated & 0.0 & 584.00 & 39.80 & 0.00 & 32.00 & 3.747 & 0.0 \\[4pt]
+UTF-8 / A1 & 0.0 & 399.40 & 0.00 & 1648.60 & 0.00 & --- & 0.0 \\[4pt]
+PNG / Fixed & 162.8 & 584.00 & 0.00 & 0.00 & 2392.00 & 4.000 & 0.0 \\[4pt]
+PNG / Gated & 162.8 & 584.00 & 100.50 & 0.00 & 2291.50 & 3.451 & 0.0 \\[4pt]
+PNG / A1 & 162.8 & 508.20 & 0.00 & 89.65 & 2378.15 & 3.934 & 28.9 \\[4pt]
+\bottomrule
+\end{tabular}
+\caption{Framing, padding and carrier-position overhead. Descriptive cell means over 20 held-out attempts. Every packet is 292 B: 36 B framing/encryption plus the 256 B payload slot. Rank alignment adds zero padding bits. The four position columns partition delivered symbols: packet-positive + skipped + zero-bit + completion. A1’s one successful termination position is already among packet-positive positions, never another position to add. Packet-span transport is 2,336 / packet stopping position (including skips/zero-bit steps), undefined for unfinished A1 text. Whole-carrier packet rates and file expansion are in the CSV. A1 PNG suffix bits (mean 28.9) are discarded zero-extension emissions, not useful packet bits; lookahead zeros (mean 29.9, CSV) overlap that diagnostic and must not be summed with it. A1 text reaches neither suffix processing nor completion.}
+\label{tab:tableS1_overhead}
+\end{table*}

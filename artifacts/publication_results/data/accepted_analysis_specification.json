@@ -1,0 +1,51 @@
+{
+  "questions": [
+    "artifact exact recovery",
+    "gating rate/overhead/distortion tradeoff",
+    "comparison with framed A1 including failures"
+  ],
+  "independent_unit": "payload/context group; 20 per direction, not 60 methods",
+  "bootstrap_replicates": 2000,
+  "confidence": 0.95,
+  "bootstrap_seed": 2026090901,
+  "bootstrap": "percentile; resample whole groups within image class or UTF-8 length band; carry methods and owned shared controls together",
+  "recovery_interval": "two-sided Clopper-Pearson exact binomial, including 0/n and n/n; Bernoulli working-model interval for a small fixed stratified sample",
+  "paired_binary_boundary_bound": "difference of 97.5% marginal Clopper-Pearson intervals (Bonferroni conservative); also retain paired grouped bootstrap",
+  "paired_metrics": [
+    "exact_complete",
+    "exact_goodput_bits_per_symbol",
+    "charged_pair_seconds",
+    "whole_surprisal_bits",
+    "whole_log_rank"
+  ],
+  "paired_order": [
+    [
+      "gated",
+      "fixed"
+    ],
+    [
+      "arithmetic",
+      "fixed"
+    ],
+    [
+      "arithmetic",
+      "gated"
+    ]
+  ],
+  "goodput": "incomplete or unauthenticated transmissions have zero exact goodput; packet-prefix progress is separate",
+  "scores": {
+    "surprisal_bits_mean": "higher means stego",
+    "log_rank_mean": "higher means stego"
+  },
+  "score_scope": "whole delivered carrier; model/context-aware observer; no packet-boundary features or extra scoring passes",
+  "auc": "empirical pairwise wins plus half ties; matched ordinary controls; include failed delivered carriers when scorable",
+  "duplicates": "deduplicate identical control artifact hashes within each direction/method cell; lowest frozen group ordinal owns it; retain other links without extra negatives; repeated bootstrap draws retain owner multiplicity",
+  "unscorable": "explicit missing carrier/control/whole score; never replace or infer scores",
+  "plots": [
+    "six-cell recovery with boundary-aware intervals",
+    "whole-carrier score AUC with grouped intervals"
+  ],
+  "no_label_selected_score_direction": true,
+  "no_detector_training": true,
+  "lossless_replays_already_satisfied": 20
+}
