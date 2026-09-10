@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "public saved evidence + paired CPU analysis; no fresh inference or private files",
+  "verified_artifacts": 80,
+  "unique_controls": 20,
+  "paired_groups": 20,
+  "row1_analysis_reproduced": true,
+  "forbidden_files": []
+}

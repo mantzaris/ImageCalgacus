@@ -1,0 +1,8 @@
+{
+  "pending_jobs": 80,
+  "conservative_seconds_per_job": 30.0,
+  "remaining_projected_seconds": 2400.0,
+  "available_seconds": 7148.1291169690085,
+  "fits": true,
+  "margin": "one 50% margin with 30s/job floor"
+}

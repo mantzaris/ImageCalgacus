@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "public_files_scanned": 189,
+  "raw_hex_base64_private_values_checked": 756,
+  "private_material_file_hits": [],
+  "historical_files_checked": 11269,
+  "historical_files_changed": [],
+  "execution_freeze_matches": true,
+  "private_values_not_exported": true
+}

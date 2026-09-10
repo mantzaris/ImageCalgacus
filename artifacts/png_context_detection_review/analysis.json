@@ -1,0 +1,223 @@
+{
+  "specification": {
+    "bootstrap_replicates": 2000,
+    "seed": 2026090902,
+    "seed_reason": "accepted V2 seed 2026090901 plus PNG direction offset 1",
+    "resampling": "accepted PCG64 length-stratified payload-group draws; identical draws across both contexts, all methods and shared controls",
+    "difference": "mismatched minus correct; paired percentile 95% intervals",
+    "missing": "retain failures; method/score paired complete-group AUCs and explicit exclusions; accepted full row1 result also retained",
+    "duplicates": "accepted lowest frozen group owns an identical control hash; verified none in this allocation",
+    "score_direction": "never reverse; no threshold selection; exploratory, one alternate row"
+  },
+  "score_orientation": "higher means stego",
+  "independent_payload_groups": 20,
+  "independent_controls": 20,
+  "cells": [
+    {
+      "method": "fixed",
+      "score": "surprisal_bits_mean",
+      "correct_auc": 0.885,
+      "correct_95_interval": [
+        0.7425,
+        0.985
+      ],
+      "correct_stego_count": 20,
+      "correct_unique_controls": 20,
+      "correct_auc_paired": 0.885,
+      "mismatch_auc": 0.6975,
+      "difference": -0.1875,
+      "correct_paired_95_interval": [
+        0.7425,
+        0.985
+      ],
+      "mismatch_95_interval": [
+        0.515,
+        0.87
+      ],
+      "difference_95_interval": [
+        -0.27749999999999997,
+        -0.09999999999999998
+      ],
+      "scorable_stego": 20,
+      "unique_controls": 20,
+      "excluded_group_indices": [],
+      "valid_bootstrap_replicates": [
+        2000,
+        2000,
+        2000
+      ]
+    },
+    {
+      "method": "fixed",
+      "score": "log_rank_mean",
+      "correct_auc": 0.84,
+      "correct_95_interval": [
+        0.6825,
+        0.965
+      ],
+      "correct_stego_count": 20,
+      "correct_unique_controls": 20,
+      "correct_auc_paired": 0.84,
+      "mismatch_auc": 0.6625,
+      "difference": -0.1775,
+      "correct_paired_95_interval": [
+        0.6825,
+        0.965
+      ],
+      "mismatch_95_interval": [
+        0.4725,
+        0.8475
+      ],
+      "difference_95_interval": [
+        -0.2799999999999999,
+        -0.09499999999999997
+      ],
+      "scorable_stego": 20,
+      "unique_controls": 20,
+      "excluded_group_indices": [],
+      "valid_bootstrap_replicates": [
+        2000,
+        2000,
+        2000
+      ]
+    },
+    {
+      "method": "gated",
+      "score": "surprisal_bits_mean",
+      "correct_auc": 0.83,
+      "correct_95_interval": [
+        0.7,
+        0.9375
+      ],
+      "correct_stego_count": 20,
+      "correct_unique_controls": 20,
+      "correct_auc_paired": 0.83,
+      "mismatch_auc": 0.7475,
+      "difference": -0.0824999999999999,
+      "correct_paired_95_interval": [
+        0.7,
+        0.9375
+      ],
+      "mismatch_95_interval": [
+        0.6074375000000001,
+        0.8825
+      ],
+      "difference_95_interval": [
+        -0.16249999999999998,
+        0.010000000000000009
+      ],
+      "scorable_stego": 20,
+      "unique_controls": 20,
+      "excluded_group_indices": [],
+      "valid_bootstrap_replicates": [
+        2000,
+        2000,
+        2000
+      ]
+    },
+    {
+      "method": "gated",
+      "score": "log_rank_mean",
+      "correct_auc": 0.77,
+      "correct_95_interval": [
+        0.6299375,
+        0.8975
+      ],
+      "correct_stego_count": 20,
+      "correct_unique_controls": 20,
+      "correct_auc_paired": 0.77,
+      "mismatch_auc": 0.7225,
+      "difference": -0.04749999999999999,
+      "correct_paired_95_interval": [
+        0.6299375,
+        0.8975
+      ],
+      "mismatch_95_interval": [
+        0.5775,
+        0.8675
+      ],
+      "difference_95_interval": [
+        -0.1300625,
+        0.03749999999999998
+      ],
+      "scorable_stego": 20,
+      "unique_controls": 20,
+      "excluded_group_indices": [],
+      "valid_bootstrap_replicates": [
+        2000,
+        2000,
+        2000
+      ]
+    },
+    {
+      "method": "arithmetic",
+      "score": "surprisal_bits_mean",
+      "correct_auc": 0.5575,
+      "correct_95_interval": [
+        0.375,
+        0.7425624999999997
+      ],
+      "correct_stego_count": 20,
+      "correct_unique_controls": 20,
+      "correct_auc_paired": 0.5575,
+      "mismatch_auc": 0.5925,
+      "difference": 0.03500000000000003,
+      "correct_paired_95_interval": [
+        0.375,
+        0.7425624999999997
+      ],
+      "mismatch_95_interval": [
+        0.41243749999999996,
+        0.7725
+      ],
+      "difference_95_interval": [
+        -0.022499999999999964,
+        0.10499999999999998
+      ],
+      "scorable_stego": 20,
+      "unique_controls": 20,
+      "excluded_group_indices": [],
+      "valid_bootstrap_replicates": [
+        2000,
+        2000,
+        2000
+      ]
+    },
+    {
+      "method": "arithmetic",
+      "score": "log_rank_mean",
+      "correct_auc": 0.575,
+      "correct_95_interval": [
+        0.405,
+        0.7575624999999996
+      ],
+      "correct_stego_count": 20,
+      "correct_unique_controls": 20,
+      "correct_auc_paired": 0.575,
+      "mismatch_auc": 0.5975,
+      "difference": 0.022500000000000075,
+      "correct_paired_95_interval": [
+        0.405,
+        0.7575624999999996
+      ],
+      "mismatch_95_interval": [
+        0.4175,
+        0.7725624999999996
+      ],
+      "difference_95_interval": [
+        -0.03249999999999997,
+        0.07250000000000001
+      ],
+      "scorable_stego": 20,
+      "unique_controls": 20,
+      "excluded_group_indices": [],
+      "valid_bootstrap_replicates": [
+        2000,
+        2000,
+        2000
+      ]
+    }
+  ],
+  "interpretation": "one context mismatch, exact model known; exploratory paired repeated measurements, no score reversal or threshold selection",
+  "retained_correct_context_results": "artifacts/v2_review/analysis.json"
+}

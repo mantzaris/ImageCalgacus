@@ -1,0 +1,12 @@
+{
+  "observer_id": "validation-01",
+  "input_identity": "ee23211ed069d4f9038cdb09814c24cda7d1dc4b0057fc44de8c756372b9d184",
+  "job_id": "png_context_detection-001-validation-01",
+  "report": "reports/validation-01.json",
+  "report_sha256": "581d202a77efec95ed289f8c5ede687454b2fa659a5fc4d89414ab375b0c7422",
+  "passed": true,
+  "charged_seconds": 17.224604736024048,
+  "positive_gpu_activity": true,
+  "failure_stage": null,
+  "failure_reason": null
+}

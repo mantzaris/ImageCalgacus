@@ -1,0 +1,20 @@
+{
+  "charged_seconds_by_stage": {
+    "v0": 3163.653124010041,
+    "v1": 39995.5091691459,
+    "v2": 42024.52764170886,
+    "gpu_performance": 2351.732528250024,
+    "png_context_detection": 1439.645473357872
+  },
+  "new_charged_seconds": 1439.645473357872,
+  "cumulative_seconds": 88975.0679364727,
+  "extension_limit_seconds": 7200,
+  "extension_remaining_seconds": 5760.354526642128,
+  "whole_project_limit_seconds": 144000,
+  "whole_project_remaining_seconds": 55024.9320635273,
+  "model_jobs": 83,
+  "validation_seconds": 51.870883030991536,
+  "heldout_scoring_seconds": 1387.7745903268806,
+  "convention": "occupied child time includes imports, hashing, loading, graph setup, CPU probability bookkeeping, scoring and teardown; CUDA and phase times nested, not added",
+  "reserve": "one 50% forward margin in preflight; no reserve counted as spent"
+}

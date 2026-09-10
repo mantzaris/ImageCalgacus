@@ -1,0 +1,67 @@
+{
+  "starting_revision": "cdff18c30a0492f242921d72fb369ef78a6a7f38",
+  "execution_package_source_hash": "a74696e04babb8f268e439c1516834ce83e3ceae7620548ad2c83103cd893142",
+  "execution_freeze": "execution_freeze.json",
+  "artifact_context_and_analysis_freeze": "manifest.json",
+  "accepted_sources": {
+    "artifacts/v2_review/manifest.json": "643099adf3bf2df5e62db6e49917d86d0f0c766d3e0d51b6a33dc0c62abc5e6c",
+    "artifacts/v2_review/results.jsonl": "c90564de13cf30cf43388af71b82c549a398388c02c969c4bb2062b14a61e0f0",
+    "artifacts/v2_review/control_links.json": "d7e944686479c4e4e3e7a4287418c5bf3f6fe278aecf871c6d1ac6033d6170a4",
+    "artifacts/v2_review/analysis.json": "43d1e9330641179a8c03fc6b816f0bb690fcece621fa29cd91d93ccc3254e7a5",
+    "data/qualification_v1/manifest.json": "9c20a5c11896c84d0f7accf2c5e4ad99c4e432f7bdd02bdaa2056ae3b048346f"
+  },
+  "runtime_observed_before_v2_scoring_in": "reports/validation-01.json",
+  "runtime": {
+    "backend": "torch",
+    "version": "2.5.1+cu124",
+    "cuda_runtime": "12.4",
+    "cudnn": 90100,
+    "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+    "parameter_devices": [
+      "cuda:0"
+    ],
+    "input_device": "cuda:0",
+    "output_device": "cuda:0",
+    "strict_loading": true,
+    "eval_mode": true,
+    "inference_mode": true,
+    "deterministic_algorithms": true,
+    "tf32": false,
+    "execution_mode": "cuda_graph"
+  },
+  "device": {
+    "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+    "pci_bus_id": "00000000:09:00.0",
+    "name": "NVIDIA RTX 5000 Ada Generation",
+    "driver": "590.48.01",
+    "logical_device": 0,
+    "effective_environment": {
+      "CUDA_LAUNCH_BLOCKING": "1",
+      "GGML_CUDA_DISABLE_GRAPHS": "1",
+      "GGML_CUDA_DISABLE_FUSION": "1",
+      "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+      "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+    }
+  },
+  "rankcloak_inspected_revision": "ce853d42d6ba64065cb63c6bdfc0d825c62734cd",
+  "observer_inputs": "Only saved PNG, common profile, explicit row; report path is output. No labels, key, source, packet or sender cache.",
+  "source_changes": "One named absolute runtime allowance plus new observer, bounded runner and analysis/reporting files; original image/probability/coder modules unchanged.",
+  "distribution_equivalence": "Exact retained whole scores on all three predetermined original-context development PNGs; both available eligible-ID/probability/order SHA-256 streams match exactly.",
+  "reproduction_scope": "GPU execution used the frozen code. Public --verify recomputes paired analysis from saved evidence without private runtime ledgers or inference. Full collect/export uses the local execution ledger.",
+  "visual_review": {
+    "figure": "7.2 x 3.25 inches, vector PDF/SVG and 400 dpi PNG; preview inspected, no clipped labels/legend",
+    "table": "Actual generated LaTeX compiled and viewed at manuscript width; no overfull/underfull warnings"
+  },
+  "evidence_separation": "Existing V2 correct-context scores reused; new row2 scores are repeated measurements on 80 old PNGs, not new carrier/recovery observations.",
+  "initial_preflight_forecast": {
+    "pending_jobs": 80,
+    "conservative_seconds_per_job": 30,
+    "remaining_projected_seconds": 2400,
+    "available_seconds": 7148.1291169690085,
+    "fits": true,
+    "margin": "one 50% margin with 30s/job floor"
+  },
+  "preflight_record_note": "This preserves the original measured pre-batch forecast; preflight_forecast.json and progress.json are runner checkpoint summaries and may be refreshed on continuation."
+}

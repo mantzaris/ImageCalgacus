@@ -1,0 +1,2164 @@
+{
+  "schema": "png-context-extension-v1",
+  "starting_revision": "cdff18c30a0492f242921d72fb369ef78a6a7f38",
+  "source_hash": "a74696e04babb8f268e439c1516834ce83e3ceae7620548ad2c83103cd893142",
+  "profile": "configs/v1_fixed.json",
+  "profile_sha256": "75aa20e656caa9f6b17958be0e6a43432663db99b7b6f718fdbcabe74487880e",
+  "profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+  "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+  "contexts": {
+    "row1": {
+      "id": "row1",
+      "modality": "image",
+      "path": "data/qualification_v1/contexts/row1.rgb",
+      "sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "construction": "unchanged accepted V0 first context"
+    },
+    "row2": {
+      "id": "row2",
+      "modality": "image",
+      "path": "data/qualification_v1/contexts/row2.rgb",
+      "sha256": "c7f5500001d4376a74183225a88ececc5541e2bde1d79a30961ff458073ae5e1",
+      "construction": "independent uniform RGB8 row: NumPy PCG64(2002).integers(0,256,96,dtype=uint8), raster RGB; no model/payload dependence"
+    }
+  },
+  "groups": [
+    {
+      "id": "HT1-row1",
+      "ordinal": 1,
+      "payload_id": "HT1",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "faf83244196e24e27440c6beb644589b2fe3cad35bb1199c6a603110a93f49f2",
+        "98b8c543be4e84739e6292c2fa909a6e836e069c61a4b35ada53edc3db3fb40c",
+        "f0f0176bdcae18b9995013a7a336978ba0ceaa182cda6de4aad958965f55a7fa"
+      ],
+      "control_work_id": "ebbb05a1a530ee67ae05f52d7bba98422d7c67222123b4446743586931ab9822"
+    },
+    {
+      "id": "HT2-row1",
+      "ordinal": 3,
+      "payload_id": "HT2",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "46417946d688e8b8609f2d50596f238be14aa8b6cf5937cee4c082694d963144",
+        "dc692472a1300d78dd1e20bff0b3d78b29e3eeee9f7986c749c447724570c860",
+        "14b43f3981279983c587fe2cb93b71902a6a845e2cddcbc719a75a04fb2d805d"
+      ],
+      "control_work_id": "be6e9f2fc8cc54e44374e482063d6bebc8a74df1315b7b9da6de9391d56d91a7"
+    },
+    {
+      "id": "HT3-row1",
+      "ordinal": 5,
+      "payload_id": "HT3",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "5b1c8fd03dacbd9d9bbe73e99b409ea1c607c7c042b6c449c5cd0d6c1395aa5b",
+        "17207dd9e39dc4e41af53bcf8daa23bb62a6a5adc8b55cc8378b390186a1111d",
+        "8bfbf276812057c0ff6fcab23c3e82a2a6b8d42d9720e279d9d659a870b6d9f8"
+      ],
+      "control_work_id": "01186c5d1e37080ee4fba7179c7448586acb2798bca50b0f87cbc22d1899c260"
+    },
+    {
+      "id": "HT4-row1",
+      "ordinal": 7,
+      "payload_id": "HT4",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "7ca382635c91a0f9224cf1dd847ce26fd6aace78767bce090fb3c34995a81d3a",
+        "be402eca787fa34d31cf00d20b0197fd4f97ba93402dca5a6a314a0b2fb99590",
+        "04d00a94410f55225b3213b610d6238cee23f0fddd01812b0733e70ec4eb5f02"
+      ],
+      "control_work_id": "1c015cb2fd06be273b9e716e05ce5dc37b36dec24157c90b52a6fa05e73b5008"
+    },
+    {
+      "id": "HT5-row1",
+      "ordinal": 9,
+      "payload_id": "HT5",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "90eb544705226d349bafa4affd3f78100afe42215d9878bb4cbf8d600952537f",
+        "71a0478b799aeb202be7b7c2c6e2e7d0b17c2d5bddcf5e2c683385603ab3c680",
+        "56ec2f671d1217a915af7fb0f8ce02a8c5d81816bc7ba0f81e7bf0e80725c098"
+      ],
+      "control_work_id": "69ebe35612055a9c6d8f3d0e7576f1947f2d2f7ed2486e0075556e204d3fdaf3"
+    },
+    {
+      "id": "HT6-row1",
+      "ordinal": 11,
+      "payload_id": "HT6",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "826a5c3ee5a8ce776a58e3f0861e6cd3174d3892b20bb176d9e34d52fb2bfa05",
+        "12baec80cdab0db31c6f15dd64707c67065d155819053816863a5eecabc0e45a",
+        "7c041c5e587289510f72802e2bac035be890e06229aae5aa3442b365d36a2fe1"
+      ],
+      "control_work_id": "28a662e04ea4a31338a6e4dacfe009baf03beafbc135f3e777853e18479bc68f"
+    },
+    {
+      "id": "HT7-row1",
+      "ordinal": 13,
+      "payload_id": "HT7",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "e774ee55e29c35ff69d9b8f028199d2eb386c021c8ceb4204ca069670b4e0ef0",
+        "f5c76f5043c1929e1b34667a4f27c35b8b057046eaf7b3b9905bfcc8650b314c",
+        "6a1f1967335ba90c8ef1510093f1e5dc37d3af4dad9bcb4c99c6a7c24e466c3c"
+      ],
+      "control_work_id": "b99125ac8c12ce9bdb2253220c6ce5db8cfc76f092d33be253df394e2e3be5bf"
+    },
+    {
+      "id": "HT8-row1",
+      "ordinal": 15,
+      "payload_id": "HT8",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "99bf0b1d38b64a472f450c62d54f91799e3544cff547d3d268dfa8634f6863a0",
+        "27d5b269e6031c301aed5dd1358cdf8e93e145ba2c5bc525eed25e5d5ff9375e",
+        "bb765fed5273d6ac2a42f0158b0ffe299c87a43d30dbdfae13fa9046076c47fa"
+      ],
+      "control_work_id": "bd60cfa084a64e67c70bdddd3e50ba738469f859a52842b7a0d8c1cfb81f1641"
+    },
+    {
+      "id": "HT9-row1",
+      "ordinal": 17,
+      "payload_id": "HT9",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "85e765e40d3f2b7fa956eb8c9b9aa1572baa666456aa4650db216a75d93615e8",
+        "a56ba1f631565ca84ddcfb93e774e1c8cf0f990fee60fce155a71042b262c315",
+        "9c5988f1f10292e64d0f7f80495d74e23856f0b5668219f652c95ab28df81a1e"
+      ],
+      "control_work_id": "a6a99fc393c637bc96c7ff29d8997d7aa41811ac35a29a893f1276790e6fd651"
+    },
+    {
+      "id": "HT10-row1",
+      "ordinal": 19,
+      "payload_id": "HT10",
+      "direction": "text-to-image",
+      "stratum": "32-64",
+      "work_ids": [
+        "cdc6218f2d4155bd167332ccddae3d80ad557348df71dc1d03abd2d132a3ccb0",
+        "756bbd435c6012b2ebff3b65b5718c1795503c2ae96e778e670d99c98b9f270c",
+        "f1b049e2167c931db74913883c2c2f52e3dc0a8bcc025a79499ae985aa635c87"
+      ],
+      "control_work_id": "257c646b8fa6887c3a4fabbc56953b2b067fdac40c165665cc8fbbe52c9cf35d"
+    },
+    {
+      "id": "HT11-row1",
+      "ordinal": 21,
+      "payload_id": "HT11",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "788dbf13087bcbc3ce543c62ba028edfaca9de548de4db15e35e8ed8a2e26eea",
+        "fcd2e571abac209b8b9e0c99d2d254b33ed42af0f6c268cbc01a5497aacdcdda",
+        "74d397e949a4390b8ee6f738f1b1a44f68d2d327239cc431d9f6829af238d442"
+      ],
+      "control_work_id": "d1bf714880af1a72976eaad31605d56773113cb6211563be0805a8bd7917c052"
+    },
+    {
+      "id": "HT12-row1",
+      "ordinal": 23,
+      "payload_id": "HT12",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "60d13dfedddef6b00eb579ed270449a9db810e228b8e28ab93f0b23f29a5fabc",
+        "d97f4a3e7ae5b275b5be76bb83561aa5e0bcd2941fa9fc62314bb60d108e47e1",
+        "e66bf315b13aeeabc5a4cee7a39b313d1f53e91070c71e80d85595b7027e68da"
+      ],
+      "control_work_id": "ef0dcb19a4eb3c74fba348a9cdd5aad1800b4bca6001d96c9d504cde37096951"
+    },
+    {
+      "id": "HT13-row1",
+      "ordinal": 25,
+      "payload_id": "HT13",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "e1a8fee4b5529a451d88a97c6936104ab8d32c19ab57f100b2291efdad10c4c8",
+        "b1e809cc15283edabe87f3ca3bc04243cdbc0f95ccf53fc132b3fe028314c03b",
+        "0f2c8be08ed2e7d2324125133f9b9dc501f009850934e97db9ecdc432782e9cb"
+      ],
+      "control_work_id": "8938ed5237d2a3af80eb79acfe10732a8f598520052a84d8c71e320a20b4ad15"
+    },
+    {
+      "id": "HT14-row1",
+      "ordinal": 27,
+      "payload_id": "HT14",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "6836d190ff5aa8572b74676dc2beaedd74dc4067596cdef205520da77e9a9781",
+        "ee3a83319c590b2ce59bffc6571b3064d8a2505211a9b89561502bc71d238fb9",
+        "29645ea112b0482d4b238d339a159bceb03b823b3a4e80841642f615186716fa"
+      ],
+      "control_work_id": "e268016c6ba05edf45e7a1e4f689965d23ece162d425ce9a1a1d3f50b2c5a6b4"
+    },
+    {
+      "id": "HT15-row1",
+      "ordinal": 29,
+      "payload_id": "HT15",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "3b840d27567c82558e86b023040b07d14bb815100a347f40e1ee506dacd7f580",
+        "53ac728d8a8c0229ddab8784cf1b6b088133d7e338100317af758789f8f6f22a",
+        "461e31b83ec2f5135ffb879f4ffb89de910384eeee4ae4f63c656e17c7d1c77b"
+      ],
+      "control_work_id": "644323185ba161843cdc1d248dae7621434b01ba415a948d871aaa6944a388c5"
+    },
+    {
+      "id": "HT16-row1",
+      "ordinal": 31,
+      "payload_id": "HT16",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "8a0f02109a44c34757ae3a56875f03cd998b9ae331fa677b8ebbc670ffa4b430",
+        "943055c9b3dcc25bb37605755e41d07139cf9bc1a83e1b632306392f75eba2b3",
+        "8c07e1f452d6ef387fa609e47c73a1dd54ae040a2a75b3d4d1c7eba6d603d260"
+      ],
+      "control_work_id": "d522a1d2c3f79484dcbde1a7f74c1316b9c1a33819c4d949d4595694686315a9"
+    },
+    {
+      "id": "HT17-row1",
+      "ordinal": 33,
+      "payload_id": "HT17",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "c64e6d581e2a0ea6b7c478f83ad79e0a149546cfabb49d23d7cdf8c5fc894a3d",
+        "0b22d595d6f131d4ab62750a8e76c89220119d9eb41080ba360a2752229b72f5",
+        "94e1f4ca90f071c19c8952f06478d2816c5371899016f2695b644906ba6b91cf"
+      ],
+      "control_work_id": "925a36a9897a12bf2b70cafe569008c0f813271d1ebe8345b86e8826d7ba3a3d"
+    },
+    {
+      "id": "HT18-row1",
+      "ordinal": 35,
+      "payload_id": "HT18",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "e154c8592bc6f92bb3f1728b6418b220f99ab7b04498aa0c4e0c989023a0eca8",
+        "c5d7f1dc6c704f27278ac9bd5dd9c15f1c48ec5dc8d3c8c79a2bc4eafd7765bf",
+        "63e3be28fd9a6833bdce380c48001e5b7644ae355a9a249c20e899875bb6b01d"
+      ],
+      "control_work_id": "634181198331e79d3d231ae5949c30dc66fe27918465b4a9f5ce827da5d24b9a"
+    },
+    {
+      "id": "HT19-row1",
+      "ordinal": 37,
+      "payload_id": "HT19",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "32444df9342a4f5a5fa8641a17ebf191cc132dae3a9dfd050b9f1730eb00d4d0",
+        "9e6fee3c64c46e23134d4d29f5e180897cad5ae355fa5dcc965a560fd1f535a7",
+        "96b6a4e6cc55a3eab7edfce0e1389ed909ff477dd266556b09ae97239d87a0ba"
+      ],
+      "control_work_id": "bcddc8ae8feeb34f8cbde14c9d1e15d045095a99459aaac2296af28e289e60d5"
+    },
+    {
+      "id": "HT20-row1",
+      "ordinal": 39,
+      "payload_id": "HT20",
+      "direction": "text-to-image",
+      "stratum": "65-128",
+      "work_ids": [
+        "9d439c482f001426f06bc658975cab1ac486b95275665c66ca0985b25d281a86",
+        "97ea9835f48da68569b1e02e7b8e3601452c7d21231801deb524247b695f4217",
+        "dad643d8af7352afcc847fce7b035616fc385dd57ca304ef387cba465735280d"
+      ],
+      "control_work_id": "c8a1457d44588b1e45c8005561beebeda4f94dbe4b205d2abcd3f3351f09e326"
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "HT1-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT1-row1",
+      "stratum": "32-64",
+      "original_work_id": "faf83244196e24e27440c6beb644589b2fe3cad35bb1199c6a603110a93f49f2",
+      "control_id": "control-HT1-row1",
+      "carrier": "artifacts/v2_review/cases/HT1-row1-fixed/carrier.png",
+      "carrier_sha256": "dd4e231d35c9cd0576710d05222c42901204cd40439bcda0b209769800bad55d",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.097855941150253,
+        "rank_mean": 7.759072580645161,
+        "log_rank_mean": 2.372807010068061,
+        "entropy_bits_mean": 4.103050535763676
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-001",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT1-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT1-row1",
+      "stratum": "32-64",
+      "original_work_id": "98b8c543be4e84739e6292c2fa909a6e836e069c61a4b35ada53edc3db3fb40c",
+      "control_id": "control-HT1-row1",
+      "carrier": "artifacts/v2_review/cases/HT1-row1-gated/carrier.png",
+      "carrier_sha256": "149dd996ee2b429b6d6248debc88cc13101a46517eb61d9d00676c2a6f24edfd",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.154971874498308,
+        "rank_mean": 8.226478494623656,
+        "log_rank_mean": 2.424230129501392,
+        "entropy_bits_mean": 4.157946486346035
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-002",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT1-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT1-row1",
+      "stratum": "32-64",
+      "original_work_id": "f0f0176bdcae18b9995013a7a336978ba0ceaa182cda6de4aad958965f55a7fa",
+      "control_id": "control-HT1-row1",
+      "carrier": "artifacts/v2_review/cases/HT1-row1-arithmetic/carrier.png",
+      "carrier_sha256": "577ccf4cc774feeee8ade7e9a99b99630dd1ff6cb57db485570c70587b650be9",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.559587488739819,
+        "rank_mean": 10.243951612903226,
+        "log_rank_mean": 2.0613777703535474,
+        "entropy_bits_mean": 3.5789727008098424
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-003",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT1-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT1-row1",
+      "stratum": "32-64",
+      "original_work_id": "ebbb05a1a530ee67ae05f52d7bba98422d7c67222123b4446743586931ab9822",
+      "control_id": "control-HT1-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT1-row1/carrier.png",
+      "carrier_sha256": "7b18976c260516a009fbdce5cdc7b3e83431ec9715c62066d6d16d3b754daa9e",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.932686589505168,
+        "rank_mean": 12.24260752688172,
+        "log_rank_mean": 2.3481461705557916,
+        "entropy_bits_mean": 3.943491709601434
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-004",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT2-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT2-row1",
+      "stratum": "32-64",
+      "original_work_id": "46417946d688e8b8609f2d50596f238be14aa8b6cf5937cee4c082694d963144",
+      "control_id": "control-HT2-row1",
+      "carrier": "artifacts/v2_review/cases/HT2-row1-fixed/carrier.png",
+      "carrier_sha256": "279799a79e34fe97a28a95a3856ad0b98bd75dfb88db33ef0d23dba80d818289",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.135280443193882,
+        "rank_mean": 7.772849462365591,
+        "log_rank_mean": 2.4022955070583283,
+        "entropy_bits_mean": 4.1393883138395635
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-005",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT2-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT2-row1",
+      "stratum": "32-64",
+      "original_work_id": "dc692472a1300d78dd1e20bff0b3d78b29e3eeee9f7986c749c447724570c860",
+      "control_id": "control-HT2-row1",
+      "carrier": "artifacts/v2_review/cases/HT2-row1-gated/carrier.png",
+      "carrier_sha256": "e8f3608f8a6ce3bf5c1e4aa552b4c4af91eff08ca7fb4b0aa560cdfdf1aab171",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.977724318721515,
+        "rank_mean": 8.04133064516129,
+        "log_rank_mean": 2.2970463506966663,
+        "entropy_bits_mean": 3.970219835784314
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-006",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT2-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT2-row1",
+      "stratum": "32-64",
+      "original_work_id": "14b43f3981279983c587fe2cb93b71902a6a845e2cddcbc719a75a04fb2d805d",
+      "control_id": "control-HT2-row1",
+      "carrier": "artifacts/v2_review/cases/HT2-row1-arithmetic/carrier.png",
+      "carrier_sha256": "e495ac84011914730bdeeee42b358fd0f7d082a5d865fff5ae3d28fdc6abc044",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.9038926141353287,
+        "rank_mean": 11.41733870967742,
+        "log_rank_mean": 2.3290697712809507,
+        "entropy_bits_mean": 3.919404614481496
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-007",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT2-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT2-row1",
+      "stratum": "32-64",
+      "original_work_id": "be6e9f2fc8cc54e44374e482063d6bebc8a74df1315b7b9da6de9391d56d91a7",
+      "control_id": "control-HT2-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT2-row1/carrier.png",
+      "carrier_sha256": "eabcfc07f75d264eeb993168a238e6ba8cd7968a745fec98d5db7892004df81d",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.5292284837117527,
+        "rank_mean": 8.90725806451613,
+        "log_rank_mean": 2.0076462812326494,
+        "entropy_bits_mean": 3.5392229198949394
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-008",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT3-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT3-row1",
+      "stratum": "32-64",
+      "original_work_id": "5b1c8fd03dacbd9d9bbe73e99b409ea1c607c7c042b6c449c5cd0d6c1395aa5b",
+      "control_id": "control-HT3-row1",
+      "carrier": "artifacts/v2_review/cases/HT3-row1-fixed/carrier.png",
+      "carrier_sha256": "e57512b97f83b8e83e6162d82e5d5c0f33a0687ad6cdd1ec64f9f7d00e13a038",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.7925659868281274,
+        "rank_mean": 6.858198924731183,
+        "log_rank_mean": 2.13190312732912,
+        "entropy_bits_mean": 3.8005251915267815
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-009",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT3-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT3-row1",
+      "stratum": "32-64",
+      "original_work_id": "17207dd9e39dc4e41af53bcf8daa23bb62a6a5adc8b55cc8378b390186a1111d",
+      "control_id": "control-HT3-row1",
+      "carrier": "artifacts/v2_review/cases/HT3-row1-gated/carrier.png",
+      "carrier_sha256": "b1c3e2d432d013b9cd075c434338fcf545acea4f023a967ce84f55e6fa46c1ec",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.077407771356033,
+        "rank_mean": 8.573252688172044,
+        "log_rank_mean": 2.3594051752686536,
+        "entropy_bits_mean": 4.084799354474611
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-010",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT3-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT3-row1",
+      "stratum": "32-64",
+      "original_work_id": "8bfbf276812057c0ff6fcab23c3e82a2a6b8d42d9720e279d9d659a870b6d9f8",
+      "control_id": "control-HT3-row1",
+      "carrier": "artifacts/v2_review/cases/HT3-row1-arithmetic/carrier.png",
+      "carrier_sha256": "d8e4d8c43c7c14c0157d82809df6a3e25bd13f9efdc2403e557b6975b2a3600b",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.5544167908549134,
+        "rank_mean": 8.030577956989248,
+        "log_rank_mean": 2.0077068121016017,
+        "entropy_bits_mean": 3.5699488422715975
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-011",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT3-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT3-row1",
+      "stratum": "32-64",
+      "original_work_id": "01186c5d1e37080ee4fba7179c7448586acb2798bca50b0f87cbc22d1899c260",
+      "control_id": "control-HT3-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT3-row1/carrier.png",
+      "carrier_sha256": "a97d708ec9480efa7d439b315a20639e79772ebe2a34fb05e10b97dd888b00a5",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.889779065921605,
+        "rank_mean": 10.19858870967742,
+        "log_rank_mean": 2.2427980073511335,
+        "entropy_bits_mean": 3.8612264143243893
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-012",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT4-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT4-row1",
+      "stratum": "32-64",
+      "original_work_id": "7ca382635c91a0f9224cf1dd847ce26fd6aace78767bce090fb3c34995a81d3a",
+      "control_id": "control-HT4-row1",
+      "carrier": "artifacts/v2_review/cases/HT4-row1-fixed/carrier.png",
+      "carrier_sha256": "361820433f2df09c9767267fbf2813b119612c96c446a25815c22e02d9fd5d43",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.105187184330974,
+        "rank_mean": 8.344086021505376,
+        "log_rank_mean": 2.3998278730642837,
+        "entropy_bits_mean": 4.114550038525462
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-013",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT4-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT4-row1",
+      "stratum": "32-64",
+      "original_work_id": "be402eca787fa34d31cf00d20b0197fd4f97ba93402dca5a6a314a0b2fb99590",
+      "control_id": "control-HT4-row1",
+      "carrier": "artifacts/v2_review/cases/HT4-row1-gated/carrier.png",
+      "carrier_sha256": "c24b644286963f40b294901c08e95f8895395318eb73d2dd6e342817eefa7c88",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.049114774963166,
+        "rank_mean": 7.565860215053763,
+        "log_rank_mean": 2.347002896048738,
+        "entropy_bits_mean": 4.05661996009243
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-014",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT4-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT4-row1",
+      "stratum": "32-64",
+      "original_work_id": "04d00a94410f55225b3213b610d6238cee23f0fddd01812b0733e70ec4eb5f02",
+      "control_id": "control-HT4-row1",
+      "carrier": "artifacts/v2_review/cases/HT4-row1-arithmetic/carrier.png",
+      "carrier_sha256": "a07f95069705a8d35a00fbcbc59c2dc48af53b9f8e467b5d81786fee8007ad2c",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.7223576988172664,
+        "rank_mean": 8.975470430107526,
+        "log_rank_mean": 2.147530637023241,
+        "entropy_bits_mean": 3.7336902424237333
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-015",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT4-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT4-row1",
+      "stratum": "32-64",
+      "original_work_id": "1c015cb2fd06be273b9e716e05ce5dc37b36dec24157c90b52a6fa05e73b5008",
+      "control_id": "control-HT4-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT4-row1/carrier.png",
+      "carrier_sha256": "0e3ce8710c1ba557c5b4742bc15d304f1ec291a8113785583c6d0ba152108d68",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.6970772412541892,
+        "rank_mean": 8.971102150537634,
+        "log_rank_mean": 2.0859736085863942,
+        "entropy_bits_mean": 3.6933091720441222
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-016",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT5-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT5-row1",
+      "stratum": "32-64",
+      "original_work_id": "90eb544705226d349bafa4affd3f78100afe42215d9878bb4cbf8d600952537f",
+      "control_id": "control-HT5-row1",
+      "carrier": "artifacts/v2_review/cases/HT5-row1-fixed/carrier.png",
+      "carrier_sha256": "6634ddce93e0f146670eeac5513918c07b4530c0d49b739b4fac13021836137d",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.311485958104281,
+        "rank_mean": 8.680779569892474,
+        "log_rank_mean": 2.5423549878068634,
+        "entropy_bits_mean": 4.312386217537419
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-017",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT5-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT5-row1",
+      "stratum": "32-64",
+      "original_work_id": "71a0478b799aeb202be7b7c2c6e2e7d0b17c2d5bddcf5e2c683385603ab3c680",
+      "control_id": "control-HT5-row1",
+      "carrier": "artifacts/v2_review/cases/HT5-row1-gated/carrier.png",
+      "carrier_sha256": "93bd785b7a8206e0a0d9f4bc606a9ec5bfbd20645910a45d1931178e0a08157b",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.039515721027695,
+        "rank_mean": 8.57627688172043,
+        "log_rank_mean": 2.357641198326735,
+        "entropy_bits_mean": 4.051149506254128
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-018",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT5-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT5-row1",
+      "stratum": "32-64",
+      "original_work_id": "56ec2f671d1217a915af7fb0f8ce02a8c5d81816bc7ba0f81e7bf0e80725c098",
+      "control_id": "control-HT5-row1",
+      "carrier": "artifacts/v2_review/cases/HT5-row1-arithmetic/carrier.png",
+      "carrier_sha256": "750f13f77284083a5446b79e089963b17b2bc5daaec50afd4acf4ac27eb26d75",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.155423781142175,
+        "rank_mean": 13.285282258064516,
+        "log_rank_mean": 2.4939001073803397,
+        "entropy_bits_mean": 4.134086772351165
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-019",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT5-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT5-row1",
+      "stratum": "32-64",
+      "original_work_id": "69ebe35612055a9c6d8f3d0e7576f1947f2d2f7ed2486e0075556e204d3fdaf3",
+      "control_id": "control-HT5-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT5-row1/carrier.png",
+      "carrier_sha256": "905e554a96871ce27e722783b02148a1ef65b10ec02450f3de6b3a3612b342c0",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.160398412761646,
+        "rank_mean": 11.614583333333334,
+        "log_rank_mean": 2.5089783901558627,
+        "entropy_bits_mean": 4.15438376149088
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-020",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT6-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT6-row1",
+      "stratum": "32-64",
+      "original_work_id": "826a5c3ee5a8ce776a58e3f0861e6cd3174d3892b20bb176d9e34d52fb2bfa05",
+      "control_id": "control-HT6-row1",
+      "carrier": "artifacts/v2_review/cases/HT6-row1-fixed/carrier.png",
+      "carrier_sha256": "4894444bf4f425cdb69497ccbb3a518896a20ce9596b8e997f62116256c61d38",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.110237834200498,
+        "rank_mean": 8.137432795698924,
+        "log_rank_mean": 2.3945578941405232,
+        "entropy_bits_mean": 4.110382675024708
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-021",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT6-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT6-row1",
+      "stratum": "32-64",
+      "original_work_id": "12baec80cdab0db31c6f15dd64707c67065d155819053816863a5eecabc0e45a",
+      "control_id": "control-HT6-row1",
+      "carrier": "artifacts/v2_review/cases/HT6-row1-gated/carrier.png",
+      "carrier_sha256": "c01fce6da3f3c9ae6a542765596506b4d72c36c0db10539bf951856695b46197",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.9985657400949126,
+        "rank_mean": 7.978494623655914,
+        "log_rank_mean": 2.3040186083962917,
+        "entropy_bits_mean": 3.989226616296681
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-022",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT6-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT6-row1",
+      "stratum": "32-64",
+      "original_work_id": "7c041c5e587289510f72802e2bac035be890e06229aae5aa3442b365d36a2fe1",
+      "control_id": "control-HT6-row1",
+      "carrier": "artifacts/v2_review/cases/HT6-row1-arithmetic/carrier.png",
+      "carrier_sha256": "b5891935fa6fa4a80c51e7503d258fc5779dd9820a82d80df6452eb21ac43858",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.53269014534262,
+        "rank_mean": 11.191868279569892,
+        "log_rank_mean": 2.0568876883029845,
+        "entropy_bits_mean": 3.5548153565704097
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-023",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT6-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT6-row1",
+      "stratum": "32-64",
+      "original_work_id": "28a662e04ea4a31338a6e4dacfe009baf03beafbc135f3e777853e18479bc68f",
+      "control_id": "control-HT6-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT6-row1/carrier.png",
+      "carrier_sha256": "39461c139b5a71285b25360ab722ce7d10bed390dfe76dbef52fe14b3b596450",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.558352731010522,
+        "rank_mean": 9.331653225806452,
+        "log_rank_mean": 2.0402128689165737,
+        "entropy_bits_mean": 3.5623933026745758
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-024",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT7-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT7-row1",
+      "stratum": "32-64",
+      "original_work_id": "e774ee55e29c35ff69d9b8f028199d2eb386c021c8ceb4204ca069670b4e0ef0",
+      "control_id": "control-HT7-row1",
+      "carrier": "artifacts/v2_review/cases/HT7-row1-fixed/carrier.png",
+      "carrier_sha256": "a567cd7834e04e8a2cfb3bbdad0aef555d6e92cda364950dd93bf4db37746042",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.358979223519152,
+        "rank_mean": 9.070564516129032,
+        "log_rank_mean": 2.5952136758424,
+        "entropy_bits_mean": 4.368594577510572
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-025",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT7-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT7-row1",
+      "stratum": "32-64",
+      "original_work_id": "f5c76f5043c1929e1b34667a4f27c35b8b057046eaf7b3b9905bfcc8650b314c",
+      "control_id": "control-HT7-row1",
+      "carrier": "artifacts/v2_review/cases/HT7-row1-gated/carrier.png",
+      "carrier_sha256": "b320182e6b72e892d98cec42a562e11b5120283fa1052a2075f588c55abfcac2",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.8718024977681855,
+        "rank_mean": 7.81989247311828,
+        "log_rank_mean": 2.241199713047653,
+        "entropy_bits_mean": 3.876363345494524
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-026",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT7-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT7-row1",
+      "stratum": "32-64",
+      "original_work_id": "6a1f1967335ba90c8ef1510093f1e5dc37d3af4dad9bcb4c99c6a7c24e466c3c",
+      "control_id": "control-HT7-row1",
+      "carrier": "artifacts/v2_review/cases/HT7-row1-arithmetic/carrier.png",
+      "carrier_sha256": "b79bea765b9686c0b1fe7c819ed70b492c00e1fda5f0d9227178d4cf3e021dce",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.264966888160069,
+        "rank_mean": 11.184475806451612,
+        "log_rank_mean": 2.552545416610638,
+        "entropy_bits_mean": 4.278693306327983
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-027",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT7-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT7-row1",
+      "stratum": "32-64",
+      "original_work_id": "b99125ac8c12ce9bdb2253220c6ce5db8cfc76f092d33be253df394e2e3be5bf",
+      "control_id": "control-HT7-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT7-row1/carrier.png",
+      "carrier_sha256": "b80d758721e1be64c3f1f01734a5dbd96b1770caab2de24d2c42e7a11a860c4e",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.499748734207797,
+        "rank_mean": 9.79233870967742,
+        "log_rank_mean": 2.018801068516053,
+        "entropy_bits_mean": 3.497687681714159
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-028",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT8-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT8-row1",
+      "stratum": "32-64",
+      "original_work_id": "99bf0b1d38b64a472f450c62d54f91799e3544cff547d3d268dfa8634f6863a0",
+      "control_id": "control-HT8-row1",
+      "carrier": "artifacts/v2_review/cases/HT8-row1-fixed/carrier.png",
+      "carrier_sha256": "7690534bc5ee52f041ea8c6c2bfbf839b1bf126e91d6178551644d659ac73ebb",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.321580252147945,
+        "rank_mean": 8.65356182795699,
+        "log_rank_mean": 2.554902940435569,
+        "entropy_bits_mean": 4.332487683106765
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-029",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT8-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT8-row1",
+      "stratum": "32-64",
+      "original_work_id": "27d5b269e6031c301aed5dd1358cdf8e93e145ba2c5bc525eed25e5d5ff9375e",
+      "control_id": "control-HT8-row1",
+      "carrier": "artifacts/v2_review/cases/HT8-row1-gated/carrier.png",
+      "carrier_sha256": "adeca50c085d52adae7178fa8c1f35503d646d2a1b77f92d364a6a67bffed036",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.0486114163284626,
+        "rank_mean": 8.415658602150538,
+        "log_rank_mean": 2.333862414366342,
+        "entropy_bits_mean": 4.037426016014513
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-030",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT8-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT8-row1",
+      "stratum": "32-64",
+      "original_work_id": "bb765fed5273d6ac2a42f0158b0ffe299c87a43d30dbdfae13fa9046076c47fa",
+      "control_id": "control-HT8-row1",
+      "carrier": "artifacts/v2_review/cases/HT8-row1-arithmetic/carrier.png",
+      "carrier_sha256": "2779e9b28710b3f3b7c64f5dc08a2e8b5327a5e60fc3a777c433adffb94d026f",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.036545705372083,
+        "rank_mean": 10.912298387096774,
+        "log_rank_mean": 2.381534662541288,
+        "entropy_bits_mean": 4.046323512182391
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-031",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT8-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT8-row1",
+      "stratum": "32-64",
+      "original_work_id": "bd60cfa084a64e67c70bdddd3e50ba738469f859a52842b7a0d8c1cfb81f1641",
+      "control_id": "control-HT8-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT8-row1/carrier.png",
+      "carrier_sha256": "3fd7308621e03d117922171d8ddd75ecefa023da594e5af97fb38e1651566e18",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.7720438627252686,
+        "rank_mean": 11.381720430107526,
+        "log_rank_mean": 2.220418117995733,
+        "entropy_bits_mean": 3.778078645839072
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-032",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT9-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT9-row1",
+      "stratum": "32-64",
+      "original_work_id": "85e765e40d3f2b7fa956eb8c9b9aa1572baa666456aa4650db216a75d93615e8",
+      "control_id": "control-HT9-row1",
+      "carrier": "artifacts/v2_review/cases/HT9-row1-fixed/carrier.png",
+      "carrier_sha256": "564480537c880d549c23c6f41f379d91979dec10779dd60a31a868c12c3b33da",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.622866251518536,
+        "rank_mean": 10.995295698924732,
+        "log_rank_mean": 2.823349060377653,
+        "entropy_bits_mean": 4.61475423385647
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-033",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT9-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT9-row1",
+      "stratum": "32-64",
+      "original_work_id": "a56ba1f631565ca84ddcfb93e774e1c8cf0f990fee60fce155a71042b262c315",
+      "control_id": "control-HT9-row1",
+      "carrier": "artifacts/v2_review/cases/HT9-row1-gated/carrier.png",
+      "carrier_sha256": "4ca7d9d68ada98e5b92edd5747917b54741297e6540d3145c20229675007371d",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.26356270637162,
+        "rank_mean": 8.944220430107526,
+        "log_rank_mean": 2.507905021748712,
+        "entropy_bits_mean": 4.25849999510591
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-034",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT9-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT9-row1",
+      "stratum": "32-64",
+      "original_work_id": "9c5988f1f10292e64d0f7f80495d74e23856f0b5668219f652c95ab28df81a1e",
+      "control_id": "control-HT9-row1",
+      "carrier": "artifacts/v2_review/cases/HT9-row1-arithmetic/carrier.png",
+      "carrier_sha256": "b19c36db1b688fc52bc32121088a191beef264e0a46b5618c7e83762503549bf",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.4840815848612015,
+        "rank_mean": 9.711693548387096,
+        "log_rank_mean": 2.0267021094589244,
+        "entropy_bits_mean": 3.512223363375202
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-035",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT9-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT9-row1",
+      "stratum": "32-64",
+      "original_work_id": "a6a99fc393c637bc96c7ff29d8997d7aa41811ac35a29a893f1276790e6fd651",
+      "control_id": "control-HT9-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT9-row1/carrier.png",
+      "carrier_sha256": "511eb2c514b65f9a79c402258c7eeb04688394fb0a000ef02494f2afee7832c4",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.831858260933201,
+        "rank_mean": 11.36861559139785,
+        "log_rank_mean": 2.265743744697479,
+        "entropy_bits_mean": 3.8138173302510086
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-036",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT10-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT10-row1",
+      "stratum": "32-64",
+      "original_work_id": "cdc6218f2d4155bd167332ccddae3d80ad557348df71dc1d03abd2d132a3ccb0",
+      "control_id": "control-HT10-row1",
+      "carrier": "artifacts/v2_review/cases/HT10-row1-fixed/carrier.png",
+      "carrier_sha256": "9e1f2f4b4e80fc2cf3cac407b949f49a5145d6b81f3eaa12fff238ed4309e8d4",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.902649805648045,
+        "rank_mean": 6.99630376344086,
+        "log_rank_mean": 2.225331233397835,
+        "entropy_bits_mean": 3.9084099017750584
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-037",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT10-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT10-row1",
+      "stratum": "32-64",
+      "original_work_id": "756bbd435c6012b2ebff3b65b5718c1795503c2ae96e778e670d99c98b9f270c",
+      "control_id": "control-HT10-row1",
+      "carrier": "artifacts/v2_review/cases/HT10-row1-gated/carrier.png",
+      "carrier_sha256": "da237e7a3c82a13ecb30b76032c4b8d9e11309abc6cccbc8747bdc27d843702d",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.427367342988583,
+        "rank_mean": 10.585685483870968,
+        "log_rank_mean": 2.6797234038961566,
+        "entropy_bits_mean": 4.421230548644458
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-038",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT10-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT10-row1",
+      "stratum": "32-64",
+      "original_work_id": "f1b049e2167c931db74913883c2c2f52e3dc0a8bcc025a79499ae985aa635c87",
+      "control_id": "control-HT10-row1",
+      "carrier": "artifacts/v2_review/cases/HT10-row1-arithmetic/carrier.png",
+      "carrier_sha256": "2740fa9c5bc6b0a9c2984beddde4351a7cccb41b2b7b6410c169ca18b4c4f3e3",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.282170902471483,
+        "rank_mean": 8.233198924731182,
+        "log_rank_mean": 1.8253115494181462,
+        "entropy_bits_mean": 3.2994382534189395
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-039",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT10-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT10-row1",
+      "stratum": "32-64",
+      "original_work_id": "257c646b8fa6887c3a4fabbc56953b2b067fdac40c165665cc8fbbe52c9cf35d",
+      "control_id": "control-HT10-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT10-row1/carrier.png",
+      "carrier_sha256": "a764d0e21e254c4dad21851a0c2c9d5503334602d45b705840ac7531b288457d",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.425194798337257,
+        "rank_mean": 10.01377688172043,
+        "log_rank_mean": 1.9746717395390723,
+        "entropy_bits_mean": 3.4515233304218507
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-040",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT11-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT11-row1",
+      "stratum": "65-128",
+      "original_work_id": "788dbf13087bcbc3ce543c62ba028edfaca9de548de4db15e35e8ed8a2e26eea",
+      "control_id": "control-HT11-row1",
+      "carrier": "artifacts/v2_review/cases/HT11-row1-fixed/carrier.png",
+      "carrier_sha256": "984acc43db591014020e9b30bba8eaf67110e025118426abdd0baebc0367df50",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.46102054738551,
+        "rank_mean": 9.499327956989248,
+        "log_rank_mean": 2.6782987468291894,
+        "entropy_bits_mean": 4.46209375539583
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-041",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT11-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT11-row1",
+      "stratum": "65-128",
+      "original_work_id": "fcd2e571abac209b8b9e0c99d2d254b33ed42af0f6c268cbc01a5497aacdcdda",
+      "control_id": "control-HT11-row1",
+      "carrier": "artifacts/v2_review/cases/HT11-row1-gated/carrier.png",
+      "carrier_sha256": "4d75d2629af3fa0a91362bf7003484f314bdbf22fc831dd1139fe030750c301c",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.5166887821916335,
+        "rank_mean": 10.459005376344086,
+        "log_rank_mean": 2.7406418781916635,
+        "entropy_bits_mean": 4.5218195979570694
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-042",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT11-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT11-row1",
+      "stratum": "65-128",
+      "original_work_id": "74d397e949a4390b8ee6f738f1b1a44f68d2d327239cc431d9f6829af238d442",
+      "control_id": "control-HT11-row1",
+      "carrier": "artifacts/v2_review/cases/HT11-row1-arithmetic/carrier.png",
+      "carrier_sha256": "88b4f0c5466db6f56bcbc51bd6b75d6568630cbc6a9645918ed62404c3329f30",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.741520361341614,
+        "rank_mean": 12.581317204301076,
+        "log_rank_mean": 2.183938456039108,
+        "entropy_bits_mean": 3.749606309942169
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-043",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT11-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT11-row1",
+      "stratum": "65-128",
+      "original_work_id": "d1bf714880af1a72976eaad31605d56773113cb6211563be0805a8bd7917c052",
+      "control_id": "control-HT11-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT11-row1/carrier.png",
+      "carrier_sha256": "95b700ce31c15fd4b5f599fec212d7498398c9fcf7d78bc47ff33a363a769771",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.0880675771108472,
+        "rank_mean": 8.542674731182796,
+        "log_rank_mean": 1.7250757748059806,
+        "entropy_bits_mean": 3.099374807989951
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-044",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT12-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT12-row1",
+      "stratum": "65-128",
+      "original_work_id": "60d13dfedddef6b00eb579ed270449a9db810e228b8e28ab93f0b23f29a5fabc",
+      "control_id": "control-HT12-row1",
+      "carrier": "artifacts/v2_review/cases/HT12-row1-fixed/carrier.png",
+      "carrier_sha256": "430cced86f67b256a7683b6b95a30b2f2417c0c4c1398371815b4a8dd20c1af3",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.342844944223802,
+        "rank_mean": 9.363239247311828,
+        "log_rank_mean": 2.575177731073825,
+        "entropy_bits_mean": 4.343330696809001
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-045",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT12-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT12-row1",
+      "stratum": "65-128",
+      "original_work_id": "d97f4a3e7ae5b275b5be76bb83561aa5e0bcd2941fa9fc62314bb60d108e47e1",
+      "control_id": "control-HT12-row1",
+      "carrier": "artifacts/v2_review/cases/HT12-row1-gated/carrier.png",
+      "carrier_sha256": "ad786072dcc13c1585f0b79a14d06aa52e4b269d0997bc2bb1b99ec76f549945",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.940879112717406,
+        "rank_mean": 7.283266129032258,
+        "log_rank_mean": 2.251826609008811,
+        "entropy_bits_mean": 3.9549382174834964
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-046",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT12-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT12-row1",
+      "stratum": "65-128",
+      "original_work_id": "e66bf315b13aeeabc5a4cee7a39b313d1f53e91070c71e80d85595b7027e68da",
+      "control_id": "control-HT12-row1",
+      "carrier": "artifacts/v2_review/cases/HT12-row1-arithmetic/carrier.png",
+      "carrier_sha256": "d84705f00d5d74501d297b20be0c6740bd0819736e41c84850fcd1cac26525a6",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.6073148403669753,
+        "rank_mean": 11.58736559139785,
+        "log_rank_mean": 2.092497503447596,
+        "entropy_bits_mean": 3.6077665984635536
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-047",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT12-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT12-row1",
+      "stratum": "65-128",
+      "original_work_id": "ef0dcb19a4eb3c74fba348a9cdd5aad1800b4bca6001d96c9d504cde37096951",
+      "control_id": "control-HT12-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT12-row1/carrier.png",
+      "carrier_sha256": "d10b5445ebb06163ef74ae9d8c128390761e3e36e5979937c36f04ee1d5c320f",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.305990658394695,
+        "rank_mean": 11.24361559139785,
+        "log_rank_mean": 1.9235679308461655,
+        "entropy_bits_mean": 3.2901309317824836
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-048",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT13-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT13-row1",
+      "stratum": "65-128",
+      "original_work_id": "e1a8fee4b5529a451d88a97c6936104ab8d32c19ab57f100b2291efdad10c4c8",
+      "control_id": "control-HT13-row1",
+      "carrier": "artifacts/v2_review/cases/HT13-row1-fixed/carrier.png",
+      "carrier_sha256": "440fcb678c30542078ff34d358144078cbd8d723b02c75c58eb65c580d29cfa2",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.8716459769254823,
+        "rank_mean": 6.713709677419355,
+        "log_rank_mean": 2.1933707500404203,
+        "entropy_bits_mean": 3.880137617841716
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-049",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT13-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT13-row1",
+      "stratum": "65-128",
+      "original_work_id": "b1e809cc15283edabe87f3ca3bc04243cdbc0f95ccf53fc132b3fe028314c03b",
+      "control_id": "control-HT13-row1",
+      "carrier": "artifacts/v2_review/cases/HT13-row1-gated/carrier.png",
+      "carrier_sha256": "6969976b3e2a23385a93294d4032b0213112c15d93127e2ee9f8492636a14757",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.6544664224903243,
+        "rank_mean": 6.748655913978495,
+        "log_rank_mean": 2.058250888465354,
+        "entropy_bits_mean": 3.6680420923845074
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-050",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT13-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT13-row1",
+      "stratum": "65-128",
+      "original_work_id": "0f2c8be08ed2e7d2324125133f9b9dc501f009850934e97db9ecdc432782e9cb",
+      "control_id": "control-HT13-row1",
+      "carrier": "artifacts/v2_review/cases/HT13-row1-arithmetic/carrier.png",
+      "carrier_sha256": "bce6b667deb9d84d8fe4fba0cc8fbfa914de3a2148622871db643aaeaf89daf8",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.5421754721347063,
+        "rank_mean": 10.395833333333334,
+        "log_rank_mean": 2.043375860459562,
+        "entropy_bits_mean": 3.57374141564344
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-051",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT13-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT13-row1",
+      "stratum": "65-128",
+      "original_work_id": "8938ed5237d2a3af80eb79acfe10732a8f598520052a84d8c71e320a20b4ad15",
+      "control_id": "control-HT13-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT13-row1/carrier.png",
+      "carrier_sha256": "b8655facc7527f7a40e733ade5d9e2c116b30995d801adb5b41bd5ab71f864c3",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.6663903585717814,
+        "rank_mean": 11.125672043010752,
+        "log_rank_mean": 2.116010720157766,
+        "entropy_bits_mean": 3.6533181489069646
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-052",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT14-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT14-row1",
+      "stratum": "65-128",
+      "original_work_id": "6836d190ff5aa8572b74676dc2beaedd74dc4067596cdef205520da77e9a9781",
+      "control_id": "control-HT14-row1",
+      "carrier": "artifacts/v2_review/cases/HT14-row1-fixed/carrier.png",
+      "carrier_sha256": "0f91762c3a058dad741f2f5f2ac86c91fb83fdd92e7d3c99efd32211251ea080",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.4893785733556335,
+        "rank_mean": 10.487231182795698,
+        "log_rank_mean": 2.7093596390863546,
+        "entropy_bits_mean": 4.487214839711806
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-053",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT14-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT14-row1",
+      "stratum": "65-128",
+      "original_work_id": "ee3a83319c590b2ce59bffc6571b3064d8a2505211a9b89561502bc71d238fb9",
+      "control_id": "control-HT14-row1",
+      "carrier": "artifacts/v2_review/cases/HT14-row1-gated/carrier.png",
+      "carrier_sha256": "093c5410e9bb3a44f47cee25d6bddec8deb5c6c4738f2f7770f273577e509ca9",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.1408367702573665,
+        "rank_mean": 9.204637096774194,
+        "log_rank_mean": 2.4360659292730493,
+        "entropy_bits_mean": 4.143937379002649
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-054",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT14-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT14-row1",
+      "stratum": "65-128",
+      "original_work_id": "29645ea112b0482d4b238d339a159bceb03b823b3a4e80841642f615186716fa",
+      "control_id": "control-HT14-row1",
+      "carrier": "artifacts/v2_review/cases/HT14-row1-arithmetic/carrier.png",
+      "carrier_sha256": "82728c1c7674802a53667ad73fe0aa8bfa2654090afed880ea0ff1c1d30f2658",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.8091522565974723,
+        "rank_mean": 10.38508064516129,
+        "log_rank_mean": 2.231514291665996,
+        "entropy_bits_mean": 3.8213554002622185
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-055",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT14-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT14-row1",
+      "stratum": "65-128",
+      "original_work_id": "e268016c6ba05edf45e7a1e4f689965d23ece162d425ce9a1a1d3f50b2c5a6b4",
+      "control_id": "control-HT14-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT14-row1/carrier.png",
+      "carrier_sha256": "24aeb33bed209161655432dc6e8c96236d6baa7127782760d9c4040eb9ec02b3",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.082989522578105,
+        "rank_mean": 12.135416666666666,
+        "log_rank_mean": 2.438132187327008,
+        "entropy_bits_mean": 4.048430250429847
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-056",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT15-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT15-row1",
+      "stratum": "65-128",
+      "original_work_id": "3b840d27567c82558e86b023040b07d14bb815100a347f40e1ee506dacd7f580",
+      "control_id": "control-HT15-row1",
+      "carrier": "artifacts/v2_review/cases/HT15-row1-fixed/carrier.png",
+      "carrier_sha256": "80ad8ca33a04dcd8c58df821b7de3f9cae717970590a2ff3195c44470eb45d41",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.4186963499492276,
+        "rank_mean": 9.761424731182796,
+        "log_rank_mean": 2.6477444604002125,
+        "entropy_bits_mean": 4.414964574748769
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-057",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT15-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT15-row1",
+      "stratum": "65-128",
+      "original_work_id": "53ac728d8a8c0229ddab8784cf1b6b088133d7e338100317af758789f8f6f22a",
+      "control_id": "control-HT15-row1",
+      "carrier": "artifacts/v2_review/cases/HT15-row1-gated/carrier.png",
+      "carrier_sha256": "c1e722b524003019b24430b87a4375d26ad1882e05149c089aee38fd4219c7e6",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.3863248863062845,
+        "rank_mean": 10.567876344086022,
+        "log_rank_mean": 2.637325937831322,
+        "entropy_bits_mean": 4.382164574197185
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-058",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT15-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT15-row1",
+      "stratum": "65-128",
+      "original_work_id": "461e31b83ec2f5135ffb879f4ffb89de910384eeee4ae4f63c656e17c7d1c77b",
+      "control_id": "control-HT15-row1",
+      "carrier": "artifacts/v2_review/cases/HT15-row1-arithmetic/carrier.png",
+      "carrier_sha256": "4dc70033442cfd1a3df58e213dc728c0e8c6fbe5880e43b70dd796dd0078e239",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.4823738313049395,
+        "rank_mean": 14.432459677419354,
+        "log_rank_mean": 2.76471156106963,
+        "entropy_bits_mean": 4.488223983551227
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-059",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT15-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT15-row1",
+      "stratum": "65-128",
+      "original_work_id": "644323185ba161843cdc1d248dae7621434b01ba415a948d871aaa6944a388c5",
+      "control_id": "control-HT15-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT15-row1/carrier.png",
+      "carrier_sha256": "0ad69ba2e45e746f7e1743442294b6a69688e5240430795345dcad3436ba6284",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.668840878991993,
+        "rank_mean": 10.621639784946236,
+        "log_rank_mean": 2.1248244728556336,
+        "entropy_bits_mean": 3.6730699765449177
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-060",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT16-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT16-row1",
+      "stratum": "65-128",
+      "original_work_id": "8a0f02109a44c34757ae3a56875f03cd998b9ae331fa677b8ebbc670ffa4b430",
+      "control_id": "control-HT16-row1",
+      "carrier": "artifacts/v2_review/cases/HT16-row1-fixed/carrier.png",
+      "carrier_sha256": "018299a294dd52ae3033d3aaadb95e7114e095be2d4faf4443935f3db28852bd",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.192962890591171,
+        "rank_mean": 7.938172043010753,
+        "log_rank_mean": 2.468746503890186,
+        "entropy_bits_mean": 4.185236375826531
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-061",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT16-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT16-row1",
+      "stratum": "65-128",
+      "original_work_id": "943055c9b3dcc25bb37605755e41d07139cf9bc1a83e1b632306392f75eba2b3",
+      "control_id": "control-HT16-row1",
+      "carrier": "artifacts/v2_review/cases/HT16-row1-gated/carrier.png",
+      "carrier_sha256": "1a4b09051782009eeb5c23f129474dfa3d97f1fae67d23b015b5bcd93ab0f4de",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.176991118191572,
+        "rank_mean": 7.931451612903226,
+        "log_rank_mean": 2.450395273007616,
+        "entropy_bits_mean": 4.177344632058702
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-062",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT16-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT16-row1",
+      "stratum": "65-128",
+      "original_work_id": "8c07e1f452d6ef387fa609e47c73a1dd54ae040a2a75b3d4d1c7eba6d603d260",
+      "control_id": "control-HT16-row1",
+      "carrier": "artifacts/v2_review/cases/HT16-row1-arithmetic/carrier.png",
+      "carrier_sha256": "003e41738d3b69c10bf2fdaf58d50032b0f9d225209c70580dcbe57389b58f18",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.5313348237311875,
+        "rank_mean": 9.44388440860215,
+        "log_rank_mean": 2.0348324781096734,
+        "entropy_bits_mean": 3.5367736181207454
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-063",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT16-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT16-row1",
+      "stratum": "65-128",
+      "original_work_id": "d522a1d2c3f79484dcbde1a7f74c1316b9c1a33819c4d949d4595694686315a9",
+      "control_id": "control-HT16-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT16-row1/carrier.png",
+      "carrier_sha256": "ed336087dac4c5af62908bcb8cd78b0c0a0e9c31dd5f5098383b30a19bae365e",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.3597566426101118,
+        "rank_mean": 9.115927419354838,
+        "log_rank_mean": 1.8774648096954685,
+        "entropy_bits_mean": 3.3720324016852388
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-064",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT17-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT17-row1",
+      "stratum": "65-128",
+      "original_work_id": "c64e6d581e2a0ea6b7c478f83ad79e0a149546cfabb49d23d7cdf8c5fc894a3d",
+      "control_id": "control-HT17-row1",
+      "carrier": "artifacts/v2_review/cases/HT17-row1-fixed/carrier.png",
+      "carrier_sha256": "4c701f709f60a57621ddb805cf77f968c007345271814900f04da58ead22af23",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.98728123527332,
+        "rank_mean": 7.641129032258065,
+        "log_rank_mean": 2.2964000935019233,
+        "entropy_bits_mean": 3.982826318321416
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-065",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT17-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT17-row1",
+      "stratum": "65-128",
+      "original_work_id": "0b22d595d6f131d4ab62750a8e76c89220119d9eb41080ba360a2752229b72f5",
+      "control_id": "control-HT17-row1",
+      "carrier": "artifacts/v2_review/cases/HT17-row1-gated/carrier.png",
+      "carrier_sha256": "b4882a583c6af864dc738f76ead29489144e0d946656ba67d89d4f9ffc4d51a5",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.1498068660357,
+        "rank_mean": 7.837029569892473,
+        "log_rank_mean": 2.4138886826097146,
+        "entropy_bits_mean": 4.156515037777414
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-066",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT17-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT17-row1",
+      "stratum": "65-128",
+      "original_work_id": "94e1f4ca90f071c19c8952f06478d2816c5371899016f2695b644906ba6b91cf",
+      "control_id": "control-HT17-row1",
+      "carrier": "artifacts/v2_review/cases/HT17-row1-arithmetic/carrier.png",
+      "carrier_sha256": "3d39f5242e1f5fda180f67f02e80dd4823f122af3b3f244a4129f83bb749871a",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.4057871348111726,
+        "rank_mean": 9.912298387096774,
+        "log_rank_mean": 1.9492995369210204,
+        "entropy_bits_mean": 3.415670567462865
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-067",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT17-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT17-row1",
+      "stratum": "65-128",
+      "original_work_id": "925a36a9897a12bf2b70cafe569008c0f813271d1ebe8345b86e8826d7ba3a3d",
+      "control_id": "control-HT17-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT17-row1/carrier.png",
+      "carrier_sha256": "f88e30702fc97cbe5e23a239d320d829e152991a3c92bf50424320d6bc1648df",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.612111140765698,
+        "rank_mean": 10.218077956989248,
+        "log_rank_mean": 2.0823530670683024,
+        "entropy_bits_mean": 3.61598190294665
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-068",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT18-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT18-row1",
+      "stratum": "65-128",
+      "original_work_id": "e154c8592bc6f92bb3f1728b6418b220f99ab7b04498aa0c4e0c989023a0eca8",
+      "control_id": "control-HT18-row1",
+      "carrier": "artifacts/v2_review/cases/HT18-row1-fixed/carrier.png",
+      "carrier_sha256": "b6317a4d5b66f17b472886e26eab489a646b6079f00616d9d981d331a82bf478",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.226137046665123,
+        "rank_mean": 7.996639784946237,
+        "log_rank_mean": 2.4803490722954638,
+        "entropy_bits_mean": 4.222728935962091
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-069",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT18-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT18-row1",
+      "stratum": "65-128",
+      "original_work_id": "c5d7f1dc6c704f27278ac9bd5dd9c15f1c48ec5dc8d3c8c79a2bc4eafd7765bf",
+      "control_id": "control-HT18-row1",
+      "carrier": "artifacts/v2_review/cases/HT18-row1-gated/carrier.png",
+      "carrier_sha256": "12eb84fd1548d066c5bc7ba3f1860239ccd1e59bbcc31371d796a89f010b17ee",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.731936271364319,
+        "rank_mean": 6.468077956989247,
+        "log_rank_mean": 2.091445174113378,
+        "entropy_bits_mean": 3.7330687590526375
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-070",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT18-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT18-row1",
+      "stratum": "65-128",
+      "original_work_id": "63e3be28fd9a6833bdce380c48001e5b7644ae355a9a249c20e899875bb6b01d",
+      "control_id": "control-HT18-row1",
+      "carrier": "artifacts/v2_review/cases/HT18-row1-arithmetic/carrier.png",
+      "carrier_sha256": "c5ab76cc72b69688ed289c06e57851cdd6e036bb949f05bfef28273a9291edea",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.8970660964590333,
+        "rank_mean": 11.675739247311828,
+        "log_rank_mean": 2.2966062532746054,
+        "entropy_bits_mean": 3.890324720730808
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-071",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT18-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT18-row1",
+      "stratum": "65-128",
+      "original_work_id": "634181198331e79d3d231ae5949c30dc66fe27918465b4a9f5ce827da5d24b9a",
+      "control_id": "control-HT18-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT18-row1/carrier.png",
+      "carrier_sha256": "000da95f071ad4ac53b215db513d2f9a81c3c0955cf951c110f9fe03d531774c",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.9710114425976664,
+        "rank_mean": 10.845430107526882,
+        "log_rank_mean": 2.348447131769007,
+        "entropy_bits_mean": 3.9568706990038502
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-072",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT19-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT19-row1",
+      "stratum": "65-128",
+      "original_work_id": "32444df9342a4f5a5fa8641a17ebf191cc132dae3a9dfd050b9f1730eb00d4d0",
+      "control_id": "control-HT19-row1",
+      "carrier": "artifacts/v2_review/cases/HT19-row1-fixed/carrier.png",
+      "carrier_sha256": "dc46b14559d3a540039b9abb35ec771b397cc7c536683e91e70a71384df7d846",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.6495787012436556,
+        "rank_mean": 5.98991935483871,
+        "log_rank_mean": 2.022459458688277,
+        "entropy_bits_mean": 3.6496240465522596
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-073",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT19-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT19-row1",
+      "stratum": "65-128",
+      "original_work_id": "9e6fee3c64c46e23134d4d29f5e180897cad5ae355fa5dcc965a560fd1f535a7",
+      "control_id": "control-HT19-row1",
+      "carrier": "artifacts/v2_review/cases/HT19-row1-gated/carrier.png",
+      "carrier_sha256": "1630557f6652d02c33abeab72c4670095afd53bde3da303e68cebcf948e1f8f1",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.2944154395648315,
+        "rank_mean": 9.729166666666666,
+        "log_rank_mean": 2.56448467853665,
+        "entropy_bits_mean": 4.29432209898906
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-074",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT19-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT19-row1",
+      "stratum": "65-128",
+      "original_work_id": "96b6a4e6cc55a3eab7edfce0e1389ed909ff477dd266556b09ae97239d87a0ba",
+      "control_id": "control-HT19-row1",
+      "carrier": "artifacts/v2_review/cases/HT19-row1-arithmetic/carrier.png",
+      "carrier_sha256": "0a690abbb4c1547e2361c4a661d5cd86276b4de5e7bf2a72164ad1bb43f0e40f",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.592560299715762,
+        "rank_mean": 10.572916666666666,
+        "log_rank_mean": 2.0901052682709236,
+        "entropy_bits_mean": 3.588917170959907
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-075",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT19-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT19-row1",
+      "stratum": "65-128",
+      "original_work_id": "bcddc8ae8feeb34f8cbde14c9d1e15d045095a99459aaac2296af28e289e60d5",
+      "control_id": "control-HT19-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT19-row1/carrier.png",
+      "carrier_sha256": "17ab3bac9e39e187e1807382063953e63a1db72e743e877895452906e47121c5",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.384058128048802,
+        "rank_mean": 15.461021505376344,
+        "log_rank_mean": 2.6819760643134924,
+        "entropy_bits_mean": 4.379901897882796
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-076",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT20-row1-fixed",
+      "kind": "stego",
+      "method": "fixed",
+      "payload_group": "HT20-row1",
+      "stratum": "65-128",
+      "original_work_id": "9d439c482f001426f06bc658975cab1ac486b95275665c66ca0985b25d281a86",
+      "control_id": "control-HT20-row1",
+      "carrier": "artifacts/v2_review/cases/HT20-row1-fixed/carrier.png",
+      "carrier_sha256": "31e1d1ab53f4f205694d3d0d05532d5d65c632e7c550f4afac36fb3a84d95254",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.427229184339204,
+        "rank_mean": 9.411290322580646,
+        "log_rank_mean": 2.6584401731881084,
+        "entropy_bits_mean": 4.4313992832136355
+      },
+      "original_profile_id": "03164f1713a3dac4529b9c56ef7fc5102da68e014596ebd05d00e61686237ea4",
+      "original_exact_recovery": true,
+      "observer_id": "score-077",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT20-row1-gated",
+      "kind": "stego",
+      "method": "gated",
+      "payload_group": "HT20-row1",
+      "stratum": "65-128",
+      "original_work_id": "97ea9835f48da68569b1e02e7b8e3601452c7d21231801deb524247b695f4217",
+      "control_id": "control-HT20-row1",
+      "carrier": "artifacts/v2_review/cases/HT20-row1-gated/carrier.png",
+      "carrier_sha256": "28b80734e5a8314cda4d50d90605400947ec56201d68c408561a64b6bd122e74",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.5855692606698444,
+        "rank_mean": 6.558131720430108,
+        "log_rank_mean": 1.9908987074559201,
+        "entropy_bits_mean": 3.599001420191888
+      },
+      "original_profile_id": "ec599834d0d1b41ef5ec0cac16966ba4690b040f4815927b2706e8e18948fa0b",
+      "original_exact_recovery": true,
+      "observer_id": "score-078",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "HT20-row1-arithmetic",
+      "kind": "stego",
+      "method": "arithmetic",
+      "payload_group": "HT20-row1",
+      "stratum": "65-128",
+      "original_work_id": "dad643d8af7352afcc847fce7b035616fc385dd57ca304ef387cba465735280d",
+      "control_id": "control-HT20-row1",
+      "carrier": "artifacts/v2_review/cases/HT20-row1-arithmetic/carrier.png",
+      "carrier_sha256": "f1488ebdcd03a791be7f701900a3a3e053392d6203592e02db854b6ec0a20969",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.287567975787315,
+        "rank_mean": 13.47143817204301,
+        "log_rank_mean": 2.605637495269692,
+        "entropy_bits_mean": 4.299422438268239
+      },
+      "original_profile_id": "4ca70ba8f22c5ca524f4de0d9c61c0da7475c178baa56361904d3cf932e0ba52",
+      "original_exact_recovery": true,
+      "observer_id": "score-079",
+      "observer_context": "row2"
+    },
+    {
+      "artifact_id": "control-HT20-row1",
+      "kind": "control",
+      "method": null,
+      "payload_group": "HT20-row1",
+      "stratum": "65-128",
+      "original_work_id": "c8a1457d44588b1e45c8005561beebeda4f94dbe4b205d2abcd3f3351f09e326",
+      "control_id": "control-HT20-row1",
+      "carrier": "artifacts/v2_review/controls/control-HT20-row1/carrier.png",
+      "carrier_sha256": "0818922f8c88577c61824eca51e788eaffb8e02472d66602da5e1f715d3ad174",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.2373981223776065,
+        "rank_mean": 7.920362903225806,
+        "log_rank_mean": 1.7892366544736005,
+        "entropy_bits_mean": 3.257293104647809
+      },
+      "original_profile_id": null,
+      "original_exact_recovery": null,
+      "observer_id": "score-080",
+      "observer_context": "row2"
+    }
+  ],
+  "development_validation": [
+    {
+      "artifact_id": "T1-fixed-r0-reference",
+      "carrier": "artifacts/gpu_performance_review/cases/T1-fixed-r0-reference/carrier.png",
+      "retained_report": "artifacts/gpu_performance_review/cases/T1-fixed-r0-reference/sender.json",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.07318914450902,
+        "rank_mean": 7.690188172043011,
+        "log_rank_mean": 2.3459030425171647,
+        "entropy_bits_mean": 4.071442356837397
+      },
+      "distribution_digest": {
+        "steps": 2976,
+        "format": "position,length:uint64le; ids/order:int64le; probabilities:float64le",
+        "eligible_ids_sha256": "15ecf06159989db53986ae5124f3d64b5c9f82d537294debf22c69abb3802ec0",
+        "probabilities_sha256": "c9a40f98497cb14b264c25101a56e86a65d76e9cb7605063bb07f69194717646",
+        "rank_order_sha256": "b44a0097edc2c599d10fd09c9ab74110246e3d4d2baf35ef0af85220fb36630b"
+      },
+      "observer_id": "validation-01",
+      "observer_context": "row1",
+      "carrier_sha256": "1aadb8e82582ec2040eaceb77979e5e308e3b6fe525c20ddf647b664bec6b774",
+      "retained_report_sha256": "2f4c08bbe915551f863887dc20b47a6f455ffd6a29955816cc04ea6137ded083"
+    },
+    {
+      "artifact_id": "T1-arithmetic-r0-reference",
+      "carrier": "artifacts/gpu_performance_review/cases/T1-arithmetic-r0-reference/carrier.png",
+      "retained_report": "artifacts/gpu_performance_review/cases/T1-arithmetic-r0-reference/sender.json",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 4.763411104401106,
+        "rank_mean": 15.560819892473118,
+        "log_rank_mean": 2.984334132171846,
+        "entropy_bits_mean": 4.74296371066611
+      },
+      "distribution_digest": {
+        "steps": 2976,
+        "format": "position,length:uint64le; ids/order:int64le; probabilities:float64le",
+        "eligible_ids_sha256": "15ecf06159989db53986ae5124f3d64b5c9f82d537294debf22c69abb3802ec0",
+        "probabilities_sha256": "14829c2c330c9227a7eb96477be46670df0a9a7558af9f041459e82c80dccee4",
+        "rank_order_sha256": "c1317ff9502f8066acc661393468d83ec84f448e8a60641cb64d598ed05cd2d1"
+      },
+      "observer_id": "validation-02",
+      "observer_context": "row1",
+      "carrier_sha256": "94bcb4092a19604619db3658a56662e924555aed4aa29f44b7904a14acddb58a",
+      "retained_report_sha256": "52d10faed804ee080dca20c0be30161a78fcae2ef1f7738dcc42d1819dd69075"
+    },
+    {
+      "artifact_id": "control-image-5202",
+      "carrier": "artifacts/v1_qualification_review/traces/control-image-5202/carrier.png",
+      "retained_report": "artifacts/v1_qualification_review/traces/control-image-5202/result.json",
+      "correct_scores": {
+        "positions": 2976,
+        "surprisal_bits_mean": 3.887761867339418,
+        "rank_mean": 10.26646505376344,
+        "log_rank_mean": 2.2565619328425184,
+        "entropy_bits_mean": 3.9094160491945953
+      },
+      "distribution_digest": null,
+      "observer_id": "validation-03",
+      "observer_context": "row1",
+      "carrier_sha256": "6746f8692d8d1d41bb6aa28fb6f23a6464c564677dda3b516c3bc9dabe31a208",
+      "retained_report_sha256": "b76f74f2c1f2b1e1ec859b73ee618e7d802ab4f7595405a2bf4d3e5d4b3b1697"
+    }
+  ],
+  "order_rule": "V2 frozen PNG group order; fixed, gated, arithmetic, then its one control; no outcome selection",
+  "development_rule": "first GPU benchmark payload fixed/arithmetic reference carriers, then first row1 ordinary control retained in qualification review",
+  "observer_inputs": [
+    "saved RGB8 PNG",
+    "common fixed profile (coder unused)",
+    "specified 96-byte row"
+  ],
+  "observer_exclusions": [
+    "labels",
+    "group/control associations",
+    "keys",
+    "sources",
+    "packets",
+    "sender caches"
+  ],
+  "scoring": {
+    "primary": "surprisal_bits_mean",
+    "secondary": "log_rank_mean",
+    "positions": 2976,
+    "orientation": "higher means stego",
+    "precision": "unchanged float32 network / float64 conditional probabilities",
+    "definition": "V2 Trace.whole sequential means over every delivered raster RGB channel; row excluded",
+    "invalid": "no extra clipping; zero/invalid observed probability is an explicit unscorable outcome; partial means excluded",
+    "execution_mode": "cuda_graph"
+  },
+  "analysis": {
+    "bootstrap_replicates": 2000,
+    "seed": 2026090902,
+    "seed_reason": "accepted V2 seed 2026090901 plus PNG direction offset 1",
+    "resampling": "accepted PCG64 length-stratified payload-group draws; identical draws across both contexts, all methods and shared controls",
+    "difference": "mismatched minus correct; paired percentile 95% intervals",
+    "missing": "retain failures; method/score paired complete-group AUCs and explicit exclusions; accepted full row1 result also retained",
+    "duplicates": "accepted lowest frozen group owns an identical control hash; verified none in this allocation",
+    "score_direction": "never reverse; no threshold selection; exploratory, one alternate row"
+  },
+  "budget": {
+    "stage": "png_context_detection",
+    "absolute_seconds": 7200,
+    "whole_project_seconds": 144000,
+    "per_job_hard_seconds": 60,
+    "forecast": "remaining jobs * max(30, 1.5 * maximum measured development charged seconds); one 50% time margin, no second reserve",
+    "stop": "no full 80-artifact launch unless conservative batch projection fits both caps; pause on infrastructure, identity or validation discrepancy"
+  },
+  "accepted_sources": {
+    "artifacts/v2_review/manifest.json": "643099adf3bf2df5e62db6e49917d86d0f0c766d3e0d51b6a33dc0c62abc5e6c",
+    "artifacts/v2_review/results.jsonl": "c90564de13cf30cf43388af71b82c549a398388c02c969c4bb2062b14a61e0f0",
+    "artifacts/v2_review/control_links.json": "d7e944686479c4e4e3e7a4287418c5bf3f6fe278aecf871c6d1ac6033d6170a4",
+    "artifacts/v2_review/analysis.json": "43d1e9330641179a8c03fc6b816f0bb690fcece621fa29cd91d93ccc3254e7a5",
+    "data/qualification_v1/manifest.json": "9c20a5c11896c84d0f7accf2c5e4ad99c4e432f7bdd02bdaa2056ae3b048346f"
+  }
+}

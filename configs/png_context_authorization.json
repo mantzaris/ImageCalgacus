@@ -1,0 +1,9 @@
+{
+  "authorization_id": "user-png-context-detection-2h",
+  "stage": "png_context_detection",
+  "absolute_seconds": 7200,
+  "whole_project_seconds": 144000,
+  "scope": "three predetermined development score checks and row2 scoring of the 80 existing V2 PNG artifacts; no carrier generation",
+  "starting_revision": "cdff18c30a0492f242921d72fb369ef78a6a7f38",
+  "unused_other_phase_allowances_transfer": false
+}

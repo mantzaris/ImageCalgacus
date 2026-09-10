@@ -1,0 +1,12 @@
+{
+  "observer_id": "score-037",
+  "input_identity": "315d1eef395c1fdafbdcf97ef7de2f16f30a32f4f4c454ae41ea656357d271da",
+  "job_id": "png_context_detection-040-score-037",
+  "report": "reports/score-037.json",
+  "report_sha256": "97ee0adb3e24dced442a3334d7b508b950c5d4c57d2415a6294a07359c6117a5",
+  "passed": true,
+  "charged_seconds": 17.281455317977816,
+  "positive_gpu_activity": true,
+  "failure_stage": null,
+  "failure_reason": null
+}

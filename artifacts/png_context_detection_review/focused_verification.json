@@ -1,0 +1,14 @@
+{
+  "scope": "Focused CPU-only observer, context, control-identity, stage-accounting and paired-analysis guards; not a portability or performance campaign",
+  "command": "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python -B -m unittest tests.test_png_observer -v",
+  "tests_run": 6,
+  "tests_passed": 6,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "reported_test_seconds": 0.401,
+  "accepted_png_auc_cells_reproduced_exactly": 6,
+  "accepted_grouped_intervals_reproduced_exactly": 6,
+  "identical_context_synthetic_auc_differences": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+  "neural_inference_in_these_checks": false
+}

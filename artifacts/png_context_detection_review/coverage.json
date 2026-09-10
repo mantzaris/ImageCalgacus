@@ -1,0 +1,10 @@
+{
+  "expected_artifacts": 80,
+  "terminal_artifacts": 80,
+  "unique_artifact_hashes": 80,
+  "independent_payload_groups": 20,
+  "independent_controls": 20,
+  "scorable_artifacts": 80,
+  "failure_artifacts": [],
+  "allocation_complete": true
+}

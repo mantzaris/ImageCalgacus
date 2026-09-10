@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "artifact_id": "T1-fixed-r0-reference",
+      "observer_id": "validation-01",
+      "scores_exact": true,
+      "digest_available": true,
+      "digest_exact": true,
+      "charged_seconds": 17.224604736024048
+    },
+    {
+      "artifact_id": "T1-arithmetic-r0-reference",
+      "observer_id": "validation-02",
+      "scores_exact": true,
+      "digest_available": true,
+      "digest_exact": true,
+      "charged_seconds": 17.28080645899172
+    },
+    {
+      "artifact_id": "control-image-5202",
+      "observer_id": "validation-03",
+      "scores_exact": true,
+      "digest_available": false,
+      "digest_exact": null,
+      "charged_seconds": 17.365471835975768
+    }
+  ]
+}

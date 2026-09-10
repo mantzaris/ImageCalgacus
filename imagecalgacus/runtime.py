@@ -24,7 +24,7 @@ CUDA_SETTINGS = {
     "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
     "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
 }
-DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200, "v2": 0, "gpu_performance": 0}
+DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200, "v2": 0, "gpu_performance": 0, "png_context_detection": 0}
 V1_QUALIFICATION_AUTHORIZATION = {
     "authorization_id": "user-v1-qualification-additional-12h",
     "stage": "v1", "previous_seconds": 7200, "additional_seconds": 43200,
@@ -51,6 +51,28 @@ GPU_PERFORMANCE_AUTHORIZATION = {
     "reviewed_revision": "5178dab",
     "unused_other_phase_allowances_transfer": False,
 }
+
+
+
+PNG_CONTEXT_AUTHORIZATION = {
+    "authorization_id": "user-png-context-detection-2h",
+    "stage": "png_context_detection", "absolute_seconds": 7200,
+    "whole_project_seconds": 144000,
+    "scope": "three predetermined development score checks and row2 scoring of the 80 existing V2 PNG artifacts; no carrier generation",
+    "starting_revision": "cdff18c30a0492f242921d72fb369ef78a6a7f38",
+    "unused_other_phase_allowances_transfer": False,
+}
+
+
+def apply_png_context_allowance(path=None):
+    """A separate absolute cap, never an additive allowance on resumption."""
+    path = Path(path) if path is not None else ROOT/"configs/png_context_authorization.json"
+    if path.exists():
+        if json.loads(path.read_text()) != PNG_CONTEXT_AUTHORIZATION:
+            raise ValueError("conflicting PNG context authorization")
+        return False
+    atomic_json(path, PNG_CONTEXT_AUTHORIZATION)
+    return True
 
 
 def apply_performance_allowance(path=None):
@@ -89,6 +111,12 @@ def apply_v1_allowance(path=None):
 def phase_limit(stage, authorization_path=None):
     if stage not in DEFAULT_PHASE_LIMITS:
         raise ValueError("unknown budget stage")
+    if stage == "png_context_detection":
+        path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/png_context_authorization.json"
+        if not path.exists(): return 0
+        if json.loads(path.read_text()) != PNG_CONTEXT_AUTHORIZATION:
+            raise ValueError("invalid or altered PNG context authorization")
+        return PNG_CONTEXT_AUTHORIZATION["absolute_seconds"]
     if stage == "gpu_performance":
         path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/gpu_performance_authorization.json"
         if not path.exists(): return 0
