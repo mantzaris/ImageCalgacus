@@ -1,0 +1,5 @@
+category,category_label,n_artifacts,mean_row1,mean_row2,mean_score_change,median_score_change,units
+ordinary,Ordinary controls,20,3.6836491326207854,4.29408480925669,0.6104356766359047,0.6214118886083784,bits per delivered RGB channel value
+fixed,Fixed rank,20,4.191273216529691,4.5252036879846225,0.33393047145493143,0.2859785861725641,bits per delivered RGB channel value
+gated,Entropy gated,20,4.074327954695388,4.587583316197044,0.5132553615016558,0.5547056712730414,bits per delivered RGB channel value
+arithmetic,Arithmetic A1,20,3.7696493346073567,4.398864334989225,0.6292150003818681,0.6356522148674799,bits per delivered RGB channel value

@@ -1,0 +1,248 @@
+{
+  "schema": "png-context-descriptive-addendum-v1",
+  "source_revision": "c2effbb3c2f908851d39e399ef83b69ade87c287",
+  "script": "scripts/build_png_context_addendum.py",
+  "script_sha256": "383ec559af8bd295566597989ee5723f3cfaf072367cc0446121f56245484a69",
+  "inputs_sha256": {
+    "artifacts/png_context_detection_review/results.jsonl": "2950f465e63d65404e51eb148703fefc440664466986ffc155a84f7039737ad1",
+    "artifacts/png_context_detection_review/manifest.json": "562be315cee8ed08e1afd36dbe6c36d0b05271dab0f03223960d9c1b84abfe6c",
+    "artifacts/png_context_detection_review/analysis.json": "53984bf58b7f9eafb7e35de741cf5df184101f9230ee6599013c59c5f3eb1384",
+    "artifacts/png_context_detection_review/accounting.json": "d85096ab04f794403d5eb09c87416505c563aeccac30c466a387a4f3545975dc",
+    "artifacts/png_context_detection_review/context_auc.pdf": "f71e3d93eca1e3b43cbe54be4e3e873228b6eca46b91715953d75303951f91f6",
+    "artifacts/png_context_detection_review/context_auc.svg": "46cb756321c61c2acb13fc3fc30f854a045292b6347bba42f1e528f57450869b",
+    "artifacts/png_context_detection_review/context_auc.png": "50cd74da23b70d81ac3d065003815a2da1e80108244008ec82249897ea569663",
+    "artifacts/png_context_detection_review/comparison.csv": "3e05c7dfc617399e0f795732aa51bc741f06bec838f4ecb7dcde553b1482acf5",
+    "artifacts/png_context_detection_review/comparison.md": "55cba8d42333439fb6202b70a58c44903e4e9af62964ca3f56d7c3efca572f23",
+    "artifacts/png_context_detection_review/comparison.tex": "75ea626785a12caff668c41aea9414578dd2ab3cb2bf1f65c78d699544095f50",
+    "artifacts/png_context_detection_review/captions.md": "b83afad8f1a942d6a4ae11849e83f58fc6d03ba64b36f10b67b280a79b327971",
+    "artifacts/png_context_detection_review/README.md": "15b6db74f4a42ce83b17862163ff209c7201be756a80329505b7309694952828",
+    "notes/png_context_detection.md": "eddf6f3beef4cc540571b066941f89ad020b11ea94e404b4e0c3be1afa85b3af",
+    "artifacts/publication_results/README.md": "67a4a0001d37e506118ae2c2b2105d8bcaa871666da63baf4c02705a3fb4f863",
+    "scripts/build_publication_results.py": "56cd13a22c689e1aae24b3b5fd9e03c974ab5bcd9c6fff7cf9ff68124b515af3"
+  },
+  "outputs_sha256": {
+    "artifacts/png_context_detection_addendum/README.md": "a7a4ac5c623072182061c212fc4f10db59385b34b6384138274883d600aa8ed1",
+    "artifacts/png_context_detection_addendum/score_shifts.pdf": "4b1faf44f41e0b3300f4b0d775fcf004fd57b9f763b2a9ea47401197a7712eec",
+    "artifacts/png_context_detection_addendum/score_shifts.svg": "a63615322282b602ced6024bef1cfe026b1809ef0427818e8f2e73d4976409b2",
+    "artifacts/png_context_detection_addendum/score_shifts.png": "60fb24ec89b5e4661494be26a989c3fe294755f8130b6823e1f5ef7dcfdc1bc1",
+    "artifacts/png_context_detection_addendum/score_shift_observations.csv": "afe7351fccf2e10c1898206875abdc1c0e51dd4e55036458a7babe05309034b5",
+    "artifacts/png_context_detection_addendum/score_shift_summary.csv": "f6fd681b9b6a77b024524411e845aea8e2dbbc9ac2891c44c3c4111f7762a3af",
+    "artifacts/png_context_detection_addendum/score_shift_summary.md": "1ca9d48b1ebb5a44f6b7ddc08337e5a09431248d520d800fcb9c25713b57ca38",
+    "artifacts/png_context_detection_addendum/caption.md": "284764267a46e488827e10cbc7d1918069c3287e9a53016a915327c282fbc615",
+    "paper/results/README.md": "87560e5db4d792e527371c138dd9eebf2dfae19ac82fe078d62e5fa8b21050eb",
+    "paper/results/png_context_detection.md": "6502414ea77f1de6aa517e4cdd104fcbbbf210e2f85313758ac3c14086bfec7b"
+  },
+  "score_field": "surprisal_bits_mean",
+  "units": "bits per delivered RGB channel value",
+  "score_change": "mismatched row2 minus correct row1",
+  "analysis": "descriptive post hoc; no new tests, intervals, fitting, model execution or observations",
+  "observation_count": 80,
+  "independent_payload_groups": 20,
+  "unique_ordinary_controls": 20,
+  "summary": [
+    {
+      "category": "ordinary",
+      "category_label": "Ordinary controls",
+      "n_artifacts": 20,
+      "mean_row1": 3.6836491326207854,
+      "mean_row2": 4.29408480925669,
+      "mean_score_change": 0.6104356766359047,
+      "median_score_change": 0.6214118886083784,
+      "units": "bits per delivered RGB channel value"
+    },
+    {
+      "category": "fixed",
+      "category_label": "Fixed rank",
+      "n_artifacts": 20,
+      "mean_row1": 4.191273216529691,
+      "mean_row2": 4.5252036879846225,
+      "mean_score_change": 0.33393047145493143,
+      "median_score_change": 0.2859785861725641,
+      "units": "bits per delivered RGB channel value"
+    },
+    {
+      "category": "gated",
+      "category_label": "Entropy gated",
+      "n_artifacts": 20,
+      "mean_row1": 4.074327954695388,
+      "mean_row2": 4.587583316197044,
+      "mean_score_change": 0.5132553615016558,
+      "median_score_change": 0.5547056712730414,
+      "units": "bits per delivered RGB channel value"
+    },
+    {
+      "category": "arithmetic",
+      "category_label": "Arithmetic A1",
+      "n_artifacts": 20,
+      "mean_row1": 3.7696493346073567,
+      "mean_row2": 4.398864334989225,
+      "mean_score_change": 0.6292150003818681,
+      "median_score_change": 0.6356522148674799,
+      "units": "bits per delivered RGB channel value"
+    }
+  ],
+  "paired_fixed_minus_control_gap": {
+    "n_paired_groups": 20,
+    "units": "bits per delivered RGB channel value",
+    "row1": 0.5076240839089055,
+    "row2": 0.23111887872793221,
+    "change": -0.2765052051809732
+  },
+  "plotted": {
+    "ordinary": {
+      "points": 20,
+      "mean": 0.6104356766359047,
+      "annotation": "mean +0.610",
+      "group_order": [
+        "HT1-row1",
+        "HT2-row1",
+        "HT3-row1",
+        "HT4-row1",
+        "HT5-row1",
+        "HT6-row1",
+        "HT7-row1",
+        "HT8-row1",
+        "HT9-row1",
+        "HT10-row1",
+        "HT11-row1",
+        "HT12-row1",
+        "HT13-row1",
+        "HT14-row1",
+        "HT15-row1",
+        "HT16-row1",
+        "HT17-row1",
+        "HT18-row1",
+        "HT19-row1",
+        "HT20-row1"
+      ]
+    },
+    "fixed": {
+      "points": 20,
+      "mean": 0.33393047145493143,
+      "annotation": "mean +0.334",
+      "group_order": [
+        "HT1-row1",
+        "HT2-row1",
+        "HT3-row1",
+        "HT4-row1",
+        "HT5-row1",
+        "HT6-row1",
+        "HT7-row1",
+        "HT8-row1",
+        "HT9-row1",
+        "HT10-row1",
+        "HT11-row1",
+        "HT12-row1",
+        "HT13-row1",
+        "HT14-row1",
+        "HT15-row1",
+        "HT16-row1",
+        "HT17-row1",
+        "HT18-row1",
+        "HT19-row1",
+        "HT20-row1"
+      ]
+    },
+    "gated": {
+      "points": 20,
+      "mean": 0.5132553615016558,
+      "annotation": "mean +0.513",
+      "group_order": [
+        "HT1-row1",
+        "HT2-row1",
+        "HT3-row1",
+        "HT4-row1",
+        "HT5-row1",
+        "HT6-row1",
+        "HT7-row1",
+        "HT8-row1",
+        "HT9-row1",
+        "HT10-row1",
+        "HT11-row1",
+        "HT12-row1",
+        "HT13-row1",
+        "HT14-row1",
+        "HT15-row1",
+        "HT16-row1",
+        "HT17-row1",
+        "HT18-row1",
+        "HT19-row1",
+        "HT20-row1"
+      ]
+    },
+    "arithmetic": {
+      "points": 20,
+      "mean": 0.6292150003818681,
+      "annotation": "mean +0.629",
+      "group_order": [
+        "HT1-row1",
+        "HT2-row1",
+        "HT3-row1",
+        "HT4-row1",
+        "HT5-row1",
+        "HT6-row1",
+        "HT7-row1",
+        "HT8-row1",
+        "HT9-row1",
+        "HT10-row1",
+        "HT11-row1",
+        "HT12-row1",
+        "HT13-row1",
+        "HT14-row1",
+        "HT15-row1",
+        "HT16-row1",
+        "HT17-row1",
+        "HT18-row1",
+        "HT19-row1",
+        "HT20-row1"
+      ]
+    }
+  },
+  "plot": {
+    "size_inches": [
+      7.2,
+      3.8
+    ],
+    "png_dpi": 450,
+    "offsets": "linspace(-0.30, 0.22, 20), frozen group order, identical across categories",
+    "typography_source": "scripts/build_publication_results.py style()/COLORS",
+    "source_style_sha256": "56cd13a22c689e1aae24b3b5fd9e03c974ab5bcd9c6fff7cf9ff68124b515af3"
+  },
+  "contexts": {
+    "row1": {
+      "id": "row1",
+      "modality": "image",
+      "path": "data/qualification_v1/contexts/row1.rgb",
+      "sha256": "0195319d7c029c97f4e79336b0494a74c39849f1836ad39c84f43a58278bcbc3",
+      "construction": "unchanged accepted V0 first context"
+    },
+    "row2": {
+      "id": "row2",
+      "modality": "image",
+      "path": "data/qualification_v1/contexts/row2.rgb",
+      "sha256": "c7f5500001d4376a74183225a88ececc5541e2bde1d79a30961ff458073ae5e1",
+      "construction": "independent uniform RGB8 row: NumPy PCG64(2002).integers(0,256,96,dtype=uint8), raster RGB; no model/payload dependence"
+    }
+  },
+  "dependencies": {
+    "numpy": "2.2.6",
+    "matplotlib": "3.10.9"
+  },
+  "new_gpu_seconds": 0,
+  "private_files_and_ledgers_accessed": false,
+  "historical_accounting_source": "artifacts/png_context_detection_review/accounting.json",
+  "historical_cumulative_gpu_seconds": 88975.0679364727,
+  "checks": {
+    "all_80_observations": true,
+    "all_categories_20": true,
+    "groups_and_shared_controls_preserved": true,
+    "full_2976_channel_scores": true,
+    "csv_subtraction_and_summaries_verified": true,
+    "paired_gap_algebra_verified": true,
+    "annotations_from_unrounded_means": true,
+    "accepted_files_checked": 3661,
+    "accepted_evidence_unchanged": true,
+    "accepted_snapshot_sha256": "6cff1395dafd1ca63e4db535f0a4c86c82d43aeee102dcdacae2742839cb0e5a",
+    "figure_text_within_canvas": true
+  }
+}
