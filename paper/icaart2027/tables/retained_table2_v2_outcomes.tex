@@ -1,0 +1,22 @@
+% Requires booktabs,array; full-precision numerical values are in the adjacent CSV.
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\ifdefined\pubtablewidth\else\newlength{\pubtablewidth}\fi
+\setlength{\pubtablewidth}{\dimexpr\linewidth-36pt\relax}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.130\pubtablewidth}>{\raggedright\arraybackslash}p{0.180\pubtablewidth}>{\raggedright\arraybackslash}p{0.210\pubtablewidth}>{\raggedright\arraybackslash}p{0.105\pubtablewidth}>{\raggedright\arraybackslash}p{0.105\pubtablewidth}>{\raggedright\arraybackslash}p{0.120\pubtablewidth}>{\raggedright\arraybackslash}p{0.150\pubtablewidth}@{}}
+\toprule
+\textbf{Carrier / method} & \textbf{Exact / attempted; 95\% interval} & \textbf{Exact goodput; 95\% interval} & \textbf{Encode phase (s)} & \textbf{Decode phase (s)} & \textbf{Charged pair (s)} & \textbf{Failure} \\
+\midrule
+UTF-8 / Fixed & 20/20\newline [83.16, 100.00]\% & 3.3247\newline [3.3247, 3.3247] & 45.63 & 45.31 & 123.33 & None \\[4pt]
+UTF-8 / Gated & 20/20\newline [83.16, 100.00]\% & 3.1246\newline [3.1054, 3.1441] & 57.31 & 57.30 & 147.29 & None \\[4pt]
+UTF-8 / A1 & 0/20\newline [0.00, 16.84]\% & 0.0000\newline [0.0000, 0.0000] & 398.15 & 396.01 & 826.57 & Token-cap capacity \\[4pt]
+PNG / Fixed & 20/20\newline [83.16, 100.00]\% & 0.2505\newline [0.2473, 0.2535] & 85.27 & 85.31 & 178.18 & None \\[4pt]
+PNG / Gated & 20/20\newline [83.16, 100.00]\% & 0.2505\newline [0.2473, 0.2535] & 85.29 & 85.65 & 178.53 & None \\[4pt]
+PNG / A1 & 20/20\newline [83.16, 100.00]\% & 0.2505\newline [0.2473, 0.2535] & 85.59 & 85.77 & 179.01 & None \\[4pt]
+\bottomrule
+\end{tabular}
+\caption{V2 recovery, useful rate and original runtime. Original held-out V2 timings, including unsuccessful attempts; later graph timings are not substituted. Goodput units are bits/token for UTF-8 and bits/channel value for PNG; PNG rates multiply by three to obtain bits/pixel. Recovery uses accepted 95\% Clopper--Pearson bounds; goodput uses accepted 2,000-draw stratified payload-group percentile intervals, n = 20 groups per direction. Incomplete/unauthenticated outcomes have zero exact goodput. Encode/decode phases exclude cold loading and other occupied time; the charged pair includes both full fresh processes, loading and teardown. These nested measurements are not additive charges. All 20 failures are A1 text capacity outcomes, with no authenticated payload.}
+\label{tab:table2_v2_outcomes}
+\end{table*}

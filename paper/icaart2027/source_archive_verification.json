@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "archive": "ICAART2027_source.zip",
+  "archive_sha256": "5ed5ec1375dabcdb5900274cc839df6f052469f6b1d0825b540701e32976d2aa",
+  "archive_bytes": 241948,
+  "files": {
+    "ASSET_NOTICES.md": "0f114428b65cc383a239ee582c76a143bfc8a285ef3bfd72cd76d151aa48f0e5",
+    "BUILD_README.md": "6b2a6593fce7d30a342589c5e412f1fdb467f83a0446905d5449faa6df89e5fd",
+    "build.py": "1d167dd3aa42d1ce82e43bc76498ffb3efa6bd6bd2b1046afa15ece9b598f597",
+    "figures/context_auc.pdf": "f71e3d93eca1e3b43cbe54be4e3e873228b6eca46b91715953d75303951f91f6",
+    "figures/figure1_transport.pdf": "78e1078128a234a32ba10761bb953d3562d8fb0868d2e73c3e2d026a510c427e",
+    "figures/figure2_recovery_rate.pdf": "1848b5784c78d8deec80093ee63d0fb27522f20707555834757ff09847822b95",
+    "figures/figure3_detectability.pdf": "e8b6e98d22566406615aa8412db8f9076d649541843bc129f17dcb811a1896af",
+    "figures/figure4_gpu_performance.pdf": "d2aafb367dc4beb55f7b448ef2ef2cf521d245e7dd1a73ec12c52cd2df35e1a8",
+    "figures/figureS1_arithmetic_capacity.pdf": "ba9b4a2ebff02995317cfa974f8b2e7f610d0f4de5c18c3e1aeb693f85b1bc8a",
+    "figures/figureS2_text_consistency.pdf": "a31eaff9fcca82b805b672037962da2fff0612051c083ed0dad086b79705d78d",
+    "figures/method_diagram.tex": "becb4b50dc514f43c3800f9247b900331b9d1571d4ae1c40cada33b47736b217",
+    "figures/score_shifts.pdf": "4b1faf44f41e0b3300f4b0d775fcf004fd57b9f763b2a9ea47401197a7712eec",
+    "main.tex": "097846fc93d771ed7fbd7d2de19bec6cf4e3d9557aa7ccf005161de0b80be328",
+    "preamble.tex": "2adecac77293b8a6a32b073799be344394e3ba7d6f0ad16d803fd7609eadf7dd",
+    "references.bib": "2f516623a08bc53096f2690b4a663b4c3daed9f82cc02ff48efb20cecaa5c589",
+    "sections/conclusion.tex": "82d546b5de11a66390007bda04054730fa75de494c67dbf778f40db78a8b75fd",
+    "sections/design.tex": "b9eb87363bb70fef160b791bc2a3e642ab11d9a68b1edae284f2c852e08c252f",
+    "sections/discussion.tex": "251a314149ef4d87e6e2b1756c96b653fd8c2c1b6f8377b109e059331685e328",
+    "sections/introduction.tex": "fd876f3e5dc4e191d79e379790e86b53ca6f7ccb0c9d5aaae935915cb7c718c1",
+    "sections/method.tex": "9ea0547ef7217a03dda93218070bcaba8ac6d7f530191a318e93aab1e363008a",
+    "sections/related.tex": "51793bbcf001bf4e50eec5148dd6702e5aac9ec0542de79d90941929c0e4adfb",
+    "sections/results.tex": "2b597c3b4cec5e8f486f1b5cf6ad7bcc644d7f5bc1a6573618c4074a35c0ed4a",
+    "supplement.tex": "7f210c97bb1e56417e7e36558b9934b56024081095e1affa23ab46aaa71176c6",
+    "tables/context_comparison.tex": "776f9e52d0546ba466d348b65246e32e45335c83c961f969b48d7e0f995d3ed9",
+    "tables/main_outcomes.tex": "3a12871d3d688c84b7ae344972a06ab6a21618ad5e9c1d684406ea1b4a1441f3",
+    "tables/score_shifts.tex": "20579ca741ceb81aaabd9a8537c74cc36677e6f4c0f1d0b41f90d84737c2220f",
+    "tables/supp_table2_v2_outcomes.tex": "f0c26ca6536bd95075c35f153e45b5568fdff854b1b2a4c43fee50ba345151cc",
+    "tables/supp_table3_detectability.tex": "78099e3171ba6ba71677596dedca26b4817a4d4eeee8a69e71de636d8fa39619",
+    "tables/supp_table4_gpu_benchmark.tex": "d05f5f5f14376aa8483c431195acfedf64ff90c8851e58f66013c79e613dd255",
+    "tables/supp_tableS1_overhead.tex": "c07484c2bf97455ad9dacf61bceacbf27064f4445fad14ab3b26226d4b69e073",
+    "template/SCITEPRESS.sty": "d4a8482e5b2772a279b881012bedd813023f3c614287e02d5c648497ade3bf14",
+    "template/apalike.bst": "6977bea0847e4b850fd5bdc948beeaa50cd4d0c2a275e74a5fd68309a9628191",
+    "template/apalike.sty": "183bdccc3608e9db948dbd1cdffec3e2a476650dad223c7a3294325371fc0339",
+    "template/article.cls": "23e48b9a27539b6589503b6b5c5ff1451b58edfb245a0fa4c5847bb94392d32c",
+    "template/provenance.json": "37c1dd68acf125b57cce9bef56be2510ba011a5a777dce66b03dd2433f00bf2f"
+  },
+  "isolated_compilation": {
+    "ICAART2027_submission.pdf": {
+      "pages": 12,
+      "isolated_build_text_identical": true
+    },
+    "ICAART2027_supplement.pdf": {
+      "pages": 8,
+      "isolated_build_text_identical": true
+    }
+  },
+  "private_material_included": false,
+  "new_gpu_seconds": 0,
+  "scope": "Allowlisted compile-only sources, no repository/private runtime dependency; standard installed TeX packages required"
+}

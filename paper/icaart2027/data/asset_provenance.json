@@ -1,0 +1,211 @@
+{
+  "preparation_revision": "bdecbf2f4e524885ba7408ec282d9cf47d6a779b",
+  "new_gpu_seconds": 0,
+  "scope": "Manuscript-only copies of retained evidence; no statistical reanalysis or model imports",
+  "inputs": [
+    {
+      "source": "artifacts/publication_results/figures/figure1_transport.pdf",
+      "manuscript_copy": "figures/figure1_transport.pdf",
+      "sha256": "78e1078128a234a32ba10761bb953d3562d8fb0868d2e73c3e2d026a510c427e"
+    },
+    {
+      "source": "artifacts/publication_results/figures/figure2_recovery_rate.pdf",
+      "manuscript_copy": "figures/figure2_recovery_rate.pdf",
+      "sha256": "1848b5784c78d8deec80093ee63d0fb27522f20707555834757ff09847822b95"
+    },
+    {
+      "source": "artifacts/publication_results/figures/figure3_detectability.pdf",
+      "manuscript_copy": "figures/figure3_detectability.pdf",
+      "sha256": "e8b6e98d22566406615aa8412db8f9076d649541843bc129f17dcb811a1896af"
+    },
+    {
+      "source": "artifacts/publication_results/figures/figure4_gpu_performance.pdf",
+      "manuscript_copy": "figures/figure4_gpu_performance.pdf",
+      "sha256": "d2aafb367dc4beb55f7b448ef2ef2cf521d245e7dd1a73ec12c52cd2df35e1a8"
+    },
+    {
+      "source": "artifacts/publication_results/figures/figureS1_arithmetic_capacity.pdf",
+      "manuscript_copy": "figures/figureS1_arithmetic_capacity.pdf",
+      "sha256": "ba9b4a2ebff02995317cfa974f8b2e7f610d0f4de5c18c3e1aeb693f85b1bc8a"
+    },
+    {
+      "source": "artifacts/publication_results/figures/figureS2_text_consistency.pdf",
+      "manuscript_copy": "figures/figureS2_text_consistency.pdf",
+      "sha256": "a31eaff9fcca82b805b672037962da2fff0612051c083ed0dad086b79705d78d"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table1_specification.csv",
+      "manuscript_copy": "data/table1_specification.csv",
+      "sha256": "5519dd43d659f061081a040d2e3f891dc44e7fbcd0c4018ae48c1fbff78ff059"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table2_v2_outcomes.csv",
+      "manuscript_copy": "data/table2_v2_outcomes.csv",
+      "sha256": "d27b281eb5056186ec5cec92cde689f2c69ccc1d6f35051c404cc7b2d7e8d05a"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table3_detectability.csv",
+      "manuscript_copy": "data/table3_detectability.csv",
+      "sha256": "7dbfa125eff6637d438de41d97757c9daab97d4c3a7ca2a43fd94b6936c68781"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table4_gpu_benchmark.csv",
+      "manuscript_copy": "data/table4_gpu_benchmark.csv",
+      "sha256": "2f038b3c0c980002e0a094208b9ba01524d3406b6ff5fe9e2b4b25da5f6f016c"
+    },
+    {
+      "source": "artifacts/publication_results/tables/tableS1_overhead.csv",
+      "manuscript_copy": "data/tableS1_overhead.csv",
+      "sha256": "0f25672664669fd61d941a7366b6e952b3e6aa12663fe81fc7b124879ab2d4b0"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table1_specification.tex",
+      "manuscript_copy": "tables/retained_table1_specification.tex",
+      "sha256": "212a872abf5ef7e2499e5dcc905499e0baaf772d68801b14da100bdb1785b93c"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table2_v2_outcomes.tex",
+      "manuscript_copy": "tables/retained_table2_v2_outcomes.tex",
+      "sha256": "4fb57ed050e15d0fcf7fe5496fa8ac8bdfe0f54cee5fb30ca65bcf328c9861a6"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table3_detectability.tex",
+      "manuscript_copy": "tables/retained_table3_detectability.tex",
+      "sha256": "f291022fd96a8ade65bfc89cdecc04de2ad8e1c9809c34a482c02fbb9c6a9261"
+    },
+    {
+      "source": "artifacts/publication_results/tables/table4_gpu_benchmark.tex",
+      "manuscript_copy": "tables/retained_table4_gpu_benchmark.tex",
+      "sha256": "76649848d3364e3c7e3c45642a97dc5b6282aa118690d906ab9fc24382845dd6"
+    },
+    {
+      "source": "artifacts/publication_results/tables/tableS1_overhead.tex",
+      "manuscript_copy": "tables/retained_tableS1_overhead.tex",
+      "sha256": "9b11f706362530e1b28222610f01184f1a05870ff8d380bc8c547bd451ac3650"
+    },
+    {
+      "source": "artifacts/publication_results/data/protocol_identities.json",
+      "manuscript_copy": "data/protocol_identities.json",
+      "sha256": "95778b983129f9dda8192faa0f17418944945125a96b3d1b367c2395d117b64c"
+    },
+    {
+      "source": "artifacts/publication_results/data/accepted_paired_differences.json",
+      "manuscript_copy": "data/accepted_paired_differences.json",
+      "sha256": "d5f47c1875827ce776301beb2b23e9c566ea4a9f3e669335f8e6747f032fb05d"
+    },
+    {
+      "source": "artifacts/publication_results/data/gpu_timing_observations.csv",
+      "manuscript_copy": "data/gpu_timing_observations.csv",
+      "sha256": "58c3fc86cb062aa4678734777bde826478960530b7437ed3fae6bb76cec66dee"
+    },
+    {
+      "source": "artifacts/publication_results/data/v2_plot_observations.csv",
+      "manuscript_copy": "data/v2_plot_observations.csv",
+      "sha256": "53f54c171df08b5d90f0126f5507339a25731ecb22f49664b3e021c67539e9ab"
+    },
+    {
+      "source": "artifacts/publication_results/data/arithmetic_endpoints.csv",
+      "manuscript_copy": "data/arithmetic_endpoints.csv",
+      "sha256": "26504f49ddd350300d8d9f48f09a92327a01440e4a55ab692cf8a7e8f86d46af"
+    },
+    {
+      "source": "artifacts/publication_results/data/static_sequence_pairs.csv",
+      "manuscript_copy": "data/static_sequence_pairs.csv",
+      "sha256": "26526db717a73ca778c44bf43a8b469e0e10c52f1f8265435ded704497dfb16e"
+    },
+    {
+      "source": "artifacts/publication_results/data/text_filtering_limitation.json",
+      "manuscript_copy": "data/text_filtering_limitation.json",
+      "sha256": "c015a56f366390f2d8f8455cd54f9461eef5d3ab9894b21e81393f87ac3d3096"
+    },
+    {
+      "source": "artifacts/png_context_detection_review/context_auc.pdf",
+      "manuscript_copy": "figures/context_auc.pdf",
+      "sha256": "f71e3d93eca1e3b43cbe54be4e3e873228b6eca46b91715953d75303951f91f6"
+    },
+    {
+      "source": "artifacts/png_context_detection_review/comparison.csv",
+      "manuscript_copy": "data/context_comparison.csv",
+      "sha256": "3e05c7dfc617399e0f795732aa51bc741f06bec838f4ecb7dcde553b1482acf5"
+    },
+    {
+      "source": "artifacts/png_context_detection_review/analysis.json",
+      "manuscript_copy": "data/context_analysis.json",
+      "sha256": "53984bf58b7f9eafb7e35de741cf5df184101f9230ee6599013c59c5f3eb1384"
+    },
+    {
+      "source": "artifacts/png_context_detection_addendum/score_shifts.pdf",
+      "manuscript_copy": "figures/score_shifts.pdf",
+      "sha256": "4b1faf44f41e0b3300f4b0d775fcf004fd57b9f763b2a9ea47401197a7712eec"
+    },
+    {
+      "source": "artifacts/png_context_detection_addendum/score_shift_observations.csv",
+      "manuscript_copy": "data/score_shift_observations.csv",
+      "sha256": "afe7351fccf2e10c1898206875abdc1c0e51dd4e55036458a7babe05309034b5"
+    },
+    {
+      "source": "artifacts/png_context_detection_addendum/score_shift_summary.csv",
+      "manuscript_copy": "data/score_shift_summary.csv",
+      "sha256": "f6fd681b9b6a77b024524411e845aea8e2dbbc9ac2891c44c3c4111f7762a3af"
+    },
+    {
+      "source": "artifacts/gpu_performance_review/timings.json",
+      "manuscript_copy": "data/benchmark_timings.json",
+      "sha256": "df6e2d87711fb0b8ca4c36d3ed4a99481ca80a332252de3c6145fa855a8f9f53"
+    },
+    {
+      "source": "artifacts/v2_review/analysis.json",
+      "manuscript_copy": "data/v2_analysis.json",
+      "sha256": "43d1e9330641179a8c03fc6b816f0bb690fcece621fa29cd91d93ccc3254e7a5"
+    },
+    {
+      "source": "artifacts/v2_review/cases/HI1-prompt1-fixed/source.png",
+      "manuscript_copy": "examples/HI1-prompt1-fixed/source.png",
+      "sha256": "5d22a94e8cc47354b29751a2fd55f02474079f48315260e324a998f915927acc"
+    },
+    {
+      "source": "artifacts/v2_review/cases/HI1-prompt1-fixed/carrier.txt",
+      "manuscript_copy": "examples/HI1-prompt1-fixed/carrier.txt",
+      "sha256": "7fb5a4bcb02e77e1fa1b32770df6acaeee92a6b932f6c75cd672c628ba00fdfc"
+    },
+    {
+      "source": "artifacts/v2_review/cases/HI1-prompt1-fixed/recovered.gray",
+      "manuscript_copy": "examples/HI1-prompt1-fixed/recovered.gray",
+      "sha256": "745c4ba35eb3f17849a6ea2000505532eaeb186da1e54f54263c1800a088acb5"
+    },
+    {
+      "source": "artifacts/v2_review/cases/HI1-prompt1-fixed/recovered.png",
+      "manuscript_copy": "examples/HI1-prompt1-fixed/recovered.png",
+      "sha256": "5d22a94e8cc47354b29751a2fd55f02474079f48315260e324a998f915927acc"
+    },
+    {
+      "source": "artifacts/v2_review/cases/HT1-row1-fixed/source.txt",
+      "manuscript_copy": "examples/HT1-row1-fixed/source.txt",
+      "sha256": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751"
+    },
+    {
+      "source": "artifacts/v2_review/cases/HT1-row1-fixed/carrier.png",
+      "manuscript_copy": "examples/HT1-row1-fixed/carrier.png",
+      "sha256": "dd4e231d35c9cd0576710d05222c42901204cd40439bcda0b209769800bad55d"
+    },
+    {
+      "source": "artifacts/v2_review/cases/HT1-row1-fixed/recovered.txt",
+      "manuscript_copy": "examples/HT1-row1-fixed/recovered.txt",
+      "sha256": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751"
+    }
+  ],
+  "checks": {
+    "prospective_outcomes": 120,
+    "exact_recovery_counts": [
+      20,
+      20,
+      0,
+      20,
+      20,
+      20
+    ],
+    "benchmark_comparisons": 11,
+    "benchmark_exact_recoveries": 22,
+    "score_shift_artifacts": 80
+  }
+}

@@ -1,0 +1,8 @@
+build/
+inspection/
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+__pycache__/

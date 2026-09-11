@@ -1,0 +1,20 @@
+[
+  {
+    "method": "fixed",
+    "n": 20,
+    "aggregate_filter_fraction": 0.7056794964759177,
+    "fraction_definition": "sum candidate-filter seconds / sum encoding-phase seconds; retained V2, not new timing"
+  },
+  {
+    "method": "gated",
+    "n": 20,
+    "aggregate_filter_fraction": 0.7510536480330344,
+    "fraction_definition": "sum candidate-filter seconds / sum encoding-phase seconds; retained V2, not new timing"
+  },
+  {
+    "method": "arithmetic",
+    "n": 20,
+    "aggregate_filter_fraction": 0.8879466085216398,
+    "fraction_definition": "sum candidate-filter seconds / sum encoding-phase seconds; retained V2, not new timing"
+  }
+]

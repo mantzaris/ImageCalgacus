@@ -1,0 +1,68 @@
+\section{\uppercase{Results}}
+\label{sec:results}
+\subsection{Exact Artifact Recovery and Useful Rate}
+The prospective allocation completed all 120 stego outcomes and 40 independent controls. There were 100 exact, authenticated and conforming recoveries and 20 retained A1 text capacity failures. All 280 model processes have GPU execution evidence. No source replacement, protocol retry, timeout or infrastructure failure was needed. Table~\ref{tab:outcomes} and Figure~\ref{fig:recovery} retain every attempt.\aifootnote
+
+\begin{table*}[t]
+\caption{Prospective outcomes and original reference-path runtime. Each cell has 20 attempted payload groups. Exact recovery is 20/20 with 95\% interval [83.16\%, 100\%], or 0/20 with [0\%, 16.84\%]. Phase means exclude loading and some process overhead. Charged means include both fresh processes and unsuccessful attempts. Goodput units are bits/token for text and bits/channel value for PNG.}
+\label{tab:outcomes}
+\centering\small
+\input{tables/main_outcomes}
+\end{table*}
+
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/figure2_recovery_rate.pdf}
+\caption{Held-out recovery and exact useful rate for 20 payload groups per direction. Recovery whiskers are the accepted 95\% Clopper--Pearson bounds. Rate whiskers are the accepted stratified group-bootstrap intervals, keeping paired methods together. All failed A1 text transmissions contribute zero goodput. Text and PNG rate axes use different carrier symbols. Zero-width observed rate intervals do not imply universal reliability.}
+\label{fig:recovery}
+\end{figure*}
+
+Fixed and gated coding recover 20/20 payloads through text and 20/20 through PNG. Fixed text uses 584 packet positions and 32 completion tokens, giving $2,048/616=3.32468$ useful bits per token for the 256-byte image source. Gating adds a mean 39.8 skipped positions, lowering goodput to 3.12464 bits per token. The paired change relative to fixed is $-0.2000$ bits per token, with interval $[-0.2192,-0.1805]$. Gating also increases mean charged pair time by 23.96 seconds, with interval [20.34, 27.58]. It reduces whole-carrier mean surprisal by 0.3912 bits per token [0.3079, 0.4764], but that reduction does not by itself establish concealment.
+
+All three PNG methods recover 20/20 messages. Their fixed full canvas gives the same mean exact goodput, 0.25054 bits per channel value, or 0.75161 bits per pixel. The 95\% grouped interval is [0.24731, 0.25349] bits per channel. Equality of these rates is partly a design consequence, not evidence that the coders have identical capacity. Fixed coding uses 584 packet-bearing channels followed by 2,392 completion channels. Gating adds a mean 100.5 skips before the packet stops, replacing some ordinary completion within the same delivered size. A1 has a mean packet span of 597.85 channels, including 89.65 zero-bit positions, then completes the canvas.
+
+Each packet adds 36 framing/encryption bytes. Image sources fill the slot; texts leave 162.8 padding bytes on average. Complete-carrier packet rates are 3.79221 bits/token for fixed text, 3.56404 for gated text and 0.78495 bits/channel for PNG. They include overhead and are not useful-source rates. Expanded framing, serialized expansion and termination accounting are in the companion.
+
+\subsection{Arithmetic Text Reaches the Capacity Boundary}
+All 20 A1 text streams reach the 2,048-token cap before producing the 2,336-bit packet. They recover between 581 and 2,216 packet-prefix bits, with mean 1,456.85. None reaches zero-extension or finite-message termination. Accordingly, none authenticates or delivers useful source bytes, despite the availability of partial information. Mean charged encode-plus-decode time is 826.57 seconds, over six times fixed text, and all that cost remains in the results.
+
+Independent interval and partition checks agree with all 40 prospective arithmetic audits. Sender/receiver prefix and source-window checks also agree. All 20 arithmetic PNG packets terminate and recover exactly. Two failed text streams have isolated unchanged intervals, one and three steps respectively, with longest consecutive run one. A successful PNG has one such step as well. These observations do not support sustained stagnation as the cause of the text deficits. Zero-bit runs must not be confused with unchanged intervals, since an interval may continue narrowing without yet sharing a leading bit.
+
+The retained cumulative surprisal tracks recovered text-prefix information closely. The best-supported interpretation is low information accumulated along these generated trajectories under the fixed cap, not decoder disagreement or an unexecuted final flush. A1's separately demonstrated finite-precision stagnation limitation remains, and full-size arithmetic text recovery is unobserved. This is a result about this frozen adaptation and distribution, not a general impossibility of arithmetic text steganography.
+
+\subsection{Detectability with the Correct Context}
+\label{sec:detection-results}
+
+
+Correct-context scores show that exact recovery and low detectability are different endpoints. Both fixed and gated text have empirical mean-surprisal AUC 1.000, with bootstrap interval [1.000, 1.000]. Every observed stego score exceeds the corresponding ordinary sample range. This is complete empirical separation under the tested observer, not an assurance of perfect future detection. Failed A1 text gives AUC 0.380 [0.260, 0.503]. The below-chance orientation is retained rather than reversed to improve a detector result.
+
+PNG scores are less separated. Fixed mean-surprisal AUC is 0.8850 [0.7425, 0.9850], gating 0.8300 [0.7000, 0.9375], and A1 0.5575 [0.3750, 0.7426]. Arithmetic PNG therefore combines exact delivery with a lower observed separation for this score, but its interval includes a wide range around chance. It is not evidence of security against unknown observers. All cells have 20 scorable stego artifacts and 20 unique matched controls, with no score exclusions. Mean-log2-rank results follow the same broad distinction and are reported in full in the companion. The companion shows every observation and both frozen scores.
+
+\subsection{PNG Detection Depends on the Tested Context}
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/context_auc.pdf}
+\caption{Primary PNG detection with correct row1 and mismatched row2. The same 60 stego PNGs and 20 shared ordinary controls appear in both conditions. Panel B gives paired AUC change, row2 minus row1. Whiskers use the accepted 2,000 length-stratified group draws, jointly retaining observer conditions, methods and control ownership. The observer still knows the exact model and procedure. Row2 is the previously frozen random-RGB row, not a row selected for low detection. Reference lines are not fitted classification thresholds.}
+\label{fig:png-context-auc}
+\end{figure*}
+
+All 80 retained PNGs are fully scorable under row2. Fixed-rank primary AUC decreases from 0.8850 to 0.6975, a paired change of $-0.1875$ with interval $[-0.2775,-0.1000]$ (Figure~\ref{fig:png-context-auc}). Gating changes from 0.8300 to 0.7475, or $-0.0825$ [$-0.1625$, 0.0100]. A1 changes from 0.5575 to 0.5925, or $+0.0350$ [$-0.0225$, 0.1050]. The fixed reduction is resolved by its paired interval. The gated and A1 changes remain uncertain.
+
+Under mismatch, the primary fixed interval [0.5150, 0.8700] only narrowly excludes 0.5, and its secondary rank-score interval [0.4725, 0.8475] includes 0.5. The primary gated interval [0.6074, 0.8825] remains above chance. Thus this mismatch weakens the tested fixed score without removing all information from mean-surprisal detection. A resolved change for one method and an uncertain change for another do not themselves establish different method sensitivities.
+
+Descriptive within-artifact mean score increases are 0.610 for controls, 0.334 for fixed, 0.513 for gated and 0.629 for A1, in bits per delivered channel. The paired mean fixed-minus-control gap narrows from 0.508 to 0.231. Larger average control movement is consistent with that narrower gap, but does not prove why AUC changed. AUC depends on all score rankings. These post hoc summaries, shown with every observation in the companion, add no new test or independently confirmed mechanism. Because row1 comes from a generated image and row2 from random RGB values, the experiment does not isolate correctness from every difference in row statistics.
+
+\subsection{Exact GPU Replay Improves Useful Throughput}
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/figure4_gpu_performance.pdf}
+\caption{Development GPU benchmark on the pinned RTX 5000 Ada configuration. Fixed rank has three alternating-order matched repetitions for each of three payloads, not nine independent scientific payloads. Encode/decode latency includes fresh-process loading, graph setup and teardown. Throughput counts recovered source bytes over both processes. All 11 comparisons, including the additional single-payload gated/A1 checks, preserve exact probability streams, PNG bytes and recovery. Allocated, reserved and sampled process memory are overlapping measures and must not be summed.}
+\label{fig:gpu}
+\end{figure*}
+
+CUDA graph replay reduces mean fixed-rank charged encoding from 88.95 to 17.36 seconds and decoding from 88.87 to 17.28 seconds. Mean combined latency falls from 177.8186 to 34.6417 seconds, a matched 5.133-fold improvement. Pooled useful throughput rises from 0.4799 to 2.4633 recovered bytes per second. These estimates include all nine fixed timing comparisons and both fresh processes, not just network execution. Gated and A1 have one matched 32-byte comparison each, with combined times changing from 180.25 to 34.61 and 182.85 to 35.11 seconds respectively. Those two measurements do not establish broader method-specific performance distributions.
+
+All 11 reference/graph comparisons match the exact eligible identifiers, rank ordering and float64 probability streams across 2,976 channel positions, including completion. All 22 saved PNGs recover identical source bytes. No tolerance, altered precision or rerolled packet is involved. This supports retaining graph replay as an explicit optional execution mode on the tested stack, with reference execution still available. It does not retroactively alter prospective timings.
+
+The speedup includes graph setup and teardown. Peak allocated tensor memory decreases from 484.48 to 473.85 MiB, but reserved memory rises from 516 to 744 MiB and sampled process memory from 912 to 1,176 MiB. The companion separates loading and nested CUDA-event/phase intervals without double counting. Thus latency improves at greater reservation/process-memory cost.
+
+Prospective execution costs 42,024.53 charged seconds, including failures and controls. The benchmark costs 2,351.73 seconds and context rescoring 1,439.65 seconds. Including earlier development, total measured use is 24.72 GPU-hours. Occupied-process costs are not energy measurements.
+
+

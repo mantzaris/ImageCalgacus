@@ -1,0 +1,127 @@
+{
+  "unchanged_accepted_files": 3700,
+  "unchanged_ledgers": 5,
+  "historical_charged_seconds": {
+    ".runtime/gpu_budget.jsonl": 3163.653124010041,
+    ".runtime/gpu_performance/gpu_budget.jsonl": 2351.732528250024,
+    ".runtime/v1/gpu_budget.jsonl": 39995.5091691459,
+    ".runtime/v2/gpu_budget.jsonl": 42024.52764170886,
+    ".runtime/png_context_detection/gpu_budget.jsonl": 1439.645473357872
+  },
+  "cumulative_gpu_seconds": 88975.0679364727,
+  "new_gpu_seconds": 0,
+  "template_and_copied_assets_unchanged": true,
+  "six_recovery_cells": [
+    20,
+    20,
+    0,
+    20,
+    20,
+    20
+  ],
+  "accepted_auc_cells_checked": 18,
+  "fixed_control_gaps": {
+    "row1": 0.5076240839089055,
+    "row2": 0.23111887872793221
+  },
+  "score_shift_artifacts": 80,
+  "fixed_gpu_headline": {
+    "reference": {
+      "pairs": 9,
+      "mean_charged_encode_seconds": 88.95110036799775,
+      "mean_charged_decode_seconds": 88.86752846944728,
+      "mean_charged_pair_seconds": 177.81862883744503,
+      "exact_payload_bytes_per_second": 0.47988972747811365,
+      "mean_encode_phase_seconds": 85.10012500376777,
+      "mean_decode_phase_seconds": 85.08400756145582
+    },
+    "cuda_graph": {
+      "pairs": 9,
+      "mean_charged_encode_seconds": 17.3611561238908,
+      "mean_charged_decode_seconds": 17.2805764727786,
+      "mean_charged_pair_seconds": 34.6417325966694,
+      "exact_payload_bytes_per_second": 2.4633102023753177,
+      "mean_encode_phase_seconds": 12.948502475444306,
+      "mean_decode_phase_seconds": 12.880575531670022
+    },
+    "pair_speedup": 5.133075499074237
+  },
+  "public_v2": {
+    "allocation_complete": true,
+    "expected_count": 120,
+    "attempted_count": 120,
+    "completed_count": 100,
+    "packet_completed_count": 100,
+    "authenticated_count": 100,
+    "exact_recovery_count": 100,
+    "all_recovered": false,
+    "recorded_failure_count": 20,
+    "missing_identifiers": [],
+    "unexpected_identifiers": [],
+    "duplicate_expected_identifiers": [],
+    "duplicate_result_identifiers": [],
+    "duplicate_expected_case_identifiers": [],
+    "duplicate_result_case_identifiers": [],
+    "case_work_mismatches": [],
+    "unstarted_identifiers": [],
+    "unfinished_identifiers": [],
+    "invalid_evidence_identifiers": [],
+    "controls_completed": 40,
+    "controls_allocation_complete": true,
+    "study_allocation_complete": true,
+    "verification_scope": "CPU public saved-source equality, identities, pairing digests, hashes, shared controls and complete allocation; not private-key GPU replay"
+  },
+  "public_benchmark": {
+    "timing_cases_completed": 22,
+    "exact_recoveries": 22,
+    "matched_comparisons": 11,
+    "frozen_maximum_comparisons": 11,
+    "all_frozen_comparisons_completed": true,
+    "missing": [],
+    "gpu_model_processes": 45,
+    "saved_evidence_valid": true,
+    "verification_scope": "CPU saved source/carrier/report hashes and allocation; no private-key authentication or neural replay"
+  },
+  "public_qualification_exit": 0,
+  "public_context": {
+    "passed": true,
+    "scope": "public saved evidence + paired CPU analysis; no fresh inference or private files",
+    "verified_artifacts": 80,
+    "unique_controls": 20,
+    "paired_groups": 20,
+    "row1_analysis_reproduced": true,
+    "forbidden_files": []
+  },
+  "pdfs": {
+    "main": {
+      "file": "ICAART2027_submission.pdf",
+      "sha256": "63debfdfea6d71e68b4b58f562b216e35ba1289c7dedd9b18151a570549219a4",
+      "pages": 12,
+      "extracted_nonwhitespace_characters": 41873,
+      "empty_author_metadata": true
+    },
+    "supplement": {
+      "file": "ICAART2027_supplement.pdf",
+      "sha256": "95fcf5616f19fc482fd965129f880e5bedb1785167411db0891b9ea0db6b1676",
+      "pages": 8,
+      "extracted_nonwhitespace_characters": 22912,
+      "empty_author_metadata": true
+    }
+  },
+  "character_count": {
+    "abstract_words_whitespace_method": 176,
+    "main_extracted_including_figures_tables_references": 41873,
+    "duplicated_external_figure_text_allowance": 1163,
+    "whole_diagram_source_allowance": 1100,
+    "additional_extraction_allowance": 1000,
+    "conservative_main_nonwhitespace_estimate": 45136,
+    "official_regular_paper_range": [
+      10000,
+      50000
+    ],
+    "caveat": "Conservative estimate, not an official portal count. No official graph-to-character conversion was specified. All visible figure text was also visually inspected."
+  },
+  "passed": true,
+  "source_revision": "bdecbf2f4e524885ba7408ec282d9cf47d6a779b",
+  "verification_script_sha256": "782fbdeefc8010e1b41570567b0723d68416a2885bfa6f89e12a48cdd3ba0f7c"
+}

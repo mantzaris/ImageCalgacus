@@ -1,0 +1,13 @@
+\setlength{\tabcolsep}{3pt}
+\setlength{\pubtablewidth}{\dimexpr\linewidth-36pt\relax}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.140\pubtablewidth}>{\raggedright\arraybackslash}p{0.100\pubtablewidth}>{\raggedright\arraybackslash}p{0.180\pubtablewidth}>{\raggedright\arraybackslash}p{0.180\pubtablewidth}>{\raggedright\arraybackslash}p{0.100\pubtablewidth}>{\raggedright\arraybackslash}p{0.180\pubtablewidth}>{\raggedright\arraybackslash}p{0.120\pubtablewidth}@{}}
+\toprule
+Payload / method & Bytes / repeats & Reference encode / decode (s) & Graph encode / decode (s) & Pair speedup & Recovered B/s reference $\rightarrow$ graph & Equivalence \\
+\midrule
+T1 / Fixed & 32 / 3 & 88.97 / 89.28 & 17.38 / 17.28 & 5.14$\times$ & 0.180 $\rightarrow$ 0.923 & Exact \\[4pt]
+T1 / Gated & 32 / 1 & 90.17 / 90.07 & 17.38 / 17.23 & 5.21$\times$ & 0.178 $\rightarrow$ 0.925 & Exact \\[4pt]
+T1 / A1 & 32 / 1 & 91.83 / 91.03 & 17.83 / 17.28 & 5.21$\times$ & 0.175 $\rightarrow$ 0.911 & Exact \\[4pt]
+T4 / Fixed & 96 / 3 & 89.12 / 89.09 & 17.34 / 17.29 & 5.15$\times$ & 0.539 $\rightarrow$ 2.772 & Exact \\[4pt]
+T5 / Fixed & 128 / 3 & 88.76 / 88.24 & 17.36 / 17.27 & 5.11$\times$ & 0.723 $\rightarrow$ 3.696 & Exact \\[4pt]
+\bottomrule
+\end{tabular}

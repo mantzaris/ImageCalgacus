@@ -1,0 +1,2863 @@
+{
+  "specification": {
+    "questions": [
+      "artifact exact recovery",
+      "gating rate/overhead/distortion tradeoff",
+      "comparison with framed A1 including failures"
+    ],
+    "independent_unit": "payload/context group; 20 per direction, not 60 methods",
+    "bootstrap_replicates": 2000,
+    "confidence": 0.95,
+    "bootstrap_seed": 2026090901,
+    "bootstrap": "percentile; resample whole groups within image class or UTF-8 length band; carry methods and owned shared controls together",
+    "recovery_interval": "two-sided Clopper-Pearson exact binomial, including 0/n and n/n; Bernoulli working-model interval for a small fixed stratified sample",
+    "paired_binary_boundary_bound": "difference of 97.5% marginal Clopper-Pearson intervals (Bonferroni conservative); also retain paired grouped bootstrap",
+    "paired_metrics": [
+      "exact_complete",
+      "exact_goodput_bits_per_symbol",
+      "charged_pair_seconds",
+      "whole_surprisal_bits",
+      "whole_log_rank"
+    ],
+    "paired_order": [
+      [
+        "gated",
+        "fixed"
+      ],
+      [
+        "arithmetic",
+        "fixed"
+      ],
+      [
+        "arithmetic",
+        "gated"
+      ]
+    ],
+    "goodput": "incomplete or unauthenticated transmissions have zero exact goodput; packet-prefix progress is separate",
+    "scores": {
+      "surprisal_bits_mean": "higher means stego",
+      "log_rank_mean": "higher means stego"
+    },
+    "score_scope": "whole delivered carrier; model/context-aware observer; no packet-boundary features or extra scoring passes",
+    "auc": "empirical pairwise wins plus half ties; matched ordinary controls; include failed delivered carriers when scorable",
+    "duplicates": "deduplicate identical control artifact hashes within each direction/method cell; lowest frozen group ordinal owns it; retain other links without extra negatives; repeated bootstrap draws retain owner multiplicity",
+    "unscorable": "explicit missing carrier/control/whole score; never replace or infer scores",
+    "plots": [
+      "six-cell recovery with boundary-aware intervals",
+      "whole-carrier score AUC with grouped intervals"
+    ],
+    "no_label_selected_score_direction": true,
+    "no_detector_training": true,
+    "lossless_replays_already_satisfied": 20
+  },
+  "manifest_sha256": "643099adf3bf2df5e62db6e49917d86d0f0c766d3e0d51b6a33dc0c62abc5e6c",
+  "cells": [
+    {
+      "direction": "image-to-text",
+      "method": "fixed",
+      "n_expected": 20,
+      "n_attempted": 20,
+      "exact_recovery_count": 20,
+      "authenticated_count": 20,
+      "sender_packet_completed": 20,
+      "sender_carrier_completed": 20,
+      "receiver_packet_completed": 20,
+      "receiver_carrier_conformant": 20,
+      "authenticated_source_equal_count": 20,
+      "exact_rate": 1.0,
+      "recovery_95_interval": [
+        0.8315665290169147,
+        1.0
+      ],
+      "exact_per_completed_packet": 1.0,
+      "failures": {},
+      "rate_unit": "bits/token",
+      "metrics": {
+        "exact_goodput_bits_per_symbol": {
+          "n": 20,
+          "mean": 3.324675324675325,
+          "grouped_95_interval": [
+            3.324675324675325,
+            3.324675324675325
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_pair_seconds": {
+          "n": 20,
+          "mean": 123.32611503199878,
+          "grouped_95_interval": [
+            120.32223738378488,
+            126.4555725039215
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "encode_seconds": {
+          "n": 20,
+          "mean": 45.63235096315111,
+          "grouped_95_interval": [
+            44.170622604208326,
+            47.12302083775121
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "decode_seconds": {
+          "n": 20,
+          "mean": 45.3114402350504,
+          "grouped_95_interval": [
+            43.82176019548262,
+            46.830520639663845
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_encode_seconds": {
+          "n": 20,
+          "mean": 61.88279091164732,
+          "grouped_95_interval": [
+            60.355014881352744,
+            63.44692356833486
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_decode_seconds": {
+          "n": 20,
+          "mean": 61.44332412035146,
+          "grouped_95_interval": [
+            59.955332738716116,
+            63.00197900135559
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "cold_load_seconds": {
+          "n": 20,
+          "mean": 5.3785652975013365,
+          "grouped_95_interval": [
+            5.367030093210797,
+            5.389439877503901
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "other_occupied_seconds": {
+          "n": 20,
+          "mean": 27.003758536295937,
+          "grouped_95_interval": [
+            26.87770621225258,
+            27.141664953667206
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_surprisal_bits": {
+          "n": 20,
+          "mean": 5.566713746013609,
+          "grouped_95_interval": [
+            5.506810368726722,
+            5.6298595663651225
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_log_rank": {
+          "n": 20,
+          "mean": 2.723112842638568,
+          "grouped_95_interval": [
+            2.701923935922927,
+            2.745183061415815
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_token": {
+          "n": 20,
+          "mean": 3.324675324675325,
+          "grouped_95_interval": [
+            3.324675324675325,
+            3.324675324675325
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_channel": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "useful_bits_per_pixel": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "packet_transport_bits_per_symbol": {
+          "n": 20,
+          "mean": 4.0,
+          "grouped_95_interval": [
+            4.0,
+            4.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "serialized_expansion": {
+          "n": 20,
+          "mean": 10.249609375,
+          "grouped_95_interval": [
+            10.01875,
+            10.493359375
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "framing_bytes": {
+          "n": 20,
+          "mean": 36.0,
+          "grouped_95_interval": [
+            36.0,
+            36.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "slot_padding_bytes": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_positions": {
+          "n": 20,
+          "mean": 584.0,
+          "grouped_95_interval": [
+            584.0,
+            584.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "skipped_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "zero_bit_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_suffix_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "lookahead_zero_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "completion_symbols": {
+          "n": 20,
+          "mean": 32.0,
+          "grouped_95_interval": [
+            32.0,
+            32.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        }
+      },
+      "aggregate_offered_bits_per_symbol": 3.324675324675325,
+      "aggregate_exact_goodput_bits_per_symbol": 3.324675324675325,
+      "aggregate_exact_goodput_bits_per_pixel": null,
+      "charged_total_seconds": 2466.5223006399756,
+      "packet_prefix_bits": [
+        {
+          "case": "HI1-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI2-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI3-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI4-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI5-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI6-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI7-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI8-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI9-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI10-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI11-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI12-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI13-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI14-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI15-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI16-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI17-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI18-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI19-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI20-prompt1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        }
+      ]
+    },
+    {
+      "direction": "image-to-text",
+      "method": "gated",
+      "n_expected": 20,
+      "n_attempted": 20,
+      "exact_recovery_count": 20,
+      "authenticated_count": 20,
+      "sender_packet_completed": 20,
+      "sender_carrier_completed": 20,
+      "receiver_packet_completed": 20,
+      "receiver_carrier_conformant": 20,
+      "authenticated_source_equal_count": 20,
+      "exact_rate": 1.0,
+      "recovery_95_interval": [
+        0.8315665290169147,
+        1.0
+      ],
+      "exact_per_completed_packet": 1.0,
+      "failures": {},
+      "rate_unit": "bits/token",
+      "metrics": {
+        "exact_goodput_bits_per_symbol": {
+          "n": 20,
+          "mean": 3.1246402731833047,
+          "grouped_95_interval": [
+            3.1054383801425622,
+            3.1441494427374446
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_pair_seconds": {
+          "n": 20,
+          "mean": 147.28992149290352,
+          "grouped_95_interval": [
+            143.58808069824025,
+            150.93623719516023
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "encode_seconds": {
+          "n": 20,
+          "mean": 57.30982390705103,
+          "grouped_95_interval": [
+            55.48897703551331,
+            59.091388486195086
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "decode_seconds": {
+          "n": 20,
+          "mean": 57.296300879448246,
+          "grouped_95_interval": [
+            55.46303557843585,
+            59.12258272411327
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_encode_seconds": {
+          "n": 20,
+          "mean": 73.79521236145156,
+          "grouped_95_interval": [
+            71.91456466482647,
+            75.62871483254206
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_decode_seconds": {
+          "n": 20,
+          "mean": 73.49470913145197,
+          "grouped_95_interval": [
+            71.65408715124667,
+            75.30366177970372
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "cold_load_seconds": {
+          "n": 20,
+          "mean": 5.380863867649168,
+          "grouped_95_interval": [
+            5.369901405406326,
+            5.391837980039727
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "other_occupied_seconds": {
+          "n": 20,
+          "mean": 27.302932838755076,
+          "grouped_95_interval": [
+            27.150897067601328,
+            27.45888334389976
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_surprisal_bits": {
+          "n": 20,
+          "mean": 5.175536763994158,
+          "grouped_95_interval": [
+            5.117183128628535,
+            5.230352224813027
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_log_rank": {
+          "n": 20,
+          "mean": 2.533913164902546,
+          "grouped_95_interval": [
+            2.5043115342192475,
+            2.5635764192816084
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_token": {
+          "n": 20,
+          "mean": 3.1246402731833047,
+          "grouped_95_interval": [
+            3.1054383801425622,
+            3.1441494427374446
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_channel": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "useful_bits_per_pixel": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "packet_transport_bits_per_symbol": {
+          "n": 20,
+          "mean": 3.747091079779941,
+          "grouped_95_interval": [
+            3.722902980870345,
+            3.7716407911373055
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "serialized_expansion": {
+          "n": 20,
+          "mean": 11.356640625,
+          "grouped_95_interval": [
+            11.1843603515625,
+            11.5273779296875
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "framing_bytes": {
+          "n": 20,
+          "mean": 36.0,
+          "grouped_95_interval": [
+            36.0,
+            36.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "slot_padding_bytes": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_positions": {
+          "n": 20,
+          "mean": 584.0,
+          "grouped_95_interval": [
+            584.0,
+            584.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "skipped_positions": {
+          "n": 20,
+          "mean": 39.8,
+          "grouped_95_interval": [
+            35.59875,
+            43.951249999999995
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "zero_bit_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_suffix_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "lookahead_zero_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "completion_symbols": {
+          "n": 20,
+          "mean": 32.0,
+          "grouped_95_interval": [
+            32.0,
+            32.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        }
+      },
+      "aggregate_offered_bits_per_symbol": 3.1229033241842026,
+      "aggregate_exact_goodput_bits_per_symbol": 3.1229033241842026,
+      "aggregate_exact_goodput_bits_per_pixel": null,
+      "charged_total_seconds": 2945.7984298580704,
+      "packet_prefix_bits": [
+        {
+          "case": "HI1-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI2-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI3-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI4-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI5-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI6-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI7-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI8-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI9-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI10-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI11-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI12-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI13-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI14-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI15-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI16-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI17-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI18-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI19-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HI20-prompt1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        }
+      ]
+    },
+    {
+      "direction": "image-to-text",
+      "method": "arithmetic",
+      "n_expected": 20,
+      "n_attempted": 20,
+      "exact_recovery_count": 0,
+      "authenticated_count": 0,
+      "sender_packet_completed": 0,
+      "sender_carrier_completed": 0,
+      "receiver_packet_completed": 0,
+      "receiver_carrier_conformant": 0,
+      "authenticated_source_equal_count": 0,
+      "exact_rate": 0.0,
+      "recovery_95_interval": [
+        0.0,
+        0.1684334709830853
+      ],
+      "exact_per_completed_packet": null,
+      "failures": {
+        "capacity": 20
+      },
+      "rate_unit": "bits/token",
+      "metrics": {
+        "exact_goodput_bits_per_symbol": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_pair_seconds": {
+          "n": 20,
+          "mean": 826.5659768468504,
+          "grouped_95_interval": [
+            777.7729470760653,
+            875.3476788253441
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "encode_seconds": {
+          "n": 20,
+          "mean": 398.14781652915116,
+          "grouped_95_interval": [
+            373.3148423422238,
+            422.9747273024594
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "decode_seconds": {
+          "n": 20,
+          "mean": 396.01335586554853,
+          "grouped_95_interval": [
+            371.8955451312284,
+            420.3204929926676
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_encode_seconds": {
+          "n": 20,
+          "mean": 414.3219252398485,
+          "grouped_95_interval": [
+            389.6526504086775,
+            439.1677285289981
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_decode_seconds": {
+          "n": 20,
+          "mean": 412.2440516070019,
+          "grouped_95_interval": [
+            388.2650476282544,
+            436.43407475981263
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "cold_load_seconds": {
+          "n": 20,
+          "mean": 5.365244676399743,
+          "grouped_95_interval": [
+            5.352814844575715,
+            5.377116655032733
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "other_occupied_seconds": {
+          "n": 20,
+          "mean": 27.039559775750966,
+          "grouped_95_interval": [
+            26.8385923589694,
+            27.252871294592985
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_surprisal_bits": {
+          "n": 20,
+          "mean": 0.7122017431758156,
+          "grouped_95_interval": [
+            0.6562667359114807,
+            0.7648498156159075
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_log_rank": {
+          "n": 20,
+          "mean": 0.26491450551051565,
+          "grouped_95_interval": [
+            0.24383848343937578,
+            0.2841382948060244
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_token": {
+          "n": 20,
+          "mean": 1.0,
+          "grouped_95_interval": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_channel": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "useful_bits_per_pixel": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "packet_transport_bits_per_symbol": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "serialized_expansion": {
+          "n": 20,
+          "mean": 34.1068359375,
+          "grouped_95_interval": [
+            32.5655908203125,
+            35.7819482421875
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "framing_bytes": {
+          "n": 20,
+          "mean": 36.0,
+          "grouped_95_interval": [
+            36.0,
+            36.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "slot_padding_bytes": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_positions": {
+          "n": 20,
+          "mean": 399.4,
+          "grouped_95_interval": [
+            365.44874999999996,
+            432.55
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "skipped_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "zero_bit_positions": {
+          "n": 20,
+          "mean": 1648.6,
+          "grouped_95_interval": [
+            1615.45,
+            1682.55125
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_suffix_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "lookahead_zero_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "completion_symbols": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        }
+      },
+      "aggregate_offered_bits_per_symbol": 1.0,
+      "aggregate_exact_goodput_bits_per_symbol": 0.0,
+      "aggregate_exact_goodput_bits_per_pixel": null,
+      "charged_total_seconds": 16531.319536937008,
+      "packet_prefix_bits": [
+        {
+          "case": "HI1-prompt1-arithmetic",
+          "bits": 1643,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI2-prompt1-arithmetic",
+          "bits": 1519,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI3-prompt1-arithmetic",
+          "bits": 1319,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI4-prompt1-arithmetic",
+          "bits": 906,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI5-prompt1-arithmetic",
+          "bits": 2164,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI6-prompt1-arithmetic",
+          "bits": 1939,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI7-prompt1-arithmetic",
+          "bits": 581,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI8-prompt1-arithmetic",
+          "bits": 1812,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI9-prompt1-arithmetic",
+          "bits": 1795,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI10-prompt1-arithmetic",
+          "bits": 1508,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI11-prompt1-arithmetic",
+          "bits": 1143,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI12-prompt1-arithmetic",
+          "bits": 1188,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI13-prompt1-arithmetic",
+          "bits": 1292,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI14-prompt1-arithmetic",
+          "bits": 1121,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI15-prompt1-arithmetic",
+          "bits": 1429,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI16-prompt1-arithmetic",
+          "bits": 2216,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI17-prompt1-arithmetic",
+          "bits": 1296,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI18-prompt1-arithmetic",
+          "bits": 1013,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI19-prompt1-arithmetic",
+          "bits": 1304,
+          "packet_complete": false,
+          "authenticated": false
+        },
+        {
+          "case": "HI20-prompt1-arithmetic",
+          "bits": 1949,
+          "packet_complete": false,
+          "authenticated": false
+        }
+      ]
+    },
+    {
+      "direction": "text-to-image",
+      "method": "fixed",
+      "n_expected": 20,
+      "n_attempted": 20,
+      "exact_recovery_count": 20,
+      "authenticated_count": 20,
+      "sender_packet_completed": 20,
+      "sender_carrier_completed": 20,
+      "receiver_packet_completed": 20,
+      "receiver_carrier_conformant": 20,
+      "authenticated_source_equal_count": 20,
+      "exact_rate": 1.0,
+      "recovery_95_interval": [
+        0.8315665290169147,
+        1.0
+      ],
+      "exact_per_completed_packet": 1.0,
+      "failures": {},
+      "rate_unit": "bits/channel value",
+      "metrics": {
+        "exact_goodput_bits_per_symbol": {
+          "n": 20,
+          "mean": 0.2505376344086021,
+          "grouped_95_interval": [
+            0.24731182795698925,
+            0.2534946236559139
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_pair_seconds": {
+          "n": 20,
+          "mean": 178.18082459854267,
+          "grouped_95_interval": [
+            177.7451459651767,
+            178.6274413056517
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "encode_seconds": {
+          "n": 20,
+          "mean": 85.27408473904943,
+          "grouped_95_interval": [
+            85.0351652398184,
+            85.5339319271916
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "decode_seconds": {
+          "n": 20,
+          "mean": 85.30815182809674,
+          "grouped_95_interval": [
+            85.0373571519508,
+            85.56614944957226
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_encode_seconds": {
+          "n": 20,
+          "mean": 89.07953363709603,
+          "grouped_95_interval": [
+            88.83501667381107,
+            89.33535975697419
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_decode_seconds": {
+          "n": 20,
+          "mean": 89.10129096144665,
+          "grouped_95_interval": [
+            88.82933647628391,
+            89.35957127120585
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "cold_load_seconds": {
+          "n": 20,
+          "mean": 1.8942250242005685,
+          "grouped_95_interval": [
+            1.870949998938213,
+            1.9168839180219037
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "other_occupied_seconds": {
+          "n": 20,
+          "mean": 5.704363007195934,
+          "grouped_95_interval": [
+            5.669764411752185,
+            5.7441704382893475
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_surprisal_bits": {
+          "n": 20,
+          "mean": 4.191273216529692,
+          "grouped_95_interval": [
+            4.080043389574048,
+            4.298904438930255
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_log_rank": {
+          "n": 20,
+          "mean": 2.45864449692573,
+          "grouped_95_interval": [
+            2.3676067550326336,
+            2.5463991984563656
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_token": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "useful_bits_per_channel": {
+          "n": 20,
+          "mean": 0.2505376344086021,
+          "grouped_95_interval": [
+            0.24731182795698925,
+            0.2534946236559139
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_pixel": {
+          "n": 20,
+          "mean": 0.7516129032258064,
+          "grouped_95_interval": [
+            0.7419354838709677,
+            0.7604838709677418
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_transport_bits_per_symbol": {
+          "n": 20,
+          "mean": 4.0,
+          "grouped_95_interval": [
+            4.0,
+            4.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "serialized_expansion": {
+          "n": 20,
+          "mean": 28.206317438786733,
+          "grouped_95_interval": [
+            27.71876634083101,
+            28.7315804939933
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "framing_bytes": {
+          "n": 20,
+          "mean": 36.0,
+          "grouped_95_interval": [
+            36.0,
+            36.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "slot_padding_bytes": {
+          "n": 20,
+          "mean": 162.8,
+          "grouped_95_interval": [
+            161.7,
+            164.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_positions": {
+          "n": 20,
+          "mean": 584.0,
+          "grouped_95_interval": [
+            584.0,
+            584.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "skipped_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "zero_bit_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_suffix_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "lookahead_zero_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "completion_symbols": {
+          "n": 20,
+          "mean": 2392.0,
+          "grouped_95_interval": [
+            2392.0,
+            2392.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        }
+      },
+      "aggregate_offered_bits_per_symbol": 0.25053763440860216,
+      "aggregate_exact_goodput_bits_per_symbol": 0.25053763440860216,
+      "aggregate_exact_goodput_bits_per_pixel": 0.7516129032258064,
+      "charged_total_seconds": 3563.6164919708535,
+      "packet_prefix_bits": [
+        {
+          "case": "HT1-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT2-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT3-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT4-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT5-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT6-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT7-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT8-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT9-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT10-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT11-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT12-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT13-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT14-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT15-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT16-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT17-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT18-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT19-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT20-row1-fixed",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        }
+      ]
+    },
+    {
+      "direction": "text-to-image",
+      "method": "gated",
+      "n_expected": 20,
+      "n_attempted": 20,
+      "exact_recovery_count": 20,
+      "authenticated_count": 20,
+      "sender_packet_completed": 20,
+      "sender_carrier_completed": 20,
+      "receiver_packet_completed": 20,
+      "receiver_carrier_conformant": 20,
+      "authenticated_source_equal_count": 20,
+      "exact_rate": 1.0,
+      "recovery_95_interval": [
+        0.8315665290169147,
+        1.0
+      ],
+      "exact_per_completed_packet": 1.0,
+      "failures": {},
+      "rate_unit": "bits/channel value",
+      "metrics": {
+        "exact_goodput_bits_per_symbol": {
+          "n": 20,
+          "mean": 0.2505376344086021,
+          "grouped_95_interval": [
+            0.24731182795698925,
+            0.2534946236559139
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_pair_seconds": {
+          "n": 20,
+          "mean": 178.53295808670518,
+          "grouped_95_interval": [
+            178.1277166416907,
+            178.95305962517136
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "encode_seconds": {
+          "n": 20,
+          "mean": 85.29199290895266,
+          "grouped_95_interval": [
+            85.08278969886453,
+            85.49629618133518
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "decode_seconds": {
+          "n": 20,
+          "mean": 85.65491900485358,
+          "grouped_95_interval": [
+            85.26202931795822,
+            86.12102278004282
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_encode_seconds": {
+          "n": 20,
+          "mean": 89.07482364590105,
+          "grouped_95_interval": [
+            88.8722149925187,
+            89.27738972683069
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_decode_seconds": {
+          "n": 20,
+          "mean": 89.45813444080413,
+          "grouped_95_interval": [
+            89.0702799318635,
+            89.91295741865329
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "cold_load_seconds": {
+          "n": 20,
+          "mean": 1.893321496002318,
+          "grouped_95_interval": [
+            1.8688656813611488,
+            1.9167624844791862
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "other_occupied_seconds": {
+          "n": 20,
+          "mean": 5.692724676896614,
+          "grouped_95_interval": [
+            5.660345036088238,
+            5.721271591764161
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_surprisal_bits": {
+          "n": 20,
+          "mean": 4.074327954695388,
+          "grouped_95_interval": [
+            3.9672237108766337,
+            4.17418712692244
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_log_rank": {
+          "n": 20,
+          "mean": 2.374362933489541,
+          "grouped_95_interval": [
+            2.2888230699352987,
+            2.4573024968320385
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_token": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "useful_bits_per_channel": {
+          "n": 20,
+          "mean": 0.2505376344086021,
+          "grouped_95_interval": [
+            0.24731182795698925,
+            0.2534946236559139
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_pixel": {
+          "n": 20,
+          "mean": 0.7516129032258064,
+          "grouped_95_interval": [
+            0.7419354838709677,
+            0.7604838709677418
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_transport_bits_per_symbol": {
+          "n": 20,
+          "mean": 3.450579254932509,
+          "grouped_95_interval": [
+            3.291153406627093,
+            3.6024195394911884
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "serialized_expansion": {
+          "n": 20,
+          "mean": 29.044285454583218,
+          "grouped_95_interval": [
+            28.568868890987353,
+            29.515601447265013
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "framing_bytes": {
+          "n": 20,
+          "mean": 36.0,
+          "grouped_95_interval": [
+            36.0,
+            36.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "slot_padding_bytes": {
+          "n": 20,
+          "mean": 162.8,
+          "grouped_95_interval": [
+            161.7,
+            164.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_positions": {
+          "n": 20,
+          "mean": 584.0,
+          "grouped_95_interval": [
+            584.0,
+            584.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "skipped_positions": {
+          "n": 20,
+          "mean": 100.5,
+          "grouped_95_interval": [
+            69.64750000000001,
+            132.80125
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "zero_bit_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_suffix_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "lookahead_zero_bits": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "completion_symbols": {
+          "n": 20,
+          "mean": 2291.5,
+          "grouped_95_interval": [
+            2259.19875,
+            2322.3525
+          ],
+          "valid_bootstrap_replicates": 2000
+        }
+      },
+      "aggregate_offered_bits_per_symbol": 0.25053763440860216,
+      "aggregate_exact_goodput_bits_per_symbol": 0.25053763440860216,
+      "aggregate_exact_goodput_bits_per_pixel": 0.7516129032258064,
+      "charged_total_seconds": 3570.6591617341037,
+      "packet_prefix_bits": [
+        {
+          "case": "HT1-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT2-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT3-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT4-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT5-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT6-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT7-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT8-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT9-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT10-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT11-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT12-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT13-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT14-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT15-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT16-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT17-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT18-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT19-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT20-row1-gated",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        }
+      ]
+    },
+    {
+      "direction": "text-to-image",
+      "method": "arithmetic",
+      "n_expected": 20,
+      "n_attempted": 20,
+      "exact_recovery_count": 20,
+      "authenticated_count": 20,
+      "sender_packet_completed": 20,
+      "sender_carrier_completed": 20,
+      "receiver_packet_completed": 20,
+      "receiver_carrier_conformant": 20,
+      "authenticated_source_equal_count": 20,
+      "exact_rate": 1.0,
+      "recovery_95_interval": [
+        0.8315665290169147,
+        1.0
+      ],
+      "exact_per_completed_packet": 1.0,
+      "failures": {},
+      "rate_unit": "bits/channel value",
+      "metrics": {
+        "exact_goodput_bits_per_symbol": {
+          "n": 20,
+          "mean": 0.2505376344086021,
+          "grouped_95_interval": [
+            0.24731182795698925,
+            0.2534946236559139
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_pair_seconds": {
+          "n": 20,
+          "mean": 179.00759123494717,
+          "grouped_95_interval": [
+            178.61595853182547,
+            179.43530731978575
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "encode_seconds": {
+          "n": 20,
+          "mean": 85.5904774381459,
+          "grouped_95_interval": [
+            85.291676566242,
+            85.89192611423506
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "decode_seconds": {
+          "n": 20,
+          "mean": 85.77317311459774,
+          "grouped_95_interval": [
+            85.5149550971751,
+            86.04445525446354
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_encode_seconds": {
+          "n": 20,
+          "mean": 89.39857291129593,
+          "grouped_95_interval": [
+            89.09591832289051,
+            89.69059611606902
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "charged_decode_seconds": {
+          "n": 20,
+          "mean": 89.60901832365126,
+          "grouped_95_interval": [
+            89.35146308153854,
+            89.87430724337453
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "cold_load_seconds": {
+          "n": 20,
+          "mean": 1.9036909099559125,
+          "grouped_95_interval": [
+            1.874595243534677,
+            1.9287638087251981
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "other_occupied_seconds": {
+          "n": 20,
+          "mean": 5.740249772247625,
+          "grouped_95_interval": [
+            5.714592295052244,
+            5.765183406228771
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_surprisal_bits": {
+          "n": 20,
+          "mean": 3.769649334607356,
+          "grouped_95_interval": [
+            3.6350441089771404,
+            3.917533409990707
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "whole_log_rank": {
+          "n": 20,
+          "mean": 2.208754261449973,
+          "grouped_95_interval": [
+            2.107793631974569,
+            2.3199881337835904
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_token": {
+          "n": 0,
+          "mean": null,
+          "grouped_95_interval": null,
+          "valid_bootstrap_replicates": 0
+        },
+        "useful_bits_per_channel": {
+          "n": 20,
+          "mean": 0.2505376344086021,
+          "grouped_95_interval": [
+            0.24731182795698925,
+            0.2534946236559139
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "useful_bits_per_pixel": {
+          "n": 20,
+          "mean": 0.7516129032258064,
+          "grouped_95_interval": [
+            0.7419354838709677,
+            0.7604838709677418
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_transport_bits_per_symbol": {
+          "n": 20,
+          "mean": 3.934017323472684,
+          "grouped_95_interval": [
+            3.795092211514892,
+            4.083226080945038
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "serialized_expansion": {
+          "n": 20,
+          "mean": 32.093416923763144,
+          "grouped_95_interval": [
+            31.454140204481547,
+            32.77992537574878
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "framing_bytes": {
+          "n": 20,
+          "mean": 36.0,
+          "grouped_95_interval": [
+            36.0,
+            36.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "slot_padding_bytes": {
+          "n": 20,
+          "mean": 162.8,
+          "grouped_95_interval": [
+            161.7,
+            164.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "packet_positions": {
+          "n": 20,
+          "mean": 508.2,
+          "grouped_95_interval": [
+            497.05,
+            519.7
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "skipped_positions": {
+          "n": 20,
+          "mean": 0.0,
+          "grouped_95_interval": [
+            0.0,
+            0.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "zero_bit_positions": {
+          "n": 20,
+          "mean": 89.65,
+          "grouped_95_interval": [
+            77.4975,
+            102.40249999999999
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_positions": {
+          "n": 20,
+          "mean": 1.0,
+          "grouped_95_interval": [
+            1.0,
+            1.0
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "termination_suffix_bits": {
+          "n": 20,
+          "mean": 28.9,
+          "grouped_95_interval": [
+            27.95,
+            29.75
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "lookahead_zero_bits": {
+          "n": 20,
+          "mean": 29.9,
+          "grouped_95_interval": [
+            29.1,
+            30.5
+          ],
+          "valid_bootstrap_replicates": 2000
+        },
+        "completion_symbols": {
+          "n": 20,
+          "mean": 2378.15,
+          "grouped_95_interval": [
+            2356.69,
+            2400.05125
+          ],
+          "valid_bootstrap_replicates": 2000
+        }
+      },
+      "aggregate_offered_bits_per_symbol": 0.25053763440860216,
+      "aggregate_exact_goodput_bits_per_symbol": 0.25053763440860216,
+      "aggregate_exact_goodput_bits_per_pixel": 0.7516129032258064,
+      "charged_total_seconds": 3580.1518246989435,
+      "packet_prefix_bits": [
+        {
+          "case": "HT1-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT2-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT3-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT4-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT5-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT6-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT7-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT8-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT9-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT10-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT11-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT12-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT13-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT14-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT15-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT16-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT17-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT18-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT19-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        },
+        {
+          "case": "HT20-row1-arithmetic",
+          "bits": 2336,
+          "packet_complete": true,
+          "authenticated": true
+        }
+      ]
+    }
+  ],
+  "paired_differences": [
+    {
+      "direction": "image-to-text",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "exact_complete",
+      "n": 20,
+      "mean": 0.0,
+      "grouped_95_interval": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_replicates": 2000,
+      "boundary_aware_conservative_95_bound": [
+        -0.19675967970462538,
+        0.19675967970462538
+      ]
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "exact_goodput_bits_per_symbol",
+      "n": 20,
+      "mean": -0.20003505149202025,
+      "grouped_95_interval": [
+        -0.219236944532763,
+        -0.18052588193788108
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "charged_pair_seconds",
+      "n": 20,
+      "mean": 23.963806460904742,
+      "grouped_95_interval": [
+        20.337052420652725,
+        27.583976087774115
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "whole_surprisal_bits",
+      "n": 20,
+      "mean": -0.39117698201944984,
+      "grouped_95_interval": [
+        -0.47644247713827004,
+        -0.30785632910746086
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "whole_log_rank",
+      "n": 20,
+      "mean": -0.18919967773602184,
+      "grouped_95_interval": [
+        -0.20318597951896972,
+        -0.17429371798314316
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "exact_complete",
+      "n": 20,
+      "mean": -1.0,
+      "grouped_95_interval": [
+        -1.0,
+        -1.0
+      ],
+      "valid_bootstrap_replicates": 2000,
+      "boundary_aware_conservative_95_bound": [
+        -1,
+        -0.6064806405907492
+      ]
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "exact_goodput_bits_per_symbol",
+      "n": 20,
+      "mean": -3.324675324675325,
+      "grouped_95_interval": [
+        -3.324675324675325,
+        -3.324675324675325
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "charged_pair_seconds",
+      "n": 20,
+      "mean": 703.2398618148516,
+      "grouped_95_interval": [
+        654.5928821386156,
+        751.8266971428535
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "whole_surprisal_bits",
+      "n": 20,
+      "mean": -4.854512002837792,
+      "grouped_95_interval": [
+        -4.9596072923773065,
+        -4.749813548734342
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "whole_log_rank",
+      "n": 20,
+      "mean": -2.458198337128052,
+      "grouped_95_interval": [
+        -2.489382952811257,
+        -2.428117711419294
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "exact_complete",
+      "n": 20,
+      "mean": -1.0,
+      "grouped_95_interval": [
+        -1.0,
+        -1.0
+      ],
+      "valid_bootstrap_replicates": 2000,
+      "boundary_aware_conservative_95_bound": [
+        -1,
+        -0.6064806405907492
+      ]
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "exact_goodput_bits_per_symbol",
+      "n": 20,
+      "mean": -3.1246402731833047,
+      "grouped_95_interval": [
+        -3.1441494427374446,
+        -3.1054383801425622
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "charged_pair_seconds",
+      "n": 20,
+      "mean": 679.2760553539468,
+      "grouped_95_interval": [
+        630.3989901092983,
+        728.905564165531
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "whole_surprisal_bits",
+      "n": 20,
+      "mean": -4.463335020818342,
+      "grouped_95_interval": [
+        -4.523862706870221,
+        -4.402782163440891
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "image-to-text",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "whole_log_rank",
+      "n": 20,
+      "mean": -2.2689986593920297,
+      "grouped_95_interval": [
+        -2.300291158707862,
+        -2.2370789447218935
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "exact_complete",
+      "n": 20,
+      "mean": 0.0,
+      "grouped_95_interval": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_replicates": 2000,
+      "boundary_aware_conservative_95_bound": [
+        -0.19675967970462538,
+        0.19675967970462538
+      ]
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "exact_goodput_bits_per_symbol",
+      "n": 20,
+      "mean": 0.0,
+      "grouped_95_interval": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "charged_pair_seconds",
+      "n": 20,
+      "mean": 0.352133488162508,
+      "grouped_95_interval": [
+        -0.20571367451249897,
+        0.9755481879197211
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "whole_surprisal_bits",
+      "n": 20,
+      "mean": -0.11694526183430294,
+      "grouped_95_interval": [
+        -0.2673574028418747,
+        0.03533541489315573
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "gated",
+      "method_b": "fixed",
+      "metric": "whole_log_rank",
+      "n": 20,
+      "mean": -0.08428156343618891,
+      "grouped_95_interval": [
+        -0.2046107077322866,
+        0.039694731431015866
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "exact_complete",
+      "n": 20,
+      "mean": 0.0,
+      "grouped_95_interval": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_replicates": 2000,
+      "boundary_aware_conservative_95_bound": [
+        -0.19675967970462538,
+        0.19675967970462538
+      ]
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "exact_goodput_bits_per_symbol",
+      "n": 20,
+      "mean": 0.0,
+      "grouped_95_interval": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "charged_pair_seconds",
+      "n": 20,
+      "mean": 0.8267666364044999,
+      "grouped_95_interval": [
+        0.37657341725305743,
+        1.2503942724944317
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "whole_surprisal_bits",
+      "n": 20,
+      "mean": -0.4216238819223343,
+      "grouped_95_interval": [
+        -0.5470176913569206,
+        -0.300751940420968
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "fixed",
+      "metric": "whole_log_rank",
+      "n": 20,
+      "mean": -0.24989023547575648,
+      "grouped_95_interval": [
+        -0.34404515147411596,
+        -0.16021840684734615
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "exact_complete",
+      "n": 20,
+      "mean": 0.0,
+      "grouped_95_interval": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_replicates": 2000,
+      "boundary_aware_conservative_95_bound": [
+        -0.19675967970462538,
+        0.19675967970462538
+      ]
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "exact_goodput_bits_per_symbol",
+      "n": 20,
+      "mean": 0.0,
+      "grouped_95_interval": [
+        0.0,
+        0.0
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "charged_pair_seconds",
+      "n": 20,
+      "mean": 0.4746331482419919,
+      "grouped_95_interval": [
+        0.025968081960036218,
+        0.9359905036456425
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "whole_surprisal_bits",
+      "n": 20,
+      "mean": -0.3046786200880313,
+      "grouped_95_interval": [
+        -0.5011471489127223,
+        -0.10361350830347435
+      ],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "direction": "text-to-image",
+      "method_a": "arithmetic",
+      "method_b": "gated",
+      "metric": "whole_log_rank",
+      "n": 20,
+      "mean": -0.16560867203956753,
+      "grouped_95_interval": [
+        -0.31240082035135414,
+        -0.015016664129250165
+      ],
+      "valid_bootstrap_replicates": 2000
+    }
+  ],
+  "detectability": [
+    {
+      "method": "fixed",
+      "score": "surprisal_bits_mean",
+      "direction": "image-to-text",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 1.0,
+      "grouped_95_interval": [
+        1.0,
+        1.0
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "fixed",
+      "score": "log_rank_mean",
+      "direction": "image-to-text",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 1.0,
+      "grouped_95_interval": [
+        1.0,
+        1.0
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "gated",
+      "score": "surprisal_bits_mean",
+      "direction": "image-to-text",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 1.0,
+      "grouped_95_interval": [
+        1.0,
+        1.0
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "gated",
+      "score": "log_rank_mean",
+      "direction": "image-to-text",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 1.0,
+      "grouped_95_interval": [
+        1.0,
+        1.0
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "arithmetic",
+      "score": "surprisal_bits_mean",
+      "direction": "image-to-text",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.38,
+      "grouped_95_interval": [
+        0.26,
+        0.5025
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 20,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "arithmetic",
+      "score": "log_rank_mean",
+      "direction": "image-to-text",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.36,
+      "grouped_95_interval": [
+        0.2425,
+        0.4800624999999996
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 20,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "fixed",
+      "score": "surprisal_bits_mean",
+      "direction": "text-to-image",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.885,
+      "grouped_95_interval": [
+        0.7425,
+        0.985
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "fixed",
+      "score": "log_rank_mean",
+      "direction": "text-to-image",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.84,
+      "grouped_95_interval": [
+        0.6825,
+        0.965
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "gated",
+      "score": "surprisal_bits_mean",
+      "direction": "text-to-image",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.83,
+      "grouped_95_interval": [
+        0.7,
+        0.9375
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "gated",
+      "score": "log_rank_mean",
+      "direction": "text-to-image",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.77,
+      "grouped_95_interval": [
+        0.6299375,
+        0.8975
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "arithmetic",
+      "score": "surprisal_bits_mean",
+      "direction": "text-to-image",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.5575,
+      "grouped_95_interval": [
+        0.375,
+        0.7425624999999997
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    },
+    {
+      "method": "arithmetic",
+      "score": "log_rank_mean",
+      "direction": "text-to-image",
+      "score_direction": "higher means stego, frozen before outcomes",
+      "auc": 0.575,
+      "grouped_95_interval": [
+        0.405,
+        0.7575624999999996
+      ],
+      "n_stego": 20,
+      "n_unique_control_artifacts": 20,
+      "n_independent_trace_ids": 20,
+      "failed_deliveries_included": 0,
+      "excluded": [],
+      "control_duplicates": [],
+      "valid_bootstrap_replicates": 2000
+    }
+  ],
+  "bootstrap_dependencies_preserved": true,
+  "limitations": [
+    "20 frozen, stratified payload groups per direction; not a representative population or statistical-power claim",
+    "Exact-binomial recovery bounds use a Bernoulli working model; group bootstrap preserves allocated class/length strata",
+    "Collapsed paired bootstrap intervals describe observed data only; binary differences also have conservative boundary-aware bounds",
+    "AUC uses frozen higher-is-stego scores, including values below .5; no sign/threshold chosen from held-out labels",
+    "Inline mean surprisal/log2-rank under the known model/context are exploratory observers, not unknown-detector or human security"
+  ],
+  "statistical_content_sha256": "05da416e55a220fe1659328ba44ffcc0dce20ad937d35f7294e25c37d64a1d61",
+  "reporting_source_sha256": "7329ab8d9c319391506267151b35b505930c8355cbefb798c104c7fab678cb22",
+  "cpu_seconds": 0.8617019789817277
+}

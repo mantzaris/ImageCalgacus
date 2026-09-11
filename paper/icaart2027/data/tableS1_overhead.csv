@@ -1,0 +1,7 @@
+direction,method,framing_bytes,slot_padding_bytes,packet_positions,skipped_positions,zero_bit_positions,termination_positions,termination_suffix_bits,lookahead_zero_bits,completion_symbols,packet_transport_bits_per_symbol,serialized_expansion,mean_delivered_symbols,mean_complete_packet_bits_per_delivered_symbol
+image-to-text,fixed,36.0,0.0,584.0,0.0,0.0,0.0,0.0,0.0,32.0,4.0,10.249609375,616,3.792207792207792
+image-to-text,gated,36.0,0.0,584.0,39.8,0.0,0.0,0.0,0.0,32.0,3.747091079779941,11.356640625,655.8,3.564042811599707
+image-to-text,arithmetic,36.0,0.0,399.4,0.0,1648.6,0.0,0.0,0.0,0.0,,34.1068359375,2048,
+text-to-image,fixed,36.0,162.8,584.0,0.0,0.0,0.0,0.0,0.0,2392.0,4.0,28.206317438786733,2976,0.7849462365591398
+text-to-image,gated,36.0,162.8,584.0,100.5,0.0,0.0,0.0,0.0,2291.5,3.450579254932509,29.044285454583218,2976,0.7849462365591398
+text-to-image,arithmetic,36.0,162.8,508.2,0.0,89.65,1.0,28.9,29.9,2378.15,3.934017323472684,32.093416923763144,2976,0.7849462365591398
