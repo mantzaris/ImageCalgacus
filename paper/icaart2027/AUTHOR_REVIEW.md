@@ -2,6 +2,14 @@
 
 Anonymous Regular Paper, Artificial Intelligence. The submission artifact is `ICAART2027_submission.pdf` alone. Editorial finalization starts at `79fd48c8b531f1eaeea28f2fc45457beac51b3ef`. No experimental result, model profile or historical execution identity is changed. No authorship, funding, permission or ethics approval is invented.
 
+## Source consolidation checkpoint
+
+The subsequent source-only change starts at `0c7296327c0131201b3372a9c5bab70eddba4f0d`. Its later abstract edit is retained verbatim. [main.tex](main.tex) is now the authoritative editable submission, with all main-owned content and the exact twenty-entry formatted bibliography inline. It compiles without BibTeX or old fragments. The companion is not merged.
+
+[Consolidation verification](consolidation_verification.json) compares a fresh build of that starting source with a clean main-only build. Extracted text, all twelve rendered pages, labels/citations and stable metadata are identical. The eleven-page companion is also text- and pixel-identical. Counts are 41,500 extracted and 44,135 conservatively estimated non-whitespace characters, with a 180-word abstract. The previously committed PDF and older count record predated the starting commit's abstract edit; no editorial change is made by this consolidation.
+
+No author decision below is resolved or changed by reorganizing sources. Accepted evidence and historical compute remain unchanged.
+
 ## Contribution and claim-to-evidence assessment
 
 We develop a shared authenticated protocol for saved-file transport across language and pixel autoregressive models. The controlled bidirectional study exposes serialization, finite-capacity and observer-context effects. The photograph construction reconstructs model-rank partitions from invariant coarse pixels, bounding distortion without giving the receiver the original cover.

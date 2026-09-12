@@ -229,6 +229,14 @@
     "forbidden_files": []
   },
   "single_pdf_self_contained": true,
+  "source_consolidation": {
+    "starting_commit": "0c7296327c0131201b3372a9c5bab70eddba4f0d",
+    "canonical_source": "main.tex",
+    "formatted_bibliography_entries": 20,
+    "isolated_main_only_build": true,
+    "baseline_text_and_rendered_pages_identical": true,
+    "new_gpu_seconds": 0
+  },
   "editorial_revision": {
     "reviewed_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
     "unchanged_historical_tables_and_figure_assets": true,
@@ -266,22 +274,22 @@
   "pdfs": {
     "main": {
       "file": "ICAART2027_submission.pdf",
-      "sha256": "ffedfbb0c05512d67f861ce4d50862563a48ff9c277091e3044e73d1f83277a6",
+      "sha256": "defe4d75c8acde581e1cd2f88f5467b02cff33b059e39037217343c3c0b67855",
       "pages": 12,
-      "extracted_nonwhitespace_characters": 41519,
+      "extracted_nonwhitespace_characters": 41500,
       "empty_author_metadata": true
     },
     "supplement": {
       "file": "ICAART2027_supplement.pdf",
-      "sha256": "5f9d0046fc43a4b420dd047333fae3cb59b2b3f9d056191952ace3243a267ca2",
+      "sha256": "094ea206525c25ae11b262affe043faa4e3836f07059d74c21a2bb1bb764d4af",
       "pages": 11,
       "extracted_nonwhitespace_characters": 30057,
       "empty_author_metadata": true
     }
   },
   "character_count": {
-    "abstract_words_whitespace_method": 173,
-    "main_extracted_including_figures_tables_references": 41519,
+    "abstract_words_whitespace_method": 180,
+    "main_extracted_including_figures_tables_references": 41500,
     "main_external_figures_counted": [
       "figure1_transport_submission.pdf",
       "figure2_recovery_rate.pdf",
@@ -291,7 +299,7 @@
     "duplicated_external_figure_text_allowance": 1635,
     "whole_diagram_source_allowance": 0,
     "additional_extraction_allowance": 1000,
-    "conservative_main_nonwhitespace_estimate": 44154,
+    "conservative_main_nonwhitespace_estimate": 44135,
     "official_regular_paper_range": [
       10000,
       50000
@@ -299,6 +307,6 @@
     "caveat": "Conservative estimate, not an official portal count. No official graph-to-character conversion was specified. All visible figure text was also visually inspected."
   },
   "passed": true,
-  "source_revision": "79fd48c8b531f1eaeea28f2fc45457beac51b3ef",
-  "verification_script_sha256": "0d9e62f8fb5be93a92f719f16ee3214e60cf31c135c66b9f501ad1ea9cad2ff2"
+  "source_revision": "0c7296327c0131201b3372a9c5bab70eddba4f0d",
+  "verification_script_sha256": "484998dfed73eaf003fc7449730cac608141c4dd1a73cf87c8dec49ef74bae42"
 }

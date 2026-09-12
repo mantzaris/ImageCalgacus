@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Typeset retained numerical values without refitting any statistic."""
+"""Typeset companion-only tables; never overwrite the canonical main.tex."""
 import csv
 from pathlib import Path
 
@@ -21,13 +21,6 @@ def table(name, spec, headings, data):
 
 
 def main():
-    records = rows("table2_v2_outcomes.csv")
-    table("main_outcomes", "llrrrrrl", ["Carrier", "Method", "Exact", "Goodput", r"Encode (s)", r"Decode (s)", r"Charged (s)", "Failure"],
-          [["UTF-8" if r["direction"] == "image-to-text" else "PNG", METHOD[r["method"]], r["exact"] + "/20",
-            f'{float(r["goodput_mean"]):.4f}', f'{float(r["encode_phase_seconds"]):.2f}',
-            f'{float(r["decode_phase_seconds"]):.2f}', f'{float(r["charged_pair_seconds"]):.2f}',
-            "Capacity" if r["exact"] == "0" else "None"] for r in records])
-
     context_rows = rows("context_comparison.csv")
     def interval(r, prefix):
         return f'[{float(r[prefix+"_ci_low"]):.4f}, {float(r[prefix+"_ci_high"]):.4f}]'
@@ -61,4 +54,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

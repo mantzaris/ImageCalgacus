@@ -22,7 +22,7 @@ def extract_text(path):
 
 def main():
     files = [HERE / name for name in ("main.tex", "supplement.tex", "preamble.tex", "references.bib", "build.py", "BUILD_README.md", "ASSET_NOTICES.md")]
-    files += sorted((HERE / "sections").glob("*.tex"))
+    files += [HERE / "sections/cover_supplement.tex"]  # Companion-only content.
     # Only PDFs actually included by the two manuscripts. Old accepted copies
     # remain in the repository, but are not duplicate compilation dependencies.
     for name in ("figure1_transport_submission", "cover_transport_submission",
@@ -31,7 +31,7 @@ def main():
                  "score_shifts", "figure4_gpu_performance", "cover_examples"):
         files.append(HERE / "figures" / (name + ".pdf"))
     files += [HERE / "figures/method_diagram.tex"]
-    for name in ("cover_main", "main_outcomes", "context_comparison", "score_shifts", "supp_table2_v2_outcomes", "supp_table3_detectability", "supp_tableS1_overhead", "supp_table4_gpu_benchmark"):
+    for name in ("context_comparison", "score_shifts", "supp_table2_v2_outcomes", "supp_table3_detectability", "supp_tableS1_overhead", "supp_table4_gpu_benchmark"):
         files.append(HERE / "tables" / (name + ".tex"))
     for name in ("article.cls", "SCITEPRESS.sty", "apalike.sty", "apalike.bst", "provenance.json"):
         files.append(HERE / "template" / name)
@@ -66,7 +66,14 @@ def main():
             assert "Overfull" not in log and "undefined" not in log.lower()
             info = subprocess.check_output(["pdfinfo", str(isolated)], text=True)
             outputs[name] = {"pages": int(re.search(r"Pages:\s*(\d+)", info)[1]), "isolated_build_text_identical": True}
+    # Packaging remains usable after future direct manuscript edits. The
+    # historical pixel-equivalence check is separate, not a content reset gate.
+    main_source = (HERE / "main.tex").read_text()
+    assert not re.search(r"\\(?:input|include|subfile|bibliography|bibliographystyle)\s*\{", main_source)
+    assert r"\begin{thebibliography}" in main_source
     report = {"passed": True, "archive": archive.name, "archive_sha256": sha(archive),
+              "canonical_main": "main.tex", "main_requires_bibtex_or_fragments": False,
+              "main_only_verification": "consolidation_verification.json",
               "archive_bytes": archive.stat().st_size, "files": {name: sha(HERE / name) for name in sorted(names)},
               "isolated_compilation": outputs, "private_material_included": False, "new_gpu_seconds": 0,
               "scope": "Allowlisted compile-only sources, no repository/private runtime dependency; standard installed TeX packages required"}

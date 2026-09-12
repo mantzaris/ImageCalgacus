@@ -2,6 +2,8 @@
 
 The [ICAART single-PDF index](../icaart2027/README.md) is the consolidated entry point. Reviewers are assumed to receive only the [12-page submission PDF](../icaart2027/ICAART2027_submission.pdf). Its method, experimental design, central results and limitations require no companion or repository access.
 
+Edit the [canonical single-file manuscript](../icaart2027/main.tex) directly. It includes all main text, tables and formatted references and compiles without fragments or BibTeX. The separate companion is not merged. [Consolidation checks](../icaart2027/consolidation_verification.json) establish unchanged text and page pixels relative to a fresh build of the source at `0c72963`.
+
 | Main location | Item | Supporting evidence remains separate |
 |---|---|---|
 | Page 3, Figure 1A–B | Actual image-to-text and text-to-generated-PNG transports | Same retained first fixed-rank cases, manuscript-only layout variant |
@@ -15,11 +17,12 @@ The [ICAART single-PDF index](../icaart2027/README.md) is the consolidated entry
 
 The [PNG context Methods/Results/limitations component](png_context_detection.md) is preserved. Main Section 5.4 includes the four descriptive score shifts and the fixed/control gap, without requiring companion Figure S5 or Tables S4–S5. Other optional companion material includes the process diagram, capacity checkpoints, full scores, overheads and first three photograph examples. Its supplementary-upload status remains unconfirmed.
 
-Accepted [publication results](../../artifacts/publication_results/README.md), [photograph results](../../artifacts/cover_rank_v1_review/README.md) and all other review packets are unchanged. Only the manuscript variants are regenerated:
+Accepted [publication results](../../artifacts/publication_results/README.md), [photograph results](../../artifacts/cover_rank_v1_review/README.md) and all other review packets are unchanged. No accepted assets are regenerated for source consolidation. Build and verify the current manuscript with:
 
 ```sh
-../llm-rankcloak/.venv/bin/python -B paper/icaart2027/build_submission_figures.py
 python -B paper/icaart2027/build.py
+../llm-rankcloak/.venv/bin/python -B paper/icaart2027/verify_consolidation.py
+../llm-rankcloak/.venv/bin/python -B paper/icaart2027/verify.py
 python -B paper/icaart2027/package_source.py
 ```
 

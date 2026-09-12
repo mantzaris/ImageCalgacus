@@ -56,6 +56,14 @@ def nonspace(text):
     return len(re.sub(r"\s", "", text))
 
 
+def inlined_source(origin):
+    source = (HERE / "main.tex").read_text()
+    begin = "% BEGIN INLINE " + origin + "\n"
+    end = "% END INLINE " + origin + "\n"
+    assert source.count(begin) == source.count(end) == 1, origin
+    return source.split(begin, 1)[1].split(end, 1)[0]
+
+
 def main():
     checks = {}
     baseline = read(HERE / "preservation_baseline.json")
@@ -89,7 +97,7 @@ def main():
     assert [(r["split"], r["arm"], int(r["exact"])) for r in cover_rows] == [
         ("development","model_rank",6),("development","parity",6),
         ("heldout","model_rank",20),("heldout","parity",20)]
-    cover_table = (HERE / "tables/cover_main.tex").read_text()
+    cover_table = inlined_source("tables/cover_main.tex")
     for r in cover_rows[2:]:
         for field, precision in (("mean_psnr_db",3),("mean_ssim",7),
                                  ("mean_sender_seconds",3),("mean_receiver_seconds",3)):
@@ -234,7 +242,7 @@ def main():
         pages = int(re.search(r"Pages:\s*(\d+)", info)[1])
         pdfs[stem] = {"file": name, "sha256": sha(path), "pages": pages, "extracted_nonwhitespace_characters": nonspace(extracted), "empty_author_metadata": True}
     assert pdfs["main"]["pages"] <= 12
-    method_source = (HERE / "sections/method.tex").read_text()
+    method_source = inlined_source("sections/method.tex")
     supplement_source = (HERE / "supplement.tex").read_text()
     assert "figures/figure1_transport_submission.pdf" in method_source
     assert "figures/figure1_transport.pdf" not in supplement_source
@@ -268,11 +276,26 @@ def main():
     for name in unchanged_manuscript_files:
         original = subprocess.check_output(
             ["git", "show", reviewed_revision + ":paper/icaart2027/" + name], cwd=ROOT)
-        assert original == (HERE / name).read_bytes(), name
+        retained = (inlined_source(name).encode() if name == "tables/main_outcomes.tex"
+                    else (HERE / name).read_bytes())
+        assert original == retained, name
     original_preamble = subprocess.check_output(
         ["git", "show", reviewed_revision + ":paper/icaart2027/preamble.tex"], cwd=ROOT)
     expected_preamble = original_preamble.replace(b". See the disclosure.", b".")
     assert (HERE / "preamble.tex").read_bytes().strip() == expected_preamble.strip()
+    assert inlined_source("preamble.tex").encode().strip() == expected_preamble.strip()
+    consolidation = read(HERE / "consolidation_verification.json")
+    assert consolidation["passed"] and consolidation["main"]["all_rendered_pixels_identical"]
+    assert consolidation["delivered_main_pdf_sha256"] == sha(HERE / "ICAART2027_submission.pdf")
+    assert consolidation["main_only_files"]["main.tex"] == sha(HERE / "main.tex")
+    checks["source_consolidation"] = {
+        "starting_commit": consolidation["starting_commit"],
+        "canonical_source": "main.tex",
+        "formatted_bibliography_entries": consolidation["bibliography_entries"],
+        "isolated_main_only_build": True,
+        "baseline_text_and_rendered_pages_identical": True,
+        "new_gpu_seconds": 0,
+    }
     checks["editorial_revision"] = {
         "reviewed_revision": reviewed_revision,
         "unchanged_historical_tables_and_figure_assets": True,

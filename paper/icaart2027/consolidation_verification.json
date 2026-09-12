@@ -1,0 +1,298 @@
+{
+  "passed": true,
+  "starting_commit": "0c7296327c0131201b3372a9c5bab70eddba4f0d",
+  "scope": "Source organization only; unchanged text, bibliography, labels, graphics, layout and stable metadata",
+  "baseline": "Fresh compilation of starting Git source, not its stale committed PDF",
+  "main_only_files": {
+    "main.tex": "efceec26ff99aea2163a7f97ecc08236bd0ea82360785e9df4b7ce92ce310bdd",
+    "template/article.cls": "23e48b9a27539b6589503b6b5c5ff1451b58edfb245a0fa4c5847bb94392d32c",
+    "template/SCITEPRESS.sty": "d4a8482e5b2772a279b881012bedd813023f3c614287e02d5c648497ade3bf14",
+    "template/apalike.sty": "183bdccc3608e9db948dbd1cdffec3e2a476650dad223c7a3294325371fc0339",
+    "figures/figure1_transport_submission.pdf": "56f7f8a0da8f456716f3f539109af7cd4bfaa040961d04dddf184aadaf4fe2c6",
+    "figures/cover_transport_submission.pdf": "700781f5777ec18b98b576689a6c2c4fdb4f2f74c7cbbf960b6fbef10f234092",
+    "figures/figure2_recovery_rate.pdf": "1848b5784c78d8deec80093ee63d0fb27522f20707555834757ff09847822b95",
+    "figures/context_auc.pdf": "f71e3d93eca1e3b43cbe54be4e3e873228b6eca46b91715953d75303951f91f6"
+  },
+  "main_only_pdflatex_runs": 3,
+  "main_only_bibtex_runs": 0,
+  "recorder_confirms_no_fragment_or_bibliography_source_reads": true,
+  "inlined_bibliography_matches_generated_bbl": true,
+  "bibliography_entries": 20,
+  "labels_citations_and_table_figure_lists_identical": true,
+  "verification_script_sha256": "3d7bbb94b228c158ea77638370783d599892bc09f534435b6f16d502362c8530",
+  "new_gpu_seconds": 0,
+  "main": {
+    "pages": 12,
+    "extracted_text_identical": true,
+    "extracted_text_sha256": "e23462921366f1b90f8e08ed84c6a8504a0683ab00fb558c127fa8aceff3e729",
+    "extracted_nonwhitespace_characters": 41500,
+    "stable_metadata_identical": true,
+    "metadata": {
+      "Title": "Exact Bidirectional Steganographic Transport with Language and Pixel Autoregressive Models",
+      "Subject": "Anonymous regular paper, Artificial Intelligence",
+      "Keywords": "Generative steganography, artifact recovery, autoregressive models",
+      "Author": "",
+      "Creator": "LaTeX with hyperref",
+      "Producer": "pdfTeX-1.40.25",
+      "Custom Metadata": "yes",
+      "Metadata Stream": "no",
+      "Tagged": "no",
+      "UserProperties": "no",
+      "Suspects": "no",
+      "Form": "none",
+      "JavaScript": "no",
+      "Pages": "12",
+      "Encrypted": "no",
+      "Page size": "595.276 x 841.89 pts (A4)",
+      "Page rot": "0",
+      "Optimized": "no",
+      "PDF version": "1.5"
+    },
+    "raster_dpi": 144,
+    "all_rendered_pixels_identical": true,
+    "page_comparisons": [
+      {
+        "page": 1,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "6ae420a51a7431f240b4a0c17477a9209fa12ee7a7ae72b6c93b14c173d36865",
+        "changed_pixels": 0
+      },
+      {
+        "page": 2,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "0f508036f004071c1bd70c8a3c734464d6ae66461a255cd60fb5db165c2ecd6a",
+        "changed_pixels": 0
+      },
+      {
+        "page": 3,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "9276ed09f4501b29e6fa64e140cd80c201e13c16740bbd4de7e94a1adb13f31e",
+        "changed_pixels": 0
+      },
+      {
+        "page": 4,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "1b70913bf1301ab7f42551674507167230b771434f148241f45dbdbdbaf1c2df",
+        "changed_pixels": 0
+      },
+      {
+        "page": 5,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "8b3204ba767de47a971e67171f0489e3fc186a9b55c079e19ab0ccd6ef6d1e0b",
+        "changed_pixels": 0
+      },
+      {
+        "page": 6,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "e6d12d76979b190188df12a37f1f93bc1c1ced78b6b91c22da22cbb23e8613a9",
+        "changed_pixels": 0
+      },
+      {
+        "page": 7,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "359eac464fcd3451adeee5f6e754f6a9cec9fd1bd1b057237714f09ca7fdcc1b",
+        "changed_pixels": 0
+      },
+      {
+        "page": 8,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "2b1a548f7dcbcd6efae5581079c9bdd13796ab037b08769d4f0b072c4ac066a1",
+        "changed_pixels": 0
+      },
+      {
+        "page": 9,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "933d9cfb00f076cdebb6aae998dbf7b8b7249a4699db8efd38faabee9d45ac89",
+        "changed_pixels": 0
+      },
+      {
+        "page": 10,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "832697dfec475fa56ab166417b93426dc41c66854a1b267a9a3a266127e9e4fb",
+        "changed_pixels": 0
+      },
+      {
+        "page": 11,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "adc69ae9903b910b729d676c5d94182cf532a2e31bbb6ac7211f255a5eb39b88",
+        "changed_pixels": 0
+      },
+      {
+        "page": 12,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "30108fcbdf92514de8233f7daa601278c78c343e7c4700d96958909a8ea62aa8",
+        "changed_pixels": 0
+      }
+    ],
+    "pdf_sha256": "8b7c93c5cbf77ded9e4a44f98c0b509774c1ac69cd88c28d2acda97ea3a0d86d"
+  },
+  "delivered_main_pdf_sha256": "defe4d75c8acde581e1cd2f88f5467b02cff33b059e39037217343c3c0b67855",
+  "supplement": {
+    "pages": 11,
+    "extracted_text_identical": true,
+    "extracted_text_sha256": "e8441d01e1a1a4dcc994633f5a6204f5a4943b1149aa14fdf35de5863fff0a38",
+    "extracted_nonwhitespace_characters": 30057,
+    "stable_metadata_identical": true,
+    "metadata": {
+      "Title": "Companion Evidence for Exact Bidirectional Steganographic Transport",
+      "Subject": "Anonymous companion artifact; supplementary submission status unconfirmed",
+      "Keywords": "",
+      "Author": "",
+      "Creator": "LaTeX with hyperref",
+      "Producer": "pdfTeX-1.40.25",
+      "Custom Metadata": "yes",
+      "Metadata Stream": "no",
+      "Tagged": "no",
+      "UserProperties": "no",
+      "Suspects": "no",
+      "Form": "none",
+      "JavaScript": "no",
+      "Pages": "11",
+      "Encrypted": "no",
+      "Page size": "595.276 x 841.89 pts (A4)",
+      "Page rot": "0",
+      "Optimized": "no",
+      "PDF version": "1.5"
+    },
+    "raster_dpi": 144,
+    "all_rendered_pixels_identical": true,
+    "page_comparisons": [
+      {
+        "page": 1,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "785e105293cb07c7c3a4dd648a8e980686dd514ed1ff0724b67a68e7b7f963df",
+        "changed_pixels": 0
+      },
+      {
+        "page": 2,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "b968a5e2d9d69b776cb8e6e8d698f72bb3d9e143dedf93f49c52402381d0c4eb",
+        "changed_pixels": 0
+      },
+      {
+        "page": 3,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "aa395b817dab76f73652b5be600aaec7bb0253f26247cd616bfb38e460f784fd",
+        "changed_pixels": 0
+      },
+      {
+        "page": 4,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "05656a3ef49ba42b1ab05c8cf451969a3edc97fbada6099ccc89da9012d36492",
+        "changed_pixels": 0
+      },
+      {
+        "page": 5,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "0d1935d9ce3302a7caa9af437706a394a996129dc9984d9b30360788f4def2bd",
+        "changed_pixels": 0
+      },
+      {
+        "page": 6,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "7f5d72c37f0f88adcda322be94b180851c9e45775579f36a69cc4645e1da6a71",
+        "changed_pixels": 0
+      },
+      {
+        "page": 7,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "2800d7238ebbaa1710c923685e1e02c587b5a5727064c87d887df8ebe38d6452",
+        "changed_pixels": 0
+      },
+      {
+        "page": 8,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "1e5842181961964bb68b3231dc04e691959be78c69af2a9ee491977268e8eb2c",
+        "changed_pixels": 0
+      },
+      {
+        "page": 9,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "58d9b9a54a62adf9ab4ea41e047f32de2e975c76cda5181fdda4a1eef9a5d10d",
+        "changed_pixels": 0
+      },
+      {
+        "page": 10,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "d38ffdcd36f864dccbc84cc7352a2ac39e5f07a4eb01b40896f060a62f4bb37e",
+        "changed_pixels": 0
+      },
+      {
+        "page": 11,
+        "size_pixels": [
+          1191,
+          1684
+        ],
+        "rgb_sha256": "89abe8c828cfe75a9c71b8e84b822992961b9f6c2458c9c5d6c85dbf98e889c1",
+        "changed_pixels": 0
+      }
+    ],
+    "pdf_sha256": "094ea206525c25ae11b262affe043faa4e3836f07059d74c21a2bb1bb764d4af"
+  }
+}

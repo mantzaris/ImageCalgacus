@@ -1,9 +1,0 @@
-\section{\uppercase{Discussion and Limitations}}
-\label{sec:discussion}
-The three transport paths expose different constraints. Generated text requires serialization consistency and sufficient information along the realized trajectory. Generated PNGs provide directly observable channel symbols. Photographs instead preserve a reconstructible coarse context. Their learned partitions differ from RGB parity, but model likelihood is not a distortion objective. The simple comparator's favorable fidelity and cost show that partition distinctness alone is not an embedding advantage.\aifootnote
-
-Development isolates saved-text serialization. Twenty image payloads under two prompts give 40 packet-paired cases. Complete-prefix filtering recovers 40/40, versus 22/40 for singleton filtering (8/20 forest, 14/20 soup). All 18 drift failures remain unrepaired. This supports the consistency requirement alongside published stepwise verification. The independent sample comprises 20 payloads, not 40. Twenty generated-PNG re-saves also recover exactly. JPEG, cropping and paraphrasing remain untested.
-
-The prospective study has 20 held-out groups per direction and two pinned models. Shared controls and rescoring retain their dependencies. Near-chance AUC and context dependence establish neither cryptographic secrecy nor resistance to arbitrary observers. Photograph fidelity is likewise not a detection evaluation. A1's capacity and finite-precision limitations concern this adaptation rather than arithmetic coding generally.
-
-Graph replay reduces image-model launch overhead. Text filtering still consumes approximately 71\%, 75\% and 89\% of fixed, gated and A1 encoding time. Faster inference cannot remove that CPU bottleneck or supply missing information under the frozen cap. The matched GPU measurements characterize three development payloads on the stated stack, separately from the photograph tile workload.

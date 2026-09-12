@@ -4,11 +4,29 @@
 
 The sole proposed review artifact is [ICAART2027_submission.pdf](ICAART2027_submission.pdf), an anonymous Regular Paper in Artificial Intelligence. The main paper stands alone. Reviewers are not assumed to receive the companion, source archive, local examples or repository evidence.
 
-- Main PDF: **12 pages**, including references; **41,519 extracted** and **44,154 conservatively estimated non-whitespace characters**; **173-word abstract**.
+- Main PDF: **12 pages**, including references; **41,500 extracted** and **44,135 conservatively estimated non-whitespace characters**; **180-word abstract**.
 - [Compilation source ZIP](ICAART2027_source.zip), independently rebuilt and verified.
 - [Companion PDF](ICAART2027_supplement.pdf), 11 pages, maintained as optional author material. No separate supplementary submission route is assumed.
 - [Author decisions](AUTHOR_REVIEW.md), [verification](verification.json), [archive check](source_archive_verification.json), [visual inspection](visual_inspection.md), [reference verification](reference_verification.md), [asset notices](ASSET_NOTICES.md).
 - [Finalization note](../../notes/icaart_single_pdf_finalization.md) and [starting-state record](data/single_pdf_start.json).
+
+## Canonical single-file manuscript
+
+Edit [main.tex](main.tex) directly. It contains the preamble and macros, title and abstract, all sections, equations, figure environments and captions, three complete table definitions, disclosure and the twenty formatted bibliography entries. Origin comments mark the inlined material. Explicit boundary spaces preserve the former file-loading whitespace. No manuscript-fragment commands or external bibliography source are needed.
+
+From the repository root, compile only the submission with:
+
+```sh
+python -B paper/icaart2027/build.py --target main
+```
+
+The remaining local compilation dependencies are `template/article.cls`, `template/SCITEPRESS.sty`, `template/apalike.sty` and four figure PDFs in `figures/`: `figure1_transport_submission.pdf`, `cover_transport_submission.pdf`, `figure2_recovery_rate.pdf` and `context_auc.pdf`. Standard installed LaTeX packages are also required. No BibTeX run, `.bib`, `.bbl`, preamble file, section file or table fragment is read by the main build.
+
+The ten old main-only sections and two main-only table fragments have been removed after exact inlining. They remain recoverable in Git history. The companion remains separate. Its external `preamble.tex`, `sections/cover_supplement.tex`, `figures/method_diagram.tex` and six companion table fragments are retained only for that document. `references.bib` and `template/apalike.bst` serve the companion and reference maintenance. Changes to the BibTeX database do not automatically change the main paper's inlined bibliography. See [BUILD_README.md](BUILD_README.md) for maintenance and direct pdfLaTeX commands.
+
+The build never reconstructs or overwrites `main.tex`. `build_tables.py` now generates companion tables only. Retained publication table copies are evidence inputs, not alternative editable main tables.
+
+Consolidation starts at `0c7296327c0131201b3372a9c5bab70eddba4f0d`. That commit's later abstract edit is preserved verbatim. Its committed PDF predated the edit, so comparison uses a fresh build of the actual starting source. [Consolidation verification](consolidation_verification.json) proves exact text, bibliography, citation/label and 144-dpi page-pixel equivalence, including the unchanged companion. [Source-organization note](../../notes/icaart_source_consolidation.md) records the bounded change.
 
 ## Contribution and principal results
 
@@ -52,23 +70,24 @@ From the repository root, using the existing analysis environment or equivalent 
 ```sh
 ../llm-rankcloak/.venv/bin/python -B paper/icaart2027/build_submission_figures.py
 python -B paper/icaart2027/build.py
+../llm-rankcloak/.venv/bin/python -B paper/icaart2027/verify_consolidation.py
 ../llm-rankcloak/.venv/bin/python -B paper/icaart2027/verify.py
 ../llm-rankcloak/.venv/bin/python -B scripts/analyze_cover_rank_v1.py --verify-only
 python -B paper/icaart2027/package_source.py
 ```
 
-The interpreter path is an existing local environment, not an implicit sibling import. The compilation ZIP needs only `python -B build.py` and the standard TeX packages listed in [BUILD_README.md](BUILD_README.md). It includes required manuscript sources, bibliography, figures, tables, notices and the unchanged official template. It excludes private keys, packets, model weights, contexts, environments, ledgers and build caches. Both PDFs compile in isolation and reproduce local extracted text.
+The interpreter path is an existing local environment, not an implicit sibling import. The compilation ZIP builds just the main with `python -B build.py --target main`, or both PDFs with `python -B build.py` and the standard TeX packages listed in [BUILD_README.md](BUILD_README.md). It includes the single-file main, separate companion sources and bibliography, required figures, notices and the unchanged official template. It excludes private keys, packets, model weights, contexts, environments, ledgers and build caches. Both PDFs compile in isolation and reproduce local extracted text.
 
 Verification checks saved evidence and exact exported measurements, not new inference or private-key replay. It revalidates V1 qualification, V2, the GPU benchmark, context detection and the photograph study. All six current local ledgers are hash-unchanged. Do not run older analysis/export generators as a manuscript reset; accepted review packets are preserved.
 
 ## Compliance and remaining decisions
 
-The current [ICAART Guidelines](https://icaart.scitevents.org/Guidelines.aspx) require 10,000–50,000 non-whitespace characters including references and graphics. The estimate counts extracted main text, counts the four figures' 1,635 text characters a second time, and adds 1,000 for extraction uncertainty. The margin is **5,846 characters**. This is not a portal-certified count. All visible figure text was inspected. No font, margin, line spacing or template change was used.
+The current [ICAART Guidelines](https://icaart.scitevents.org/Guidelines.aspx) require 10,000–50,000 non-whitespace characters including references and graphics. The estimate counts extracted main text, counts the four figures' 1,635 text characters a second time, and adds 1,000 for extraction uncertainty. The margin is **5,865 characters**. This is not a portal-certified count. All visible figure text was inspected. No font, margin, line spacing or template change was used.
 
 The official archive was retrieved again on 12 September 2026; its six retained files match the original template hashes. Both PDFs have empty author metadata. Ordinary third-person citations to prior work remain. [Policy/source record](data/single_pdf_policy.json) and AUTHOR_REVIEW separate completed editorial work from unresolved photograph republication, anonymous AI-disclosure placement and eligibility of the already-public manuscript history. The main is technically complete but not declared unconditionally submission-ready. No paper was submitted and no organizer contacted.
 
 ## Preservation and accounting
 
-Starting main was `79fd48c8b531f1eaeea28f2fc45457beac51b3ef`, with a clean tree and matching remote. Accepted artifacts, plans, configurations, application code and source manifests remain unchanged. The original manuscript asset copies and prior editorial records remain available alongside the new variants.
+The earlier editorial finalization started at `79fd48c8b531f1eaeea28f2fc45457beac51b3ef`, with a clean tree and matching remote. Accepted artifacts, plans, configurations, application code and source manifests remain unchanged. The original manuscript asset copies and prior editorial records remain available alongside the new variants.
 
-Cumulative historical use remains **89,404.217194 charged seconds**. This finalization adds **zero GPU seconds** and no new experimental observations. Commit/push is authorized for these editorial changes only; venue submission is not performed.
+Cumulative historical use remains **89,404.217194 charged seconds**. This source consolidation adds **zero GPU seconds** and no new experimental observations. Commit/push is authorized for these editorial changes only; venue submission is not performed.
