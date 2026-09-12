@@ -1,0 +1,40 @@
+{
+  "editorial_revision_date": "2026-09-11",
+  "base_revision": "9f911438755ac8fff5ae9b6ea9f30850efb6b6da",
+  "starting_worktree": "clean",
+  "scope": "Move the unchanged two-panel worked example to the main paper, move the process diagram to the companion, consolidate repetitive prose, rebuild and inspect. No methodological or experimental changes.",
+  "reviewed_starting_measurements": {
+    "main_pages": 12,
+    "main_extracted_nonwhitespace_characters": 41873,
+    "conservative_main_estimate": 45136,
+    "abstract_words": 176,
+    "supplement_pages": 8
+  },
+  "official_policy_rechecked": "2026-09-11",
+  "official_sources": [
+    "https://icaart.scitevents.org/Guidelines.aspx",
+    "https://icaart.scitevents.org/Templates.aspx",
+    "https://icaart.scitevents.org/AiTools.aspx"
+  ],
+  "regular_submission_nonwhitespace_character_range": [
+    10000,
+    50000
+  ],
+  "proceedings_full_paper_standard_page_limit": 12,
+  "editorial_main_page_target_at_most": 12,
+  "official_template_archive": "https://www.scitepress.org/documents/SCITEPRESS_Conference_Latex.zip",
+  "downloaded_archive_sha256": "ec6cfaa11962e08d5c6a402124f21c3bca3591397521406ab6d1889398a3807a",
+  "retained_supplied_files_checked_against_current_archive": 6,
+  "current_archive_and_template_unchanged": true,
+  "original_template_retrieval_record_preserved": "template/provenance.json",
+  "unresolved_policy": [
+    "Separate supplementary upload for Regular Papers remains unconfirmed.",
+    "Guidelines request AI disclosure in acknowledgements but omit acknowledgements for anonymous review; the AI page also permits an appropriate section. Anonymous disclosure and section-level citations retained."
+  ],
+  "reviewer_access": "No relative examples/ path is represented as an available submission attachment. The unchanged figure's embedded full-file note is clarified in its main caption.",
+  "new_gpu_seconds": 0,
+  "final_verification_record": "verification.json",
+  "final_archive_record": "source_archive_verification.json",
+  "final_visual_record": "visual_inspection.md"
+}
+

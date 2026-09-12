@@ -2,13 +2,14 @@
 
 **Exact Bidirectional Steganographic Transport with Language and Pixel Autoregressive Models**
 
-Prepared as an anonymous Regular Paper in Area 2, Artificial Intelligence, for local author review. Nothing has been submitted, uploaded, committed or pushed.
+Prepared as an anonymous Regular Paper in Area 2, Artificial Intelligence, for local author review. Revised on 11 September 2026 from reviewed commit `9f91143`. This editorial operation did not submit, upload, commit or push anything.
 
 - [Main submission PDF](ICAART2027_submission.pdf), 12 A4 pages, including references.
 - [Companion PDF](ICAART2027_supplement.pdf), 8 A4 pages. Separate supplementary-upload status is unconfirmed.
 - [Self-contained source ZIP](ICAART2027_source.zip), compilation-tested outside the repository.
+- Both actual worked examples are **Figure 1A and 1B on main page 3**, using the unchanged retained figure.
 - [Author review and policy decisions](AUTHOR_REVIEW.md).
-- [Numerical/preservation verification](verification.json), [archive verification](source_archive_verification.json), [page inspection](visual_inspection.md), [primary reference checks](reference_verification.md).
+- [Numerical/preservation verification](verification.json), [archive verification](source_archive_verification.json), [page inspection](visual_inspection.md), [primary reference checks](reference_verification.md), [editorial revision and policy recheck](editorial_revision.json).
 
 ## Contribution
 
@@ -45,12 +46,12 @@ The script needs the repository's public retained evidence and existing NumPy/Pi
 
 ## Results map
 
-All accepted publication exports remain byte-unchanged. Copied asset hashes and source paths are in [data/asset_provenance.json](data/asset_provenance.json). Additional table variants change layout only, using original unrounded CSVs. The new vector method diagram is derived from the implemented sender/receiver contract.
+All accepted publication exports remain byte-unchanged. Copied asset hashes and source paths are in [data/asset_provenance.json](data/asset_provenance.json). Additional table variants change layout only, using original unrounded CSVs. The retained vector process diagram is now Figure S1 in the companion. Figure 1 in the main paper shows the actual artifacts without modifying its PDF, pixels or carrier text.
 
 | Accepted result or asset | Main paper | Companion / supporting location |
 |---|---|---|
-| Implemented packet, model and receiver contract | Section 3, Figure 1, Table 1 | S3 interval details, S7 runtime identities |
-| Publication Figure 1, real bidirectional examples | Exact representations explained in Section 3 | Figure S1; complete [text carrier](examples/HI1-prompt1-fixed/carrier.txt) and [PNG carrier](examples/HT1-row1-fixed/carrier.png) |
+| Implemented packet, model and receiver contract | Section 3, Table 1; actual examples in Figure 1 | Figure S1 process diagram, S3 interval details, S7 runtime identities |
+| Publication Figure 1, real bidirectional examples | **Figure 1A–B, page 3**, Section 3.1, `fig:examples` | Complete [text carrier](examples/HI1-prompt1-fixed/carrier.txt) and [PNG carrier](examples/HT1-row1-fixed/carrier.png) are retained for local author inspection, not claimed submission attachments |
 | Publication Figure 2, all six recovery/rate cells | Figure 2, Table 2, Section 5.1 | Table S1 with original goodput intervals and timing |
 | Publication Figure 3, correct-context score distributions | Principal six primary AUCs in Section 5.3 | Figure S2, Table S2 with both scores and counts |
 | Publication Figure 4, GPU performance | Figure 4, Section 5.5 | Table S6 and Section S6, all five combinations and timing boundaries |
@@ -69,19 +70,23 @@ All accepted publication exports remain byte-unchanged. Copied asset hashes and 
 | Unavailable historical static matched-control prefix | Not used to claim a score | Explicitly retained as unavailable in S4 |
 | CPU verification, source caches and execution checkpoints | Not a main result | Existing implementation notes and review records |
 
+The main caption explicitly explains the figure's original “full file linked in caption” note as referring to locally retained material, not an available review link. It identifies the incomplete text excerpt, canonical pixel endpoint, complete literal text, receiver inputs and withheld row. No `examples/` path appears in the main or companion PDF as a reviewer-access claim. The examples are not duplicated in the companion.
+
 Main labels and numbering also appear in the preserved [results integration directory](../results/README.md). There are four main figures and two main tables, plus five companion figures and six companion tables. The main PDF includes all indispensable methods, sample definitions, principal findings and limitations without requiring the companion to be reviewed.
 
 ## Template, length and editorial checks
 
-The official archive was downloaded on 10 September 2026 from [SCITEPRESS](https://www.scitepress.org/documents/SCITEPRESS_Conference_Latex.zip), as linked by [ICAART Templates](https://icaart.scitevents.org/Templates.aspx). Class, typography, margins, spacing and bibliography style are unmodified. [Template provenance](template/provenance.json) records the archive and exact supplied-file hashes. Body is 10-point, references/tables/captions use the supplied 9-point convention. No margin/font/spacing workaround was used to obtain 12 pages.
+The official archive was downloaded on 10 September 2026 from [SCITEPRESS](https://www.scitepress.org/documents/SCITEPRESS_Conference_Latex.zip), as linked by [ICAART Templates](https://icaart.scitevents.org/Templates.aspx). The link, archive and all six supplied files were checked again on 11 September 2026 and match their original hashes. Class, typography, margins, spacing and bibliography style are unmodified. [Template provenance](template/provenance.json) records the archive and exact supplied-file hashes. Body is 10-point, references/tables/captions use the supplied 9-point convention. No margin/font/spacing workaround was used to obtain 12 pages.
 
-The [current Guidelines](https://icaart.scitevents.org/Guidelines.aspx) specify 10,000–50,000 non-whitespace characters for Regular Paper submission, including references, figures, tables and appendices. The main PDF has **41,873 extracted non-whitespace characters**. A deliberately conservative **45,136-character estimate** adds all external-figure text again (1,163), the complete method-diagram TeX source including syntax (1,100), and a further 1,000-character extraction allowance. Vector figure text, tables and references are already in the PDF extraction, so this errs upward rather than relying on a text-only count. It is not an official portal count, and no official figure-to-character conversion was identified. The abstract is 176 whitespace-delimited words, within the official 70–200 range. The companion has 22,912 extracted non-whitespace characters and is not included as a submitted appendix.
+The [current Guidelines](https://icaart.scitevents.org/Guidelines.aspx), rechecked on 11 September 2026, specify 10,000–50,000 non-whitespace characters for Regular Paper submission, including references, figures, tables and appendices. The revised main PDF has **39,713 extracted non-whitespace characters**. Its deliberately conservative **42,596-character estimate** adds all four external figures' extractable text again (1,883 characters), plus 1,000 for possible extraction losses. The process diagram is now outside the main submission and adds zero to this count. Figure text, tables and references are already present in the main extraction, so the extra allowance errs upward. This is not an official portal count, and no official figure-to-character conversion was identified. The unchanged abstract is **176 words**, within the template's 70–200 range. The companion has 21,645 extracted non-whitespace characters and is not counted as an approved submitted appendix.
 
-All pages were rendered at 130 dpi and inspected for text/figure readability, labels, overflow, equation breaks, bibliography and float placement. Initial equation/checkpoint-name overflow and an awkward footnote wrap were corrected. No unresolved references, citations or overfull boxes remain. Only author-review documents discuss submission-policy uncertainties and actual authorship decisions. Prose was reviewed for unnecessary dash punctuation, semicolons and colons; mathematical minus signs, numerical ranges, identifiers, exact reference titles and accepted figure labels were preserved.
+All pages were rendered at 130 dpi and inspected for text/figure readability, labels, overflow, equation breaks, bibliography and float placement. The example is legible at full manuscript width. Standard float placement resolved the companion overflow introduced by moving the diagram. The drafting footnote was shortened to avoid a stranded word, while its section-level citation and the full disclosure remain. No unresolved references, citations or overfull boxes remain. Only author-review documents discuss submission-policy uncertainties and actual authorship decisions. Prose was reviewed for unnecessary dash punctuation, semicolons and colons; mathematical minus signs, numerical ranges, identifiers, exact reference titles and accepted figure labels were preserved.
 
 ## Provenance, anonymity and preservation
 
-Preparation starts at repository revision `bdecbf2f4e524885ba7408ec282d9cf47d6a779b`, with a clean worktree. Since the reviewed GPU benchmark revision `5e08a8b`, commits `cdff18c`, `c2effbb` and `bdecbf2` added the accepted publication exports, PNG context study and score-shift integration. Their evidence is incorporated without repeating inference. New draft/code identities are recorded separately from historical execution identities. Existing `paper/results/` prose and figures were incorporated. No prior experiment is relabeled as having run the manuscript code.
+This revision starts at the clean reviewed checkout `9f911438755ac8fff5ae9b6ea9f30850efb6b6da`, with no intervening commits. Figure 1 was moved intact into Method, the generic diagram moved to the companion, and repeated attribution, observer-scope and performance caveats were consolidated across the Introduction, Related Work, Results and Discussion. Essential protocol, experimental design, six outcomes, numerical tables and uncertainty estimates remain. The reviewed main count was 41,873 extracted / 45,136 conservative; those historical values are retained in [the revision record](editorial_revision.json).
+
+The original manuscript preparation started at repository revision `bdecbf2f4e524885ba7408ec282d9cf47d6a779b`, with a clean worktree. Since the reviewed GPU benchmark revision `5e08a8b`, commits `cdff18c`, `c2effbb` and `bdecbf2` added the accepted publication exports, PNG context study and score-shift integration. Their evidence is incorporated without repeating inference. New draft/code identities are recorded separately from historical execution identities. Existing `paper/results/` prose and figures were incorporated. No prior experiment is relabeled as having run the manuscript code.
 
 The anonymous PDFs have no author block, affiliation, email, acknowledgements, project repository link or author metadata. Relevant prior work remains cited normally in third person. Public project history and the exact scientific protocol identifier can still permit inference of authorship, as noted in [AUTHOR_REVIEW.md](AUTHOR_REVIEW.md). The compilation-only ZIP excludes machine-local inventories, rows, keys and private material. `data/protocol_identities.json` is an exact retained inventory for local author review and is deliberately not in that ZIP.
 
@@ -90,4 +95,3 @@ The preservation audit checks 3,700 accepted public evidence/configuration/plan/
 ## Author decisions before upload
 
 Read [AUTHOR_REVIEW.md](AUTHOR_REVIEW.md). Supply the actual author list and confirm originality/overlap, funding and disclosure obligations. Current official pages conflict between AI disclosure in acknowledgements and omission of acknowledgements for anonymity. The draft uses an anonymous AI Assistance Disclosure plus section-level tool citations, consistent with the AI page's alternative placement; confirm this resolution with the venue. A separate Regular Paper supplementary-upload permission is unverified. No public posting or submission is authorized here.
-

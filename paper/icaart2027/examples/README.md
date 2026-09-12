@@ -1,6 +1,8 @@
 # Literal retained examples
 
-These are the first manifest-ordered fixed-rank prospective cases in each
+These appear together in **Figure 1A–B on page 3 of the main manuscript**.
+They are no longer duplicated in the companion. These are the first
+manifest-ordered fixed-rank prospective cases in each
 direction. They were not selected for appearance. The copies are byte-identical
 to accepted V2 files, with SHA-256 identities in
 [`data/asset_provenance.json`](../data/asset_provenance.json).
@@ -15,3 +17,6 @@ Fashion-MNIST container or an arbitrary original file. Text equality is literal
 source-byte equality. See [source notices](../ASSET_NOTICES.md). No row bytes,
 key, packet or sender trace is included here. These example files accompany
 the local manuscript and are not part of the compilation-only source ZIP.
+No accepted supplementary or data-upload route has been established. These
+local paths are author inspection links, not promised reviewer access. The
+main caption explains the unchanged figure's original full-file note.

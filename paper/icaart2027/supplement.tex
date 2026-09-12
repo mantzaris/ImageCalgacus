@@ -8,21 +8,20 @@
 \title{Companion Evidence for Exact Bidirectional Steganographic Transport}
 \author{}
 \keywords{Artifact Recovery, Capacity, Detectability, Reproducibility.}
-\abstract{This companion supplies retained artifact examples, expanded numerical tables, development serialization comparisons, arithmetic diagnostics and reproducibility details for the main paper. It adds no experiment, model inference, hypothesis test or independent sample. Prospective held-out results, development qualification, repeated development GPU timings and repeated context scores are kept separate. The main paper contains the protocol, principal outcomes and central limitations and does not depend on this companion being reviewed. A separate supplementary upload for an ICAART regular paper has not been verified in the official instructions. This document is therefore prepared as a companion artifact, not represented as accepted supplementary submission material.}
+\abstract{This companion supplies a transport diagram, expanded numerical tables, development serialization comparisons, arithmetic diagnostics and reproducibility details for the main paper. It adds no experiment, model inference, hypothesis test or independent sample. Prospective held-out results, development qualification, repeated development GPU timings and repeated context scores are kept separate. The main paper contains the protocol, principal outcomes and central limitations and does not depend on this companion being reviewed. A separate supplementary upload for an ICAART regular paper has not been verified in the official instructions. This document is therefore prepared as a companion artifact, not represented as accepted supplementary submission material.}
 \onecolumn\maketitle\normalsize\setcounter{footnote}{0}\vfill
 
-\section{\uppercase{Retained Bidirectional Examples}}
-Figure~\ref{fig:examples} uses the first manifest-ordered fixed-rank held-out example in each direction. Selection was determined before appearance was inspected. The full text carrier contains 616 tokens. Its displayed excerpt is literal, with line wrapping only. Complete example files accompany the manuscript under \texttt{examples/}; their hashes and original evidence locations are recorded in the accompanying index. The compilation-only source ZIP contains their figure export. They contain public development or held-out source material, not an encryption key or the shared RGB row. Drafting assistance throughout this companion is disclosed at its end \cite{codex}.
+\section{\uppercase{Transport and Independent Verification}}
+The actual bidirectional examples appear in Figure 1 of the main paper. Figure~\ref{fig:method} summarizes their shared transport and verification contract. A source-image PNG displays the canonical payload, but equality is evaluated on all 256 recovered grayscale bytes. Text equality concerns the complete literal UTF-8 bytes. Visual similarity or authentication alone does not substitute for these comparisons. Drafting assistance throughout this companion is disclosed at its end \cite{codex}.
 
-\begin{figure*}[!t]
-\centering\includegraphics[width=\textwidth]{figures/figure1_transport.pdf}
-\caption{Actual source, delivered carrier and recovery for the first fixed-rank held-out group in each direction. The top row transports a canonical $16\times16$ grayscale array, exactly 256 raw pixel bytes, through saved UTF-8. Its carrier excerpt is explicitly incomplete and is not rewritten. Full UTF-8 accompanies the draft at \texttt{examples/HI1-prompt1-fixed/carrier.txt}. The bottom row transports all 63 literal UTF-8 bytes through the shown $32\times31$ RGB PNG. Real pixels are enlarged with nearest-neighbor interpolation and preserved aspect ratio. Fresh receivers use only their own carrier, model/profile, shared context and key. Source bytes remain evaluator-only. The withheld 96-byte context row completes an internal $32\times32$ model canvas. Exact image recovery concerns canonical pixels, not an arbitrary original image container.}
-\label{fig:examples}
+\begin{figure*}[t]
+\centering
+\input{figures/method_diagram}
+\caption{Common transport and independent verification. The same packet contract feeds a text language model or a pixel autoregressive model. Only saved UTF-8 or PNG crosses the carrier boundary. A fresh receiver uses its declared model/profile, shared context and key. Source bytes and sender diagnostics remain outside its inputs. A separate evaluator checks source equality after receiver exit. The conditioning row is prepended internally, not delivered as an extra PNG row.}
+\label{fig:method}
 \end{figure*}
 
-The source-image PNG is a view of the canonical payload. Comparing two viewable PNGs alone is not the evaluator's test. It separately checks all 256 recovered raw pixels. In the reverse direction the recovered text is compared byte for byte, including literal punctuation and any non-ASCII encoding. Neither successful decryption nor visual similarity substitutes for those equality checks.
-
-\begin{figure*}[!t]
+\begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/figure3_detectability.pdf}
 \caption{Whole-carrier mean-surprisal scores for the known-model, correct-context observer. Each panel shows 20 stego carriers and 20 matched ordinary observations with payload-group links. Failed A1 text carriers remain included. Text controls share prefixes of one trace per group, while PNG methods share full controls. Panel scales differ. AUC orientation is always higher-is-stego, with accepted 95\% grouped intervals. Complete empirical separation in the small fixed/gated text samples, including collapsed bootstrap intervals, does not establish perfect population detection.}
 \label{fig:detectability-supp}
@@ -148,11 +147,3 @@ OpenAI Codex assisted implementation, analysis/plotting scripts and drafting/edi
 \bibliographystyle{apalike}
 {\small\bibliography{references}}
 \end{document}
-
-
-
-
-
-
-
-

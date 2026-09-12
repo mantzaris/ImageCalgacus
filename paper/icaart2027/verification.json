@@ -92,29 +92,56 @@
     "row1_analysis_reproduced": true,
     "forbidden_files": []
   },
+  "editorial_revision": {
+    "reviewed_revision": "9f911438755ac8fff5ae9b6ea9f30850efb6b6da",
+    "unchanged_abstract_disclosure_design_references_tables_and_assets": true,
+    "preamble_change": "Shorter drafting footnote only; section-level citations and all layout settings retained",
+    "unchanged_manuscript_files_checked": 33,
+    "worked_examples": {
+      "figure": 1,
+      "panels": [
+        "A",
+        "B"
+      ],
+      "page": 3,
+      "unchanged_asset": "figures/figure1_transport.pdf"
+    },
+    "process_diagram": {
+      "figure": "S1",
+      "page": 2
+    },
+    "duplicate_example_removed": true,
+    "no_reviewer_access_claim_for_relative_example_paths": true
+  },
   "pdfs": {
     "main": {
       "file": "ICAART2027_submission.pdf",
-      "sha256": "63debfdfea6d71e68b4b58f562b216e35ba1289c7dedd9b18151a570549219a4",
+      "sha256": "75b17949332a9062b9661a0477faeb04da6cfa221eb8cc86380386baaef8b912",
       "pages": 12,
-      "extracted_nonwhitespace_characters": 41873,
+      "extracted_nonwhitespace_characters": 39713,
       "empty_author_metadata": true
     },
     "supplement": {
       "file": "ICAART2027_supplement.pdf",
-      "sha256": "95fcf5616f19fc482fd965129f880e5bedb1785167411db0891b9ea0db6b1676",
+      "sha256": "c63445b96f1f9ff39e2827aacf3f7b5b53e6d5791159f338e911f54f7e372691",
       "pages": 8,
-      "extracted_nonwhitespace_characters": 22912,
+      "extracted_nonwhitespace_characters": 21645,
       "empty_author_metadata": true
     }
   },
   "character_count": {
     "abstract_words_whitespace_method": 176,
-    "main_extracted_including_figures_tables_references": 41873,
-    "duplicated_external_figure_text_allowance": 1163,
-    "whole_diagram_source_allowance": 1100,
+    "main_extracted_including_figures_tables_references": 39713,
+    "main_external_figures_counted": [
+      "figure1_transport.pdf",
+      "figure2_recovery_rate.pdf",
+      "context_auc.pdf",
+      "figure4_gpu_performance.pdf"
+    ],
+    "duplicated_external_figure_text_allowance": 1883,
+    "whole_diagram_source_allowance": 0,
     "additional_extraction_allowance": 1000,
-    "conservative_main_nonwhitespace_estimate": 45136,
+    "conservative_main_nonwhitespace_estimate": 42596,
     "official_regular_paper_range": [
       10000,
       50000
@@ -122,6 +149,6 @@
     "caveat": "Conservative estimate, not an official portal count. No official graph-to-character conversion was specified. All visible figure text was also visually inspected."
   },
   "passed": true,
-  "source_revision": "bdecbf2f4e524885ba7408ec282d9cf47d6a779b",
-  "verification_script_sha256": "782fbdeefc8010e1b41570567b0723d68416a2885bfa6f89e12a48cdd3ba0f7c"
+  "source_revision": "9f911438755ac8fff5ae9b6ea9f30850efb6b6da",
+  "verification_script_sha256": "79bb9f1f2bc9d92cb4151796109beaad8c92e1ca82d980306dcdd972727a313f"
 }

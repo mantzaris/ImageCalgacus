@@ -8,7 +8,7 @@ The draft is a Regular Paper for Area 2, Artificial Intelligence, with direct re
 
 | Claim | Evidence | Novelty boundary / unestablished claim |
 |---|---|---|
-| Exact bidirectional saved-artifact transport | Main Method, Table 2 and Figure 2; fixed/gated 20/20 in both directions; A1 PNG 20/20 | Calgacus already proposes discrete cross-domain rank transfer. Pixel-Stega already implements autoregressive image steganography. Our advance is the shared framed, authenticated artifact contract and controlled evaluation, not either principle alone. |
+| Exact bidirectional saved-artifact transport | Main Figure 1A–B on page 3, Method, Table 2 and Figure 2; fixed/gated 20/20 in both directions; A1 PNG 20/20 | Calgacus already proposes discrete cross-domain rank transfer. Pixel-Stega already implements autoregressive image steganography. Our advance is the shared framed, authenticated artifact contract and controlled evaluation, not either principle alone. |
 | Serialization-aware controlled comparison | Main Sections 3 and 6; companion sequence/static figure, 40/40 versus 22/40, paired over 20 payloads and two prompts | Bounded-byte coding and gating are in RankCloak. Stepwise verification is in Yan and Murawaki (2025). We adapt them and establish their operational interaction, not invent them. |
 | Arithmetic text capacity boundary | Main Section 5.2; 0/20 and verified partial information; companion capacity figure | A1 is an independently implemented framing adaptation of Ziegler et al., not an exact reference reproduction. Low-information text failures are distinguished from A1's separately documented stagnation. No general arithmetic-coding impossibility or successful full-size A1 text claim. |
 | Context affects the tested PNG detector | Main Figure 3; fixed primary AUC 0.8850 to 0.6975, paired interval below zero | Same 80 PNGs, 20 groups, repeated scores. One alternate random row, not fully blind detection or isolated causal effects of context correctness. Gated/A1 changes remain uncertain. |
@@ -17,6 +17,12 @@ The draft is a Regular Paper for Area 2, Artificial Intelligence, with direct re
 Closest primary literature read includes Calgacus v6 Sections 3 and A.3, Pixel-Stega Section II and its lossless-channel description, Ziegler et al. Sections 2–3, Yan and Murawaki (2025) Algorithm 1 and Section 3.1, minimum entropy coupling's formulation/evaluation, and Yan and Murawaki (2026) range-coding method. The newer range-coding paper is acknowledged, not silently treated as an evaluated baseline. RankCloak and LlmStenoExplore are cited as repository manuscripts/software, not invented peer-reviewed publications. See `reference_verification.md` for primary records and version identities.
 
 The strongest differentiation is an evaluated integration and an explanatory empirical comparison. Whether this is sufficient for the conference is an editorial judgment, not an experimentally established superiority claim. No universal first, state-of-the-art, imperceptibility or journal-acceptance statement is made.
+
+## Bounded editorial revision
+
+Revised from the clean reviewed commit `9f91143` on 11 September 2026. Both actual worked examples are now Figure 1A–B on main page 3, beside Section 3.1. The original process diagram is Figure S1 in the companion, and the duplicate example has been removed. Figure 1's PDF and the underlying example files remain byte-identical. Its caption clarifies the embedded full-file note without claiming reviewers can access a relative `examples/` path. Complete files remain local author materials unless an accepted route is separately established.
+
+Repeated prior-work distinctions and limitations were consolidated, not removed from their relevant scientific context. The section-level drafting footnotes were shortened; their citations and the full AI disclosure remain. The main stays at 12 pages, with 39,713 extracted and 42,596 conservatively estimated non-whitespace characters. The abstract remains 176 words, and the companion is 8 pages. The six outcomes, context intervals, GPU measurements and original reference list are unchanged. The official template and policies were rechecked on 11 September. No new literature search or experimental execution was needed.
 
 ## Decisions before submission
 

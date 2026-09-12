@@ -181,12 +181,59 @@ def main():
         assert "Overfull" not in log and "undefined" not in log.lower()
         pages = int(re.search(r"Pages:\s*(\d+)", info)[1])
         pdfs[stem] = {"file": name, "sha256": sha(path), "pages": pages, "extracted_nonwhitespace_characters": nonspace(extracted), "empty_author_metadata": True}
-    figures = ("figure2_recovery_rate.pdf", "context_auc.pdf", "figure4_gpu_performance.pdf")
+    assert pdfs["main"]["pages"] <= 12
+    method_source = (HERE / "sections/method.tex").read_text()
+    supplement_source = (HERE / "supplement.tex").read_text()
+    assert "figures/figure1_transport.pdf" in method_source
+    assert "figures/figure1_transport.pdf" not in supplement_source
+    assert "figures/method_diagram" not in method_source
+    assert "figures/method_diagram" in supplement_source
+    main_aux = (HERE / "build/main.aux").read_text()
+    supplement_aux = (HERE / "build/supplement.aux").read_text()
+    example_match = re.search(r"\\newlabel\{fig:examples\}\{\{(\d+)\}\{(\d+)\}", main_aux)
+    diagram_match = re.search(r"\\newlabel\{fig:method\}\{\{(S\d+)\}\{(\d+)\}", supplement_aux)
+    assert example_match and example_match[1] == "1"
+    assert int(example_match[2]) <= pdfs["main"]["pages"] // 2
+    assert diagram_match and diagram_match[1] == "S1"
+    assert "fig:examples" not in supplement_aux
+    assert r"\texttt{examples/" not in method_source + supplement_source
+    reviewed_revision = "9f911438755ac8fff5ae9b6ea9f30850efb6b6da"
+    unchanged_manuscript_files = [
+        "main.tex", "references.bib", "sections/design.tex",
+        "sections/conclusion.tex", "figures/method_diagram.tex",
+    ]
+    unchanged_manuscript_files += [
+        str(p.relative_to(HERE)) for folder in ("figures", "tables", "examples")
+        for p in (HERE / folder).rglob("*")
+        if p.is_file() and p.suffix != ".md"
+    ]
+    for name in unchanged_manuscript_files:
+        original = subprocess.check_output(
+            ["git", "show", reviewed_revision + ":paper/icaart2027/" + name], cwd=ROOT)
+        assert original == (HERE / name).read_bytes(), name
+    original_preamble = subprocess.check_output(
+        ["git", "show", reviewed_revision + ":paper/icaart2027/preamble.tex"], cwd=ROOT)
+    expected_preamble = original_preamble.replace(b". See the disclosure.", b".")
+    assert (HERE / "preamble.tex").read_bytes().strip() == expected_preamble.strip()
+    checks["editorial_revision"] = {
+        "reviewed_revision": reviewed_revision,
+        "unchanged_abstract_disclosure_design_references_tables_and_assets": True,
+        "preamble_change": "Shorter drafting footnote only; section-level citations and all layout settings retained",
+        "unchanged_manuscript_files_checked": len(unchanged_manuscript_files),
+        "worked_examples": {"figure": 1, "panels": ["A", "B"], "page": int(example_match[2]),
+                           "unchanged_asset": "figures/figure1_transport.pdf"},
+        "process_diagram": {"figure": "S1", "page": int(diagram_match[2])},
+        "duplicate_example_removed": True,
+        "no_reviewer_access_claim_for_relative_example_paths": True,
+    }
+    figures = ("figure1_transport.pdf", "figure2_recovery_rate.pdf",
+               "context_auc.pdf", "figure4_gpu_performance.pdf")
     extra = sum(nonspace(pdf_text(HERE / "figures" / name)) for name in figures)
-    # All figure text is vector and is already present in extracted main text.
-    # Double-count it anyway, count all method-diagram source including syntax,
-    # then add 1,000 characters for possible ligature/math extraction loss.
-    diagram_allowance = nonspace((HERE / "figures/method_diagram.tex").read_text())
+    # All four main figures have extractable text, already in the main PDF.
+    # Count that text twice and add 1,000 for possible ligature/math loss.
+    # The process diagram is now only in the companion, so it contributes zero
+    # to the main count. The previous reviewed count included its whole source.
+    diagram_allowance = 0
     conservative = pdfs["main"]["extracted_nonwhitespace_characters"] + extra + diagram_allowance + 1000
     assert 10000 <= conservative <= 50000
     abstract = re.search(r"\\abstract\{(.*?)\}\s*\\onecolumn", (HERE / "main.tex").read_text(), re.S)[1]
@@ -195,6 +242,7 @@ def main():
     checks["pdfs"] = pdfs
     checks["character_count"] = {"abstract_words_whitespace_method": abstract_words,
         "main_extracted_including_figures_tables_references": pdfs["main"]["extracted_nonwhitespace_characters"],
+        "main_external_figures_counted": list(figures),
         "duplicated_external_figure_text_allowance": extra, "whole_diagram_source_allowance": diagram_allowance,
         "additional_extraction_allowance": 1000, "conservative_main_nonwhitespace_estimate": conservative,
         "official_regular_paper_range": [10000, 50000],
@@ -212,5 +260,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

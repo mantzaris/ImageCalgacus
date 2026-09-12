@@ -1,13 +1,12 @@
 \section{\uppercase{Method}}
 \label{sec:method}
 \subsection{A Shared Artifact Contract}
-A public profile specifies the model, observable representation, numerical rules, coder and budget. The sender seals canonical source bytes once and encodes the packet into carrier $y$. The receiver obtains only saved $y$, the profile, shared context and encryption key. Source bytes/digests, sender identifiers, ranks, packets and latent codes are excluded (Figure~\ref{fig:method}).\aifootnote
+A public profile specifies the model, observable representation, numerical rules, coder and budget. The sender seals canonical source bytes once and encodes the packet into carrier $y$. The receiver obtains only saved $y$, the profile, shared context and encryption key. Source bytes/digests, sender identifiers, ranks, packets and latent codes are excluded. Figure~\ref{fig:examples} shows both directions using the first manifest-ordered fixed-rank example in each direction. Panel A carries canonical image pixels through saved text. Panel B carries literal text through a saved PNG.\aifootnote
 
 \begin{figure*}[t]
-\centering
-\input{figures/method_diagram}
-\caption{Common transport and independent verification. The same packet contract feeds either a text language model or a pixel autoregressive model. Only the saved UTF-8 or PNG artifact crosses the carrier boundary. A separately launched receiver uses its declared model/profile, shared context and encryption key. The original bytes and sender diagnostics remain outside its inputs. Equality is evaluated after receiver exit. The conditioning row is prepended internally and is not an extra delivered PNG row.}
-\label{fig:method}
+\centering\includegraphics[width=\textwidth]{figures/figure1_transport.pdf}
+\caption{Actual bidirectional transport, with examples selected by manifest order rather than appearance. A shows a canonical $16\times16$ grayscale image, a verbatim excerpt of its saved 616-token UTF-8 carrier and recovery of all 256 pixel bytes, not an arbitrary original image file. The excerpt is incomplete. The figure's full-file note refers to locally retained material, not an available review link. B shows the complete 63-byte source text, its delivered $32\times31$ RGB PNG and exact text-byte recovery. Real pixels use nearest-neighbor enlargement with preserved aspect ratios. Each fresh receiver uses only its carrier, model/profile, shared context and key. The text direction uses the fixed prompt. For PNG, the withheld 96-byte conditioning row is prepended internally to form a $32\times32$ canvas. Source equality is checked separately after decoding.}
+\label{fig:examples}
 \end{figure*}
 
 Images are canonical $16\times16$ grayscale arrays of unsigned eight-bit pixels, 256 bytes in row-major order. Exact recovery restores this preprocessed array, not the larger original image or its container. Text is 32--128 literal UTF-8 bytes without normalization, added newlines or replacement decoding.
@@ -73,5 +72,3 @@ All text carriers have a 2,048-token cap. After packet completion the sender mus
 Under identical model state, numerical ordering and reconstructible observations, inversion follows by induction. At each position the receiver computes the same eligible distribution and coder transition as the sender. It therefore recovers the same nibble, skip or arithmetic common prefix, and observes the same symbol before the next transition. Equation~\ref{eq:consistent} supplies the text reconstruction invariant. Lossless pixel equality supplies the PNG invariant. The known packet size supplies framing. Sufficient support and successful finite termination remain necessary conditions, rather than consequences of this argument.
 
 Senders exit before fresh receivers start. Their input directories contain only carrier, profile, context and key, with model assets separately available. Evaluation follows receiver exit. Reports distinguish packet and carrier completion, receiver recovery, authentication, carrier conformance and source equality. This data-flow separation is not an adversarial operating-system sandbox.
-
-

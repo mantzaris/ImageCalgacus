@@ -1,53 +1,57 @@
-# Final manuscript visual inspection
+# Revised manuscript visual inspection
 
-Completed 10 September 2026. Every final main page and every companion page was inspected from its 130-dpi A4 raster render, with vector PDFs retained for manuscript use. This is a human-readable inspection record by the manuscript-preparation assistant, not an independent scientific review.
+Completed 11 September 2026 after the editorial revision from `9f91143`. Every final main-paper page and all eight companion pages were rendered at 130 dpi on A4 and inspected. Figure 1 was inspected at its final full manuscript width, not only as a standalone enlarged asset. This is an assistant inspection record, not an independent scientific review.
 
 Final PDF SHA-256 identities:
 
-- Main, 12 pages: `63debfdfea6d71e68b4b58f562b216e35ba1289c7dedd9b18151a570549219a4`.
-- Companion, 8 pages: `95fcf5616f19fc482fd965129f880e5bedb1785167411db0891b9ea0db6b1676`.
+- Main, 12 pages: `75b17949332a9062b9661a0477faeb04da6cfa221eb8cc86380386baaef8b912`.
+- Companion, 8 pages: `c63445b96f1f9ff39e2827aacf3f7b5b53e6d5791159f338e911f54f7e372691`.
 
 ## Main paper
 
-| Page | Content inspected | Final outcome |
+| Page | Content inspected | Findings |
 |---|---|---|
-| 1 | Two-line title, anonymous author area, 176-word abstract, introduction | Legible. Official title-block spacing retained. No author identity. |
-| 2 | Related work, citation forms and prior-method distinctions | No duplicated author-text citation phrasing or overflow. |
-| 3 | Packet/header, authentication, text reconstruction equation and model interface | Packet-size equation fits. Literal identifier and UTF-8 conventions readable. |
-| 4 | Vector method diagram, RGB posterior equations, entropy gate and A1 partition | Labels/arrows readable. Entropy minus sign and conditional notation checked against TeX and implementation. |
-| 5 | A1 finite-message rule, stopping/completion, source allocation | All mathematical symbols and prose within columns. |
-| 6 | Table 1, actual hardware/runtime, score definitions and group intervals | Table and two score equations fit; units and LLM/image-model distinction clear. |
-| 7 | Prospective outcomes, rate/overhead interpretation and text capacity | Footnote no longer splits into the opposite column. All six outcome claims remain consistent. |
-| 8 | Table 2, capacity interpretation, original and mismatched AUCs | Original prospective times and failure cell readable; no clipped numeric intervals. |
-| 9 | Figure 2, GPU narrative, beginning of discussion | Separate rate units and boundary-aware recovery whiskers readable. |
-| 10 | Figure 3 and discussion | Paired AUC difference, fixed orientation and shared sample clear. |
-| 11 | Figure 4, conclusion, AI disclosure | All nine fixed timing pairs and distinct memory measures readable. No overlap or duplicated timing charges. |
-| 12 | Disclosure continuation and all 15 references | References use template 9-point size. No unresolved citations, missing glyphs or clipped URLs. Natural final-reference-page whitespace retained. |
+| 1 | Title, unchanged 176-word abstract, shortened Introduction, start of Related Work | Anonymous title block, readable body, complete contribution and headline results. Shorter drafting footnote fits on one line and retains its citation. |
+| 2 | Related Work and Method 3.1 | Attribution retained, both Figure 1 directions explicitly introduced, canonical payload and header readable. |
+| 3 | **Figure 1A and 1B**, packet and authentication contract | Both actual examples are clear. Canonical source/recovered pixels use unchanged nearest-neighbor views. Excerpt is verbatim and explicitly incomplete. Complete 63-byte text is visible in source and recovery. Caption explains dimensions, receiver inputs, withheld row and the original local full-file note without implying reviewer access. |
+| 4 | Probability rules, complete-prefix equation, RGB mixture posteriors, rank and gate rules | Equations, minus signs, subscripts and strict entropy comparison readable. No clipping. |
+| 5 | A1 framing, termination, recovery conditions, source allocation | Essential protocol and finite-capacity limitations remain in the main paper. |
+| 6 | Table 1, GPU configuration, timing, grouping and observer definition | Two model types distinguished, 33/33 offload and CUDA configuration retained, table and units fit. |
+| 7 | Observer extension, matched benchmark design, recovery/rate results | Repeated PNG rescoring distinct from transmissions; timing repetitions and grouping clearly specified. |
+| 8 | Table 2, arithmetic failures, correct-context and mismatch findings | All six cells, including 0/20 arithmetic text, remain. Rates, original times and uncertainty agree with retained evidence. |
+| 9 | Figure 2, GPU results, start of Discussion | Recovery/rate axes and boundary-aware intervals readable. Charged timing and throughput denominators explicit. |
+| 10 | Figure 3, Discussion, start of Conclusion | Fixed paired AUC decrease and uncertain other changes preserved. Text-filtering bottleneck, scope and security limitations remain. |
+| 11 | Figure 4, conclusion, AI disclosure, start of references | Three-payload matched benchmark, 5.13-fold headline, memory distinctions and actual timing repetitions readable. Full AI disclosure unchanged. |
+| 12 | Remaining references | All 15 records complete, URLs/identifiers wrap without clipping. Ordinary final-page reference whitespace retained rather than altering the template. |
 
 ## Companion
 
-| Page | Content inspected | Final outcome |
+| Page | Content inspected | Findings |
 |---|---|---|
-| 1 | Title, companion-status abstract, examples/table interpretation | Anonymous; no representation that supplementary upload is authorized. |
-| 2 | Figure S1 and A1 equations | Real pixels, correct aspect ratios, verbatim excerpt and explicit complete-carrier path readable. |
-| 3 | Figure S2, correct-context score distributions | All six panels, individual scores, AUCs and intervals readable. Failed text carriers labeled. |
-| 4 | Tables S1–S2 and development evidence | Both complete numerical tables fit at 9-point size; failures/control counts retained. |
-| 5 | Figure S3 and Table S3 | Observed capacity checkpoints and target distinct; overhead categories readable without adding overlapping termination diagnostics. |
-| 6 | Figure S4 and performance details | Paired 20-payload/two-context outcomes and development-only status clear. |
-| 7 | Table S4, Figure S5 and Table S5 | Both score comparisons and all 80 descriptive shifts readable; shared-control and post hoc qualifications preserved. |
-| 8 | Table S6, compact reproducibility, AI disclosure and references | Five GPU combinations fit; checkpoint hashes wrap intact; bibliography completes on the page with no orphan lines. |
+| 1 | Revised abstract and Sections S1–S3 | Points to main Figure 1; no duplicate example or relative example-path access claim. |
+| 2 | **Figure S1 process diagram**, Table S1 and A1 equations | Standard float placement resolved the initial overflow. Diagram inputs/arrows and expanded rates/times readable. |
+| 3 | Figure S2 and development serialization text | Six detection panels retain all observations and failed text carriers; labels and caption readable. |
+| 4 | Table S2 and Figure S3 | Both score tables and arithmetic capacity trajectories readable. Observed checkpoints and target remain distinct. |
+| 5 | Table S3 and Figure S4 | Overhead accounting and paired 20-payload/two-context outcomes fit, with no altered measurements. |
+| 6 | Descriptive shifts, benchmark details and reproducibility | Hashes and checkpoint name wrap intact; timing boundaries and private-data exclusions preserved. |
+| 7 | Table S4, Figure S5 and Table S5 | Context intervals and all 80 score shifts readable; shared controls and post hoc status clear. |
+| 8 | Table S6, disclosure ending and references | Five benchmark combinations and complete references fit. Normal final-page whitespace remains. |
 
-## Corrections and final checks
+## Corrections and verification
 
-Initial drafts were shortened by removing repetition, not by changing template margins, fonts or line spacing. Packet and score equations were broken at natural mathematical boundaries. A long checkpoint filename received permissible break points. References were set to the official 9-point convention. An unnecessarily long drafting footnote was shortened. Supplementary floats use standard `[!t]` placement, and repeated reproducibility prose was condensed so the tables no longer form a widely spaced terminal float page and the bibliography no longer leaves two orphan lines. No numerical content was changed for layout.
+The examples moved into the main paper without changing their PDF or underlying files. The process diagram moved to the companion. Repetitive attribution and observer/performance qualifications were consolidated, while every material limitation remains. A repeated drafting-footnote pointer was shortened, keeping the section-level tool citation and full disclosure.
 
-Both final logs have no overfull boxes, undefined references or unresolved citations. Empty author metadata was checked with `pdfinfo`. The source ZIP was compiled in an isolated temporary directory; both extracted PDF texts match the local build exactly. See `source_archive_verification.json` and `verification.json` for machine-readable checks. Raster inspection files are ignored build outputs, not accepted experimental artifacts or source-ZIP contents.
+The initial companion build packed the relocated diagram and a large plot too tightly. Restoring standard `[t]` placement for those two floats and shortening the diagram caption removed the overflow. No margins, font sizes, line spacing, negative spacing or official template files were changed.
 
-Render again, if needed:
+Both final logs have no overfull boxes, unresolved references or citations. Main figures remain 1–4 and tables 1–2. Companion figures remain S1–S5 and tables S1–S6. The main worked examples are Figure 1A–B on page 3; there is no duplicate in the companion.
+
+The main has 39,713 extracted non-whitespace characters and a conservative 42,596 estimate, including a second count of all four figure texts plus a 1,000-character extraction allowance. See `verification.json`. The source ZIP was compiled in an isolated temporary directory, reproducing both local PDF texts exactly. Empty author metadata and unchanged accepted evidence/ledgers were checked.
+
+Reproduce the page renders:
 
 ```sh
 pdftoppm -r 130 -png paper/icaart2027/ICAART2027_submission.pdf paper/icaart2027/inspection/main
 pdftoppm -r 130 -png paper/icaart2027/ICAART2027_supplement.pdf paper/icaart2027/inspection/supplement
 ```
 
-The current PDF page count is authoritative. Older ignored render files from draft pagination are not part of the final document.
+Raster files are ignored inspection outputs. The PDF hashes above identify the inspected documents. No model inference or GPU time was used.

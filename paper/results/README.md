@@ -2,11 +2,13 @@
 
 The complete first ICAART 2027 Regular Paper draft now incorporates these results components. Start with the [manuscript index](../icaart2027/README.md), [main PDF](../icaart2027/ICAART2027_submission.pdf), [companion PDF](../icaart2027/ICAART2027_supplement.pdf), or [author decisions](../icaart2027/AUTHOR_REVIEW.md).
 
-The earlier manuscript-ready material below is preserved and incorporated, not replaced by an outline. Figure/table numbering now follows the compiled draft and stable LaTeX labels.
+Revised on 11 September 2026 from reviewed commit `9f91143`. Both real examples now appear in the main paper, which remains 12 pages. Local example links do not imply reviewer access through an accepted submission route. The earlier manuscript-ready material below is preserved and incorporated, not replaced by an outline. Figure/table numbering now follows the compiled draft and stable LaTeX labels.
 
 | Placement | Final item | Source / integration |
 |---|---|---|
 | Main paper | Figures 1–4, Tables 1–2 | [Complete manuscript and evidence mapping](../icaart2027/README.md) |
+| Main Method, page 3 | Figure 1A–B, actual image/text transport examples | `fig:examples`; unchanged [retained figure](../icaart2027/figures/figure1_transport.pdf), [local author example files](../icaart2027/examples/README.md) |
+| Companion, page 2 | Figure S1, common process diagram | `fig:method`; examples removed from companion |
 | Main Results | Figure 3, PNG context-AUC comparison | [Detection component](png_context_detection.md#fig-png-context-auc); `fig:png-context-auc` |
 | Companion | Figure S5, descriptive within-PNG score shifts | [Figure and caption](png_context_detection.md#fig-png-score-shifts); `fig:png-score-shifts` |
 | Companion | Table S4, full primary/secondary AUC comparison | [Table and caption](png_context_detection.md#tab-png-context-scores); `tab:png-context-scores` |

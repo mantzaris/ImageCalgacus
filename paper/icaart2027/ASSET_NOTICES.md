@@ -1,6 +1,6 @@
 # Source and asset notices
 
-The retained canonical image in companion Figure S1 is derived from
+The retained canonical image in main-paper Figure 1A is derived from
 Fashion-MNIST. Source attribution is Han Xiao, Kashif Rasul and Roland
 Vollgraf, *Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine
 Learning Algorithms*, arXiv:1708.07747, 2017. Its retained source snapshot is
@@ -15,7 +15,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-The literal 63-byte text example is from Jane Austen's *Pride and Prejudice*,
+The literal 63-byte text example in main-paper Figure 1B is from Jane Austen's *Pride and Prejudice*,
 Project Gutenberg ebook 1342, from the retained frozen UTF-8 snapshot. Other
 prospective text sources are Arthur Conan Doyle's *The Adventures of Sherlock
 Holmes*, ebook 1661. Gutenberg terms and jurisdictional copyright limitations
