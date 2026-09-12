@@ -29,3 +29,19 @@ Checked 10 September 2026. Papers were read in their original PDF or official so
 - No separate Regular Paper supplementary-upload permission was verified. The AI acknowledgement/anonymity conflict and the public-posting restriction are recorded in `AUTHOR_REVIEW.md`.
 
 No reference title, author, venue or DOI is inferred from the numerical results. The literature check is focused, not a claim of exhaustive coverage. Official source pages and template requirements can change before the actual submission date.
+
+## Photograph extension primary-source checks
+
+The bounded extension adds the following records. The methods and claims are compared conceptually, not described as experimentally matched baselines.
+
+| Key | Primary source and portions inspected | Use |
+|---|---|---|
+| qim | Brian Chen and Gregory W. Wornell, *Preprocessed and postprocessed quantization index modulation methods for digital watermarking*, SPIE 3971, 48–59 (2000). [Authors' paper](https://dsp-group.mit.edu/wp-content/uploads/2024/11/Preprocessedandpost.pdf), quantizer selection, distortion and decoding formulation. | Prior quantizer-cell message labels and distortion-aware reconstruction. Invisible embedding is not claimed new. |
+| stc | Tomáš Filler, Jan Judas and Jessica Fridrich, *Minimizing Additive Distortion in Steganography Using Syndrome-Trellis Codes*, IEEE TIFS 6(3), 920–935 (2011), DOI 10.1109/TIFS.2011.2134094. [Authors' PDF](https://dde.binghamton.edu/filler/pdf/Fill10tifs-stc.pdf), formulation and syndrome-trellis construction; institution publication record checked. | Established global additive-distortion minimization. Our nearest-color parity baseline does not reproduce this method. |
+| hidden | Jiren Zhu, Russell Kaplan, Justin Johnson and Fei-Fei Li, *HiDDeN: Hiding Data With Deep Networks*, [arXiv:1807.09937](https://arxiv.org/abs/1807.09937), ECCV 2018. Joint encoder/decoder/adversary and noise layers inspected. | Distinguish trained learned watermarking from frozen-model rank maps. |
+| stegastamp | Matthew Tancik, Ben Mildenhall and Ren Ng, *StegaStamp: Invisible Hyperlinks in Physical Photographs*, [arXiv:1904.05343](https://arxiv.org/abs/1904.05343), CVPR 2020. Training, image transforms and physical capture setting inspected. | No unrun robustness or physical-photo capture comparison is claimed. |
+| bsds | Pablo Arbeláez, Michael Maire, Charless Fowlkes and Jitendra Malik, *Contour Detection and Hierarchical Image Segmentation*, IEEE TPAMI 33(5), 898–916 (2011), DOI 10.1109/TPAMI.2010.161. [Official resources](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html), pinned BIDS mirror README and original partitions inspected. | Dataset attribution and provenance, not an assertion of blanket figure republication rights. |
+
+Calgacus v6's discrete-rank construction and cross-domain discussion were reread at [the primary full text](https://arxiv.org/html/2510.20075v6). The new claim is invariant-context model-rank embedding, not rank transfer, quantization-index embedding or invisible hiding in general. Local RankCloak CUDA setup and model I/O at the pinned revision were inspected again; no unrelated pipeline was imported.
+
+The current [Guidelines](https://icaart.scitevents.org/Guidelines.aspx) and [Templates](https://icaart.scitevents.org/Templates.aspx) were rechecked for this integration. The 10,000–50,000-character Regular Paper rule remains. The authentic template files are unchanged. No new clarification resolved the previously documented AI-disclosure or separate supplementary-upload questions.

@@ -1,0 +1,51 @@
+{
+  "event": "finished",
+  "id": "cover_rank_v1-021-development-12074-parity-receiver",
+  "elapsed_seconds": 0.7005302379839122,
+  "returncode": 0,
+  "failure": null,
+  "logs": ".runtime/cover_rank_v1/logs/cover_rank_v1-021-development-12074-parity-receiver",
+  "pid": 2265005,
+  "cumulative_seconds": 83.60803429392399,
+  "gpu_activity": {
+    "samples": 0,
+    "positive_samples": 0,
+    "sampling": "nvidia-smi pmon matched child PID, serial, approximately 0.2 seconds; not sustained utilization inference",
+    "peak_sm_percent": 0
+  },
+  "neural_inference": false,
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "imagecalgacus.cover_rank",
+    "decode",
+    "--arm",
+    "parity",
+    "--carrier",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-12074-parity/carrier.png",
+    "--key",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-12074-parity/run.key",
+    "--profile",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-12074-parity/profile.json",
+    "--output",
+    "/home/meow/Documents/repos/ImageCalgacus/artifacts/cover_rank_v1_review/outcomes/development-12074-parity/recovered.txt",
+    "--report",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/reports/development-12074-parity-receiver.json"
+  ],
+  "report": {
+    "operation": "decode",
+    "status": "passed",
+    "source_hash": "badeb34ed415eb98889a818fe02edc4ac45afd4dd3453f99804a826a730bd2a7",
+    "profile_sha256": "42a03558d233a990025447c0deda7395332f76050aea696beed0026b4cbdecfc",
+    "packet_complete": true,
+    "carrier_complete": true,
+    "authenticated": true,
+    "arm": "parity",
+    "coarse_sha256": "5ab06c5b5f92f071e433a6dc19c0dfd752dc561accedbe4835f4287fcea40d92",
+    "model_calls": 0,
+    "phase_seconds": 0.008413297007791698,
+    "output_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8",
+    "total_inner_seconds": 0.280127823993098
+  }
+}

@@ -1,0 +1,6 @@
+| Split / arm | Exact | PSNR (dB) | SSIM | Changed pixels (%) | PNG bytes | Encode / decode (s) |
+| --- | --- | --- | --- | --- | --- | --- |
+| development / model rank | 6/6 | 70.179 | 0.9999631 | 1.805 | 118461.3 | 6.998 / 6.903 |
+| development / parity | 6/6 | 70.366 | 0.9999649 | 1.793 | 118434.8 | 0.837 / 0.696 |
+| heldout / model rank | 20/20 | 70.255 | 0.9999664 | 1.781 | 116772.9 | 6.998 / 6.884 |
+| heldout / parity | 20/20 | 70.398 | 0.9999688 | 1.780 | 116762.5 | 0.823 / 0.686 |

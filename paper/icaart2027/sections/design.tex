@@ -3,7 +3,7 @@
 \subsection{Sources, Contexts and Pairing}
 Development used 20 images and 20 texts with two contexts per direction. Five synthetic image fixtures were supplemented by 15 Fashion-MNIST training images. Five literal text fixtures, including non-ASCII UTF-8, were supplemented by 15 narrative spans from Gutenberg ebooks 11 and 84. Sources, canonicalization, contexts, profiles and thresholds were frozen before prospective generation.\aifootnote
 
-The held-out image set contains 20 Fashion-MNIST test images, two per class \cite{fashion}, BOX-resized from $28\times28$ grayscale to $16\times16$. Twenty nonoverlapping text spans come from Austen's \emph{Pride and Prejudice} and Doyle's \emph{The Adventures of Sherlock Holmes}, Gutenberg ebooks 1342 and 1661. Ten messages occupy each 32--64-byte and 65--128-byte band. Observed lengths are 58--128 bytes, with mean 93.2. Snapshot hashes, source indices/byte offsets and exclusions are recorded. Boilerplate, duplicate original/canonical bytes and development/held-out overlap are excluded without using generated outcomes. Fashion-MNIST's MIT notice and Gutenberg attribution are retained. The texts are unrestricted under US copyright, not necessarily every jurisdiction.
+The held-out images are 20 Fashion-MNIST test samples, two per class \cite{fashion}, BOX-resized from $28\times28$ to $16\times16$ grayscale. Twenty nonoverlapping Gutenberg spans from Austen's \emph{Pride and Prejudice} and Doyle's \emph{The Adventures of Sherlock Holmes} occupy two byte bands, ten each. Lengths are 58--128 bytes, mean 93.2. Frozen hashes, indices/offsets and exclusions prevent duplicate or development overlap without inspecting outcomes. Fashion-MNIST's MIT notice and Gutenberg attribution are retained; text copyright varies by jurisdiction.
 
 The prospective prompt is ``Write a calm field-journal entry about a walk through a temperate forest. Use continuous prose.'' Row1 is the first row of an independently generated development image with context seed 2001. Neither context is included in the delivered carrier. Table~\ref{tab:specification} summarizes the frozen allocation.
 
@@ -28,9 +28,9 @@ Controls & 20 traces, matched prefixes & 20 PNGs shared across methods \\
 \end{tabularx}
 \end{table*}
 
-The allocation is $20\times3\times2=120$ stego units. Each payload/context group shares one immutable packet, source and model across three methods. Sampling seeds are separate from encryption randomness. Terminal failures remain observations, and continuation neither duplicates completed carriers nor replaces difficult sources.
+The allocation is $20\times3\times2=120$ stego units. Each group shares one immutable packet, source and model across methods. Terminal failures remain observations, without duplicate credits or replacements.
 
-One independent ordinary control is generated per group. Text controls extend to the group's longest realized carrier, 2,048 tokens in every prospective group, with length-matched prefixes for fixed and gated methods. PNG methods share one full image. All controls use the same eligibility and ordinary sampling rules. Thus 120 method associations are 40 independent traces. The frozen duplicate rule gives an identical control artifact one owner, the lowest ordered eligible group. No prospective duplicates or unscorable delivered carriers occurred.
+One independent ordinary trace serves each group. Text traces reach 2,048 tokens, their longest realized carrier, with matched prefixes for fixed/gated methods. PNG methods share full images. Thus 120 associations represent 40 controls. The frozen rule assigns duplicate artifacts to the lowest ordered eligible group. No prospective duplicates or unscorable carriers occurred.
 
 \subsection{GPU Execution and Timing}
 \label{sec:hardware}

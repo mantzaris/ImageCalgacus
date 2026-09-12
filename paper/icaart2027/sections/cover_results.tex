@@ -1,0 +1,15 @@
+\subsection{Photographs Retain Fidelity and Exact Recovery}
+\label{sec:cover-results}
+Both arms recover 6/6 development and 20/20 held-out messages from saved PNGs, with authenticated source equality and no replacements or retries. Model ranks reproduce exactly across fresh processes. Development wrong-key, bit-change and lossless checks pass. Figure~\ref{fig:cover-example} shows the first held-out photograph, distinct from generated-image mode (Figure~\ref{fig:examples}B).
+
+
+
+\begin{table*}[t]
+\caption{Photograph evaluation, twenty paired held-out covers per arm. Fidelity and timings are descriptive means. Times include fresh-process startup, loading, graph setup and teardown. The parity baseline has no neural inference. Both arms share each group's packet and positions.}
+\label{tab:cover}\centering\small
+\input{tables/cover_main}
+\end{table*}
+
+The model arm averages 70.255 dB PSNR and 0.9999664 SSIM, with a maximum observed channel change of two, below the bound of three. It changes 1.781\% of pixels and 0.613\% of channels. The packet rate is $2336/65536=0.0356445$ bits/pixel, with 58--128 useful bytes. Fresh-process encoding and decoding average 6.998 and 6.884 seconds. These costs concern fixed-context tile evaluation, not a speedup comparison with autoregressive generation.
+
+All 46,720 selected held-out pixel partitions differ from parity even after allowing a bit-label swap. Mean normalized disagreement is 0.44844. However, distinct partitions do not yield a demonstrated benefit over the baseline. Parity also recovers 20/20, with mean 70.398 dB PSNR, slightly higher SSIM and lower process cost (Table~\ref{tab:cover}). The paired model-minus-parity PSNR difference is $-0.144$ dB. Thus the extension establishes reproducible model-rank embedding with constrained distortion, but neither a fidelity nor recovery advantage from the learned partitions. Detectability of these photographs has not been measured.

@@ -1,0 +1,51 @@
+{
+  "event": "finished",
+  "id": "cover_rank_v1-067-heldout-15011-parity-receiver",
+  "elapsed_seconds": 0.69068017200334,
+  "returncode": 0,
+  "failure": null,
+  "logs": ".runtime/cover_rank_v1/logs/cover_rank_v1-067-heldout-15011-parity-receiver",
+  "pid": 2276598,
+  "cumulative_seconds": 260.1402517760289,
+  "gpu_activity": {
+    "samples": 0,
+    "positive_samples": 0,
+    "sampling": "nvidia-smi pmon matched child PID, serial, approximately 0.2 seconds; not sustained utilization inference",
+    "peak_sm_percent": 0
+  },
+  "neural_inference": false,
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "imagecalgacus.cover_rank",
+    "decode",
+    "--arm",
+    "parity",
+    "--carrier",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/heldout-15011-parity/carrier.png",
+    "--key",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/heldout-15011-parity/run.key",
+    "--profile",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/heldout-15011-parity/profile.json",
+    "--output",
+    "/home/meow/Documents/repos/ImageCalgacus/artifacts/cover_rank_v1_review/outcomes/heldout-15011-parity/recovered.txt",
+    "--report",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/reports/heldout-15011-parity-receiver.json"
+  ],
+  "report": {
+    "operation": "decode",
+    "status": "passed",
+    "source_hash": "badeb34ed415eb98889a818fe02edc4ac45afd4dd3453f99804a826a730bd2a7",
+    "profile_sha256": "42a03558d233a990025447c0deda7395332f76050aea696beed0026b4cbdecfc",
+    "packet_complete": true,
+    "carrier_complete": true,
+    "authenticated": true,
+    "arm": "parity",
+    "coarse_sha256": "d45763156552fb90b80e8638487f0a5fc5301ae1115af9141bb9eba42190e774",
+    "model_calls": 0,
+    "phase_seconds": 0.008982227009255439,
+    "output_sha256": "6a088fc93fdb230de31d998760e500185e0136db1a3e9317a3240dd995e2d7d1",
+    "total_inner_seconds": 0.28042280999943614
+  }
+}

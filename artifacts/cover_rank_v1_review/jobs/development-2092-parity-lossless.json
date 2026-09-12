@@ -1,0 +1,51 @@
+{
+  "event": "finished",
+  "id": "cover_rank_v1-031-development-2092-parity-lossless",
+  "elapsed_seconds": 0.6931059010094032,
+  "returncode": 0,
+  "failure": null,
+  "logs": ".runtime/cover_rank_v1/logs/cover_rank_v1-031-development-2092-parity-lossless",
+  "pid": 2267080,
+  "cumulative_seconds": 121.33958167891251,
+  "gpu_activity": {
+    "samples": 0,
+    "positive_samples": 0,
+    "sampling": "nvidia-smi pmon matched child PID, serial, approximately 0.2 seconds; not sustained utilization inference",
+    "peak_sm_percent": 0
+  },
+  "neural_inference": false,
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "imagecalgacus.cover_rank",
+    "decode",
+    "--arm",
+    "parity",
+    "--carrier",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-2092-parity-lossless/carrier.png",
+    "--profile",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-2092-parity-lossless/profile.json",
+    "--key",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-2092-parity-lossless/run.key",
+    "--output",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/checks/parity/lossless.txt",
+    "--report",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/reports/development-2092-parity-lossless.json"
+  ],
+  "report": {
+    "operation": "decode",
+    "status": "passed",
+    "source_hash": "badeb34ed415eb98889a818fe02edc4ac45afd4dd3453f99804a826a730bd2a7",
+    "profile_sha256": "42a03558d233a990025447c0deda7395332f76050aea696beed0026b4cbdecfc",
+    "packet_complete": true,
+    "carrier_complete": true,
+    "authenticated": true,
+    "arm": "parity",
+    "coarse_sha256": "834536551fe1fcf7cbd44b03eff2f7833994af76784ed449104f819ed9af5227",
+    "model_calls": 0,
+    "phase_seconds": 0.00806893699336797,
+    "output_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+    "total_inner_seconds": 0.2585135760018602
+  }
+}

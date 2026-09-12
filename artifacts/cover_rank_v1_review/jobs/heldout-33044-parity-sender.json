@@ -1,0 +1,53 @@
+{
+  "event": "finished",
+  "id": "cover_rank_v1-102-heldout-33044-parity-sender",
+  "elapsed_seconds": 0.8453193390159868,
+  "returncode": 0,
+  "failure": null,
+  "logs": ".runtime/cover_rank_v1/logs/cover_rank_v1-102-heldout-33044-parity-sender",
+  "pid": 2284536,
+  "cumulative_seconds": 397.96439595520496,
+  "gpu_activity": {
+    "samples": 0,
+    "positive_samples": 0,
+    "sampling": "nvidia-smi pmon matched child PID, serial, approximately 0.2 seconds; not sustained utilization inference",
+    "peak_sm_percent": 0
+  },
+  "neural_inference": false,
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "imagecalgacus.cover_rank",
+    "encode",
+    "--arm",
+    "parity",
+    "--cover",
+    "/home/meow/Documents/repos/ImageCalgacus/artifacts/cover_rank_v1_review/cases/heldout-33044/cover.png",
+    "--prepared-packet",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/heldout-33044.packet",
+    "--key",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/run.key",
+    "--profile",
+    "/home/meow/Documents/repos/ImageCalgacus/artifacts/cover_rank_v1_review/profile.json",
+    "--output",
+    "/home/meow/Documents/repos/ImageCalgacus/artifacts/cover_rank_v1_review/outcomes/heldout-33044-parity/carrier.png",
+    "--report",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/reports/heldout-33044-parity-sender.json"
+  ],
+  "report": {
+    "operation": "encode",
+    "status": "passed",
+    "source_hash": "badeb34ed415eb98889a818fe02edc4ac45afd4dd3453f99804a826a730bd2a7",
+    "profile_sha256": "42a03558d233a990025447c0deda7395332f76050aea696beed0026b4cbdecfc",
+    "packet_complete": true,
+    "carrier_complete": true,
+    "authenticated": true,
+    "arm": "parity",
+    "coarse_sha256": "fdc22ff7a6c4ed65f2da11ef720506d74dcf0614541d86e0a72d040ef2a0443e",
+    "model_calls": 0,
+    "phase_seconds": 0.1458979609888047,
+    "output_sha256": "50ae0fd976d8e70e005c46c8cdbe6b36e0067c6bf5e8b93ed788d6751407f298",
+    "total_inner_seconds": 0.41628587601007894
+  }
+}

@@ -79,7 +79,24 @@ def main():
         checks["cumulative_gpu_seconds"] = sum(charges.values())
     else:
         checks["private_ledger_check"] = "not run; execution ledgers unavailable"
-    checks["new_gpu_seconds"] = 0
+    checks["manuscript_verification_gpu_seconds"] = 0
+    extension = read(ROOT / "artifacts/cover_rank_v1_review/budget.json")
+    checks["new_gpu_seconds"] = extension["charged_seconds"]
+    checks["cumulative_gpu_seconds"] = extension["cumulative_seconds"]
+    checks["cover_rank_budget"] = extension
+    cover_rows = rows(ROOT / "artifacts/cover_rank_v1_review/summary.csv")
+    assert [(r["split"], r["arm"], int(r["exact"])) for r in cover_rows] == [
+        ("development","model_rank",6),("development","parity",6),
+        ("heldout","model_rank",20),("heldout","parity",20)]
+    cover_table = (HERE / "tables/cover_main.tex").read_text()
+    for r in cover_rows[2:]:
+        for field, precision in (("mean_psnr_db",3),("mean_ssim",7),
+                                 ("mean_sender_seconds",3),("mean_receiver_seconds",3)):
+            assert format(float(r[field]), "."+str(precision)+"f") in cover_table
+    for name in ("cover_examples.pdf","text_photo_example.pdf"):
+        assert sha(HERE/"figures"/name) == sha(ROOT/"artifacts/cover_rank_v1_review"/name)
+    checks["cover_rank_saved_evidence"] = read(ROOT / "artifacts/cover_rank_v1_review/acceptance.json")
+    assert checks["cover_rank_saved_evidence"]["exact"] == 52
     for item in read(HERE / "data/asset_provenance.json")["inputs"]:
         assert sha(ROOT / item["source"]) == sha(HERE / item["manuscript_copy"]) == item["sha256"]
     for name, digest in read(HERE / "template/provenance.json")["unmodified_files"].items():
@@ -197,16 +214,13 @@ def main():
     assert diagram_match and diagram_match[1] == "S1"
     assert "fig:examples" not in supplement_aux
     assert r"\texttt{examples/" not in method_source + supplement_source
-    reviewed_revision = "9f911438755ac8fff5ae9b6ea9f30850efb6b6da"
-    unchanged_manuscript_files = [
-        "main.tex", "references.bib", "sections/design.tex",
-        "sections/conclusion.tex", "figures/method_diagram.tex",
-    ]
-    unchanged_manuscript_files += [
-        str(p.relative_to(HERE)) for folder in ("figures", "tables", "examples")
-        for p in (HERE / folder).rglob("*")
-        if p.is_file() and p.suffix != ".md"
-    ]
+    reviewed_revision = "e39c14cc858bb67f870916692384d0e97502aa63"
+    historical_names = subprocess.check_output(
+        ["git","ls-tree","-r","--name-only",reviewed_revision,"paper/icaart2027/figures",
+         "paper/icaart2027/tables","paper/icaart2027/examples"],cwd=ROOT,text=True).splitlines()
+    unchanged_manuscript_files = sorted(set(
+        str(Path(name).relative_to("paper/icaart2027")) for name in historical_names
+        if not name.endswith(".md")))
     for name in unchanged_manuscript_files:
         original = subprocess.check_output(
             ["git", "show", reviewed_revision + ":paper/icaart2027/" + name], cwd=ROOT)
@@ -217,8 +231,9 @@ def main():
     assert (HERE / "preamble.tex").read_bytes().strip() == expected_preamble.strip()
     checks["editorial_revision"] = {
         "reviewed_revision": reviewed_revision,
-        "unchanged_abstract_disclosure_design_references_tables_and_assets": True,
-        "preamble_change": "Shorter drafting footnote only; section-level citations and all layout settings retained",
+        "unchanged_historical_tables_and_figure_assets": True,
+        "authorized_changes": "cover_rank_v1 methods/results, related references, abstract/conclusion, GPU plot moved to companion",
+        "preamble_change": "none from e39c14c; template settings and disclosure retained",
         "unchanged_manuscript_files_checked": len(unchanged_manuscript_files),
         "worked_examples": {"figure": 1, "panels": ["A", "B"], "page": int(example_match[2]),
                            "unchanged_asset": "figures/figure1_transport.pdf"},
@@ -227,9 +242,9 @@ def main():
         "no_reviewer_access_claim_for_relative_example_paths": True,
     }
     figures = ("figure1_transport.pdf", "figure2_recovery_rate.pdf",
-               "context_auc.pdf", "figure4_gpu_performance.pdf")
+               "context_auc.pdf", "text_photo_example.pdf")
     extra = sum(nonspace(pdf_text(HERE / "figures" / name)) for name in figures)
-    # All four main figures have extractable text, already in the main PDF.
+    # All four current main figures have extractable text, already in the main PDF.
     # Count that text twice and add 1,000 for possible ligature/math loss.
     # The process diagram is now only in the companion, so it contributes zero
     # to the main count. The previous reviewed count included its whole source.

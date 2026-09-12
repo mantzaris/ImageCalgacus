@@ -5,13 +5,16 @@
 \title{Exact Bidirectional Steganographic Transport with Language and Pixel Autoregressive Models}
 \author{}
 \keywords{Generative Steganography, Autoregressive Models, Exact Recovery, Steganalysis, GPU Inference.}
-\abstract{Generative steganography must survive the serialization of a model's decisions into a delivered file. We develop a shared authenticated packet protocol for hiding canonical grayscale images in generated text and literal UTF-8 messages in generated PNGs, with recovery by an independent receiver using only the saved artifact and shared configuration, context and key. A controlled comparison of fixed-rank, entropy-gated and arithmetic coding uses a language model and a pixel autoregressive model under the same packet and modality-specific carrier limits. Across 120 held-out transmissions, fixed and gated coding each recover 20/20 payloads in both directions. Arithmetic coding recovers 20/20 PNG payloads but 0/20 text payloads because the generated trajectories provide insufficient information before the token cap. Known-model detection exposes substantial distributional differences. Rescoring the same PNGs with one frozen alternate conditioning row reduces fixed-rank mean-surprisal AUC from 0.8850 to 0.6975, without establishing secrecy. Finally, CUDA graph replay reduces matched development encode-plus-decode latency by 5.13 times while preserving checked probabilities, carrier bytes and recovery. These results connect exact artifact transport, finite capacity, observer knowledge and practical execution cost.}
+\abstract{Generative steganography must survive serialization into a delivered file. We develop a shared authenticated packet protocol for hiding canonical images in generated text and literal UTF-8 messages in generated PNGs, with independent saved-artifact recovery. A controlled comparison of fixed-rank, entropy-gated and arithmetic coding uses a language model and a pixel autoregressive model under common packet and modality-specific carrier limits. Across 120 held-out transmissions, fixed and gated coding each recover 20/20 payloads in both directions. Arithmetic recovers 20/20 PNG payloads but 0/20 text payloads because information accumulates too slowly before the token cap. Rescoring existing PNGs with one alternate conditioning row reduces fixed-rank mean-surprisal AUC from 0.8850 to 0.6975. A separate photograph-preserving profile reconstructs model-rank partitions from invariant coarse pixels. Both it and a simple parity baseline recover 20/20 held-out messages, with mean PSNR of 70.255 and 70.398 dB respectively. The learned partitions are distinct but provide no measured fidelity advantage. Finally, CUDA graph replay improves matched development encode-plus-decode latency by 5.13 times with exact checked probability and artifact equivalence. Together, the findings connect artifact recovery, finite capacity, cover preservation, observer knowledge and execution cost.}
 \onecolumn\maketitle\normalsize\setcounter{footnote}{0}\vfill
 \input{sections/introduction}
 \input{sections/related}
 \input{sections/method}
+\input{sections/cover_method}
 \input{sections/design}
+\input{sections/cover_design}
 \input{sections/results}
+\input{sections/cover_results}
 \input{sections/discussion}
 \input{sections/conclusion}
 \section*{\uppercase{AI Assistance Disclosure}}
@@ -20,4 +23,3 @@ OpenAI Codex assisted with implementation, analysis scripts, figure preparation,
 \bibliographystyle{apalike}
 {\small\bibliography{references}}
 \end{document}
-

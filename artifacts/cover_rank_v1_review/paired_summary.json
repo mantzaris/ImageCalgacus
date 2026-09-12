@@ -1,0 +1,20 @@
+{
+  "development": {
+    "psnr_db_model_minus_parity": -0.1864031948610124,
+    "ssim_model_minus_parity": -1.882331468657424e-06,
+    "mse_model_minus_parity": 0.000263637966579861,
+    "changed_pixel_fraction_model_minus_parity": 0.00011952718098958333,
+    "changed_channel_fraction_model_minus_parity": 0.0002585517035590277,
+    "pair_seconds_model_minus_parity": 12.367781440649802,
+    "png_bytes_model_minus_parity": 26.5
+  },
+  "heldout": {
+    "psnr_db_model_minus_parity": -0.1435808683255452,
+    "ssim_model_minus_parity": -2.3876737805517134e-06,
+    "mse_model_minus_parity": 0.0002001444498697917,
+    "changed_pixel_fraction_model_minus_parity": 1.220703125e-05,
+    "changed_channel_fraction_model_minus_parity": 0.0001993815104166667,
+    "pair_seconds_model_minus_parity": 12.373334414188866,
+    "png_bytes_model_minus_parity": 10.35
+  }
+}

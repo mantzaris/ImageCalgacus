@@ -1,0 +1,51 @@
+{
+  "event": "finished",
+  "id": "cover_rank_v1-030-development-2092-parity-changed-bit",
+  "elapsed_seconds": 0.6902881640125997,
+  "returncode": 2,
+  "failure": null,
+  "logs": ".runtime/cover_rank_v1/logs/cover_rank_v1-030-development-2092-parity-changed-bit",
+  "pid": 2266959,
+  "cumulative_seconds": 120.6464757779031,
+  "gpu_activity": {
+    "samples": 0,
+    "positive_samples": 0,
+    "sampling": "nvidia-smi pmon matched child PID, serial, approximately 0.2 seconds; not sustained utilization inference",
+    "peak_sm_percent": 0
+  },
+  "neural_inference": false,
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "imagecalgacus.cover_rank",
+    "decode",
+    "--arm",
+    "parity",
+    "--carrier",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-2092-parity-changed-bit/carrier.png",
+    "--profile",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-2092-parity-changed-bit/profile.json",
+    "--key",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/development-2092-parity-changed-bit/run.key",
+    "--output",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/checks/parity/changed-bit.txt",
+    "--report",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/reports/development-2092-parity-changed-bit.json"
+  ],
+  "report": {
+    "operation": "decode",
+    "status": "failed",
+    "source_hash": "badeb34ed415eb98889a818fe02edc4ac45afd4dd3453f99804a826a730bd2a7",
+    "profile_sha256": "42a03558d233a990025447c0deda7395332f76050aea696beed0026b4cbdecfc",
+    "packet_complete": true,
+    "carrier_complete": false,
+    "authenticated": false,
+    "arm": "parity",
+    "coarse_sha256": "834536551fe1fcf7cbd44b03eff2f7833994af76784ed449104f819ed9af5227",
+    "model_calls": 0,
+    "failure_stage": "authentication",
+    "failure_reason": "InvalidTag: ",
+    "total_inner_seconds": 0.25670277600875124
+  }
+}

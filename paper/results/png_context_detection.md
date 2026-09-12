@@ -1,7 +1,7 @@
 <!-- Retained results component, integrated into the ICAART draft on 2026-09-10. -->
 # PNG conditioning mismatch: manuscript-ready results component
 
-This component is incorporated into the [complete ICAART draft](../icaart2027/README.md). The context-AUC result appears in main Figure 3 and Section 5.4. Score shifts appear in companion Figure S5 and Table S5, and the full AUC comparison in companion Table S4. The accepted figures, tables and numerical evidence are unchanged. [Results index](README.md).
+This component is incorporated into the [complete ICAART draft](../icaart2027/README.md). The context-AUC result appears in main Figure 4 and Section 5.4. Score shifts appear in companion Figure S5 and Table S5, and the full AUC comparison in companion Table S4. The accepted figures, tables and numerical evidence are unchanged. [Results index](README.md).
 
 ## Methods
 
@@ -11,7 +11,7 @@ For the present descriptive post hoc addition, we subtracted each artifact's cor
 
 ## Results
 
-The primary fixed-rank AUC decreased from 0.8850 to 0.6975, with paired change -0.1875 and accepted 95% interval [-0.2775, -0.1000] ([Figure 3](#fig-png-context-auc)). Gated AUC changed from 0.8300 to 0.7475 (-0.0825, [-0.1625, 0.0100]); arithmetic A1 changed from 0.5575 to 0.5925 (+0.0350, [-0.0225, 0.1050]). Gated and A1 changes remain uncertain. Under mismatch the fixed-rank primary interval [0.5150, 0.8700] only narrowly excludes 0.5; its secondary rank-score interval [0.4725, 0.8475] includes 0.5 ([Table S4](#tab-png-context-scores)). A clear change for one method and an uncertain change for another do not by themselves establish a difference between the methods' sensitivities.
+The primary fixed-rank AUC decreased from 0.8850 to 0.6975, with paired change -0.1875 and accepted 95% interval [-0.2775, -0.1000] ([Figure 4](#fig-png-context-auc)). Gated AUC changed from 0.8300 to 0.7475 (-0.0825, [-0.1625, 0.0100]); arithmetic A1 changed from 0.5575 to 0.5925 (+0.0350, [-0.0225, 0.1050]). Gated and A1 changes remain uncertain. Under mismatch the fixed-rank primary interval [0.5150, 0.8700] only narrowly excludes 0.5; its secondary rank-score interval [0.4725, 0.8475] includes 0.5 ([Table S4](#tab-png-context-scores)). A clear change for one method and an uncertain change for another do not by themselves establish a difference between the methods' sensitivities.
 
 Across 20 artifacts per category, mean score changes were +0.610 for ordinary controls, +0.334 for fixed rank, +0.513 for gating and +0.629 for A1, in bits per delivered RGB channel value ([Figure S5](#fig-png-score-shifts); [descriptive summary](../../artifacts/png_context_detection_addendum/score_shift_summary.md)). The paired mean fixed-minus-control gap narrowed from 0.507624 to 0.231119 (change -0.276505). Larger mean score increases for controls than fixed-rank carriers are consistent with this narrowed gap. These descriptive means do not prove why AUC changed: AUC depends on the full score rankings.
 
@@ -23,7 +23,7 @@ This is one specified context mismatch with one known model. Because row1 came f
 
 <a id="fig-png-context-auc"></a>
 
-### Figure 3: Correct versus mismatched PNG observer context
+### Figure 4: Correct versus mismatched PNG observer context
 
 ![Accepted context-AUC comparison](../../artifacts/png_context_detection_review/context_auc.png)
 

@@ -24,7 +24,7 @@ CUDA_SETTINGS = {
     "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
     "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
 }
-DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200, "v2": 0, "gpu_performance": 0, "png_context_detection": 0}
+DEFAULT_PHASE_LIMITS = {"v0": 7200, "v1": 7200, "v2": 0, "gpu_performance": 0, "png_context_detection": 0, "cover_rank_v1": 0}
 V1_QUALIFICATION_AUTHORIZATION = {
     "authorization_id": "user-v1-qualification-additional-12h",
     "stage": "v1", "previous_seconds": 7200, "additional_seconds": 43200,
@@ -62,6 +62,26 @@ PNG_CONTEXT_AUTHORIZATION = {
     "starting_revision": "cdff18c30a0492f242921d72fb369ef78a6a7f38",
     "unused_other_phase_allowances_transfer": False,
 }
+
+
+COVER_RANK_AUTHORIZATION = {
+    "authorization_id": "user-cover-rank-v1-2h",
+    "stage": "cover_rank_v1", "absolute_seconds": 7200,
+    "whole_project_seconds": 144000,
+    "scope": "six development and twenty held-out photographs, two paired arms, focused verification; no other matrix",
+    "starting_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
+    "unused_other_phase_allowances_transfer": False,
+}
+
+
+def apply_cover_rank_allowance(path=None):
+    path = Path(path) if path is not None else ROOT/"configs/cover_rank_authorization.json"
+    if path.exists():
+        if json.loads(path.read_text()) != COVER_RANK_AUTHORIZATION:
+            raise ValueError("conflicting cover-rank authorization")
+        return False
+    atomic_json(path, COVER_RANK_AUTHORIZATION)
+    return True
 
 
 def apply_png_context_allowance(path=None):
@@ -111,6 +131,12 @@ def apply_v1_allowance(path=None):
 def phase_limit(stage, authorization_path=None):
     if stage not in DEFAULT_PHASE_LIMITS:
         raise ValueError("unknown budget stage")
+    if stage == "cover_rank_v1":
+        path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/cover_rank_authorization.json"
+        if not path.exists(): return 0
+        if json.loads(path.read_text()) != COVER_RANK_AUTHORIZATION:
+            raise ValueError("invalid cover-rank authorization")
+        return COVER_RANK_AUTHORIZATION["absolute_seconds"]
     if stage == "png_context_detection":
         path = Path(authorization_path) if authorization_path is not None else ROOT/"configs/png_context_authorization.json"
         if not path.exists(): return 0

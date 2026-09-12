@@ -1,0 +1,80 @@
+{
+  "scope": "cover_rank_v1 final focused verification, no additional model execution",
+  "starting_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
+  "cpu_checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_cover_rank.py -v",
+      "tests": 7,
+      "passed": true,
+      "seconds": 1.696
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_gpu_performance.py -v",
+      "tests": 6,
+      "passed": true,
+      "seconds": 0.084,
+      "scope": "CPU-only temporary ledgers, mocked Popen, NumPy digests, invalid mode rejected before model loading"
+    },
+    {
+      "command": "python -B scripts/analyze_cover_rank_v1.py --verify-only --private-audit",
+      "passed": true,
+      "allocation": 52,
+      "scope": "Exact exported CSV/JSON values, PNG hashes and metrics, sources, GPU report identities, old-file preservation, private secret exclusion"
+    },
+    {
+      "command": "python -B paper/icaart2027/verify.py",
+      "passed": true,
+      "historical_public_files": 3700
+    },
+    {
+      "command": "python -B paper/icaart2027/package_source.py",
+      "passed": true,
+      "isolated_pdf_texts_identical": true
+    },
+    {
+      "command": "python -B -m imagecalgacus.cover_rank_study --through all",
+      "passed": true,
+      "scope": "Completed-run continuation skips every accepted outcome and launches zero new jobs"
+    }
+  ],
+  "independent_metric_check": {
+    "constant_rgb_values": [
+      100,
+      101
+    ],
+    "ssim": 0.9999505134293561,
+    "closed_form_ssim": 0.9999505134293563,
+    "psnr_db": 48.1308036086791
+  },
+  "experimental_checks_reference": "acceptance.json",
+  "private_preservation_reference": "private_preservation_check.json",
+  "analysis_script_sha256": "bca1d61251f84ecd38adf5fe6878819163624ad8381ea42a3efab8d407d43e27",
+  "figures": {
+    "cover_examples.pdf": "21905363e7b5d7558f5e900ab1a9149f7ddd79733a2d85f0c3eea34084cdfb70",
+    "text_photo_example.pdf": "1257fea19a49c1184c3129f5d8f05a256b95ab552f19e7f6d73dafe84bd23b53"
+  },
+  "paper": {
+    "main": {
+      "file": "ICAART2027_submission.pdf",
+      "sha256": "00a94e6995d918ecfea6518e6dbbf3d79ae474eadfc47e27db2cc8bcfb45a727",
+      "pages": 12,
+      "extracted_nonwhitespace_characters": 42189,
+      "empty_author_metadata": true
+    },
+    "supplement": {
+      "file": "ICAART2027_supplement.pdf",
+      "sha256": "6398769132013ec8b16de76fdf5f36251ae02877ad771680218bd3eda7daefb2",
+      "pages": 11,
+      "extracted_nonwhitespace_characters": 30057,
+      "empty_author_metadata": true
+    }
+  },
+  "archive_sha256": "529dcc19486d8d3a0342c851546ed54c793aa0290df9dec6be39bee6186715e4",
+  "all_main_and_companion_pages_visually_inspected": true,
+  "new_model_jobs_after_completed_study": 0,
+  "reporting_gpu_seconds": 0,
+  "experimental_charge_seconds": 429.14925801719073,
+  "unexpected_experimental_failures": 0,
+  "expected_authentication_rejections": 4,
+  "lossless_replays": 2
+}

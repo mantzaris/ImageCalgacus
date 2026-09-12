@@ -30,13 +30,13 @@ The actual bidirectional examples appear in Figure 1 of the main paper. Figure~\
 \section{\uppercase{Complete Prospective Tables}}
 Table~\ref{tab:rates} preserves the six method/direction cells, rate intervals and original prospective timing. All 20 arithmetic-text failures remain in attempted counts and contribute zero exact goodput. Table~\ref{tab:detect-full} provides both frozen detector scores, including below-chance point estimates and failed delivered carriers. No observer orientation is reversed. The grouped intervals retain payload class or text-length strata and shared controls, as specified in the main paper.
 
-\begin{table*}[!t]
+\begin{table*}[t]
 \caption{Expanded prospective recovery, goodput and runtime. There are 20 payload groups in each cell. Recovery intervals use two-sided 95\% Clopper--Pearson bounds. Goodput intervals use 2,000 stratified payload-group bootstrap draws. Phase times and charged pair times are overlapping boundaries, not costs to add. Text goodput is bits/token and PNG goodput bits/channel value.}
 \label{tab:rates}\centering\small
 \input{tables/supp_table2_v2_outcomes}
 \end{table*}
 
-\begin{table*}[!t]
+\begin{table*}[t]
 \caption{Full exploratory correct-context detection. Scores are whole-carrier mean surprisal and mean $\log_2$ rank, with higher always indicating stego. Intervals are the accepted 95\% grouped percentiles. Each row has 20 scorable stego files and 20 matched ordinary artifacts. These associations use only 40 independent ordinary traces across the two directions, not 120 controls or 240 score observations. All 20 failed arithmetic text carriers are included. No duplicates or unscorable artifacts were dropped. A collapsed empirical interval does not establish perfect population detection.}
 \label{tab:detect-full}\centering\small
 \input{tables/supp_table3_detectability}
@@ -49,17 +49,27 @@ For equal all-success binary cells, the observed difference is zero but the cons
 \section{\uppercase{Packet and Capacity Accounting}}
 The packet consists of a 12-byte nonce, 264 encrypted bytes and a 16-byte tag. Its eight-byte protected header records version, kind, length and dimensions. The 256-byte slot is full for images, but has a mean 162.8 padding bytes for held-out texts. Thus 36 framing/encryption bytes and slot padding are separate costs. Fixed radix 16 requires no rank-alignment padding. The accompanying protocol identity record retains the exact framing identifier and unrounded entropy thresholds.
 
-\begin{figure*}[!t]
+\begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/figureS1_arithmetic_capacity.pdf}
 \caption{Arithmetic packet-prefix accumulation for all 20 prospective text and 20 PNG cases. Dots are retained observations every 128 consumed symbols and at the final endpoint. Connecting lines are visual guides, not unrecorded intermediate measurements. The target is 2,336 useful packet bits. Text reaches its 2,048-token cap with only 581--2,216 bits. PNG reaches the target before ordinary completion fills the remaining canvas. Curves stop at the packet endpoint and do not include emitted zero suffix bits as useful information. Carrier units differ between panels. Isolated unchanged intervals in two failed texts and one successful PNG do not establish sustained stagnation as the text-failure cause.}
 \label{fig:arithmetic}
 \end{figure*}
 
-\begin{table*}[!t]
+\begin{table*}[t]
 \caption{Overhead means for every prospective method/direction cell. The packet's 36 framing bytes and slot padding are separate. A1 packet-positive and zero-bit positions partition its packet span. Its termination position overlaps the last positive position and is not added again. Emitted zero suffix and lookahead-zero diagnostics also overlap conceptually and are not extra payload. Text A1 has no complete-packet transport rate. The fixed full PNG has 2,976 channels. Serialized expansion divides delivered file bytes by canonical source bytes.}
 \label{tab:overhead}\centering\small
 \input{tables/supp_tableS1_overhead}
 \end{table*}
+
+The plaintext consists of an eight-byte header followed by a 256-byte payload slot. In order, the unsigned header fields are version (one byte, value 1), kind (one byte, 1 for text or 2 for grayscale), length (two bytes), width (two bytes) and height (two bytes). Multibyte fields are big-endian. Text dimensions are zero, and image dimensions are 16 by 16. The source occupies the beginning of the slot, followed by zero bytes. There is no MIME string or payload-specific sidecar.
+
+The channels require posterior updates, not independent mixture marginals. For mixture weights $w_k$ and observed red value $r$,
+\begin{align}
+q_R(r)&=\sum_k w_k f_{k,R}(r),\\
+w_k^{R}&=\frac{w_k f_{k,R}(r)}{q_R(r)},\\
+q_G(g\mid r)&=\sum_k w_k^{R} f_{k,G}(g\mid r).
+\end{align}
+The green mean is shifted by $a_{RG}z(r)$. After green, $w_k^{RG}\propto w_k^{R}f_{k,G}(g\mid r)$, and blue uses these normalized weights with mean shift $a_{RB}z(r)+a_{GB}z(g)$. This yields the joint RGB mixture through the product of the three conditionals. One network forward per visible pixel supplies parameters reused within that pixel. Causal checks establish that unobserved pixels do not alter these parameters.
 
 \subsection{A1 Interval Rules and Diagnostic Limits}
 The A1 implementation uses 32-bit half-open intervals. After selecting a subinterval $[l,u)$, its common-prefix length is
@@ -78,7 +88,7 @@ A concrete independently checked limitation is a narrow interval straddling a le
 Detailed packet windows and rank traces remain private. The retained public endpoint and 128-position checkpoint summaries are sufficient to inspect capacity without exposing those private audit streams. Complete packet-prefix bits are capped at 2,336 for successful PNGs, with suffix diagnostics reported separately. No line between observed checkpoints is used to infer a missing trace value.
 
 \section{\uppercase{Development Serialization Evidence}}
-\begin{figure*}[!t]
+\begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/figureS2_text_consistency.pdf}
 \caption{Paired development comparison of saved-text consistency, separate from the prospective study. Each column is one of 20 distinct image payloads under both frozen prompts. Sequence filtering checks the complete carrier prefix; static filtering checks singleton tokens only. Other candidate, probability, coding and completion rules are held fixed. Each context-specific pair uses the same sealed packet. Sequence recovery is 20/20 under each prompt. Static recovery is 8/20 for the forest prompt and 14/20 for the soup prompt, with 18 retained drift/replay failures. Static text is neither repaired nor accompanied by sender identifiers. The 40 context-specific cases are not 40 independent payloads.}
 \label{fig:consistency}
@@ -93,19 +103,19 @@ Twenty predetermined fixed PNG development carriers, covering both shared rows, 
 \section{\uppercase{Context Scores and Descriptive Shifts}}
 Table~\ref{tab:png-context-scores} expands the main context figure with both scores and paired intervals. The same 80 PNGs are rescored, and each of 20 controls is shared across methods. Twenty length-stratified payload groups, not 60 independent pairs, are resampled jointly with both observer conditions. The fixed primary decrease is supported by an interval below zero. Gated and A1 changes remain uncertain. A resolved change in one cell and an unresolved change in another do not establish a between-method interaction.
 
-\begin{table*}[!t]
+\begin{table*}[t]
 \caption{Correct and mismatched PNG AUCs for both frozen scores. Each row contains 20 scorable stego PNGs and 20 unique matched controls. Values and paired 95\% intervals are the accepted 2,000-draw length-stratified group analysis, with conditions, methods and shared controls kept together. Higher score always indicates stego. The paired interval is computed from within-draw differences, not by subtracting marginal interval endpoints. There are no failed scores or exclusions.}
 \label{tab:png-context-scores}\centering\small
 \input{tables/context_comparison}
 \end{table*}
 
-\begin{figure*}[!t]
+\begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/score_shifts.pdf}
 \caption{Descriptive within-PNG score shifts, row2 minus row1, in bits per delivered RGB channel value, not changes in AUC. All 80 observations come from the retained context study, 20 per category, with the same 20 payload groups and shared controls. Deterministic horizontal offsets only separate points. Open diamonds and annotations are category means. Row2 is the previously frozen random-RGB row, whereas row1 comes from a generated image. This post hoc analysis adds no test, interval or transmission. Mean shifts show score movement, while AUC depends on the full rankings. The plot does not establish secrecy or isolate a causal mechanism.}
 \label{fig:png-score-shifts}
 \end{figure*}
 
-\begin{table*}[!t]
+\begin{table*}[t]
 \caption{Descriptive score means and within-artifact changes for Figure~\ref{fig:png-score-shifts}. Each category contains 20 observations. Units are bits per delivered RGB channel value. Controls are counted once, and the four categories share 20 groups. These are post hoc summaries without added inferential claims.}
 \label{tab:score-shifts}\centering\small
 \input{tables/score_shifts}
@@ -114,13 +124,19 @@ Table~\ref{tab:png-context-scores} expands the main context figure with both sco
 The paired fixed-minus-control mean score gap decreases from 0.507624 to 0.231119, a change of $-0.276505$ bits per channel. Controls have a larger mean score increase than fixed carriers, consistent with this narrower gap. The pattern does not establish an independently confirmed mechanism for the AUC difference. It cannot separate context correctness from differences between generated-image row statistics and random RGB statistics. Near-chance AUC also does not establish cryptographic secrecy or broad resistance to detection.
 
 \section{\uppercase{Complete GPU Benchmark}}
-\begin{table*}[!t]
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/figure4_gpu_performance.pdf}
+\caption{Development GPU benchmark on the pinned RTX 5000 Ada configuration. Fixed rank has three alternating-order matched repetitions for each of three payloads, not nine independent scientific payloads. Encode/decode latency includes fresh-process loading, graph setup and teardown. Throughput counts recovered source bytes over both processes. All 11 comparisons, including the additional single-payload gated/A1 checks, preserve exact probability streams, PNG bytes and recovery. Allocated, reserved and sampled process memory are overlapping measures and must not be summed.}
+\label{fig:gpu-supp}
+\end{figure*}
+
+\begin{table*}[t]
 \caption{All five development payload/method combinations. Latencies are means of charged fresh-process encode/decode times. Fixed has three timing repetitions per payload; gating and A1 have one comparison on the 32-byte payload. Speedups are ratios of matched mean pair times. Per-row throughput is the accepted mean of individual source-bytes/pair-second ratios; the main headline instead pools bytes and times over nine fixed comparisons. All 11 comparisons and 22 recoveries preserve exact stream, carrier and source-byte equality. Repetitions do not increase the independent payload count.}
 \label{tab:benchmark}\centering\small
 \input{tables/supp_table4_gpu_benchmark}
 \end{table*}
 
-The three payloads were selected by first numeric development identifier within the 32--64, 65--96 and 97--128-byte bands, giving 32, 96 and 128 bytes. The same retained packet is used in each matched reference/graph comparison. Figure 4 of the main paper shows all nine fixed timing repetitions. Table~\ref{tab:benchmark} adds the two single-payload methods. No parameter, context or seed sweep was performed.
+The three payloads were selected by first numeric development identifier within the 32--64, 65--96 and 97--128-byte bands, giving 32, 96 and 128 bytes. The same retained packet is used in each matched reference/graph comparison. Figure~\ref{fig:gpu-supp} shows all nine fixed timing repetitions. Table~\ref{tab:benchmark} adds the two single-payload methods. No parameter, context or seed sweep was performed.
 
 Reference execution remains available and is the prospective baseline. The optional CUDA graph path uses static CUDA input/output buffers, three warmup forwards, capture of the unchanged network and synchronized replay. CPU normalization, mixture probabilities, rank ordering and serialization are identical. Exact stream digests include length-framed identifiers, float64 probabilities and rank order at every delivered channel. Their equality is stronger than accepting a numerical tolerance, but it is still evidence on the checked cases and stack, not a cross-platform theorem.
 
@@ -128,6 +144,7 @@ For the nine fixed comparisons, charged pair time averages 177.819 seconds refer
 
 Peak allocated PyTorch memory is 484.479 versus 473.849 MiB. Peak reserved memory is 516 versus 744 MiB. Sampled process memory is 912 versus 1,176 MiB. These different views overlap. Process-specific \texttt{nvidia-smi pmon} observations use the child PID, with roughly 0.19-second polling. Driver windows, correlated samples and gaps prevent interpreting a single peak or sampled average as sustained utilization. All 45 benchmark model jobs, one short probe and 44 sender/receiver processes, have allocation and positive activity evidence. The probe is charged but not included in the matched timing means.
 
+\input{sections/cover_supplement}
 \section{\uppercase{Reproducibility and Evidence Boundaries}}
 Checkpoint SHA-256 identities follow, wrapped without separators. Private paths, device serials and context bytes are omitted.
 \begin{itemize}

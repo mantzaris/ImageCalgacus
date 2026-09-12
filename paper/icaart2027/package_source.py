@@ -25,7 +25,7 @@ def main():
     files += sorted((HERE / "sections").glob("*.tex"))
     files += sorted((HERE / "figures").glob("*.pdf"))
     files += [HERE / "figures/method_diagram.tex"]
-    for name in ("main_outcomes", "context_comparison", "score_shifts", "supp_table2_v2_outcomes", "supp_table3_detectability", "supp_tableS1_overhead", "supp_table4_gpu_benchmark"):
+    for name in ("cover_main", "main_outcomes", "context_comparison", "score_shifts", "supp_table2_v2_outcomes", "supp_table3_detectability", "supp_tableS1_overhead", "supp_table4_gpu_benchmark"):
         files.append(HERE / "tables" / (name + ".tex"))
     for name in ("article.cls", "SCITEPRESS.sty", "apalike.sty", "apalike.bst", "provenance.json"):
         files.append(HERE / "template" / name)
@@ -70,4 +70,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

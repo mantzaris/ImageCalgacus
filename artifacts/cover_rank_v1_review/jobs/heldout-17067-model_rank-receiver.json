@@ -1,0 +1,116 @@
+{
+  "event": "finished",
+  "id": "cover_rank_v1-081-heldout-17067-model_rank-receiver",
+  "elapsed_seconds": 6.691339708981104,
+  "returncode": 0,
+  "failure": null,
+  "logs": ".runtime/cover_rank_v1/logs/cover_rank_v1-081-heldout-17067-model_rank-receiver",
+  "pid": 2279695,
+  "cumulative_seconds": 320.1547092080582,
+  "gpu_activity": {
+    "samples": 16,
+    "positive_samples": 15,
+    "sampling": "nvidia-smi pmon matched child PID, serial, approximately 0.2 seconds; not sustained utilization inference",
+    "peak_sm_percent": 36
+  },
+  "neural_inference": true,
+  "command": [
+    "/home/meow/Documents/repos/llm-rankcloak/.venv/bin/python",
+    "-B",
+    "-m",
+    "imagecalgacus.cover_rank",
+    "decode",
+    "--arm",
+    "model_rank",
+    "--carrier",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/heldout-17067-model_rank/carrier.png",
+    "--key",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/heldout-17067-model_rank/run.key",
+    "--profile",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/receivers/heldout-17067-model_rank/profile.json",
+    "--output",
+    "/home/meow/Documents/repos/ImageCalgacus/artifacts/cover_rank_v1_review/outcomes/heldout-17067-model_rank/recovered.txt",
+    "--report",
+    "/home/meow/Documents/repos/ImageCalgacus/runs/cover-rank-v1-001/reports/heldout-17067-model_rank-receiver.json"
+  ],
+  "report": {
+    "operation": "decode",
+    "status": "passed",
+    "source_hash": "badeb34ed415eb98889a818fe02edc4ac45afd4dd3453f99804a826a730bd2a7",
+    "profile_sha256": "42a03558d233a990025447c0deda7395332f76050aea696beed0026b4cbdecfc",
+    "packet_complete": true,
+    "carrier_complete": true,
+    "authenticated": true,
+    "arm": "model_rank",
+    "coarse_sha256": "ef8f28b08c7d15fd2bc37d76a0e1a09919a4994ac7c1d54cfa4959ee3e125986",
+    "model_calls": 64,
+    "digests": {
+      "parameters": "1990e658d2551bd123386b58255e7aee91384edf8311ba695ebfe7f5dc7c2127",
+      "candidate_log_scores": "0022a2249bc66151c08694dd15c7f0afe84fa0af3cc2bc66662c0ec4427f29ce",
+      "rank_order": "f32251d383f1289e671d9ce8b1b5522756771ff5669f6a1deea5537be5081160"
+    },
+    "partition_disagreement_up_to_swap_mean": 0.4480415239726027,
+    "nonidentical_partitions": 2336,
+    "selected_pixels": 2336,
+    "phase_seconds": 1.999120767985005,
+    "output_sha256": "5ac92af0a907a51de75e4e10f81b411c6ebebeeef3ee2a98eb2b970cf321496d",
+    "load_seconds": 0.8575837099924684,
+    "gpu": {
+      "device": {
+        "uuid": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf",
+        "pci_bus_id": "00000000:09:00.0",
+        "name": "NVIDIA RTX 5000 Ada Generation",
+        "total_mib": 32760,
+        "free_mib_before": 32220,
+        "driver": "590.48.01",
+        "logical_device": 0,
+        "effective_environment": {
+          "CUDA_LAUNCH_BLOCKING": "1",
+          "GGML_CUDA_DISABLE_GRAPHS": "1",
+          "GGML_CUDA_DISABLE_FUSION": "1",
+          "GGML_CUDA_FORCE_CUBLAS_COMPUTE_32F": "1",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+          "CUDA_VISIBLE_DEVICES": "GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf"
+        },
+        "pid": 2279695
+      },
+      "backend": "torch",
+      "version": "2.5.1+cu124",
+      "cuda_runtime": "12.4",
+      "cudnn": 90100,
+      "model_sha256": "a5ed558f6d4098ce3cbfd47658b7e3be37fae77b71a90c8a56f46a6266ff833f",
+      "strict_loading": true,
+      "checkpoint_key_mapping": "strip uniform module. prefix",
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "parameter_devices": [
+        "cuda:0"
+      ],
+      "eval_mode": true,
+      "deterministic_algorithms": true,
+      "tf32": false,
+      "gpu_allocation": [
+        "2279695, GPU-10d1f16f-9e79-08bb-b2ba-3353c04422cf, 582"
+      ],
+      "execution_mode": "cuda_graph",
+      "graph_warmup_forwards": 3,
+      "graph_capture": true,
+      "graph_capture_error_mode": "global",
+      "graph_input_shape": [
+        1,
+        3,
+        32,
+        32
+      ],
+      "execution_setup_seconds": 0.5969331219675951,
+      "inference_mode": true,
+      "input_device": "cuda:0",
+      "output_device": "cuda:0",
+      "cuda_model_milliseconds": 732.269567489624,
+      "peak_cuda_allocated_bytes": 496866304,
+      "peak_cuda_reserved_bytes": 780140544
+    },
+    "total_inner_seconds": 5.807663317013066
+  }
+}

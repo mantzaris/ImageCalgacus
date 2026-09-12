@@ -1,0 +1,20 @@
+{
+  "stage": "cover_rank_v1",
+  "limit_seconds": 7200,
+  "charged_seconds": 429.14925801719073,
+  "neural_occupied_seconds": 387.75635975191835,
+  "model_free_child_seconds_charged_conservatively": 41.39289826527238,
+  "jobs": 111,
+  "neural_jobs": 56,
+  "history_seconds": {
+    "v0": 3163.653124010041,
+    "v1": 39995.5091691459,
+    "v2": 42024.52764170886,
+    "gpu_performance": 2351.732528250024,
+    "png_context_detection": 1439.645473357872,
+    "cover_rank_v1": 0
+  },
+  "remaining_stage_seconds": 6770.850741982809,
+  "cumulative_seconds": 89404.21719448989,
+  "remaining_whole_project_seconds": 54595.78280551011
+}

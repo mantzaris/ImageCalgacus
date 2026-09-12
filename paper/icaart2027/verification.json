@@ -8,8 +8,82 @@
     ".runtime/v2/gpu_budget.jsonl": 42024.52764170886,
     ".runtime/png_context_detection/gpu_budget.jsonl": 1439.645473357872
   },
-  "cumulative_gpu_seconds": 88975.0679364727,
-  "new_gpu_seconds": 0,
+  "cumulative_gpu_seconds": 89404.21719448989,
+  "manuscript_verification_gpu_seconds": 0,
+  "new_gpu_seconds": 429.14925801719073,
+  "cover_rank_budget": {
+    "stage": "cover_rank_v1",
+    "limit_seconds": 7200,
+    "charged_seconds": 429.14925801719073,
+    "neural_occupied_seconds": 387.75635975191835,
+    "model_free_child_seconds_charged_conservatively": 41.39289826527238,
+    "jobs": 111,
+    "neural_jobs": 56,
+    "history_seconds": {
+      "v0": 3163.653124010041,
+      "v1": 39995.5091691459,
+      "v2": 42024.52764170886,
+      "gpu_performance": 2351.732528250024,
+      "png_context_detection": 1439.645473357872,
+      "cover_rank_v1": 0
+    },
+    "remaining_stage_seconds": 6770.850741982809,
+    "cumulative_seconds": 89404.21719448989,
+    "remaining_whole_project_seconds": 54595.78280551011
+  },
+  "cover_rank_saved_evidence": {
+    "allocation_complete": true,
+    "attempted": 52,
+    "exact": 52,
+    "development_exact": 12,
+    "heldout_exact": 40,
+    "focused_checks": [
+      {
+        "arm": "model_rank",
+        "check": "wrong-key",
+        "passed": true,
+        "job_id": "cover_rank_v1-026-development-2092-model_rank-wrong-key",
+        "pixel_equality": null
+      },
+      {
+        "arm": "model_rank",
+        "check": "changed-bit",
+        "passed": true,
+        "job_id": "cover_rank_v1-027-development-2092-model_rank-changed-bit",
+        "pixel_equality": null
+      },
+      {
+        "arm": "model_rank",
+        "check": "lossless",
+        "passed": true,
+        "job_id": "cover_rank_v1-028-development-2092-model_rank-lossless",
+        "pixel_equality": true
+      },
+      {
+        "arm": "parity",
+        "check": "wrong-key",
+        "passed": true,
+        "job_id": "cover_rank_v1-029-development-2092-parity-wrong-key",
+        "pixel_equality": null
+      },
+      {
+        "arm": "parity",
+        "check": "changed-bit",
+        "passed": true,
+        "job_id": "cover_rank_v1-030-development-2092-parity-changed-bit",
+        "pixel_equality": null
+      },
+      {
+        "arm": "parity",
+        "check": "lossless",
+        "passed": true,
+        "job_id": "cover_rank_v1-031-development-2092-parity-lossless",
+        "pixel_equality": true
+      }
+    ],
+    "theoretical_psnr_lower_bound_db": 53.068449436119224,
+    "public_verification": "saved evidence, hashes, equality and coverage; not fresh private-key decoding"
+  },
   "template_and_copied_assets_unchanged": true,
   "six_recovery_cells": [
     20,
@@ -93,17 +167,18 @@
     "forbidden_files": []
   },
   "editorial_revision": {
-    "reviewed_revision": "9f911438755ac8fff5ae9b6ea9f30850efb6b6da",
-    "unchanged_abstract_disclosure_design_references_tables_and_assets": true,
-    "preamble_change": "Shorter drafting footnote only; section-level citations and all layout settings retained",
-    "unchanged_manuscript_files_checked": 33,
+    "reviewed_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
+    "unchanged_historical_tables_and_figure_assets": true,
+    "authorized_changes": "cover_rank_v1 methods/results, related references, abstract/conclusion, GPU plot moved to companion",
+    "preamble_change": "none from e39c14c; template settings and disclosure retained",
+    "unchanged_manuscript_files_checked": 28,
     "worked_examples": {
       "figure": 1,
       "panels": [
         "A",
         "B"
       ],
-      "page": 3,
+      "page": 4,
       "unchanged_asset": "figures/figure1_transport.pdf"
     },
     "process_diagram": {
@@ -116,32 +191,32 @@
   "pdfs": {
     "main": {
       "file": "ICAART2027_submission.pdf",
-      "sha256": "75b17949332a9062b9661a0477faeb04da6cfa221eb8cc86380386baaef8b912",
+      "sha256": "00a94e6995d918ecfea6518e6dbbf3d79ae474eadfc47e27db2cc8bcfb45a727",
       "pages": 12,
-      "extracted_nonwhitespace_characters": 39713,
+      "extracted_nonwhitespace_characters": 42189,
       "empty_author_metadata": true
     },
     "supplement": {
       "file": "ICAART2027_supplement.pdf",
-      "sha256": "c63445b96f1f9ff39e2827aacf3f7b5b53e6d5791159f338e911f54f7e372691",
-      "pages": 8,
-      "extracted_nonwhitespace_characters": 21645,
+      "sha256": "6398769132013ec8b16de76fdf5f36251ae02877ad771680218bd3eda7daefb2",
+      "pages": 11,
+      "extracted_nonwhitespace_characters": 30057,
       "empty_author_metadata": true
     }
   },
   "character_count": {
-    "abstract_words_whitespace_method": 176,
-    "main_extracted_including_figures_tables_references": 39713,
+    "abstract_words_whitespace_method": 184,
+    "main_extracted_including_figures_tables_references": 42189,
     "main_external_figures_counted": [
       "figure1_transport.pdf",
       "figure2_recovery_rate.pdf",
       "context_auc.pdf",
-      "figure4_gpu_performance.pdf"
+      "text_photo_example.pdf"
     ],
-    "duplicated_external_figure_text_allowance": 1883,
+    "duplicated_external_figure_text_allowance": 1653,
     "whole_diagram_source_allowance": 0,
     "additional_extraction_allowance": 1000,
-    "conservative_main_nonwhitespace_estimate": 42596,
+    "conservative_main_nonwhitespace_estimate": 44842,
     "official_regular_paper_range": [
       10000,
       50000
@@ -149,6 +224,6 @@
     "caveat": "Conservative estimate, not an official portal count. No official graph-to-character conversion was specified. All visible figure text was also visually inspected."
   },
   "passed": true,
-  "source_revision": "9f911438755ac8fff5ae9b6ea9f30850efb6b6da",
-  "verification_script_sha256": "79bb9f1f2bc9d92cb4151796109beaad8c92e1ca82d980306dcdd972727a313f"
+  "source_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
+  "verification_script_sha256": "a7ba50db5edc2d41edc4b50810eaaf64e8df83d129ff70bc5d62aacd2f517941"
 }

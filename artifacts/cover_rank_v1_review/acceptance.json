@@ -1,0 +1,53 @@
+{
+  "allocation_complete": true,
+  "attempted": 52,
+  "exact": 52,
+  "development_exact": 12,
+  "heldout_exact": 40,
+  "focused_checks": [
+    {
+      "arm": "model_rank",
+      "check": "wrong-key",
+      "passed": true,
+      "job_id": "cover_rank_v1-026-development-2092-model_rank-wrong-key",
+      "pixel_equality": null
+    },
+    {
+      "arm": "model_rank",
+      "check": "changed-bit",
+      "passed": true,
+      "job_id": "cover_rank_v1-027-development-2092-model_rank-changed-bit",
+      "pixel_equality": null
+    },
+    {
+      "arm": "model_rank",
+      "check": "lossless",
+      "passed": true,
+      "job_id": "cover_rank_v1-028-development-2092-model_rank-lossless",
+      "pixel_equality": true
+    },
+    {
+      "arm": "parity",
+      "check": "wrong-key",
+      "passed": true,
+      "job_id": "cover_rank_v1-029-development-2092-parity-wrong-key",
+      "pixel_equality": null
+    },
+    {
+      "arm": "parity",
+      "check": "changed-bit",
+      "passed": true,
+      "job_id": "cover_rank_v1-030-development-2092-parity-changed-bit",
+      "pixel_equality": null
+    },
+    {
+      "arm": "parity",
+      "check": "lossless",
+      "passed": true,
+      "job_id": "cover_rank_v1-031-development-2092-parity-lossless",
+      "pixel_equality": true
+    }
+  ],
+  "theoretical_psnr_lower_bound_db": 53.068449436119224,
+  "public_verification": "saved evidence, hashes, equality and coverage; not fresh private-key decoding"
+}

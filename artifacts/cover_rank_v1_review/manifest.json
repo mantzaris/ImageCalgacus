@@ -1,0 +1,1286 @@
+{
+  "schema": "cover-rank-study-v1",
+  "starting_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
+  "created_utc": "2026-09-12T01:51:01.293754+00:00",
+  "source_revision": "a04b7c6c3a9f0ace74bf205c72a43d32e1c72722",
+  "source_manifest_sha256": "9c20a5c11896c84d0f7accf2c5e4ad99c4e432f7bdd02bdaa2056ae3b048346f",
+  "selection": "smallest numeric JPEG identifiers in train (6) and test (20), before outcomes; center crop floor offsets, RGB, no resize",
+  "groups": [
+    {
+      "id": "development-2092",
+      "split": "development",
+      "bsds_id": "2092",
+      "partition": "train",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/train/2092.jpg",
+      "original_sha256": "274503ed987a029f7e128487ea1f657f563ee68e1bd3fb1f691e218a9aea054d",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/development-2092/cover.png",
+      "cover_sha256": "056c79bf891f29e9a0e87df401bef8f9b9a1d6c320750748ac57ede249a4055c",
+      "pixel_sha256": "c77c788069da1646a95bac4ce3731e312815160800fd75cb79bafbf753890cdb",
+      "source": "cases/development-2092/source.txt",
+      "source_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf",
+      "source_bytes": 32,
+      "text_id": "T1",
+      "text_provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T1.txt",
+        "original_file_sha256": "47258d9e1a4712d88e55707a6f17fd308307ff398340ad5206efb249d27f1bcf"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "development-2092-model_rank",
+        "development-2092-parity"
+      ]
+    },
+    {
+      "id": "development-8049",
+      "split": "development",
+      "bsds_id": "8049",
+      "partition": "train",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/train/8049.jpg",
+      "original_sha256": "418ea26f53efd8707399bea46c9a295c7c7e96b05b5b4792af7214649aba249b",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/development-8049/cover.png",
+      "cover_sha256": "9cb32c7bbee83c8b14d51e0321d550fce84443335115f5dbcc48d788114f1c3a",
+      "pixel_sha256": "193f03e1c43c5bd6acd059295c58ca58ea2ba730cba1c6f4dd5e25a276a1c8d2",
+      "source": "cases/development-8049/source.txt",
+      "source_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458",
+      "source_bytes": 48,
+      "text_id": "T2",
+      "text_provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T2.txt",
+        "original_file_sha256": "e80c80b035e913107422ce0e724f84e1de092408b08af0282758c27c8fd06458"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "development-8049-model_rank",
+        "development-8049-parity"
+      ]
+    },
+    {
+      "id": "development-8143",
+      "split": "development",
+      "bsds_id": "8143",
+      "partition": "train",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/train/8143.jpg",
+      "original_sha256": "76e88b97c7640c2203a0f61d6739d8590f0c7e89d064d045cb68c65ead634fd9",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/development-8143/cover.png",
+      "cover_sha256": "f069590288fd25bb95f959490ede37fa7cf713706381d8e69b0e2264808b8f3a",
+      "pixel_sha256": "f1d2d147d8e4a27839f808d59341d71c7e92b6b1a2aa18215a3e6d9c6c0302e1",
+      "source": "cases/development-8143/source.txt",
+      "source_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f",
+      "source_bytes": 64,
+      "text_id": "T3",
+      "text_provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T3.txt",
+        "original_file_sha256": "a6080eafb8968767781ec090129e2a3b6ba05deb30a6a469f02988adc8cde54f"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "development-8143-model_rank",
+        "development-8143-parity"
+      ]
+    },
+    {
+      "id": "development-12003",
+      "split": "development",
+      "bsds_id": "12003",
+      "partition": "train",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/train/12003.jpg",
+      "original_sha256": "82209028e619fa21b087ea9e3863c05febbf1d05d9d4f078e6cd2fb233d67e2b",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/development-12003/cover.png",
+      "cover_sha256": "dc08951eef961ad22980cbc55787e53ed3fc0dfa5576137594d124f77f2ff996",
+      "pixel_sha256": "5dc08e4e108705fa3eeb04e26d0d499389f36f5dda0932e22b657f1496a9360f",
+      "source": "cases/development-12003/source.txt",
+      "source_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834",
+      "source_bytes": 96,
+      "text_id": "T4",
+      "text_provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T4.txt",
+        "original_file_sha256": "483b7ced50ff56ca8ed071453e70c09689e28e15f881799080701e38859c2834"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "development-12003-model_rank",
+        "development-12003-parity"
+      ]
+    },
+    {
+      "id": "development-12074",
+      "split": "development",
+      "bsds_id": "12074",
+      "partition": "train",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/train/12074.jpg",
+      "original_sha256": "2da4340200aea1bce9a52f3824d50eca50a3dd4a7a923ae3f6de494ae1152ba6",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/development-12074/cover.png",
+      "cover_sha256": "c3893a0fc2de0687e142b61a362512ce7b13d91c1ad023d3eaf443749ad53318",
+      "pixel_sha256": "80c7d187a4bafe678316bd9f3c13f1ffe5ba2e68cdb92c32be610af423fef20a",
+      "source": "cases/development-12074/source.txt",
+      "source_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8",
+      "source_bytes": 128,
+      "text_id": "T5",
+      "text_provenance": {
+        "type": "accepted_fixture",
+        "original_path": "artifacts/v0_review/fixtures/T5.txt",
+        "original_file_sha256": "f013f5c7858734e13dab17fb7d5e75dfdee53e04bdf3f01517ba8f3ad3780bf8"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "development-12074-model_rank",
+        "development-12074-parity"
+      ]
+    },
+    {
+      "id": "development-15004",
+      "split": "development",
+      "bsds_id": "15004",
+      "partition": "train",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/train/15004.jpg",
+      "original_sha256": "2ed06661ad2089a06ad998a10206d7b4d4ea5340ad9418037d9585185981e0b9",
+      "original_dimensions": [
+        321,
+        481
+      ],
+      "crop_box": [
+        32,
+        112,
+        288,
+        368
+      ],
+      "cover": "cases/development-15004/cover.png",
+      "cover_sha256": "a83b26e2e5175404732baca516be11da2a8535f771ebbbc7209ecea032df613d",
+      "pixel_sha256": "3d6b588ad82f24f84920cad5a1eb3f0c18565cdd704d1d7b6a96549e57194c48",
+      "source": "cases/development-15004/source.txt",
+      "source_sha256": "c448ebd6168fe1e0ea249d1152f74c2988afd24ded5e66f217d05670d6538fc8",
+      "source_bytes": 62,
+      "text_id": "T6",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 11,
+        "author": "Lewis Carroll",
+        "title": "Alice's Adventures in Wonderland",
+        "archive": "pg11.txt",
+        "byte_start": 1570,
+        "byte_end_exclusive": 1632,
+        "body_byte_bounds": [
+          1570,
+          155392
+        ],
+        "narrative_start": "Alice was beginning to get very tired",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "development-15004-model_rank",
+        "development-15004-parity"
+      ]
+    },
+    {
+      "id": "heldout-2018",
+      "split": "heldout",
+      "bsds_id": "2018",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/2018.jpg",
+      "original_sha256": "181f54d5dc7c77222c5c9992289c885f38156fcae91df8e25c2dda2d3f810b00",
+      "original_dimensions": [
+        321,
+        481
+      ],
+      "crop_box": [
+        32,
+        112,
+        288,
+        368
+      ],
+      "cover": "cases/heldout-2018/cover.png",
+      "cover_sha256": "72f5df6e797e47e379444edda5be2fbc2b973aed979217afe64eec4a22a7e097",
+      "pixel_sha256": "c183c01a05a6db86af362060bb17744f58e0fc4455bd59bd327bf127dedc61ec",
+      "source": "cases/heldout-2018/source.txt",
+      "source_sha256": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751",
+      "source_bytes": 63,
+      "text_id": "HT1",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 36503,
+        "byte_end_exclusive": 36566,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-2018-model_rank",
+        "heldout-2018-parity"
+      ]
+    },
+    {
+      "id": "heldout-3063",
+      "split": "heldout",
+      "bsds_id": "3063",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/3063.jpg",
+      "original_sha256": "b98bff045cc2fca3011e11d437b11e9ad564c305f5e75aeed8cf1e99b23d2076",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-3063/cover.png",
+      "cover_sha256": "3c45a945ce537c946bdf676d9df367c557e12403f0352e75b55916975fdf4d64",
+      "pixel_sha256": "5f37cebd06e1f53c56e610b1961916583601f2632a99eb3dd45751f16e1f0451",
+      "source": "cases/heldout-3063/source.txt",
+      "source_sha256": "85fe1c976accd1d7bed549bce82d2feff62b804643a1f39ca0afc2fb6148d0a3",
+      "source_bytes": 59,
+      "text_id": "HT2",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 1567,
+        "byte_end_exclusive": 1626,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-3063-model_rank",
+        "heldout-3063-parity"
+      ]
+    },
+    {
+      "id": "heldout-5096",
+      "split": "heldout",
+      "bsds_id": "5096",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/5096.jpg",
+      "original_sha256": "036eeb42cc04fea9f0bd7c3c19343e0c3e66b74c979e74829331e4a832ae7810",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-5096/cover.png",
+      "cover_sha256": "eb04995e99bd363289142d966a46d0db1f34cba3ab0a38d148b7916ae6e071bd",
+      "pixel_sha256": "8844c55b6c6ed99fe21060a9ecc5314009da987325d482922c1e4ca8b9e9cd2a",
+      "source": "cases/heldout-5096/source.txt",
+      "source_sha256": "98ec2eca0d7eacaa50d02de5c31393a69163beded7e1c74cd96b24370164ca42",
+      "source_bytes": 63,
+      "text_id": "HT3",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 37345,
+        "byte_end_exclusive": 37408,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-5096-model_rank",
+        "heldout-5096-parity"
+      ]
+    },
+    {
+      "id": "heldout-6046",
+      "split": "heldout",
+      "bsds_id": "6046",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/6046.jpg",
+      "original_sha256": "3db99e079df3ee618560d840d02dbf124e35d06461058b4f88688b7334cbe098",
+      "original_dimensions": [
+        321,
+        481
+      ],
+      "crop_box": [
+        32,
+        112,
+        288,
+        368
+      ],
+      "cover": "cases/heldout-6046/cover.png",
+      "cover_sha256": "b8b626083cd286c1d882c6b2df218c9c52a28dab542c812692c3e9ac7dbe9e9c",
+      "pixel_sha256": "2ba267138e536c4c3d330775046ff72a041b2eab97431cffa66241dfbe92ba77",
+      "source": "cases/heldout-6046/source.txt",
+      "source_sha256": "31e226f9712d66ec52ead5909ff36b5162d4c63ab017eb6d6421a4509b944f4e",
+      "source_bytes": 62,
+      "text_id": "HT4",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 2738,
+        "byte_end_exclusive": 2800,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-6046-model_rank",
+        "heldout-6046-parity"
+      ]
+    },
+    {
+      "id": "heldout-8068",
+      "split": "heldout",
+      "bsds_id": "8068",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/8068.jpg",
+      "original_sha256": "160faa4e5a1ce7428bc03e12c4d5b12b2780e8955de2210b7e91421d662911d5",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-8068/cover.png",
+      "cover_sha256": "a79768b3fa9b5c44c1c3bb186fff3791560f91160d711f6717026ea48248ffc1",
+      "pixel_sha256": "5039c094714d905c801901cc644027e493d55b1ea4e4bb0a7963c570854d3fd1",
+      "source": "cases/heldout-8068/source.txt",
+      "source_sha256": "64028841311fe292a4c6f79746414c2f3f32f502463f7ab08f91654a0ace2848",
+      "source_bytes": 63,
+      "text_id": "HT5",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 37834,
+        "byte_end_exclusive": 37897,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-8068-model_rank",
+        "heldout-8068-parity"
+      ]
+    },
+    {
+      "id": "heldout-10081",
+      "split": "heldout",
+      "bsds_id": "10081",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/10081.jpg",
+      "original_sha256": "ce1a8bd8da460cf2606b6b5fd55762f8e13b2576fff508228ac24c80839db389",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-10081/cover.png",
+      "cover_sha256": "dfdae463f1aa8ee4520a81e7ba764e5e2d048459c3684acda4a99d63a21d6ffe",
+      "pixel_sha256": "108da8fde06950fef61d85f74960ae82373823a4a5ee5f2651926f1d30da5441",
+      "source": "cases/heldout-10081/source.txt",
+      "source_sha256": "13eac85c080f565027e0c08eb6e4a57e0a3430ff64212a7f9ae0b75bd654532f",
+      "source_bytes": 58,
+      "text_id": "HT6",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 4060,
+        "byte_end_exclusive": 4118,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-10081-model_rank",
+        "heldout-10081-parity"
+      ]
+    },
+    {
+      "id": "heldout-14085",
+      "split": "heldout",
+      "bsds_id": "14085",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/14085.jpg",
+      "original_sha256": "422ecc12e446aab0402491ca760617614efe5df15ff2885047898348366cd182",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-14085/cover.png",
+      "cover_sha256": "a41da22c7367b4528063924a0188dc0e0e69bdc871b56a098db6f4a15b1195cd",
+      "pixel_sha256": "9fc86c4d7d79a9e7b99ad872c23a28f9d2dd3819398262fceabc3f1c1a2909ea",
+      "source": "cases/heldout-14085/source.txt",
+      "source_sha256": "0bcc108da3c92ed2b44ed389f17da5f57c43643e7a932c44552b3f6c0e1a8785",
+      "source_bytes": 61,
+      "text_id": "HT7",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38012,
+        "byte_end_exclusive": 38073,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-14085-model_rank",
+        "heldout-14085-parity"
+      ]
+    },
+    {
+      "id": "heldout-14092",
+      "split": "heldout",
+      "bsds_id": "14092",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/14092.jpg",
+      "original_sha256": "28cf7a6fedc4e759b555a21ec7293c1c76ed86ba584e78acc15fa80a3f0a8af4",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-14092/cover.png",
+      "cover_sha256": "68d63faac243fa3fc6b54e2f9a6e53cae1d22ee60e12e56e017a04e6c9fd372f",
+      "pixel_sha256": "46e805a980f1f54625c98a145367d913a76fc61b80480c000c82302b690287fd",
+      "source": "cases/heldout-14092/source.txt",
+      "source_sha256": "d32ff286d8a89214b0ff03c9e18c8ae42add44ec18851732420cbaf67d47cbf5",
+      "source_bytes": 62,
+      "text_id": "HT8",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5057,
+        "byte_end_exclusive": 5119,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-14092-model_rank",
+        "heldout-14092-parity"
+      ]
+    },
+    {
+      "id": "heldout-15011",
+      "split": "heldout",
+      "bsds_id": "15011",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/15011.jpg",
+      "original_sha256": "faa6f24b35efb5368b35cad0c855cdf1346caa762d881a77b6499b7dfa6bd9c9",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-15011/cover.png",
+      "cover_sha256": "c4ddc234ef6f096a5722b82a6dec8094676a428493c30705fb7b2b54ccb965d3",
+      "pixel_sha256": "41ffd32faca8e89e3285769c4fbb00d4c6bd2386b921c74e1cef4bf951d23498",
+      "source": "cases/heldout-15011/source.txt",
+      "source_sha256": "6a088fc93fdb230de31d998760e500185e0136db1a3e9317a3240dd995e2d7d1",
+      "source_bytes": 60,
+      "text_id": "HT9",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38202,
+        "byte_end_exclusive": 38262,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-15011-model_rank",
+        "heldout-15011-parity"
+      ]
+    },
+    {
+      "id": "heldout-15062",
+      "split": "heldout",
+      "bsds_id": "15062",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/15062.jpg",
+      "original_sha256": "5f712262d849dc0c0f3a2105f7a84a5e9d43acd0322dbe3c623ab1666c263b45",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-15062/cover.png",
+      "cover_sha256": "4a4151317831865622a411b608d9b877f561a669a2792b4b163ed2a2d634a4be",
+      "pixel_sha256": "caf741ce0e4a2c5d21030027fcd230341e58545124c026b02dbc63848220dc2c",
+      "source": "cases/heldout-15062/source.txt",
+      "source_sha256": "f80e89fe3fbd42d706af32b81f5b689e1de2ce6f19dd26772221d0cb84a3f3ec",
+      "source_bytes": 64,
+      "text_id": "HT10",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5560,
+        "byte_end_exclusive": 5624,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-15062-model_rank",
+        "heldout-15062-parity"
+      ]
+    },
+    {
+      "id": "heldout-16004",
+      "split": "heldout",
+      "bsds_id": "16004",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/16004.jpg",
+      "original_sha256": "60bbabf581e05d4375f038a2f5e3b54d7f432309555ec862bad055861745d065",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-16004/cover.png",
+      "cover_sha256": "de19058ddc2a0f5f4a2e0e35d8ab117e8aea1da3efbbf43024d94886f95db558",
+      "pixel_sha256": "e79bcc905a96142b713667ea3614b9421405fda32aba339548961c6b2f02acd0",
+      "source": "cases/heldout-16004/source.txt",
+      "source_sha256": "10930daad5e3ff45fa2dab4d556af9f92192cf545bc0679f849a390c630370e5",
+      "source_bytes": 126,
+      "text_id": "HT11",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38373,
+        "byte_end_exclusive": 38499,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-16004-model_rank",
+        "heldout-16004-parity"
+      ]
+    },
+    {
+      "id": "heldout-16068",
+      "split": "heldout",
+      "bsds_id": "16068",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/16068.jpg",
+      "original_sha256": "41860a888ef88a53fd2a8f87efe6aa940cb251846a4e4286b314cf6837db685d",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-16068/cover.png",
+      "cover_sha256": "07eb1fa95e72700385d59a988f0defcd99fe361a70edffc4d5496d6a97e19a27",
+      "pixel_sha256": "2b37f128becf0a09d389b65b72b0bf0c7b88ac49f366b4ceb8184f90e9eaf9fd",
+      "source": "cases/heldout-16068/source.txt",
+      "source_sha256": "135d4bd11c99eedecf75d0777cf252f5a3486caf8cc5b8eccc8cfe9e8242b24c",
+      "source_bytes": 126,
+      "text_id": "HT12",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5777,
+        "byte_end_exclusive": 5903,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-16068-model_rank",
+        "heldout-16068-parity"
+      ]
+    },
+    {
+      "id": "heldout-17067",
+      "split": "heldout",
+      "bsds_id": "17067",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/17067.jpg",
+      "original_sha256": "009272fd55b183079416afa7dce44f378e5ebee0671fb93f0b7c625896568d7d",
+      "original_dimensions": [
+        321,
+        481
+      ],
+      "crop_box": [
+        32,
+        112,
+        288,
+        368
+      ],
+      "cover": "cases/heldout-17067/cover.png",
+      "cover_sha256": "915d25616f753aa6c3f7de6d34ad0ec72ee108f40acfac5eb49d0c78fd92496e",
+      "pixel_sha256": "6f3124a5b085d60d0acfc3514ec6018651ddc077da1fc3431f49f4cdbeff9729",
+      "source": "cases/heldout-17067/source.txt",
+      "source_sha256": "5ac92af0a907a51de75e4e10f81b411c6ebebeeef3ee2a98eb2b970cf321496d",
+      "source_bytes": 128,
+      "text_id": "HT13",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 38604,
+        "byte_end_exclusive": 38732,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-17067-model_rank",
+        "heldout-17067-parity"
+      ]
+    },
+    {
+      "id": "heldout-20069",
+      "split": "heldout",
+      "bsds_id": "20069",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/20069.jpg",
+      "original_sha256": "824f794603001e2e80e1e1fdab16e732dcb6dba29aec7370154bfb4349b9c681",
+      "original_dimensions": [
+        321,
+        481
+      ],
+      "crop_box": [
+        32,
+        112,
+        288,
+        368
+      ],
+      "cover": "cases/heldout-20069/cover.png",
+      "cover_sha256": "d14cf2e7491c01b69d1a7961880dbed78d5a6a97d3efc655b313f757b96055bb",
+      "pixel_sha256": "0b24f767adcc670c4df9adbf629b43b0c0c27d3c6a41d1c5dc536cdfa3a2eec2",
+      "source": "cases/heldout-20069/source.txt",
+      "source_sha256": "b408bdf90db3f13e605d929c7f9ec56cce9f725c9867afd2835172cc0db9e24e",
+      "source_bytes": 127,
+      "text_id": "HT14",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 5937,
+        "byte_end_exclusive": 6064,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-20069-model_rank",
+        "heldout-20069-parity"
+      ]
+    },
+    {
+      "id": "heldout-23050",
+      "split": "heldout",
+      "bsds_id": "23050",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/23050.jpg",
+      "original_sha256": "85ee9ee1c7181d680ddb2735bc48c7971c793e31501305be4806fa7adf324ea7",
+      "original_dimensions": [
+        321,
+        481
+      ],
+      "crop_box": [
+        32,
+        112,
+        288,
+        368
+      ],
+      "cover": "cases/heldout-23050/cover.png",
+      "cover_sha256": "0a00498433e1ad93c2a34517ad8444ed58aa9b2619d628baba98e3e54611d652",
+      "pixel_sha256": "fc53565dff399373bf824ab4160c0af1d2c4da6b07c5ddf20d34fa1d5b899ae8",
+      "source": "cases/heldout-23050/source.txt",
+      "source_sha256": "4bd5ecd9f9a2bd9ff572f3ed3cfc5f62159cae61605bb0b1fd140be21eb99a89",
+      "source_bytes": 122,
+      "text_id": "HT15",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 39056,
+        "byte_end_exclusive": 39178,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-23050-model_rank",
+        "heldout-23050-parity"
+      ]
+    },
+    {
+      "id": "heldout-28083",
+      "split": "heldout",
+      "bsds_id": "28083",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/28083.jpg",
+      "original_sha256": "3f35dfd750653a0122c8c69ccd32a6376cf0393d35cc6441ab20560e703e1bb1",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-28083/cover.png",
+      "cover_sha256": "c1a0204032c8e2a901c97cc76e951babc5aa1c68dd25dfa008c8b941a08d1934",
+      "pixel_sha256": "f0e448bff8dfc2557f75b961ab1693c494ff9bd2dca323059e141d795e9f5cbd",
+      "source": "cases/heldout-28083/source.txt",
+      "source_sha256": "c99e85893a28f6adbc4340ad66c8b236be70791ed67e2f55ba817911fb06cfac",
+      "source_bytes": 127,
+      "text_id": "HT16",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 6421,
+        "byte_end_exclusive": 6548,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-28083-model_rank",
+        "heldout-28083-parity"
+      ]
+    },
+    {
+      "id": "heldout-29030",
+      "split": "heldout",
+      "bsds_id": "29030",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/29030.jpg",
+      "original_sha256": "586afdd37df42107807307b75ae03e42c68fe6c813792a85c8ec1daffb71c598",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-29030/cover.png",
+      "cover_sha256": "138e59c1aa20a3f30dc2575379aed0675c0e167a8f91c51c913d6e3c948fde79",
+      "pixel_sha256": "a93a417d07a0300e6dbd6d479ac634372eb3fad3e3204a6f6fbf9d4303a73261",
+      "source": "cases/heldout-29030/source.txt",
+      "source_sha256": "2e42ad05776eb89fb2da41ff584ac5c4f22895816d4aafeb6f324c714b5d6e27",
+      "source_bytes": 124,
+      "text_id": "HT17",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 39369,
+        "byte_end_exclusive": 39493,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-29030-model_rank",
+        "heldout-29030-parity"
+      ]
+    },
+    {
+      "id": "heldout-33044",
+      "split": "heldout",
+      "bsds_id": "33044",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/33044.jpg",
+      "original_sha256": "e7fb5606edf799db4c13804fbb1b2148f85896a643dcf1ce87493b9e5996e2b2",
+      "original_dimensions": [
+        321,
+        481
+      ],
+      "crop_box": [
+        32,
+        112,
+        288,
+        368
+      ],
+      "cover": "cases/heldout-33044/cover.png",
+      "cover_sha256": "58dd16a90d85b6412696696a869422f13c937804bd8ff423377b9e9a4a18cfec",
+      "pixel_sha256": "b92f4bc34b07f402b2b7031344f93e07a1857d981f5b2ca002f91232e19c675d",
+      "source": "cases/heldout-33044/source.txt",
+      "source_sha256": "58ffa8d478bb35b0935c7841c645281a39d845e799275785325972962769f0e2",
+      "source_bytes": 117,
+      "text_id": "HT18",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 7261,
+        "byte_end_exclusive": 7378,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-33044-model_rank",
+        "heldout-33044-parity"
+      ]
+    },
+    {
+      "id": "heldout-35028",
+      "split": "heldout",
+      "bsds_id": "35028",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/35028.jpg",
+      "original_sha256": "2b1a0220ce00cf61497b330addd15896d0f457cd2493b2c76ce0c8c70137c9c0",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-35028/cover.png",
+      "cover_sha256": "3442ef2e8963345e77e206ad3597e82dd59d22edaa550af6b446ff96a9268177",
+      "pixel_sha256": "f4bb2f55eddcd6860b478899c2fd72fef2f2693ca5cc0f3442c8e3b9a972a0ca",
+      "source": "cases/heldout-35028/source.txt",
+      "source_sha256": "7adf100acb658b558b9fd3be876c9d6af4454010152aaad95456f5e67406ac9f",
+      "source_bytes": 124,
+      "text_id": "HT19",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1342,
+        "author": "Jane Austen",
+        "title": "Pride and Prejudice",
+        "archive": "pg1342.txt",
+        "byte_start": 39644,
+        "byte_end_exclusive": 39768,
+        "body_byte_bounds": [
+          36382,
+          753480
+        ],
+        "narrative_start": "It is a truth universally acknowledged",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-35028-model_rank",
+        "heldout-35028-parity"
+      ]
+    },
+    {
+      "id": "heldout-35049",
+      "split": "heldout",
+      "bsds_id": "35049",
+      "partition": "test",
+      "url": "https://raw.githubusercontent.com/BIDS/BSDS500/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722/BSDS500/data/images/test/35049.jpg",
+      "original_sha256": "b540a52875496f04379fb6cd848a39eb067e48d338d9e14f880a9e6cb4de9bdd",
+      "original_dimensions": [
+        481,
+        321
+      ],
+      "crop_box": [
+        112,
+        32,
+        368,
+        288
+      ],
+      "cover": "cases/heldout-35049/cover.png",
+      "cover_sha256": "5a9efc10ebe342d0839a81a687ebb1e77bb6bc7f3d570e36f0cfdda0699a02c4",
+      "pixel_sha256": "876728fb22cb53894f652de5af15bdadeeb7f3d4e6f4b0f492b2436e619eb00e",
+      "source": "cases/heldout-35049/source.txt",
+      "source_sha256": "0226890939fc040b7c5e515220cc863097d08fd03c2aaeb867d79c777bdb3ae6",
+      "source_bytes": 128,
+      "text_id": "HT20",
+      "text_provenance": {
+        "type": "gutenberg",
+        "book": 1661,
+        "author": "Arthur Conan Doyle",
+        "title": "The Adventures of Sherlock Holmes",
+        "archive": "pg1661.txt",
+        "byte_start": 7664,
+        "byte_end_exclusive": 7792,
+        "body_byte_bounds": [
+          1567,
+          588686
+        ],
+        "narrative_start": "To Sherlock Holmes she is always",
+        "preprocessing": "unchanged literal UTF-8 span, no normalization or newline conversion"
+      },
+      "arms": [
+        "model_rank",
+        "parity"
+      ],
+      "work_ids": [
+        "heldout-35049-model_rank",
+        "heldout-35049-parity"
+      ]
+    }
+  ],
+  "execution_order": [
+    "development-2092-model_rank",
+    "development-2092-parity",
+    "development-8049-model_rank",
+    "development-8049-parity",
+    "development-8143-model_rank",
+    "development-8143-parity",
+    "development-12003-model_rank",
+    "development-12003-parity",
+    "development-12074-model_rank",
+    "development-12074-parity",
+    "development-15004-model_rank",
+    "development-15004-parity",
+    "heldout-2018-model_rank",
+    "heldout-2018-parity",
+    "heldout-3063-model_rank",
+    "heldout-3063-parity",
+    "heldout-5096-model_rank",
+    "heldout-5096-parity",
+    "heldout-6046-model_rank",
+    "heldout-6046-parity",
+    "heldout-8068-model_rank",
+    "heldout-8068-parity",
+    "heldout-10081-model_rank",
+    "heldout-10081-parity",
+    "heldout-14085-model_rank",
+    "heldout-14085-parity",
+    "heldout-14092-model_rank",
+    "heldout-14092-parity",
+    "heldout-15011-model_rank",
+    "heldout-15011-parity",
+    "heldout-15062-model_rank",
+    "heldout-15062-parity",
+    "heldout-16004-model_rank",
+    "heldout-16004-parity",
+    "heldout-16068-model_rank",
+    "heldout-16068-parity",
+    "heldout-17067-model_rank",
+    "heldout-17067-parity",
+    "heldout-20069-model_rank",
+    "heldout-20069-parity",
+    "heldout-23050-model_rank",
+    "heldout-23050-parity",
+    "heldout-28083-model_rank",
+    "heldout-28083-parity",
+    "heldout-29030-model_rank",
+    "heldout-29030-parity",
+    "heldout-33044-model_rank",
+    "heldout-33044-parity",
+    "heldout-35028-model_rank",
+    "heldout-35028-parity",
+    "heldout-35049-model_rank",
+    "heldout-35049-parity"
+  ],
+  "packet_pairing": "one fresh encryption per group, immutable packet shared across both arms",
+  "checks": "first development group, both arms: original recovery, wrong key, one bit flip, PNG compression-9 pixel-preserving resave",
+  "probe": "first development cover; tiles (0,0),(96,96),(224,224), exact reference/graph maps, conditional oracle",
+  "metrics": {
+    "psnr": "RGB pooled MSE, peak 255",
+    "ssim": "mean of 3 channel SSIMs; Gaussian sigma 1.5, 11x11 window, valid centers, population covariance, K1=.01,K2=.03, data_range=255"
+  },
+  "summaries": "paired descriptive means and ranges only; no new tests or detection analysis",
+  "figures": "first three numeric held-out identifiers; absolute difference amplified 32x; first held-out text example",
+  "budget_seconds": 7200,
+  "whole_project_seconds": 144000,
+  "history_seconds": {
+    "v0": 3163.653124010041,
+    "v1": 39995.5091691459,
+    "v2": 42024.52764170886,
+    "gpu_performance": 2351.732528250024,
+    "png_context_detection": 1439.645473357872,
+    "cover_rank_v1": 0
+  },
+  "source_hash": "42afea8afc7393c0cde622fdbcd912f5b3dcbd98d1f9bd6f42f9da14370c427f",
+  "profile_sha256": "42a03558d233a990025447c0deda7395332f76050aea696beed0026b4cbdecfc",
+  "failure_rule": "retain every attempt; stop on unexpected recovery, invariant, rank, GPU or budget failure; no replacement",
+  "terms": "BIDS mirror January 2013 BSDS500 distribution. Attribution required by README to Arbelaez et al. TPAMI 2011. No explicit blanket image redistribution license found; photographs are not relicensed under project MIT. Local research/review derivatives only; author must confirm publication reuse permissions.",
+  "no_selection_from_outputs": true
+}
