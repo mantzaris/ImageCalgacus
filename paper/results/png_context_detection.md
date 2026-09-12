@@ -1,7 +1,7 @@
 <!-- Retained results component, integrated into the ICAART draft on 2026-09-10. -->
 # PNG conditioning mismatch: manuscript-ready results component
 
-This component is incorporated into the [complete ICAART draft](../icaart2027/README.md). The context-AUC result appears in main Figure 4 and Section 5.4. Score shifts appear in companion Figure S5 and Table S5, and the full AUC comparison in companion Table S4. The accepted figures, tables and numerical evidence are unchanged. [Results index](README.md).
+This component is incorporated into the [complete ICAART draft](../icaart2027/README.md). The context-AUC result appears in main Figure 4 and Section 5.4. The main also gives the descriptive score shifts and fixed/control gap. Companion Figure S5 and Table S5 provide optional detail, and companion Table S4 retains the full AUC comparison. The accepted figures, tables and numerical evidence are unchanged. [Results index](README.md).
 
 ## Methods
 

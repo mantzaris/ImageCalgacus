@@ -81,7 +81,8 @@ def main():
         checks["private_ledger_check"] = "not run; execution ledgers unavailable"
     checks["manuscript_verification_gpu_seconds"] = 0
     extension = read(ROOT / "artifacts/cover_rank_v1_review/budget.json")
-    checks["new_gpu_seconds"] = extension["charged_seconds"]
+    checks["new_gpu_seconds"] = 0
+    checks["historical_cover_rank_gpu_seconds"] = extension["charged_seconds"]
     checks["cumulative_gpu_seconds"] = extension["cumulative_seconds"]
     checks["cover_rank_budget"] = extension
     cover_rows = rows(ROOT / "artifacts/cover_rank_v1_review/summary.csv")
@@ -102,6 +103,40 @@ def main():
     for name, digest in read(HERE / "template/provenance.json")["unmodified_files"].items():
         assert sha(HERE / "template" / name) == digest
     checks["template_and_copied_assets_unchanged"] = True
+
+    # This editorial operation protects the complete current evidence, including
+    # the later photograph study, separately from the original paper baseline.
+    start = read(HERE / "data/single_pdf_start.json")
+    protected_changes = subprocess.check_output(
+        ["git", "diff", "--name-only", start["starting_commit"], "--",
+         *start["protected_tracked_paths"]], cwd=ROOT, text=True).splitlines()
+    assert not protected_changes, protected_changes
+    checks["accepted_evidence_unchanged_from_start"] = start["starting_commit"]
+    if all((ROOT / p).exists() for p in start["ledgers"]):
+        for path, item in start["ledgers"].items():
+            assert sha(ROOT / path) == item["sha256"], path
+        checks["all_six_current_ledgers_unchanged"] = True
+        checks["cumulative_gpu_seconds"] = start["cumulative_charged_seconds"]
+    else:
+        checks["all_six_current_ledgers_unchanged"] = "private check unavailable"
+    variants = read(HERE / "data/figure_variants.json")
+    for path, digest in variants["inputs"].items():
+        assert sha(ROOT / path) == digest, path
+    for path, digest in variants["outputs"].items():
+        assert sha(HERE / path) == digest, path
+    assert sha(HERE / "build_submission_figures.py") == variants["script_sha256"]
+    assert variants["new_gpu_seconds"] == 0
+    assert variants["original"]["literal_prefix_verified"]
+    assert variants["original"]["source_and_recovered_bytes_equal"]
+    assert variants["original"]["carrier_bytes"] == 2827
+    assert variants["original"]["delivered_tokens"] == 616
+    assert variants["photograph"]["case"] == "heldout-2018"
+    assert variants["photograph"]["source_recovered_equal"]
+    assert variants["photograph"]["coarse_invariant"]
+    for stem in ("figure1_transport_submission", "cover_transport_submission"):
+        extracted = pdf_text(HERE / "figures" / (stem + ".pdf"))
+        assert "full file linked" not in extracted.lower()
+    checks["retained_artifact_figure_variants"] = variants
 
     analysis = read(ROOT / "artifacts/v2_review/analysis.json")
     cells = {(r["direction"], r["method"]): r for r in analysis["cells"]}
@@ -201,7 +236,7 @@ def main():
     assert pdfs["main"]["pages"] <= 12
     method_source = (HERE / "sections/method.tex").read_text()
     supplement_source = (HERE / "supplement.tex").read_text()
-    assert "figures/figure1_transport.pdf" in method_source
+    assert "figures/figure1_transport_submission.pdf" in method_source
     assert "figures/figure1_transport.pdf" not in supplement_source
     assert "figures/method_diagram" not in method_source
     assert "figures/method_diagram" in supplement_source
@@ -214,6 +249,15 @@ def main():
     assert diagram_match and diagram_match[1] == "S1"
     assert "fig:examples" not in supplement_aux
     assert r"\texttt{examples/" not in method_source + supplement_source
+    included = [HERE / "main.tex"] + [HERE / (name + ".tex") for name in
+        re.findall(r"\\input\{(sections/[^}]+)\}", (HERE / "main.tex").read_text())]
+    scientific_text = "\n".join(path.read_text() for path in included)
+    for forbidden in (r"\bcompanion\b", r"\bsupplement\b", r"examples/", r"artifacts/",
+                      r"requires author review", r"full file linked", r"TODO", r"FIXME"):
+        assert not re.search(forbidden, scientific_text, re.I), forbidden
+    photo_match = re.search(r"\\newlabel\{fig:cover-example\}\{\{(\d+)\}\{(\d+)\}", main_aux)
+    assert photo_match and photo_match[1] == "2"
+    checks["single_pdf_self_contained"] = True
     reviewed_revision = "e39c14cc858bb67f870916692384d0e97502aa63"
     historical_names = subprocess.check_output(
         ["git","ls-tree","-r","--name-only",reviewed_revision,"paper/icaart2027/figures",
@@ -232,17 +276,20 @@ def main():
     checks["editorial_revision"] = {
         "reviewed_revision": reviewed_revision,
         "unchanged_historical_tables_and_figure_assets": True,
-        "authorized_changes": "cover_rank_v1 methods/results, related references, abstract/conclusion, GPU plot moved to companion",
+        "starting_revision": start["starting_commit"],
+        "authorized_changes": "single-PDF protocol/execution/result integration, concise narrative, retained-artifact figure variants",
         "preamble_change": "none from e39c14c; template settings and disclosure retained",
         "unchanged_manuscript_files_checked": len(unchanged_manuscript_files),
         "worked_examples": {"figure": 1, "panels": ["A", "B"], "page": int(example_match[2]),
-                           "unchanged_asset": "figures/figure1_transport.pdf"},
+                           "variant": "figures/figure1_transport_submission.pdf"},
+        "photograph_example": {"figure": 2, "panels": ["A", "B", "C"], "page": int(photo_match[2]),
+                              "variant": "figures/cover_transport_submission.pdf", "retained_case": "heldout-2018"},
         "process_diagram": {"figure": "S1", "page": int(diagram_match[2])},
         "duplicate_example_removed": True,
         "no_reviewer_access_claim_for_relative_example_paths": True,
     }
-    figures = ("figure1_transport.pdf", "figure2_recovery_rate.pdf",
-               "context_auc.pdf", "text_photo_example.pdf")
+    figures = ("figure1_transport_submission.pdf", "figure2_recovery_rate.pdf",
+               "context_auc.pdf", "cover_transport_submission.pdf")
     extra = sum(nonspace(pdf_text(HERE / "figures" / name)) for name in figures)
     # All four current main figures have extractable text, already in the main PDF.
     # Count that text twice and add 1,000 for possible ligature/math loss.

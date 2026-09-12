@@ -1,46 +1,40 @@
-# Final visual inspection
+# Single-PDF final visual inspection
 
-All twelve main-paper pages and all eleven companion pages were rendered at 120 dpi and visually inspected after the photograph extension was integrated. This record supersedes the previous draft's layout measurements, not its experimental evidence.
+All **12 main-paper pages** were rendered at 120 dpi and inspected after the final prose/layout edits. The two changed figures were also inspected separately. A final punctuation-only pass changed pixels on pages 2, 6, 7 and 8; those pages were rendered and reinspected. The other eight final pages are pixel-identical to the inspected renders. This record concerns editorial finalization from `79fd48c`, not new experimental evidence.
 
-- Main PDF SHA256: `00a94e6995d918ecfea6518e6dbbf3d79ae474eadfc47e27db2cc8bcfb45a727`.
-- Companion PDF SHA256: `6398769132013ec8b16de76fdf5f36251ae02877ad771680218bd3eda7daefb2`.
-- Isolated-build source ZIP SHA256: `529dcc19486d8d3a0342c851546ed54c793aa0290df9dec6be39bee6186715e4`.
+Main SHA256: `ffedfbb0c05512d67f861ce4d50862563a48ff9c277091e3044e73d1f83277a6`.
 
-## Main paper
+Companion SHA256: `5f9d0046fc43a4b420dd047333fae3cb59b2b3f9d056191952ace3243a267ca2`.
 
-| Pages | Inspection |
+Archive hashes and independent-build results are in [source_archive_verification.json](source_archive_verification.json).
+
+## Main-page inspection
+
+| Pages | Observations |
 |---|---|
-| 1–2 | Title, 184-word abstract, introduction and new related-work paragraph fit the authentic layout. No author block or clipped text. The earlier orphaned word was removed through prose editing. |
-| 3–4 | Packet and conditional equations are legible. Figure 1A–B preserves both actual historical examples, complete source/recovered texts and the explicitly incomplete carrier excerpt. Caption does not claim reviewer access to local paths. |
-| 5–6 | Coarse-context rank protocol and joint RGB equation are readable. Equation 4's number occupies a separate normal line without overlap. Figure 2 on page 6 shows the complete literal message and actual photograph at readable final size. Source and recovered words match. No photograph enhancement. |
-| 7–8 | Table 1, model/GPU setup, grouped uncertainty, observer assumptions, bounded photograph allocation and all six prospective recovery outcomes are readable. Distinct timing and statistical units remain explicit. |
-| 9–10 | Table 2 preserves original prospective timings and arithmetic failures. Figure 3's rates/intervals are legible. GPU speedup and new paired fidelity findings remain in the main text. No learned-partition advantage is implied. |
-| 11–12 | Figure 4, Table 3, limitations, conclusion, AI disclosure and all references fit. Table 3 matches unrounded source records after stated rounding. Cross-page conclusion continuation is grammatical. No missing citations, clipped bibliography or oversized final whitespace. |
+| 1–2 | Title and 173-word abstract fit the unchanged official format. Introduction gives the three-stage progression. Related-work attribution is readable. Exact header/packet fields fit without clipping. |
+| 3–4 | Figure 1A–B shows actual canonical pixels, the verbatim text excerpt, generated PNG and complete source/recovered messages. The full size is stated without an unavailable link. No text/figure overlap. RGB conditioning, filtering, fixed/gated/A1 rules and equations remain legible. |
+| 5–6 | Invariant-context construction, keyed placement and distortion bound are readable. Equation 4's number is on its normal separate line, without overlap. Figure 2A–C compares the same cover/stego at equal scale and ×32 absolute differences. The complete message and analytic-difference label are legible. Sparse low-amplitude differences remain faint, as expected from the actual pixels. GPU runtime identifiers fit. |
+| 7–8 | Table 1 has readable columns. Source allocation, paired groups, uncertainty and timing boundaries are explicit. Photograph design is separate from the original allocation. Arithmetic capacity failures retain their own section and incomplete-prefix interpretation. |
+| 9–10 | Table 2 preserves all six outcomes and original timings. Both detection scores and paired row changes appear in the main. GPU throughput, timings and overlapping memory measures are readable. Figure 3 shows 0/20 A1 text explicitly. Photograph results state the parity baseline's better fidelity/cost. |
+| 11–12 | Figure 4 and Table 3 are readable without clipping or overlap. Discussion retains the text-filtering bottleneck and material limitations. Conclusion, anonymous AI disclosure and all references fit. Cross-page continuation is grammatical and bibliography text is not truncated. |
 
-Main figures are 1–4 and tables 1–3. The old worked examples are Figure 1A–B on page 4; the new complete photograph example is Figure 2 on page 6. Both are in the first half. The detailed historical GPU plot is now in the companion, with its main numerical findings preserved.
+Main figures are 1–4 and tables 1–3. Original transports are **Figure 1A–B on page 3**. Photograph transport is **Figure 2 on page 6**. Four figure PDFs have extractable text, including annotations. There are no local-file access promises, companion dependencies, unresolved references, author metadata or internal drafting placeholders in the main PDF.
 
-## Companion
+## Companion and source package
 
-| Pages | Inspection |
-|---|---|
-| 1–2 | Title/abstract, process diagram Figure S1, expanded Table S1 and relocated packet/mixture detail are clear. No duplicate worked-example figure. |
-| 3–4 | Six-panel detection Figure S2 and full-score/overhead Tables S2–S3 are legible, without clipping or overlapping rows. Original values and failed-carrier inclusion remain. |
-| 5–6 | Arithmetic Figure S3 and paired sequence/static Figure S4 preserve observed checkpoints and payload identities. New extension identifiers appear in S7, separate from historical allocations. |
-| 7–8 | Context Table S4, descriptive Figure S5/Table S5, full benchmark Table S6 and new placement/scoring details are readable. Long profile identifier and equations fit. |
-| 9–10 | Historical GPU Figure S6, new failure/fidelity/accounting detail, reproducibility and references are readable. Old benchmark memory measures remain distinct. |
-| 11 | Figure S7 shows the first three frozen covers, actual carriers and differences ×32. All labels/caption fit. Differences are sparse and faint by design, not enhanced for effect or presented as no changes. Natural image aspect ratios and pixels are retained. |
+The 11-page companion was rebuilt without source or scientific-asset changes. Its extracted text is byte-identical to the starting PDF (`e8441d01e1a1a4dcc994633f5a6204f5a4943b1149aa14fdf35de5863fff0a38` SHA256 of layout extraction). Its previous full-page visual record remains in Git history. The current operation does not claim a new companion experiment or supplementary submission route.
 
-Companion figures are S1–S7 and tables S1–S6. The new figure PDFs are exact copies of the review exports. Standalone new PDF/PNG previews were also inspected. The four-row summary Markdown and LaTeX values agree with their source CSV, and the manuscript's two-row variant is readable.
+Both PDFs compile from the allowlisted source ZIP in an isolated temporary directory and reproduce local extracted text. Unused old figure copies are not duplicated in the ZIP, while all required assets are present. The official template download was rechecked on 12 September 2026 and all retained files match. No font, margin, line spacing or negative-spacing workaround was introduced.
 
-## Build and numerical checks
+## Counts and checks
 
-Both logs are free of overfull boxes, unresolved references and undefined citations. Normal float placement resolved an initial companion overflow. No official template file, margin, font size, line spacing or negative-spacing workaround was introduced. The final main count is **42,189 extracted non-whitespace characters**, **44,842 conservatively estimated**, with **184 abstract words**. The companion is eleven pages and 30,057 extracted characters. The source ZIP compiles in an isolated directory and reproduces both PDF texts exactly. Empty author metadata is verified.
+The main has **41,519 extracted non-whitespace characters**, **44,154 conservatively estimated characters** and **173 abstract words**. The conservative count adds all four figures' extracted text again (1,635) plus 1,000 for extraction uncertainty. The companion has 30,057 extracted characters. Both build logs have no overfull boxes or undefined references/citations.
 
-Reproduce inspection renders after building:
+Saved-evidence checks preserve all six prospective outcomes, benchmark equivalence, AUCs, photograph metrics and coverage. Two regeneration runs produced identical PDF/SVG/PNG figure bytes. All six local compute ledgers remain hash-identical to the starting state. **Zero GPU seconds** were added.
 
 ```sh
-pdftoppm -r 120 -png paper/icaart2027/ICAART2027_submission.pdf paper/icaart2027/build/main-inspect
-pdftoppm -r 120 -png paper/icaart2027/ICAART2027_supplement.pdf paper/icaart2027/build/supp-inspect
+pdftoppm -r 120 -png paper/icaart2027/ICAART2027_submission.pdf paper/icaart2027/build/single_pdf_render/main
 ```
 
-Raster previews are ignored build outputs, not manuscript assets. Experimental carriers are not rewritten by rendering. Compilation and inspection add zero GPU time. The separately authorized extension's 429.149258 charged seconds remain in its own ledger. Photograph publication rights, AI-disclosure placement and a Regular Paper supplementary route remain author-review issues.
+Render files are ignored build products, not experimental carriers. Rights, disclosure-placement and public-history questions remain in [AUTHOR_REVIEW.md](AUTHOR_REVIEW.md), outside the scientific narrative.

@@ -23,7 +23,13 @@ def extract_text(path):
 def main():
     files = [HERE / name for name in ("main.tex", "supplement.tex", "preamble.tex", "references.bib", "build.py", "BUILD_README.md", "ASSET_NOTICES.md")]
     files += sorted((HERE / "sections").glob("*.tex"))
-    files += sorted((HERE / "figures").glob("*.pdf"))
+    # Only PDFs actually included by the two manuscripts. Old accepted copies
+    # remain in the repository, but are not duplicate compilation dependencies.
+    for name in ("figure1_transport_submission", "cover_transport_submission",
+                 "figure2_recovery_rate", "context_auc", "figure3_detectability",
+                 "figureS1_arithmetic_capacity", "figureS2_text_consistency",
+                 "score_shifts", "figure4_gpu_performance", "cover_examples"):
+        files.append(HERE / "figures" / (name + ".pdf"))
     files += [HERE / "figures/method_diagram.tex"]
     for name in ("cover_main", "main_outcomes", "context_comparison", "score_shifts", "supp_table2_v2_outcomes", "supp_table3_detectability", "supp_tableS1_overhead", "supp_table4_gpu_benchmark"):
         files.append(HERE / "tables" / (name + ".tex"))

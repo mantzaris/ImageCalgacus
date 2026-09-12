@@ -10,7 +10,8 @@
   },
   "cumulative_gpu_seconds": 89404.21719448989,
   "manuscript_verification_gpu_seconds": 0,
-  "new_gpu_seconds": 429.14925801719073,
+  "new_gpu_seconds": 0,
+  "historical_cover_rank_gpu_seconds": 429.14925801719073,
   "cover_rank_budget": {
     "stage": "cover_rank_v1",
     "limit_seconds": 7200,
@@ -85,6 +86,67 @@
     "public_verification": "saved evidence, hashes, equality and coverage; not fresh private-key decoding"
   },
   "template_and_copied_assets_unchanged": true,
+  "accepted_evidence_unchanged_from_start": "79fd48c8b531f1eaeea28f2fc45457beac51b3ef",
+  "all_six_current_ledgers_unchanged": true,
+  "retained_artifact_figure_variants": {
+    "original": {
+      "cases": [
+        "HI1-prompt1-fixed",
+        "HT1-row1-fixed"
+      ],
+      "selection": "first manifest-ordered fixed case per direction",
+      "carrier_bytes": 2827,
+      "delivered_tokens": 616,
+      "excerpt_bytes": 249,
+      "literal_prefix_verified": true,
+      "source_and_recovered_bytes_equal": true
+    },
+    "photograph": {
+      "case": "heldout-2018",
+      "arm": "model_rank",
+      "source_bytes": 63,
+      "selection": "same first frozen held-out example used before finalization",
+      "source_recovered_equal": true,
+      "coarse_invariant": true,
+      "maximum_channel_change": 1,
+      "difference": "32 * abs(stego.astype(int16) - cover.astype(int16)), per RGB channel",
+      "display": "equal image axes, nearest-neighbor, no modifications to source or carrier files"
+    },
+    "new_gpu_seconds": 0,
+    "inputs": {
+      "scripts/build_publication_results.py": "56cd13a22c689e1aae24b3b5fd9e03c974ab5bcd9c6fff7cf9ff68124b515af3",
+      "artifacts/v2_review/manifest.json": "643099adf3bf2df5e62db6e49917d86d0f0c766d3e0d51b6a33dc0c62abc5e6c",
+      "artifacts/v2_review/results.jsonl": "c90564de13cf30cf43388af71b82c549a398388c02c969c4bb2062b14a61e0f0",
+      "artifacts/v2_review/cases/HI1-prompt1-fixed/source.png": "5d22a94e8cc47354b29751a2fd55f02474079f48315260e324a998f915927acc",
+      "artifacts/v2_review/cases/HI1-prompt1-fixed/recovered.png": "5d22a94e8cc47354b29751a2fd55f02474079f48315260e324a998f915927acc",
+      "artifacts/v2_review/cases/HT1-row1-fixed/carrier.png": "dd4e231d35c9cd0576710d05222c42901204cd40439bcda0b209769800bad55d",
+      "artifacts/v2_review/cases/HT1-row1-fixed/source.txt": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751",
+      "artifacts/v2_review/cases/HT1-row1-fixed/recovered.txt": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751",
+      "artifacts/v2_review/cases/HI1-prompt1-fixed/carrier.txt": "7fb5a4bcb02e77e1fa1b32770df6acaeee92a6b932f6c75cd672c628ba00fdfc",
+      "artifacts/publication_results/data/figure1_carrier_excerpt.txt": "ee317b36fac6d57eb05b0c8d41be184c4512c1a5bf298179105fe1c002e01c62",
+      "artifacts/v2_review/cases/HI1-prompt1-fixed/recovered.gray": "745c4ba35eb3f17849a6ea2000505532eaeb186da1e54f54263c1800a088acb5",
+      "artifacts/cover_rank_v1_review/manifest.json": "a35a837636875465fa392c9b41aee5cac2f077af1279f304b9d2020806bbfcef",
+      "artifacts/cover_rank_v1_review/cases/heldout-2018/cover.png": "72f5df6e797e47e379444edda5be2fbc2b973aed979217afe64eec4a22a7e097",
+      "artifacts/cover_rank_v1_review/outcomes/heldout-2018-model_rank/carrier.png": "5f22b894e0208ce383ccff179debf8e7e0dcae4ef740ea52b5719c043f2de5f8",
+      "artifacts/cover_rank_v1_review/cases/heldout-2018/source.txt": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751",
+      "artifacts/cover_rank_v1_review/outcomes/heldout-2018-model_rank/recovered.txt": "525c78614e7a05d02c1e1fd1e39c0e483db227b73f37910c4e9e23ceb0cc9751",
+      "artifacts/cover_rank_v1_review/outcomes/heldout-2018-model_rank/result.json": "307d2a8d9beea0494236aeb9e20fce1a724c5950fa7f3f20b7da0b47a9c1e83a"
+    },
+    "plotting_versions": {
+      "matplotlib": "3.10.9",
+      "numpy": "2.2.6",
+      "Pillow": "12.3.0"
+    },
+    "script_sha256": "1cc5397c1480e68a24e7c3479044c3d76d7375cc59b07e1e71dfdaf097460036",
+    "outputs": {
+      "figures/figure1_transport_submission.pdf": "56f7f8a0da8f456716f3f539109af7cd4bfaa040961d04dddf184aadaf4fe2c6",
+      "figures/figure1_transport_submission.png": "969564e77fa4ef6985227cdd52b6351c9c91d7d93f47dd54881de553217f3b68",
+      "figures/figure1_transport_submission.svg": "2137f998bb3a26b92f1e6c828b3f6bed66646f3ae5af4ea4badbe5a7d2470a85",
+      "figures/cover_transport_submission.pdf": "700781f5777ec18b98b576689a6c2c4fdb4f2f74c7cbbf960b6fbef10f234092",
+      "figures/cover_transport_submission.png": "fa4ee16da438b67dac897c7c676269f333ead689aa43727338e1ef297865ead0",
+      "figures/cover_transport_submission.svg": "6706816d99c0df66852b6d113c1c45d143beb3d90678dc0d45c9d81cf74cd410"
+    }
+  },
   "six_recovery_cells": [
     20,
     20,
@@ -166,10 +228,12 @@
     "row1_analysis_reproduced": true,
     "forbidden_files": []
   },
+  "single_pdf_self_contained": true,
   "editorial_revision": {
     "reviewed_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
     "unchanged_historical_tables_and_figure_assets": true,
-    "authorized_changes": "cover_rank_v1 methods/results, related references, abstract/conclusion, GPU plot moved to companion",
+    "starting_revision": "79fd48c8b531f1eaeea28f2fc45457beac51b3ef",
+    "authorized_changes": "single-PDF protocol/execution/result integration, concise narrative, retained-artifact figure variants",
     "preamble_change": "none from e39c14c; template settings and disclosure retained",
     "unchanged_manuscript_files_checked": 28,
     "worked_examples": {
@@ -178,8 +242,19 @@
         "A",
         "B"
       ],
-      "page": 4,
-      "unchanged_asset": "figures/figure1_transport.pdf"
+      "page": 3,
+      "variant": "figures/figure1_transport_submission.pdf"
+    },
+    "photograph_example": {
+      "figure": 2,
+      "panels": [
+        "A",
+        "B",
+        "C"
+      ],
+      "page": 6,
+      "variant": "figures/cover_transport_submission.pdf",
+      "retained_case": "heldout-2018"
     },
     "process_diagram": {
       "figure": "S1",
@@ -191,32 +266,32 @@
   "pdfs": {
     "main": {
       "file": "ICAART2027_submission.pdf",
-      "sha256": "00a94e6995d918ecfea6518e6dbbf3d79ae474eadfc47e27db2cc8bcfb45a727",
+      "sha256": "ffedfbb0c05512d67f861ce4d50862563a48ff9c277091e3044e73d1f83277a6",
       "pages": 12,
-      "extracted_nonwhitespace_characters": 42189,
+      "extracted_nonwhitespace_characters": 41519,
       "empty_author_metadata": true
     },
     "supplement": {
       "file": "ICAART2027_supplement.pdf",
-      "sha256": "6398769132013ec8b16de76fdf5f36251ae02877ad771680218bd3eda7daefb2",
+      "sha256": "5f9d0046fc43a4b420dd047333fae3cb59b2b3f9d056191952ace3243a267ca2",
       "pages": 11,
       "extracted_nonwhitespace_characters": 30057,
       "empty_author_metadata": true
     }
   },
   "character_count": {
-    "abstract_words_whitespace_method": 184,
-    "main_extracted_including_figures_tables_references": 42189,
+    "abstract_words_whitespace_method": 173,
+    "main_extracted_including_figures_tables_references": 41519,
     "main_external_figures_counted": [
-      "figure1_transport.pdf",
+      "figure1_transport_submission.pdf",
       "figure2_recovery_rate.pdf",
       "context_auc.pdf",
-      "text_photo_example.pdf"
+      "cover_transport_submission.pdf"
     ],
-    "duplicated_external_figure_text_allowance": 1653,
+    "duplicated_external_figure_text_allowance": 1635,
     "whole_diagram_source_allowance": 0,
     "additional_extraction_allowance": 1000,
-    "conservative_main_nonwhitespace_estimate": 44842,
+    "conservative_main_nonwhitespace_estimate": 44154,
     "official_regular_paper_range": [
       10000,
       50000
@@ -224,6 +299,6 @@
     "caveat": "Conservative estimate, not an official portal count. No official graph-to-character conversion was specified. All visible figure text was also visually inspected."
   },
   "passed": true,
-  "source_revision": "e39c14cc858bb67f870916692384d0e97502aa63",
-  "verification_script_sha256": "a7ba50db5edc2d41edc4b50810eaaf64e8df83d129ff70bc5d62aacd2f517941"
+  "source_revision": "79fd48c8b531f1eaeea28f2fc45457beac51b3ef",
+  "verification_script_sha256": "0d9e62f8fb5be93a92f719f16ee3214e60cf31c135c66b9f501ad1ea9cad2ff2"
 }

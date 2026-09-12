@@ -1,0 +1,63 @@
+{
+  "checked_utc_date": "2026-09-12",
+  "guidelines": {
+    "url": "https://icaart.scitevents.org/Guidelines.aspx",
+    "regular_submission_nonwhitespace_character_range": [
+      10000,
+      50000
+    ],
+    "includes": [
+      "references",
+      "tables",
+      "graphs",
+      "appendices"
+    ],
+    "accepted_full_paper_proceedings_pages": 12,
+    "anonymous_review": true,
+    "public_posting_restriction_period": "initial submission through official final selection announcement",
+    "preexisting_public_history_eligibility": "not explicitly resolved by the page",
+    "separate_regular_supplement_route": "not verified; main PDF does not depend on it"
+  },
+  "ai_policy": {
+    "url": "https://icaart.scitevents.org/AiTools.aspx",
+    "draft_resolution": "anonymous AI Assistance Disclosure and section-level Codex citations",
+    "open_question": "Does this placement satisfy disclosure requirements when anonymous review omits acknowledgements?"
+  },
+  "photographs": {
+    "retained_source": "https://github.com/BIDS/BSDS500/tree/a04b7c6c3a9f0ace74bf205c72a43d32e1c72722",
+    "distribution": "January 2013 mirror",
+    "older_primary_terms_page": "https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/",
+    "scope_of_found_terms": "older BSDS300 page permits downloading for non-commercial research and education and requests source citation; it links the newer BSDS500",
+    "specific_bsds500_photograph_republication_permission": "not established",
+    "figure_identifiers": [
+      "2018",
+      "3063",
+      "5096"
+    ],
+    "rights_grant_inferred_from_citation": false
+  },
+  "public_history": {
+    "api": "https://api.github.com/repos/mantzaris/ImageCalgacus",
+    "unauthenticated_api_private_field": false,
+    "default_branch": "main",
+    "starting_public_main": "79fd48c8b531f1eaeea28f2fc45457beac51b3ef",
+    "manuscript_history_exists": true,
+    "historical_content_removed_or_rewritten": false,
+    "submission_performed": false,
+    "venue_eligibility_not_inferred_from_metadata_cleanup": true
+  },
+  "new_gpu_seconds": 0,
+  "template": {
+    "url": "https://www.scitepress.org/documents/SCITEPRESS_Conference_Latex.zip",
+    "retrieved_utc_date": "2026-09-12",
+    "archive_sha256": "ec6cfaa11962e08d5c6a402124f21c3bca3591397521406ab6d1889398a3807a",
+    "current_official_files_match": {
+      "article.cls": true,
+      "SCITEPRESS.sty": true,
+      "apalike.sty": true,
+      "apalike.bst": true,
+      "Example.tex": true,
+      "example.bib": true
+    }
+  }
+}

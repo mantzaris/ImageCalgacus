@@ -1,0 +1,46 @@
+{
+  "starting_commit": "79fd48c8b531f1eaeea28f2fc45457beac51b3ef",
+  "branch": "main",
+  "starting_origin_main": "79fd48c8b531f1eaeea28f2fc45457beac51b3ef",
+  "starting_worktree_clean": true,
+  "captured_utc": "2026-09-12T03:53:17.082222+00:00",
+  "ledgers": {
+    ".runtime/cover_rank_v1/gpu_budget.jsonl": {
+      "sha256": "f0a37f83897ca00370b8ad436b22e0c48d0c09424b67b517d66712e53cbf8ae1",
+      "charged_seconds": 429.14925801719073
+    },
+    ".runtime/gpu_budget.jsonl": {
+      "sha256": "0309090a7ba12305c66cbb574c9f3f0617ad0b6a11496055dc67f0e7218f61d3",
+      "charged_seconds": 3163.653124010041
+    },
+    ".runtime/gpu_performance/gpu_budget.jsonl": {
+      "sha256": "f83b12e8c76f25150636ca4a08fad6c56c13cdc7f246c29629b1b3502bd7de8e",
+      "charged_seconds": 2351.732528250024
+    },
+    ".runtime/png_context_detection/gpu_budget.jsonl": {
+      "sha256": "2bc7982dac6063c6930cf6adfcbdf286936d0028e0fc0452c9bf7c22e7cb6d51",
+      "charged_seconds": 1439.645473357872
+    },
+    ".runtime/v1/gpu_budget.jsonl": {
+      "sha256": "02e470af365426920fa68a31a64c139f78855af9958f53e8cdeb21941a12dce4",
+      "charged_seconds": 39995.5091691459
+    },
+    ".runtime/v2/gpu_budget.jsonl": {
+      "sha256": "ad98825222680989b0d9d4cdc417327be4d137ebc61c0e8e8910ceb80c52b29f",
+      "charged_seconds": 42024.52764170886
+    }
+  },
+  "cumulative_charged_seconds": 89404.21719448989,
+  "new_gpu_seconds_authorized": 0,
+  "protected_tracked_paths": [
+    "artifacts",
+    "plan",
+    "configs",
+    "imagecalgacus",
+    "data/qualification_v1"
+  ],
+  "starting_pdfs": {
+    "ICAART2027_submission.pdf": "00a94e6995d918ecfea6518e6dbbf3d79ae474eadfc47e27db2cc8bcfb45a727",
+    "ICAART2027_supplement.pdf": "6398769132013ec8b16de76fdf5f36251ae02877ad771680218bd3eda7daefb2"
+  }
+}

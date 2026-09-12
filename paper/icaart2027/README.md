@@ -1,79 +1,74 @@
-# ICAART 2027 complete submission draft
+# ICAART 2027 single-PDF submission draft
 
 **Exact Bidirectional Steganographic Transport with Language and Pixel Autoregressive Models**
 
-Anonymous Regular Paper, Area 2 Artificial Intelligence, prepared for local author review. This revision adds the authorized `cover_rank_v1` experiment from starting commit `e39c14cc858bb67f870916692384d0e97502aa63`. It preserves accepted generated-carrier, context and benchmark evidence.
+The sole proposed review artifact is [ICAART2027_submission.pdf](ICAART2027_submission.pdf), an anonymous Regular Paper in Artificial Intelligence. The main paper stands alone. Reviewers are not assumed to receive the companion, source archive, local examples or repository evidence.
 
-- [Main PDF](ICAART2027_submission.pdf), **12 pages** including references.
-- [Companion PDF](ICAART2027_supplement.pdf), **11 pages**. Separate Regular Paper supplementary-upload permission remains unconfirmed.
-- [Self-contained source ZIP](ICAART2027_source.zip).
-- [Author decisions](AUTHOR_REVIEW.md), [numerical and preservation checks](verification.json), [source-archive verification](source_archive_verification.json), [visual inspection](visual_inspection.md), [reference checks](reference_verification.md), [asset notices](ASSET_NOTICES.md).
-- [Photograph extension evidence](../../artifacts/cover_rank_v1_review/README.md) and [implementation/results notes](../../notes/cover_rank_v1_results.md).
+- Main PDF: **12 pages**, including references; **41,519 extracted** and **44,154 conservatively estimated non-whitespace characters**; **173-word abstract**.
+- [Compilation source ZIP](ICAART2027_source.zip), independently rebuilt and verified.
+- [Companion PDF](ICAART2027_supplement.pdf), 11 pages, maintained as optional author material. No separate supplementary submission route is assumed.
+- [Author decisions](AUTHOR_REVIEW.md), [verification](verification.json), [archive check](source_archive_verification.json), [visual inspection](visual_inspection.md), [reference verification](reference_verification.md), [asset notices](ASSET_NOTICES.md).
+- [Finalization note](../../notes/icaart_single_pdf_finalization.md) and [starting-state record](data/single_pdf_start.json).
 
-The historical examples remain **Figure 1A and 1B on page 4**, using the unchanged saved-artifact figure. The new complete photograph example is **Figure 2 on page 6**. Both are in the first half of the paper. A local `examples/` path is not represented as an accepted reviewer-access route.
+## Contribution and principal results
 
-## Contribution and principal findings
+The shared authenticated protocol transports canonical image bytes through generated text and literal text through generated PNGs or bounded photograph changes. Fresh receivers reconstruct solely from delivered artifacts and declared inputs. The controlled comparison makes serialization, capacity, observer knowledge and execution cost assessable together.
 
-We develop a common authenticated artifact-transport protocol across language and pixel autoregressive models. The paired three-coder study demonstrates exact bidirectional recovery and exposes how serialization, finite capacity and observer context affect the measured results. The new profile constructs reproducible model-rank partitions from an invariant coarse photograph, with constrained distortion and exact saved-PNG recovery.
+All six original prospective outcomes remain **20/20, 20/20, 0/20** for fixed/gated/A1 text carriers and **20/20 in each method** for generated PNGs. Arithmetic text failures remain capacity outcomes. Fixed-PNG primary AUC changes from 0.8850 to 0.6975 under one frozen row mismatch, with paired change −0.1875 [−0.2775, −0.1000]. Those are repeated scores on the same 80 PNGs, not photograph detection or new transmissions.
 
-The original prospective results remain 20/20 fixed/gated recoveries in both directions, 20/20 arithmetic PNG recoveries and 0/20 arithmetic text recoveries at the frozen cap. Primary fixed-PNG AUC decreases from 0.8850 to 0.6975 under the specified context mismatch. The development GPU benchmark retains its 5.133075499-fold matched fresh-process speedup.
+The development GPU benchmark retains **5.133075499×** matched fixed-rank improvement, over nine timing pairs on three payloads, with exact checked probability/carrier/recovery equivalence. Original prospective timings are unchanged. The photograph comparison retains **20/20 held-out recoveries per arm**, mean PSNR 70.255 versus 70.398 dB and SSIM 0.9999664 versus 0.9999688 for model ranks versus parity. Distinct learned partitions demonstrate no recovery, fidelity or runtime advantage over that simple baseline.
 
-The new photograph allocation has 6/6 development and 20/20 held-out recoveries per arm. Model ranks average 70.255 dB PSNR and 0.9999664 SSIM, while simple parity averages 70.398 dB and 0.9999688. Every evaluated selected partition differs up to label swap, but learned partitions demonstrate no fidelity, recovery or runtime advantage over this baseline. The profile's scores are not the historical generated-image likelihoods. No detection result is transferred between these modes.
+## Results and dependency map
 
-## Build and public verification
+| Finding or contract | Location inside the main PDF | Optional detail, not needed to assess the main claim |
+|---|---|---|
+| Image → saved text → canonical image | Figure 1A, page 3; Section 3.1 | Full author-side carrier retained locally, not promised to reviewers |
+| Literal text → generated PNG → text | Figure 1B, page 3 | Retained source/carrier/recovery evidence |
+| Text → photograph → text, cover comparison | Figure 2A–C, page 6; Section 3.5 | First three covers/differences in companion Figure S7 |
+| Exact packet, padding, receiver boundary, RGB conditionals | Sections 3.1–3.2 | Companion Figure S1 and S3 |
+| Three coders, A1 termination and separate stagnation limit | Sections 3.3–3.4 and 5.2 | Companion arithmetic Figure S3 |
+| Invariant context, rank parity, keyed placement, distortion bound | Section 3.5 | Companion S7, unchanged photograph review |
+| Sources, allocations, pairing, model/GPU and uncertainty | Section 4 and Table 1, page 7 | Detailed inventories remain author-side |
+| Six recovery/rate/runtime cells | Figure 3, page 10; Table 2, page 9; Section 5.1 | Companion Table S1 |
+| Both known-model detection scores | Section 5.3, all counts and AUCs/intervals | Companion Figure S2/Table S2 |
+| PNG observer context mismatch and descriptive score shifts | Figure 4, page 11; Section 5.4 | Companion Figure S5, Tables S4–S5 |
+| Exact GPU benchmark, timing boundary and memory tradeoff | Sections 4.5 and 5.5 | Companion Figure S6/Table S6 |
+| Photograph fidelity, recovery and simple parity outcome | Section 5.6; Table 3, page 11 | Per-case photograph exports |
+| Sequence/static development comparison, lossless checks | Discussion | Companion Figure S4 and development evidence |
+| Packet/slot/completion overhead | Sections 3 and 5.1 | Companion Table S3 |
 
-From the repository root:
+Four main figures and three main tables remain. Compact header, placement, runtime, secondary-score and overhead details replace dependencies on the companion. Related-work and discussion repetition was shortened, without changing attribution or material limitations. Internal rights-review instructions were removed from the scientific narrative and retained in AUTHOR_REVIEW.
+
+## Figure provenance
+
+[build_submission_figures.py](build_submission_figures.py) produces manuscript-only PDF/SVG/PNG variants from retained artifacts. Figure 1 uses the original first manifest-ordered fixed cases and verbatim 249-byte excerpt. It states the complete carrier size, 616 tokens and 2,827 UTF-8 bytes, without an unavailable-file claim.
+
+Figure 2 retains BSDS case **2018**, the previously used first held-out example. Original and stego images have equal display scale. The third panel is **32 × absolute RGB pixel difference**, an analytical visualization. The complete source/recovered 63-byte message remains visible. Source/carrier pixels are neither beautified nor changed. [Figure provenance](data/figure_variants.json) records source/output hashes, implementation identity and plotting versions. All accepted publication exports and carriers are unchanged.
+
+## Reproduce and verify
+
+From the repository root, using the existing analysis environment or equivalent installed NumPy, Pillow, Matplotlib and SciPy dependencies:
 
 ```sh
+../llm-rankcloak/.venv/bin/python -B paper/icaart2027/build_submission_figures.py
 python -B paper/icaart2027/build.py
-python -B paper/icaart2027/package_source.py
 ../llm-rankcloak/.venv/bin/python -B paper/icaart2027/verify.py
-python -B scripts/analyze_cover_rank_v1.py --verify-only
+../llm-rankcloak/.venv/bin/python -B scripts/analyze_cover_rank_v1.py --verify-only
+python -B paper/icaart2027/package_source.py
 ```
 
-The interpreter path is the established local analysis environment, not an implicit import dependency. The archive builds with `python -B build.py`, Python 3 and standard installed TeX Live packages listed in [BUILD_README.md](BUILD_README.md). It contains only allowlisted compilation sources, template files, figures, tables, bibliography and asset notices. No model, key, packet, private context, environment or execution ledger is included.
+The interpreter path is an existing local environment, not an implicit sibling import. The compilation ZIP needs only `python -B build.py` and the standard TeX packages listed in [BUILD_README.md](BUILD_README.md). It includes required manuscript sources, bibliography, figures, tables, notices and the unchanged official template. It excludes private keys, packets, model weights, contexts, environments, ledgers and build caches. Both PDFs compile in isolation and reproduce local extracted text.
 
-The ZIP is compiled in an isolated temporary directory and both extracted PDF texts are compared with the local drafts. Saved-evidence verification uses public hashes, measured values, recorded authentication and source equality, not fresh model or private-key replay. The manuscript verifier also checks old ledgers when available. The separate photograph private audit checks retained packet/key safety and history. No GPU is used for analysis, compilation or verification.
+Verification checks saved evidence and exact exported measurements, not new inference or private-key replay. It revalidates V1 qualification, V2, the GPU benchmark, context detection and the photograph study. All six current local ledgers are hash-unchanged. Do not run older analysis/export generators as a manuscript reset; accepted review packets are preserved.
 
-Do not run the older generic asset/table generators as a manuscript reset. New publication assets are generated by `scripts/analyze_cover_rank_v1.py` and copied into this directory. Original accepted publication exports remain unchanged.
+## Compliance and remaining decisions
 
-## Complete results map
+The current [ICAART Guidelines](https://icaart.scitevents.org/Guidelines.aspx) require 10,000–50,000 non-whitespace characters including references and graphics. The estimate counts extracted main text, counts the four figures' 1,635 text characters a second time, and adds 1,000 for extraction uncertainty. The margin is **5,846 characters**. This is not a portal-certified count. All visible figure text was inspected. No font, margin, line spacing or template change was used.
 
-| Evidence | Main location | Companion or supporting location |
-|---|---|---|
-| Historical actual image-to-text and text-to-generated-PNG examples | Figure 1A–B, page 4; Method | Complete local author files in `examples/`, not claimed review attachments |
-| Common packet and artifact contract | Section 3, Table 1 | Figure S1 and exact header/mixture details in S3 |
-| New complete text-to-photograph example | Figure 2, page 6; Section 3.5 | New review `text_photo_example.*` and actual source/carrier/recovered files |
-| Original six recovery/goodput cells | Figure 3, Table 2, Section 5.1 | Table S1 with original intervals and timing |
-| Arithmetic information/capacity diagnosis | Section 5.2 | Figure S3, S3, retained checkpoints; no modified A1 algorithm |
-| Correct-context exploratory detection | Section 5.3 | Figure S2 and Table S2, both scores/counts |
-| PNG observer context mismatch | Figure 4, Section 5.4 | Table S4, same 80 retained PNGs, paired intervals |
-| Descriptive score-shift addendum | Section 5.4 | Figure S5, Table S5, same 20 shared groups |
-| Behavior-preserving GPU benchmark | Section 5.5, fixed nine-pair headline | **Figure S6**, Table S6, Section S6, all 11 comparisons and 22 recoveries |
-| Photograph paired fidelity/recovery/runtime | Section 5.6 and Table 3, page 11 | S7 and new per-case/paired exports |
-| First three photograph covers/carriers/differences | Complete first example in Figure 2 | Figure S7, page 11; differences ×32, unchanged carrier pixels |
-| Sequence/static development comparison | Section 6 | Figure S4 and S4; 20 payloads under two contexts |
-| Packet/slot/termination overhead | Main packet/rate explanation | Table S3 and S3; no double counting |
-| Accepted lossless checks and unavailable static-control prefix | Supporting limitations | S4, retained qualification evidence |
-| Original paired method comparisons | Results interpretation | S2, `data/accepted_paired_differences.json` |
-| Runtime identities, source inventories and checks | Essential model/GPU identity in Section 4 | S8, local `data/`, implementation/review records |
-
-There are four main figures and three main tables, plus seven companion figures and six companion tables. The new main figure replaces the detailed GPU plot in the main layout, but the GPU result, timing boundary, exact-equivalence finding and text-filtering bottleneck remain in the main prose. The generic diagram stays in the companion. No indispensable new method or main result requires supplementary access.
-
-## Submission compliance and anonymity
-
-The authentic SCITEPRESS archive was retrieved on 10 September 2026 and rechecked against the official [Templates page](https://icaart.scitevents.org/Templates.aspx). Original class, bibliography style, fonts, margins and spacing are unchanged. [Template provenance](template/provenance.json) retains URL and file hashes.
-
-The [ICAART Guidelines](https://icaart.scitevents.org/Guidelines.aspx), rechecked for this operation, retain the Regular Paper range of 10,000–50,000 non-whitespace characters including references, tables, figures and appendices. The current main PDF has **42,189 extracted characters**, a conservative estimate of **44,842**, and a **184-word abstract**. The conservative method counts all four external figures' text again (1,653 characters) and adds 1,000 for extraction losses. It is not an official portal count. The 12-page editorial target is met without modifying the template. The companion has 30,057 extracted characters and is not assumed to be an accepted submission attachment.
-
-Both PDFs have empty author metadata and no author block, affiliations, acknowledgements or current-project repository link. Relevant prior work is cited normally in the third person. Public history may still permit authorship inference. The existing anonymous AI disclosure and section-level tool citations remain. The conflict between acknowledgement placement and anonymous review, and the unverified supplementary route, are recorded in [AUTHOR_REVIEW.md](AUTHOR_REVIEW.md).
-
-Photograph figure publication permission is a new author check. The BIDS mirror supplies research data and attribution, but no blanket photograph republication license was identified. No MIT or commercial-rights claim is made for these photos. [ASSET_NOTICES.md](ASSET_NOTICES.md) accompanies the compilation archive.
+The official archive was retrieved again on 12 September 2026; its six retained files match the original template hashes. Both PDFs have empty author metadata. Ordinary third-person citations to prior work remain. [Policy/source record](data/single_pdf_policy.json) and AUTHOR_REVIEW separate completed editorial work from unresolved photograph republication, anonymous AI-disclosure placement and eligibility of the already-public manuscript history. The main is technically complete but not declared unconditionally submission-ready. No paper was submitted and no organizer contacted.
 
 ## Preservation and accounting
 
-The earlier editorial revision record is preserved in `editorial_revision.json`; its old page/count measurements describe that historical draft, not this one. The new execution freeze identifies actual experimental source files separately from manuscript changes. Original V0/V1/V2/benchmark/context ledgers and accepted scientific evidence remain unchanged. The manuscript audit checks 3,700 historical public files; the extension's private audit checks 11,851 protected files.
+Starting main was `79fd48c8b531f1eaeea28f2fc45457beac51b3ef`, with a clean tree and matching remote. Accepted artifacts, plans, configurations, application code and source manifests remain unchanged. The original manuscript asset copies and prior editorial records remain available alongside the new variants.
 
-The authorized photograph extension used **429.149258 charged seconds**, including 387.756360 neural and 41.392898 conservatively charged model-free seconds. Prior history was 88,975.067936 seconds; cumulative use is **89,404.217194 seconds**. Manuscript preparation and verification add **zero GPU seconds**. No old measurements are relabeled as having run the new code.
-
-No commit, push, upload or submission has been made. This draft is ready for author scientific, licensing and venue-policy review, not represented as an accepted paper.
+Cumulative historical use remains **89,404.217194 charged seconds**. This finalization adds **zero GPU seconds** and no new experimental observations. Commit/push is authorized for these editorial changes only; venue submission is not performed.
