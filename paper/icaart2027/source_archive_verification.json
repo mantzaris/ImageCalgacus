@@ -1,14 +1,18 @@
 {
   "passed": true,
   "archive": "ICAART2027_source.zip",
-  "archive_sha256": "b5cc7db6e1277e47ea0f23c7d56b553272e1ebecec08ef669d0adaebe9ce2d5d",
+  "archive_sha256": "0616c6e32de856388dbb3b8b6c166b51c7f1a9e4750d240b64a16f53b91a36fd",
   "canonical_main": "main.tex",
   "main_requires_bibtex_or_fragments": false,
   "main_only_verification": "consolidation_verification.json",
-  "archive_bytes": 1473183,
+  "archive_bytes": 1487061,
   "files": {
     "ASSET_NOTICES.md": "c5efdcc37fbc34e578bb0d02157a9ac580e00af48fd1c42e765da0bb1956a79f",
-    "BUILD_README.md": "163b21a58804286c3ec588ba24d841c6ac6ff592fbb1b2da352446e54f85b2be",
+    "BUILD_README.md": "a8274478f6621fe816486d2d82207f4160bf963b9b3286f71215fe3b6173b908",
+    "SCITEPRESS.sty": "d4a8482e5b2772a279b881012bedd813023f3c614287e02d5c648497ade3bf14",
+    "apalike.bst": "6977bea0847e4b850fd5bdc948beeaa50cd4d0c2a275e74a5fd68309a9628191",
+    "apalike.sty": "183bdccc3608e9db948dbd1cdffec3e2a476650dad223c7a3294325371fc0339",
+    "article.cls": "23e48b9a27539b6589503b6b5c5ff1451b58edfb245a0fa4c5847bb94392d32c",
     "build.py": "c76adc10593477d58674969d9576e0262a27014f3407434b31f0e3dc66ea649c",
     "figures/context_auc.pdf": "f71e3d93eca1e3b43cbe54be4e3e873228b6eca46b91715953d75303951f91f6",
     "figures/cover_examples.pdf": "21905363e7b5d7558f5e900ab1a9149f7ddd79733a2d85f0c3eea34084cdfb70",
@@ -21,7 +25,7 @@
     "figures/figureS2_text_consistency.pdf": "a31eaff9fcca82b805b672037962da2fff0612051c083ed0dad086b79705d78d",
     "figures/method_diagram.tex": "becb4b50dc514f43c3800f9247b900331b9d1571d4ae1c40cada33b47736b217",
     "figures/score_shifts.pdf": "4b1faf44f41e0b3300f4b0d775fcf004fd57b9f763b2a9ea47401197a7712eec",
-    "main.tex": "efceec26ff99aea2163a7f97ecc08236bd0ea82360785e9df4b7ce92ce310bdd",
+    "main.tex": "d01961727ba427bba1a34d57d38c0ed7f8ae96c7d1cb04b649f2438666029d21",
     "preamble.tex": "93d00646c1e0333118cab75357442a7092a2feb4f2de02dcac37aa811a36be8e",
     "references.bib": "0efe8981b2c099a36b9923625ec14aeb64c9d52a7fd6548dadfcf23cdc93c626",
     "sections/cover_supplement.tex": "59e2cc7dc1ca84103afaed594d7b913657f8cb96b33c936ee786ccd7b4d0d2d7",
@@ -41,11 +45,15 @@
   "isolated_compilation": {
     "ICAART2027_submission.pdf": {
       "pages": 12,
-      "isolated_build_text_identical": true
+      "isolated_build_text_identical": true,
+      "direct_pdflatex_without_custom_search_paths": true,
+      "official_files_loaded_from_manuscript_directory": true
     },
     "ICAART2027_supplement.pdf": {
       "pages": 11,
-      "isolated_build_text_identical": true
+      "isolated_build_text_identical": true,
+      "direct_pdflatex_without_custom_search_paths": true,
+      "official_files_loaded_from_manuscript_directory": true
     }
   },
   "private_material_included": false,

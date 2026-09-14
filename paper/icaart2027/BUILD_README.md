@@ -17,7 +17,7 @@ python -B build.py --target main
 The output is `ICAART2027_submission.pdf`. The main build runs pdfLaTeX three
 times and does not run BibTeX. Its only local dependencies are:
 
-- `template/article.cls`, `template/SCITEPRESS.sty`, `template/apalike.sty`.
+- `article.cls`, `SCITEPRESS.sty`, `apalike.sty`, placed beside `main.tex`.
 - `figures/figure1_transport_submission.pdf`.
 - `figures/cover_transport_submission.pdf`.
 - `figures/figure2_recovery_rate.pdf`.
@@ -27,7 +27,7 @@ The direct equivalent, producing `main.pdf` without the Python wrapper, is:
 
 ```sh
 for tex_pass in 1 2 3; do
-  TEXINPUTS="template/:" pdflatex -interaction=nonstopmode -halt-on-error main.tex
+  pdflatex -interaction=nonstopmode -halt-on-error main.tex
 done
 ```
 
@@ -46,7 +46,7 @@ python -B build.py
 The first command builds only `ICAART2027_supplement.pdf`. The second builds
 both PDFs. The companion still uses BibTeX and its retained `preamble.tex`,
 `sections/cover_supplement.tex`, `figures/method_diagram.tex`, six table fragments,
-figure PDFs, `references.bib` and `template/apalike.bst`. These fragments are not
+figure PDFs, `references.bib` and `apalike.bst`. These fragments are not
 an alternative source of the main paper. Nothing from the companion is merged
 into the main.
 
@@ -59,7 +59,10 @@ the replacement rather than making the ordinary build regenerate `main.tex`.
 
 ## Template and archive scope
 
-Compilation uses the unchanged supplied SCITEPRESS files in `template/`.
+Exact copies of the supplied `article.cls`, `SCITEPRESS.sty`, `apalike.sty` and
+`apalike.bst` are placed beside `main.tex`, so ordinary editor compilation needs
+no custom search paths. The originals remain unchanged in `template/` for
+provenance. Packaging verifies byte equality and includes both locations.
 The authentic template was retrieved on 10 September 2026 from
 https://www.scitepress.org/documents/SCITEPRESS_Conference_Latex.zip,
 linked by https://icaart.scitevents.org/Templates.aspx.

@@ -3,9 +3,9 @@
 from pathlib import Path
 import hashlib
 import json
+import os
 import re
 import subprocess
-import sys
 import tempfile
 import zipfile
 
@@ -35,6 +35,10 @@ def main():
         files.append(HERE / "tables" / (name + ".tex"))
     for name in ("article.cls", "SCITEPRESS.sty", "apalike.sty", "apalike.bst", "provenance.json"):
         files.append(HERE / "template" / name)
+    # Exact official copies beside main.tex support ordinary editor/pdfLaTeX use.
+    for name in ("article.cls", "SCITEPRESS.sty", "apalike.sty", "apalike.bst"):
+        assert (HERE / name).read_bytes() == (HERE / "template" / name).read_bytes(), name
+        files.append(HERE / name)
     names = [str(path.relative_to(HERE)) for path in files]
     assert len(names) == len(set(names))
     for path in files:
@@ -48,24 +52,39 @@ def main():
         for path in sorted(files):
             out.write(path, str(path.relative_to(HERE)))
     # A fresh filesystem location with only the allowlisted ZIP contents.
-    # build.py supplies local template paths and standard system TeX paths.
+    # Exercise ordinary pdfLaTeX, without the wrapper's custom search paths.
     with tempfile.TemporaryDirectory(prefix="imagecalgacus-source-compile-") as temporary:
         target = Path(temporary)
         with zipfile.ZipFile(archive) as zipped:
             assert sorted(zipped.namelist()) == sorted(names)
             assert all((target / name).resolve().is_relative_to(target) for name in names)
             zipped.extractall(target)
-        result = subprocess.run([sys.executable, "-B", "build.py"], cwd=target, capture_output=True, text=True)
-        if result.returncode:
-            raise RuntimeError(result.stdout + result.stderr + "\n" + "\n".join(p.read_text()[-6000:] for p in (target / "build").glob("*_build.txt")))
+        env = os.environ.copy()
+        for variable in ("TEXINPUTS", "BSTINPUTS", "BIBINPUTS"):
+            env.pop(variable, None)
         outputs = {}
         for stem, name in (("main", "ICAART2027_submission.pdf"), ("supplement", "ICAART2027_supplement.pdf")):
-            isolated = target / name
+            command = ["pdflatex", "-interaction=nonstopmode", "-halt-on-error",
+                       "-file-line-error", "-recorder", stem + ".tex"]
+            with (target / (stem + "_direct_build.txt")).open("w") as output:
+                subprocess.run(command, cwd=target, env=env, stdout=output, stderr=subprocess.STDOUT, check=True)
+                if stem == "supplement":
+                    subprocess.run(["bibtex", stem], cwd=target, env=env, stdout=output, stderr=subprocess.STDOUT, check=True)
+                for _ in range(2):
+                    subprocess.run(command, cwd=target, env=env, stdout=output, stderr=subprocess.STDOUT, check=True)
+            isolated = target / (stem + ".pdf")
             assert extract_text(isolated) == extract_text(HERE / name), name
-            log = (target / "build" / (stem + ".log")).read_text()
+            log = (target / (stem + ".log")).read_text()
             assert "Overfull" not in log and "undefined" not in log.lower()
+            inputs = {(target / line[6:]).resolve() for line in
+                      (target / (stem + ".fls")).read_text().splitlines()
+                      if line.startswith("INPUT ")}
+            for dependency in ("article.cls", "SCITEPRESS.sty", "apalike.sty"):
+                assert (target / dependency).resolve() in inputs, dependency
             info = subprocess.check_output(["pdfinfo", str(isolated)], text=True)
-            outputs[name] = {"pages": int(re.search(r"Pages:\s*(\d+)", info)[1]), "isolated_build_text_identical": True}
+            outputs[name] = {"pages": int(re.search(r"Pages:\s*(\d+)", info)[1]), "isolated_build_text_identical": True,
+                             "direct_pdflatex_without_custom_search_paths": True,
+                             "official_files_loaded_from_manuscript_directory": True}
     # Packaging remains usable after future direct manuscript edits. The
     # historical pixel-equivalence check is separate, not a content reset gate.
     main_source = (HERE / "main.tex").read_text()

@@ -2,6 +2,10 @@
 
 Anonymous Regular Paper, Artificial Intelligence. The submission artifact is `ICAART2027_submission.pdf` alone. Editorial finalization starts at `79fd48c8b531f1eaeea28f2fc45457beac51b3ef`. No experimental result, model profile or historical execution identity is changed. No authorship, funding, permission or ethics approval is invented.
 
+## Current readability revision
+
+The current PDF has 12 pages, a 191-word abstract, 42,217 extracted non-whitespace characters and a conservative estimate of 44,852. Only the abstract, Introduction opening and new Method overview were edited relative to the starting working manuscript. Existing author prose changes and the previous dependency repair were retained. The original method, results and citations are unchanged by this revision. Current saved-evidence and archive checks pass. The source-consolidation equivalence below is historical, not a claim of unchanged pixels after this prose revision. No author or organizer decision below is changed.
+
 ## Source consolidation checkpoint
 
 The subsequent source-only change starts at `0c7296327c0131201b3372a9c5bab70eddba4f0d`. Its later abstract edit is retained verbatim. [main.tex](main.tex) is now the authoritative editable submission, with all main-owned content and the exact twenty-entry formatted bibliography inline. It compiles without BibTeX or old fragments. The companion is not merged.

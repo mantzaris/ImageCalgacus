@@ -1,4 +1,14 @@
-# Single-PDF final visual inspection
+# Readability revision inspection
+
+The current submission PDF has SHA256 `3cf80f64be9f25dbd0ce063d3a02dffa1fbea7c6ff96b5005e1f54f0779ea0e6`. It has **12 pages**, **42,217 extracted non-whitespace characters**, a **44,852 conservative estimate** and a **191-word abstract**.
+
+Pages **1, 2, 3 and 12** were rendered at 144 dpi and inspected for this focused revision. The abstract and Introduction opening fit on page 1. The new Method overview fits before subsection 3.1 on page 2. Figure 1 and the following packet equation remain readable on page 3. The conclusion, disclosure and complete bibliography fit on page 12 without clipping. Build logs have no overfull boxes or unresolved citations/references. All four figure and three table numbers and pages remain unchanged. Fonts, margins and template settings were not modified.
+
+The main and companion compile from the updated ZIP using direct pdfLaTeX with custom search paths unset. Their extracted text matches the corresponding delivered PDFs. The main-only source organization remains intact. Existing experimental assets, the companion PDF and six GPU ledgers are unchanged. Zero new GPU seconds were used.
+
+The earlier inspection below is preserved as a historical record of source consolidation. Its pixel-equivalence claim and older hashes/counts do not describe the current prose revision.
+
+## Historical source-consolidation inspection
 
 All **12 main-paper pages** were rendered at 144 dpi and inspected after source consolidation from `0c7296327c0131201b3372a9c5bab70eddba4f0d`. The reference is a fresh build of that commit's source, preserving its latest abstract. All 12 pages have **zero differing RGB pixels**, exact layout-text equality and identical stable PDF metadata. Figure/table labels and citations also match. [Consolidation verification](consolidation_verification.json) records per-page hashes and the main-only eight-file build.
 

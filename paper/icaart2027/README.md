@@ -4,7 +4,7 @@
 
 The sole proposed review artifact is [ICAART2027_submission.pdf](ICAART2027_submission.pdf), an anonymous Regular Paper in Artificial Intelligence. The main paper stands alone. Reviewers are not assumed to receive the companion, source archive, local examples or repository evidence.
 
-- Main PDF: **12 pages**, including references; **41,500 extracted** and **44,135 conservatively estimated non-whitespace characters**; **180-word abstract**.
+- Main PDF: **12 pages**, including references; **42,217 extracted** and **44,852 conservatively estimated non-whitespace characters**; **191-word abstract**.
 - [Compilation source ZIP](ICAART2027_source.zip), independently rebuilt and verified.
 - [Companion PDF](ICAART2027_supplement.pdf), 11 pages, maintained as optional author material. No separate supplementary submission route is assumed.
 - [Author decisions](AUTHOR_REVIEW.md), [verification](verification.json), [archive check](source_archive_verification.json), [visual inspection](visual_inspection.md), [reference verification](reference_verification.md), [asset notices](ASSET_NOTICES.md).
@@ -20,13 +20,19 @@ From the repository root, compile only the submission with:
 python -B paper/icaart2027/build.py --target main
 ```
 
-The remaining local compilation dependencies are `template/article.cls`, `template/SCITEPRESS.sty`, `template/apalike.sty` and four figure PDFs in `figures/`: `figure1_transport_submission.pdf`, `cover_transport_submission.pdf`, `figure2_recovery_rate.pdf` and `context_auc.pdf`. Standard installed LaTeX packages are also required. No BibTeX run, `.bib`, `.bbl`, preamble file, section file or table fragment is read by the main build.
+The remaining local compilation dependencies are `article.cls`, `SCITEPRESS.sty`, `apalike.sty` (beside `main.tex`) and four figure PDFs in `figures/`: `figure1_transport_submission.pdf`, `cover_transport_submission.pdf`, `figure2_recovery_rate.pdf` and `context_auc.pdf`. Standard installed LaTeX packages are also required. No BibTeX run, `.bib`, `.bbl`, preamble file, section file or table fragment is read by the main build.
 
-The ten old main-only sections and two main-only table fragments have been removed after exact inlining. They remain recoverable in Git history. The companion remains separate. Its external `preamble.tex`, `sections/cover_supplement.tex`, `figures/method_diagram.tex` and six companion table fragments are retained only for that document. `references.bib` and `template/apalike.bst` serve the companion and reference maintenance. Changes to the BibTeX database do not automatically change the main paper's inlined bibliography. See [BUILD_README.md](BUILD_README.md) for maintenance and direct pdfLaTeX commands.
+The ten old main-only sections and two main-only table fragments have been removed after exact inlining. They remain recoverable in Git history. The companion remains separate. Its external `preamble.tex`, `sections/cover_supplement.tex`, `figures/method_diagram.tex` and six companion table fragments are retained only for that document. `references.bib` and the adjacent `apalike.bst` serve the companion and reference maintenance. Changes to the BibTeX database do not automatically change the main paper's inlined bibliography. See [BUILD_README.md](BUILD_README.md) for maintenance and direct pdfLaTeX commands.
+
+Plain `pdflatex main.tex` also works when run from `paper/icaart2027/`, with no `TEXINPUTS` setting. Exact official class/style copies are adjacent to the manuscript and included in the ZIP; the unchanged originals remain in `template/`. Run pdfLaTeX three times to settle references. The archive verifier checks direct compilation of both documents with custom TeX search variables unset.
 
 The build never reconstructs or overwrites `main.tex`. `build_tables.py` now generates companion tables only. Retained publication table copies are evidence inputs, not alternative editable main tables.
 
-Consolidation starts at `0c7296327c0131201b3372a9c5bab70eddba4f0d`. That commit's later abstract edit is preserved verbatim. Its committed PDF predated the edit, so comparison uses a fresh build of the actual starting source. [Consolidation verification](consolidation_verification.json) proves exact text, bibliography, citation/label and 144-dpi page-pixel equivalence, including the unchanged companion. [Source-organization note](../../notes/icaart_source_consolidation.md) records the bounded change.
+Historical source consolidation started at `0c7296327c0131201b3372a9c5bab70eddba4f0d`. That commit's later abstract edit is preserved verbatim. Its committed PDF predated the edit, so comparison uses a fresh build of the actual starting source. [Consolidation verification](consolidation_verification.json) records that historical revision's exact text, bibliography, citation/label and 144-dpi page-pixel equivalence, including the unchanged companion. [Source-organization note](../../notes/icaart_source_consolidation.md) records the bounded change.
+
+## Current readability revision
+
+The abstract and Introduction opening now explain the practical objective before technical terms. A Method overview gives the byte-to-packet-to-carrier workflow before the unchanged formal specification. The revision preserves the pre-existing working prose edits and local template dependency fix. Only these three passages differ from that starting manuscript. [Verification](verification.json) records the current PDF; the earlier pixel-equivalence record remains historical and is not an assertion that later prose edits preserve old page pixels. [Revision note](../../notes/icaart_readability_revision.md) records scope, counts and inspection.
 
 ## Contribution and principal results
 
@@ -70,7 +76,6 @@ From the repository root, using the existing analysis environment or equivalent 
 ```sh
 ../llm-rankcloak/.venv/bin/python -B paper/icaart2027/build_submission_figures.py
 python -B paper/icaart2027/build.py
-../llm-rankcloak/.venv/bin/python -B paper/icaart2027/verify_consolidation.py
 ../llm-rankcloak/.venv/bin/python -B paper/icaart2027/verify.py
 ../llm-rankcloak/.venv/bin/python -B scripts/analyze_cover_rank_v1.py --verify-only
 python -B paper/icaart2027/package_source.py
@@ -82,7 +87,7 @@ Verification checks saved evidence and exact exported measurements, not new infe
 
 ## Compliance and remaining decisions
 
-The current [ICAART Guidelines](https://icaart.scitevents.org/Guidelines.aspx) require 10,000–50,000 non-whitespace characters including references and graphics. The estimate counts extracted main text, counts the four figures' 1,635 text characters a second time, and adds 1,000 for extraction uncertainty. The margin is **5,865 characters**. This is not a portal-certified count. All visible figure text was inspected. No font, margin, line spacing or template change was used.
+The current [ICAART Guidelines](https://icaart.scitevents.org/Guidelines.aspx) require 10,000–50,000 non-whitespace characters including references and graphics. The estimate counts extracted main text, counts the four figures' 1,635 text characters a second time, and adds 1,000 for extraction uncertainty. The margin is **5,148 characters**. This is not a portal-certified count. All visible figure text was inspected. No font, margin, line spacing or template change was used.
 
 The official archive was retrieved again on 12 September 2026; its six retained files match the original template hashes. Both PDFs have empty author metadata. Ordinary third-person citations to prior work remain. [Policy/source record](data/single_pdf_policy.json) and AUTHOR_REVIEW separate completed editorial work from unresolved photograph republication, anonymous AI-disclosure placement and eligibility of the already-public manuscript history. The main is technically complete but not declared unconditionally submission-ready. No paper was submitted and no organizer contacted.
 

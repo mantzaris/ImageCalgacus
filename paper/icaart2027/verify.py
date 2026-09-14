@@ -283,17 +283,26 @@ def main():
         ["git", "show", reviewed_revision + ":paper/icaart2027/preamble.tex"], cwd=ROOT)
     expected_preamble = original_preamble.replace(b". See the disclosure.", b".")
     assert (HERE / "preamble.tex").read_bytes().strip() == expected_preamble.strip()
-    assert inlined_source("preamble.tex").encode().strip() == expected_preamble.strip()
+    # Origin comments may be removed during normal single-file editing.
+    main_source = (HERE / "main.tex").read_text()
+    for line in expected_preamble.decode().splitlines():
+        if line.strip() and not line.lstrip().startswith("%"):
+            assert line in main_source, line
     consolidation = read(HERE / "consolidation_verification.json")
     assert consolidation["passed"] and consolidation["main"]["all_rendered_pixels_identical"]
-    assert consolidation["delivered_main_pdf_sha256"] == sha(HERE / "ICAART2027_submission.pdf")
-    assert consolidation["main_only_files"]["main.tex"] == sha(HERE / "main.tex")
+    # The consolidation report proves that historical source-only operation.
+    # Later authorized prose edits must not claim pixel equality to that draft.
+    matches_consolidation = (consolidation["delivered_main_pdf_sha256"] ==
+                             sha(HERE / "ICAART2027_submission.pdf") and
+                             consolidation["main_only_files"]["main.tex"] ==
+                             sha(HERE / "main.tex"))
     checks["source_consolidation"] = {
         "starting_commit": consolidation["starting_commit"],
         "canonical_source": "main.tex",
         "formatted_bibliography_entries": consolidation["bibliography_entries"],
         "isolated_main_only_build": True,
-        "baseline_text_and_rendered_pages_identical": True,
+        "historical_baseline_text_and_rendered_pages_identical": True,
+        "current_pdf_and_source_match_historical_consolidation": matches_consolidation,
         "new_gpu_seconds": 0,
     }
     checks["editorial_revision"] = {
@@ -339,6 +348,7 @@ def main():
     checks["passed"] = True
     checks["source_revision"] = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     checks["verification_script_sha256"] = sha(Path(__file__))
+    checks["current_main_source_sha256"] = sha(HERE / "main.tex")
     (HERE / "verification.json").write_text(json.dumps(checks, indent=2) + "\n")
     print(json.dumps({key: checks[key] for key in ("passed", "unchanged_accepted_files", "new_gpu_seconds", "six_recovery_cells", "character_count")}, indent=2))
 

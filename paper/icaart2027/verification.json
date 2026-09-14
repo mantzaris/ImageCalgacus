@@ -234,7 +234,8 @@
     "canonical_source": "main.tex",
     "formatted_bibliography_entries": 20,
     "isolated_main_only_build": true,
-    "baseline_text_and_rendered_pages_identical": true,
+    "historical_baseline_text_and_rendered_pages_identical": true,
+    "current_pdf_and_source_match_historical_consolidation": false,
     "new_gpu_seconds": 0
   },
   "editorial_revision": {
@@ -274,9 +275,9 @@
   "pdfs": {
     "main": {
       "file": "ICAART2027_submission.pdf",
-      "sha256": "defe4d75c8acde581e1cd2f88f5467b02cff33b059e39037217343c3c0b67855",
+      "sha256": "3cf80f64be9f25dbd0ce063d3a02dffa1fbea7c6ff96b5005e1f54f0779ea0e6",
       "pages": 12,
-      "extracted_nonwhitespace_characters": 41500,
+      "extracted_nonwhitespace_characters": 42217,
       "empty_author_metadata": true
     },
     "supplement": {
@@ -288,8 +289,8 @@
     }
   },
   "character_count": {
-    "abstract_words_whitespace_method": 180,
-    "main_extracted_including_figures_tables_references": 41500,
+    "abstract_words_whitespace_method": 191,
+    "main_extracted_including_figures_tables_references": 42217,
     "main_external_figures_counted": [
       "figure1_transport_submission.pdf",
       "figure2_recovery_rate.pdf",
@@ -299,7 +300,7 @@
     "duplicated_external_figure_text_allowance": 1635,
     "whole_diagram_source_allowance": 0,
     "additional_extraction_allowance": 1000,
-    "conservative_main_nonwhitespace_estimate": 44135,
+    "conservative_main_nonwhitespace_estimate": 44852,
     "official_regular_paper_range": [
       10000,
       50000
@@ -307,6 +308,7 @@
     "caveat": "Conservative estimate, not an official portal count. No official graph-to-character conversion was specified. All visible figure text was also visually inspected."
   },
   "passed": true,
-  "source_revision": "0c7296327c0131201b3372a9c5bab70eddba4f0d",
-  "verification_script_sha256": "484998dfed73eaf003fc7449730cac608141c4dd1a73cf87c8dec49ef74bae42"
+  "source_revision": "6970fa43d02eda8862634c56325dd6f856b05010",
+  "verification_script_sha256": "791da0860a185013b42658a20866715e6702c4cd7224544feebafb13f94581ba",
+  "current_main_source_sha256": "d01961727ba427bba1a34d57d38c0ed7f8ae96c7d1cb04b649f2438666029d21"
 }
