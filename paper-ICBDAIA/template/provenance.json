@@ -1,0 +1,82 @@
+{
+  "checked": "2026-11-14",
+  "retrieval": "Fresh downloads from official URLs; no research material copied from OverseeingManyLLMs.",
+  "sources": {
+    "conference": "https://icbdaia.com/",
+    "cfp": "https://easychair.org/cfp/ICBDAIA27",
+    "conference_template": "https://drive.google.com/uc?export=download&id=1X67baiOAmfXYsMWcHocoHNuiSS75y24w",
+    "springer_latex": "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/26361882/data/v8",
+    "springer_lnns_instructions": "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/26362278/data/v2",
+    "springer_ai_disclosure": "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/53830640/data/",
+    "format_helper_reference": "https://github.com/mantzaris/OverseeingManyLLMs/blob/main/paper-ICBDAIA/preamble-conf.tex"
+  },
+  "page_twips": {
+    "w": "11906",
+    "h": "16838",
+    "code": "9"
+  },
+  "margin_twips": {
+    "top": "2948",
+    "right": "2494",
+    "bottom": "2948",
+    "left": "2494",
+    "header": "2381",
+    "footer": "2324",
+    "gutter": "0"
+  },
+  "word_text_area_mm": [
+    122.02583333333332,
+    193.00472222222223
+  ],
+  "official_latex_text_area_mm": [
+    122,
+    193
+  ],
+  "class_version": "2026/09/03 v2.25",
+  "abstract_words": [
+    150,
+    250
+  ],
+  "files": {
+    "DescriptionTexts.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "conference-template-page-2.png": "4762e5fb4e1a96a402fdb3136a814526971c00000c9fc213801fa600a7db96de",
+    "conference-template-page-3.png": "e8d747c5d547bc0932ae8a3d7116f31e226c2a728e20fa79fe862885ee81fed5",
+    "conference-template-page1.png": "89c5685635522abd83146e472adac53750b435e524dd29e1c4b0e11a8c77366d",
+    "conference-template-text.txt": "80ea5e78bc59cabe591106c3cf676218836b006f6b3019124e30c21b7ce18e4e",
+    "conference-template.docm": "68e89eda8b4d1a8529c65e9dd7fdcf1c9264f62ca233537a6b5db0a6d936de12",
+    "conference-template.pdf": "2364c426a2bc503b9b7ea831778585d23a42af351d030dc4582bf9bfb22c421c",
+    "format-fixture-1.png": "f025320f47b18c6ccc7d223ef13832700e275e50db552e818fee0f385a2c5660",
+    "format-fixture-2.png": "8bcf3ff0218fde93ffbc2682a7f70abe3c53138e584821d92da6976a474f8304",
+    "format-fixture-3.png": "828af8848d13f97af4b605d7e3a5fddb14b4bb06da547759d69fd3e66fbd52b9",
+    "format-fixture-console.txt": "3c42e32ce27c41adaf272a92410802b74463c8a26f1ae8f27b004f3bb76a3f37",
+    "format-fixture.aux": "46de16d7e47a35d642013cd436564a6f003ab02a2f81f2d67a693ab02f587018",
+    "format-fixture.log": "1beda37a526c901411fde9652557cb025ae45a6173e6e417447222c9a4cb46e2",
+    "format-fixture.pdf": "adafef780b20abf4535b05e10544f9b3e94f970f98204122f57ad7c14276e0a5",
+    "format-fixture.tex": "91e33e13e8119ba7df253defa6f5ed0bd7f2ed40de5cfe98ef3f6d69838675d6",
+    "springer-ai-disclosure.pdf": "ecb451567672aba4ca66d2d1ecd623d544b7f020b99f6b8a5e82e12036bd3908",
+    "springer-ai-disclosure.txt": "4b87811271fd9e04db661f20f0e8e49ca218b268713afd31e69b61c30a35f03d",
+    "springer-latex/DescriptionTexts.txt": "31666ccea9072ad9b6af59624f50e239e6d663cb952d894891ed1cff2efb7868",
+    "springer-latex/fig1.eps": "e0da72903f4ba3ae2307869fd2f1d2ad460281725e0a3205862e91c8d6daf831",
+    "springer-latex/history.txt": "9a4a85d0e7ab49fa35c638fee5e4083ae2b5bd0f5a943113098dc2e86e62d261",
+    "springer-latex/llncs.cls": "04ec99046ad9867f6cd54ffd1ef8c47c767b327d1baec77536db0528cd492fa2",
+    "springer-latex/llncsdoc.pdf": "bda75de93cd92490d678172e98a11bcbb0dc76a88831333bf0ef2aa9fdb4d006",
+    "springer-latex/readme.txt": "d5a69ddfcd5d316877c301e9504c6302d1f1dc7b2c8f128d8066cdd0b0a7e21a",
+    "springer-latex/samplepaper.pdf": "eca3d6e563297b74ca4f75357b24444443abf33ef0c6d0bf952b1f3e04e122c1",
+    "springer-latex/samplepaper.tex": "08142e057525c0edcab3e62a7028084a136cdbd7a66af8eb5157c2e5ae1806a6",
+    "springer-latex/splncs04.bst": "f36c3a17e5304a692706359aafa9de709395a085e579eb47c027095aeaa35174",
+    "springer-lnns-author-instructions.pdf": "deea446398142d00fdcb29c017ad660563b46a37ce97c5cf92a69e6902c1a7b3",
+    "springer-lnns-author-instructions.txt": "3495fac8928dffc19e5bc987fe77f4866d5677997d662e2a2210ecaff67895f1",
+    "springer-proceedings-latex.zip": "42afb32ed4fadc9e209134ec65dab1bd2a7ead42f9a3f8abb184f250c4a197b9",
+    "texput.log": "a6754d5b39f583c5122297f4ce6bbbe11dd7f57a800e63495699db10a216ec4b"
+  },
+  "inspected": "DOCM package content types, XML, paragraph styles, page/margin dimensions and header variants; all three LibreOffice-rendered template pages; official LaTeX sample and LNNS instructions; complete AI disclosure text.",
+  "format_correction": "The actual downloaded package is macro-enabled DOCM, despite .docx naming in the reference repository notes: macroEnabled.main+xml and word/vbaProject.bin exist. Retained unchanged as .docm. Word delivery must be exported to macro-free DOCX, not renamed.",
+  "format_fixture": {
+    "pages": 3,
+    "textwidth_tex_pt": 347.12361,
+    "textheight_tex_pt": 549.13818,
+    "compile": "pdflatex -interaction=nonstopmode -halt-on-error -output-directory=template template/format-fixture.tex",
+    "warnings": 0,
+    "paper": "A4"
+  }
+}

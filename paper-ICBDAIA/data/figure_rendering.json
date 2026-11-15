@@ -1,0 +1,18 @@
+{
+  "script_sha256": "b9bc27ea43771057048a30734377e51486fb4cdb725aaa274e53528239925452",
+  "output_hashes": {
+    "figures/context_auc.pdf": "8411cf565acf6dab0caa09309e665eb612550933ce6de3b6a7d4ec7b77e394db",
+    "figures/context_auc.png": "7cbeecaf313174d7364b30d243c3e99cac0e1c6b61b951eb9a4658eec4661025",
+    "figures/context_auc.svg": "f5226517cd4b8f86e60a5cae5d10e87d27a1de013a1a39e59270c6255c469866",
+    "figures/overview.pdf": "53630df02dc7dc9890653b4cb63fcb7ccd4e465e4c7a209527f21ef7243c304e",
+    "figures/overview.png": "8109a1045afae362c3b692274543dd657bfae769fa4244368131d2da017689cd",
+    "figures/overview.svg": "fee5e84e5b63f7a868a81fdb6a5850557d7accf0dbdadffde850655edf6a360c",
+    "figures/recovery_rate.pdf": "c8dc979c6e751afc16c1b8ce50ec4cfa40f55eebc0ef97bfc25d0c19d7005f49",
+    "figures/recovery_rate.png": "4c57f2376ab00a29e4d1d592f4fd50138c8ffd5ee175ab1373543efb2fefbc9e",
+    "figures/recovery_rate.svg": "8a1bbad4ab3af92139a23579866a1c82a55367848bfb3f0f363028a593f56fd7"
+  },
+  "new_experiments": false,
+  "matplotlib": "3.1.2",
+  "numpy": "1.22.1",
+  "Pillow": "9.4.0"
+}

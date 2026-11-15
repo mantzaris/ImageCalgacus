@@ -1,0 +1,62 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./template/format-fixture.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (./llncs.cls
+Document Class: llncs 2026/09/03 v2.25 
+ LaTeX document class for Lecture Notes in Computer Science
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/aliascnt.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxtext.sty
+`newtxtext' v1.531, 2018/03/27 Text macros taking advantage of TeX-Gyre Termes 
+fonts (msharpe) (/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/t1ntxtlf.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.624, 2020/01/25 Math macros based originally on txfonts (msharpe
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex))
+(./preamble-conf.tex
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def)
+No file format-fixture.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+ICBDAIA-TEXTWIDTH: 347.12361pt
+ICBDAIA-TEXTHEIGHT: 549.13818pt
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd) [1{/var/lib/texmf/fo
+nts/map/pdftex/updmap/pdftex.map}] [2] [3] (template/format-fixture.aux) ){/usr
+/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/share/texm
+f/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex
+-gyre/qtmr.pfb>
+Output written on template/format-fixture.pdf (3 pages, 56526 bytes).
+Transcript written on template/format-fixture.log.

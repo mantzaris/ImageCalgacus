@@ -1,0 +1,26 @@
+{
+  "total_pages": 10,
+  "abstract_words_whitespace_count": 207,
+  "missing_citations_references": false,
+  "overfull_boxes": false,
+  "remaining_log_diagnostics": [
+    "Underfull \\hbox (badness 10000) in paragraph at lines 50--53"
+  ],
+  "anonymous_review_version": true,
+  "pdf_author": "",
+  "identified_author_block_retained_in_comments": true,
+  "rendered_all_pages": true,
+  "research_execution": "None; compilation and PDF presentation checks only",
+  "sha256": {
+    "main.tex": "5e791216015c2f876085762aa9efbeea933d9eeb656d6f19da111257155dd436",
+    "main.pdf": "31875bcf4dd3481f20878e7cd13e6aec342cdfa2b159a7eb4e8cc920729bb79a",
+    "main.bbl": "441c29147c40f091393752b9631091d111d6a551cb4b8ecd92f727ddc155ba50",
+    "references.bib": "541a6bde61973484f9dfd965793b5539b44008f7cd666850178201e3cf319dc1",
+    "llncs.cls": "04ec99046ad9867f6cd54ffd1ef8c47c767b327d1baec77536db0528cd492fa2",
+    "splncs04.bst": "f36c3a17e5304a692706359aafa9de709395a085e579eb47c027095aeaa35174",
+    "preamble-conf.tex": "33fe0d41fe24d0a5f4b6e291780466519767803b5f7e7b0e614e4a20a567f587",
+    "figures/context_auc.pdf": "8411cf565acf6dab0caa09309e665eb612550933ce6de3b6a7d4ec7b77e394db",
+    "figures/overview.pdf": "53630df02dc7dc9890653b4cb63fcb7ccd4e465e4c7a209527f21ef7243c304e",
+    "figures/recovery_rate.pdf": "c8dc979c6e751afc16c1b8ce50ec4cfa40f55eebc0ef97bfc25d0c19d7005f49"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "pdf_sha256": "31875bcf4dd3481f20878e7cd13e6aec342cdfa2b159a7eb4e8cc920729bb79a",
+  "total_pages": 10,
+  "pdf_author_metadata": "",
+  "anonymous_title_page": true,
+  "direct_author_affiliation_email_identifiers_removed": true,
+  "current_project_repository_link_removed": true,
+  "identified_author_block_preserved_in_commented_source": true,
+  "normal_third_person_prior_work_citations_retained": true,
+  "source_bundle_intentionally_contains_identities": true,
+  "scope": "Removes direct authorship identifiers from the review PDF; does not erase pre-existing public manuscript history."
+}

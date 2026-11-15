@@ -1,0 +1,20 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+JOUTIC+TeXGyreTermes-Bold            Type 1            Custom           yes yes no      11  0
+AXTPCY+TeXGyreTermes-Regular         Type 1            Custom           yes yes no      14  0
+AXTPCY+TeXGyreTermes-Regular         Type 1            Custom           yes yes no      15  0
+HIOIGF+TeXGyreTermes-Italic          Type 1            Custom           yes yes no      17  0
+AXTPCY+TeXGyreTermes-Regular         Type 1            Custom           yes yes no      53  0
+VABAVD+txsys                         Type 1            Builtin          yes yes no      54  0
+ORSAMT+NewTXMI                       Type 1            Builtin          yes yes no      82  0
+ASPJIC+NewTXMI7                      Type 1            Builtin          yes yes no      83  0
+OGYQFN+txmiaX                        Type 1            Builtin          yes yes no      85  0
+DejaVuSans-Bold                      CID TrueType      Identity-H       yes no  yes     87  0
+DejaVuSans                           CID TrueType      Identity-H       yes no  yes     88  0
+CYBZPM+txexs                         Type 1            Builtin          yes yes no     124  0
+UXCKMZ+NewTXMI5                      Type 1            Builtin          yes yes no     125  0
+DejaVuSans                           CID TrueType      Identity-H       yes no  yes    161  0
+DejaVuSans-Bold                      CID TrueType      Identity-H       yes no  yes    162  0
+DejaVuSans                           CID TrueType      Identity-H       yes no  yes    190  0
+DejaVuSans-Bold                      CID TrueType      Identity-H       yes no  yes    191  0
+VGRILX+t1xtt                         Type 1            Builtin          yes yes no     223  0

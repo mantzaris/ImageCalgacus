@@ -1,0 +1,87 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{bsds}
+Arbel{\'a}ez, P., Maire, M., Fowlkes, C., Malik, J.: Contour detection and
+  hierarchical image segmentation. IEEE Transactions on Pattern Analysis and
+  Machine Intelligence  \textbf{33}(5),  898--916 (2011).
+  \doi{10.1109/TPAMI.2010.161}
+
+\bibitem{qim}
+Chen, B., Wornell, G.W.: Preprocessed and postprocessed quantization index
+  modulation methods for digital watermarking. In: Security and Watermarking of
+  Multimedia Contents II. vol.~3971, pp. 48--59. SPIE (2000),
+  \url{https://dsp-group.mit.edu/wp-content/uploads/2024/11/Preprocessedandpost.pdf}
+
+\bibitem{gcm}
+Dworkin, M.: Recommendation for block cipher modes of operation:
+  {Galois/Counter} mode ({GCM}) and {GMAC}. Tech. Rep. SP 800-38D, National
+  Institute of Standards and Technology (2007). \doi{10.6028/NIST.SP.800-38D}
+
+\bibitem{stc}
+Filler, T., Judas, J., Fridrich, J.: Minimizing additive distortion in
+  steganography using syndrome-trellis codes. IEEE Transactions on Information
+  Forensics and Security  \textbf{6}(3),  920--935 (2011).
+  \doi{10.1109/TIFS.2011.2134094}
+
+\bibitem{gltr}
+Gehrmann, S., Strobelt, H., Rush, A.M.: {GLTR}: Statistical detection and
+  visualization of generated text. In: Proceedings of ACL: System
+  Demonstrations. pp. 111--116. Association for Computational Linguistics
+  (2019). \doi{10.18653/v1/P19-3019}
+
+\bibitem{rankcloak}
+Mantzaris, A.V.: {RankCloak} conceals the surface form of synthetic
+  cryptographic artifacts in language model generated text. Repository
+  manuscript and implementation (2026), revision ce853d4.
+  \url{https://github.com/mantzaris/llm-rankcloak}
+
+\bibitem{llama3}
+{Meta}: {Meta Llama 3} model card. Official model documentation (2024),
+  \url{https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md}
+
+\bibitem{calgacus}
+Norelli, A., Bronstein, M.: {LLMs} can hide text in other text of the same
+  length. arXiv:2510.20075v6 (2026), original preprint 2025
+
+\bibitem{pytorchgraphs}
+{PyTorch Contributors}: {CUDA} semantics. PyTorch 2.5 documentation, CUDA
+  graphs (2024),
+  \url{https://github.com/pytorch/pytorch/blob/v2.5.1/docs/source/notes/cuda.rst}
+
+\bibitem{pixelcnn}
+Salimans, T., Karpathy, A., Chen, X., Kingma, D.P.: {PixelCNN++}: Improving the
+  {PixelCNN} with discretized logistic mixture likelihood and other
+  modifications. arXiv:1701.05517 (2017)
+
+\bibitem{stegastamp}
+Tancik, M., Mildenhall, B., Ng, R.: {StegaStamp}: Invisible hyperlinks in
+  physical photographs. In: Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition (2020), \url{https://arxiv.org/abs/1904.05343}
+
+\bibitem{fashion}
+Xiao, H., Rasul, K., Vollgraf, R.: {Fashion-MNIST}: a novel image dataset for
+  benchmarking machine learning algorithms. arXiv:1708.07747 (2017)
+
+\bibitem{consistency}
+Yan, R., Murawaki, Y.: Addressing tokenization inconsistency in steganography
+  and watermarking based on large language models. In: Proceedings of EMNLP.
+  pp. 7076--7098. Association for Computational Linguistics (2025).
+  \doi{10.18653/v1/2025.emnlp-main.361}
+
+\bibitem{pixelstega}
+Zhang, S., Yang, Z., Tu, H., Yang, J., Huang, Y.: {Pixel-Stega}: Generative
+  image steganography based on autoregressive models. arXiv:2112.10945 (2021)
+
+\bibitem{hidden}
+Zhu, J., Kaplan, R., Johnson, J., Li, F.F.: {HiDDeN}: Hiding data with deep
+  networks. arXiv:1807.09937 (2018)
+
+\bibitem{ziegler}
+Ziegler, Z.M., Deng, Y., Rush, A.M.: Neural linguistic steganography. In:
+  Proceedings of EMNLP-IJCNLP. pp. 1210--1215. Association for Computational
+  Linguistics (2019). \doi{10.18653/v1/D19-1115}
+
+\end{thebibliography}

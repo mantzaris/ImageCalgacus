@@ -1,0 +1,6 @@
+*.aux
+*.blg
+*.log
+*.out
+__pycache__/
+verification/source-bundle-build/

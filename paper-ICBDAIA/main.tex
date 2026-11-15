@@ -1,0 +1,197 @@
+\documentclass[orivec]{llncs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext}
+\usepackage[varvw]{newtxmath}
+\input{preamble-conf}
+\usepackage{graphicx,booktabs,array,tabularx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\pdfstringdefDisableCommands{\def\unskip{}}
+\newcommand{\rank}{\operatorname{rank}}
+\hypersetup{pdftitle={Hiding Images in Text and Text in Images with Generative AI},pdfauthor={},pdfkeywords={Generative steganography, large language models, image steganography, exact recovery, steganalysis}}
+\begin{document}
+\title{Hiding Images in Text and Text in Images with Generative AI}
+\titlerunning{Hiding Images in Text and Text in Images}
+% Identified author information retained for the post-review version.
+% To restore: remove the three anonymous commands below and uncomment this block.
+% \hypersetup{pdfauthor={Alexander V. Mantzaris and James H. Korris}}
+% \author{Alexander V. Mantzaris\inst{1} \and James H. Korris\inst{2}}
+% \authorrunning{A. V. Mantzaris and J. H. Korris}
+% \institute{Dr. Yvette Kanouff School of Data, Mathematical, and Statistical Sciences, UCF\\
+% 4000 University Blvd., Orlando, FL, USA\\
+% \email{alexander.mantzaris@ucf.edu}
+% \and
+% Creative Technologies Inc.\\
+% \email{james.korris@cretecinc.com}}
+\author{Anonymous Authors}
+\authorrunning{Anonymous Authors}
+\institute{}
+\maketitle
+
+\begin{abstract}
+A small grayscale image can be carried inside generated text, and a short message can be carried inside an image. The practical challenge is to recover the represented content from the file actually delivered, rather than from information retained by the sender. We implement a common authenticated recovery protocol for language and pixel autoregressive models and compare three coding rules under fixed carrier budgets. Receivers reconstruct standardized grayscale pixels or literal text bytes from saved UTF-8 and PNG files using agreed settings and a key. Across 120 prospective outcomes, fixed and entropy-gated coding recover every allocated payload in both directions. The finite-message arithmetic implementation recovers all PNG payloads but none of the text payloads before the text-length limit. Successful recovery does not imply concealment: the tested scores completely separate fixed and gated text from ordinary samples, while generated-PNG detection varies with coding rule and observer context. A separate development benchmark achieves a 5.13-fold latency reduction with checked output equivalence. An extension that changes selected photograph pixels also recovers its messages, but a simple parity baseline has slightly better mean fidelity and substantially lower cost. These results distinguish encryption of content from hiding its presence and show that capacity, reproducible decoding, detectability and efficient execution require separate evaluation.
+\keywords{Generative steganography \and Large language models \and Image steganography \and Exact recovery \and Steganalysis.}
+\end{abstract}
+
+\section{Introduction}
+As a hypothetical illustration, a sender encodes a miniature grayscale image into a generated paragraph. The recipient saves the paragraph and reconstructs its pixels using agreed model settings and a key. In the reverse direction, a delivered PNG carries a short text message. The hidden content is the \emph{payload}; the delivered text or image is the \emph{carrier}. Encryption protects contents, whereas steganography concerns carrying them within another medium without revealing their presence.
+
+Our question is: \emph{how reliably and efficiently can information be recovered across generated text and image carriers, and what does that recovery tell us about detectability?} Generative models offer alternative text or pixel choices, but the receiver must reproduce their information mapping from the delivered file. Sender-only token identifiers, cached ranks and intermediate packets cannot establish recovery through that interface.
+
+We integrate existing coding ideas into a common saved-file protocol and compare fixed-rank, entropy-gated and finite-message arithmetic coding on paired payloads. The contribution is the shared protocol and controlled evaluation of recovery, detection and cost. Separate observer-context, GPU and photograph extensions do not enlarge the prospective sample. Exact image recovery means equality of standardized $16\times16$ grayscale pixels, not restoration of an arbitrary original image file. Successful decoding establishes neither naturalness nor concealment.
+
+\section{Related Work}
+Calgacus transfers context-dependent token ranks and discusses cross-domain use~\cite{calgacus}. A \emph{rank} is a symbol's position in the model's ordered choices. RankCloak develops bounded byte coding, entropy gating and replay practices, and reports rendered-text recovery difficulties~\cite{rankcloak}. We inherit these foundations rather than claim rank transfer or cross-domain transport as new.
+
+Neural Linguistic Steganography uses arithmetic decoding to generate text and encoding to recover bits~\cite{ziegler}; Pixel-Stega applies arithmetic stegosampling to autoregressive images~\cite{pixelstega}. Our independently implemented comparator has explicit finite-message framing. Published stepwise verification addresses tokenization inconsistency~\cite{consistency}; we adapt complete-prefix verification. GLTR provides precedent for probability and rank scores~\cite{gltr}, whereas our controls are ordinary samples from the same eligible model distribution.
+
+Image embedding precedents include quantization index modulation, syndrome-trellis codes, HiDDeN and StegaStamp~\cite{qim,stc,hidden,stegastamp}. Our photograph extension reconstructs model partitions from coarse pixels and compares with simple parity. CUDA graphs are established infrastructure~\cite{pytorchgraphs}; we test acceleration while preserving decoding behavior.
+
+\section{Recovery from Delivered Files}
+\subsection{Shared Protocol and Receiver Boundary}
+The sender seals source bytes into an encrypted and authenticated packet and maps its information to model choices. The receiver obtains only the saved carrier, profile, shared context and key. The profile fixes models, tokenizer, numerical rules, coder and budget. Source bytes/digests, sender token IDs, ranks and packets are excluded. After the sender exits, a fresh receiver reconstructs and authenticates the packet; a separate evaluator checks source equality (Fig.~\ref{fig:overview}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/overview.pdf}
+\Description{Two actual saved-file transports. A 16 by 16 grayscale shirt image is recovered unchanged from a 616-token, 2827-byte text carrier; the figure shows only a literal excerpt. A 32 by 31 RGB PNG carries the 63-byte message beginning However little known, reproduced identically on recovery. Images are magnified without changing their pixel values.}
+\caption{Actual saved-file recovery. The standardized image is from Fashion-MNIST~\cite{fashion}. The passage is a verbatim excerpt; the PNG carries the message in its pixels and shares its conditioning row separately. Magnification preserves pixel values.}
+\label{fig:overview}
+\end{figure}
+
+Image payloads are 256 unsigned bytes: row-major $16\times16$ grayscale pixels. Text payloads are literal UTF-8 without normalization, with a declared range of 32--128 bytes. An eight-byte header identifies version, type, source length and dimensions; a 256-byte source slot is zero padded. AES-256-GCM~\cite{gcm} encrypts and authenticates these 264 bytes with protocol-bound associated data. A 12-byte nonce and 16-byte tag make a fixed 292-byte, or 2,336-bit, carried packet. Keys and nonces use operating-system randomness; paired coders reuse sealed ciphertext without re-encryption. Parsing validates type, dimensions, length, UTF-8 and padding after authentication. Failure returns no plaintext. This authenticates content, not concealment.
+
+\subsection{Observable Choices and Serialization}
+At step $t$, eligible symbols $E_t$ have normalized probabilities $q_t(v)$. Text ranks sort descending logits, image ranks descending log probability; ascending identifiers break ties. Float64 probability bookkeeping rejects invalid distributions and excludes numerical zero mass without adding a floor. Ordinary sampling uses temperature one and inverse CDFs in identifier order.
+
+The text model is Llama 3 8B Instruct, Q4\_K\_M GGUF~\cite{llama3}. Its top 256 tokens are selected \emph{before} filtering out special/control tokens, empty renderings and invalid UTF-8. Let $s$ be the carrier's token prefix, $D$ exact byte rendering without cleanup, and $T$ tokenization without special-token interpretation. Each candidate $v$ must satisfy
+\begin{equation}
+T(D(s\mathbin{\|}[v]))=s\mathbin{\|}[v].
+\label{eq:serialization}
+\end{equation}
+Individually valid tokens can merge or split when rendered text is retokenized. The model sees one beginning-of-sequence token, a separately tokenized prompt, then the carrier, without a chat template. The receiver tokenizes the saved carrier separately and verifies byte equality. Payload choices, skipped positions and ordinary completion all obey Eq.~\ref{eq:serialization}.
+
+PixelCNN++~\cite{pixelcnn}, pretrained on CIFAR-10, models a $32\times32$ RGB canvas. A separately shared $1\times32$ conditioning row occupies its first row. The delivered $32\times31$ RGB8 PNG has 992 pixels, or 2,976 channel values, read without color conversion. The receiver restores the row internally and replays raster/R--G--B order. One forward per visible pixel supplies ten discretized logistic mixture components. CDF differences give channel masses with boundary tails. Green conditions on observed red; blue on red and green. Updating mixture weights after each observation is essential: independent channel marginals would change the distribution.
+
+\subsection{Coding, Capacity and Stopping}
+\paragraph{Fixed rank.}
+Each packet byte is split into high and low four-bit groups. Value $d\in\{0,\ldots,15\}$ chooses rank $d+1$, so 584 positions carry the packet. The receiver inverts those ranks. Fewer than 16 eligible symbols while bits remain causes a support failure.
+
+\paragraph{Entropy-gated rank.}
+\emph{Entropy gating} uses fixed-rank coding only when the model offers enough uncertainty, measured by
+\begin{equation}
+H(q_t)=-\sum_{v\in E_t}q_t(v)\log_2q_t(v)>\tau.
+\end{equation}
+Otherwise an ordinary sample consumes a carrier position without payload bits. Both endpoints recompute the gate. Development fixed $\tau\approx0.598397$ bits for text and $3.215951$ bits for channels; full-precision thresholds remain unchanged.
+
+\paragraph{Arithmetic A1.}
+Following~\cite{ziegler}, A1 begins with $[0,2^{32})$ and partitions the current interval according to $q_t$. At width $R$, it retains symbols with $q_t(v)\geq1/R$ and at least the highest-probability $\min(2,|E_t|,R)$ symbols. Renormalized widths are rounded to nearest integer, ties to even; bins stop before cumulative overflow, residual width goes to the first symbol, and zero-width bins are removed. The next 32 packet bits select a bin, with zero lookahead only beyond the packet. Both endpoints emit common leading bits of the lower endpoint and upper endpoint minus one, then shift the interval. A step can consume a symbol without emitting bits.
+
+Completion is the first emission reaching 2,336 bits; up to 31 excess bits must be zero and are discarded. There is no implicit flush or endpoint dump. This differs from the reference's final-token handling. A1 can stagnate when an unchanged narrow interval straddles a leading-bit boundary; observed failures therefore require trace-based diagnosis.
+
+Text has a 2,048-token cap and requires 32 ordinary tokens after packet completion. A packet finishing too late for this tail is not a conforming carrier. PNG generation fills all 2,976 channels after packet completion; neither metadata nor appended bytes carry payload. Inversion follows inductively when observed prefixes reproduce identical distributions and transitions. Serialization, sufficient support and capacity are separate necessary conditions.
+
+\subsection{Extension to Existing Photographs}
+The photograph profile carries the same packet through a $256\times256$ RGB image. For each channel, preserve $B(c)=4\lfloor c/4\rfloor$. Both endpoints can then reconstruct the coarse context $B+2$ from delivered pixels, without the original cover. PixelCNN++ evaluates 64 fixed $32\times32$ tiles. At each selected pixel, the 64 colors in its $4\times4\times4$ cell are ranked by joint conditional log probability, with lexicographic ties. Zero-based rank parity forms two equal bit classes. The sender selects the nearest color by squared RGB distance in the required class; the receiver reads its rank parity.
+
+Domain-separated HKDF/HMAC-SHA256 placement, derived from the key, coarse-image hash and agreed protocol, selects 2,336 distinct pixel positions. It does not depend on the hidden packet nonce. The baseline uses $(r+g+b)\bmod2$ with identical packet, positions and nearest-distance rule. Channel changes are bounded by three. These coarse-context ranks differ from generated-PNG likelihoods. The receiver needs PNG, profile and key; unused pixels are not authenticated.
+
+\section{Experimental Design}
+\subsection{Sources, Pairing and Uncertainty}
+The prospective allocation contains 20 held-out image payloads and 20 held-out text payloads, each evaluated with all three coders: $20\times2\times3=120$ outcomes. Images are Fashion-MNIST test samples, two per class, BOX-resized from $28\times28$ to $16\times16$~\cite{fashion}. Texts are nonoverlapping spans from Austen's \emph{Pride and Prejudice} and Doyle's \emph{The Adventures of Sherlock Holmes}, from frozen Gutenberg sources: ten each in the 32--64 and 65--128-byte bands, with realized lengths 58--128 bytes and mean 93.2. Payload sources were disjoint from development; sources, contexts and thresholds were frozen before generation. Development contexts were reused. The text prompt requests a calm forest field journal; the PNG row comes from an independent development image.
+
+One sealed packet is shared by the three methods within each payload/context group. Failures are retained. Each group owns an ordinary control: a 2,048-token text trace with length-matched prefixes, or a full PNG. These are \emph{40 independent controls}; reuse does not create observations.
+
+\emph{Goodput} counts useful source bits actually delivered. For $L$ source bytes and $N$ carrier symbols, $G=8L/N$ for authenticated, exact, conforming recovery, and zero otherwise. Text uses bits/token and PNG bits/channel; the latter multiplied by three gives bits/pixel. Padding, framing and completion consume capacity without increasing useful bits. Recovery intervals are two-sided 95\% Clopper--Pearson bounds under a Bernoulli working model. Continuous quantities and AUCs use the retained 2,000 stratified group-bootstrap draws, keeping paired methods and owned controls together within image class or text-length band. Percentile intervals describe this fixed allocation. Boundary paired-binary comparisons also retain conservative marginal bounds; collapsed bootstrap intervals are not certainty.
+
+\subsection{Observer Knowledge and Execution Cost}
+The observer knows the model, eligibility rules and initially the correct context, but neither key nor source. Frozen scores are mean surprisal and log-rank:
+\begin{equation}
+S(y;c)=-\frac{1}{N}\sum_t\log_2q_t(y_t),\qquad
+R(y;c)=\frac{1}{N}\sum_t\log_2\rank_t(y_t).
+\end{equation}
+Higher scores always indicate steganography, without post-hoc reversal. Area under the ROC curve (AUC) compares steganographic and ordinary scores with half credit for ties. Scorable failures remain included. No detector training or human assessment is involved.
+
+A later context comparison reuses the same 60 generated PNGs and 20 controls. It substitutes a previously frozen random-RGB row for the correct row while keeping the exact model known. Paired changes jointly resample observer conditions, methods and shared controls in the same 20 groups. These are repeated scores, not new transmissions.
+
+Original inference ran serially on an NVIDIA RTX 5000 Ada with 32 GB memory. Text uses llama-cpp-python 0.3.23 with all 33 eligible layers offloaded; images use PyTorch 2.5.1+cu124, float32 inference and float64 probability calculations. Deterministic settings, disabled TF32/mixed precision and fixed model identities support reproducible ranks. Reported charged latency spans sender and receiver launch to exit, including imports, loading, occupied CPU work, serialization and teardown. The independent evaluator is outside this boundary; nested phase and CUDA times are not added again.
+
+The separate GPU benchmark matches reference and CUDA-graph execution on three development messages (32, 96 and 128 bytes). Three fixed-rank repetitions per message yield nine timing pairs; one gated and one A1 comparison yield eleven comparisons overall. Both modes use fresh processes and identical retained packets. Acceptance requires exact eligible identifiers, rank order, float64 probability streams, PNG bytes and recovered bytes. The separate photograph study uses six development and twenty test BSDS500 covers, selected by lowest numeric identifier, converted to RGB and center-cropped without resizing~\cite{bsds}. Arms share texts and positions; comparisons are descriptive paired summaries.
+
+\section{Results}
+\subsection{Recovery, Useful Rate and Finite Capacity}
+The 120 outcomes comprise 100 exact, authenticated, conforming recoveries and 20 arithmetic-text failures (Fig.~\ref{fig:recovery}). Fixed and gated coding recover 20/20 in both directions; A1 recovers 20/20 PNG and 0/20 text payloads. Corresponding 95\% recovery bounds are [83.16\%, 100\%] and [0\%, 16.84\%].
+
+\begin{figure}[t]
+\centering\includegraphics[width=\textwidth]{figures/recovery_rate.pdf}
+\Description{Two panels compare fixed, gated and arithmetic A1 coding. Text goodput is approximately 3.3247, 3.1246 and zero bits per token, with 20 of 20, 20 of 20 and zero of 20 recovered. PNG goodput is approximately 0.25054 bits per channel for all three, each recovering 20 of 20. Whiskers show saved grouped 95 percent goodput intervals.}
+\caption{Exact recovery and goodput (20 payloads per cell). Whiskers are retained 95\% group-bootstrap goodput intervals; recovery bounds appear in the text. Failed A1 text contributes zero goodput. Text and PNG axes use different units.}
+\label{fig:recovery}
+\end{figure}
+
+Fixed text uses 584 packet tokens plus 32 completion tokens. Gating adds a mean 39.8 skipped positions: relative to fixed coding, mean goodput falls by 0.2000 bits/token [0.1805, 0.2192] and charged latency rises by 23.96 s [20.34, 27.58]. PNG goodput is identical across coders, 0.25054 bits/channel [0.24731, 0.25349], or 0.75161 bits/pixel, because all methods recover the same sources and fill the same canvas. Equal achieved rates do not imply equal capacity. Fixed PNG uses 584 packet channels; gated PNG adds 100.5 skips on average; A1 stops after a mean 597.85 channels, including 89.65 zero-bit steps. Text payloads leave a mean 162.8 padding bytes. Original charged pair times for fixed/gated/A1 are 123.33/147.29/826.57 s for text and 178.18/178.53/179.01 s for PNG, including failures.
+
+All A1 text cases reach the 2,048-token cap with only 581--2,216 recovered packet-prefix bits (mean 1,456.85), below the 2,336-bit target. None authenticates; partial bits are not useful delivery. Independent interval and prefix audits agree across all forty prospective arithmetic cases. Two failed texts contain one and three isolated unchanged steps, each with longest run one; a successful PNG also contains one. These traces support insufficient accumulated information under the fixed cap, not sustained stagnation as the observed cause. This finite-message implementation and allocation do not demonstrate that arithmetic coding generally fails.
+
+\subsection{Detection Depends on Carrier and Observer}
+Both fixed and gated text have AUC 1.000 for both scores, with bootstrap interval [1.000, 1.000]: every steganographic score lies above the ordinary range. This complete empirical separation materially limits concealment claims, despite exact recovery. It does not imply perfect detection in a broader population. Failed A1 text has primary AUC 0.380 [0.260, 0.503]; its below-chance orientation is retained, and it delivers no payload.
+
+Correct-context PNG mean-surprisal AUC is 0.8850 [0.7425, 0.9850] for fixed coding, 0.8300 [0.7000, 0.9375] for gating and 0.5575 [0.3750, 0.7426] for A1. Secondary log-rank AUCs are 0.8400, 0.7700 and 0.5750, respectively. Each comparison contains 20 steganographic artifacts and 20 unique controls, with none excluded. Arithmetic PNG thus combines exact recovery with lower observed separation for these scores, but its wide intervals do not establish security against arbitrary observers.
+
+\begin{figure}[t]
+\centering\includegraphics[width=\textwidth]{figures/context_auc.pdf}
+\Description{Correct versus mismatched context mean-surprisal AUC for the same PNG artifacts. Fixed changes from 0.8850 to 0.6975, gated from 0.8300 to 0.7475, and arithmetic A1 from 0.5575 to 0.5925. The paired changes are minus 0.1875, minus 0.0825 and plus 0.0350. Only the fixed change interval excludes zero. Whiskers are saved 95 percent group-bootstrap intervals.}
+\caption{PNG detection with correct and mismatched rows, and paired change. The same 80 PNGs are scored with the exact model known. Whiskers are retained 95\% intervals from 2,000 stratified group draws preserving conditions and controls. Reference lines mark chance and zero change.}
+\label{fig:context}
+\end{figure}
+
+\begin{table}[t]
+\caption{Separate extensions. (a) Matched development benchmark, nine fixed timing pairs on three payloads. (b) Photograph means over twenty paired held-out covers. Times include both fresh processes and setup; parity uses no neural inference.}
+\label{tab:photo}\centering
+\begin{tabular}{lrr}
+\toprule
+(a) GPU benchmark & Pair time (s) & Useful bytes/s\\
+\midrule
+Reference & 177.8186 & 0.4799\\
+CUDA graph & 34.6417 & 2.4633\\
+\bottomrule
+\end{tabular}
+
+\begin{tabular}{lrrrr}
+\toprule
+(b) Photograph arm & Exact & PSNR (dB) & SSIM & Pair time (s)\\
+\midrule
+Model ranks & 20/20 & 70.255 & 0.9999664 & 13.882\\
+Simple parity & 20/20 & 70.398 & 0.9999688 & 1.509\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Under the mismatched row, all 80 PNGs remain scorable (Fig.~\ref{fig:context}). Fixed AUC falls to 0.6975, a paired change of $-0.1875$ [$-0.2775$, $-0.1000$]. Gated AUC becomes 0.7475, a change of $-0.0825$ [$-0.1625$, 0.0100], and A1 becomes 0.5925, a change of 0.0350 [$-0.0225$, 0.1050]. Only the fixed reduction is resolved by its paired interval. Primary fixed and gated mismatch intervals still exclude 0.5; the fixed secondary interval includes it. These intervals do not establish a between-method sensitivity difference. Moreover, the correct row comes from generated imagery and the alternate row from random RGB values: context correctness is not isolated from row statistics.
+
+\subsection{Execution Cost and the Photograph Baseline}
+CUDA-graph replay yields a 5.133-fold reduction in matched fixed-rank latency across nine timing pairs on three development payloads (Table~\ref{tab:photo}a). All eleven comparisons preserve exact probability/rank streams and artifacts, and all 22 carriers recover correctly. Graph setup is included in charged time. Reserved memory rises from 516 to 744 MiB. This stack-specific development result does not replace the original prospective timings.
+
+
+
+Both photograph arms recover 6/6 development and 20/20 held-out messages (Table~\ref{tab:photo}b). PSNR uses RGB mean-square error and peak 255; SSIM averages channels with an $11\times11$ Gaussian ($\sigma=1.5$), valid centers, population covariance and $K_1=.01$, $K_2=.03$. The model arm changes at most two channel levels in the observed sample; parity changes at most one. Its paired mean PSNR is 0.144 dB lower than parity's, with substantially greater runtime. All 46,720 selected learned partitions differ from parity even allowing label swaps, yet distinct partitions confer no demonstrated recovery, fidelity or cost advantage. Fixed-context tile evaluation differs from autoregressive generation, precluding a matched speedup claim. Photograph fidelity establishes neither concealment nor editing resistance; generated-PNG detector results do not transfer here.
+
+\section{Discussion and Limitations}
+Saved-file recovery requires reproducible serialization. A separate development comparison recovers 40/40 cases with complete-prefix filtering versus 22/40 with singleton filtering, using twenty payloads under two prompts. The eighteen failures remain unrepaired; forty cases are not forty independent payloads. Lossless PNG resaves were checked, but JPEG conversion, cropping and paraphrasing were not evaluated.
+
+Gating trades capacity and time for lower average surprisal while leaving the tested text scores completely separated. A1's lower PNG separation applies only to the stated observer and sample; incomplete text information cannot count as delivery. Faster image inference cannot supply missing bits or remove text's CPU filtering bottleneck. Photograph fidelity and distinct learned partitions likewise do not establish concealment.
+
+Two pinned models, twenty groups per direction and one alternate context limit generalization. Shared controls and timing repetitions remain dependent. Decoding requires compatible numerical execution, models and keys. Full profiles and evidence are retained; the main claims require no supplementary PDF.
+% Identifying repository link retained for the post-review version:
+% \footnote{\url{https://github.com/mantzaris/ImageCalgacus}}
+
+\section{Conclusion}
+Generative models support exact cross-medium recovery under a shared protocol, but usefulness depends separately on capacity, reproducible decoding, detectability and cost. Serialization consistency is essential for saved text; insufficient capacity prevents delivery even when endpoints agree. Exact recovery can coexist with easy detection, whose measurement depends on observer assumptions. Acceleration is useful when decoding remains consistent. Learned image constructions also need simple alternatives: here parity recovers the same messages with slightly better mean fidelity and much lower cost.
+
+\section*{AI Disclosure}
+Codex from OpenAI assisted the coding development and language editing of the draft.
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+\end{document}

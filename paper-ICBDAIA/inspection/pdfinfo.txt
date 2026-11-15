@@ -1,0 +1,20 @@
+Title:          Hiding Images in Text and Text in Images with Generative AI
+Subject:        
+Keywords:       Generative steganography, large language models, image steganography, exact recovery, steganalysis
+Author:         
+Creator:        LaTeX with hyperref
+Producer:       pdfTeX-1.40.20
+CreationDate:   Sat Nov 14 21:07:57 2026 EST
+ModDate:        Sat Nov 14 21:07:57 2026 EST
+Tagged:         no
+UserProperties: no
+Suspects:       no
+Form:           none
+JavaScript:     no
+Pages:          10
+Encrypted:      no
+Page size:      595.276 x 841.89 pts (A4)
+Page rot:       0
+File size:      2360689 bytes
+Optimized:      no
+PDF version:    1.5

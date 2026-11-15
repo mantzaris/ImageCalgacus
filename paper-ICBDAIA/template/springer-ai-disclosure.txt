@@ -1,0 +1,162 @@
+DISCLOSING AI USE IN MANUSCRIPTS
+BOOKS AND PROCEEDINGS
+                           As an author, you are required to transparently disclose relevant uses of AI in
+                           accordance with Springer Nature’s Editorial AI Policies. This document
+                           provides wording for disclosing the use of AI to prepare and write your
+                           manuscript. If you used AI during your research or writing process in other
+                           ways, then described in this document, please add a transparent disclosure
+                           at the end of the chapter.
+
+In any case, you must obtain all necessary rights to generate the content by means of AI and to use
+it in the context of the submitted manuscript, ensuring no third-party rights (including intellectual
+property rights, personality rights, and similar rights) are infringed, and that any use of AI complies
+with applicable laws and regulations.
+
+Our AI policies can be found on the Springer Nature Books Publishing Policy webpage.
+
+
+
+TEXT
+Use case: The author(s) translated / edited / adapted / corrected / formatted / etc. the text (or
+parts thereof) with the assistance of AI in accordance with Springer Nature's Editorial AI Policies,
+and reviewed and revised the output. The author(s) take(s) accountability for the final submitted
+version, ensuring rights of third-party content have been acquired (if applicable).
+
+Requires a footnote on the first page of the chapter. Recommended text:
+This chapter was prepared with the assistance of AI. See disclosure at the end of chapter for
+further details.
+
+
+
+Also requires full disclosure at the end of the chapter. Recommended text:
+[Section X / The manuscript], or parts thereof, was [translated / edited / adapted / corrected /
+formatted / etc.] with the assistance of artificial intelligence (AI) using [tool name] developed
+by [organization] ([version or model number], [month accessed] [year accessed]). The
+generated content was carefully reviewed, verified, and endorsed by the author[s] to ensure
+the accuracy and integrity of the final manuscript.
+Example:
+
+
+
+
+This document is regularly reviewed to reflect current Springer Nature policies.
+Last updated: October 2026, v.2
+Section 4.2 was translated with the assistance of artificial intelligence (AI) using Gemini developed
+by Google (Gemini 1.5 Pro, July 2026). The generated content was carefully reviewed, verified, and
+endorsed by the author to ensure the accuracy and integrity of the final manuscript.
+
+
+
+IMAGES / FIGURES
+Use case: The author(s) generated / edited / adapted / corrected / formatted / etc. images /
+figures, with the assistance of AI in accordance with Springer Nature's Editorial AI Policies, and
+reviewed and revised the output. The author(s) take(s) accountability for the final submitted
+version, ensuring that rights of third-party content have been acquired (if applicable).
+
+Requires a full disclosure to be included in the caption. Recommended text:
+This [image / figure] was [generated / edited / adapted / corrected / formatted / etc.] with the
+assistance of artificial intelligence (AI) using [tool name] developed by [organization] ([version
+or model number], [month accessed] [year accessed]).
+Example:
+This figure was formatted with the assistance of artificial intelligence (AI) using Microsoft Copilot
+developed by Microsoft (GPT 5.6, September 2026).
+
+
+
+TABLES / CHARTS / GRAPHS
+Use case: The author(s) generated / edited / adapted / corrected / formatted / etc. tables / charts /
+graphs, with the assistance of AI in accordance with Springer Nature's Editorial AI Policies, and
+reviewed and revised the output. The author(s) take(s) accountability for the final submitted
+version, ensuring that rights of third-party content have been acquired (if applicable).
+
+Requires a full disclosure to be included in the caption. Recommended text:
+This [table / chart / graph] was [generated / edited / adapted / corrected / formatted / etc.]
+with the assistance of artificial intelligence (AI) using [tool name] developed by [organization]
+([version or model number], [month accessed] [year accessed]).
+Example:
+This graph was generated with the assistance of artificial intelligence (AI) using xAI developed by
+SpaceXAI (Grok 4.6, July 2026).
+
+
+
+DATA / CODE / SOFTWARE / MODELS / GIS LAYERS / GEOSPATIAL DATA
+Use case: The author(s) edited / adapted / corrected / formatted /etc. research data with the
+assistance of AI according to Springer Nature's Editorial AI Policies, and reviewed and revised the
+
+
+This document is regularly reviewed to reflect current Springer Nature policies.
+Last updated: October 2026, v.2
+output. The author(s) take(s) accountability for the final submitted version, ensuring rights of third-
+party content have been acquired (if applicable).
+
+Requires a footnote on the first page of the chapter. Recommended text:
+This chapter was prepared with the assistance of AI. See disclosure at the end of chapter for
+further details.
+
+
+
+Also requires full disclosure at the end of the chapter. Recommended text:
+[Data / Visualizations of research data or results / Code / Software / Models / GIS Layers /
+Geospatial data] used within this manuscript have been [refined / corrected / edited /
+formatted] with the assistance of artificial intelligence (AI) using [tool name] developed by
+[organization] ([version or model number], [month accessed] [year accessed]). The generated
+content was carefully reviewed, verified, and endorsed by the author[s] to ensure the
+accuracy and integrity of the final manuscript.
+Example:
+
+GIS layers used within this manuscript have been formatted and standardised with the assistance
+of artificial intelligence (AI) using ChatGPT developed by OpenAI (GPT 4o, September 2026). The
+generated content was carefully reviewed, verified, and endorsed by the author[s] to ensure the
+accuracy and integrity of the final manuscript.
+
+
+
+AUDIO / VIDEO / MULTIMEDIA
+Use case: The author(s) prepared / edited / adapted / corrected / formatted / etc. audio / video /
+etc. with the assistance of AI according to Springer Nature's Editorial AI Policies, and reviewed and
+revised the output. The author(s) take(s) accountability for the final submitted version, ensuring
+that rights of third-party content have been acquired (if applicable).
+
+Requires a footnote on the first page of the chapter. Recommended text:
+Supplementary material to this chapter was prepared with the assistance of AI. See
+disclosure at the end of chapter for further details.
+
+
+
+Also requires full disclosure to be included at the end of the chapter. Recommended text:
+
+[Audio / Video / Type of Multimedia] supplementing this manuscript has been [prepared /
+edited / adapted / corrected / formatted / etc.] with the assistance of artificial intelligence (AI)
+using [tool name] developed by [organization] ([version or model number], [month accessed]
+
+
+
+This document is regularly reviewed to reflect current Springer Nature policies.
+Last updated: October 2026, v.2
+[year accessed]). The generated content was carefully reviewed, verified, and endorsed by the
+author[s] to ensure accuracy.
+Example:
+The audio/video supplementing this manuscript has been edited and formatted with the assistance
+of artificial intelligence (AI) using Microsoft Copilot developed by Microsoft (GPT 5.6, September
+2026). The generated content was carefully reviewed, verified, and endorsed by the authors to
+ensure accuracy.
+
+
+
+Also requires full disclosure within multimedia or accompanying material, e.g. in the credits,
+captions or transcript. Recommended text:
+This content has been [prepared / edited / adapted / corrected / formatted / etc.] with the
+assistance of artificial intelligence (AI) using [tool name] developed by [organization] ([version
+or model number], [month accessed] [year accessed]). The generated content was carefully
+reviewed, verified, and endorsed by the author[s] to ensure accuracy.
+Example:
+This transcript has been corrected and formatted with the assistance of artificial intelligence (AI)
+using Microsoft Copilot developed by Microsoft (GPT 5.6, September 2026). The generated content
+was carefully reviewed, verified, and endorsed by the authors to ensure accuracy.
+
+
+
+
+This document is regularly reviewed to reflect current Springer Nature policies.
+Last updated: October 2026, v.2
+
